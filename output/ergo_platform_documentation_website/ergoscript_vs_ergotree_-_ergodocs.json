@@ -1,0 +1,33 @@
+{
+  "title": "ErgoScript vs ErgoTree - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/scs/ergoscriptvergotree/",
+  "summary": "ErgoScript is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain. The Ergo node does not understand ErgoScript. Instead, it uses a low-level language called ErgoTree, which is a \"tree-based\" language (somewhat like XML). However, writing code in ErgoTree is difficult. An example of such an ErgoTree program would be which implies that the transaction is valid if condition_3 holds and at least one of condition_1 or condition_2 holds.",
+  "keywords": [
+    "ergoscript",
+    "level",
+    "developer",
+    "language",
+    "contract",
+    "ergotree",
+    "blockchain",
+    "ergo",
+    "node",
+    "tree",
+    "code",
+    "example",
+    "program",
+    "transaction",
+    "condition_3",
+    "condition_1",
+    "condition_2",
+    "hold",
+    "equivalent"
+  ],
+  "sections": [
+    {
+      "heading": "ErgoScript vs ErgoTree#",
+      "content": "ErgoScript is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.\nThe Ergo node does not understand ErgoScript. Instead, it uses a low-level language called ErgoTree, which is a \"tree-based\" language (somewhat like XML).\nHowever, writing code in ErgoTree is difficult.\nErgoTree is similar to Bitcoin's Script in some aspects. \nAn ErgoTree program is deterministic and consists of a sequence of boolean predicates joined using AND and OR.\nErgo nodes execute the ErgoTree program contained in a transaction and consider it valid if it evaluates to true.\nAn example of such an ErgoTree program would be\nAND(OR(condition_1, condition_2), condition_3)\nwhich implies that the transaction is valid if condition_3 holds and at least one of condition_1 or condition_2 holds.\nThe equivalent of the above program in ErgoScript would be\n(condition_1 || condition_2) && condition_3"
+    }
+  ],
+  "qa_pairs": []
+}

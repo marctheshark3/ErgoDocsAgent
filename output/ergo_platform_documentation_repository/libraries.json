@@ -1,0 +1,29 @@
+{
+  "title": "Libraries",
+  "source_url": "docs/dev/libraries.md",
+  "summary": "---\ntags:\n  - Libraries\n  - Development\n---\n\n# Libraries\n\n::cards:: [\n  {\n    \"title\": \"GetBlok Plasma\",\n    \"url\": \"lib/plasma.md\"\n  },\n  {\n    \"title\": \"Scrypto\",\n    \"url\": \"lib/scrypto.md\"\n  },\n  {\n    \"title\": \"EIP12-Types\",\n    \"url\": \"lib/eip12-types.md\"\n  },\n  {\n    \"title\": \"SigmaJS\",\n    \"url\": \"lib/sigmajs.md\"\n  }\n\n]\n\n::/cards::",
+  "keywords": [
+    "libraries",
+    "development",
+    "library",
+    "card",
+    "title",
+    "getblok",
+    "plasma",
+    "plasma.md",
+    "scrypto",
+    "scrypto.md",
+    "eip12",
+    "types",
+    "types.md",
+    "sigmajs",
+    "sigmajs.md"
+  ],
+  "sections": [
+    {
+      "heading": "Libraries",
+      "content": "::cards::\n[\n  {\n    \"title\": \"GetBlok Plasma\",\n    \"url\": \"lib/plasma.md\"\n  },\n  {\n    \"title\": \"Scrypto\",\n    \"url\": \"lib/scrypto.md\"\n  },\n  {\n    \"title\": \"EIP12-Types\",\n    \"url\": \"lib/eip12-types.md\"\n  },\n  {\n    \"title\": \"SigmaJS\",\n    \"url\": \"lib/sigmajs.md\"\n  }\n]\n::/cards::"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Deterministic Wallet Standard - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/wallet/standards/eip3/",
+  "summary": "\u00f0\u009f\u0094\u0097 From EIP-0003 BIP-0044 defines a logical hierarchy for deterministic wallets. BIP-0044 is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere. Such a standard allows end users to move between different wallet software trivially, thus setting a framework for a more cohesive ecosystem to grow. The standard has five levels part of its path: This EIP attempts to define a specific coin_type for the Ergo ecosystem and a policy for how wallets use the change level.",
+  "keywords": [
+    "\u00f0\u009f\u0094\u0097",
+    "eip-0003",
+    "bip-0044",
+    "hierarchy",
+    "wallet",
+    "standard",
+    "inspiration",
+    "project",
+    "cryptocurrency",
+    "sphere",
+    "user",
+    "software",
+    "framework",
+    "ecosystem",
+    "level",
+    "part",
+    "path",
+    "coin_type",
+    "ergo",
+    "policy",
+    "change",
+    "slip-0044",
+    "word",
+    "value",
+    "ascii",
+    "character",
+    "default",
+    "pair",
+    "bip-44",
+    "address",
+    "eip-3",
+    "transaction",
+    "decision",
+    "experience",
+    "privacy",
+    "mixer",
+    "ergomix",
+    "pseudo",
+    "anonymity",
+    "case",
+    "application",
+    "read",
+    "signing",
+    "export",
+    "import",
+    "bip-0032",
+    "serialization",
+    "format",
+    "xpubkey",
+    "byte",
+    "array",
+    "base58",
+    "checksum",
+    "bitcoin",
+    "encoding"
+  ],
+  "sections": [
+    {
+      "heading": "EIP-0003: Deterministic Wallet Standard#",
+      "content": "\u00f0\u009f\u0094\u0097 From EIP-0003"
+    },
+    {
+      "heading": "Motivation#",
+      "content": "BIP-0044 defines a logical hierarchy for deterministic wallets. BIP-0044 is a common standard that is used directly (or used as inspiration) by countless projects in the cryptocurrency sphere.\nSuch a standard allows end users to move between different wallet software trivially, thus setting a framework for a more cohesive ecosystem to grow.\nThe standard has five levels part of its path:\nm / 44' / coin_type' / account' / change / address_index\nThis EIP attempts to define a specific coin_type for the Ergo ecosystem and a policy for how wallets use the change level."
+    },
+    {
+      "heading": "Coin Type#",
+      "content": "Registered coin_types can be found in SLIP-0044\nWe will be using the word ergo summed based on the numerical values of the ASCII characters for the coin_type. As shown below, this means that our coin_type is 429.\n101 + 114 + 103 + 111 = 429\nThus our path will look as such:\nm / 44' / 429' / account' / change / address_index\nAnd the first default key pair for an Ergo wallet will be:\nm / 44' / 429' / 0' / 0 / 0"
+    },
+    {
+      "heading": "Change#",
+      "content": "In BIP-44 the constant 0 is used for the external addresses and constant 1 for internal addresses (aka change addresses).\nFor EIP-3, we instead do not use constant 1 at all. Thus we do not support internal/change addresses, but only external addresses.\nAs such all wallets supporting EIP-3 should have any change within a transaction go back to the address using constant 0.\nThis decision was made to simplify the experience for end users and solidify a cohesive standard for wallets to target in the Ergo ecosystem. A full blown privacy-preserving mixer is already available within the ecosystem, ErgoMix, and thus the pseudo-anonymity provided by internal addresses is not particularly vital.\nThat said, in the future new wallets are more than welcome to create a new EIP for wallets which may wish to support internal addresses as well as an alternate standard (if valuable use cases arise)."
+    },
+    {
+      "heading": "Export and import of public keys#",
+      "content": "For showing wallets in another wallet application as read-only wallets, it is possible to export the extended public key. This way, all addresses can be derived while signing is not possible. For this to work, the derived key on path m / 44' / 429' / 0' / 0 needs to be used for export and import.\nThe BIP-0032 defines a serialization format for keys that we can use here to export and import the xpubkey.\nExtended public keys are serialized as follows:\n4 byte: version bytes (mainnet: 0x0488B21E; testnet: 0x043587CF)\n1 byte: 4 (depth for our path m/44'/429'/0'/0)\n4 bytes: the fingerprint of the parent's key (or 0x00000000 can be used as we don't validate on import)\n4 bytes: 0x00000000 (child number)\n32 bytes: the chain code\n33 bytes: the public key key data\nBIP-0032 leaves it open how this byte array should be encoded and suggests to use Base58 with a checksum. To not confuse Ergo xpubkeys with Bitcoin xpubkeys, we can use hex encoding instead."
+    }
+  ],
+  "qa_pairs": []
+}

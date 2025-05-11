@@ -1,0 +1,88 @@
+{
+  "title": "Cache Configuration",
+  "source_url": "docs/node/conf/conf-cache.md",
+  "summary": "# Cache Configuration\n\nThe `cache` configuration specifies what data to keep in memory to optimize the performance of the system. ## History\n\n### Block Sections Cache Size\n```conf\nblockSectionsCacheSize = 12\n```\nThe `blockSectionsCacheSize` setting determines the number of recently used block sections that will be kept in memory. In this configuration, the last 12 block sections are stored. ### Headers Cache Size\n```conf\nheadersCacheSize = 1000\n```\nThe `headersCacheSize` setting specifies the number of recently used headers that will be kept in memory. Here, the last 1000 headers are stored.",
+  "keywords": [
+    "cache",
+    "configuration",
+    "specifie",
+    "datum",
+    "memory",
+    "performance",
+    "system",
+    "history",
+    "block",
+    "sections",
+    "size",
+    "blocksectionscachesize",
+    "number",
+    "section",
+    "header",
+    "headerscachesize",
+    "index",
+    "indexescachesize",
+    "network",
+    "invalid",
+    "modifiers",
+    "bloom",
+    "filter",
+    "capacity",
+    "invalidmodifiersbloomfiltercapacity",
+    "modifier",
+    "deliverytracker",
+    "expiration",
+    "rate",
+    "invalidmodifiersbloomfilterexpirationrate",
+    "element",
+    "fraction",
+    "invalidmodifierscachesize",
+    "invalidmodifierscacheexpiration",
+    "define",
+    "hour",
+    "mempool",
+    "option",
+    "parameter",
+    "setting",
+    "usage",
+    "load"
+  ],
+  "sections": [
+    {
+      "heading": "Cache Configuration",
+      "content": "The cache configuration specifies what data to keep in memory to optimize the performance of the system."
+    },
+    {
+      "heading": "Block Sections Cache Size",
+      "content": "conf\nblockSectionsCacheSize = 12\nThe blockSectionsCacheSize setting determines the number of recently used block sections that will be kept in memory. In this configuration, the last 12 block sections are stored."
+    },
+    {
+      "heading": "Headers Cache Size",
+      "content": "conf\nheadersCacheSize = 1000\nThe headersCacheSize setting specifies the number of recently used headers that will be kept in memory. Here, the last 1000 headers are stored."
+    },
+    {
+      "heading": "Indexes Cache Size",
+      "content": "conf\nindexesCacheSize = 10000\nThe indexesCacheSize setting determines the number of recently used indexes that will be kept in memory. In this configuration, the last 10000 indexes are stored."
+    },
+    {
+      "heading": "Invalid Modifiers Bloom Filter Capacity",
+      "content": "conf\ninvalidModifiersBloomFilterCapacity = 10000000\nThe invalidModifiersBloomFilterCapacity setting specifies the maximum number of invalid modifiers that the DeliveryTracker will keep."
+    },
+    {
+      "heading": "Invalid Modifiers Bloom Filter Expiration Rate",
+      "content": "conf\ninvalidModifiersBloomFilterExpirationRate = 0.1\nThe invalidModifiersBloomFilterExpirationRate setting defines the rate of element expiration when the capacity is full. It's represented as a non-zero fraction of 1. The lower the number, the more gradual the expiration. In this configuration, a rate of 0.1 is represented as 10 bloom filters expiring one by one."
+    },
+    {
+      "heading": "Invalid Modifiers Cache Size",
+      "content": "conf\ninvalidModifiersCacheSize = 10000\nThe invalidModifiersCacheSize setting determines the maximum number of invalid modifiers kept in the cache. Any modifiers beyond this number are kept in bloom filters."
+    },
+    {
+      "heading": "Invalid Modifiers Cache Expiration",
+      "content": "conf\ninvalidModifiersCacheExpiration = 6h\nThe invalidModifiersCacheExpiration setting defines how long invalid modifiers are kept in the cache. In this configuration, they are kept for 6 hours."
+    },
+    {
+      "heading": "Mempool",
+      "content": "The mempool section has the same configuration options as the network section, with the same parameters, but they apply to the mempool rather than the network. In particular, these settings control how many invalid modifiers are kept in memory and how long they are kept before being removed.\nOverall, the cache configuration allows you to manage your memory usage and performance effectively, helping to keep your system running smoothly even under heavy load."
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,123 @@
+{
+  "title": "Sending Chained Transactions",
+  "source_url": "docs/tutorials/chained-tx.md",
+  "summary": "---\ntags:\n  - Chained Transactions\n  - Transactions\n  - ergpy\n  - Python\n  - Tutorial\n  - Guide\n---\n\n# Sending Chained Transactions\n\nChained transactions allow you to spend outputs of off-chain transactions in a sequence. The following example, adapted from [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples), demonstrates how to send chained transactions. It also includes information from GetBlok about a [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) for sending large interrelated transactions. ## Establish a Connection to the Blockchain\n\nTo begin, you need to establish a connection to the Ergo blockchain. Choose either the MainNet or TestNet node URL and set it as the `node_url`.",
+  "keywords": [
+    "transactions",
+    "ergpy",
+    "python",
+    "tutorial",
+    "guide",
+    "chained",
+    "transaction",
+    "output",
+    "chain",
+    "sequence",
+    "example",
+    "examples](https://github.com",
+    "mgpai22",
+    "tree",
+    "information",
+    "getblok",
+    "group",
+    "framework](https://github.com",
+    "subpooling#framework",
+    "abstraction",
+    "connection",
+    "blockchain",
+    "ergo",
+    "mainnet",
+    "testnet",
+    "node",
+    "node_url",
+    "ergoappkit(node_url",
+    "wallet",
+    "mnemonic",
+    "next",
+    "word",
+    "reward",
+    "asthma",
+    "borrow",
+    "repeat",
+    "wisdom",
+    "horn",
+    "neglect",
+    "amount",
+    "consecutive_transaction",
+    "time",
+    "second",
+    "program",
+    "sleep_time",
+    "number",
+    "genesis",
+    "outbox",
+    "genesis_amount",
+    "sender",
+    "genesis_receiver",
+    "code",
+    "snippet",
+    "genesis_tx",
+    "helper_functions.simple_send(ergo",
+    "return_signed",
+    "genesis_outbox",
+    "appkit.get_outputs_to_spend(genesis_tx",
+    "print",
+    "console",
+    "print(ergo.txid(genesis_tx",
+    "range(consecutive_transaction",
+    "input",
+    "tx_1",
+    "input_box",
+    "elif",
+    "amount=",
+    "outbox_list[x",
+    "tx_1_outbox",
+    "appkit.get_outputs_to_spend(tx_1",
+    "outbox_list.append(tx_1_outbox",
+    "print(ergo.txid(tx_1",
+    "need"
+  ],
+  "sections": [
+    {
+      "heading": "Sending Chained Transactions",
+      "content": "Chained transactions allow you to spend outputs of off-chain transactions in a sequence.\nThe following example, adapted from ergpy examples, demonstrates how to send chained transactions. It also includes information from GetBlok about a Transaction Group framework for sending large interrelated transactions."
+    },
+    {
+      "heading": "Establish a Connection to the Blockchain",
+      "content": "To begin, you need to establish a connection to the Ergo blockchain. Choose either the MainNet or TestNet node URL and set it as the node_url.\n```python"
+    },
+    {
+      "heading": "Assign a node_url, either MainNet or TestNet",
+      "content": "node_url: str = \"http://213.239.193.208:9052/\"\nergo = appkit.ErgoAppKit(node_url=node_url)\n```"
+    },
+    {
+      "heading": "Wallet Mnemonic",
+      "content": "Next, define your wallet mnemonic, which is a sequence of words that acts as your wallet's secret key. Replace the example wallet_mnemonic with your own mnemonic.\n```python\nwallet_mnemonic = \"decline reward asthma enter three clean borrow repeat identify wisdom horn pull entire adapt neglect.\"\nreceiver_addresses = [\n    \"3WwdXmYP39DLmDWJ6grH9ArXbWuCt2uGAh46VTfeGPrHKJJY6cSJ\",\n    \"3WwuG9amNVDwkJdgT5Ce7aJCfeoafVmd9tag9AEiAZwgPi7pYX3w\",\n    \"3Wxk5oofZ3Laq2CpFW4Fi9YQiaep9bZr6QFg4s4xpzz4bi9tZq2U\"\n]\namount = [0.22, 0.33, 0.11]\nconsecutive_transactions = 3"
+    },
+    {
+      "heading": "the amount of time in seconds the program will pause in between submitting transactions",
+      "content": "sleep_time = 0.5"
+    },
+    {
+      "heading": "here, we calculate the number of ergs required for the genesis outbox",
+      "content": "genesis_amount = [consecutive_transactions * (0.22 + 0.33 + 0.11) + (consecutive_transactions + 1) * 0.001]"
+    },
+    {
+      "heading": "wallet of the sender",
+      "content": "genesis_receiver = [\"\"]\n```"
+    },
+    {
+      "heading": "Create an Output Box",
+      "content": "Create an output box for the transaction by following the code snippet below. This code returns an outbox from the signed transaction.\npython\ngenesis_tx = helper_functions.simple_send(ergo=ergo, amount=genesis_amount, wallet_mnemonic=wallet_mnemonic,\n                                          receiver_addresses=genesis_receiver, return_signed=True)\ngenesis_outbox = appkit.get_outputs_to_spend(genesis_tx, 0)"
+    },
+    {
+      "heading": "Submit the Transactions",
+      "content": "Submit the transactions to the Ergo blockchain using the following code. This code submits the transaction to the node and prints the transaction ID (txid) to the console.\n```python\nprint(ergo.txId(genesis_tx))\noutBox_list = []\nfor x in range(consecutive_transactions):\n    if x == 0:  # The first transaction gets the input box from the genesis outbox\n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=genesis_outbox,\n                                            return_signed=True, chained=True)\n    elif x == consecutive_transactions - 1:  # The last transaction is not chained\n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=\namount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=outBox_list[x - 1],\n                                            return_signed=True)\n    else:  # Transactions in between get the input box from the prior chained transaction\n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=outBox_list[x - 1],\n                                            return_signed=True, chained=True)\n    tx_1_outbox = appkit.get_outputs_to_spend(tx_1, 0)\n    outBox_list.append(tx_1_outbox)\n    time.sleep(sleep_time)"
+    },
+    {
+      "heading": "Submit the final transaction to the node",
+      "content": "print(ergo.txId(tx_1))\ntime.sleep(sleep_time)\nhelper_functions.exit()\n```\nFeel free to adjust the code to suit your specific needs."
+    }
+  ],
+  "qa_pairs": []
+}

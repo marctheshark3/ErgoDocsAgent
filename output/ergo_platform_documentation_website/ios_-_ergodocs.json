@@ -1,0 +1,40 @@
+{
+  "title": "iOS - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/iOS/",
+  "summary": "You want to develop with Java/Kotlin/Scala and run on iOS. AppKit A library for polyglot development of Ergo Applications Mosaik UI system for dApps sigma-rust iOS bindings are implemented in sigma-rust \u00f0\u009f\u0093\u0095 DeCo Intro Lessons: Build a mobile app on Android or iOS",
+  "keywords": [
+    "java",
+    "kotlin",
+    "scala",
+    "library",
+    "development",
+    "ergo",
+    "applications",
+    "mosaik",
+    "system",
+    "dapps",
+    "sigma",
+    "rust",
+    "binding",
+    "\u00f0\u009f\u0093\u0095",
+    "deco",
+    "intro",
+    "lessons",
+    "android"
+  ],
+  "sections": [
+    {
+      "heading": "iOS#",
+      "content": "You want to develop with Java/Kotlin/Scala and run on iOS."
+    },
+    {
+      "heading": "Platforms#",
+      "content": "AppKitA library for polyglot development of Ergo Applications\nMosaikUI system for dApps\nsigma-rustiOS bindings are implemented in sigma-rust"
+    },
+    {
+      "heading": "Getting Started#",
+      "content": "\u00f0\u009f\u0093\u0095 DeCo Intro Lessons: Build a mobile app on Android or iOS"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Mining",
+  "source_url": "docs/mining/mining-overview.md",
+  "summary": "---\ntags:\n  - Mining\n  - Overview\n  - Autolykos\n  - Proof of Work\n---\n\n# Mining\n\n\nErgo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.md) Proof of Work algorithm written in Scala. ## Start Mining\n\n::cards:: [\n  {\n    \"title\": \"Join a pool\",\n    \"content\": \"Join a mining pool and start mining today. \",\n    \"url\": \"setup/join.md\"\n  },\n  {\n    \"title\": \"Solo Mining\",\n    \"content\": \"Only recommended if you have 1%+ of the network hash rate. \",\n    \"url\": \"setup/solo.md\"\n  },\n\n]\n\n::/cards::\n\n## Getting Started\n\n::cards::",
+  "keywords": [
+    "mining",
+    "overview",
+    "autolykos",
+    "proof",
+    "work",
+    "ergo",
+    "autolykos**](autolykos.md",
+    "asic",
+    "resistant](asic.md",
+    "algorithm",
+    "scala",
+    "start",
+    "card",
+    "title",
+    "pool",
+    "content",
+    "today",
+    "setup",
+    "solo",
+    "network",
+    "hash",
+    "rate",
+    "wallet",
+    "wallets.md",
+    "governance",
+    "storage",
+    "rent",
+    "smartpools",
+    "mine",
+    "subpool",
+    "community",
+    "space",
+    "discord",
+    "https://discord.gg/q86pnmwrsu",
+    "telegram",
+    "https://t.me/ergo_mining",
+    "reddit",
+    "https://reddit.com/r/erg_miner",
+    "guide",
+    "utility",
+    "breakeven",
+    "price",
+    "calculator",
+    "https://babygrenade.github.io/ergo-profit-calc/",
+    "difficulty",
+    "epoch",
+    "monitor",
+    "explorer",
+    "https://explorer.ergoplatform.com"
+  ],
+  "sections": [
+    {
+      "heading": "Mining",
+      "content": "Ergo mining is based on Autolykos, an ASIC-resistant Proof of Work algorithm written in Scala."
+    },
+    {
+      "heading": "Start Mining",
+      "content": "::cards::\n[\n  {\n    \"title\": \"Join a pool\",\n    \"content\": \"Join a mining pool and start mining today.\",\n    \"url\": \"setup/join.md\"\n  },\n  {\n    \"title\": \"Solo Mining\",\n    \"content\": \"Only recommended if you have 1%+ of the network hash rate.\",\n    \"url\": \"setup/solo.md\"\n  },\n]\n::/cards::"
+    },
+    {
+      "heading": "Getting Started",
+      "content": "::cards::\n[\n  {\n    \"title\": \"Wallets\",\n    \"content\": \"Get your wallet setup.\",\n    \"url\": \"../dev/wallets.md\"\n  },\n  {\n    \"title\": \"Autolykos\",\n    \"content\": \"Read about the Autolykos Algorithm, Governance, Storage Rent and more.\",\n    \"url\": \"autolykos.md\"\n  },\n{\n    \"title\": \"SmartPools and Subpooling\",\n    \"content\": \"Mine in localised subpools using SmartPools.\",\n    \"url\": \"smartpools.md\"\n  },\n]\n::/cards::"
+    },
+    {
+      "heading": "Community spaces",
+      "content": "::cards::\n[\n  {\n    \"title\": \"Discord\",\n    \"content\": \"Join us on Discord.\",\n    \"url\": \"https://discord.gg/Q86PNMwRsu\"\n  },\n  {\n    \"title\": \"Telegram\",\n    \"content\": \"Join us on Telegram.\",\n    \"url\": \"https://t.me/ergo_mining\"\n  },\n  {\n    \"title\": \"Reddit\",\n    \"content\": \"Join us on Reddit.\",\n    \"url\": \"https://reddit.com/r/erg_miners\"\n  },\n  {\n    \"title\": \"Mining Guide\",\n    \"content\": \"Join us on Reddit.\",\n    \"url\": \"https://ergonaut.space/en/Mining\"\n  },\n]\n::/cards::"
+    },
+    {
+      "heading": "Utilities",
+      "content": "::cards::\n[\n  {\n    \"title\": \"Mining Breakeven Price Calculator\",\n    \"content\": \"\",\n    \"url\": \"https://babygrenade.github.io/ergo-profit-calc/\"\n  },\n  {\n    \"title\": \"Difficulty and epoch monitor\",\n    \"content\": \"\",\n    \"url\": \"http://cds.oette.info/ergo_diff.htm\"\n  },\n  {\n    \"title\": \"Ergo Explorer\",\n    \"content\": \"\",\n    \"url\": \"https://explorer.ergoplatform.com\"\n  },\n]\n::/cards::"
+    }
+  ],
+  "qa_pairs": []
+}

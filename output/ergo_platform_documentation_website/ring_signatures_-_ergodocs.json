@@ -1,0 +1,63 @@
+{
+  "title": "Ring Signatures - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/ring/",
+  "summary": "Ring signatures are an advanced privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing which specific group member signed it. Decentralized Mixers: Confidential Voting: Where the voter's identity must remain secret In Ergo, ring signatures are implemented using Sigma protocols, allowing for:",
+  "keywords": [
+    "ring",
+    "signature",
+    "privacy",
+    "technique",
+    "user",
+    "transaction",
+    "behalf",
+    "group",
+    "member",
+    "mixer",
+    "confidential",
+    "voting",
+    "voter",
+    "identity",
+    "ergo",
+    "sigma",
+    "protocol"
+  ],
+  "sections": [
+    {
+      "heading": "Overview#",
+      "content": "Ring signatures are an advanced privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing which specific group member signed it."
+    },
+    {
+      "heading": "Key Features#",
+      "content": "Anonymity: Provides plausible deniability by obscuring the actual signer\nPrivacy: Prevents tracing the origin of a signature to a specific participant\nFlexible Composition: Implemented through Ergo's Sigma protocols"
+    },
+    {
+      "heading": "Use Cases#",
+      "content": "Anonymous Transactions: Enabling privacy in blockchain transactions\n\nDecentralized Mixers: \n\nErgoMixer Privacy Protocol\nZeroJoin Privacy Mechanism\n\n\n\nConfidential Voting: Where the voter's identity must remain secret"
+    },
+    {
+      "heading": "Technical Implementation#",
+      "content": "In Ergo, ring signatures are implemented using Sigma protocols, allowing for:\nProving knowledge of one secret from a set of secrets\nCreating cryptographic proofs that obfuscate the true signer"
+    },
+    {
+      "heading": "Example Scenario#",
+      "content": "// Simplified conceptual representation\nval ringSignature = prove {\n  atLeastOneOf(\n    List(\n      proveDlog(pubKey1),\n      proveDlog(pubKey2),\n      proveDlog(pubKey3)\n    )\n  )\n}"
+    },
+    {
+      "heading": "Related Cryptographic Concepts#",
+      "content": "Discrete Logarithm Proofs\nThreshold Signatures\nSigma Protocols Overview"
+    },
+    {
+      "heading": "Privacy Mechanisms#",
+      "content": "ZeroJoin: A privacy protocol leveraging ring signatures to restore fungibility\nErgoMixer: A non-custodial mixing service using ring signature techniques"
+    },
+    {
+      "heading": "Advanced Applications#",
+      "content": "Cryptographic Foundations in Ergo\nSchnorr Signatures and Privacy\nSidechains and Interoperability"
+    },
+    {
+      "heading": "Security Considerations#",
+      "content": "Computational complexity makes tracing the original signer computationally infeasible\nRelies on the hardness of the discrete logarithm problem\nProvides strong privacy guarantees without compromising blockchain security"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,169 @@
+{
+  "title": "Contributing to the Documentation",
+  "source_url": "docs/contribute/docs.md",
+  "summary": "# Contributing to the Documentation\n\nWe appreciate your interest in contributing to our documentation. Your assistance is invaluable, and we aim to make the contribution process as straightforward as possible. ## Prerequisites for Contribution\n\nBefore you start contributing, ensure you have the following set up on your system:\n\n- A GitHub account for version control and collaboration.\n- Python (3.7 or higher) if you plan to build the documentation locally. ## How to Contribute\n\nThere are two ways you can contribute to these docs:\n\n### Minor Changes\n\nFor minor changes, simply log into GitHub, click the *edit* arrow at the top-right of this page. After saving, you'll have the option to open a pull request.",
+  "keywords": [
+    "documentation",
+    "interest",
+    "assistance",
+    "contribution",
+    "process",
+    "prerequisites",
+    "following",
+    "system",
+    "github",
+    "account",
+    "version",
+    "control",
+    "collaboration",
+    "python",
+    "minor",
+    "change",
+    "edit",
+    "arrow",
+    "right",
+    "page",
+    "option",
+    "request",
+    "development",
+    "environment",
+    "step",
+    "repository",
+    "bash",
+    "clone",
+    "https://github.com/ergoplatform/ergodocs.git",
+    "install",
+    "dependency",
+    "mkdocs",
+    "project",
+    "requirements.txt",
+    "server",
+    "mkdoc",
+    "browser",
+    "http://127.0.0.1:8000/",
+    "guideline",
+    "style",
+    "write",
+    "english",
+    "formatting",
+    "italic",
+    "point",
+    "paragraph",
+    "section",
+    "topic",
+    "code",
+    "convention",
+    "include",
+    "comment",
+    "explanation",
+    "block",
+    "syntax",
+    "highlighting",
+    "messages",
+    "commit",
+    "message",
+    "form",
+    "feature",
+    "sentence",
+    "capitalization",
+    "letter",
+    "rest",
+    "note",
+    "navigation",
+    "mkdocs.yml",
+    "file",
+    "directory",
+    "structure",
+    "pattern",
+    "parent",
+    "subdirectorypage",
+    "subdirectorypage.md",
+    "parentdirectorypage",
+    "todo",
+    "site",
+    "html",
+    "information",
+    "pull",
+    "branch",
+    "checkout",
+    "fork",
+    "push",
+    "origin",
+    "button",
+    "title",
+    "description",
+    "review",
+    "team",
+    "clarification",
+    "quality",
+    "type",
+    "attention",
+    "caution",
+    "danger",
+    "error",
+    "hint",
+    "warning",
+    "admonition",
+    "content",
+    "warn"
+  ],
+  "sections": [
+    {
+      "heading": "Contributing to the Documentation",
+      "content": "We appreciate your interest in contributing to our documentation. Your assistance is invaluable, and we aim to make the contribution process as straightforward as possible."
+    },
+    {
+      "heading": "Prerequisites for Contribution",
+      "content": "Before you start contributing, ensure you have the following set up on your system:\nA GitHub account for version control and collaboration.\nPython (3.7 or higher) if you plan to build the documentation locally."
+    },
+    {
+      "heading": "How to Contribute",
+      "content": "There are two ways you can contribute to these docs:"
+    },
+    {
+      "heading": "Minor Changes",
+      "content": "For minor changes, simply log into GitHub, click the edit arrow at the top-right of this page. After saving, you'll have the option to open a pull request."
+    },
+    {
+      "heading": "Major Changes",
+      "content": "For major changes, you'll need to set up your development environment locally. Follow these steps:\nClone the repository:\nbash\ngit clone https://github.com/ergoplatform/ergodocs.git\nInstall dependencies:\nbash\ncd mkdocs-project\npip install -r requirements.txt\nBuild the project:\nbash\nmkdocs build\nStart the development server:\nbash\nmkdocs serve\nOpen the documentation in your browser:\nhttp://127.0.0.1:8000/\nMake your changes locally and submit a pull request when you're done."
+    },
+    {
+      "heading": "Writing Style",
+      "content": "Write in clear, concise, and grammatically correct English.\nUse appropriate formatting, such as bold or italics, to emphasize key points.\nKeep paragraphs and sections short and focused on a single topic."
+    },
+    {
+      "heading": "Code Style",
+      "content": "Follow the code style conventions used throughout the project.\nInclude comments and explanations to make the code easy to understand.\nUse code-blocks with syntax highlighting."
+    },
+    {
+      "heading": "Commit Messages",
+      "content": "Write clear, concise, and meaningful commit messages.\nUse the imperative form, e.g., \"Add feature\" rather than \"Added feature\" or \"Adding feature\".\nUse sentence capitalization, i.e., capitalize the first letter of the message, but not the rest."
+    },
+    {
+      "heading": "Navigation",
+      "content": "The mkdocs navigation is built using mkdocs.yml. To add, remove or modify pages in the navigation, edit the nav section in the mkdocs.yml file."
+    },
+    {
+      "heading": "Directory Structure",
+      "content": "The directory structure should follow this pattern:\n- Parent Directory:\n    - index.md\n    - Sub-Directory:\n        - SubDirectoryPage: subdirectorypage.md\n    - ParentDirectoryPage: parentdirectorypage.md"
+    },
+    {
+      "heading": "TODOs",
+      "content": "To leave comments in the file itself and have them not visible on the live site, you can use the HTML comment codes:\n```html\n```"
+    },
+    {
+      "heading": "Submitting a Pull Request",
+      "content": "When you're ready to submit your changes, follow these steps:\nCommit your changes to a new branch:\nbash\ngit checkout -b my-feature-branch\ngit add .\ngit commit -m \"Add my awesome feature\"\nPush your changes to your fork:\nbash\ngit push origin my-feature-branch\nOpen a pull request on the original repository:\nGo to the original repository on GitHub and click on the \"Pull Requests\" tab. Then, click on the \"New Pull Request\" button and select your fork and branch to create the pull request.\nPlease include a descriptive title and a detailed description of your changes."
+    },
+    {
+      "heading": "Review Process",
+      "content": "Once your pull request is submitted, our team will review your changes. We may request additional changes or clarification before merging your pull request. Please be patient, as we want to ensure that the documentation remains high-quality and consistent."
+    },
+    {
+      "heading": "MkDocs formatting",
+      "content": "rST suggests the following \u201ctypes\u201d: attention, caution, danger, error, hint, important, note, tip, and warning; however, you\u2019re free to use whatever you want.\n```\n/// admonition | Some title\n    type: warning\nSome content\n///\n```\n/// admonition | Some title\n    type: warning\nSome content\n///\n/// note | Some title\nSome content\n///\n/// note | Some title\nSome content\n///\nnote, attention, caution, danger, error, tip, hint, warning.\n/// admonition | note\n    type: note\nSome note\n///\n/// admonition | caution\n    type: caution\nSome caution\n///\n/// admonition | danger\n    type: danger\nSome danger\n///\n/// admonition | error\n    type: error\nSome error\n///\n/// admonition | tip\n    type: tip\nSome tip\n///\n/// admonition | hint\n    type: hint\nSome hint\n///\n/// admonition | warning\n    type: warning\nSome warning\n///"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Transaction Standards",
+  "source_url": "docs/dev/protocol/tx/standards.md",
+  "summary": "# Transaction Standards\n\nThis section details the transaction standards that are supported by Ergo. You can find more information in the [Ergo Improvement Proposals (EIPs) repository](https://github.com/ergoplatform/eips).",
+  "keywords": [
+    "transaction",
+    "standards",
+    "section",
+    "standard",
+    "ergo",
+    "information",
+    "improvement",
+    "proposals",
+    "eips",
+    "ergoplatform"
+  ],
+  "sections": [
+    {
+      "heading": "Transaction Standards",
+      "content": "This section details the transaction standards that are supported by Ergo.\nYou can find more information in the Ergo Improvement Proposals (EIPs) repository."
+    }
+  ],
+  "qa_pairs": []
+}

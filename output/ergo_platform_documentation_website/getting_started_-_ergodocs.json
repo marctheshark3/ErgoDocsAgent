@@ -1,0 +1,102 @@
+{
+  "title": "Getting Started - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/#engage-with-the-ergo-community",
+  "summary": "New to cryptocurrency or looking to understand what makes Ergo special? You're in the right place! Ergo is a secure and powerful platform designed to be a fair financial system for everyone. Think of it as a next-generation digital money system built with privacy and everyday people in mind. This guide helps you find what you need, whether you want to learn the basics, use Ergo for transactions, build applications, or help secure the network.",
+  "keywords": [
+    "cryptocurrency",
+    "ergo",
+    "place",
+    "platform",
+    "system",
+    "generation",
+    "money",
+    "privacy",
+    "people",
+    "mind",
+    "guide",
+    "basic",
+    "transaction",
+    "application",
+    "network",
+    "\u00f0\u009f\u0094\u00ac",
+    "learn",
+    "level",
+    "overview",
+    "start",
+    "develop",
+    "development",
+    "journey",
+    "mining",
+    "mine",
+    "today",
+    "feature",
+    "contribute",
+    "grassroots",
+    "finance",
+    "\u00f0\u009f\u0092\u00b3",
+    "wallets",
+    "view",
+    "question",
+    "advantage",
+    "ergo\u00e2\u0080\u0099s",
+    "vision",
+    "features",
+    "cryptocurrencie",
+    "step",
+    "blockchain",
+    "reward",
+    "community",
+    "discussion",
+    "support",
+    "forum",
+    "discover",
+    "anatomy",
+    "dive",
+    "register",
+    "\u00f0\u009f\u0094\u0097",
+    "sigmaverse",
+    "portal",
+    "dapp",
+    "universe",
+    "come",
+    "chat",
+    "action",
+    "discord",
+    "testnet",
+    "alternative",
+    "experimentation",
+    "bookmark",
+    "resource"
+  ],
+  "sections": [
+    {
+      "heading": "Welcome to Ergo!#",
+      "content": "New to cryptocurrency or looking to understand what makes Ergo special? You're in the right place! Ergo is a secure and powerful platform designed to be a fair financial system for everyone. Think of it as a next-generation digital money system built with privacy and everyday people in mind.\nThis guide helps you find what you need, whether you want to learn the basics, use Ergo for transactions, build applications, or help secure the network.\n\u00f0\u009f\u0094\u00ac LearnGet a high-level overview of how Ergo works. \n\u00f0\u009f\u009b\u00a0 Start DevelopingGet started on your development journey.\n\u00e2\u009b\u008f Start MiningStart mining ERG today or explore unique mining features available on Ergo.\n\u00f0\u009f\u00a4\u009d Contribute'Lets create grassroots finance'\n\u00f0\u009f\u0092\u00b3 WalletsStoring your ERG safely & securely.\n\u00e2\u009d\u0093 FAQView some of the most frequently asked questions."
+    },
+    {
+      "heading": "Why Choose Ergo?#",
+      "content": "Ergo offers several unique advantages:\nBuilt for Everyone: Designed to be accessible and useful for regular people, not just tech experts.\nSecure & Private: Uses advanced cryptography to keep your funds safe and transactions private.\nFair Launch: No pre-mine or initial coin offerings (ICOs) mean a fairer distribution from the start.\nPowerful Tools: Supports advanced features like smart contracts for building useful applications (dApps).\nSustainable: Features like Storage Rent help keep the network efficient and long-lasting.\nLearn more about Ergo\u00e2\u0080\u0099s Vision and Key Features"
+    },
+    {
+      "heading": "Getting Started with Ergo#",
+      "content": "If you're new to cryptocurrencies or just starting with Ergo, here are some key steps:\nUnderstand the Basics: What is blockchain? What is ERG? Check out the Glossary for simple explanations of common terms.\nGet a Wallet: A digital wallet is needed to store your ERG securely. Learn about different Wallet Options and how to set one up safely.\nGet ERG & Stay Safe: Learn how to acquire and securely store ERG with this Security Guide.\nExplore What You Can Do: Discover simple ways to use Ergo, like sending ERG or exploring applications built on Ergo (dApps). See the Ecosystem Overview.\nCommon Questions: Find answers to frequently asked questions in the FAQ and Common Misconceptions.\nJoin the Community: Connect with other users! See the community links below, or learn how to Contribute to Marketing or join the Sigmanauts Program."
+    },
+    {
+      "heading": "Using Ergo (Intermediate)#",
+      "content": "Ready to explore more?\nExplore Decentralized Exchanges (DEXs): Learn how to trade tokens directly on Ergo (DEX Overview), engage in Peer-to-Peer Trading, explore Arbitrage Opportunities, or dive into Options Trading.\nEarn Yield: Discover ways to earn passive income through Yield Farming & Staking.\nUnderstand Stablecoins: Discover SigmaUSD, Ergo's native stablecoin (SigmaUSD).\nExplore DegFi: Navigate high-risk, high-reward opportunities with Degenerate Finance.\nEngage with the Ecosystem: Learn about Airdrops & Token Sales or explore Gaming on Ergo.\nRun Your Own Node: Contribute to the network's decentralization (Running a Node).\nUse Off-Chain Services: Understand and utilize off-chain bots and services (Off-Chain Overview)."
+    },
+    {
+      "heading": "Building on Ergo (Developers)#",
+      "content": "Want to create applications on Ergo?\nDeveloper Quickstart: Get set up and start building. See Start Developing.\nLearn ErgoScript: Dive into Ergo's powerful smart contract language. See ErgoScript."
+    },
+    {
+      "heading": "Securing the Network (Miners)#",
+      "content": "Help secure the Ergo blockchain and earn rewards.\nStart Mining: Find pools, software, and guides. See Start Mining.\nLearn about Autolykos: Understand Ergo's unique mining algorithm. See Autolykos."
+    },
+    {
+      "heading": "Engage with the Ergo Community#",
+      "content": "Ergo\u00e2\u0080\u0099s community is vibrant and continuously evolving. Keep updated with the latest developments, participate in community discussions, and find support through forums and social platforms.\nKey FeaturesDiscover Ergo's key features\nAnatomyDive into boxes, registers and more in the anatomy of Ergo.\n\u00f0\u009f\u0094\u0097 SigmaverseYour portal to the Ergo dApp universe.\n\u00f0\u009f\u0094\u0097 Come chat!Join the action on Discord\nTestnetAn alternative blockchain you can use for experimentation\nBookmarksAn overview of Ergo resources"
+    }
+  ],
+  "qa_pairs": []
+}

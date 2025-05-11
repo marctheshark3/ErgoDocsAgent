@@ -1,0 +1,41 @@
+{
+  "title": "Autolykos - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/protocol/autolykos-protocol/",
+  "summary": "(Back to: Protocol Overview) Ergo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm. Start Mining Getting setup with a mining pool. Algorithm Dive into the Autolykos Algorithm. Governance PoW To The People Storage Rent On-chain garbage collection that reduces the problem of blockchain bloat",
+  "keywords": [
+    "protocol",
+    "overview",
+    "ergo",
+    "mining",
+    "autolykos",
+    "asic",
+    "proof",
+    "work",
+    "algorithm",
+    "start",
+    "setup",
+    "pool",
+    "dive",
+    "governance",
+    "people",
+    "storage",
+    "rent",
+    "chain",
+    "garbage",
+    "collection",
+    "problem",
+    "blockchain",
+    "bloat",
+    "difficulty",
+    "adjustment",
+    "emission",
+    "schedule"
+  ],
+  "sections": [
+    {
+      "heading": "Autolykos#",
+      "content": "(Back to: Protocol Overview)\nErgo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm.\nStart MiningGetting setup with a mining pool.\nAlgorithmDive into the Autolykos Algorithm.\nGovernancePoW To The People\nStorage RentOn-chain garbage collection that reduces the problem of blockchain bloat\nDifficulty AdjustmentSee how the mining difficulty is calculated.\nEmissionThe Ergo emission schedule"
+    }
+  ],
+  "qa_pairs": []
+}

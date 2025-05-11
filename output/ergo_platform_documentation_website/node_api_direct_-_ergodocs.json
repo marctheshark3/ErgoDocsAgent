@@ -1,0 +1,58 @@
+{
+  "title": "Node API Direct - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/tutorials/blockchain-indexing/node-api-direct/",
+  "summary": "Another approach to accessing blockchain data is to run your own Ergo node and query its REST API directly from your application. Instead of relying on a third-party explorer, your application communicates directly with an Ergo node instance that you control. This node maintains a copy of the blockchain (either full or pruned) and exposes endpoints to retrieve block, transaction, and state information. Querying the node API directly offers more control than public explorers but often lacks the performance and query flexibility needed for complex dApps, leading many to build custom indexers.",
+  "keywords": [
+    "approach",
+    "datum",
+    "ergo",
+    "node",
+    "rest",
+    "application",
+    "party",
+    "explorer",
+    "communicate",
+    "instance",
+    "copy",
+    "blockchain",
+    "endpoint",
+    "block",
+    "transaction",
+    "state",
+    "information",
+    "control",
+    "performance",
+    "query",
+    "flexibility",
+    "dapps",
+    "custom",
+    "indexer"
+  ],
+  "sections": [
+    {
+      "heading": "Indexing Strategy: Querying Node API Directly#",
+      "content": "Another approach to accessing blockchain data is to run your own Ergo node and query its REST API directly from your application."
+    },
+    {
+      "heading": "Concept#",
+      "content": "Instead of relying on a third-party explorer, your application communicates directly with an Ergo node instance that you control. This node maintains a copy of the blockchain (either full or pruned) and exposes endpoints to retrieve block, transaction, and state information."
+    },
+    {
+      "heading": "How It Works#",
+      "content": "Run an Ergo Node: Set up and synchronize an Ergo node. You'll need to decide on the appropriate mode (Archival Full, Pruned Full) based on whether you need full historical data or just recent state.\nConfigure API: Ensure the node's API is enabled and accessible to your application (configure scorex.restApi.bindAddress and potentially apiKeyHash for security in ergo.conf).\nMake API Requests: Your application sends HTTP requests to your node's API endpoints (e.g., /blocks/{headerId}, /transactions/unconfirmed, /blockchain/box/byId/{boxId}).\nProcess Response: Your application parses the raw JSON data returned by the node and extracts the necessary information."
+    },
+    {
+      "heading": "Pros#",
+      "content": "Control & Trust: You control the data source and don't rely on third parties.\nNo Rate Limits: You are only limited by the performance capabilities of your node and server hardware.\nDirect Access: Provides access to raw, unfiltered block and transaction data as seen by the node.\nReal-time (Near): Access to data is typically limited only by block propagation time."
+    },
+    {
+      "heading": "Cons#",
+      "content": "Infrastructure Overhead: Requires setting up, synchronizing, and maintaining an Ergo node, which consumes significant disk space, bandwidth, and computational resources.\nQuery Performance: The node API is designed for retrieving specific blocks or transactions, not for complex, application-level queries across the entire chain history (e.g., \"find all boxes ever created by address X\"). Such queries can be very slow or impractical via the direct API.\nApplication Logic Complexity: Your application needs significant logic to parse the raw API responses, track UTXOs, calculate balances, and manage application-specific state.\nNode Sync Requirement: The node must be fully synchronized to provide complete and current data."
+    },
+    {
+      "heading": "When to Use#",
+      "content": "Applications that primarily need access to the latest chain state or specific recent blocks/transactions.\nSimpler queries that don't require scanning large portions of the blockchain history.\nWhen running a node is already necessary for other functions (like transaction submission).\nOften used as the data source for a custom indexer, rather than the primary query interface for the dApp frontend.\nQuerying the node API directly offers more control than public explorers but often lacks the performance and query flexibility needed for complex dApps, leading many to build custom indexers."
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Ergo Foundation Transparency Report",
+  "source_url": "docs/archive/ef/transparency-report.md",
+  "summary": "---\ntags:\n  - Ergo Foundation\n  - Transparency Report\n  - Governance\n---\n\n# Ergo Foundation Transparency Report\n\n/// details | 2022\n     {type: info, open: false}\nFor the previous year see [2022](ergo-foundation-2022.md)\n///",
+  "keywords": [
+    "ergo",
+    "foundation",
+    "transparency",
+    "report",
+    "governance",
+    "detail",
+    "type",
+    "info",
+    "year",
+    "foundation-2022.md"
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Foundation Transparency Report",
+      "content": "/// details | 2022\n     {type: info, open: false}\nFor the previous year see 2022\n///"
+    }
+  ],
+  "qa_pairs": []
+}

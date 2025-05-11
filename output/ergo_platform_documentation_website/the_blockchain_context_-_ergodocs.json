@@ -1,0 +1,94 @@
+{
+  "title": "The Blockchain context - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/scs/blockchain-context/",
+  "summary": "The Blockchain Context represents data taken from the transaction and the state of the blockchain. The data for the blockchain context is stored in the global object CONTEXT. CONTEXT, therefore, contains the main entities that you will interact with to manipulate your contract\u00e2\u0080\u0099s spending conditions. An integer representing the height of the block currently being validated by miners. This value can be accessed using HEIGHT.",
+  "keywords": [
+    "blockchain",
+    "context",
+    "datum",
+    "transaction",
+    "state",
+    "object",
+    "entity",
+    "contract\u00e2\u0080\u0099s",
+    "spending",
+    "condition",
+    "integer",
+    "height",
+    "block",
+    "miner",
+    "value",
+    "self",
+    "input",
+    "ergoscript",
+    "contract",
+    "type",
+    "information",
+    "eutxo",
+    "eutxos",
+    "collection",
+    "inputs",
+    "part",
+    "only\u00e2\u0080\u0099",
+    "context.datainput",
+    "output",
+    "outputs",
+    "header",
+    "context.header",
+    "function",
+    "insight",
+    "execution",
+    "nonce",
+    "vote",
+    "context.preheader",
+    "access",
+    "preheader",
+    "code",
+    "field",
+    "sigmaprop",
+    "result",
+    "amountaddedinoutputs",
+    "selfatzero",
+    "heightisvalid",
+    "randomvalueiseven"
+  ],
+  "sections": [
+    {
+      "heading": "The Blockchain Context#",
+      "content": "The Blockchain Context represents data taken from the transaction and the state of the blockchain. The data for the blockchain context is stored in the global object CONTEXT. CONTEXT, therefore, contains the main entities that you will interact with to manipulate your contract\u00e2\u0080\u0099s spending conditions."
+    },
+    {
+      "heading": "HEIGHT#",
+      "content": "An integer representing the height of the block currently being validated by miners. This value can be accessed using HEIGHT."
+    },
+    {
+      "heading": "SELF#",
+      "content": "SELF represents the current eUTXO input box which holds the ErgoScript contract. The SELF box is of type Box, containing information relevant to the specified eUTXO, such as:\nThe value in nanoERGs\nThe box ID\nThe proposition bytes of the guarding script for this eUTXO\nThe tokens stored in the box\nThe box registers"
+    },
+    {
+      "heading": "INPUTS#",
+      "content": "The eUTXOs used as input boxes to be spent in the transaction. These boxes are stored in a collection and can be accessed using the object called INPUTS. The SELF box is part of this input box collection."
+    },
+    {
+      "heading": "Data Inputs#",
+      "content": "Data inputs are input eUTXOs that are not spent in the transaction. They serve as \u00e2\u0080\u0098read-only\u00e2\u0080\u0099 boxes, usually holding information necessary for the spending conditions of the contract. Data inputs can be accessed using CONTEXT.dataInputs."
+    },
+    {
+      "heading": "OUTPUTS#",
+      "content": "The output box eUTXOs that will be created by the transaction. This collection can be accessed using the OUTPUTS object."
+    },
+    {
+      "heading": "Headers#",
+      "content": "Block headers are available through the CONTEXT.headers function. The headers function returns a collection holding the last 10 block headers preceding the current HEIGHT. Using this function allows your contract to gain insight into the most recent blocks before the current transaction's execution context. Each Header object in the collection returned by headers holds various information, much of which pertains to the block miner, such as the miner\u00e2\u0080\u0099s public key (PK), the nonce used to find the block, and the votes the miner submitted when the block was mined."
+    },
+    {
+      "heading": "Pre-Headers#",
+      "content": "The CONTEXT.preHeader function gives your contract access to the PreHeader. The PreHeader object represents all the information available to miners attempting to find the next block. Because each block miner must insert their own information to properly mine a block, the data contained within each PreHeader object varies depending on who mines the block. This means your contract could execute differently depending on who mines the block containing the transaction that spends your contract\u00e2\u0080\u0099s box."
+    },
+    {
+      "heading": "Example#",
+      "content": "{\n    // Focus on how we are accessing this data and using it in our contract\n\n    // Checking if the id of our first input box is the same as the id of our output box\n    val selfAtZero = SELF.id == INPUTS(0).id\n    // Retrieving a long value from R4 of the first data input and adding it to our output value\n    val boxAmountToAdd: Long = CONTEXT.dataInputs(0).R4[Long].get \n    val amountAddedInOutputs = OUTPUTS(0).value == SELF.value + boxAmountToAdd\n    // Ensuring the height is greater than 700000\n    val heightIsValid: Boolean = HEIGHT > 700000\n    // Ensuring the nonce is even\n    val randomValueIsEven: Boolean = CONTEXT.headers(0).powNonce(0) % 2 == 0\n\n    // If the first condition is true, then the second condition is not checked\n    // Checking if either our output box has the correct value added or the nonce is even and height is greater than 700000\n    sigmaProp(amountAddedInOutputs && selfAtZero) \n            || sigmaProp(heightIsValid && randomValueIsEven)\n}\nThe code uses various fields of the CONTEXT object to check certain conditions. It then combines these conditions into a final SigmaProp result that evaluates to true if either (amountAddedInOutputs && selfAtZero) or (heightIsValid && randomValueIsEven) is true."
+    }
+  ],
+  "qa_pairs": []
+}

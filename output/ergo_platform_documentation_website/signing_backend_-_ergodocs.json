@@ -1,0 +1,44 @@
+{
+  "title": "Signing Backend - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/tutorials/sign-tx/",
+  "summary": "There are various scenarios where signing a transaction on the backend is necessary. This documentation provides instructions on how to accomplish this task using Ergo. We will outline two common use cases: NFT vending machine and off-chain bots that withdraw funds from contracts. In this use case, you may need to mint a token and send it to a user when their address is funded. To achieve this, it is recommended to define a wallet on your backend that can sign the transactions.",
+  "keywords": [
+    "scenario",
+    "transaction",
+    "backend",
+    "documentation",
+    "instruction",
+    "task",
+    "ergo",
+    "case",
+    "machine",
+    "chain",
+    "fund",
+    "contract",
+    "token",
+    "user",
+    "address",
+    "wallet",
+    "code",
+    "snippet"
+  ],
+  "sections": [
+    {
+      "heading": "Signing Transactions Using a Backend Wallet#",
+      "content": "There are various scenarios where signing a transaction on the backend is necessary. This documentation provides instructions on how to accomplish this task using Ergo. We will outline two common use cases: NFT vending machine and off-chain bots that withdraw funds from contracts."
+    },
+    {
+      "heading": "NFT Vending Machine#",
+      "content": "In this use case, you may need to mint a token and send it to a user when their address is funded. To achieve this, it is recommended to define a wallet on your backend that can sign the transactions. The following code snippet demonstrates how this can be done:\nimport SignerWallet from '../src/services/WalletFromMnemonics';\n\n// Example transaction\nconst unsignedTx = {\n  inputs: [...], \n  outputs: [...],\n  ...\n}\n\n// It is crucial to avoid storing the seed phrase in your code; always use a secret manager.\nconst wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phrase here');\n\nconst signedTx = wallet.sign(unsignedTx);\n\n// The signed transaction can now be submitted to the mempool."
+    },
+    {
+      "heading": "Off-Chain Bot#",
+      "content": "In this use case, an off-chain bot is responsible for withdrawing funds from a contract. Similar to the previous use case, you will need a backend wallet to sign the transactions. The code snippet below illustrates how to achieve this:\nimport SignerWallet from '../src/services/WalletFromMnemonics';\n\n// Example transaction\nconst unsignedTx = {\n  inputs: [...], \n  outputs: [...],\n  ...\n}\n\n// It is crucial to avoid storing the seed phrase in your code; always use a secret manager.\nconst wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phrase here');\n\nconst signedTx = wallet.sign(unsignedTx);\n\n// The signed transaction can now be submitted to the mempool."
+    },
+    {
+      "heading": "Additional References#",
+      "content": "Sigma-rust - For more details on Ergo's sigma-rust library, please refer to the sigma-rust repository.\nSigma-rust Discord - Join the Sigma-rust Discord channel to engage in discussions and receive support related to Ergo's sigma-rust library.\ndAppstep Repo - Visit the dAppstep repository for further information on using the backend wallet for transaction signing."
+    }
+  ],
+  "qa_pairs": []
+}

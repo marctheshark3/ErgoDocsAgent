@@ -1,0 +1,87 @@
+{
+  "title": "Satergo Wallet",
+  "source_url": "docs/dev/wallet/satergo.md",
+  "summary": "# Satergo Wallet\n\nExplore the robust capabilities of [Satergo](https://satergo.com/), a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for those who wish to support network decentralization or prefer self-reliance. /// details | Comprehensive Video Guide\n    {type: info, open: true}\nEmbark on a visual journey to master Satergo with our in-depth video tutorial, accessible [here](https://www.youtube.com/watch?v=68d5_3vkXO4). ///\n\n## Empowering Users with Full Node Support\nSatergo stands out as the sole wallet in the Ergo ecosystem that offers full node support, enabling users to actively participate in the network or opt for a remote node connection for convenience. ## Lightweight and Feature-Rich\nSatergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices. It operates independently, requiring no additional software, making it a versatile choice for users on the go.\n\n## Universal Compatibility\nSatergo's cross-platform support ensures a consistent and reliable experience across all major desktop operating systems.",
+  "keywords": [
+    "satergo",
+    "wallet",
+    "capability",
+    "satergo](https://satergo.com/",
+    "desktop",
+    "ergo",
+    "ecosystem",
+    "node",
+    "network",
+    "decentralization",
+    "self",
+    "reliance",
+    "detail",
+    "comprehensive",
+    "video",
+    "guide",
+    "type",
+    "info",
+    "embark",
+    "journey",
+    "depth",
+    "tutorial",
+    "here](https://www.youtube.com",
+    "watch?v=68d5_3vkxo4",
+    "user",
+    "full",
+    "support",
+    "connection",
+    "convenience",
+    "feature",
+    "rich",
+    "experience",
+    "device",
+    "software",
+    "choice",
+    "universal",
+    "compatibility",
+    "operating",
+    "system",
+    "discover",
+    "website](https://satergo.com/",
+    "update",
+    "twitter](https://twitter.com",
+    "satergowallet",
+    "community",
+    "code",
+    "github](https://github.com",
+    "offline",
+    "vault](satergo",
+    "vault.md",
+    "android",
+    "application",
+    "seed",
+    "phrase",
+    "bluetooth",
+    "transaction",
+    "safety"
+  ],
+  "sections": [
+    {
+      "heading": "Satergo Wallet",
+      "content": "Explore the robust capabilities of Satergo, a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for those who wish to support network decentralization or prefer self-reliance.\n/// details | Comprehensive Video Guide\n    {type: info, open: true}\nEmbark on a visual journey to master Satergo with our in-depth video tutorial, accessible here.\n///"
+    },
+    {
+      "heading": "Empowering Users with Full Node Support",
+      "content": "Satergo stands out as the sole wallet in the Ergo ecosystem that offers full node support, enabling users to actively participate in the network or opt for a remote node connection for convenience."
+    },
+    {
+      "heading": "Lightweight and Feature-Rich",
+      "content": "Satergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices. It operates independently, requiring no additional software, making it a versatile choice for users on the go."
+    },
+    {
+      "heading": "Universal Compatibility",
+      "content": "Satergo's cross-platform support ensures a consistent and reliable experience across all major desktop operating systems."
+    },
+    {
+      "heading": "Connect with Satergo",
+      "content": "Discover more on the Satergo Website\nFollow the latest updates on Twitter\nJoin the community on Telegram\nContribute or explore the code on GitHub\nLearn more about the Satergo Offline Vault, an Android application that securely stores your encrypted seed phrase and connects with desktops via Bluetooth for transaction safety."
+    }
+  ],
+  "qa_pairs": []
+}

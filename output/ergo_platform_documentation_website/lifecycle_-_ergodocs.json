@@ -1,0 +1,29 @@
+{
+  "title": "Lifecycle - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/box/lifecycle/",
+  "summary": "This page describes the journey of a box from creation to spending and destruction in the Ergo blockchain.",
+  "keywords": [
+    "page",
+    "journey",
+    "creation",
+    "spending",
+    "destruction",
+    "ergo",
+    "blockchain"
+  ],
+  "sections": [
+    {
+      "heading": "Box Lifecycle#",
+      "content": "This page describes the journey of a box from creation to spending and destruction in the Ergo blockchain."
+    },
+    {
+      "heading": "Stages of a Box#",
+      "content": "Creation: A box is generated as an output of a transaction\nExistence: The box remains in the UTXO set, available to be spent\nSpending: The box is used as an input in a new transaction\nDestruction: The box is removed from the UTXO set after being spent"
+    },
+    {
+      "heading": "Key Characteristics#",
+      "content": "Immutability\nUnique Identification\nProgrammable Conditions"
+    }
+  ],
+  "qa_pairs": []
+}

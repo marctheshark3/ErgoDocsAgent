@@ -1,0 +1,68 @@
+{
+  "title": "Threshold Signatures - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/threshold/",
+  "summary": "Threshold signatures are a cryptographic mechanism that allows a subset of a group to collectively sign a transaction, providing enhanced security and distributed trust. For a comprehensive example, refer to the dedicated tutorial:\n- 3-out-of-5 Threshold Signature Microcredit Scenario Cross-Chain Interoperability: Ergo supports threshold signatures through its Sigma protocol framework, allowing:\n- Proving knowledge of at least k secrets out of n total secrets\n- Creating multi-party computational scenarios with robust security guarantees",
+  "keywords": [
+    "threshold",
+    "signature",
+    "mechanism",
+    "subset",
+    "group",
+    "transaction",
+    "security",
+    "trust",
+    "example",
+    "tutorial",
+    "microcredit",
+    "scenario",
+    "cross",
+    "chain",
+    "interoperability",
+    "ergo",
+    "sigma",
+    "protocol",
+    "framework",
+    "knowledge",
+    "secret",
+    "guarantee"
+  ],
+  "sections": [
+    {
+      "heading": "Overview#",
+      "content": "Threshold signatures are a cryptographic mechanism that allows a subset of a group to collectively sign a transaction, providing enhanced security and distributed trust."
+    },
+    {
+      "heading": "Key Characteristics#",
+      "content": "Distributed Signing: Requires a minimum number of participants to authorize a transaction\nFlexible Thresholds: Can be configured as k-out-of-n signatures (e.g., 3-out-of-5)\nMulti-Party Computation: Enables complex collaborative signing scenarios"
+    },
+    {
+      "heading": "3-out-of-5 Threshold Signature#",
+      "content": "For a comprehensive example, refer to the dedicated tutorial:\n- 3-out-of-5 Threshold Signature"
+    },
+    {
+      "heading": "Practical Use Cases#",
+      "content": "Corporate Governance: \nMulti-signature wallets requiring collective approval\n\nMicrocredit Scenario\n\n\nCross-Chain Interoperability:\n\nRosen Bridge Mechanisms"
+    },
+    {
+      "heading": "Implementation Techniques#",
+      "content": "Ergo supports threshold signatures through its Sigma protocol framework, allowing:\n- Proving knowledge of at least k secrets out of n total secrets\n- Creating multi-party computational scenarios with robust security guarantees"
+    },
+    {
+      "heading": "Conceptual Implementation#",
+      "content": "val thresholdSignature = prove {\n  atLeastKOutOfN(\n    k = 3,  // Minimum signatures required\n    n = 5,  // Total possible signers\n    publicKeys = List(\n      pubKey1, pubKey2, pubKey3, \n      pubKey4, pubKey5\n    )\n  )\n}"
+    },
+    {
+      "heading": "Related Cryptographic Concepts#",
+      "content": "Sigma Protocols\nDiscrete Logarithm Proofs\nRing Signatures"
+    },
+    {
+      "heading": "Technical Advantages#",
+      "content": "Reduced Single Point of Failure: No single participant can unilaterally control funds\nFlexible Configuration: Adaptable to various security requirements\nPrivacy Preservation: Sigma protocols ensure minimal information leakage"
+    },
+    {
+      "heading": "References#",
+      "content": "Cryptographic Foundations\nErgoScript Capabilities"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,107 @@
+{
+  "title": "EIP-0021: Genuine Token Verification",
+  "source_url": "docs/dev/tokens/standards/eip21.md",
+  "summary": "---\ntags:\n  - EIP\n---\n\n# EIP-0021: Genuine Token Verification\n\n## Description \n\nThis EIP lists the common tokens of value with their unique identifier, so users as well as wallet and explorer applications can verify if a token is genuine. The EIP is meant to be updated regularly when new tokens of value are added. ## Motivation \n\nErgo tokens can hold a certain value, best-known examples are the SigUSD and SigRSV tokens in use by the SigmaUSD stablecoin protocol. Tokens can be minted by every user, with a name and description free to choose. This means everyone can mint new tokens named \"SigUSD\", which bears a problem for end-users to decide if a token they received is genuine or not.\n\n## Ergo tokens background\n\n[See EIP-4](eip4.md): Ergo supports custom tokens as first-class citizens.",
+  "keywords": [
+    "eip-0021",
+    "genuine",
+    "token",
+    "verification",
+    "description",
+    "value",
+    "identifier",
+    "user",
+    "wallet",
+    "explorer",
+    "application",
+    "motivation",
+    "ergo",
+    "example",
+    "sigusd",
+    "sigrsv",
+    "sigmausd",
+    "stablecoin",
+    "protocol",
+    "tokens",
+    "name",
+    "problem",
+    "background",
+    "custom",
+    "class",
+    "citizen",
+    "transaction",
+    "output",
+    "input",
+    "chance",
+    "hash",
+    "function",
+    "collision",
+    "order",
+    "authenticity",
+    "process",
+    "list",
+    "scammer",
+    "answer",
+    "occasion",
+    "community",
+    "vote",
+    "participation",
+    "approach",
+    "applications",
+    "sign",
+    "list](#genuine",
+    "material",
+    "icon",
+    "verified](https://fonts.google.com",
+    "confusion",
+    "warning",
+    "report](https://fonts.google.com",
+    "dangerous](https://fonts.google.com",
+    "material%20icons%20outlined%3adangerous%3a",
+    "verbose",
+    "unique",
+    "issuer",
+    "|:----------------------------------------------------------------:|",
+    "-----------:|",
+    "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04"
+  ],
+  "sections": [
+    {
+      "heading": "Description",
+      "content": "This EIP lists the common tokens of value with their unique identifier, so users as well as wallet and explorer applications can verify if a token is genuine. The EIP is meant to be updated regularly when new tokens of value are added."
+    },
+    {
+      "heading": "Motivation",
+      "content": "Ergo tokens can hold a certain value, best-known examples are the SigUSD and SigRSV tokens in use by the SigmaUSD stablecoin protocol. \nTokens can be minted by every user, with a name and description free to choose. This means everyone can mint new tokens named \"SigUSD\", which bears a problem for end-users to decide if a token they received is genuine or not."
+    },
+    {
+      "heading": "Ergo tokens background",
+      "content": "See EIP-4: Ergo supports custom tokens as first-class citizens. A transaction can create out-of-thin-air tokens in its outputs if the token \nidentifier is equal to the identifier of the first input box of the transaction.\nAs the box identifier is cryptographically unique, there's no chance to have the second token with the same identifier while the hash function being used \nis collision-resistant.\nIn order to verify the authenticity of a token, the unique identifier of a token is needed to check."
+    },
+    {
+      "heading": "Process to add tokens to this list",
+      "content": "As outlined before, this list should only hold tokens of value. This means that mainly tokens of financial value can be added. Before opening a PR to add your token to this list, ask yourself if your token is interesting for scammers. When the answer is no, the token should probably not added to this list. \nOn rare occasions, tokens of a certain intrinsic value to the community could be added as well when there was a community vote with significant community participation."
+    },
+    {
+      "heading": "Verified tokens",
+      "content": "Applications should add a verification sign next to a token which is listed in the following genuine tokens list.\nProposed verification sign: Material icons verified"
+    },
+    {
+      "heading": "Suspicious tokens",
+      "content": "In order to protect end-users for confusion, it is decided for some tokens in the genuine tokens list that the verbose name should be \nunique and should not be used by other tokens. \nThis is not enforced by Ergo protocol, so applications should check if a token uses a unique name from the list and add a warning sign when needed.\nProposed warning sign: Material icons report"
+    },
+    {
+      "heading": "Blocked tokens",
+      "content": "Applications should show a warning sign next to tokens identified to be harmful or impersonating other tokens.\nProposed warning sign: Material icons dangerous"
+    },
+    {
+      "heading": "Genuine tokens",
+      "content": "| Verbose name       | Token id                                                         | Unique name | Issuer\n| ------------------ |:----------------------------------------------------------------:| -----------:| ------\n| SigUSD             | 03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04 | yes         | sigmausd.io\n| SigRSV             | 003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0 | yes         | sigmausd.io"
+    },
+    {
+      "heading": "Blocked tokens",
+      "content": "| Token id                                        | \n|:-----------------------------------------------:|"
+    }
+  ],
+  "qa_pairs": []
+}

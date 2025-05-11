@@ -1,0 +1,50 @@
+{
+  "title": "Android - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/android/",
+  "summary": "To develop an android application you can develop with the JVM suite (Java/Kotlin/Scala). AppKit A library for polyglot development of Ergo Applications Mosaik UI system for dApps sigma-rust Android bindings are implemented in sigma-rust Gradle Getting started with Gradle to build on Android. \u00f0\u009f\u0093\u0095 DeCo Intro Lessons: Build a mobile app on Android or iOS \u00f0\u009f\u0094\u0097 Ergo Android Simple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.",
+  "keywords": [
+    "application",
+    "suite",
+    "java",
+    "kotlin",
+    "scala",
+    "appkit",
+    "library",
+    "development",
+    "ergo",
+    "applications",
+    "mosaik",
+    "system",
+    "dapps",
+    "sigma",
+    "rust",
+    "android",
+    "binding",
+    "gradle",
+    "getting",
+    "\u00f0\u009f\u0093\u0095",
+    "deco",
+    "intro",
+    "lessons",
+    "\u00f0\u009f\u0094\u0097"
+  ],
+  "sections": [
+    {
+      "heading": "Android#",
+      "content": "To develop an android application you can develop with the JVM suite (Java/Kotlin/Scala)."
+    },
+    {
+      "heading": "Platforms#",
+      "content": "AppKitA library for polyglot development of Ergo Applications\nMosaikUI system for dApps\nsigma-rustAndroid bindings are implemented in sigma-rust"
+    },
+    {
+      "heading": "Getting Started#",
+      "content": "GradleGetting started with Gradle to build on Android.\n\u00f0\u009f\u0093\u0095 DeCo Intro Lessons: Build a mobile app on Android or iOS"
+    },
+    {
+      "heading": "Tools#",
+      "content": "\u00f0\u009f\u0094\u0097 Ergo AndroidSimple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android."
+    }
+  ],
+  "qa_pairs": []
+}

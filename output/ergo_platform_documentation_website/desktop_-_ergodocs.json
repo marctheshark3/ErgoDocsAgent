@@ -1,0 +1,27 @@
+{
+  "title": "Desktop - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/desktop/",
+  "summary": "JVM JavaFX Rust JS/TS + Electron Python \u00f0\u009f\u0094\u0097 Ergo Wallet \u00f0\u009f\u0094\u0097 ErgoMixer \u00f0\u009f\u0094\u0097 Satergo",
+  "keywords": [
+    "javafx",
+    "rust",
+    "electron",
+    "python",
+    "\u00f0\u009f\u0094\u0097",
+    "ergo",
+    "wallet",
+    "ergomixer",
+    "satergo"
+  ],
+  "sections": [
+    {
+      "heading": "Platforms#",
+      "content": "JVM\nJavaFX\nRust\nJS/TS + Electron\nPython"
+    },
+    {
+      "heading": "Examples#",
+      "content": "\u00f0\u009f\u0094\u0097 Ergo Wallet\n\u00f0\u009f\u0094\u0097 ErgoMixer\n\u00f0\u009f\u0094\u0097 Satergo"
+    }
+  ],
+  "qa_pairs": []
+}

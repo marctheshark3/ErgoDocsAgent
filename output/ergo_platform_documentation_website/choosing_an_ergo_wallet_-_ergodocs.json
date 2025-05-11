@@ -1,0 +1,94 @@
+{
+  "title": "Choosing an Ergo Wallet - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/wallets/",
+  "summary": "A wallet is your essential gateway to the Ergo ecosystem. It allows you to securely store, send, and receive ERG and other tokens built on Ergo, as well as interact with decentralized applications (dApps). Choosing the right wallet depends on your technical comfort, security needs, and how you plan to use Ergo. Disclaimer The wallets listed here are primarily developed and maintained by independent teams within the Ergo community.",
+  "keywords": [
+    "wallet",
+    "gateway",
+    "ergo",
+    "ecosystem",
+    "token",
+    "interact",
+    "application",
+    "dapps",
+    "comfort",
+    "security",
+    "need",
+    "disclaimer",
+    "team",
+    "community",
+    "software",
+    "source",
+    "habit",
+    "seed",
+    "phrase",
+    "information",
+    "guidance",
+    "research",
+    "fund",
+    "mobile",
+    "terminus",
+    "minotaur",
+    "satergo",
+    "node",
+    "core",
+    "paper",
+    "table",
+    "overview",
+    "option",
+    "advanced",
+    "feature",
+    "comparison",
+    "expand",
+    "contribution",
+    "note",
+    "status",
+    "confirmation",
+    "yoroi",
+    "password",
+    "recovery",
+    "tool",
+    "access",
+    "issue",
+    "troubleshooting"
+  ],
+  "sections": [
+    {
+      "heading": "Choosing an Ergo Wallet#",
+      "content": "A wallet is your essential gateway to the Ergo ecosystem. It allows you to securely store, send, and receive ERG and other tokens built on Ergo, as well as interact with decentralized applications (dApps). Choosing the right wallet depends on your technical comfort, security needs, and how you plan to use Ergo.\nDisclaimer\nThe wallets listed here are primarily developed and maintained by independent teams within the Ergo community. Always download software from official sources linked here and practice strong security habits (like safeguarding your seed phrase). This information is for guidance only; conduct your own research before entrusting funds to any wallet."
+    },
+    {
+      "heading": "How to Choose a Wallet?#",
+      "content": "Consider these common needs:\n\u00f0\u009f\u0093\u00b1 Mobile Use: If you need access to your funds primarily on your smartphone (iOS or Android), look at Mobile Wallets.\n\u00f0\u009f\u0092\u00bb Desktop Management: If you prefer managing funds on your computer (Windows, macOS, Linux), check out Desktop Wallets.\n\u00f0\u009f\u008c\u0090 dApp Interaction: If you plan to frequently interact with Ergo dApps directly through your web browser, a Browser Extension Wallet is often the most convenient.\n\u00f0\u009f\u0094\u0092 Maximum Security / Long-Term Storage: For storing significant amounts of ERG or holding funds offline (\"cold storage\"), consider a Paper Wallet or the offline/cold wallet features available in some mobile/desktop wallets."
+    },
+    {
+      "heading": "Recommended Wallets by Type#",
+      "content": "Here are popular and well-regarded wallets used by the Ergo community:"
+    },
+    {
+      "heading": "Mobile Wallets (iOS & Android)#",
+      "content": "Ergo Mobile Wallet (Terminus on iOS)\n\nDescription: A user-friendly, feature-rich mobile wallet. Supports ERG, tokens, NFTs, creating offline (\"cold\") wallets, and ErgoPay QR code scanning. A community favorite.\nBest For: Everyday mobile use, managing diverse assets, easy payments.\n\n\n\nMinotaur Wallet\n\nDescription: Offers advanced features like multi-signature capabilities (requiring multiple approvals for transactions).\nBest For: Users needing shared fund control or enhanced security via multi-sig. May be more complex for beginners. (Note: Check development status for latest features/stability)."
+    },
+    {
+      "heading": "Browser Extension Wallets#",
+      "content": "Nautilus Wallet\nDescription: A very popular browser extension wallet (similar to MetaMask). Enables seamless connection to Ergo dApps. Manages ERG, tokens, and NFTs. Includes privacy features and transaction optimization.\nBest For: Users frequently interacting with DeFi, NFT marketplaces, and other web-based Ergo applications."
+    },
+    {
+      "heading": "Desktop Wallets#",
+      "content": "Satergo Wallet\n\nDescription: A desktop wallet specifically designed to run alongside a full Ergo Node. Provides a user-friendly interface for managing funds while contributing to network decentralization.\nBest For: Users who want to run their own full node for maximum trust and verification, without needing complex command-line interaction.\n\n\n\nNode Wallet (Core)\n\nDescription: The basic wallet functionality built into the core Ergo reference node software. Accessed via command line or API.\nBest For: Developers or advanced users comfortable with command-line interfaces who are already running a core node. Satergo offers a graphical alternative for node users."
+    },
+    {
+      "heading": "Other Wallet Types#",
+      "content": "SAFEW Wallet\n\nDescription: A web-based wallet (accessed via a website, requires careful URL verification). Offers advanced features like ErgoMixer integration (for enhanced privacy) and developer tools.\nBest For: Experienced users needing specific features like mixing or advanced transaction control.\n\n\n\nErgo Paper Wallet\n\nDescription: A method to generate wallet keys offline and print them on paper (or save securely offline). Provides maximum security from online threats.\nBest For: Long-term \"cold storage\" of significant amounts, gifting ERG. Less convenient for frequent use."
+    },
+    {
+      "heading": "Quick Comparison Table#",
+      "content": "This table provides a simplified overview to help you compare options:\nWallet Type\nPlatform(s)\nEase of Use (Beginner)\nConnects to dApps?\nGood for Offline/Cold Storage?\nKey Feature\n\n\n\n\nErgo Mobile / Terminus\niOS, Android\nHigh\nLimited (ErgoPay)\nYes (via offline mode)\nConvenient mobile use, NFT support\n\n\nNautilus\nBrowser Extension\nMedium\nYes (Directly)\nNo\nSeamless dApp interaction, popular\n\n\nSatergo\nDesktop (Win/Mac/Lin)\nMedium\nNo\nYes (if PC is offline)\nUser-friendly full node wallet\n\n\nSAFEW\nWeb\nMedium-Low\nYes (Directly)\nNo\nAdvanced features, Mixer access\n\n\nMinotaur\nMobile\nMedium-Low\nLimited (ErgoPay)\nYes (via offline mode)\nMulti-signature security\n\n\nPaper Wallet\nOffline Generation\nN/A (Setup is simple)\nNo\nYes (Primary purpose)\nMaximum security for long-term holding\n\n\nNode Wallet (Core)\nDesktop (Win/Mac/Lin)\nLow\nNo\nYes (if PC is offline)\nIntegrated with core node (Advanced users)\nAdvanced Feature Comparison (Expand)\nThe table below provides a more detailed technical comparison based on community contributions. Note: TBC means the feature status needs confirmation.\n\n\n\nFeatures\nSatergo\nNautilus\nTerminus\nMinotaur\nSafeW\nNode Wallet\nPaper Wallet\n\n\n\n\nTX history\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nConfigure node\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nConfigure explorer\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nView-only wallet\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nErgoPay (EIP-0020)\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nInput address selection\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\nTBC\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nAddress management\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nChained TXs\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nMany price currencies\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nNFT viewing\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\nTBC\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nToken prices\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nBabel fees\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\nTBC\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\n\nIndependent software\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009c\u0085\n\n\nWebsite dApps\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nLedger\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nMany price sources\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nMixer integration\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nTX history export\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\u00e2\u009c\u0085\n\u00e2\u009d\u008c\n\u00e2\u009d\u008c\n\n\nMulti-sig..."
+    },
+    {
+      "heading": "Additional Resources#",
+      "content": "PDF Guide: Ergo Wallet Wonderland: Exploring the Best Wallet for Your Needs (May require update)\nDeveloper: SwiftAPI for iOS Wallet Dev\nCommunity Project: Ergo Light Client (iOS Beta) (Requires a full node)"
+    }
+  ],
+  "qa_pairs": []
+}

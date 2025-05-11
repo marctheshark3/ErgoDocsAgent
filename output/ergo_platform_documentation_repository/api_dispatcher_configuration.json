@@ -1,0 +1,79 @@
+{
+  "title": "API Dispatcher Configuration",
+  "source_url": "docs/node/conf/conf-api.md",
+  "summary": "# API Dispatcher Configuration\n\nThe `api-dispatcher` configuration controls the dispatcher responsible for managing API-related actors. In actor-based systems, the dispatcher is responsible for the execution of messages from the actor's mailbox.\n\n## Dispatcher Type\n```conf\ntype = Dispatcher\n```\nThe `type` setting specifies the dispatcher type. In this configuration, `Dispatcher` is used, representing an event-based dispatcher. ## Executor Type\n```conf\nexecutor = \"fork-join-executor\"\n```\nThe `executor` setting determines the type of execution service used. Here, the `fork-join-executor` is utilized, which allows tasks to be split into smaller parts and executed concurrently, increasing efficiency.",
+  "keywords": [
+    "dispatcher",
+    "configuration",
+    "actor",
+    "system",
+    "execution",
+    "message",
+    "mailbox",
+    "type",
+    "specifie",
+    "event",
+    "executor",
+    "fork",
+    "join",
+    "service",
+    "task",
+    "part",
+    "efficiency",
+    "minimum",
+    "parallelism",
+    "setting",
+    "number",
+    "thread",
+    "factor",
+    "ceiling",
+    "processor",
+    "maximum",
+    "throughput",
+    "define",
+    "value",
+    "result",
+    "fairer",
+    "code",
+    "snippet",
+    "role",
+    "fairness",
+    "processing",
+    "application"
+  ],
+  "sections": [
+    {
+      "heading": "API Dispatcher Configuration",
+      "content": "The api-dispatcher configuration controls the dispatcher responsible for managing API-related actors. In actor-based systems, the dispatcher is responsible for the execution of messages from the actor's mailbox."
+    },
+    {
+      "heading": "Dispatcher Type",
+      "content": "conf\ntype = Dispatcher\nThe type setting specifies the dispatcher type. In this configuration, Dispatcher is used, representing an event-based dispatcher."
+    },
+    {
+      "heading": "Executor Type",
+      "content": "conf\nexecutor = \"fork-join-executor\"\nThe executor setting determines the type of execution service used. Here, the fork-join-executor is utilized, which allows tasks to be split into smaller parts and executed concurrently, increasing efficiency."
+    },
+    {
+      "heading": "Minimum Parallelism",
+      "content": "conf\nparallelism-min = 1\nThe parallelism-min setting indicates the minimum number of threads to cap the factor-based parallelism number."
+    },
+    {
+      "heading": "Parallelism Factor",
+      "content": "conf\nparallelism-factor = 2.0\nThe parallelism-factor setting is used to calculate the parallelism, i.e., the number of threads. It is calculated as the ceiling of the number of available processors multiplied by the factor."
+    },
+    {
+      "heading": "Maximum Parallelism",
+      "content": "conf\nparallelism-max = 2\nThe parallelism-max setting determines the maximum number of threads to cap the factor-based parallelism number."
+    },
+    {
+      "heading": "Throughput",
+      "content": "conf\nthroughput = 4\nThe throughput setting defines the maximum number of messages processed per actor before the thread switches to the next actor. A lower value results in fairer, but potentially less efficient execution. Here, it's set to 4."
+    },
+    {
+      "heading": "Full Code Snippet",
+      "content": "conf\napi-dispatcher {\n  type = Dispatcher\n  executor = \"fork-join-executor\"\n  fork-join-executor {\n    parallelism-min = 1\n    parallelism-factor = 2.0\n    parallelism-max = 2\n  }\n  throughput = 4\n}\nOverall, the api-dispatcher configuration plays a crucial role in controlling the efficiency and fairness of processing messages for API-related actors in your application."
+    }
+  ],
+  "qa_pairs": []
+}

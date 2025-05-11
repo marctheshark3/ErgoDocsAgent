@@ -1,0 +1,224 @@
+{
+  "title": "Using AppKit from Python",
+  "source_url": "docs/dev/stack/appkit/appkit_py.md",
+  "summary": "# Using AppKit from Python\nTo use Appkit from Python, you need to bridge to a JVM instance running the Appkit code. To do so, we use [JPype](https://github.com/jpype-project/jpype) for this guide. It is presumed that you've already set up a proper Python environment.\n\n### General setup\n\nInstall jpype in your Python environment by typing\n\n    pip install JPype1\n\n(or pip3 when using Python3). For Appkit to work on your system, you'll need a JDK8 or JDK11 installed and you need the appkit \"fat jar\", that means a jar containing all dependencies to add to your project. You can find this jar on the releases page or build it yourself.",
+  "keywords": [
+    "appkit",
+    "python",
+    "instance",
+    "code",
+    "jpype](https://github.com",
+    "jpype",
+    "project",
+    "guide",
+    "environment",
+    "setup",
+    "install",
+    "jpype1",
+    "python3",
+    "system",
+    "jdk8",
+    "jdk11",
+    "dependency",
+    "release",
+    "page",
+    "jar](https://github.com",
+    "ergoplatform",
+    "ergo",
+    "appkit#building",
+    "file",
+    "wrapper",
+    "java",
+    "import",
+    "jpype.import",
+    "type",
+    "jpype.type",
+    "jpype.startjvm",
+    "classpath",
+    "jpype.addclasspath(\"ergo",
+    "jar.jar",
+    "option",
+    "method",
+    "kotlin",
+    "scala",
+    "logic",
+    "language",
+    "recommendation",
+    "approach",
+    "downside",
+    "completion",
+    "news",
+    "thing",
+    "transaction",
+    "look",
+    "header",
+    "address",
+    "boxoperation",
+    "networktype",
+    "restapiergoclient",
+    "testnet",
+    "restapiergoclient.create",
+    "node",
+    "restapiergoclient.getdefaultexplorerurl(networktype",
+    "ergotreecontract",
+    "contract",
+    "recipient.toergocontract",
+    "unsignedtransaction",
+    "boxoperations.createforsender(sender",
+    ".puttocontracttxunsigned(ctx",
+    "ergopay",
+    "return",
+    "ctx.newproverbuilder().build().reduce(unsignedtransaction",
+    "boxoperations",
+    "ergoclient",
+    "copy",
+    "network_type",
+    "node_client",
+    "restapiergoclient.create(\"http://213.239.193.208:9052/",
+    "restapiergoclient.getdefaultexplorerurl(network_type",
+    "blockchaincontext",
+    "function",
+    "class",
+    "interface",
+    "construct",
+    "annotation",
+    "@jimplements(java.util.function",
+    "apply(self",
+    "roundtrip",
+    "reducedtransaction",
+    "feature",
+    "base64",
+    "encoding",
+    "part",
+    "request",
+    "jimplements",
+    "joverride",
+    "executor",
+    "reducedroundtripexecutor(object",
+    "round_trip_address",
+    "unsigned_tx",
+    "blockchain_context.newproverbuilder().build().reduce(unsigned_tx",
+    "get_base64_reduced_tx(executor",
+    "reduced_tx",
+    "node_client.execute(executor",
+    "base64.urlsafe_b64encode(reduced_tx.tobytes()).decode('utf-8",
+    "print",
+    "print(get_base64_reduced_tx(reducedroundtripexecutor(\"3wwxnaem5ojtfp91qflw3y4sr7zwvclpvysztsz4lkgcoxujbxd3",
+    "token",
+    "knowledge",
+    "boxoperations.minttokentocontracttxunsigned",
+    "lambda",
+    "time",
+    "helper",
+    "eip4tokenbuilder",
+    "complexity",
+    "library",
+    "org.ergoplatform.appkit.impl",
+    "apply",
+    "tokenbuilder",
+    "token_id",
+    "picture",
+    "eip4tokenbuilder.buildnftpicturetoken(token_id",
+    "description",
+    "bytearray",
+    "ipfs://",
+    "minttokenexecutor",
+    "minttokenexecutor(object",
+    "@joverride",
+    "object",
+    "sender",
+    "blockchain_context).withamounttospend(1000",
+    "1000).minttokentocontracttxunsigned(address.create(round_trip_address).toergocontract",
+    "newproverbuilder",
+    "print(get_base64_reduced_tx(minttokenexecutor(\"3wwxnaem5ojtfp91qflw3y4sr7zwvclpvysztsz4lkgcoxujbxd3",
+    "eip4tokenbuilder.buildnftpicturetoken",
+    "init",
+    "withamounttospend",
+    "amount",
+    "reduce",
+    "format",
+    "transmission",
+    "get_base64_reduced_tx",
+    "artefact",
+    "https://github.com/ergo-pad/ergo-python-appkit"
+  ],
+  "sections": [
+    {
+      "heading": "Using AppKit from Python",
+      "content": "To use Appkit from Python, you need to bridge to a JVM instance running the Appkit code. To do so, we use JPype for this guide. It is presumed that you've already set up a proper Python environment."
+    },
+    {
+      "heading": "General setup",
+      "content": "Install jpype in your Python environment by typing\npip install JPype1\n(or pip3 when using Python3).\nFor Appkit to work on your system, you'll need a JDK8 or JDK11 installed and you need the appkit \"fat jar\", that means a jar containing all dependencies to add to your project. You can find this jar on the releases page or build it yourself. (How to build the fat jar)\nThe general wrapper for your Python code is then something like this:\n```python"
+    },
+    {
+      "heading": "Enable Java imports",
+      "content": "import jpype.imports"
+    },
+    {
+      "heading": "Pull in types",
+      "content": "from jpype.types import *"
+    },
+    {
+      "heading": "Launch the JVM",
+      "content": "jpype.startJVM()"
+    },
+    {
+      "heading": "Add Appkit fat jar to JVM classpath",
+      "content": "jpype.addClassPath(\"ergo-appkit-fat-jar.jar\")\nimport java.lang"
+    },
+    {
+      "heading": "----> add your ergo related code here",
+      "content": "jpype.shutdownJVM()\n```\nYou have two options to implement your ergo related code: You can do everything in your Python code \nand call all necessary Appkit methods from Python, or you create an own Java/Kotlin/Scala project and\nimplement your necessary logic in these languages providing some methods for simpler use from Python.\nA general recommendation which approach is more useful can't be given - while Appkit is a bit more easier\nto use from JVM, you most likely are more comfortable coding Python if you read this guide, so you might\nprefer using Python.\nA downside is that code completion is not working for Appkit methods within Python (or at least there was\nno way found so far). The good news is that most things work pretty straightforward so code completion is\nnot a must have."
+    },
+    {
+      "heading": "Construct an Ergo transaction",
+      "content": "Let's take a look on how to construct an ergo transaction in Appkit. In Java this is done the following way:\n// file header\n    import org.ergoplatform.appkit.Address;\n    import org.ergoplatform.appkit.BoxOperations;\n    import org.ergoplatform.appkit.NetworkType;\n    import org.ergoplatform.appkit.RestApiErgoClient;\n\n    // within a method\n    NetworkType networkType = NetworkType.TESTNET;\n    RestApiErgoClient.create(\n            \"http://213.239.193.208:9052/\", // use your node or a public node here\n            networkType,\n            \"\",\n            RestApiErgoClient.getDefaultExplorerUrl(networkType)\n    ).execute(ctx -> {\n        ErgoTreeContract contract = recipient.toErgoContract();\n        UnsignedTransaction unsignedTransaction = BoxOperations.createForSender(sender)\n                .withAmountToSpend(amountToSend)\n                .putToContractTxUnsigned(ctx, contract);\n\n        // reduce the transaction for use with ErgoPay\n        return ctx.newProverBuilder().build().reduce(unsignedTransaction, 0);\n    });\nHow to translate this to Python?\nAt first we need to declare all used imports. These can be done straightforward by looking at the Java imports:\nfrom org.ergoplatform.appkit import RestApiErgoClient, NetworkType, BoxOperations, Address\nConstructing the ErgoClient is also a straightforward copy from the Java code:\nnetwork_type = NetworkType.TESTNET\nnode_client = RestApiErgoClient.create(\"http://213.239.193.208:9052/\", network_type, \"\",\n                                       RestApiErgoClient.getDefaultExplorerUrl(network_type))\nTo execute code within a BlockchainContext, a lambda function is used within Java:\nergoClient.execute(ctx -> {\n    // ....\n    });\nInternally, lambda functions in Java are nothing more than an anonymous class implementing a special interface.\nSo to adapt this construct into Python, we need to define such a class implementing this interface. JPype provides\nspecial annotations for this:\n@JImplements(java.util.function.Function)\n..."
+    },
+    {
+      "heading": "Enable Java imports",
+      "content": "import jpype.imports"
+    },
+    {
+      "heading": "Pull in types",
+      "content": "from jpype.types import *"
+    },
+    {
+      "heading": "Launch the JVM",
+      "content": "jpype.startJVM()\njpype.addClassPath(\"ergo-appkit-fat-jar.jar\")\nimport java.lang\nfrom org.ergoplatform.appkit import RestApiErgoClient, NetworkType, BoxOperations, Address"
+    },
+    {
+      "heading": "this executor sends a 1 ERG roundtrip",
+      "content": "@JImplements(java.util.function.Function)\nclass ReducedRoundTripExecutor(object):\n    def init(self, address):\n        self.address = address\n@JOverride\ndef apply(self, blockchain_context):\n    round_trip_address = self.address\n    unsigned_tx = BoxOperations.createForSender(Address.create(round_trip_address),\n                                                blockchain_context).withAmountToSpend(\n        1000 * 1000 * 1000).putToContractTxUnsigned(Address.create(round_trip_address).toErgoContract())\n    return blockchain_context.newProverBuilder().build().reduce(unsigned_tx, 0)\ndef get_base64_reduced_tx(executor):\n    network_type = NetworkType.TESTNET\n    node_client = RestApiErgoClient.create(\"http://213.239.193.208:9052/\", network_type, \"\",\n                                           RestApiErgoClient.getDefaultExplorerUrl(network_type))\n    reduced_tx = node_client.execute(executor)\n    return base64.urlsafe_b64encode(reduced_tx.toBytes()).decode('utf-8')"
+    },
+    {
+      "heading": "print base64 url encoded reduced transaction - this is the most interesting part of an ErgoPay request",
+      "content": "print(get_base64_reduced_tx(ReducedRoundTripExecutor(\"3Wwxnaem5ojTfp91qfLw3Y4Sr7ZWVcLPvYSzTsZ4LKGcoxujbxd3\")))\njpype.shutdownJVM()\n```"
+    },
+    {
+      "heading": "Minting a token",
+      "content": "For minting a token, you can make use of your knowledge gained above and by using Boxoperations.mintTokenToContractTxUnsigned().\nThis method takes another lambda for building the actual token, so this time we need two helper classes.\nBuilding the token itself is easy: Eip4TokenBuilder provides all necessary methods to hide away complexity.\n```python"
+    },
+    {
+      "heading": "Import the Eip4TokenBuilder class from the ergoplatform library",
+      "content": "from org.ergoplatform.appkit.impl import Eip4TokenBuilder"
+    },
+    {
+      "heading": "Define a helper class for the executor",
+      "content": "@JImplements(java.util.function.Function)\nclass TokenBuilder(object):\n    @JOverride\n    # Define the apply function for the TokenBuilder class\n    def apply(self, token_id):\n        # Build a non-fungible picture token with Eip4TokenBuilder\n        return Eip4TokenBuilder.buildNftPictureToken(token_id, 1, \"Picture token\", \"Description\", 0, bytearray(), \"ipfs://...\")"
+    },
+    {
+      "heading": "Define the MintTokenExecutor class",
+      "content": "@JImplements(java.util.function.Function)\nclass MintTokenExecutor(object):\n    # Initialize the class with a provided address\n    def init(self, address):\n        self.address = address\n@JOverride\n# Define the apply function for the MintTokenExecutor class\ndef apply(self, blockchain_context):\n    # Set the round_trip_address to the class address\n    round_trip_address = self.address\n    # Create a BoxOperations object with the sender's address\n    unsigned_tx = BoxOperations.createForSender(Address.create(round_trip_address), blockchain_context).withAmountToSpend(1000 * 1000).mintTokenToContractTxUnsigned(Address.create(round_trip_address).toErgoContract(), TokenBuilder())\n    # Return the reduced unsigned transaction from the newProverBuilder\n    return blockchain_context.newProverBuilder().build().reduce(unsigned_tx, 0)"
+    },
+    {
+      "heading": "Print the reduced transaction from the MintTokenExecutor class",
+      "content": "print(get_base64_reduced_tx(MintTokenExecutor(\"3Wwxnaem5ojTfp91qfLw3Y4Sr7ZWVcLPvYSzTsZ4LKGcoxujbxd3\")))\n```\nThis code defines two classes, TokenBuilder and MintTokenExecutor. The TokenBuilder class has a single apply function that creates a non-fungible picture token with Eip4TokenBuilder.buildNftPictureToken.\nThe MintTokenExecutor class has an __init__ function to set the provided address and an apply function that creates a BoxOperations object with the provided address and calls withAmountToSpend to spend a specific amount of Ergo to mint the non-fungible picture token to the address. This transaction is unsigned, and the reduce function is used to reduce it to a format suitable for transmission.\nThe reduced unsigned transaction is then printed using get_base64_reduced_tx."
+    },
+    {
+      "heading": "Please note",
+      "content": "You can find published Python artefacts here https://github.com/ergo-pad/ergo-python-appkit"
+    }
+  ],
+  "qa_pairs": []
+}

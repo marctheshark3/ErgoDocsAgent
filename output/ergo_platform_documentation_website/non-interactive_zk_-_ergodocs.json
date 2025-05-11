@@ -1,0 +1,135 @@
+{
+  "title": "Non-Interactive ZK - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/nizk/",
+  "summary": "Non-Interactive Zero-Knowledge Proofs (NIZKs) are advanced cryptographic techniques that allow one party to prove knowledge of a secret without revealing the secret itself, and without requiring real-time interaction between the prover and verifier. NIZKs in Ergo are primarily implemented through Sigma Protocols (\u00ce\u00a3-protocols), which provide a powerful and flexible approach to zero-knowledge proofs. These protocols are a cornerstone of Ergo's privacy and cryptographic infrastructure. Non-Interactive: Proofs can be verified without direct communication Zero-Knowledge: No information about the secret is revealed Composable: Can be combined using logical operators like AND, OR, and THRESHOLD Ergo supports several fundamental zero-knowledge proof types: Discrete Logarithm Proofs Diffie-Hellman Tuple Proofs Ergo makes proofs non-interactive using the Fiat-Shamir transformation, which converts interactive proofs into non-interactive ones by using a cryptographic hash function.",
+  "keywords": [
+    "zero",
+    "knowledge",
+    "proofs",
+    "nizks",
+    "technique",
+    "party",
+    "secret",
+    "time",
+    "interaction",
+    "prover",
+    "verifier",
+    "ergo",
+    "sigma",
+    "protocols",
+    "\u00ee\u00a3-protocols",
+    "approach",
+    "proof",
+    "protocol",
+    "cornerstone",
+    "privacy",
+    "infrastructure",
+    "interactive",
+    "communication",
+    "information",
+    "operator",
+    "threshold",
+    "type",
+    "discrete",
+    "logarithm",
+    "diffie",
+    "hellman",
+    "tuple",
+    "fiat",
+    "shamir",
+    "transformation",
+    "hash",
+    "function",
+    "step",
+    "ring",
+    "signature",
+    "signatures",
+    "stealth",
+    "addresses",
+    "zerojoin",
+    "application",
+    "restores",
+    "fungibility",
+    "digital",
+    "token",
+    "provides",
+    "trustless",
+    "detailed",
+    "mixer",
+    "documentation",
+    "performance",
+    "mind",
+    "verification",
+    "minimal",
+    "serialization",
+    "deserialization",
+    "support",
+    "batch",
+    "academic",
+    "papers",
+    "contract",
+    "design",
+    "user",
+    "confidentiality",
+    "framework"
+  ],
+  "sections": [
+    {
+      "heading": "Overview#",
+      "content": "Non-Interactive Zero-Knowledge Proofs (NIZKs) are advanced cryptographic techniques that allow one party to prove knowledge of a secret without revealing the secret itself, and without requiring real-time interaction between the prover and verifier."
+    },
+    {
+      "heading": "Theoretical Foundation#",
+      "content": "NIZKs in Ergo are primarily implemented through Sigma Protocols (\u00ce\u00a3-protocols), which provide a powerful and flexible approach to zero-knowledge proofs. These protocols are a cornerstone of Ergo's privacy and cryptographic infrastructure."
+    },
+    {
+      "heading": "Key Characteristics#",
+      "content": "Non-Interactive: Proofs can be verified without direct communication\n\nUnlike traditional interactive zero-knowledge proofs, NIZKs can be verified asynchronously\nReduces computational overhead and network complexity\n\n\n\nZero-Knowledge: No information about the secret is revealed\n\nCryptographically guarantees that only the validity of a statement is proven\nProtects sensitive information while maintaining verifiability\n\n\n\nComposable: Can be combined using logical operators like AND, OR, and THRESHOLD\n\nEnables creation of complex cryptographic conditions\nSupports advanced smart contract logic and privacy-preserving protocols"
+    },
+    {
+      "heading": "Cryptographic Primitives#",
+      "content": "Ergo supports several fundamental zero-knowledge proof types:\nDiscrete Logarithm Proofs\n\nProve knowledge of a secret key without revealing it\nFundamental to Schnorr signature verification\nImplemented using proveDlog() predicate in ErgoScript\n\n\n\nDiffie-Hellman Tuple Proofs\n\nProve equality of discrete logarithms across different generators\nEnables privacy-preserving key exchange and contract designs\nCritical for advanced cryptographic protocols"
+    },
+    {
+      "heading": "Fiat-Shamir Transformation#",
+      "content": "Ergo makes proofs non-interactive using the Fiat-Shamir transformation, which converts interactive proofs into non-interactive ones by using a cryptographic hash function.\nKey steps:\nTransform an interactive proof into a non-interactive version\nUse a cryptographic hash function to generate a challenge\nEliminates the need for real-time communication between prover and verifier"
+    },
+    {
+      "heading": "Proof Composition#",
+      "content": "Sigma protocols can be combined to create complex proofs:\n// Example of a threshold signature proof\nval thresholdProof = prove {\n  atLeast(\n    3,  // Minimum number of signatures required\n    Coll(\n      PK(\"pubkey1\"),\n      PK(\"pubkey2\"),\n      PK(\"pubkey3\"),\n      PK(\"pubkey4\"),\n      PK(\"pubkey5\")\n    )\n  )\n}"
+    },
+    {
+      "heading": "Privacy-Preserving Techniques#",
+      "content": "Ring Signatures\n\nProve one of multiple possible signers without revealing the exact signer\nEnables anonymous transactions\nDetailed in Ring Signatures documentation\n\n\n\nThreshold Signatures\n\nRequire k-out-of-n participants to sign\nSupports multi-party computational scenarios\nExplored in Threshold Signatures documentation\n\n\n\nStealth Addresses\n\nGenerate one-time addresses for enhanced transaction privacy\nPrevent linking of transactions to a specific public address\nCrucial for maintaining financial privacy"
+    },
+    {
+      "heading": "Mixer Protocols#",
+      "content": "ZeroJoin demonstrates a practical application:\n- Uses ring signatures and Diffie-Hellman tuples\n- Restores fungibility of digital tokens\n- Provides non-interactive, trustless mixing\n- Detailed in Mixer Protocol documentation"
+    },
+    {
+      "heading": "Security Considerations#",
+      "content": "Based on the hardness of the discrete logarithm problem\nRequires careful implementation to prevent potential vulnerabilities\nExtensive test coverage in Ergo's cryptographic implementations\nRelies on well-established cryptographic assumptions"
+    },
+    {
+      "heading": "Related Cryptographic Concepts#",
+      "content": "Discrete Logarithm Proofs\nRing Signatures\nThreshold Signatures\nSigma Protocols"
+    },
+    {
+      "heading": "Future Research Directions#",
+      "content": "Enhanced privacy protocol implementations\nMore efficient zero-knowledge proof constructions\nCross-chain interoperability using NIZKs\nIntegration with advanced cryptographic techniques"
+    },
+    {
+      "heading": "Performance and Scalability#",
+      "content": "NIZKs in Ergo are designed with performance in mind:\n- Constant-time proof verification\n- Minimal computational overhead\n- Efficient serialization and deserialization\n- Support for batch verification techniques"
+    },
+    {
+      "heading": "References#",
+      "content": "Sigma Protocols Overview\nCryptographic Foundations\nZero-Knowledge Proofs in Ergo\n\nAcademic Papers:\n\nSigma Protocols: A Survey\nNon-Interactive Zero-Knowledge Proofs"
+    },
+    {
+      "heading": "Conclusion#",
+      "content": "Ergo's Non-Interactive Zero-Knowledge Proofs represent a sophisticated approach to cryptographic privacy, enabling complex, secure, and flexible smart contract designs while maintaining user confidentiality. By leveraging advanced cryptographic techniques like Sigma Protocols and the Fiat-Shamir transformation, Ergo provides a robust framework for privacy-preserving computational techniques."
+    }
+  ],
+  "qa_pairs": []
+}

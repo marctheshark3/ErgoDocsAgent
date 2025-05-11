@@ -1,0 +1,91 @@
+{
+  "title": "Pi Blockchain Explorer - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/rpi-blockchain-explorer/",
+  "summary": "This is a guide for developers and data scientists interested in storing the Ergo blockchain to a standardized database format using a Raspberry Pi. We will focus specifically on the Chain Grabber module from the Ergo Blockchain Explorer (backend). If you are reading this in the future, please visit the code release repo and replace it with the appropriate version. In the code snippet below, we created \"ergo\" as the username. psql\ncreate database explorer;\n\\c explorer;\n\\i /explorer-backend-9.4.3/modules/explorer-core/src/main/resources/db/V9__Schema.sql\n\nThe final line of code above executes a SQL script that creates a bunch of tables and indices to be populated later by the Chain Grabber.",
+  "keywords": [
+    "guide",
+    "developer",
+    "datum",
+    "scientist",
+    "ergo",
+    "blockchain",
+    "database",
+    "format",
+    "raspberry",
+    "chain",
+    "grabber",
+    "module",
+    "explorer",
+    "backend",
+    "future",
+    "code",
+    "release",
+    "repo",
+    "version",
+    "snippet",
+    "username",
+    "psql",
+    "/explorer",
+    "backend-9.4.3",
+    "core",
+    "resource",
+    "v9__schema.sql",
+    "line",
+    "script",
+    "bunch",
+    "table",
+    "index",
+    "password",
+    "command",
+    "directory",
+    "block",
+    "height"
+  ],
+  "sections": [
+    {
+      "heading": "How to setup the Chain-Grabber module on a Raspberry Pi device#",
+      "content": "This is a guide for developers and data scientists interested in storing the Ergo blockchain to a standardized database format using a Raspberry Pi.\nWe will focus specifically on the Chain Grabber module from the Ergo Blockchain Explorer (backend)."
+    },
+    {
+      "heading": "Prerequisites#",
+      "content": "Raspberry Pi with official OS installed\nMinimum 60GB of disk space available\nSSH enabled with stable internet connection"
+    },
+    {
+      "heading": "Preparing the RPi#",
+      "content": "sudo apt update\nsudo apt full-upgrade"
+    },
+    {
+      "heading": "Download latest Java version#",
+      "content": "sudo apt install default-JDK"
+    },
+    {
+      "heading": "Download sbt#",
+      "content": "echo \"deb https://repo.scala-sbt.org/scalasbt/debian /\" | sudo tee -a /etc/apt/sources.list.d/sbt.list\ncurl -sL \"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823\" | sudo apt-key add\nsudo apt update\nsudo apt install sbt"
+    },
+    {
+      "heading": "Download and unzip precompiled JAR#",
+      "content": "If you are reading this in the future, please visit the code release repo and replace it with the appropriate version.\nwget https://github.com/ergoplatform/explorer-backend/archive/refs/tags/<version>.zip\n\nunzip explorer-backend-<version>"
+    },
+    {
+      "heading": "Install PostgreSQL#",
+      "content": "In the code snippet below, we created \"ergo\" as the username.\nsudo apt install postgresql\nsudo su postgres\ncreateuser ergo -P --interactive"
+    },
+    {
+      "heading": "Setup and load database schema#",
+      "content": "psql\ncreate database explorer;\n\\c explorer;\n\\i /explorer-backend-9.4.3/modules/explorer-core/src/main/resources/db/V9__Schema.sql\n\nThe final line of code above executes a SQL script that creates a bunch of tables and indices to be populated later by the Chain Grabber."
+    },
+    {
+      "heading": "Update app config#",
+      "content": "This is where you need to edit the database username and password you set up earlier.\nsudo nano explorer-backend-9.4.3/modules/chain-grabber/src/main/resources/application.conf"
+    },
+    {
+      "heading": "Launch chain-grabber#",
+      "content": "Run the following command from within the explorer-backend directory. \nsbt chain-grabber/run"
+    },
+    {
+      "heading": "Validate#",
+      "content": "If all goes well, the code below returns the latest block height that was stored in the database.\nselect max(height) from node_headers;"
+    }
+  ],
+  "qa_pairs": []
+}

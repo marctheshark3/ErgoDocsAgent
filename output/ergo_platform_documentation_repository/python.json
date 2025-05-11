@@ -1,0 +1,62 @@
+{
+  "title": "Python",
+  "source_url": "docs/dev/lang/python.md",
+  "summary": "---\ntags:\n  - Python\n---\n\n\n# Python\n\nPython developers can interact with the Ergo blockchain using various [libraries](libraries.md) and [bindings](sigma-rust.md#bindings). Notably, [Python bindings for sigma-rust](sigma-rust.md#bindings) are available, providing core [blockchain interaction](interact.md) capabilities. ## Frameworks\n\n::cards:: [\n  {\n    \"title\": \"\ud83d\udd17 ergpy\",\n    \"content\": \"A python-jvm wrapper for interacting with the Ergo blockchain.",
+  "keywords": [
+    "python",
+    "developer",
+    "ergo",
+    "blockchain",
+    "libraries](libraries.md",
+    "bindings](sigma",
+    "rust.md#bindings",
+    "binding",
+    "sigma",
+    "rust](sigma",
+    "core",
+    "interaction](interact.md",
+    "capability",
+    "framework",
+    "card",
+    "title",
+    "ergpy",
+    "content",
+    "wrapper",
+    "https://github.com/mgpai22/ergpy",
+    "appkit",
+    "appkit](appkit.md",
+    "https://github.com/ergoplatform/ergo-appkit/wiki/using-appkit-from-python",
+    "ergopad",
+    "ergopad](ergopad.md",
+    "docker",
+    "containers](https://github.com",
+    "react",
+    "materialui",
+    "frontend](get",
+    "started.md",
+    "backend](get",
+    "contracts](ergoscript.md",
+    "service",
+    "redi",
+    "postgre",
+    "vesting](https://github.com",
+    "blob",
+    "contract",
+    "nftlockedvesting.md"
+  ],
+  "sections": [
+    {
+      "heading": "Python",
+      "content": "Python developers can interact with the Ergo blockchain using various libraries and bindings. Notably, Python bindings for sigma-rust are available, providing core blockchain interaction capabilities."
+    },
+    {
+      "heading": "Frameworks",
+      "content": "::cards::\n[\n  {\n    \"title\": \"\ud83d\udd17 ergpy\",\n    \"content\": \"A python-jvm wrapper for interacting with the Ergo blockchain.\",\n    \"url\": \"https://github.com/mgpai22/ergpy\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 AppKit\",\n    \"content\": \"Using Appkit from Python\",\n    \"url\": \"https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python\"\n  }\n]\n::/cards::"
+    },
+    {
+      "heading": "ErgoPad",
+      "content": "ErgoPad has released a set of docker containers combined to create a React/MaterialUI frontend, REST API backend, assembler to interact with smart contracts and supporting services like ergonode, redis and postgres.\nNFT-Locked Vesting\nergo-python-appkit"
+    }
+  ],
+  "qa_pairs": []
+}

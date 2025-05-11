@@ -1,0 +1,157 @@
+{
+  "title": "Network Messages - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/p2p/network/",
+  "summary": "This document provides a detailed overview of the network messages in Ergo's P2P protocol. Understanding these messages is crucial for interacting with the Ergo network at a low level. Each message in the protocol has a specific format and serves a unique purpose in the communication between nodes. Every message in the P2P protocol has the following format: For more detailed implementation, you can check out the Ergo Node View Synchronizer in the Ergo repository. Records are structured data types used in the P2P protocol.",
+  "keywords": [
+    "document",
+    "overview",
+    "network",
+    "message",
+    "ergo",
+    "protocol",
+    "level",
+    "format",
+    "purpose",
+    "communication",
+    "nodes",
+    "implementation",
+    "node",
+    "view",
+    "synchronizer",
+    "repository",
+    "record",
+    "data",
+    "type",
+    "peer",
+    "feature",
+    "modifier",
+    "header",
+    "understanding",
+    "serialization",
+    "documentation",
+    "mean",
+    "peers",
+    "sync",
+    "info",
+    "request",
+    "code",
+    "body",
+    "response",
+    "discovery",
+    "java",
+    "getpeers",
+    "ergonnection",
+    "version",
+    "4.0.16",
+    "sender",
+    "blockchain",
+    "recipient",
+    "time",
+    "datum",
+    "block",
+    "transmit",
+    "inventory",
+    "object",
+    "transaction",
+    "reply",
+    "example",
+    "memory",
+    "pool",
+    "database",
+    "reason",
+    "nipopow",
+    "enhancement",
+    "method",
+    "proofs",
+    "proof",
+    "work",
+    "nipopows",
+    "test",
+    "networking",
+    "vector",
+    "handling",
+    "ergo\u00e2\u0080\u0099s",
+    "demo",
+    "application",
+    "demos",
+    "address",
+    "print",
+    "wallet",
+    "functionality"
+  ],
+  "sections": [
+    {
+      "heading": "Network Messages in Ergo's P2P Protocol#",
+      "content": "This document provides a detailed overview of the network messages in Ergo's P2P protocol. Understanding these messages is crucial for interacting with the Ergo network at a low level. Each message in the protocol has a specific format and serves a unique purpose in the communication between nodes."
+    },
+    {
+      "heading": "Message Format#",
+      "content": "Every message in the P2P protocol has the following format:\nData type\nField name\nDetails\n\n\n\n\nbyte[4]\nMagic bytes\nFor the mainnet, the magic bytes are {1, 0, 2, 4}. For testnet, {2, 0, 0, 1}.\n\n\nunsigned byte\nMessage code\nOne byte describing message type\n\n\nint\nMessage body length\nNo VLQ or ZigZag encoding is used for the message length (for historical reasons); bytes are coming in big-endian order.\n\n\nbyte[4]\nHandshake body checksum\nFirst four bytes of blake2b256(message body)\n\n\nbyte[bodyLength]\nMessage body\nMessage body\nFor more detailed implementation, you can check out the Ergo Node View Synchronizer in the Ergo repository."
+    },
+    {
+      "heading": "Records#",
+      "content": "Records are structured data types used in the P2P protocol. They include Peer, Feature, Modifier, and Header records."
+    },
+    {
+      "heading": "Peer#",
+      "content": "Data type\nField name\nDetails\n\n\n\n\nunsigned byte\nLength of next field\n\n\n\nUTF-8 String\nAgent name\n\n\n\nbyte[3]\nVersion\nFor example, {4, 0, 25}\n\n\nunsigned byte\nLength of next field\n\n\n\nUTF-8 String\nPeer name\n\n\n\nboolean\nWhether public address exists\n\n\n\n(unsigned byte)\nLength of the IP plus 4\nWhen decoding, subtract the value with 4 to get the actual length\n\n\n(byte[ipLength - 4])\nThe public IP address\n\n\n\n(VLQ unsigned int)\nPort\n\n\n\nunsigned byte\nCount of peer features\n\n\n\nFeature[featureCount]\nFeatures"
+    },
+    {
+      "heading": "Feature#",
+      "content": "Data type\nField name\n\n\n\n\nunsigned byte\nFeature code\n\n\nVLQ unsigned short\nBody length\n\n\nbyte[bodyLength]\nBody"
+    },
+    {
+      "heading": "Modifier (Record)#",
+      "content": "Data type\nField name\n\n\n\n\nbyte[32]\nModifier ID\n\n\nVLQ unsigned int\nLength of object\n\n\nbyte[objectLength]\nObject"
+    },
+    {
+      "heading": "Header#",
+      "content": "Data type\nField name\n\n\n\n\nVLQ unsigned short\nLength of bytes\n\n\nbyte[length]\nBytes\nFor a deeper understanding of how records are serialized, check out the Ergo Serialization Documentation."
+    },
+    {
+      "heading": "Messages#",
+      "content": "Messages are the primary means of communication between nodes in the P2P network. They include Get Peers, Peers, Sync Info, Inv, Request Modifier, and Modifier messages."
+    },
+    {
+      "heading": "Get Peers#",
+      "content": "Code = 1\nThe body is empty."
+    },
+    {
+      "heading": "Peers#",
+      "content": "Code = 2\nSent in response to Get Peers. Contains all the peers that are currently connected to. Used for node discovery.\nData type\nField name\n\n\n\n\nVLQ ZZ int\nCount of peers\n\n\nPeer[]\nPeers\nFor the Java implementation of the GetPeers message, refer to Ergonnection."
+    },
+    {
+      "heading": "Sync Info#",
+      "content": "Code = 65\nNew (Added in 4.0.16)\nIt is sent only to nodes that report a version of 4.0.16 or higher. For older nodes, the Sync Info (old) is sent.\nRequests an Inv message that provides modifier IDs required by the sender to synchronize their blockchain with the recipient. It allows a peer which has been disconnected or started for the first time to get the data it needs to request the blocks it hasn't seen.\nData type\nField name\n\n\n\n\nVLQ unsigned short\nThe constant value 0\n\n\nbyte\nThe constant value -1\n\n\nunsigned byte\nCount of headers\n\n\nHeader[headerCount]\nHeaders"
+    },
+    {
+      "heading": "Sync Info (old)#",
+      "content": "Code = 65\nThe old (before 4.0.16) version of the Sync Info message.\nData type\nField name\n\n\n\n\nVLQ unsigned short\nCount of last header IDs\n\n\nbyte[32][lastHeaderIdCount]\nLast header IDs (ID byte arrays)"
+    },
+    {
+      "heading": "Inv#",
+      "content": "Code = 55\nTransmits one or more inventories of objects known to the transmitting peer.\nIt can be sent unsolicited to announce new transactions or blocks, or it can be sent in reply to a Sync Info message.\nData type\nField name\n\n\n\n\nunsigned byte\nType ID\n\n\nVLQ unsigned int\nCount of elements\n\n\nbyte[32][elementCount]\nElements (ID byte arrays)\nFor an example of how INV messages are handled, see InvSpec.scala."
+    },
+    {
+      "heading": "Request Modifier#",
+      "content": "Code = 22\nRequests one or more modifiers from another node. The objects are requested by an inventory, which the requesting node typically received previously with an Inv message.\nThis message cannot be used to request arbitrary data, such as historic transactions no longer in the memory pool. Full nodes may not even be able to provide older blocks if they've pruned old transactions from their block database.\nFor this reason, this message should usually only be used to request data from a node that previously advertised it had that data by sending an Inv message.\nData type\nField name\n\n\n\n\nunsigned byte\nModifier type ID\n\n\nVLQ unsigned int\nCount of elements\n\n\nbyte[32][elementCount]\nElements (ID byte arrays)"
+    },
+    {
+      "heading": "Modifier#",
+      "content": "Code = 33\nSent in response to Request Modifier.\nData type\nField name\n\n\n\n\nunsigned byte\nType ID\n\n\nVLQ unsigned int\nCount of modifiers\n\n\nModifier[modifierCount]\nModifiers"
+    },
+    {
+      "heading": "Pull Requests (PRs) & Tests#",
+      "content": "The NiPoPoW powered bootstrapping PR #1365 is a relevant enhancement that introduces a method to bootstrap nodes using Non-Interactive Proofs of Proof-of-Work (NiPoPoWs).\nTests for parsing networking messages against test vectors are discussed in PR #1264, which includes:\nEnhanced validation with require() for non-elidable checks.\nSimplified test vectors for invalid PoW solution validation and handshake parsing.\nIntroduced SyncInfo networking message parsing test (can be used as a simple spec).\nThese tests ensure robust handling of network messages in Ergo\u00e2\u0080\u0099s P2P protocol."
+    },
+    {
+      "heading": "Demo Applications#",
+      "content": "Demo applications are available for practical implementation, such as:\nAddress Generation: AddressGenerationDemo\nTransaction JSON Printing: CreateTransactionDemo\nThese demos provide examples of how to generate addresses and print transactions using the Ergo wallet functionalities."
+    },
+    {
+      "heading": "Resources#",
+      "content": "A simple implementation of VLQ and ZigZag encoding can be found here.\nA complete implementation of the P2P protocol written in Java can be found in Ergonnection."
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Pi - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/node/install/pi/",
+  "summary": "The Raspberry Pi is small, inexpensive, and meets the requirements to run an Ergo full node. Alternatively to the simple instructions below, see Tutorial: Running an Ergo Full Node on a Headless Raspberry Pi for a more comprehensive start to finish setup guide. Install the Java JDK The Raspberry Pi is a very powerful device but it has some limitations which prevent it from syncing a full Ergo node quickly and efficiently. Below are a few things you can do to ensure a smooth setup process. Increase the swap space your Pi has access to Increase to 4096 (MB) Then re-enable the swap and reboot.",
+  "keywords": [
+    "raspberry",
+    "requirement",
+    "ergo",
+    "node",
+    "instruction",
+    "tutorial",
+    "full",
+    "headless",
+    "start",
+    "setup",
+    "guide",
+    "java",
+    "device",
+    "limitation",
+    "below",
+    "thing",
+    "process",
+    "swap",
+    "space",
+    "access",
+    "increase",
+    "script",
+    "version",
+    "sync",
+    "progress",
+    "terminal",
+    "step",
+    "limit",
+    "flag",
+    "config",
+    "mainnet",
+    "configuration",
+    "option",
+    "file",
+    "resource",
+    "directory",
+    "github",
+    "repository",
+    "example"
+  ],
+  "sections": [
+    {
+      "heading": "Getting Started#",
+      "content": "The Raspberry Pi is small, inexpensive, and meets the requirements to run an Ergo full node.\nAlternatively to the simple instructions below, see Tutorial: Running an Ergo Full Node on a Headless Raspberry Pi for a more comprehensive start to finish setup guide."
+    },
+    {
+      "heading": "Prerequisites#",
+      "content": "Pi4 with 4gb RAM or above is optimal. \nDue to the intensive disk I/O, a SSD with 64GB+ is preferred."
+    },
+    {
+      "heading": "Preperation#",
+      "content": "sudo apt update && sudo apt upgrade -y\nsudo apt install default-jdk -y\nInstall the Java JDK\nsudo apt install default-jdk"
+    },
+    {
+      "heading": "SWAP Size#",
+      "content": "The Raspberry Pi is a very powerful device but it has some limitations which prevent it from syncing a full Ergo node quickly and efficiently. Below are a few things you can do to ensure a smooth setup process.\nIncrease the swap space your Pi has access to\nsudo dphys-swapfile swapoff\nsudo nano /etc/dphys-swapfile\nIncrease to 4096 (MB)\nCONF_SWAPSIZE=4096\nThen re-enable the swap and reboot.\nsudo dphys-swapfile setup\nsudo dphys-swapfile swapon\nsudo reboot now"
+    },
+    {
+      "heading": "More tips#",
+      "content": "WiFi has less issues than Ethernet\nMake sure your Pi is in a well-vented area. \nDisable your screen-saver for the sync. \nUsing ZRAM"
+    },
+    {
+      "heading": "Quick Start#",
+      "content": "This script will download the latest version of the node, prompt you to set an API key, and start the sync while displaying the progress in terminal.\nbash -c \"$(curl -s https://node.phenotype.dev)\"\nIf you'd prefer to get set up manually, here's a step-by-step guide. When ready to launch the node make sure to set a maximum limit of 2GB by using the -Xmx2g flag."
+    },
+    {
+      "heading": "Light Mode#",
+      "content": "A basic config on mainnet should look like this\nergo {\n    node {\n        mining = false\n    }\n\n}      \n\nscorex {\n    restApi {\n        apiKeyHash = \"$BLAKE_HASH\"\n    }\n}\nThere are several configuration options that be tweaked in your ergo.conf file. The resource directory on the main GitHub repository has examples of all available options.\nskipV1TransactionsValidation: Skip validation of transactions before block 417,792\nblocksToKeep denotes the number of blocks to keep with transactions and ADproofs. \nstateType with the options utxo and digest.\nutxo keep full utxo set, that allows to validate arbitrary block and generate ADProofs. (default)\ndigest - keep state root hash only and validate transactions via ADProofs.\nmaxConnections: The maximum amount of peers the node should try and connect to over the P2P layer."
+    },
+    {
+      "heading": "Launch#",
+      "content": "java -jar -Xmx2g ergo.jar --mainnet -c ergo.conf"
+    },
+    {
+      "heading": "Resources#",
+      "content": "How to setup an Ergo Node on a Raspberry Pi\nergo-rpi"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "type": "github",
+      "url": "https://github.com/ergoplatform/ergodocs",
+      "branch": "main",
+      "description": "Ergo Platform Documentation Repository"
+    },
+    {
+      "type": "website",
+      "url": "https://docs.ergoplatform.com/",
+      "max_depth": 2,
+      "description": "Ergo Platform Documentation Website"
+    }
+  ],
+  "output": {
+    "format": "markdown",
+    "directory": "output",
+    "structure": "topic"
+  },
+  "processing": {
+    "summarize": true,
+    "extract_code_samples": true,
+    "generate_qa_pairs": true
+  },
+  "schedule": {
+    "frequency": "weekly",
+    "day_of_week": "monday",
+    "time": "00:00"
+  },
+  "openai": {
+    "model": "gpt-4"
+  }
+} 

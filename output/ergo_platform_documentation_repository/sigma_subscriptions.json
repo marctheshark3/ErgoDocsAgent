@@ -1,0 +1,22 @@
+{
+  "title": "Sigma Subscriptions",
+  "source_url": "docs/eco/sigma-subscriptions.md",
+  "summary": "---\ntags:\n  - Sigma Subscriptions\n  - Subscriptions\n  - Framework\n  - dApp\n---\n\n# Sigma Subscriptions\n\n[Sigma Subscriptions](https://github.com/cornbelt-dev/sigma-subscriptions) is a framework for anyone to easily run a subscription service on Ergo.",
+  "keywords": [
+    "sigma",
+    "subscription",
+    "framework",
+    "dapp",
+    "subscriptions](https://github.com",
+    "cornbelt",
+    "service",
+    "ergo"
+  ],
+  "sections": [
+    {
+      "heading": "Sigma Subscriptions",
+      "content": "Sigma Subscriptions is a framework for anyone to easily run a subscription service on Ergo."
+    }
+  ],
+  "qa_pairs": []
+}

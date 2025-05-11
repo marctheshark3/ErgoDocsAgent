@@ -1,0 +1,114 @@
+{
+  "title": "Custom Indexer - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/tutorials/blockchain-indexing/custom-indexer/",
+  "summary": "For many production dApps and services on Ergo, building a custom off-chain indexer provides the optimal balance of performance, query flexibility, and control over data. While this approach offers the most power, it also involves the most complexity. However, leveraging existing tools and frameworks can significantly simplify the process. A custom indexer is a dedicated service that connects to an Ergo node API, processes blockchain data, and stores relevant information in an optimized database for application queries. Core Tasks: Your application then queries this custom database, benefiting from optimized performance and data structures.",
+  "keywords": [
+    "production",
+    "dapps",
+    "service",
+    "ergo",
+    "custom",
+    "chain",
+    "indexer",
+    "balance",
+    "performance",
+    "query",
+    "flexibility",
+    "datum",
+    "approach",
+    "power",
+    "complexity",
+    "tool",
+    "framework",
+    "process",
+    "node",
+    "blockchain",
+    "store",
+    "information",
+    "database",
+    "application",
+    "core",
+    "tasks",
+    "data",
+    "structure",
+    "scratch",
+    "problem",
+    "block",
+    "fetching",
+    "handling",
+    "source",
+    "takeaway",
+    "wheel",
+    "functionality",
+    "foundation",
+    "extraction",
+    "logic",
+    "choice",
+    "impact",
+    "capability",
+    "storage",
+    "requirement",
+    "pattern",
+    "case",
+    "endpoint",
+    "criterion",
+    "script",
+    "template",
+    "track",
+    "developer",
+    "ergoplatform",
+    "scanner",
+    "need"
+  ],
+  "sections": [
+    {
+      "heading": "Indexing Strategy: Building a Custom Indexer#",
+      "content": "For many production dApps and services on Ergo, building a custom off-chain indexer provides the optimal balance of performance, query flexibility, and control over data. While this approach offers the most power, it also involves the most complexity. However, leveraging existing tools and frameworks can significantly simplify the process."
+    },
+    {
+      "heading": "Concept#",
+      "content": "A custom indexer is a dedicated service that connects to an Ergo node API, processes blockchain data, and stores relevant information in an optimized database for application queries.\nCore Tasks:\nConnect: Establish a connection to a trusted Ergo node API (your own or a reliable public one).\nFetch: Retrieve new blocks as they appear on the chain.\nParse: Decode block, transaction, and box data.\nExtract: Identify and pull out data relevant to your application (e.g., boxes matching specific scripts, token transfers, register values).\nStore: Transform and save the extracted data into your chosen database (e.g., PostgreSQL, RocksDB, MongoDB).\nHandle Reorgs: Detect blockchain reorganizations and update the database accordingly to maintain consistency.\nYour application then queries this custom database, benefiting from optimized performance and data structures.\ngraph LR\n    A[Ergo Node API] -->|1. Fetch New Blocks| B(Indexer Service);\n    B -->|2. Parse Block/Tx/Box Data| B;\n    B -->|3. Extract Relevant Info| B;\n    B -->|4. Store in DB| C[(Database)];\n    B -->|5. Handle Reorgs| C;\n    D[Your Application] -->|6. Query Optimized Data| C;\n\n    style C fill:#ccf,stroke:#333,stroke-width:2px"
+    },
+    {
+      "heading": "Leveraging Existing Tools & Frameworks (\"Quick Start\")#",
+      "content": "Building an indexer from scratch involves solving several complex problems (like efficient block fetching and robust reorg handling). Before starting from zero, consider adapting existing open-source tools:\nErgo Blockchain Scanner (ergoplatform/scanner):\nRepository: github.com/ergoplatform/scanner\nDescription: A foundational project maintained by the Ergo Platform team, designed specifically for scanning the blockchain for boxes matching certain criteria. It handles node communication and reorgs, providing a solid base upon which to build your custom data extraction and storage logic. Adapting this can be significantly faster than implementing the core scanning and reorg logic yourself.\n\n\nExplorer Chain-Grabber (ergoplatform/explorer-backend):\nRepository: github.com/ergoplatform/explorer-backend/tree/master/modules/chain-grabber\nDescription: The module used by the official Ergo Explorer to fetch and initially process chain data. While potentially more complex to adapt than the dedicated scanner, it contains battle-tested logic for interacting with the node and handling chain events.\n\n\nForking Existing Indexers: Explore open-source indexers like ErgoWatch or Pragmaxim's Chain Indexer (see below). Forking and modifying them to suit your specific data needs can be a viable strategy.\nKey Takeaway: Don't reinvent the wheel for core functionalities like block fetching and reorg handling if existing, well-maintained tools can provide a foundation."
+    },
+    {
+      "heading": "Tools & SDKs for Custom Logic#",
+      "content": "Even when using a framework, you'll likely use SDKs for parsing specific data or implementing custom extraction logic:\nSigma-Rust: (Rust) Ideal for high-performance parsing and data manipulation within your indexer logic.\nFleet SDK (JS/TS): (Node.js) Useful if building the indexer service in JavaScript/TypeScript, particularly for interacting with node APIs and deserializing data.\nAppkit (Scala): (JVM) Suitable for JVM-based indexers, allowing interaction with node APIs and data processing."
+    },
+    {
+      "heading": "Database Choices#",
+      "content": "The choice of database impacts performance, query capabilities, and storage requirements:\nPostgreSQL:\nPros: Mature, robust relational database. Excellent for complex SQL queries, joins, and structured data. Supports JSONB for semi-structured data.\nCons: Can require more careful schema design; potentially higher storage overhead for very simple key-value lookups compared to NoSQL options.\nUsed By: ErgoWatch.\n\n\nRocksDB:\nPros: High-performance key-value store optimized for fast reads and writes, especially on SSDs. Efficient storage. Suitable for storing raw blockchain data or simple indexed lookups.\nCons: Less suited for complex relational queries compared to SQL databases. Often used as an embedded database within the indexer process itself.\nUsed By: Pragmaxim's Chain Indexer, Ergo Node (for UTXO state).\n\n\nMongoDB:\nPros: Flexible document-oriented database (NoSQL). Good for evolving schemas and storing nested JSON-like data. Scales horizontally well.\nCons: Less suited for complex relational joins; transaction support can be different from SQL databases.\nChoose the database that best matches your indexer's data structure and query patterns."
+    },
+    {
+      "heading": "Key Challenges & Considerations#",
+      "content": "Initial Sync: Indexing the entire blockchain history can take a very long time. Strategies include:\nStarting indexing from a specific recent height if historical data isn't needed.\nUsing database snapshots or pre-synced data dumps if available.\nDesigning the indexer for parallel processing if possible.\n\n\nReorg Handling: This is critical for data consistency. The indexer must detect when blocks are invalidated and roll back the corresponding data changes in the database. Using frameworks like ergoplatform/scanner often simplifies this significantly.\nSelective Indexing: Indexing everything can lead to massive storage requirements. Carefully define only the data points your application truly needs to query (e.g., only boxes matching specific script templates, only certain register values, only specific token IDs).\nInfrastructure: Running the indexer service, the database, and potentially your own Ergo node requires server resources and maintenance."
+    },
+    {
+      "heading": "ErgoWatch#",
+      "content": "Repository: github.com/abchrisxyz/ergowatch\nDescription: Open-source Rust indexer using sigma-rust and PostgreSQL. Good reference for custom indexing patterns."
+    },
+    {
+      "heading": "Pragmaxim's Chain Indexer#",
+      "content": "Repository: github.com/pragmaxim-com/chain-indexer/tree/ergo-boxes\nDescription: An emerging, high-performance Rust-based indexer using RocksDB, known for speed even on low-power devices like Raspberry Pis. Demonstrates an alternative database approach."
+    },
+    {
+      "heading": "Explorer Backends#",
+      "content": "Source code for public explorers (e.g., ergoplatform/explorer-backend) contains complex indexing logic."
+    },
+    {
+      "heading": "SigmaSpace#",
+      "content": "The SigmaSpace.io explorer project has developed its own indexing services, potentially with optimizations worth investigating if their code is available or described elsewhere."
+    },
+    {
+      "heading": "Alternative: Node API Scanning#",
+      "content": "For simpler, non-historical use cases, the Ergo Node API offers /scan endpoints. These allow you to register criteria (e.g., script templates) and have the node notify you or track boxes matching those criteria going forward.\nPros: Much simpler than building a full indexer; less infrastructure needed.\nCons: Not historical. Scans only find boxes created after the scan is registered. Cannot be used to find past transactions or boxes. Limited query flexibility compared to a custom database.\nWhen to Use: Monitoring for specific new boxes or events in real-time, simple notification systems."
+    },
+    {
+      "heading": "Conclusion#",
+      "content": "Building a custom indexer offers the most power and flexibility for complex dApps. However, developers should strongly consider leveraging existing frameworks like ergoplatform/scanner or adapting open-source indexers to avoid rebuilding complex core logic like reorg handling. Choose your tools, SDKs, and database carefully based on your specific needs and performance requirements."
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,101 @@
+{
+  "title": "FleetSharp",
+  "source_url": "docs/dev/stack/fleetsharp.md",
+  "summary": "# FleetSharp\n\n[FleetSharp](https://github.com/pulsarz/FleetSharp) is a C# library for building transactions on the Ergo blockchain, inspired by the excellent TypeScript [fleet-sdk](fleet.md). ## Usage\n\n#### Example that sends a simple ERG only transaction from the node's wallet\n```cs\nvar unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);\nvar currentHeight = await node. GetCurrentHeight();\n\nvar tx = new TransactionBuilder(currentHeight) .from(unspentWalletBoxes)",
+  "keywords": [
+    "fleetsharp",
+    "fleetsharp](https://github.com",
+    "pulsarz",
+    "library",
+    "transaction",
+    "ergo",
+    "blockchain",
+    "typescript",
+    "fleet",
+    "sdk](fleet.md",
+    "usage",
+    "example",
+    "node",
+    "wallet",
+    "unspentwalletboxes",
+    "await",
+    "currentheight",
+    "getcurrentheight",
+    ".from(unspentwalletboxes",
+    "list",
+    "outputbuilder",
+    "outputbuilder(1000000000l",
+    "ergoaddress.frombase58(\"9ijyqkgyn4agm8uyjkjj8uoxwra89dfdr2ptxyked7fjxlsycuf",
+    ".build().toplainobject",
+    "signedtx",
+    "signtransaction(tx",
+    "transactionid",
+    "submitsignedtransaction(signedtx",
+    "token",
+    "tokenamount",
+    "tokenid",
+    "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04",
+    "amount",
+    "10000l",
+    "outputbuilder(outputbuilder",
+    "safe_min_box_value",
+    ".minttoken(new",
+    "newtoken",
+    "name",
+    "test",
+    "mint",
+    "decimal",
+    "description",
+    "contract",
+    "input",
+    "selection",
+    "register",
+    "sigma",
+    "constantserializer",
+    "isigmacollection",
+    "iprimitivesigmatype",
+    "spendbox",
+    "ergoaddress.fromergotree(spendbox.ergotree",
+    "network",
+    "mainnet",
+    "nonmandatoryregister",
+    "sconstant(sint(47851)),/*integer*/",
+    "byte",
+    "tool",
+    "hextobytes(\"e218ee38a9fa71a770968f2746d624f8\")))/*hex",
+    "string",
+    "coll[byte]*/",
+    "borrower",
+    "sparse(box.additionalregisters",
+    "sparse(box.additionalregister",
+    "repayment",
+    "maturitylength"
+  ],
+  "sections": [
+    {
+      "heading": "FleetSharp",
+      "content": "FleetSharp is a C# library for building transactions on the Ergo blockchain, inspired by the excellent TypeScript fleet-sdk."
+    },
+    {
+      "heading": "Example that sends a simple ERG only transaction from the node's wallet",
+      "content": "```cs\nvar unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);\nvar currentHeight = await node.GetCurrentHeight();\nvar tx = new TransactionBuilder(currentHeight)\n    .from(unspentWalletBoxes)\n    .to(new List { new OutputBuilder(1000000000L, ErgoAddress.fromBase58(\"9iJyQKGYN4agM8UyJKjj8UoxWRa89dfDr2ptXYKEd7fJxLsYcuF\")) })\n    .sendChangeTo(ErgoAddress.fromBase58(\"9gzGJworU5a4yrwLndgLoJa8N4MPMpn7p9mj8TShUTJ7wYhabKn\"))\n    .payMinFee()\n    .build().ToPlainObject();\nvar signedTx = await node.SignTransaction(tx);\nvar transactionId = await node.SubmitSignedTransaction(signedTx);\n```"
+    },
+    {
+      "heading": "Example that sends a transaction with some tokens from the node's wallet",
+      "content": "```cs\nvar unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);\nvar currentHeight = await node.GetCurrentHeight();\nvar tx = new TransactionBuilder(currentHeight)\n    .from(unspentWalletBoxes)\n    .to(new List\n    { \n        new OutputBuilder(1000000000L, ErgoAddress.fromBase58(\"9iJyQKGYN4agM8UyJKjj8UoxWRa89dfDr2ptXYKEd7fJxLsYcuF\"))\n            .AddToken(new TokenAmount\n            {\n                tokenId = \"03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04\",\n                amount = 10000L\n            })\n     })\n    .sendChangeTo(ErgoAddress.fromBase58(\"9gzGJworU5a4yrwLndgLoJa8N4MPMpn7p9mj8TShUTJ7wYhabKn\"))\n    .payMinFee()\n    .build().ToPlainObject();\nvar signedTx = await node.SignTransaction(tx);\nvar transactionId = await node.SubmitSignedTransaction(signedTx);\n```"
+    },
+    {
+      "heading": "Example minting tokens",
+      "content": "```cs\nvar unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);\nvar currentHeight = await node.GetCurrentHeight();\nvar tx = new TransactionBuilder(currentHeight)\n    .from(unspentWalletBoxes)\n    .to(new List\n    { \n        new OutputBuilder(OutputBuilder.SAFE_MIN_BOX_VALUE, ErgoAddress.fromBase58(\"9iJyQKGYN4agM8UyJKjj8UoxWRa89dfDr2ptXYKEd7fJxLsYcuF\"))\n            .mintToken(new NewToken\n            {\n                amount = 100,\n                name = \"FleetSharp test mint token #1\",\n                decimals = 0,\n                description = \"This is a test token minted with FleetSharp\"\n            })\n    })\n    .sendChangeTo(ErgoAddress.fromBase58(\"9gzGJworU5a4yrwLndgLoJa8N4MPMpn7p9mj8TShUTJ7wYhabKn\"))\n    .payMinFee()\n    .build().ToPlainObject();\nvar signedTx = await node.SignTransaction(tx);\nvar transactionId = await node.SubmitSignedTransaction(signedTx);\n```"
+    },
+    {
+      "heading": "Interacting with a contract by ensuring input selection and setting registers (this is purely a fictional example to demonstrate what is possible)",
+      "content": "```cs\nusing static FleetSharp.Sigma.ConstantSerializer;\nusing static FleetSharp.Sigma.ISigmaCollection;\nusing static FleetSharp.Sigma.IPrimitiveSigmaType;\nvar unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);\nvar currentHeight = await node.GetCurrentHeight();\nvar spendBox = await node.GetBox(\"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\");\nvar tx = new TransactionBuilder(currentHeight)\n    .from(unspentWalletBoxes)\n    .to(new List\n    { \n        new OutputBuilder(OutputBuilder.SAFE_MIN_BOX_VALUE, ErgoAddress.fromErgoTree(spendBox.ergoTree, Network.Mainnet))\n            .SetAdditionalRegisters(new NonMandatoryRegisters\n            {\n                R4 = SConstant(SInt(47851)),/integer/\n                R5 = SConstant(SColl(SigmaTypeCode.Byte, FleetSharp.Tools.HexToBytes(\"e218ee38a9fa71a770968f2746d624f8\")))/hex string as Coll[Byte]/\n            })\n    })\n    .sendChangeTo(ErgoAddress.fromBase58(\"9gzGJworU5a4yrwLndgLoJa8N4MPMpn7p9mj8TShUTJ7wYhabKn\"))\n    .payMinFee()\n    .build().ToPlainObject();\nvar signedTx = await node.SignTransaction(tx);\nvar transactionId = await node.SubmitSignedTransaction(signedTx);\n```"
+    },
+    {
+      "heading": "Reading registers from a box",
+      "content": "```cs\nusing static FleetSharp.Sigma.ConstantSerializer;\nusing static FleetSharp.Sigma.ISigmaCollection;\nusing static FleetSharp.Sigma.IPrimitiveSigmaType;\nvar box = await node.GetBox(\"07b1276dd8207767c320a76a0a7ba9c76feb1f414c58cb9335810341a02236dc\");\nbyte[] borrower = SParse(box.additionalRegisters.R4);\nlong amount = SParse(box.additionalRegisters.R5);\nlong repayment = SParse(box.additionalRegisters.R6);\nint maturityLength = SParse(box.additionalRegisters.R7);\n```"
+    }
+  ],
+  "qa_pairs": []
+}

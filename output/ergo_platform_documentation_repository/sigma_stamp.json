@@ -1,0 +1,27 @@
+{
+  "title": "Sigma Stamp",
+  "source_url": "docs/eco/sigma-stamp.md",
+  "summary": "---\ntags:\n  - SigmaStamp\n  - Timestamping\n  - dApp\n---\n\n# Sigma Stamp\n\n[sigmastamp.ml](https://sigmastamp.ml) is a timestamping service on Ergo. See example usages of SigmaStamp project [here](https://www.sigmastamp.ml/wiki#examples-of-sigmastamp-usage).",
+  "keywords": [
+    "sigmastamp",
+    "timestamping",
+    "dapp",
+    "sigma",
+    "stamp",
+    "sigmastamp.ml](https://sigmastamp.ml",
+    "service",
+    "ergo",
+    "example",
+    "usage",
+    "project",
+    "here](https://www.sigmastamp.ml",
+    "wiki#examples"
+  ],
+  "sections": [
+    {
+      "heading": "Sigma Stamp",
+      "content": "sigmastamp.ml is a timestamping service on Ergo.\nSee example usages of SigmaStamp project here."
+    }
+  ],
+  "qa_pairs": []
+}

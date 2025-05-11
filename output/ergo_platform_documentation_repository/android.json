@@ -1,0 +1,59 @@
+{
+  "title": "Android",
+  "source_url": "docs/dev/stack/android.md",
+  "summary": "# Android\n\nTo develop an android application you can develop with the JVM suite (Java/Kotlin/Scala). ## Platforms \n\n::cards:: [\n\n  {\n    \"title\": \"AppKit\",\n    \"content\": \"A library for polyglot development of Ergo Applications\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"appkit.md\"\n  },\n  {\n    \"title\": \"Mosaik\",\n    \"content\": \"UI system for dApps\",\n    \"image\": \"../../assets/img/dev-grid/mosaik.png\",\n    \"url\": \"mosaik/intro.md\"\n  },\n  {\n    \"title\": \"sigma-rust\",\n    \"content\": \"Android bindings are implemented in sigma-rust\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"sigma-rust.md\"\n  }\n]\n\n::/cards::\n\n\n## Getting Started\n\n::cards::\n\n[\n\n\n  {\n    \"title\": \"Gradle\",\n    \"content\": \"Getting started with Gradle to build on Android. \",\n    \"image\": \"../../assets/img/dev-grid/gradle.png\",\n    \"url\": \"appkit/gradle.md\"\n  },\n  {\n    \"title\": \"\ud83d\udcd5 DeCo Intro Lessons: Build a mobile app on Android or iOS\",\n    \"url\": \"https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6\"\n  }\n]\n\n::/cards::\n\n\n\n## Tools\n\n::cards::\n\n[\n\n  {\n    \"title\": \"\ud83d\udd17 Ergo Android\",\n    \"content\": \"Simple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android. \",\n    \"url\": \"https://github.com/aslesarenko/ergo-android\"\n\n  }\n]\n\n::/cards::",
+  "keywords": [
+    "android",
+    "application",
+    "suite",
+    "java",
+    "kotlin",
+    "scala",
+    "platform",
+    "card",
+    "title",
+    "content",
+    "library",
+    "development",
+    "ergo",
+    "applications",
+    "image",
+    "grid",
+    "jvm.png",
+    "appkit.md",
+    "system",
+    "dapps",
+    "intro.md",
+    "sigma",
+    "rust",
+    "binding",
+    "rust.png",
+    "gradle",
+    "gradle.png",
+    "gradle.md",
+    "deco",
+    "intro",
+    "lessons",
+    "tool",
+    "appkit"
+  ],
+  "sections": [
+    {
+      "heading": "Android",
+      "content": "To develop an android application you can develop with the JVM suite (Java/Kotlin/Scala)."
+    },
+    {
+      "heading": "Platforms",
+      "content": "::cards::\n[\n{\n    \"title\": \"AppKit\",\n    \"content\": \"A library for polyglot development of Ergo Applications\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"appkit.md\"\n  },\n  {\n    \"title\": \"Mosaik\",\n    \"content\": \"UI system for dApps\",\n    \"image\": \"../../assets/img/dev-grid/mosaik.png\",\n    \"url\": \"mosaik/intro.md\"\n  },\n  {\n    \"title\": \"sigma-rust\",\n    \"content\": \"Android bindings are implemented in sigma-rust\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"sigma-rust.md\"\n  }\n]\n::/cards::"
+    },
+    {
+      "heading": "Getting Started",
+      "content": "::cards::\n[\n{\n    \"title\": \"Gradle\",\n    \"content\": \"Getting started with Gradle to build on Android.\",\n    \"image\": \"../../assets/img/dev-grid/gradle.png\",\n    \"url\": \"appkit/gradle.md\"\n  },\n  {\n    \"title\": \"\ud83d\udcd5 DeCo Intro Lessons: Build a mobile app on Android or iOS\",\n    \"url\": \"https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6\"\n  }\n]\n::/cards::"
+    },
+    {
+      "heading": "Tools",
+      "content": "::cards::\n[\n{\n    \"title\": \"\ud83d\udd17 Ergo Android\",\n    \"content\": \"Simple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.\",\n    \"url\": \"https://github.com/aslesarenko/ergo-android\"\n}\n]\n::/cards::"
+    }
+  ],
+  "qa_pairs": []
+}

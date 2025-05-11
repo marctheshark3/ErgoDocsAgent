@@ -1,0 +1,121 @@
+{
+  "title": "Implementation Details for UTXO Set Snapshots",
+  "source_url": "docs/node/modes/pruned/pruned-impl.md",
+  "summary": "# Implementation Details for UTXO Set Snapshots\n\nThe UTXO set authentication uses an AVL+ tree, outlined in [this research paper](https://eprint.iacr.org/2016/994.pdf) and available in the [Scrypto framework](https://github.com/input-output-hk/scrypto) on GitHub. Snapshots are taken every 51,200 blocks (~72 days), specifically after a block where *h % 51200 == 51199*. [This research paper](https://eprint.iacr.org/2018/129) indicates that this method can be as secure as processing all blocks under certain statistical assumptions. ### Implementation Details\n\n#### Chunk Format\n\n*To be provided*\n\n#### Manifest Format\n\n*To be provided*\n\n#### Networking Layer\n\n*To be provided*\n\n#### Bootstrapping\n\n*To be provided*\n\n#### Node Configuration\n\nBootstrapping with a UTXO set snapshot is enabled by setting *ergo.node.utxoBootstrap = true* in the [configuration](conf-node.md). #### Sync Info V3\n\n*To be provided*\n\n## Technical Workflow (WIP)",
+  "keywords": [
+    "implementation",
+    "details",
+    "utxo",
+    "snapshots",
+    "authentication",
+    "tree",
+    "research",
+    "paper](https://eprint.iacr.org/2016/994.pdf",
+    "scrypto",
+    "framework](https://github.com",
+    "output",
+    "github",
+    "snapshot",
+    "block",
+    "paper](https://eprint.iacr.org/2018/129",
+    "method",
+    "assumption",
+    "detail",
+    "chunk",
+    "format",
+    "manifest",
+    "networking",
+    "layer",
+    "node",
+    "configuration",
+    "bootstrapping",
+    "ergo.node.utxobootstrap",
+    "configuration](conf",
+    "node.md",
+    "sync",
+    "info",
+    "technical",
+    "workflow",
+    "client",
+    "header",
+    "proof",
+    "work",
+    "link",
+    "structure",
+    "peer",
+    "process",
+    "message",
+    "request",
+    "reception",
+    "java",
+    "if(!(localscore",
+    "networkscore",
+    "goto",
+    "blacklist",
+    "utxomanifest",
+    "blockstokeep",
+    "sender",
+    "//or",
+    "utxosnapshotchunk",
+    "state.applychunk(utxosnapshotchunk",
+    "match",
+    "case",
+    "success(none",
+    "hash",
+    "state",
+    "blocktransactions",
+    "history.headersstartingfromid(state.headerid).foreach",
+    "random",
+    "fullnode.7",
+    "fullnode",
+    "operation",
+    "efficiency",
+    "security",
+    "ergo",
+    "blockchain",
+    "adoption",
+    "constraint",
+    "hardware",
+    "dive",
+    "nipopow",
+    "paper](http://fc16.ifca.ai",
+    "bitcoin",
+    "paper",
+    "kls16.pdf"
+  ],
+  "sections": [
+    {
+      "heading": "Implementation Details for UTXO Set Snapshots",
+      "content": "The UTXO set authentication uses an AVL+ tree, outlined in this research paper and available in the Scrypto framework on GitHub. Snapshots are taken every 51,200 blocks (~72 days), specifically after a block where h % 51200 == 51199.\nThis research paper indicates that this method can be as secure as processing all blocks under certain statistical assumptions."
+    },
+    {
+      "heading": "Chunk Format",
+      "content": "To be provided"
+    },
+    {
+      "heading": "Manifest Format",
+      "content": "To be provided"
+    },
+    {
+      "heading": "Networking Layer",
+      "content": "To be provided"
+    },
+    {
+      "heading": "Bootstrapping",
+      "content": "To be provided"
+    },
+    {
+      "heading": "Node Configuration",
+      "content": "Bootstrapping with a UTXO set snapshot is enabled by setting ergo.node.utxoBootstrap = true in the configuration."
+    },
+    {
+      "heading": "Sync Info V3",
+      "content": "To be provided"
+    },
+    {
+      "heading": "Technical Workflow (WIP)",
+      "content": "A pruned client downloads all headers, validates proofs-of-work, and links structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it. The process is as follows:\nErgoSyncInfo: Message to connected peers.\nReceive INV message with better block ids.\nRequest headers for received ids.\nOn Header Reception:\n    java\n    if(History.apply(header).isSuccess) {\n        if(!(localScore == networkScore)) GOTO 1\n        else GOTO 5\n    } else {\n        blacklist peer\n    }\nRequest UTXOManifest for at least BlocksToKeep back.\nOn UTXOSnapshotManifest Reception:\n    java\n    UTXOSnapshotManifest.chunks.foreach { chunk =>\n        request chunk from sender() //Or from random full node\n    }\nOn UTXOSnapshotChunk Reception:\n    java\n    State.applyChunk(UTXOSnapshotChunk) match {\n         case Success(Some(newMinimalState)) => GOTO 8\n         case Success(None) => stay at 7\n         //Request missed chunks periodically\n         case Failure(e) => ???\n         //Invalid hash or state\n    }\nRequest BlockTransactions starting from available State.\n    java\n    History.headersStartingFromId(State.headerId).foreach { header =>\n        send message(GetBlockTransactionsForHeader(header)) to Random full node\n    }\nOn BlockTransactions Reception: same as Fullnode.7.\nOperate as Fullnode.\nThis revised workflow streamlines the operation of a pruned full node, emphasizing efficiency and security, positioning Ergo and similar blockchains for broader adoption within the constraints of typical hardware. For a deeper dive into nipopows, you can explore this paper."
+    }
+  ],
+  "qa_pairs": []
+}

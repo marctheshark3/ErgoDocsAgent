@@ -1,0 +1,38 @@
+{
+  "title": "Language Operations - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/scs/sigma/lang-ops/",
+  "summary": "The 'S' in front of SGroupElement refers to the sigma state code under the ErgoScript. When working on the ErgoScript directly, you will use GroupElement. \"AvlTree\" -> SAvlTree case class AvlTreeData(digest: ADDigest",
+  "keywords": [
+    "front",
+    "sgroupelement",
+    "sigma",
+    "state",
+    "code",
+    "ergoscript",
+    "groupelement",
+    "avltree",
+    "savltree",
+    "case",
+    "class",
+    "avltreedata(digest"
+  ],
+  "sections": [
+    {
+      "heading": "Opcodes#",
+      "content": "Code\nOperation\nComment\n\n\n\n\n1\n\\(LT(left: Value[SInt], right: Value[SInt])\\)$\n\n\n\n2\n\\(LE(left: Value[SInt], right: Value[SInt])\\)\n\n\n\n3\n\\(GT(left: Value[SInt], right: Value[SInt])\\)\n\n\n\n4\n\\(GE(left: Value[SInt], right: Value[SInt])\\)\n\n\n\n5\n\\(EQ\\)[\\(T1 <: SType, T2 <: SType\\)]\\((left: Value[T1], right: Value[T2])\\)\n\n\n\n6\n\\(NEQ\\)[\\(T1 <: SType, T2 <: SType\\)]\\((left: Value[T1], right: Value[T2])\\)\n\n\n\n7\n\\(OR(input: Value[SCollection[SBoolean]])\\)\n\n\n\n8\n\\(AND(input: Value[SCollection[SBoolean]])\\)\n\n\n\n9\n\\(CAND(sigmaTrees: Seq[SigmaTree])\\)\n\n\n\n10\n\\(COR(sigmaTrees: Seq[SigmaTree])\\)\n\n\n\n11\n\\(Plus(left: Value[SInt], right: Value[SInt])\\)\n\n\n\n12\n\\(Minus(left: Value[SInt], right: Value[SInt])\\)\n\n\n\n13\n\\(Xor(left: Value[SByteArray], right: Value[SByteArray])\\)\n\n\n\n14\n\\(AppendBytes(left: Value[SByteArray], right: Value[SByteArray])\\)\n\n\n\n15\n\\(Exponentiate(left: Value[SGroupElement], right: Value[SBigInt])\\)\n\n\n\n16\n\\(MultiplyGroup(left: Value[SGroupElement], right: Value[SGroupElement])\\)\n\n\n\n17\n\\(IntToByteArray(input: Value[SInt])\\)\n\n\n\n18\n\\(ByteArrayToBigInt(input: Value[SByteArray])\\)\n\n\n\n19\n\\(CalcBlake2b256(input: Value[SByteArray])\\)\n\n\n\n20\n\\(ProveDiffieHellmanTuple(gv: Value[SGroupElement], hv: Value[SGroupElement], uv: Value[SGroupElement], vv: Value[SGroupElement])\\)\n\n\n\n21\n\\(IsMember(tree: Value[SAvlTree], key: Value[SByteArray], proof: Value[SByteArray])\\)\n\n\n\n22\n\\(IntConstant(value: Long)\\)\n\n\n\n23\n\\(TaggedInt(id: Byte)\\)\n\n\n\n24\n\\(BigIntConstant(value: BigInteger)\\)\n\n\n\n25\n\\(TaggedBigInt(id: Byte)\\)\n\n\n\n26\n\\(ByteArrayConstant(value: Array[Byte])\\)\n\n\n\n27\n\\(TaggedByteArray(id: Byte)\\)\n\n\n\n28\n\\(PropConstant(value: Array[Byte])\\)\n\n\n\n29\n\\(TaggedProp(id: Byte)\\)\n\n\n\n30\n\\(AvlTreeConstant(value: AvlTreeData)\\)\n\n\n\n31\n\\(TaggedAvlTree(id: Byte)\\)\n\n\n\n32\n\\(GroupElementConstant(value: GroupElement)\\)\n\n\n\n33\n\\(GroupGenerator\\)\n\n\n\n34\n\\(TaggedGroupElement(id: Byte)\\)\n\n\n\n35\n\\(BooleanConstant(val value: Boolean)\\)\n\n\n\n36\n\\(TaggedBoolean(id: Byte)\\)\n\n\n\n37\n\\(TaggedBox(id: Byte)\\)\n\n\n\n38\n\\(ConcreteCollection\\)[\\(V <: S..."
+    },
+    {
+      "heading": "TaggedVariable#",
+      "content": "Remove unused TaggedVariable node #657"
+    },
+    {
+      "heading": "SGroupElement#",
+      "content": "The 'S' in front of SGroupElement refers to the sigma state code under the ErgoScript. When working on the ErgoScript directly, you will use GroupElement."
+    },
+    {
+      "heading": "SAvlTree (AvlTreeData)#",
+      "content": "\"AvlTree\" -> SAvlTree\n\n\ncase class AvlTreeData(digest: ADDigest"
+    }
+  ],
+  "qa_pairs": []
+}

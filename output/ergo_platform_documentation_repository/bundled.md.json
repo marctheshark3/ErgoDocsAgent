@@ -1,0 +1,19 @@
+{
+  "title": "bundled.md",
+  "source_url": "docs/dev/stack/bundled.md",
+  "summary": "::cards::\n\n[\n  {\n    \"title\": \"Android\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/android.png\",\n    \"url\": \"android.md\"\n  },\n  {\n    \"title\": \"iOS\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/ios.png\",\n    \"url\": \"iOS.md\"\n\n  },\n  {\n    \"title\": \"Desktop\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/bundled.png\",\n    \"url\": \"mobile.md\"\n  },\n\n]\n\n::/cards::",
+  "keywords": [
+    "card",
+    "title",
+    "android",
+    "content",
+    "image",
+    "grid",
+    "android.png",
+    "ios.png",
+    "desktop",
+    "bundled.png"
+  ],
+  "sections": [],
+  "qa_pairs": []
+}

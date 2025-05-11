@@ -1,0 +1,82 @@
+{
+  "title": "Sigma Propositions - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/scs/sigma/sigma-prop/",
+  "summary": "Sigma Propositions (SigmaProp) are the core return type of every ErgoScript contract. SigmaProp values can be constructed in several ways, but two common methods are used frequently in ErgoScript contracts. You can create SigmaProp values from standard boolean expressions using the sigmaProp function. This allows you to define arbitrary spending conditions based on context variables, register values, etc. Public Keys (represented as GroupElement in ErgoScript, essentially the part of your address that makes it unique) can be directly converted into SigmaProp values using functions like proveDlog.",
+  "keywords": [
+    "sigma",
+    "propositions",
+    "sigmaprop",
+    "core",
+    "return",
+    "type",
+    "ergoscript",
+    "contract",
+    "value",
+    "method",
+    "expression",
+    "function",
+    "spending",
+    "condition",
+    "context",
+    "variable",
+    "public",
+    "keys",
+    "groupelement",
+    "part",
+    "address",
+    "provedlog",
+    "transaction",
+    "signature",
+    "authorization",
+    "boolean",
+    "operation",
+    "logic",
+    "path",
+    "basic",
+    "example",
+    "lock",
+    "blake2b256",
+    ".get",
+    "input",
+    "output",
+    "hash",
+    "byte",
+    "collection",
+    "register",
+    "version",
+    "self",
+    "hint",
+    "\u00f0\u009f\u0094\u0097",
+    "deco",
+    "education",
+    "developer",
+    "course"
+  ],
+  "sections": [
+    {
+      "heading": "Sigma Propositions#",
+      "content": "Sigma Propositions (SigmaProp) are the core return type of every ErgoScript contract.\nSigmaProp values represent conditions related to the transaction that must be met to spend a specific box.\nThey are similar to booleans in that they ultimately reduce to either true or false during verification.\nSigmaProp enables the use of Zero-Knowledge Proofs, a crucial aspect of modern cryptography and a defining privacy feature of Ergo.\nAll contracts in ErgoScript must return a SigmaProp value at the very end. \nThis final SigmaProp represents the complete set of conditions required to spend the box protected by the contract. Therefore, all logic within an ErgoScript contract should contribute to the outcome of this final SigmaProp.\nSigmaProp values can be constructed in several ways, but two common methods are used frequently in ErgoScript contracts."
+    },
+    {
+      "heading": "SigmaProps From Booleans#",
+      "content": "You can create SigmaProp values from standard boolean expressions using the sigmaProp function. This allows you to define arbitrary spending conditions based on context variables, register values, etc.\n{\n  val mathIsHard: Boolean = (1 + 1) != 2\n  sigmaProp(mathIsHard) // SigmaProp created from a boolean using the sigmaProp function\n                        // What would this contract evaluate to?\n}"
+    },
+    {
+      "heading": "SigmaProps From Public Keys#",
+      "content": "Public Keys (represented as GroupElement in ErgoScript, essentially the part of your address that makes it unique) can be directly converted into SigmaProp values using functions like proveDlog. When such a SigmaProp is used, the contract checks if the transaction was signed by the corresponding private key. You can think of this as literally signing the transaction with your digital signature to prove authorization.\n{\n  // You can use the PK function to\n  // hardcode an address's public key into your contract\n  val myPK: SigmaProp = PK(\"9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE\")\n\n  myPK\n}"
+    },
+    {
+      "heading": "SigmaProp Operations#",
+      "content": "Much like booleans, you can use logical operations (&& for AND, || for OR) on SigmaProp values to build more complex spending logic for your contract.\n{\n  val enoughERG = INPUTS(0).value > 1000000\n  val myPK = PK(\"9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE\")\n\n  sigmaProp(enoughERG) || myPK // What does this contract do? Under what conditions could such a contract be spent?\n}\nYou can see in the contract above that using || creates two distinct spending paths (conditions under which the box can be spent).\nNow that you've seen the basics, let's look at a simple ErgoScript contract example: the pin-lock contract mentioned earlier."
+    },
+    {
+      "heading": "Pin-lock Contract#",
+      "content": "{\n  sigmaProp( INPUTS(0).R4[Coll[Byte]].get == blake2b256(OUTPUTS(0).R4[Coll[Byte]].get) )\n}\nDon't worry if you don't understand all the functions used here (blake2b256, .get); these are global functions covered elsewhere. What's happening here is:\nWe can spend INPUTS(0) (the first input box of the transaction) if and only if there exists an output box (specifically OUTPUTS(0), the first output) whose register R4 contains the Blake2b256 hash of the byte collection found in register R4 of INPUTS(0).\nThis contract implicitly assumes the box being spent is INPUTS(0). For a clearer example where the box explicitly refers to itself within its own contract, consider the version below using the SELF context variable:"
+    },
+    {
+      "heading": "Pin-lock Contract (with SELF)#",
+      "content": "{\n  sigmaProp( SELF.R4[Coll[Byte]].get == blake2b256(OUTPUTS(0).R4[Coll[Byte]].get) )\n}\nAre these two pin-lock contracts equivalent? That is, under what spending conditions might one contract evaluate to true while the other evaluates to false? (Hint: Consider what INPUTS(0) refers to versus what SELF refers to).\n\u00f0\u009f\u0094\u0097 From Deco Education - ErgoScript Developer Course"
+    }
+  ],
+  "qa_pairs": []
+}

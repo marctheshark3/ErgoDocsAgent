@@ -1,0 +1,20 @@
+{
+  "title": "Libaries - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/libraries/",
+  "summary": "GetBlok Plasma Scrypto EIP12-Types SigmaJS",
+  "keywords": [
+    "getblok",
+    "plasma",
+    "scrypto",
+    "eip12",
+    "types",
+    "sigmajs"
+  ],
+  "sections": [
+    {
+      "heading": "Libraries#",
+      "content": "GetBlok Plasma\nScrypto\nEIP12-Types\nSigmaJS"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Blobstopia",
+  "source_url": "docs/eco/blobstopia.md",
+  "summary": "---\ntags:\n  - Blobstopia\n  - Gaming\n  - dApp\n  - dApp-Live\n---\n\n# Blobstopia\n\n/// details | Status: Inactive\n     {type: warning, open: true}\nThe original domain name is no longer active, which caused the site to go down. However, it has been restored at [here](http://51.77.221.96:8080/) This will allow users to withdraw their ERGs. While the game is not currently being updated or improved, it is still operational and available for enjoyment.",
+  "keywords": [
+    "blobstopia",
+    "gaming",
+    "dapp",
+    "live",
+    "detail",
+    "status",
+    "type",
+    "warning",
+    "domain",
+    "name",
+    "site",
+    "user",
+    "game",
+    "enjoyment",
+    "blob",
+    "topia](http://51.77.221.96:8080/",
+    "ergo",
+    "blockchain",
+    "fighter",
+    "contract",
+    "amount",
+    "fight",
+    "winner",
+    "miner",
+    "blobinator",
+    "loser",
+    "oatmeal",
+    "token",
+    "attack",
+    "defense",
+    "level",
+    "ratio",
+    "spicy",
+    "kind",
+    "player",
+    "transaction",
+    "resource",
+    "topia",
+    "release",
+    "v1.1.0"
+  ],
+  "sections": [
+    {
+      "heading": "Blobstopia",
+      "content": "/// details | Status: Inactive\n     {type: warning, open: true}\nThe original domain name is no longer active, which caused the site to go down. However, it has been restored at here This will allow users to withdraw their ERGs. While the game is not currently being updated or improved, it is still operational and available for enjoyment.\n///\nBlob's Topia is a game on Ergo blockchain in which you can own blob fighters smart contracts.\nThose blob fighters are owning an amount of ERG and can bet an amount for a fight."
+    },
+    {
+      "heading": "PVP",
+      "content": "Once two blobs wait for the same bet, they can engage a fight.\nThe winner get all the bets, minus the miner fees and the Blobinator fee.\nBoth winner and loser get some Oatmeal Oatmeal tokens to be able to feed their blob.\nBy feeding a blob you can increase their Attack or Defense level to make them stronger and increase your winning ratio.\nBoth winner and loser get some Spicy Oatmeal Spicy Oatmeal tokens to try to attract a Blobinator."
+    },
+    {
+      "heading": "PVE",
+      "content": "A Blobinator is a kind of super blob fighter that can be invoked once enough fights occured.\nAny blobs can fight against a Blobinator if the player has earn enough Spicy Oatmeal Spicy Oatmeal to attract the Blobinator.\nThe Blobinator fight is \"free\" for the player that just needs to pay 2 transactions fees to try to get the amount in the Blobinator."
+    },
+    {
+      "heading": "Resources",
+      "content": "Fight bot"
+    }
+  ],
+  "qa_pairs": []
+}

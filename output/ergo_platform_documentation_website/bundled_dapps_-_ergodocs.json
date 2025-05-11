@@ -1,0 +1,16 @@
+{
+  "title": "Bundled dApps - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/bundled/",
+  "summary": "Android iOS Desktop",
+  "keywords": [
+    "android",
+    "desktop"
+  ],
+  "sections": [
+    {
+      "heading": "Bundled dApps",
+      "content": "Android\niOS\nDesktop"
+    }
+  ],
+  "qa_pairs": []
+}

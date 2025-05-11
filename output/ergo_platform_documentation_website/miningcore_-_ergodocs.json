@@ -1,0 +1,113 @@
+{
+  "title": "MiningCore - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/mining/setup/miningcore/",
+  "summary": "\u00f0\u009f\u0092\u00a1 If you're using Windows 10, see the Windows Tutorial Requirements: Replace 'your-secure-password' with a strong password: \u00e2\u009c\u0085 Make sure you can connect using psql before proceeding. You should configure your pool to auto-start using a startup script. The JSON config defines the log files you should monitor for: You may need to adjust the config to fit your specific pool setup. When everything is working properly, your logs should show the following messages: \u00e2\u009a\u00a0\u00ef\u00b8\u008f",
+  "keywords": [
+    "windows",
+    "tutorial",
+    "requirements",
+    "replace",
+    "password",
+    "psql",
+    "pool",
+    "auto",
+    "start",
+    "startup",
+    "script",
+    "json",
+    "config",
+    "setup",
+    "message",
+    "network",
+    "difficulty",
+    "value",
+    "check",
+    "diff",
+    "miner",
+    "node",
+    "machine",
+    "port",
+    "communication",
+    "component",
+    "traffic",
+    "miningcore",
+    "linux",
+    "green",
+    "mining"
+  ],
+  "sections": [
+    {
+      "heading": "\u00f0\u009f\u00a7\u00b1 MiningCore Setup Tutorial for Linux#",
+      "content": "\u00f0\u009f\u0092\u00a1 If you're using Windows 10, see the Windows Tutorial"
+    },
+    {
+      "heading": "Step 1: Download MiningCore#",
+      "content": "Clone Mining Core from GitHub\nRequirements:\nYou must have a working PostgreSQL database\nEnsure you meet all dependencies from the README\nAvoid Docker unless you are confident managing containers"
+    },
+    {
+      "heading": "Step 2: Install and Configure PostgreSQL#",
+      "content": "For production environments:\nMonitor I/O, disk, CPU, and memory \u00e2\u0080\u0094 MiningCore's API can put heavy load on your DB\nKeep all PostgreSQL settings default for now\n\n\nReference setup guide"
+    },
+    {
+      "heading": "Login to PostgreSQL#",
+      "content": "sudo -u postgres psql"
+    },
+    {
+      "heading": "Create Role and Database#",
+      "content": "Replace 'your-secure-password' with a strong password:\nCREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'your-secure-password';\nCREATE DATABASE miningcore OWNER miningcore;"
+    },
+    {
+      "heading": "Step 4: Load Schema SQL Files#",
+      "content": "\u00e2\u009c\u0085 Make sure you can connect using psql before proceeding.\nAs the postgres user, run:\npsql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql\nThen apply the partitioning script:\npsql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql"
+    },
+    {
+      "heading": "Step 5: Create a Pool Table#",
+      "content": "Run the following command once per pool you set up:\nCREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');\nReplace mypool1 with your pool's unique identifier\nThis name is used in the configuration files as well"
+    },
+    {
+      "heading": "Step 6: Configure the Pool#",
+      "content": "Go to the build/ directory inside your MiningCore folder\nCreate a <coin>.json configuration file (e.g. ergo.json)\nRefer to: MiningCore Config Example and the example given below.\nExample Ergo config.json:\nRequired Fields in Config#\n\nReplace placeholders:\nYOURPOSTGRESQL_PASSWORD_GOES_HERE\nYOUR_REWARD_ADDR_GOES_HERE\n\n\nAdjust:\nrewardRecipients percentage to fit your payout model\nEnable paymentProcessing if you will use automatic share payouts\n\n\n\n{\n    \"logging\": {\n        \"level\": \"info\",\n        \"enableConsoleLog\": true,\n        \"enableConsoleColors\": true,\n        // Log file name (full log) - can be null in which case log events are written to console (stdout)\n        \"logFile\": \"core.log\",\n        // Log file name for API-requests - can be null in which case log events are written to either main logFile or console (stdout)\n        \"apiLogFile\": \"api.log\",\n        // Folder to store log file(s)\n        \"logBaseDirectory\": \"/path/to/logs\", // or c:\\path\\to\\logs on Windows\n        // If enabled, separate log file will be stored for each pool as <pool id>.log\n        // in the above specific folder.\n        \"perPoolLogFile\": false\n    },\n    \"banning\": {\n        // \"integrated\" or \"iptables\" (linux only - not yet implemented)\n        \"manager\": \"Integrated\",\n        \"banOnJunkReceive\": true,\n        \"banOnInvalidShares\": false\n    },\n    \"notifications\": {\n        \"enabled\": true,\n        \"email\": {\n            \"host\": \"smtp.example.com\",\n            \"port\": 587,\n            \"user\": \"user\",\n            \"password\": \"password\",\n            \"fromAddress\": \"[email\u00a0protected]\",\n            \"fromName\": \"pool support\"\n        },\n        \"admin\": {\n            \"enabled\": false,\n            \"emailAddress\": \"[email\u00a0protected]\",\n            \"notifyBlockFound\": true\n        }\n    },\n    // Where to persist shares and blocks to\n    \"persistence\": {\n        // Persist to postgresql database\n        \"postgres\": {\n            \"host\": \"127.0.0.1\",\n            \"port\": 5432,\n            ..."
+    },
+    {
+      "heading": "Required Fields in Config#",
+      "content": "Replace placeholders:\nYOURPOSTGRESQL_PASSWORD_GOES_HERE\nYOUR_REWARD_ADDR_GOES_HERE\n\n\nAdjust:\nrewardRecipients percentage to fit your payout model\nEnable paymentProcessing if you will use automatic share payouts\n{\n    \"logging\": {\n        \"level\": \"info\",\n        \"enableConsoleLog\": true,\n        \"enableConsoleColors\": true,\n        // Log file name (full log) - can be null in which case log events are written to console (stdout)\n        \"logFile\": \"core.log\",\n        // Log file name for API-requests - can be null in which case log events are written to either main logFile or console (stdout)\n        \"apiLogFile\": \"api.log\",\n        // Folder to store log file(s)\n        \"logBaseDirectory\": \"/path/to/logs\", // or c:\\path\\to\\logs on Windows\n        // If enabled, separate log file will be stored for each pool as <pool id>.log\n        // in the above specific folder.\n        \"perPoolLogFile\": false\n    },\n    \"banning\": {\n        // \"integrated\" or \"iptables\" (linux only - not yet implemented)\n        \"manager\": \"Integrated\",\n        \"banOnJunkReceive\": true,\n        \"banOnInvalidShares\": false\n    },\n    \"notifications\": {\n        \"enabled\": true,\n        \"email\": {\n            \"host\": \"smtp.example.com\",\n            \"port\": 587,\n            \"user\": \"user\",\n            \"password\": \"password\",\n            \"fromAddress\": \"[email\u00a0protected]\",\n            \"fromName\": \"pool support\"\n        },\n        \"admin\": {\n            \"enabled\": false,\n            \"emailAddress\": \"[email\u00a0protected]\",\n            \"notifyBlockFound\": true\n        }\n    },\n    // Where to persist shares and blocks to\n    \"persistence\": {\n        // Persist to postgresql database\n        \"postgres\": {\n            \"host\": \"127.0.0.1\",\n            \"port\": 5432,\n            \"user\": \"miningcore\",\n            \"password\": \"YOURPOSTGRESQL_PASSWORD_GOES_HERE\",\n            \"database\": \"miningcore\"\n        }\n    },\n    // Generate payouts for recorded shares and blocks\n    \"paymentProcessing\": {\n        \"enabled\"..."
+    },
+    {
+      "heading": "Step 7: Start the Pool#",
+      "content": "You should configure your pool to auto-start using a startup script.\ncd build\nMiningcore -c <your-config>.json\nThe JSON config defines the log files you should monitor for:\n\nStartup errors\nDaemon issues\nPool activity\n\n\n\nYou may need to adjust the config to fit your specific pool setup."
+    },
+    {
+      "heading": "\u00e2\u009c\u0085 Expected Log Output (Success)#",
+      "content": "When everything is working properly, your logs should show the following messages:"
+    },
+    {
+      "heading": "\u00f0\u009f\u009f\u00a2 Node Online and Synced#",
+      "content": "[2022-03-16 14:26:12.9080] [I] [ergo1] All daemons online\n[2022-03-16 14:26:12.9345] [I] [ergo1] Daemon is synced with blockchain"
+    },
+    {
+      "heading": "\u00f0\u009f\u009f\u00a2 Pool Online#",
+      "content": "[2022-03-16 14:26:14.4346] [I] [ergo1] Pool Online"
+    },
+    {
+      "heading": "\u00f0\u009f\u0093\u008a Pool Info Summary#",
+      "content": "Mining Pool:            <YOUR POOL NAME>\nCoin Type:              ERG [ERG]\nNetwork Connected:      <testnet|mainnet>\nDetected Reward Type:   POW\nCurrent Block Height:   <BLOCKHEIGHT>\nCurrent Connect Peers:  5\nNetwork Difficulty:     <NETWORK DIFF>\nNetwork Hash Rate:      <NETWORK HASHRATE>\nStratum Port(s):        3056, 4056, 3156, 4156\nPool Fee:               <YOUR FEE>\n\u00e2\u009a\u00a0\u00ef\u00b8\u008f If the network difficulty or other values look off, double-check your diff setting in the config."
+    },
+    {
+      "heading": "Step 8: Network Setup Notes#",
+      "content": "If your miner, pool, or node are on different machines, you will need to open ports to allow communication between them."
+    },
+    {
+      "heading": "Initial Mining Traffic Flow#",
+      "content": "Miner\n  \u00e2\u0086\u0092 connects to Stratum port (e.g. 3746)  \nPool Server\n  \u00e2\u0086\u0092 connects to Node RPC (mainnet: 9053, testnet: 9052)  \nNode\nOnce all components connect, traffic becomes bi-directional."
+    },
+    {
+      "heading": "Port Opening Guidelines#",
+      "content": "If all components are on the same machine:\n\n\u00e2\u009c\u0085 No need to open ports \u00e2\u0080\u0094 uses localhost\n\n\n\nIf using LAN or WAN:\n\n\u00f0\u009f\u0096\u00a5\u00ef\u00b8\u008f Open required ports on your OS firewall\n\u00f0\u009f\u008c\u0090 On WAN, configure port forwarding on your router"
+    },
+    {
+      "heading": "You're Good to Go!#",
+      "content": "You now have a fully operational MiningCore pool on Linux.\nMake sure everything is synced, ports are configured, and logs show green \u00e2\u0080\u0094 then start mining! \u00e2\u009b\u008f\u00ef\u00b8\u008f"
+    }
+  ],
+  "qa_pairs": []
+}

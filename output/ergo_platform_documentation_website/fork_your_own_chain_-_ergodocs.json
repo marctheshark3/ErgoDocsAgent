@@ -1,0 +1,43 @@
+{
+  "title": "Fork your own chain - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/node/testnet/mine-your-own-chain/",
+  "summary": "To start your custom Ergo chain, you need to modify the configuration to ensure it doesn't clash with the Ergo mainnet or public testnet. The key changes involve setting a unique addressPrefix and custom magicBytes. Here\u00e2\u0080\u0099s an updated configuration for your testnet.conf file: Set Up the Configuration: Compile the Node: Run the Node: Initialize and Unlock the Wallet: For deeper modifications or any questions, you can join the community on: This setup ensures your custom chain runs independently and avoids conflicts with existing networks.",
+  "keywords": [
+    "custom",
+    "ergo",
+    "chain",
+    "configuration",
+    "mainnet",
+    "testnet",
+    "change",
+    "addressprefix",
+    "magicbytes",
+    "file",
+    "compile",
+    "node",
+    "initialize",
+    "unlock",
+    "wallet",
+    "modification",
+    "question",
+    "community",
+    "setup",
+    "conflict",
+    "network"
+  ],
+  "sections": [
+    {
+      "heading": "Configuration#",
+      "content": "To start your custom Ergo chain, you need to modify the configuration to ensure it doesn't clash with the Ergo mainnet or public testnet. The key changes involve setting a unique addressPrefix and custom magicBytes.\nHere\u00e2\u0080\u0099s an updated configuration for your testnet.conf file:\nergo {\n  networkType = \"testnet\"\n\n  node {\n    mining = true\n    offlineGeneration = true\n    useExternalMiner = false\n  }\n\n  chain {\n    addressPrefix = 32 #  to avoid address clashing with Ergo mainnet and public testnet\n  }\n}\n\nscorex {\n  network {\n    magicBytes = [2, 0, 4, 8] # custom value to avoid connections with other networks\n    bindAddress = \"0.0.0.0:9022\"\n    nodeName = \"ergo-testnet-5\"\n    #knownPeers = []\n  }\n\n  restApi {\n    apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n  }\n}"
+    },
+    {
+      "heading": "Steps to Run the Node#",
+      "content": "Set Up the Configuration:\n\nMake sure your testnet.conf file is configured as shown above. This will help prevent address clashes with the mainnet and public testnet by using a custom addressPrefix and magicBytes.\n\n\n\nCompile the Node:\n\nUse the following command to compile the Ergo node:\n  sbt assembly\n\nThis will generate an ergo.jar file at /target/scala*/ergo-*.jar.\n\n\n\nRun the Node:\n\nStart the node using the command:\n  java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf\n\n\n\n\nInitialize and Unlock the Wallet:\n\nAccess the panel at 127.0.0.1:9052/panel to initialize and unlock your wallet. This is necessary as the first blocks will be generated using Autolykos v1."
+    },
+    {
+      "heading": "Additional Support#",
+      "content": "For deeper modifications or any questions, you can join the community on:\nTelegram: Ergo Developers Chat\nDiscord: Ergo Platform Developers Channel\nThis setup ensures your custom chain runs independently and avoids conflicts with existing networks."
+    }
+  ],
+  "qa_pairs": []
+}

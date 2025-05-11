@@ -1,0 +1,45 @@
+{
+  "title": "Azorus",
+  "source_url": "docs/eco/azorus.md",
+  "summary": "---\ntags:\n  - Azorus\n  - Intelligence Platform\n  - Analytics\n  - dApp\n  - dApp-InDev\n---\n\n# Azorus\n\n\n\nAn intelligence platform for UTXO Blockchains\n\n- [Project Demo](https://www.youtube.com/watch?v=SD8bDf-nxTQ)\n- [Whitepaper](https://github.com/gsblabsio/azorus)\n- [IDO on ergopad](https://ergopad.io/projects/azorus)\n- [Azorus Use cases & applications: DeFi (degen?) trader analytics with no code](https://www.youtube.com/watch?v=RbCGaXrqaRQ)\n\n/// admonition | Status\n    type: warning\n\nThis project is currently in a dormant state as the developers have shifted their focus to other priorities. It will be resumed when there is sufficient demand.",
+  "keywords": [
+    "azorus",
+    "intelligence",
+    "platform",
+    "analytics",
+    "dapp",
+    "indev",
+    "utxo",
+    "blockchains",
+    "project",
+    "demo](https://www.youtube.com",
+    "watch?v",
+    "sd8bdf",
+    "nxtq",
+    "whitepaper](https://github.com",
+    "gsblabsio",
+    "case",
+    "application",
+    "defi",
+    "degen",
+    "trader",
+    "analytic",
+    "code](https://www.youtube.com",
+    "rbcgaxrqarq",
+    "admonition",
+    "status",
+    "type",
+    "state",
+    "developer",
+    "focus",
+    "priority",
+    "demand"
+  ],
+  "sections": [
+    {
+      "heading": "Azorus",
+      "content": "An intelligence platform for UTXO Blockchains\nProject Demo\nWhitepaper\nIDO on ergopad\nAzorus Use cases & applications: DeFi (degen?) trader analytics with no code\n/// admonition | Status\n    type: warning\nThis project is currently in a dormant state as the developers have shifted their focus to other priorities. It will be resumed when there is sufficient demand. \n///"
+    }
+  ],
+  "qa_pairs": []
+}

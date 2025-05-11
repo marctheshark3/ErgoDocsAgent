@@ -1,0 +1,78 @@
+{
+  "title": "Transactions",
+  "source_url": "docs/dev/protocol/transactions.md",
+  "summary": "---\ntags:\n  - Data Model\n  - Transactions\n---\n# Transactions\n\n\n\nEach Ergo transaction is an **atomic state transition operation**, which means that it *destroys* a [box](box.md) from the state and creates new ones. ## Anatomy\n\nEach transaction executed on Ergo consists of **these three things**. \n\n- `One or more` **Input boxes** \n    - This is the source of your funds for the transaction. -  These boxes must already exist and will be destroyed by the transaction. -",
+  "keywords": [
+    "data",
+    "model",
+    "transactions",
+    "transaction",
+    "ergo",
+    "state",
+    "transition",
+    "operation",
+    "box](box.md",
+    "thing",
+    "input",
+    "source",
+    "fund",
+    "guard",
+    "script",
+    "output",
+    "destination",
+    "zero",
+    "datum",
+    "contract",
+    "inputs",
+    "inputs**](read",
+    "inputs.md",
+    "concept",
+    "cardano",
+    "vasil",
+    "hardfork",
+    "reference",
+    "block",
+    "overview",
+    "proof",
+    "correctness",
+    "context",
+    "extension",
+    "user",
+    "value",
+    "link",
+    "reduction",
+    "signature",
+    "protection",
+    "tool",
+    "builder](https://thierrym1212.github.io",
+    "application",
+    "json",
+    "wallet",
+    "swagger",
+    "github](https://github.com",
+    "video](https://youtu.be/0vhfy7ost2k"
+  ],
+  "sections": [
+    {
+      "heading": "Transactions",
+      "content": "Each Ergo transaction is an atomic state transition operation, which means that it destroys a box from the state and creates new ones."
+    },
+    {
+      "heading": "Anatomy",
+      "content": "Each transaction executed on Ergo consists of these three things.\nOne or more Input boxes \nThis is the source of your funds for the transaction. \nThese boxes must already exist and will be destroyed by the transaction.  \nThe guard script in each box will be evaluated and must return true for the transaction to be considered valid.\n\n\nOne or more Output boxes \nThis is your destination of funds. \nThese boxes will be created.\n\n\nZero or more Data-Input boxes \nThese are additional boxes whose data can be referenced and used by smart contracts of the inputs. \nThe guard script in these boxes will not be evaluated."
+    },
+    {
+      "heading": "Data Inputs",
+      "content": "Data inputs are a unique concept created by Ergo, which were added to Cardano with the Vasil Hardfork. These allow multiple transactions to share a data-input box, storing only a single reference to the box in the block."
+    },
+    {
+      "heading": "Overview",
+      "content": "If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain proof of spending correctness - context extension (user-defined key-value map) and data inputs (links to existing boxes in the state) that you may use during script reduction to crypto, signatures that satisfies the remaining cryptographic protection of the script. \nTransactions are not encrypted, meaning you can publicly view transactions included in blocks."
+    },
+    {
+      "heading": "Tools",
+      "content": "Transaction builder |  The application allows you to manipulate Ergo JSON transactions with a UI and to sign them with a wallet or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction to edit it.  | GitHub  | Video"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Local Setup - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/explorer/explorer_local/",
+  "summary": "The Ergo Blockchain Explorer is your interface with the blockchain and provides four services. First we'll create a working directory and cd into it. .db_env .redis_env Additional configurations are made by adding entries to the env_file field in docker-compose.yaml. ie, .http_env",
+  "keywords": [
+    "ergo",
+    "blockchain",
+    "explorer",
+    "interface",
+    "service",
+    "directory",
+    ".db_env",
+    "configuration",
+    "entry",
+    "field",
+    "docker-compose.yaml",
+    "postgre",
+    "redi",
+    "adminer",
+    "documentaion",
+    "following",
+    "app.config.js",
+    "load",
+    "database",
+    "schema",
+    "psql",
+    "module",
+    "core",
+    "resource",
+    "v9__schema.sql"
+  ],
+  "sections": [
+    {
+      "heading": "Intro#",
+      "content": "The Ergo Blockchain Explorer is your interface with the blockchain and provides four services.\nmodules/chain-grabber: Dumps aggregated data blockchain -> database\nmodules/explorer-api: Provides a set of HTTP API methods for querying on/off-chain data.\nmodules/utx-tracker: Dumps unconfirmed transactions from the mempool to local database\nmodules/utx-broadcaster: Broadcasts unconfirmed transactions to a set of known peers"
+    },
+    {
+      "heading": "Sources#",
+      "content": "explorer-backend\nexplorer-frontend"
+    },
+    {
+      "heading": "Resources#",
+      "content": "Deploying Explorer services with Docker Compose\nHow to setup the Chain-Grabber module on a Raspberry Pi device\nErgo Nix Toolkit\nErgo Bootstrap\nergo-setup is a Docker based Ergo setup (Node, Explorer & GraphQL). Somewhat similar to Ergo Bootstrap except it offers much less options and is not NixOS-based."
+    },
+    {
+      "heading": "Running your own instance of Explorer#",
+      "content": "First we'll create a working directory and cd into it.\nmkdir explorer && cd \"$_\""
+    },
+    {
+      "heading": "Creating env files#",
+      "content": ".db_env\necho \"DB_URL=jdbc:postgresql://postgres:5432/explorer\nDB_USER=postgres\nDB_PASS=1234\" > .db_env\n.redis_env\necho \"REDIS_URL=redis://localhost:6379\" > .redis_env\nAdditional configurations are made by adding entries to the env_file field in docker-compose.yaml. ie, .http_env"
+    },
+    {
+      "heading": "explorer-frontend#",
+      "content": "git clone https://github.com/ergoplatform/explorer-frontend\nsudo mkdir -p front/build\nsudo cp -r explorer-frontend/build /front\nsudo mkdir front/config\nsudo vi front/config/app.config.js\nsudo vi docker-compose.yaml"
+    },
+    {
+      "heading": "explorer-backend#",
+      "content": "git clone https://github.com/ergoplatform/explorer-backend\ncd explorer-backend/modules\n\n# All vars for the .x_env files are listed\n# in default config of the corresponding service\nvi chain-grabber/src/main/resources/application.conf\nvi explorer-api/src/main/resources/application.conf\nvi utx-tracker/src/main/resources/application.conf\nvi utx-broadcaster/src/main/resources/application.conf\n\n# Create docker network \ndocker network create explorer-network"
+    },
+    {
+      "heading": "Booting#",
+      "content": "Configure other services (such as: nginx, postgres, redis, adminer) according to their documentaion\n# Run from /explorer/\ndocker-compose up -d\n\n# To make sure everything up and working.\ndocker ps -a"
+    },
+    {
+      "heading": "Files#",
+      "content": "paste the following into app.config.js\napiUrl points to your to backend API. \nenvironments.url points to your frontend\nvar __APP_CONFIG__ = {\n  apiUrl: 'https://api.ergoplatform.org',\n  alternativeLogo: false, // true by default\n  environments: [\n     {\n       name: 'Mainnet',\n       url: 'https://explorer.ergoplatform.org',\n     },\n  ],\n};\n\nif (typeof global !== 'undefined') {\n  global.__APP_CONFIG__ = __APP_CONFIG__;\n}\ndocker-compose.yaml\nversion: '3.4'\n\nservices:\n  nginx:\n    image: nginx:1.17.9-alpine\n    ports:\n      - \"443:443\"\n    volumes:\n      - /data/nginx/nginx.conf:/etc/nginx/nginx.conf:ro\n      - /data/nginx/ssl:/etc/ssl:ro\n      - /explorer/front/build:/usr/share/nginx/html\n      - /explorer/front/config:/usr/share/nginx/config\n    networks:\n      - explorer-network\n    depends_on:\n      - api\n  postgres:\n    image: postgres:11-alpine\n    shm_size: 2g\n    environment:\n      POSTGRES_PASSWORD: <password>\n    ports:\n      - \"5432:5432\"\n    volumes:\n      - /data/postgres:/var/lib/postgresql/data:rw\n    networks:\n      - explorer-network\n  redis:\n    image: redis:latest\n    restart: always\n    command: [\"redis-server\"]\n    ports:\n      - \"127.0.0.1:6379:6379\"\n    volumes:\n      - /data/redis:/usr/local/etc/redis\n    networks:\n      - explorer-network\n  adminer:\n    image: adminer:4-standalone\n    ports:\n      - \"8082:8080\"\n    networks:\n      - explorer-network\n  grabber:\n    image: oskin1/chain-grabber:latest\n    networks:\n      - explorer-network\n    env_file:\n      - .db_env\n    depends_on:\n      - postgres\n  api:\n    image: oskin1/explorer-api:latest\n    ports:\n      - \"8081:8081\"\n    networks:\n      - explorer-network\n    env_file:\n      - .db_env\n    depends_on:\n      - postgres\n      - redis\n  utx-tracker:\n    image: oskin1/utx-tracker:latest\n    networks:\n      - explorer-network\n    env_file:\n      - .db_env\n    depends_on:\n      - postgres\n  utx-broadcaster:\n    image: oskin1/utx-broadcaster:latest\n    networks:\n      - explorer-network\n    env_..."
+    },
+    {
+      "heading": "Prerequsites#",
+      "content": "sudo apt update\nsudo apt full-upgrade\n\n## SDKMAN\ncurl -s \"https://get.sdkman.io\" | bash\nsdk install java\nsdk install sbt\n\n## PostgreSQL\nsudo apt install postgresql\nsudo su postgres\ncreateuser ergo -P --interactive\nLoad database schema\npsql\ncreate database explorer;\n\\c explorer;\n\\i /explorer-backend/modules/explorer-core/src/main/resources/db/V9__Schema.sql\ndocker build explorer-backend/modules/chain-grabber/\ndocker build explorer-backend/modules/chain-grabber/\ndocker build explorer-backend/modules/chain-grabber/\ndocker build explorer-backend/modules/chain-grabber/"
+    }
+  ],
+  "qa_pairs": []
+}

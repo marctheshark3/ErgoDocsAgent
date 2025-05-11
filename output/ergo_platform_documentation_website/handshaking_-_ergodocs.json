@@ -1,0 +1,67 @@
+{
+  "title": "Handshaking - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/p2p/p2p-handshake/",
+  "summary": "This document outlines the procedure and format of handshake messages, which are essential for establishing a connection with another peer. For implementation examples, refer to: Peer features are properties that describe a peer. A peer can have multiple features, which are embedded in a handshake message and remain constant throughout the connection. Features are optional, and a peer can add new ones. If a feature is unrecognized by another peer, it will be skipped.",
+  "keywords": [
+    "document",
+    "procedure",
+    "format",
+    "message",
+    "connection",
+    "peer",
+    "implementation",
+    "example",
+    "feature",
+    "property",
+    "number",
+    "handshake",
+    "size",
+    "limit",
+    "version",
+    "reference",
+    "client",
+    "mode",
+    "operate",
+    "regime",
+    "network",
+    "magic",
+    "session",
+    "table",
+    "reply",
+    "handshaketimeout",
+    "default",
+    "value",
+    "second"
+  ],
+  "sections": [
+    {
+      "heading": "Handshaking in P2P Protocol#",
+      "content": "This document outlines the procedure and format of handshake messages, which are essential for establishing a connection with another peer.\nFor implementation examples, refer to:\nErgonnection, a P2P Java library for Ergo, which provides practical implementation of the handshake process, socket management, and message handling.\nErgo Handshake, a repository that provides a reference implementation of the handshake process in the Ergo protocol."
+    },
+    {
+      "heading": "Peer Features#",
+      "content": "Peer features are properties that describe a peer. A peer can have multiple features, which are embedded in a handshake message and remain constant throughout the connection. Features are optional, and a peer can add new ones. If a feature is unrecognized by another peer, it will be skipped. The format of the feature is arbitrary, and any number can be added to the handshake, subject to the handshake message size limit of 8 KB.\nBefore version 3.3.7, the reference client only supported the \"mode feature\" (which describes the operating regime of the peer). Since version 3.3.7, a new feature that describes network magic and a pseudorandom session ID has been added.\nExample Implementation:\nIn the Ergonnection library, the Feature class represents individual peer features with an id and data. The features are serialized and deserialized to be included in handshake messages, ensuring that they can be transmitted and interpreted correctly during the handshake."
+    },
+    {
+      "heading": "Handshake Format#",
+      "content": "The table below outlines the format of a handshake message:\nLength\nField Name\nDetails\n\n\n\n\n6-8\nTime\nReported handshake time (VLQ-encoded, 6 bytes now, 8 bytes max)\n\n\n1\nAgent name length\nLength of an agent name string (unsigned byte)\n\n\n0-255\nAgent name\nAgent name (e.g., \"Cypra wallet\") in UTF-8 encoding, 255 bytes max\n\n\n3\nNetwork protocol version\nProtocol version (e.g., [0, 1, 1])\n\n\n1\nPeer name length\nLength of peer name string"
+    },
+    {
+      "heading": "For Client Capabilities (Mode Feature):#",
+      "content": "Length\nField Name\nDetails\n\n\n\n\n1\nFeature id\nFor mode feature = 16\n\n\n1-2\nFeature body length\nLength of feature description (VLQ-encoded, up to 2 bytes)\n\n\n1\nState type\nState representation, 0 = UTXO, 1 = digest\n\n\n1\nWhether the peer is verifying transactions\n1 = transactions being verified, 0 = not verified\n\n\n1\nWhether the node bootstrapped via NiPoPoW\n1 if yes, 0 if no (then following field is missed)\n\n\n(4)\nNiPoPoW suffix length\nSuffix length for NiPoPoW bootstrapping\n\n\n1-4\nHow many blocks kept\nSigned integer (ZigZag then VLQ encoded), if -1 then all blocks are stored\nExample Implementation:\nThe Peer class in the Ergonnection library represents a peer in the network, including features such as agent name, peer name, version, and a list of features. This class handles serialization and deserialization of peer data during the handshake process."
+    },
+    {
+      "heading": "For Session Peer Feature Introduced in 3.3.7:#",
+      "content": "Length\nField Name\nDetails\n\n\n\n\n1\nFeature id\nFor session feature = 3\n\n\n1-2\nFeature body length\nLength of feature description (VLQ-encoded, up to 2 bytes)\n\n\n4\nNetwork magic\nNetwork magic bytes, see notes\n\n\n8\nSession id\n64 bits long random session ID"
+    },
+    {
+      "heading": "Notes:#",
+      "content": "For the testnet, magic bytes are [2, 0, 0, 1] (in decimal). For mainnet, [1, 0, 2, 4] (in decimal).\nFor IPv4 or IPv6 address bytes, \"The result is in network byte order: the highest order byte of the address is in getAddress()[0].\" Please check Inet4Address.getAddress() or Inet6Address.getAddress() in Java's JDK for details.\nFor the reference client, the session ID is currently used only to avoid connections to self.\nExample Implementation:\nThe Protocol class in the Ergonnection library manages the deserialization of various protocol messages, including those that handle session features. This ensures that features such as network magic and session IDs are correctly processed during the handshake."
+    },
+    {
+      "heading": "Handshake Procedure#",
+      "content": "A peer sends a handshake message, and another peer replies. If no handshake is received within the handshakeTimeout, the connection is dropped. The default value for handshakeTimeout is 30 seconds.\nExample Implementation:\nIn the ErgoSocket class, the handshake process is handled through methods like sendHandshake() and acceptHandshake(), which manage the serialization and deserialization of handshake data, including the peer's features and session information."
+    }
+  ],
+  "qa_pairs": []
+}

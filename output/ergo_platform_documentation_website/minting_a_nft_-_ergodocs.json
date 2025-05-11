@@ -1,0 +1,52 @@
+{
+  "title": "Minting a NFT - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/tokens/nfts/create/",
+  "summary": "The quickest way to create an NFT is to follow this visual guide that'll show you how to mint your NFT through ergoauctions.org See this page for some simple examples that demonstrate how to programmatically mint a NFT on the Ergo Blockchain. The standard for artwork issuance on Ergo is EIP-0024: Artwork Contract. This standard outlines the process of issuing NFTs, including the two different design versions, V1 and V2, and the importance of artist identity. V2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information.",
+  "keywords": [
+    "guide",
+    "page",
+    "example",
+    "ergo",
+    "blockchain",
+    "standard",
+    "artwork",
+    "issuance",
+    "eip-0024",
+    "contract",
+    "process",
+    "design",
+    "version",
+    "importance",
+    "artist",
+    "identity",
+    "flexibility",
+    "feature",
+    "royalty",
+    "recipient",
+    "trait",
+    "information"
+  ],
+  "sections": [
+    {
+      "heading": "Creating an NFT#",
+      "content": "How do I mint a NFT?\nThe quickest way to create an NFT is to follow this visual guide that'll show you how to mint your NFT through ergoauctions.org"
+    },
+    {
+      "heading": "Creating an NFT programmatically#",
+      "content": "See this page for some simple examples that demonstrate how to programmatically mint a NFT on the Ergo Blockchain."
+    },
+    {
+      "heading": "Standard#",
+      "content": "The standard for artwork issuance on Ergo is EIP-0024: Artwork Contract. This standard outlines the process of issuing NFTs, including the two different design versions, V1 and V2, and the importance of artist identity. V2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information."
+    },
+    {
+      "heading": "Minting your NFT online#",
+      "content": "ergoauctions.org Allows NFT minting. (HowTo)\nLilium is a tool for artists to mint and sell their collections."
+    },
+    {
+      "heading": "Developer Resources#",
+      "content": "ergpy has bulk-minting (with royalties!) \nergo-nft-bulk-minter\nergonfts.org"
+    }
+  ],
+  "qa_pairs": []
+}

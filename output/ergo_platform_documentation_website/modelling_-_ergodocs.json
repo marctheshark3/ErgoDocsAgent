@@ -1,0 +1,150 @@
+{
+  "title": "Modelling - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/box/box_modeling/",
+  "summary": "(Back to: Box Overview | Registers) The UTXO (Unspent Transaction Output) system is the backbone of many blockchain networks, and at its core are boxes. These boxes are not just containers for the value of a currency within a blockchain; they are also equipped with registers that are protected by a contract, enhancing their functionality on the Ergo blockchain. Registers are essentially storage units for data and information at specific addresses in the blockchain. To visualize this, think of these boxes as advanced storage units or containers.",
+  "keywords": [
+    "overview",
+    "registers",
+    "utxo",
+    "unspent",
+    "transaction",
+    "output",
+    "system",
+    "backbone",
+    "network",
+    "core",
+    "container",
+    "value",
+    "currency",
+    "blockchain",
+    "register",
+    "contract",
+    "functionality",
+    "ergo",
+    "storage",
+    "unit",
+    "datum",
+    "information",
+    "address",
+    "instance",
+    "context",
+    "guard",
+    "script",
+    "restriction",
+    "amount",
+    "introduction",
+    "rule",
+    "level",
+    "control",
+    "focus",
+    "working",
+    "button",
+    "channel",
+    "modeling",
+    "framework",
+    "developer",
+    "designer",
+    "task",
+    "structure",
+    "understanding",
+    "role",
+    "mechanic",
+    "canvas",
+    "engineer",
+    "design",
+    "flaw",
+    "security",
+    "vulnerability",
+    "process",
+    "scalability",
+    "efficiency",
+    "pillar",
+    "exploitation",
+    "user",
+    "protection",
+    "request",
+    "congestion",
+    "audit",
+    "chance",
+    "error",
+    "diving",
+    "principle",
+    "basic",
+    "following",
+    "lending",
+    "loan",
+    "defi",
+    "application",
+    "function",
+    "example",
+    "interest",
+    "rate",
+    "detail",
+    "borrower",
+    "lender",
+    "step",
+    "flow",
+    "ergoscript",
+    "input",
+    "data",
+    "format",
+    "entry",
+    "page",
+    "list",
+    "type",
+    "long",
+    "coll[byte",
+    "groupelement"
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Box Design: A Comprehensive Guide#",
+      "content": "(Back to: Box Overview | Registers)\nThe UTXO (Unspent Transaction Output) system is the backbone of many blockchain networks, and at its core are boxes. These boxes are not just containers for the value of a currency within a blockchain; they are also equipped with registers that are protected by a contract, enhancing their functionality on the Ergo blockchain.\nRegisters are essentially storage units for data and information at specific addresses in the blockchain. To visualize this, think of these boxes as advanced storage units or containers. For instance, consider a cup:\nA Cup:\nHolds liquid primarily\nCan contain a certain quantity of liquid\nNow, let's translate this into a blockchain context:\nA Cup Box:\nStores only Ergs or a specific token\nHas a storage limit enforced by a guard script\nA guard script or smart contract sets restrictions on the box. Without it, a box is just a storage unit for information or a certain amount of currency. The introduction of guard scripts, which establish specific rules for the boxes, adds a level of control and functionality to the boxes, much like a remote control. The focus here is not on the internal workings of a remote control (guard script) or the data it transmits (registers and storage), but on its functionality - pressing a button changes the TV channel."
+    },
+    {
+      "heading": "Understanding Box Modeling#",
+      "content": "Box modeling is a framework that aids developers or box designers in creating a box to perform specific tasks. This structure promotes a clear and systematic understanding of a box's roles and operational mechanics."
+    },
+    {
+      "heading": "Key Principles in Box Design#",
+      "content": "A blockchain serves as a financial canvas, allowing developers, engineers, and designers to build financial systems on top of it. However, design flaws can lead to security vulnerabilities, unscalable designs, and inefficient processes. Therefore, it's crucial to prioritize security, scalability, and efficiency in design.\nThe three pillars of box design are:"
+    },
+    {
+      "heading": "Security#",
+      "content": "The box should be designed to prevent exploitation by unauthorized users. Its protection script must be robust."
+    },
+    {
+      "heading": "Scalability#",
+      "content": "The system (involving potentially many boxes and transactions) should be designed to handle multiple concurrent requests smoothly without causing congestion or excessive fees."
+    },
+    {
+      "heading": "Efficiency#",
+      "content": "A straightforward design makes it easier for engineers to understand, audit, and improve the design, reducing the chance of errors."
+    },
+    {
+      "heading": "Box Modeling: A Step-by-Step Guide#",
+      "content": "Before diving into the principles mentioned above, it's essential to understand the basics of box modeling.\nWhen modeling a box, consider the following:"
+    },
+    {
+      "heading": "What is the box's purpose?#",
+      "content": "For instance, a lending box is designed to simplify the loan process within a DeFi application."
+    },
+    {
+      "heading": "What data should the box store?#",
+      "content": "The box's function determines the data stored in its registers. A lending box, for example, would store lending-related information (like loan amount, interest rate, collateral details, borrower/lender addresses) in its registers (R4-R9)."
+    },
+    {
+      "heading": "How will the box perform its function?#",
+      "content": "This step involves thinking about the overall transaction flow, not just the individual box. It requires scripting the guard script (using ErgoScript) to enforce the rules and perform its intended function using the data stored in the registers and potentially data from other input boxes or data inputs."
+    },
+    {
+      "heading": "Register Data Types#",
+      "content": "Registers can store data in various formats, which can be single or multiple entries. See the Registers page for a list of supported types like Long, Coll[Byte], GroupElement, etc."
+    },
+    {
+      "heading": "Resources#",
+      "content": "This guide is based on the article by Keith Lim\nFor more technical details on how boxes are represented in transactions, see the Transaction Format page."
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,24 @@
+services:
+  ergo-docs-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/app/output  # Mount output directory for persistence
+      - ./.env:/app/.env:ro   # Mount .env file as read-only
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Default: runs main.py with default settings
+    # Uncomment ONE of these example commands or create your own:
+    
+    # To run with a specific configuration file:
+    # command: --config custom-config.json
+    
+    # To process a specific source:
+    # command: --source https://github.com/ergoplatform/ergodocs
+    
+    # To run in scheduled mode:
+    # command: --schedule
+    
+    # To run immediately and exit:
+    # command: --now 

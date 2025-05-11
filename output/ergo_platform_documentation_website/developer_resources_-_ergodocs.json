@@ -1,0 +1,85 @@
+{
+  "title": "Developer Resources - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/start/resources/",
+  "summary": "This page outlines the resources available on Ergo. Also check out the dev-tools section on sigmaverse 4MQyMKvMbnCJG3aJ is a P2S (Pay-to-Script) representation of \u00e2\u0080\u009cfalse\u00e2\u0080\u009d condition, i.e. the box is unspendable. Hash is written into R4 register of the box, in the explorer It looks like 0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb, where 0e is type descriptor (byte array), 20 is bytestring length (0x20 in hex = 32), 47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb is the hash of the file.",
+  "keywords": [
+    "page",
+    "resource",
+    "ergo",
+    "tool",
+    "section",
+    "sigmaverse",
+    "script",
+    "representation",
+    "condition",
+    "hash",
+    "register",
+    "explorer",
+    "type",
+    "descriptor",
+    "byte",
+    "array",
+    "length",
+    "47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb",
+    "file"
+  ],
+  "sections": [
+    {
+      "heading": "Resources#",
+      "content": "This page outlines the resources available on Ergo. Also check out the dev-tools section on sigmaverse"
+    },
+    {
+      "heading": "SDKs#",
+      "content": "Appkit (Java)\nSigma-Rust"
+    },
+    {
+      "heading": "Frameworks#",
+      "content": "Headless dApp Framework (Rust)\nMosaik (Kotlin)\nJDE (JSON)"
+    },
+    {
+      "heading": "Wrappers#",
+      "content": "ErgPy (python-jvm)\nergo-python-appkit"
+    },
+    {
+      "heading": "Toolkits#",
+      "content": "Fleet (JS)"
+    },
+    {
+      "heading": "Explorer#",
+      "content": "Mainnet explorer"
+    },
+    {
+      "heading": "Testnet#",
+      "content": "Testnet explorer\nUsing Ergo-Testnet\nTestnet Faucet"
+    },
+    {
+      "heading": "API#",
+      "content": "API Docs\nNode API\nExplorer API\nErgo.Watch API\nTokenJay API"
+    },
+    {
+      "heading": "Test vectors#",
+      "content": "Ergo transaction serialization\nSignature scheme"
+    },
+    {
+      "heading": "Utilities#",
+      "content": "Miner rewards script | Simple command-line tool to find miner rewards not spent and form withdrawing transaction requests for them\nErgo P2S Playground | A web-based tool to quickly get the address corresponding to some script  \nergo-monitoring | Debug service printing out useful for developers and managers information about ergo blockchain state."
+    },
+    {
+      "heading": "On-Chain Analysis#",
+      "content": "Ergo Vision | A wallet visualization tool to be used for investigating transactions and addresses\nErgo Intelligence\nErgo.watch"
+    },
+    {
+      "heading": "Tools#",
+      "content": "Transaction builder |  The application allows you to manipulate Ergo json transactions with a UI and to sign them with Yoroi, or to prepare the JSON for the Swagger API. It is also able to load the JSON of an unsigned transaction to edit it.  | GitHub  | Video"
+    },
+    {
+      "heading": "Burning#",
+      "content": "4MQyMKvMbnCJG3aJ is a P2S (Pay-to-Script) representation of \u00e2\u0080\u009cfalse\u00e2\u0080\u009d condition, i.e. the box is unspendable. Hash is written into R4 register of the box, in the explorer\nIt looks like 0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb, where 0e is type descriptor (byte array), 20 is bytestring length (0x20 in hex = 32), 47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb is the hash of the file."
+    },
+    {
+      "heading": "External#",
+      "content": "awesome-ergo\nergonaut.space\nergosites.github\nErgoWiki | The official ergoplatform GitHub wiki\nergotutorials.com"
+    }
+  ],
+  "qa_pairs": []
+}

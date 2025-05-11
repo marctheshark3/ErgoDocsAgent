@@ -1,0 +1,42 @@
+{
+  "title": "EIP12-Types - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/lib/eip12-types/",
+  "summary": "EIP12-Types is a specialized library designed to introduce static typing to the dApp Connector Protocol on the Ergo Blockchain. This library is instrumental in improving the developer experience on the Ergo platform. It ensures type safety, enabling developers to take advantage of static typing benefits such as early error detection, performance optimization, and improved code readability and maintainability. For detailed instructions on how to integrate EIP12-Types into your Ergo dApp development process, please visit the official GitHub repository.",
+  "keywords": [
+    "eip12",
+    "types",
+    "library",
+    "typing",
+    "dapp",
+    "connector",
+    "protocol",
+    "ergo",
+    "blockchain",
+    "developer",
+    "experience",
+    "platform",
+    "type",
+    "safety",
+    "advantage",
+    "benefit",
+    "error",
+    "detection",
+    "performance",
+    "optimization",
+    "code",
+    "readability",
+    "maintainability",
+    "instruction",
+    "development",
+    "process",
+    "github",
+    "repository"
+  ],
+  "sections": [
+    {
+      "heading": "EIP12-Types: Enhancing Ergo Blockchain's dApp Connector Protocol with Static Typing#",
+      "content": "EIP12-Types is a specialized library designed to introduce static typing to the dApp Connector Protocol on the Ergo Blockchain.\nThis library is instrumental in improving the developer experience on the Ergo platform. It ensures type safety, enabling developers to take advantage of static typing benefits such as early error detection, performance optimization, and improved code readability and maintainability.\nFor detailed instructions on how to integrate EIP12-Types into your Ergo dApp development process, please visit the official GitHub repository."
+    }
+  ],
+  "qa_pairs": []
+}

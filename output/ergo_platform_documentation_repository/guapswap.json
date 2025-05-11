@@ -1,0 +1,27 @@
+{
+  "title": "GuapSwap",
+  "source_url": "docs/eco/guapswap.md",
+  "summary": "---\ntags:\n  - GuapSwap\n  - DEX\n  - Swapping\n  - dApp\n---\n\n# GuapSwap\n\nGuapswap is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.\n\n- [GitHub](https://github.com/GuapSwap)\n- [Project Report](../events/pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf)",
+  "keywords": [
+    "guapswap",
+    "swapping",
+    "dapp",
+    "contract",
+    "profit",
+    "service",
+    "ergo",
+    "blockchain",
+    "github](https://github.com",
+    "project",
+    "report](",
+    "/events",
+    "guapswap_-_ergohack3_project_report.pdf"
+  ],
+  "sections": [
+    {
+      "heading": "GuapSwap",
+      "content": "Guapswap is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.\nGitHub\nProject Report"
+    }
+  ],
+  "qa_pairs": []
+}

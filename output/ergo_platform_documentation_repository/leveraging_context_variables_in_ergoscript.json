@@ -1,0 +1,37 @@
+{
+  "title": "Leveraging Context Variables in ErgoScript",
+  "source_url": "docs/dev/scs/ergoscript/context-variables.md",
+  "summary": "# Leveraging Context Variables in ErgoScript\n\nErgoScript provides the capability to create intricate programs with predicates that are context-dependent. Let's take a look at an example:\n\n```scala\nHEIGHT < 4000000            // address 2fp75qcgMrTNR2vuLhiJYQt\n```\n\nThis script uses the context variable `HEIGHT`, which signifies the height of the block in which the transaction is mined. If the blockchain height is less than 4,000,000, the box associated with this address becomes [\"anyone-can-spend\"](anyone-can-spend.md). Conversely, if the blockchain height equals or exceeds 4,000,000, the box becomes [\"no-one-can-spend\"](no-one-can-spend.md). Apart from `HEIGHT`, ErgoScript supports other context variables such as `OUTPUTS`, `INPUTS`, and `minerPubKey`.",
+  "keywords": [
+    "context",
+    "variables",
+    "ergoscript",
+    "capability",
+    "program",
+    "predicate",
+    "look",
+    "example",
+    "height",
+    "address",
+    "script",
+    "variable",
+    "block",
+    "transaction",
+    "spend\"](anyone",
+    "spend.md",
+    "outputs",
+    "minerpubkey",
+    "tool",
+    "detail",
+    "usage",
+    "language",
+    "specification](lang"
+  ],
+  "sections": [
+    {
+      "heading": "Leveraging Context Variables in ErgoScript",
+      "content": "ErgoScript provides the capability to create intricate programs with predicates that are context-dependent. Let's take a look at an example:\nscala\nHEIGHT < 4000000            // address 2fp75qcgMrTNR2vuLhiJYQt\nThis script uses the context variable HEIGHT, which signifies the height of the block in which the transaction is mined. If the blockchain height is less than 4,000,000, the box associated with this address becomes \"anyone-can-spend\". Conversely, if the blockchain height equals or exceeds 4,000,000, the box becomes \"no-one-can-spend\".\nApart from HEIGHT, ErgoScript supports other context variables such as OUTPUTS, INPUTS, and minerPubKey. These variables offer additional tools for writing more specific and flexible scripts. For more details on context variables and their usage, please refer to the ErgoScript language specification."
+    }
+  ],
+  "qa_pairs": []
+}

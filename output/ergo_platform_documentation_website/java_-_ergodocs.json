@@ -1,0 +1,43 @@
+{
+  "title": "Java - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/lang/java/",
+  "summary": "The Ergo AppKit is an essential tool for Java developers who are keen on creating applications using Ergo. It utilizes the capabilities of GraalVM, offering a broad spectrum of features to streamline the development process. The Ergo AppKit acts as a compact interface to the core elements of the ErgoScript interpreter and Ergo protocol implementations, both of which are developed in Scala. This setup enables Java developers to engage with the Ergo's foundational infrastructure without the necessity to explore the Scala codebase. Alternatively, direct interaction with the core Rust implementation is possible via Java (JNI) bindings for sigma-rust.",
+  "keywords": [
+    "ergo",
+    "appkit",
+    "tool",
+    "java",
+    "developer",
+    "application",
+    "capability",
+    "graalvm",
+    "spectrum",
+    "feature",
+    "development",
+    "process",
+    "interface",
+    "core",
+    "element",
+    "ergoscript",
+    "interpreter",
+    "protocol",
+    "implementation",
+    "scala",
+    "setup",
+    "infrastructure",
+    "necessity",
+    "codebase",
+    "interaction",
+    "rust",
+    "binding",
+    "sigma",
+    "help"
+  ],
+  "sections": [
+    {
+      "heading": "Java Development with Ergo#",
+      "content": "The Ergo AppKit is an essential tool for Java developers who are keen on creating applications using Ergo. It utilizes the capabilities of GraalVM, offering a broad spectrum of features to streamline the development process.\nThe Ergo AppKit acts as a compact interface to the core elements of the ErgoScript interpreter and Ergo protocol implementations, both of which are developed in Scala. This setup enables Java developers to engage with the Ergo's foundational infrastructure without the necessity to explore the Scala codebase. Alternatively, direct interaction with the core Rust implementation is possible via Java (JNI) bindings for sigma-rust.\nWith the help of Ergo AppKit, Java developers can concentrate on crafting innovative applications using Ergo, leveraging the unique features and robust blockchain infrastructure that Ergo provides."
+    }
+  ],
+  "qa_pairs": []
+}

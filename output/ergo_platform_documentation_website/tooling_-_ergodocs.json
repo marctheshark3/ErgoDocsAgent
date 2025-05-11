@@ -1,0 +1,89 @@
+{
+  "title": "Tooling - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/scs/ergoscript-tooling/",
+  "summary": "ErgoScript is a powerful and flexible language for creating smart contracts on the Ergo blockchain. As with any programming language, having the right tools can greatly enhance the development experience and productivity. This page provides an overview of various tools, resources, and examples to help you get started with ErgoScript development. ErgoScript is a domain-specific language designed specifically for the Ergo blockchain. It is inspired by Scala and allows developers to create secure and efficient smart contracts.",
+  "keywords": [
+    "ergoscript",
+    "language",
+    "contract",
+    "ergo",
+    "blockchain",
+    "programming",
+    "tool",
+    "development",
+    "experience",
+    "productivity",
+    "page",
+    "overview",
+    "resource",
+    "example",
+    "domain",
+    "scala",
+    "developer",
+    "ture",
+    "complete",
+    "turing",
+    "application",
+    "utxo",
+    "model",
+    "ecosystem",
+    "range",
+    "level",
+    "beginner",
+    "professional",
+    "playground",
+    "tutorial",
+    "course",
+    "explanation",
+    "reference",
+    "address",
+    "unspent"
+  ],
+  "sections": [
+    {
+      "heading": "ErgoScript Tooling#",
+      "content": "ErgoScript is a powerful and flexible language for creating smart contracts on the Ergo blockchain. As with any programming language, having the right tools can greatly enhance the development experience and productivity. This page provides an overview of various tools, resources, and examples to help you get started with ErgoScript development."
+    },
+    {
+      "heading": "Introduction#",
+      "content": "ErgoScript is a domain-specific language designed specifically for the Ergo blockchain. It is inspired by Scala and allows developers to create secure and efficient smart contracts. While ErgoScript is not Turing-complete, it can be used to build Turing-complete applications by leveraging the extended UTXO model of the Ergo blockchain.\nThe ErgoScript ecosystem offers a wide range of tools and resources to help developers at all levels, from beginners to experienced professionals. These tools include playgrounds, tutorials, courses, explanations, references, and examples."
+    },
+    {
+      "heading": "Playgrounds#",
+      "content": "escript.online\nCompile ErgoScript directly in your browser with ErgoScript Playground\nThere is also Scastie\nKiosk lets anyone play with ErgoScript using a basic web-based UI\nergoscript-compiler"
+    },
+    {
+      "heading": "Courses#",
+      "content": "ErgoScript 101 Crash Course (Slides)\nLearn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)\nThe ErgoScript Developer Course from DeCo Education\nDeco Education: 2022 Script Class"
+    },
+    {
+      "heading": "Tutorials#",
+      "content": "ErgoScript by Example Repository\nTesting Ergo Contracts Off-chain"
+    },
+    {
+      "heading": "Advanced Tutorials#",
+      "content": "Advanced ErgoScript Tutorial\nErgoScript tutorial"
+    },
+    {
+      "heading": "Explanations#",
+      "content": "ErgoScript Design patterns\nSigmaState Protocols"
+    },
+    {
+      "heading": "References#",
+      "content": "ErgoScript Language Spec\nErgoScript \nErgoTree\nHigh-Level Design Patterns In Extended UTXO Systems"
+    },
+    {
+      "heading": "Examples#",
+      "content": "ErgoPad Plasma Staking Contracts\nGetBlok.io Smart Pools"
+    },
+    {
+      "heading": "Visual#",
+      "content": "FlowCards is A Declarative Framework for Development of Ergo dApps \nflowcardLib: Ergo FlowCard library for diagrams.net\nergo-castanet"
+    },
+    {
+      "heading": "Box#",
+      "content": "Here is a box you can experiment with:\nThis P2S address corresponds to this unspent box."
+    }
+  ],
+  "qa_pairs": []
+}

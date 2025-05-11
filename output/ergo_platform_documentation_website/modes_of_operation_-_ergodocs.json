@@ -1,0 +1,63 @@
+{
+  "title": "Modes of Operation - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/node/modes/",
+  "summary": "(Back to: Node Installation) The Ergo node offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions. The primary modes are configured using settings in your ergo.conf file, mainly node.stateType and node.blocksToKeep. Bootstrapping options like node.utxoBootstrap and node.nipopowBootstrap can significantly speed up the initial synchronization for certain modes but do not define the mode itself.",
+  "keywords": [
+    "node",
+    "installation",
+    "ergo",
+    "mode",
+    "operation",
+    "user",
+    "resource",
+    "requirement",
+    "disk",
+    "space",
+    "memory",
+    "security",
+    "assumption",
+    "functionality",
+    "case",
+    "backend",
+    "dapp",
+    "fund",
+    "transaction",
+    "setting",
+    "file",
+    "node.statetype",
+    "node.blockstokeep",
+    "option",
+    "node.utxobootstrap",
+    "node.nipopowbootstrap",
+    "synchronization",
+    "comparison",
+    "detailed",
+    "explanations",
+    "notes",
+    "bootstrapping",
+    "utxobootstrap",
+    "nipopowbootstrap",
+    "digest",
+    "limitation",
+    "wallet",
+    "restoration",
+    "pruned",
+    "modes",
+    "usage"
+  ],
+  "sections": [
+    {
+      "heading": "Node Modes of Operation#",
+      "content": "(Back to: Node Installation)\nThe Ergo node offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions.\nThe primary modes are configured using settings in your ergo.conf file, mainly node.stateType and node.blocksToKeep. Bootstrapping options like node.utxoBootstrap and node.nipopowBootstrap can significantly speed up the initial synchronization for certain modes but do not define the mode itself.\nHere's a comparison of the main operational modes:"
+    },
+    {
+      "heading": "Mode Comparison#",
+      "content": "Feature / Mode\nArchival Full Node\nPruned Full Node\nDigest (Stateless) Node\u00c2\u00b9\nLight SPV Client\n\n\n\n\nPrimary Goal\nMax Security, Full History\nFull Security, Reduced Storage\nFull Security, Minimal Storage\nTx Verification, Minimal Resources\n\n\nKey Config\nstateType=\"utxo\"blocksToKeep=-1\nstateType=\"utxo\"blocksToKeep > 0\nstateType=\"digest\"blocksToKeep > 0\nN/A (Client Software)\n\n\nBootstrapping\nFull Sync from Genesis\nFull Sync / UTXO Snapshot (utxoBootstrap=true) / NiPoPoW (nipopowBootstrap=true)\nFull Sync / NiPoPoW (nipopowBootstrap=true) / UTXO Snapshot\u00c2\u00b9\nNiPoPoW Sync\n\n\nStorage (Initial)\nVery High (100s GB+)\nMedium (Snapshot: ~1-2GB + Recent Blocks)\nLow (Headers + State: ~1-3GB + Recent Blocks)\nVery Low (MBs)\n\n\nStorage (Ongoing)\nHigh (Grows with chain)\nMedium (Grows slowly with blocksToKeep)\nLow (Grows slowly with blocksToKeep)\nVery Low\n\n\nResource Needs\nHigh (CPU/RAM/Disk IO)\nModerate\nModerate-Low\nVery Low\n\n\nSync Time\nVery Long\nFast (with bootstrap)\nFast (with bootstrap)\nVery Fast\n\n\nFull Tx Validation\nYes\nYes (for kept blocks)\nYes (for kept blocks, via ADProofs)\nNo (Header validation only)\n\n\nAPI Support\nFull\nFull (for available data)\nLimited (May lack endpoints requiring full UTXO set)\nN/A (Relies on Full Node API)\n\n\nWallet Compatibility\nFull (incl. restore)\nNew Wallets OK; No Restore\nNew Wallets OK; No Restore; Potential issues with standard P2P tx submission reported\u00c2\u00b2\nVerification only; Relies on Full Node for tx submission/balance\n\n\nUse Cases\nMining, Archiving, Max Trust Backend\ndApp Backend, Personal Wallet Backend (New Wallet)\nMobile Node Backend (Android Guide), dApp Backend (Specific Needs), Personal Wallet Backend (New Wallet, check compatibility)\nLight Wallets, Quick Verification Tools\nDetailed Explanations & Notes:\nBootstrapping (utxoBootstrap, nipopowBootstrap):\n\nThese settings significantly speed up the initial sync for Pruned and Digest nodes by downloading a compressed UTXO set snapshot (utxoBootstrap) or using NiPoPoW proofs (nipopowBootstrap) instead of proce..."
+    },
+    {
+      "heading": "Further Reading#",
+      "content": "Configuration File\nPruned Full Node Details\nLight Full (Digest) Node Details (Covers stateType=\"digest\")\nLight SPV Clients / NiPoPoWs\nHistory Pruning (blocksToKeep)"
+    }
+  ],
+  "qa_pairs": []
+}

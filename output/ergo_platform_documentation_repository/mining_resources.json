@@ -1,0 +1,83 @@
+{
+  "title": "Mining Resources",
+  "source_url": "docs/mining/mining-resources.md",
+  "summary": "---\ntags:\n  - Mining\n  - Resources\n  - Papers\n  - Code\n  - EIP\n  - Test Vectors\n---\n\n# Mining Resources\n\nThis page provides a collection of resources related to Ergo mining. It includes academic papers, code repositories, test vectors, and discussion threads.\n\n## Academic Papers\n\n- [Ergo White Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): This paper provides a comprehensive overview of Ergo, including its design principles, consensus algorithm, and economic model.\n\n- [Ergo Yellow Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf):",
+  "keywords": [
+    "mining",
+    "resources",
+    "papers",
+    "code",
+    "test",
+    "vector",
+    "page",
+    "collection",
+    "resource",
+    "ergo",
+    "paper",
+    "repository",
+    "discussion",
+    "thread",
+    "academic",
+    "white",
+    "paper](https://www.docdroid.net",
+    "mcoitvk",
+    "ergopow",
+    "overview",
+    "design",
+    "principle",
+    "consensus",
+    "algorithm",
+    "model",
+    "yellow",
+    "perspective",
+    "platform",
+    "datum",
+    "structure",
+    "bypassing",
+    "proof",
+    "work",
+    "schemes",
+    "collateralized",
+    "smart",
+    "contracts\"](https://ia.cr/2020/044",
+    "approach",
+    "scheme",
+    "contract",
+    "github",
+    "ergoplatform",
+    "tree",
+    "master",
+    "scala",
+    "file",
+    "detail",
+    "values](https://www.ergoforum.org",
+    "forum",
+    "post",
+    "value",
+    "eip27](eip27.md",
+    "eip37](eip37.md"
+  ],
+  "sections": [
+    {
+      "heading": "Mining Resources",
+      "content": "This page provides a collection of resources related to Ergo mining. It includes academic papers, code repositories, test vectors, and discussion threads."
+    },
+    {
+      "heading": "Academic Papers",
+      "content": "Ergo White Paper: This paper provides a comprehensive overview of Ergo, including its design principles, consensus algorithm, and economic model.\n\n\nErgo Yellow Paper: The Yellow Paper offers a more technical perspective on Ergo, detailing the platform's underlying algorithms and data structures.\n\n\n\"Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts\": This paper discusses a novel approach to bypassing non-outsourceable proof-of-work schemes using smart contracts."
+    },
+    {
+      "heading": "Code",
+      "content": "The Ergo GitHub repository contains the Scala files related to Ergo's mining algorithm. This is a great resource if you're interested in understanding the technical details of Ergo mining."
+    },
+    {
+      "heading": "Test Vectors",
+      "content": "Test vectors for increased N values: This forum post provides test vectors for Ergo's proof-of-work algorithm with increased N values."
+    },
+    {
+      "heading": "EIPs",
+      "content": "EIP27\nEIP37"
+    }
+  ],
+  "qa_pairs": []
+}

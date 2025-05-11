@@ -1,0 +1,20 @@
+{
+  "title": "Sigma Subscriptions - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/eco/sigma-subscriptions/",
+  "summary": "Sigma Subscriptions is a framework for anyone to easily run a subscription service on Ergo.",
+  "keywords": [
+    "sigma",
+    "subscriptions",
+    "framework",
+    "subscription",
+    "service",
+    "ergo"
+  ],
+  "sections": [
+    {
+      "heading": "Sigma Subscriptions#",
+      "content": "Sigma Subscriptions is a framework for anyone to easily run a subscription service on Ergo."
+    }
+  ],
+  "qa_pairs": []
+}

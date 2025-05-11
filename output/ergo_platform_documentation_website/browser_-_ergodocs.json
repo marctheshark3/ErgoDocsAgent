@@ -1,0 +1,40 @@
+{
+  "title": "Browser - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/browser/",
+  "summary": "There are a couple of options developers can pick from to interact with the user in browser. You will first need to decide if you want to develop using JavaScript or Rust. You'll also have to decide whether you want to integrate the dApp connector or ErgoPay. JS/TS Frontend development with JavaScript, TypeScript Rust Sigma Rust can be used in front-end development ErgoPay Ergo's dApp connector for non-web wallet applications dApp Connector For web-based wallets (Nautilus/SAFEW)",
+  "keywords": [
+    "couple",
+    "option",
+    "developer",
+    "user",
+    "browser",
+    "javascript",
+    "rust",
+    "dapp",
+    "connector",
+    "ergopay",
+    "frontend",
+    "development",
+    "typescript",
+    "sigma",
+    "ergo",
+    "wallet",
+    "nautilus",
+    "safew"
+  ],
+  "sections": [
+    {
+      "heading": "Browser#",
+      "content": "There are a couple of options developers can pick from to interact with the user in browser. You will first need to decide if you want to develop using JavaScript or Rust. You'll also have to decide whether you want to integrate the dApp connector or ErgoPay."
+    },
+    {
+      "heading": "Platform#",
+      "content": "JS/TSFrontend development with JavaScript, TypeScript\nRustSigma Rust can be used in front-end development"
+    },
+    {
+      "heading": "Payments#",
+      "content": "ErgoPayErgo's dApp connector for non-web wallet applications\ndApp ConnectorFor web-based wallets (Nautilus/SAFEW)"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,77 @@
+{
+  "title": "JavaScript - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/lang/js/",
+  "summary": "JavaScript and TypeScript developers can interact with the Ergo blockchain using various libraries and frameworks. Notably, JS/TS bindings for sigma-rust (via WebAssembly) provide core blockchain interaction capabilities. Appkit was designed as an abstraction layer on top of Sigma. This gives a lot of freedom on the core level in Sigma, while keeping dApp-facing APIs stable. With the availability of Sigma.js, Fleet can play the same role for JS/TS.",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "developer",
+    "ergo",
+    "blockchain",
+    "library",
+    "framework",
+    "binding",
+    "sigma",
+    "rust",
+    "webassembly",
+    "core",
+    "interaction",
+    "capability",
+    "appkit",
+    "abstraction",
+    "layer",
+    "freedom",
+    "level",
+    "dapp",
+    "availability",
+    "sigma.js",
+    "fleet",
+    "role",
+    "lets",
+    "transaction",
+    "port",
+    "sigmastate",
+    "interpreter",
+    "graalvm",
+    "wasm",
+    "\u00f0\u009f\u0094\u0097",
+    "dappstep",
+    "docs",
+    "example",
+    "nodejs",
+    "aspect",
+    "functionality",
+    "development",
+    "course",
+    "\u00f0\u009f\u0093\u00b9",
+    "video",
+    "tutorial",
+    "nightowl",
+    "connector",
+    "react",
+    "package",
+    "address",
+    "generation",
+    "demo",
+    "create"
+  ],
+  "sections": [
+    {
+      "heading": "JavaScript & TypeScript#",
+      "content": "JavaScript and TypeScript developers can interact with the Ergo blockchain using various libraries and frameworks. Notably, JS/TS bindings for sigma-rust (via WebAssembly) provide core blockchain interaction capabilities.\nAppkit was designed as an abstraction layer on top of Sigma. This gives a lot of freedom on the core level in Sigma, while keeping dApp-facing APIs stable.\nWith the availability of Sigma.js, Fleet can play the same role for JS/TS."
+    },
+    {
+      "heading": "Frameworks#",
+      "content": "FleetLets you easily create Ergo transactions with a pure JS library.\nSigma.JSJavaScript port of the sigmastate-interpreter\nAppKitcan be configured to run JavaScript under GraalVM\nsigma-rust (via WASM)Core Rust library with JS/TS bindings available via WebAssembly."
+    },
+    {
+      "heading": "Tutorials#",
+      "content": "\u00f0\u009f\u0094\u0097 dAppStep Docsinclude many practical examples with Javascript and Nodejs that will help you to understand to implement different aspects of dapp functionality on Ergo\n\u00f0\u009f\u0094\u0097 dApp Development Course\n\u00f0\u009f\u0093\u00b9 Video TutorialNightOwl dApp Connector React Package\nAddress Generation Demousing sigma-rust and TypeScript\nCreate Transaction Demousing sigma-rust and TypeScript"
+    },
+    {
+      "heading": "Resources#",
+      "content": "Ergo-Raffle-Bot Github\nErgoScript.js\nThe Ergo Raffle documentation provides a detailed description of their implementation. \nhypo10use/quid-games (Angular)"
+    }
+  ],
+  "qa_pairs": []
+}

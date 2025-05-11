@@ -1,0 +1,53 @@
+{
+  "title": "Browser",
+  "source_url": "docs/dev/stack/browser.md",
+  "summary": "# Browser\n\nThere are a couple of options developers can pick from to interact with the user in browser. You will first need to decide if you want to develop using JavaScript or Rust. You'll also have to decide whether you want to integrate the dApp connector or ErgoPay.\n\n## Platform\n\n\n::cards::\n\n[\n  {\n    \"title\": \"JS/TS\",\n    \"content\": \"Frontend development with JavaScript, TypeScript\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lang/js.md\"\n  },\n  {\n    \"title\": \"Rust\",\n    \"content\": \"Sigma Rust can be used in front-end development\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"../lang/rust.md\"\n\n  }\n]\n\n::/cards::\n\n\n\n\n\n\n\n## Payments\n\n\n::cards:: [\n  {\n    \"title\": \"ErgoPay\",\n    \"content\": \"Ergo's dApp connector for non-web wallet applications\",\n    \"url\": \"../wallet/payments/ergopay/ergo-pay.md\"\n  },\n  {\n    \"title\": \"dApp Connector\",\n    \"content\": \"For web-based wallets (Nautilus/SAFEW)\",\n    \"url\": \"../wallet/payments/dApp.md\"\n\n  }\n]\n\n::/cards::",
+  "keywords": [
+    "browser",
+    "couple",
+    "option",
+    "developer",
+    "user",
+    "javascript",
+    "rust",
+    "dapp",
+    "connector",
+    "ergopay",
+    "platform",
+    "card",
+    "title",
+    "content",
+    "frontend",
+    "development",
+    "typescript",
+    "image",
+    "grid",
+    "js.png",
+    "/lang",
+    "js.md",
+    "sigma",
+    "rust.png",
+    "rust.md",
+    "payment",
+    "ergo",
+    "wallet",
+    "application",
+    "nautilus",
+    "safew"
+  ],
+  "sections": [
+    {
+      "heading": "Browser",
+      "content": "There are a couple of options developers can pick from to interact with the user in browser. You will first need to decide if you want to develop using JavaScript or Rust. You'll also have to decide whether you want to integrate the dApp connector or ErgoPay."
+    },
+    {
+      "heading": "Platform",
+      "content": "::cards::\n[\n  {\n    \"title\": \"JS/TS\",\n    \"content\": \"Frontend development with JavaScript, TypeScript\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lang/js.md\"\n  },\n  {\n    \"title\": \"Rust\",\n    \"content\": \"Sigma Rust can be used in front-end development\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"../lang/rust.md\"\n}\n]\n::/cards::"
+    },
+    {
+      "heading": "Payments",
+      "content": "::cards::\n[\n  {\n    \"title\": \"ErgoPay\",\n    \"content\": \"Ergo's dApp connector for non-web wallet applications\",\n    \"url\": \"../wallet/payments/ergopay/ergo-pay.md\"\n  },\n  {\n    \"title\": \"dApp Connector\",\n    \"content\": \"For web-based wallets (Nautilus/SAFEW)\",\n    \"url\": \"../wallet/payments/dApp.md\"\n}\n]\n::/cards::"
+    }
+  ],
+  "qa_pairs": []
+}

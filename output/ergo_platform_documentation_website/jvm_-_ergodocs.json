@@ -1,0 +1,38 @@
+{
+  "title": "JVM - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/lang/jvm/",
+  "summary": "Whether you want to develop using Java, Scala, or Kotlin, you'll likely want to be using AppKit. AppKit A library for polyglot development of Ergo Applications \u00f0\u009f\u0094\u0097 ergo-playgrounds Run contracts + off-chain code in the browser. \u00f0\u009f\u0094\u0097 Ergo Contracts Source code of the Ergo smart contracts with compilation, testing, and formal verification tooling.",
+  "keywords": [
+    "java",
+    "scala",
+    "kotlin",
+    "appkit",
+    "library",
+    "development",
+    "ergo",
+    "applications",
+    "\u00f0\u009f\u0094\u0097",
+    "playground",
+    "contract",
+    "chain",
+    "code",
+    "browser",
+    "contracts",
+    "source",
+    "compilation",
+    "testing",
+    "verification",
+    "tooling"
+  ],
+  "sections": [
+    {
+      "heading": "JVM#",
+      "content": "Whether you want to develop using Java, Scala, or Kotlin, you'll likely want to be using AppKit.\nAppKitA library for polyglot development of Ergo Applications"
+    },
+    {
+      "heading": "Tools#",
+      "content": "\u00f0\u009f\u0094\u0097 ergo-playgroundsRun contracts + off-chain code in the browser.\n\u00f0\u009f\u0094\u0097 Ergo ContractsSource code of the Ergo smart contracts with compilation, testing, and formal verification tooling."
+    }
+  ],
+  "qa_pairs": []
+}

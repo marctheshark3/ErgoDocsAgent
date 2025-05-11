@@ -1,0 +1,35 @@
+{
+  "title": "Modifiers Validation - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/node/modifiers-validation/",
+  "summary": "This section contains a list of all consensus-critical validation rules that every node in the network should perform; rules that are not listed in this table should not be considered consensus-critical and enforced by the network. Every rule is enumerated and is initially activated. Rules that could not lead to money printing and are not enforced by serialisers may be disabled later by a miner\nvoting via soft forks, while new rules may also be added at the same time. Transaction validation: Header validation: Block sections validation: Extension validation: Block application to state validation:",
+  "keywords": [
+    "section",
+    "list",
+    "consensus",
+    "validation",
+    "rule",
+    "node",
+    "network",
+    "table",
+    "money",
+    "printing",
+    "serialiser",
+    "miner",
+    "voting",
+    "fork",
+    "time",
+    "transaction",
+    "header",
+    "block",
+    "extension",
+    "application",
+    "state"
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Modifiers Validation#",
+      "content": "This section contains a list of all consensus-critical validation rules that every node in the network should perform; rules that are not listed in this table should not be considered consensus-critical and enforced by the network.\nEvery rule is enumerated and is initially activated.\nRules that could not lead to money printing and are not enforced by serialisers may be disabled later by a miner\nvoting via soft forks, while new rules may also be added at the same time.\nTransaction validation:\nId\nValidation rule\nSoft-forkable\nActive\nModifiers\n\n\n\n\n100\nA transaction should have at least one input.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n101\nA transaction should have at least one output.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n102\nA number of transaction inputs should not exceed 32767.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n103\nA number transaction data inputs should not exceed 32767.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n104\nA number of transaction outputs should not exceed 32767.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n105\nErg amount for a transaction output should not be negative.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n106\nSum of transaction output values should not exceed 9223372036854775807.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n107\nThere should be no duplicate inputs.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n108\nAll token amounts of transaction outputs should be positive.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n109\nA number of tokens within a box should not exceed 255 and sum of assets of one type should not exceed 9223372036854775807.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n111\nEvery output of the transaction should contain at least  nanoErgs.\n\u00e2\u0088\u009a\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n112\nTransaction outputs should have creationHeight not exceeding block height.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n113\nEvery input of the transaction should be in UTXO.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n114\nEvery data input of the transaction should be in UTXO.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n115\nSum of transaction inputs should not exceed 9223372036854775807.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n116\nAmount of Ergs in inputs should be equal to amount of Erg in outputs.\nx\n\u00e2\u0088\u009a\nErgoTransaction\n\n\n..."
+    }
+  ],
+  "qa_pairs": []
+}

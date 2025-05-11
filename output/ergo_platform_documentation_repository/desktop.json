@@ -1,0 +1,45 @@
+{
+  "title": "Desktop",
+  "source_url": "docs/dev/stack/desktop.md",
+  "summary": "# Desktop\n\n\n## Platforms \n\n\n::cards:: [\n  {\n    \"title\": \"JVM\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"JavaFX\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"Rust\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"../lang/rust.md\"\n\n  },\n  {\n    \"title\": \"JS/TS + Electron\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lang/js.md\"\n  },\n  {\n    \"title\": \"Python\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/python.png\",\n    \"url\": \"../lang/python.md\"\n  }\n\n]\n\n::/cards::\n\n## Examples \n\n\n::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udd17 Ergo Wallet\",\n    \"content\": \"\",\n    \"url\": \"https://github.com/ergoplatform/ergo-wallet-app\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 ErgoMixer\",\n    \"content\": \"\",\n    \"url\": \"https://github.com/ergoMixer\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Satergo\",\n    \"content\": \"\",\n    \"url\": \"https://satergo.com/\"\n  },\n\n]\n\n::/cards::",
+  "keywords": [
+    "platform",
+    "card",
+    "title",
+    "content",
+    "image",
+    "grid",
+    "jvm.png",
+    "jvm.md",
+    "javafx",
+    "rust",
+    "rust.png",
+    "/lang",
+    "rust.md",
+    "electron",
+    "js.png",
+    "js.md",
+    "python",
+    "python.png",
+    "python.md",
+    "example",
+    "ergo",
+    "wallet",
+    "https://github.com/ergoplatform/ergo-wallet-app",
+    "ergomixer",
+    "https://github.com/ergomixer",
+    "satergo",
+    "https://satergo.com/"
+  ],
+  "sections": [
+    {
+      "heading": "Platforms",
+      "content": "::cards::\n[\n  {\n    \"title\": \"JVM\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"JavaFX\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"Rust\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"../lang/rust.md\"\n},\n  {\n    \"title\": \"JS/TS + Electron\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lang/js.md\"\n  },\n  {\n    \"title\": \"Python\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/python.png\",\n    \"url\": \"../lang/python.md\"\n  }\n]\n::/cards::"
+    },
+    {
+      "heading": "Examples",
+      "content": "::cards::\n[\n  {\n    \"title\": \"\ud83d\udd17 Ergo Wallet\",\n    \"content\": \"\",\n    \"url\": \"https://github.com/ergoplatform/ergo-wallet-app\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 ErgoMixer\",\n    \"content\": \"\",\n    \"url\": \"https://github.com/ergoMixer\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Satergo\",\n    \"content\": \"\",\n    \"url\": \"https://satergo.com/\"\n  },\n]\n::/cards::"
+    }
+  ],
+  "qa_pairs": []
+}

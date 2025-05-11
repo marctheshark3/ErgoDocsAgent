@@ -1,0 +1,123 @@
+{
+  "title": "Ring Signatures in Ergo",
+  "source_url": "docs/dev/data-model/ring.md",
+  "summary": "---\ntags:\n  - Ring Signatures\n  - Cryptography\n  - Privacy\n---\n\n# Ring Signatures in Ergo\n\n## Overview\n\nRing signatures are an advanced privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing which specific group member signed it. ## Key Features\n\n- **Anonymity**: Provides plausible deniability by obscuring the actual signer\n- **Privacy**: Prevents tracing the origin of a signature to a specific participant\n- **Flexible Composition**: Implemented through Ergo's Sigma protocols\n\n## Use Cases\n\n1. **Anonymous Transactions**: Enabling privacy in blockchain transactions\n2. * *Decentralized Mixers**: \n  \n      - [ErgoMixer Privacy Protocol](mixer.md)\n      -",
+  "keywords": [
+    "ring",
+    "signatures",
+    "cryptography",
+    "privacy",
+    "ergo",
+    "overview",
+    "signature",
+    "technique",
+    "user",
+    "transaction",
+    "behalf",
+    "group",
+    "member",
+    "feature",
+    "anonymity",
+    "deniability",
+    "signer",
+    "prevent",
+    "origin",
+    "participant",
+    "flexible",
+    "composition",
+    "sigma",
+    "protocol",
+    "case",
+    "anonymous",
+    "transactions",
+    "mixers",
+    "ergomixer",
+    "protocol](mixer.md",
+    "zerojoin",
+    "mechanism](zerojoin.md",
+    "confidential",
+    "voting",
+    "voter",
+    "identity",
+    "implementation",
+    "knowledge",
+    "secret",
+    "proof",
+    "example",
+    "scenario",
+    "representation",
+    "ringsignature",
+    "atleastoneof",
+    "list",
+    "provedlog(pubkey1",
+    "provedlog(pubkey2",
+    "provedlog(pubkey3",
+    "cryptographic",
+    "concepts",
+    "discrete",
+    "logarithm",
+    "proofs](dlog.md",
+    "threshold",
+    "signatures](threshold.md",
+    "protocols",
+    "overview](sigma.md",
+    "mechanisms",
+    "fungibility",
+    "mixing",
+    "service",
+    "application",
+    "foundations",
+    "ergo](crypto.md",
+    "schnorr",
+    "privacy](schnorr.md",
+    "sidechains",
+    "interoperability](sigma",
+    "chains.md",
+    "security",
+    "considerations",
+    "complexity",
+    "relies",
+    "hardness",
+    "problem",
+    "guarantee"
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "content": "Ring signatures are an advanced privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing which specific group member signed it."
+    },
+    {
+      "heading": "Key Features",
+      "content": "Anonymity: Provides plausible deniability by obscuring the actual signer\nPrivacy: Prevents tracing the origin of a signature to a specific participant\nFlexible Composition: Implemented through Ergo's Sigma protocols"
+    },
+    {
+      "heading": "Use Cases",
+      "content": "Anonymous Transactions: Enabling privacy in blockchain transactions\n\nDecentralized Mixers: \n\nErgoMixer Privacy Protocol\nZeroJoin Privacy Mechanism\n\n\n\nConfidential Voting: Where the voter's identity must remain secret"
+    },
+    {
+      "heading": "Technical Implementation",
+      "content": "In Ergo, ring signatures are implemented using Sigma protocols, allowing for:\nProving knowledge of one secret from a set of secrets\nCreating cryptographic proofs that obfuscate the true signer"
+    },
+    {
+      "heading": "Example Scenario",
+      "content": "scala\n// Simplified conceptual representation\nval ringSignature = prove {\n  atLeastOneOf(\n    List(\n      proveDlog(pubKey1),\n      proveDlog(pubKey2),\n      proveDlog(pubKey3)\n    )\n  )\n}"
+    },
+    {
+      "heading": "Related Cryptographic Concepts",
+      "content": "Discrete Logarithm Proofs\nThreshold Signatures\nSigma Protocols Overview"
+    },
+    {
+      "heading": "Privacy Mechanisms",
+      "content": "ZeroJoin: A privacy protocol leveraging ring signatures to restore fungibility\nErgoMixer: A non-custodial mixing service using ring signature techniques"
+    },
+    {
+      "heading": "Advanced Applications",
+      "content": "Cryptographic Foundations in Ergo\nSchnorr Signatures and Privacy\nSidechains and Interoperability"
+    },
+    {
+      "heading": "Security Considerations",
+      "content": "Computational complexity makes tracing the original signer computationally infeasible\nRelies on the hardness of the discrete logarithm problem\nProvides strong privacy guarantees without compromising blockchain security"
+    }
+  ],
+  "qa_pairs": []
+}

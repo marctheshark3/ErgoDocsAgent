@@ -1,0 +1,39 @@
+{
+  "title": "Auction Contract - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/tokens/standards/eip22/",
+  "summary": "\u00f0\u009f\u0094\u0097 From EIP-0022: Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of any blockchain. This EIP is proposing the auction contract with various features listed in the Design section This proposed contract allows any kind of tokens to be auctioned while supporting the following features:",
+  "keywords": [
+    "\u00f0\u009f\u0094\u0097",
+    "eip-0022",
+    "kind",
+    "token",
+    "artwork",
+    "share",
+    "part",
+    "blockchain",
+    "auction",
+    "contract",
+    "feature",
+    "design",
+    "section"
+  ],
+  "sections": [
+    {
+      "heading": "EIP-0022: Auction Contract#",
+      "content": "\u00f0\u009f\u0094\u0097 From EIP-0022:"
+    },
+    {
+      "heading": "Motivation#",
+      "content": "Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of any blockchain. This EIP is proposing the auction contract with various features listed in the Design section"
+    },
+    {
+      "heading": "Design#",
+      "content": "This proposed contract allows any kind of tokens to be auctioned while supporting the following features:\nAny token as the auction's currency alongside ERG\n\"Buy it now\" which allows a buyer to instantly buy the auctioned token by paying the predefined amount in the auction's currency\nAuction duration as timestamp which is much more precise than block height and is independent of the network difficulty\nAuto extending the duration near the end of the auction based on a global config\nMinimum bid step - each bidder has to increase the previous bid at least by this amount\nRoyalty - The original owner (whomever issued the token) gets a share of the auction every time his/her token is auctioned using a global config"
+    },
+    {
+      "heading": "The contract#",
+      "content": "{\n  // R4: The seller's ergo tree\n  // R5: Current bidder's ergo tree\n  // R6: (Minimum bid, minimum step)\n  // R7: The auction's end time in timestamp\n  // R8: The auction's \"Buy it now\" amount. -1 if it is not enabled.\n  // R9: Auction info that is needed for UI/UX purposes - stringfied json encoded as Coll[Byte]:\n  //     - initialBid: The auction's initial bid\n  //     - startTime: The auction's start time\n  //     - description: The auction's description\n  //     - Any other info needed in the future\n  //\n  // tokens(0): auctioned token\n  // tokens(1): current bid for non-ERG auctions - doesn't exist otherwise\n  //\n  // dataInputs(0): Auction house configuration - contains configs like UI fee and artist fee\n  //     - R4: UI fee in thousand, e.g. 10 for 1% or 5 for 0.5%\n  //     - R5: UI implementor's ergo tree\n  //     - R6: Maximum miner fee for withdrawal\n  //     - R7: Extend configuration as a Coll[Long] with two values (extendThreshold, extendNum)\n  //             e.g., (30 * 60 * 1000L, 40 * 60 * 1000L) to extend the duration for 40min if 30min is left when the bid is placed\n\n  // originalIssuanceBox: Spent box with ID equal to the NFT ID\n  //     - R4: Royalty percentage - 0 if empty\n  //     - R5: Artist address\n\n  val seller = SELF.R4[Coll[Byte]].get\n  val currBidder = SELF.R5[Coll[Byte]].get\n  val minBid = SELF.R6[Coll[Long]].get(0)\n  val minStep = SELF.R6[Coll[Long]].get(1)\n  val endTime = SELF.R7[Long].get\n  val buyItNowAmount = SELF.R8[Long].get\n\n  // auction currency can be any token like SigUSD\n  val auctionCurrency = if (SELF.tokens.size > 1) SELF.tokens(1)._1\n                        else Coll[Byte]()\n  val isCurrencyERG = auctionCurrency.size == 0\n  val getBoxVal = {(b: Box) => {\n     if (isCurrencyERG) b.value\n     else {\n       if (b.tokens.size == 1 && b.tokens(0)._1 == auctionCurrency) b.tokens(0)._2\n       else if (b.tokens.size == 2 && b.tokens(1)._1 == auctionCurrency) b.tokens(1)._2\n       else 0L\n     }\n  }}\n\n  val currBid = getBoxVal..."
+    }
+  ],
+  "qa_pairs": []
+}

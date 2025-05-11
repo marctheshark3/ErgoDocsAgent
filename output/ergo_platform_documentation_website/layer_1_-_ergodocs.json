@@ -1,0 +1,105 @@
+{
+  "title": "Layer 1 - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/protocol/scaling/layer1/",
+  "summary": "Layer 1, the foundational protocol layer of a blockchain system, is responsible for core functions such as transaction processing, consensus mechanisms, and security protocols. Ergo's Layer 1 is designed with a focus on scalability, incorporating features that boost transaction processing capacity and overall throughput. Ergo utilizes an enhanced version of Bitcoin's UTXO model, known as EUTXO, which enables: Recent developments have improved the protocol's efficiency through: The introduction of Just in time costing in Node V5 has led to: Developers are actively exploring: Ergo's block structure includes extension sections containing: These features enable: Ergo is actively developing sub-block confirmation protocols that will: This development is guided by EIP-15 and builds upon established research from platforms like: Sharding represents a promising avenue for future scalability improvements by: For detailed information, refer to: EIPs serve as the primary mechanism for protocol enhancement through: Regular updates to the Ergo node software provide: Ongoing research continues to explore: For the latest developments in these areas, refer to Flux: Revisiting Near Blocks for Proof-of-Work Blockchains.",
+  "keywords": [
+    "layer",
+    "protocol",
+    "system",
+    "core",
+    "function",
+    "transaction",
+    "processing",
+    "consensus",
+    "mechanism",
+    "security",
+    "ergo",
+    "focus",
+    "scalability",
+    "feature",
+    "capacity",
+    "throughput",
+    "version",
+    "bitcoin",
+    "utxo",
+    "model",
+    "eutxo",
+    "development",
+    "efficiency",
+    "introduction",
+    "time",
+    "node",
+    "developer",
+    "block",
+    "structure",
+    "extension",
+    "section",
+    "confirmation",
+    "eip-15",
+    "build",
+    "research",
+    "platform",
+    "sharding",
+    "avenue",
+    "improvement",
+    "information",
+    "enhancement",
+    "update",
+    "software",
+    "provide",
+    "area",
+    "flux",
+    "near",
+    "blocks",
+    "proof",
+    "work",
+    "blockchains"
+  ],
+  "sections": [
+    {
+      "heading": "Layer 1: On-chain Scalability in Ergo#",
+      "content": "Layer 1, the foundational protocol layer of a blockchain system, is responsible for core functions such as transaction processing, consensus mechanisms, and security protocols. Ergo's Layer 1 is designed with a focus on scalability, incorporating features that boost transaction processing capacity and overall throughput."
+    },
+    {
+      "heading": "Extended UTXO Model (EUTXO)#",
+      "content": "Ergo utilizes an enhanced version of Bitcoin's UTXO model, known as EUTXO, which enables:\nTuring Complete smart contracts\nParallel transaction processing\nHigher throughput compared to account-based models\nEfficient state management"
+    },
+    {
+      "heading": "Protocol Optimizations#",
+      "content": "Recent developments have improved the protocol's efficiency through:\nRemoval of unused complexity from the Sigma protocol\nEnhanced code readability and maintenance\nRefined transaction ordering and mempool tracking\nRegular node version updates addressing performance"
+    },
+    {
+      "heading": "Just-in-Time Costing#",
+      "content": "The introduction of Just in time costing in Node V5 has led to:\n5-10x increase in block capacity\nImproved transaction processing capability\nMore efficient resource utilization"
+    },
+    {
+      "heading": "Miner Parameter Adjustments#",
+      "content": "Developers are actively exploring:\nIncreased block size parameters\nEnhanced transaction size limits\nOptimized mining efficiency\nImproved difficulty calculations through Autolykos updates"
+    },
+    {
+      "heading": "Microblocks and the Ergo Block Extension Section#",
+      "content": "Ergo's block structure includes extension sections containing:\nMandatory and arbitrary key-value data\nAnchors for microblock creation\nSupport for service chains\nPotential for generic sidechain implementation\nThese features enable:\nFaster block generation times\nImproved transaction throughput\nSupport for velvet or soft forks\nCreation of Aspen-style service chains"
+    },
+    {
+      "heading": "Sub-Block Confirmation Protocols#",
+      "content": "Ergo is actively developing sub-block confirmation protocols that will:\nGroup transactions into sub-blocks\nReduce confirmation times\nIncrease overall throughput\nImprove transaction processing efficiency\nThis development is guided by EIP-15 and builds upon established research from platforms like:\nBitcoin-NG\nFlux"
+    },
+    {
+      "heading": "Sharding#",
+      "content": "Sharding represents a promising avenue for future scalability improvements by:\nPartitioning the blockchain database into smaller segments\nEnabling parallel transaction processing\nMaintaining security while improving throughput\nFor detailed information, refer to:\nOn the Security and Performance of Blockchain Sharding\nSharding and Atomic Composability on Ergo"
+    },
+    {
+      "heading": "Ergo Improvement Proposals (EIPs)#",
+      "content": "EIPs serve as the primary mechanism for protocol enhancement through:\nCommunity-driven proposals\nFocused scalability improvements\nSystematic implementation processes\nRegular protocol updates"
+    },
+    {
+      "heading": "Node Version Updates#",
+      "content": "Regular updates to the Ergo node software provide:\nBug fixes and performance enhancements\nNew scalability features\nImproved difficulty calculations\nRefined Autolykos implementation"
+    },
+    {
+      "heading": "Research and Development#",
+      "content": "Ongoing research continues to explore:\nAdvanced sharding techniques\nNovel consensus mechanisms\nImproved transaction ordering\nEnhanced mempool management\nFor the latest developments in these areas, refer to Flux: Revisiting Near Blocks for Proof-of-Work Blockchains."
+    }
+  ],
+  "qa_pairs": []
+}

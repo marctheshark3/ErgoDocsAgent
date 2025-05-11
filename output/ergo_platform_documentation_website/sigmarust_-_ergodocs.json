@@ -1,0 +1,65 @@
+{
+  "title": "SigmaRust - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/sigma-rust/",
+  "summary": "Rust implementation of ErgoScript (sigmastate-interpreter) cryptocurrency scripting language. ergo-lib Overarching crate exposing wallet-related features: chain types (transactions, boxes, etc.), JSON serialization, box selection for tx inputs, tx builder and signing. Exports other crates API, probably the only crate you'd need to import. ergotree-interpreter ErgoTree interpreter ergotree-ir ErgoTree IR and serialization. ergoscript-compiler ErgoScript compiler.",
+  "keywords": [
+    "rust",
+    "implementation",
+    "ergoscript",
+    "sigmastate",
+    "interpreter",
+    "cryptocurrency",
+    "scripting",
+    "language",
+    "ergo",
+    "overarch",
+    "crate",
+    "wallet",
+    "feature",
+    "chain",
+    "type",
+    "transaction",
+    "json",
+    "serialization",
+    "selection",
+    "input",
+    "builder",
+    "signing",
+    "export",
+    "ergotree",
+    "compiler",
+    "sigma",
+    "primitive",
+    "section",
+    "binding",
+    "developer",
+    "blockchain",
+    "programming",
+    "understanding",
+    "project",
+    "example",
+    "look",
+    "test",
+    "usage",
+    "scenario"
+  ],
+  "sections": [
+    {
+      "heading": "Sigma Rust#",
+      "content": "Rust implementation of ErgoScript (sigmastate-interpreter) cryptocurrency scripting language."
+    },
+    {
+      "heading": "Crates#",
+      "content": "ergo-lib\nOverarching crate exposing wallet-related features: chain types (transactions, boxes, etc.), JSON serialization, box selection for tx inputs, tx builder and signing. Exports other crates API, probably the only crate you'd need to import.\nergotree-interpreter\nErgoTree interpreter\nergotree-ir\nErgoTree IR and serialization.\nergoscript-compiler\nErgoScript compiler.\nsigma-ser\nErgo binary serialization primitives."
+    },
+    {
+      "heading": "Bindings#",
+      "content": "This section lists available language bindings for sigma-rust, allowing developers to interact with the Ergo blockchain using various programming languages.\nWasm:\nCrate: ergo-lib-wasm  \n\n\nJavaScript / TypeScript:\nBrowser: ergo-lib-wasm-browser \nNode.js: ergo-lib-wasm-nodejs \n\n\nSwift (iOS):\nRepo: ergo-lib-ios\n\n\nJava / JVM:\nRepo: ergo-lib-jni  \n\n\nC:\nRepo: ergo-lib-c  \n\n\nGo:\nRepo: ergo-lib-go  (Note: Community maintained)\n\n\nRuby:\nRepo: sigma_rb  (Note: Community maintained)\n\n\nPython:\nPackage: ergo-lib-python   (Note: Uses ergo-lib crate docs)\nSee also: ergo-lib-python docs"
+    },
+    {
+      "heading": "Usage Examples#",
+      "content": "To get better understanding on how to use it in your project check out how its being used in the following projects:\nRust:\nOracle Core;\nErgo Headless dApp Framework;\nErgo Node Interface Library;\nSpectrum Off-Chain Services for Ergo;\nAgeUSD Stablecoin Protocol;\nErgoNames SDKs\nTS/JS:\nErgo SDK (Wasm bindings);\nYoroi wallet (Wasm bindings);\nErgo Desktop Wallet (Wasm bindings);\nExamples:\nCreate transaction demo (TS)\nAddress generation demo (TS)\nAlso take a look at tests where various usage scenarios were implemented."
+    }
+  ],
+  "qa_pairs": []
+}

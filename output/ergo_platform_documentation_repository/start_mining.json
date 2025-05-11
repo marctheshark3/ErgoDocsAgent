@@ -1,0 +1,58 @@
+{
+  "title": "Start Mining",
+  "source_url": "docs/mining/setup/join.md",
+  "summary": "---\ntags:\n  - Mining\n  - Getting Started\n  - Pool Mining\n  - Setup\n  - Guide\n---\n\n# Start Mining\n\nThis guide will walk you through the process of starting to mine Ergo using [Autolykos2](autolykos.md). ## Prerequisites\n\nBefore you start mining, make sure you have the following:\n\n- Familiarity with Ergo. If you're new, start with [ What is Ergo?](why.md)\n- A computer with at least one GPU that has more than 6GB of memory. Check the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) for potential hashrates.\n-",
+  "keywords": [
+    "mining",
+    "pool",
+    "setup",
+    "guide",
+    "process",
+    "mine",
+    "ergo",
+    "autolykos2](autolykos.md",
+    "prerequisite",
+    "following",
+    "familiarity",
+    "computer",
+    "memory",
+    "autolykos",
+    "spreadsheet](https://docs.google.com",
+    "spreadsheet",
+    "d/1nsuodb27ewco_blsjcp3gmlftsjrpiwibsl",
+    "wptllug",
+    "hashrate",
+    "rig](rig.md",
+    "step",
+    "software](software.md",
+    "wallet](wallets.md",
+    "payout",
+    "select",
+    "pool](pools.md",
+    "performance",
+    "power",
+    "consumption",
+    "lifespan",
+    "hardware",
+    "miner",
+    "tooling](miner",
+    "governance](governance.md",
+    "future",
+    "happy"
+  ],
+  "sections": [
+    {
+      "heading": "Start Mining",
+      "content": "This guide will walk you through the process of starting to mine Ergo using Autolykos2."
+    },
+    {
+      "heading": "Prerequisites",
+      "content": "Before you start mining, make sure you have the following:\nFamiliarity with Ergo. If you're new, start with What is Ergo?\nA computer with at least one GPU that has more than 6GB of memory. Check the Autolykos v2 hashrates spreadsheet for potential hashrates.\nIf you're considering building a dedicated rig, refer to our guide on Building a rig."
+    },
+    {
+      "heading": "Steps to Start Mining",
+      "content": "Choose your preferred mining software. If you're using a dedicated rig, select an appropriate operating system.\nSet up a wallet where your mining payouts will be deposited.\nSelect a mining pool to join or look into solo mining\nConsider overclocking your GPU to maximize your mining performance. Be aware that this can increase power consumption and potentially shorten the lifespan of your hardware.\nCheck out the Miner Tooling and keep an eye on ways to participate in miner governance in future.\nHappy mining!"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "APIs - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/api/",
+  "summary": "Ergo provides several APIs that offer different functionalities and services for developers and users. These APIs allow interaction with the Ergo blockchain, access to network data, and integration of Ergo into various applications. Here are some of the APIs available: These APIs provide various functionalities and data access points, allowing developers and users to leverage the power of Ergo blockchain in their applications, explore the blockchain network, interact with assets and tokens, and access decentralized exchange services.",
+  "keywords": [
+    "ergo",
+    "functionality",
+    "service",
+    "developer",
+    "user",
+    "interaction",
+    "blockchain",
+    "access",
+    "network",
+    "datum",
+    "integration",
+    "application",
+    "point",
+    "power",
+    "asset",
+    "token",
+    "exchange"
+  ],
+  "sections": [
+    {
+      "heading": "APIs#",
+      "content": "Ergo provides several APIs that offer different functionalities and services for developers and users. These APIs allow interaction with the Ergo blockchain, access to network data, and integration of Ergo into various applications.\nHere are some of the APIs available:\nNode API: The Node API provides comprehensive access to Ergo node functionalities, including blockchain data retrieval, transaction submission, wallet management, and more. It offers a wide range of endpoints to interact with the Ergo network programmatically.\nExplorer API v1: The Explorer API allows users to explore the Ergo blockchain and retrieve information about blocks, transactions, addresses, and other relevant data. It provides a user-friendly interface to access blockchain data and monitor network activity.\nversions but may have updated features or improvements.\nErgo.Watch API: The Ergo.Watch API provides access to various data and metrics related to the Ergo blockchain.\nTokenJay API: The TokenJay API enables developers to interact with Ergo tokens and assets.\nSpectrum API: The Spectrum API provides several endpoints for different functionalities related to Automated Market Makers (AMM), price tracking, liquidity mining (LM), history, and more.\nSkyHarbor API: The SkyHarbor API provides various routes for interacting with the SkyHarbor marketplace, including accessing collection information, retrieving sales data, obtaining metrics, and utilizing the headless dApp functionality. \nErgopad: Ergopad provides an API for staking on the Ergopad platform.\nThese APIs provide various functionalities and data access points, allowing developers and users to leverage the power of Ergo blockchain in their applications, explore the blockchain network, interact with assets and tokens, and access decentralized exchange services."
+    }
+  ],
+  "qa_pairs": []
+}

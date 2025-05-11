@@ -1,0 +1,63 @@
+{
+  "title": "Developing Simple Pay-to-Script Applications with ErgoScript",
+  "source_url": "docs/dev/scs/p2s.md",
+  "summary": "---\ntags:\n  - P2S\n  - Pay-to-Script\n  - ErgoScript\n  - Applications\n---\n\n# Developing Simple Pay-to-Script Applications with ErgoScript\n\nWith ErgoScript, you can create basic applications using the pay-to-script (P2S) address compiler available at [wallet.plutomonkey.com/p2s](https://wallet.plutomonkey.com/p2s/). Check out [this video tutorial](https://www.youtube.com/watch?v=d6Mf-oxaLIc) for more details. When you send a transaction to this P2S address, the output is locked with the script you provided. ## Example Applications\n\nHere are a few examples of what you can create:\n\n- **Wrapped ERG**: This script lets you exchange Wrapped ERG tokens for native ERG on a trustless 1:1 basis. For more information, check out the [Wrapped ERG forum thread](https://www.ergoforum.org/t/wrapped-erg-wrapping-native-erg-as-a-1-1-token/469).",
+  "keywords": [
+    "script",
+    "ergoscript",
+    "applications",
+    "application",
+    "address",
+    "compiler",
+    "wallet.plutomonkey.com/p2s](https://wallet.plutomonkey.com/p2s/",
+    "video",
+    "tutorial](https://www.youtube.com",
+    "watch?v",
+    "d6mf",
+    "detail",
+    "transaction",
+    "output",
+    "example",
+    "wrapped",
+    "token",
+    "trustless",
+    "basis",
+    "information",
+    "wrap",
+    "forum",
+    "thread](https://www.ergoforum.org",
+    "wrapping",
+    "token/469",
+    "crowdfunding",
+    "method",
+    "fund",
+    "timeframe",
+    "fundraising",
+    "goal",
+    "deadline",
+    "backer",
+    "pluto",
+    "monkey",
+    "p2s](https://wallet.plutomonkey.com",
+    "p2s/?source",
+    "ewogicb2ywwgy2ftcgfpz25jzca9ifnfteyuujrbsw50xs5nzxqkicagdmfsigjhy2tlclb1yktlesa9ihbyb3zlrgxvzyhtruxglli1w0dyb3vwrwxlbwvudf0uz2v0kqogicb2ywwgchjvamvjdfb1yktlesa9ifnfteyuujzbu2lnbwfqcm9wxs5nzxqkicagdmfsigrlywrsaw5lid0gu0vmri5sn1tjbnrdlmdldcavlybozwlnahqkicagdmfsig1pblrvumfpc2ugpsbtruxglli4w0xvbmddlmdldaokicagdmfsigz1bmryywlzaw5nrmfpbhvyzsa9iehfsudivca+psbkzwfkbgluzsamjibiywnrzxjqdwjlzxkkicagdmfsigvub3vnafjhaxnlzca9ihsob3v0qm94oibcb3gpid0+ig91dejvec52ywx1zsa+psbtaw5ub1jhaxnlicymig91dejvec5wcm9wb3npdglvbkj5dgvzid09ihbyb2ply3rqdwjlzxkuchjvcej5dgvzicymig91dejvec5snftjbnrdlmdldca9psbjyw1wywlnbklkfqokicagdmfsigz1bmryywlzaw5nu3vjy2vzcya9iehfsudivca8igrlywrsaw5licymigvub3vnafjhaxnlzchpvvrqvvrtkdapkqogicbmdw5kcmfpc2luz0zhawx1cmugfhwgznvuzhjhaxnpbmdtdwnjzxnzcib9",
+    "threshold",
+    "signature",
+    "creation",
+    "wallet",
+    "agreement",
+    "participant",
+    "ewphdexlyxn0kaogidmsiaogienvbgwociagicbqsygiowy4wlf0mvn1ztzxnufdze1tufj6c0hqm2pqavpryll5m0nfdei0qmlzeev5azrsc05riiksiaogicaguesoijlorldqewhdsmn3netreunhdtr5qudmqzfpzvjbs3lgzzi0rktqteplmnvez0e4nzn1csiplcakicagifblkci5zmrwudjqy2exztvuq1runne5awpathnzr2o2djrqdvk4z0vbefvocddzvhvtc0xzcfmikswgciagicbqsygiowdbs2vsdtfxneronmfkv1hublltznfqq1rueg5ttxr5btjmufbnuevyq2t1c0nknkyziiksciagicbqsygiowdttnnxcnfku3bwtfvccwcyvxpsrw1taxzncwgxcjnqbu5jtefjntnoaznzq3zbr1dfiikkicapcikkfq=="
+  ],
+  "sections": [
+    {
+      "heading": "Developing Simple Pay-to-Script Applications with ErgoScript",
+      "content": "With ErgoScript, you can create basic applications using the pay-to-script (P2S) address compiler available at wallet.plutomonkey.com/p2s. Check out this video tutorial for more details. When you send a transaction to this P2S address, the output is locked with the script you provided."
+    },
+    {
+      "heading": "Example Applications",
+      "content": "Here are a few examples of what you can create:\nWrapped ERG: This script lets you exchange Wrapped ERG tokens for native ERG on a trustless 1:1 basis. For more information, check out the Wrapped ERG forum thread.\n\n\nCrowdfunding: This script provides a method to raise funds within a specified timeframe. The funds can only be accessed if the fundraising goal is met by the deadline. If the deadline passes without reaching the goal, the funds can be returned to the backers. See the script on Pluto Monkey P2S.\n\n\n3-out-of-5 Threshold Signature: This script allows the creation of a multi-signature wallet that requires the agreement of at least three out of five participants to authorize transactions. The script can be found on Pluto Monkey P2S."
+    }
+  ],
+  "qa_pairs": []
+}

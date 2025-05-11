@@ -1,0 +1,85 @@
+{
+  "title": "Tokenomics - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/eco/rosen/rosen-tokenomics/",
+  "summary": "Rosen Bridge is designed to bootstrap liquidity across multiple ecosystems. The Rosen Token serves the as a sybil resistance mechanism for the Rosen framework, a fee distribution mechanism, and means to access services of the Rosen Bridge. Watchers are required to put collateral in RSN and ERG by staking, which allows them to acquire reporting permits. Guards need to lock RSN as collateral. Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers.",
+  "keywords": [
+    "rosen",
+    "bridge",
+    "liquidity",
+    "ecosystem",
+    "token",
+    "resistance",
+    "mechanism",
+    "framework",
+    "distribution",
+    "service",
+    "watcher",
+    "collateral",
+    "reporting",
+    "permit",
+    "guard",
+    "fund",
+    "watchers",
+    "case",
+    "transfer",
+    "behavior",
+    "emission",
+    "benefit",
+    "project",
+    "user",
+    "requirement",
+    "reward",
+    "self",
+    "sale",
+    "venture",
+    "capital",
+    "saft",
+    "agreement",
+    "contract",
+    "pocket",
+    "core",
+    "team",
+    "developer",
+    "ergo",
+    "spectrum",
+    "front",
+    "running",
+    "zengate",
+    "catalyst",
+    "cardano",
+    "politic",
+    "area",
+    "realm",
+    "expertise",
+    "milestone",
+    "funding",
+    "answer",
+    "armeanio",
+    "weekly",
+    "update",
+    "december"
+  ],
+  "sections": [
+    {
+      "heading": "Tokenomics#",
+      "content": "Rosen Bridge is designed to bootstrap liquidity across multiple ecosystems. The Rosen Token serves the as a sybil resistance mechanism for the Rosen framework, a fee distribution mechanism, and means to access services of the Rosen Bridge.\nWatchers are required to put collateral in RSN and ERG by staking, which allows them to acquire reporting permits. Guards need to lock RSN as collateral. Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers. However, funds will be slashed/collected in case of malicious behavior. When RSN emission has ended, all bridge fees will be collected in the RSN token. Holding RSN will have special fee benefits for projects.\nAny user can join as a Watcher given they meet the collateral requirements needed to participate, and earn rewards for their services."
+    },
+    {
+      "heading": "Overview#",
+      "content": "Token Name: Rosen Bridge Token\nToken Ticker: RSN\nMax Supply: 1,000,000,000\nInitial Liquidity Bootstrapping: 100,000,000"
+    },
+    {
+      "heading": "Breakdown#",
+      "content": "Token Allocation\nNumber of Tokens\n% of Total Supply\nDistribution Method\n\n\n\n\nInitial Liquidity Bootstrapping (Ergo and Cardano)\n100,000,000\n10%\nLiquidity pool and ISPO\n\n\nFuture Liquidity Bootstrapping (New Chains)\n385,000,000\n38.5%\nLiquidity on new chains\n\n\nEvent-Based Emission (Rewards)\n250,000,000\n25%\nEvent-based\n\n\nPassive Staking\n25,000,000\n2.5%\nStaking rewards\n\n\nTeam Budget\n105,000,000\n10.5%\n48-Months vested\n\n\nTreasury\n105,000,000\n10.5%\n48-Months vested\n\n\nErgo Foundation\n30,000,000\n3%\n48-Months vested"
+    },
+    {
+      "heading": "Funding#",
+      "content": "Rosen Bridge is entirely self-funded, with no private sales, venture capital, or SAFT agreements involved, with all contracts being financed out of pocket as there is no emission yet. The core team consists of 6 main developers.\nInitial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP. There were no bots or front-running involved.\nWe collaborated with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.\nWe have successfully completed and received funds from milestone 3 and have submitted milestone 4 for F10 funding."
+    },
+    {
+      "heading": "Why is the RSN token needed?#",
+      "content": "Capital Formation. Development has costs. Also need to form liquidity on the market.\nCreates incentives (event-based emission).\nSee this answer from Armeanio in the Weekly Update & AMA - December 14th 2023."
+    }
+  ],
+  "qa_pairs": []
+}

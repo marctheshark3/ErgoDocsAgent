@@ -1,0 +1,72 @@
+{
+  "title": "Roadmaps - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/protocol/scaling/scaling-roadmap/",
+  "summary": "Join our discussions on scaling on Telegram or #layer2 on discord. We welcome all insights and contributions. With the successful integration of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping in the pruned full node, our focus has now shifted towards optimizing this implementation. We are also exploring ways to further increase block limits for miners, given the live status of the pruned full node. Summarised from Kushti, 7 Aug, 2023",
+  "keywords": [
+    "discussion",
+    "telegram",
+    "layer2",
+    "discord",
+    "insight",
+    "contribution",
+    "integration",
+    "utxo",
+    "snapshot",
+    "proofs",
+    "proof",
+    "work",
+    "nipopows",
+    "bootstrapping",
+    "node",
+    "focus",
+    "implementation",
+    "block",
+    "limit",
+    "miner",
+    "status",
+    "kushti"
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Scaling Roadmap#",
+      "content": "Join our discussions on scaling on Telegram or #layer2 on discord. We welcome all insights and contributions."
+    },
+    {
+      "heading": "Current Focus#",
+      "content": "With the successful integration of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping in the pruned full node, our focus has now shifted towards optimizing this implementation. We are also exploring ways to further increase block limits for miners, given the live status of the pruned full node."
+    },
+    {
+      "heading": "Recent Developments#",
+      "content": "(TBA) Planning for Node V6 & scalability improvements\n(WIP) Development of SPV Client\nPruned Full Node is now live\nRelease of Node V5\nGetBlok released the Plasma Library\nPlasma Tutorials have been published"
+    },
+    {
+      "heading": "Phase 1: Foundations#",
+      "content": "Start with the basic design of Ergo as digital gold (commodity money).\nIntroduce programmability features including:\nCrypto contracts\nStealth addresses\nArbitrarily complex signatures\nMixing schemes\nPosition Ergo as a basis for unstoppable, grassroots economies, serving as a decentralized central bank digital currency (CBDC) for the people."
+    },
+    {
+      "heading": "Phase 2: Initial Experiments#",
+      "content": "Conduct initial experiments to test functionality and user engagement.\nEvaluate the outcomes considering the initial motivations."
+    },
+    {
+      "heading": "Phase 3: Defining Adoption#",
+      "content": "Clarify the term \"adoption\" as it is often ambiguous in industry discussions.\nDevelop metrics or KPIs to measure adoption success."
+    },
+    {
+      "heading": "Phase 4: Scaling and Optimization#",
+      "content": "Peer-to-peer (P2P) level optimizations and rework.\nConsider pre-block commitments to transaction ordering (sub-blocks).\nAim to increase transactions per second (TPS) while maintaining security."
+    },
+    {
+      "heading": "Constraints for Scaling#",
+      "content": "Limitations include requirements for a flat P2P network running on commodity hardware.\nNo use of centralized or \"bankster\" data centers for scalability."
+    },
+    {
+      "heading": "Phase 5: Offloading Solutions#",
+      "content": "Propose options for offloading transactions to Layer 2 or sidechains, if not already implemented.\nIntroduce \"Know Your Algorithm\" KYA as a way to explain security in offloading options in a concise and understandable manner."
+    },
+    {
+      "heading": "Phase 6: Convergence#",
+      "content": "Multiple developments in scaling, optimization, and offloading are expected to converge, culminating in a comprehensive solution for widespread adoption.\nSummarised from Kushti, 7 Aug, 2023\n(Nov 22) A Scalability Plan for Ergo\n(Dec 21) Ergo protocol research and client development roadmap\n(Sep 21) Long-term vision for Ergo\n(Jul 21) Network congestion on Jul 10th, 2021\n(May 20) Protecting mempool from computationally heavy transactions\n(May 20) A Scalability Plan for Ergo"
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Termux (Digest) - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/node/install/node-android/termux-digest/",
+  "summary": "This guide details the recommended method for running an Ergo node on Android using Termux directly. This approach is best suited for the resource-efficient stateType=\"digest\" mode. Prerequisites: Steps: Refer back to the main Android guide for general tips, disk space clarification, and troubleshooting.",
+  "keywords": [
+    "guide",
+    "method",
+    "ergo",
+    "node",
+    "android",
+    "termux",
+    "approach",
+    "resource",
+    "mode",
+    "prerequisite",
+    "step",
+    "disk",
+    "space",
+    "clarification",
+    "troubleshooting"
+  ],
+  "sections": [
+    {
+      "heading": "Android Node: Direct Termux Setup (Digest Mode)#",
+      "content": "This guide details the recommended method for running an Ergo node on Android using Termux directly. This approach is best suited for the resource-efficient stateType=\"digest\" mode.\nPrerequisites:\nAndroid device meeting the requirements.\nTermux installed from F-Droid (see main Android guide).\nSteps:\nUpdate Termux Packages:\nOpen Termux and run:\n    pkg update && pkg upgrade -y\n\nAnswer default prompts if asked.\n\n\nInstall Dependencies:\nInstall Java (OpenJDK 17 recommended) and wget:\n    pkg install openjdk-17 wget -y\n\n\n\nDownload Ergo Node JAR:\nFor stateType=\"digest\", the standard Ergo node JAR (without -rocksdb suffix) is usually sufficient.\nUse wget to download the latest release:\n    # Get the URL for the latest standard JAR\nLATEST_JAR_URL=$(wget -qO- \"https://api.github.com/repos/ergoplatform/ergo/releases/latest\" | grep -o 'https://github.com/ergoplatform/ergo/releases/download/.*ergo-[0-9.]*\\.jar' | head -n 1)\n\n# Download it\necho \"Downloading latest Ergo node JAR from: $LATEST_JAR_URL\"\nwget -q --show-progress \"$LATEST_JAR_URL\" -O ergo.jar\n\n(Verify the downloaded URL or manually find the correct URL on the Ergo Releases page if the script fails).\n\n\nCreate Configuration File (ergo.conf):\nCreate the file using nano:\n    nano ergo.conf\n\nPaste the following configuration, suitable for mobile digest mode:\n    ergo {\n  node {\n    stateType = \"digest\"\n    blocksToKeep = 1440 // Keep ~1 day of full blocks (~500MB-1GB), adjust if needed\n    mining = false\n\n    # Enable faster bootstrapping (both recommended for flexibility)\n    nipopow.nipopowBootstrap = true\n    utxoBootstrap = true\n\n    # Optional: Adjust NiPoPoW parameters if using nipopowBootstrap\n    # nipopow.p2pNipopows = 2\n  }\n}\n\nscorex {\n  restApi {\n    # Set your desired API key hash (generate one if needed)\n    # Example hash for password \"hello\":\n    apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n  }\n  network {\n    # Optional: Add known reliable peers if discovery is slow\n    # ..."
+    }
+  ],
+  "qa_pairs": []
+}

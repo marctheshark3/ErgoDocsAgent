@@ -1,0 +1,22 @@
+{
+  "title": "Crowdfunding - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/uses/crowdfunding/",
+  "summary": "Crowdfunding for common infrastructure and tooling on the Ergo network is a way for users, developers, and miners to work together to fund and advance the network far into the future.",
+  "keywords": [
+    "infrastructure",
+    "tooling",
+    "ergo",
+    "network",
+    "user",
+    "developer",
+    "miner",
+    "future"
+  ],
+  "sections": [
+    {
+      "heading": "Crowdfunding#",
+      "content": "Crowdfunding for common infrastructure and tooling on the Ergo network is a way for users, developers, and miners to work together to fund and advance the network far into the future.\nWe already have crowdfunding on the Ergo blockchain via Ergo Raffle; this allows projects to host 'Raffles' with a prize percentage allocated to the lucky donor. \nErgoWell is a project meant to be used for investing in ventures trying to raise money through crowdfunding.\nErgoFund will eventually provide a more sophisticated crowdfunding experience, with contracts for campaigns with thousands of pledges and enable 'Self-Soverign DeFi'"
+    }
+  ],
+  "qa_pairs": []
+}

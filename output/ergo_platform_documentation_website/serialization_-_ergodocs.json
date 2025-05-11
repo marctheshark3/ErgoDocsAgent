@@ -1,0 +1,217 @@
+{
+  "title": "Serialization - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/scs/ergotree/serialization/",
+  "summary": "This page defines the binary format used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation. The terms of the ErgoTree language can be serialized into an array of bytes for storage in the Ergo blockchain (e.g., in the propositionBytes field of a Box). When the guarding script of a transaction's input box is validated, the propositionBytes array is deserialized into an ErgoTree Intermediate Representation (IR) (represented by the ErgoTree class in the reference implementation), which can then be evaluated. The serialization procedure is specified in general terms. The serialization format for ErgoTree types (specified by the SType class hierarchy) and expression nodes (specified by the Value class hierarchy) is defined in section 5.1 and Appendix C, respectively.",
+  "keywords": [
+    "page",
+    "format",
+    "ergotree",
+    "contract",
+    "store",
+    "wire",
+    "interoperation",
+    "term",
+    "language",
+    "array",
+    "byte",
+    "storage",
+    "ergo",
+    "blockchain",
+    "propositionbytes",
+    "field",
+    "guarding",
+    "script",
+    "transaction",
+    "input",
+    "intermediate",
+    "representation",
+    "class",
+    "reference",
+    "implementation",
+    "serialization",
+    "procedure",
+    "type",
+    "stype",
+    "hierarchy",
+    "expression",
+    "node",
+    "value",
+    "section",
+    "appendix",
+    "table",
+    "size",
+    "limit",
+    "deserialization",
+    "attack",
+    "name",
+    "number",
+    "stream",
+    "notation",
+    "bytes",
+    "datum",
+    "case",
+    "logic",
+    "pseudo",
+    "operator",
+    "specification",
+    "structure",
+    "slot",
+    "fragment",
+    "coll[byte",
+    "basis",
+    "tree",
+    "motivation",
+    "encoding",
+    "space",
+    "code",
+    "extension",
+    "range",
+    "schema",
+    "constructor",
+    "coll",
+    "option",
+    "operation",
+    "interval",
+    "domain",
+    "function",
+    "total",
+    "d\u00e2\u0088\u009712+r+112",
+    "index",
+    "argument",
+    "child",
+    "descent",
+    "parent",
+    "example",
+    "coll[(int",
+    "boolean",
+    "runtime",
+    "reification",
+    "data",
+    "descriptor",
+    "collection",
+    "item",
+    "content",
+    "object",
+    "tuple",
+    "integer",
+    "deserialize",
+    "component",
+    "leave",
+    "figure",
+    "groupelement",
+    "org.bouncycastle.math.ec.custom.sec",
+    "package",
+    "asn.1",
+    "point",
+    "compression",
+    "x9.62",
+    "sigmaprop",
+    "avltree",
+    "avltreedata.serializer",
+    "self",
+    "serializer",
+    "proposition",
+    "utxo",
+    "instance",
+    "level",
+    "interpretation",
+    "header",
+    "meaning",
+    "version",
+    "possibility",
+    "forkability",
+    "default",
+    "behavior",
+    "ergotreeserializer",
+    "consistency",
+    "inconsistency",
+    "exception",
+    "segregation",
+    "constant",
+    "constantplaceholder",
+    "placeholder"
+  ],
+  "sections": [
+    {
+      "heading": "Serialization#",
+      "content": "This page defines the binary format used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation."
+    },
+    {
+      "heading": "Overview#",
+      "content": "The terms of the ErgoTree language can be serialized into an array of bytes for storage in the Ergo blockchain (e.g., in the propositionBytes field of a Box).\nWhen the guarding script of a transaction's input box is validated, the propositionBytes array is deserialized into an ErgoTree Intermediate Representation (IR) (represented by the ErgoTree class in the reference implementation), which can then be evaluated.\nThe serialization procedure is specified in general terms. The serialization format for ErgoTree types (specified by the SType class hierarchy) and expression nodes (specified by the Value class hierarchy) is defined in section 5.1 and Appendix C, respectively.\nTable 1 shows the size limits checked during contract deserialization, which are important for resisting malicious script attacks."
+    },
+    {
+      "heading": "Table 1: Serialization limits#",
+      "content": "Constant\nValue\nDescription\n\n\n\n\nVLQ  max \n10\nMaximum size of VLQ encoded byte sequence (See VLQ formats E.1)\n\n\nT  max \n100\nMaximum size of serialized type term (see Type format 5.1)\n\n\nD  max \n4Kb\nMaximum size of serialized data instance (see Data format 5.2)\n\n\nC  max \n= T  max  + D  max \nMaximum size of serialized data instance (see Const format 5.3)\n\n\nExpr  max \n4Kb\nMaximum size of serialized ErgoTree term (see Expr format 5.4)\n\n\nErgoTree  max \n4Kb\nMaximum size of serialized ErgoTree contract (see ErgoTree format 5.5)\nAll the serialization formats used and defined throughout this section are listed in Table 2, which introduces a name for each format and shows the number of bytes each format may occupy in the byte stream."
+    },
+    {
+      "heading": "Table 2: Serialization formats#",
+      "content": "Format\n#bytes\nDescription\n\n\n\n\n\\(\\lst{Byte}\\)\n\\(1\\)\n8-bit signed two's-complement integer\n\n\n\\(\\lst{Short}\\)\n\\(2\\)\n16-bit signed two's-complement integer (big-endian)\n\n\n\\(\\lst{Int}\\)\n\\(4\\)\n32-bit signed two's-complement integer (big-endian)\n\n\n\\(\\lst{Long}\\)\n\\(8\\)\n64-bit signed two's-complement integer (big-endian)\n\n\n\\(\\lst{UByte}\\)\n\\(1\\)\n8-bit unsigned integer\n\n\n\\(\\lst{UShort}\\)\n\\(2\\)\n16-bit unsigned integer (big-endian)\n\n\n\\(\\lst{UInt}\\)\n\\(4\\)\n32-bit unsigned integer (big-endian)\n\n\n\\(\\lst{ULong}\\)\n\\(8\\)\n64-bit unsigned integer (big-endian)\n\n\n\\(\\lst{VLQ(UShort)}\\)\n\\([1..3]\\)\nEncoded unsigned \\(\\lst{Short}\\) value using VLQ.\n\n\n\\(\\lst{VLQ(UInt)}\\)\n\\([1..5]\\)\nEncoded unsigned 32-bit integer using VLQ.\n\n\n\\(\\lst{VLQ(ULong)}\\)\n\\([1..\\MaxVlqSize]\\)\nEncoded unsigned 64-bit integer using VLQ.\n\n\n\\(\\lst{Bits}\\)\n\\([1..\\MaxBits]\\)\nA collection of bits packed in a sequence of bytes.\n\n\n\\(\\lst{Bytes}\\)\n\\([1..\\MaxBytes]\\)\nA sequence of bytes, whose size is stored elsewhere or well-known.\n\n\n\\(\\lst{Type}\\)\n\\([1..\\MaxTypeSize]\\)\nSerialized type terms of \\(\\langname\\).\n\n\n\\(\\lst{Data}\\)\n\\([1..\\MaxDataSize]\\)\nSerialized data values of \\(\\langname\\).\n\n\n\\(\\lst{GroupElement}\\)\n\\(33\\)\nSerialized elements of elliptic curve group.\n\n\n\\(\\lst{SigmaProp}\\)\n\\([1..\\MaxSigmaProp]\\)\nSerialized sigma propositions.\n\n\n\\(\\lst{AvlTree}\\)\n\\(44\\)\nSerialized dynamic dictionary digest.\n\n\n\\(\\lst{Constant}\\)\n\\([1..\\MaxConstSize]\\)\nSerialized \\(\\langname\\) constants (values with types).\n\n\n\\(\\lst{Expr}\\)\n\\([1..\\MaxExprSize]\\)\nSerialized expression terms of \\(\\langname\\).\n\n\n\\(\\lst{ErgoTree}\\)\n\\([1..\\MaxErgoTreeSize]\\)\nSerialized instances of \\(\\langname\\) contracts.\nWe use the [1..n] notation when serialization may produce from 1 to n bytes (depending on the actual data).\nThe serialization format of ErgoTree is optimized for compact storage and rapid deserialization.\nIn many cases, the serialization procedure is data dependent and thus has branching logic.\nWe use a pseudo-language with operators like for, match, if, an..."
+    },
+    {
+      "heading": "Table 3: Serialization Notation#",
+      "content": "Notation\nDescription\n\n\n\n\n\\(\\Denot{T}\\) where \\(T\\) - type\nDenotes a set of values of type \\(T\\)\n\n\n\\(v \\in \\Denot{T}\\)\nThe value \\(v\\) belongs to the set \\(\\Denot{T}\\)\n\n\n\\(v : T\\)\nSame as \\(v \\in \\Denot{T}\\)\n\n\n\\(\\lst{match}\\) \\((t, v)\\)\nPattern match on pair \\((t, v)\\) where \\(t, v\\) - values\n\n\n\\(\\lst{with}\\) \\((Unit, v \\in \\Denot{Unit})\\)\nPattern case\n\n\n\\(\\lst{for}\\) i=1 \\(\\lst{to}\\) len  \\(~\\lst{serialize(}\\)v_i\\(\\lst{)}\\) \\ \\(\\lst{end for}\\)\nCall the given \\(\\lst{serialize}\\) function repeatedly. The output bytes of all invocations are concatenated and become the output of the \\(\\lst{for}\\) statement.\n\n\n\\(\\(\\lst{if}~\\)condition\\)~\\(\\lst{then}\\)\nSerialize one of the branches depending on the condition. The output bytes of the executed branch become the output of the \\(\\lst{if}\\) statement.\n\n\n\\(\\lst{serialize1(}\\)v_1$\\lst{)}\n\\lst{else}\nIn the next section, we describe how types (Int, Coll[Byte], etc.) are serialized; then, we define the serialization of typed data.\nThis will give us a basis to describe the serialization of Constant nodes of ErgoTree. After that, we will proceed to the serialization of arbitrary ErgoTree trees."
+    },
+    {
+      "heading": "Type Serialization#",
+      "content": "For the motivation behind this type of encoding, please see Appendix D.1."
+    },
+    {
+      "heading": "Distribution of type codes#",
+      "content": "The whole space of 256 one-byte codes is divided, as shown in Table 4."
+    },
+    {
+      "heading": "Table 4: Distribution of type codes between Data and Function types#",
+      "content": "Value/Interval\nDistribution\n\n\n\n\n\\(\\lst{0x00}\\)\nspecial value to represent undefined type (\\(\\lst{NoType}\\) in \\(\\ASDag\\))\n\n\n\\(\\lst{0x01 - 0x6F(111)}\\)\ndata types including primitive types, arrays, options aka nullable types, classes (in future), 111 = 255 - 144 different codes\n\n\n\\(\\lst{0x70(112) - 0xFF(255)}\\)\nfunction types \\(\\lst{T1 => T2}\\), 144 = 12 x 12 different codes~\\footnote{Note that the function types are never serialized in version 1 of the Ergo protocol, this encoding is reserved for future development of the protocol.}"
+    },
+    {
+      "heading": "Encoding of Data Types#",
+      "content": "There are eight different values for embeddable types, and three more are reserved for future extensions. Each embeddable type has a type code in the range 1,...,11 as shown in Table 5."
+    },
+    {
+      "heading": "Table 5: Embeddable Types#",
+      "content": "Code\nType\n\n\n\n\n1\nBoolean\n\n\n2\nByte\n\n\n3\nShort (16-bit)\n\n\n4\nInt (32 bit)\n\n\n5\nLong (64-bit)\n\n\n6\nBigInt (represented by java.math.BigInteger)\n\n\n7\nGroupElement (represented by org.bouncycastle.math.ec.ECPoint)\n\n\n8\nSigmaProp\n\n\n9\nreserved for Char\n\n\n10\nreserved\n\n\n11\nreserved"
+    },
+    {
+      "heading": "Table 6: Code Ranges of Data Types#",
+      "content": "Interval\nConstructor\nDescription\n\n\n\n\n0x01 - 0x0B(11)\n\nembeddable types (including 3 reserved)\n\n\n0x0C(12)\nColl[_]\n\n\n\n0x0D(13) - 0x17(23)\nColl[_]\nCollection of embeddable types (Coll[Byte], Coll[Int], etc.)\n\n\n0x18(24)\nColl[Coll[_]]\nNested collection of non-embeddable types (Coll[Coll[(Int,Boolean)]])\n\n\n0x19(25) - 0x23(35)\nColl[Coll[_]]\nNested collection of embeddable types (Coll[Coll[Byte]], Coll[Coll[Int]])\n\n\n0x24(36)\nOption[_]\nOption of non-embeddable type (Option[(Int, Byte)])\n\n\n0x25(37) - 0x2F(47)\nOption[_]\nOption of embeddable type (Option[Int])\n\n\n0x30(48)\nOption[Coll[_]]\nOption of Coll of non-embeddable type (Option[Coll[(Int, Boolean)]])\n\n\n0x31(49) - 0x3B(59)\nOption[Coll[_]]\nOption of Coll of embeddable type (Option[Coll[Int]])\n\n\n0x3C(60)\n(,)\nPair of non-embeddable types (((Int, Byte), (Boolean,Box)), etc.)\n\n\n0x3D(61) - 0x47(71)\n(_, Int)\nPair of types where first is embeddable ((_, Int))\n\n\n0x48(72)\n(,,_)\nTriple of types\n\n\n0x49(73) - 0x53(83)\n(Int, _)\nPair of types where second is embeddable ((Int, _))\n\n\n0x54(84)\n(,,,)\nQuadruple of types\n\n\n0x55(85) - 0x5F(95)\n(_, _)\nSymmetric pair of embeddable types ((Int, Int), (Byte,Byte), etc.)\n\n\n0x60(96)\n(,...,)\nTuple type with more than 4 items (Int, Byte, Box, Boolean, Int)\n\n\n0x61(97)\nAny\nAny type\n\n\n0x62(98)\nUnit\nUnit type\n\n\n0x63(99)\nBox\nBox type\n\n\n0x64(100)\nAvlTree\nAvlTree type\n\n\n0x65(101)\nContext\nContext type\n\n\n0x66(102)\n\nreserved for String\n\n\n0x67(103)\n\nreserved for TypeVar\n\n\n0x68(104)\nHeader\nHeader type\n\n\n0x69(105)\nPreHeader\nPreHeader type\n\n\n0x6A(106)\nGlobal\nGlobal type\n\n\n0x6B(107)-0x6E(110)\n\nreserved for future use\n\n\n0x6F(111)\n\nReserved for future Class type (e.g. user-defined types)\nWe use the encoding schema defined below for each type constructor, like Coll or Option.\nA type constructor has an associated base code which is a multiple of 12 \n(e.g., 12 for Coll[_], 24 for Coll[Coll[_]], etc.). \n\n\nThe base code can be added to the embeddable type code to produce the code of the constructed type. \nFor example, 12 + 1 ..."
+    },
+    {
+      "heading": "Encoding of Function Types#",
+      "content": "We use 12 different values for both domain and range types of functions.\nThis gives us 144 (12\u00e2\u0088\u009712) function types in total and allows us to represent 121 (11\u00e2\u0088\u009711) functions over primitive types using just a single byte.\nEach code F in the range of function types (i.e., F \u00e2\u0088\u0088 {112, . . . , 255}) can be represented as F = D\u00e2\u0088\u009712+R+112, where D, R \u00e2\u0088\u0088 {0, . . . , 11} are the indices of domain and range types correspondingly, and 112 is the first code in the interval of function types.\nIf D = 0, the domain type is not embeddable, and recursive descent is necessary to write/read the domain type.\nIf R = 0, then the range type is not embeddable, and recursive descent is necessary to write/read the range type."
+    },
+    {
+      "heading": "Recursive Descent#",
+      "content": "When an argument of a type constructor is not a primitive type, we fall back to the simple encoding schema. In this case, we emit the separate code for the type constructor according to the table above and descend recursively to every child node of the type tree.\nWe perform this descent only for those children whose code cannot be embedded in the parent code.\nFor example, serialization of Coll[(Int,Boolean)] proceeds as follows:\nEmit 0x0C because the element type of the collection is not embeddable.\nRecursively serialize (Int, Boolean).\nEmit 0x41(=0x3D+4) because the first type of the pair is embeddable, and its code is 4.\nRecursively serialize Boolean.\nEmit 0x02 - the code for the embeddable type Boolean.\nMore examples of type serialization are shown in Table 7.\nType\nD\nR\nSerialized Bytes\n#Bytes\nComments\n\n\n\n\nByte\n\n\n2\n1\nsimple embeddable type\n\n\nColl[Byte]\n\n\n12 + 2 = 14\n1\nembeddable type in Coll\n\n\nColl[Coll[Byte]]\n\n\n24 + 2 = 26\n1\nembeddable type in nested Coll\n\n\nOption[Byte]\n\n\n36 + 2 = 38\n1\nembeddable type in Option\n\n\nOption[Coll[Byte]]\n\n\n48 + 2 = 50\n1\nembeddable type in Coll nested in Option\n\n\n(Int,Int)\n\n\n84 + 4 = 88\n1\nsymmetric pair of embeddable type\n\n\nInt=>Boolean\n4\n1\n161 = 4*12+1+112\n1\nembeddable domain and range\n\n\n(Int,Int)=>Int\n0\n4\n115=0*12+4+112, 88\n2\nembeddable range, then symmetric pair\n\n\n(Int,Boolean)\n\n\n60 + 4, 1\n2\nInt embedded in pair, then Boolean\n\n\n(Int,Box)=>Boolean\n0\n1\n0*12+1+112, 60+4, 99\n3\nfunc with embedded range, then Int embedded, then Box"
+    },
+    {
+      "heading": "Data Serialization#",
+      "content": "In ErgoTree, all runtime data values have an associated type also available at runtime (this is called type reification).\nHowever, the serialization format separates data values from their type descriptors. This saves space when, for example, a collection of items is serialized. This is done so that a type tree can fully describe the contents of a typed data structure.\nFor example, having a typed data object d: (Int, Coll[Byte], Boolean), we can tell, by examining the structure of the type, that d is a tuple with three items; the first item contains a 32-bit integer, the second a collection of bytes, and the third a logical true/false value.\nTo serialize/deserialize typed data, we need to know its type descriptor (type tree). The data serialization procedure is recursive over the type tree and the corresponding sub-components of the data object. For primitive types (the leaves of the type tree), the format is fixed. The data values of ErgoTree types are serialized according to the predefined recursive function shown in Figure 5, which uses the notation from Table 3.\nFigure 5: Data serialization format"
+    },
+    {
+      "heading": "GroupElement serialization#",
+      "content": "A value of the GroupElement type is represented in the reference implementation using the SecP256K1Point class of the org.bouncycastle.math.ec.custom.sec package and serialized using ASN.1 encoding.\nDifferent encodings are considered during deserialization, including point compression for Fp (see X9.62 sec. 4.2.1 pg. 17).\nFigure 6: GroupElement serialization format"
+    },
+    {
+      "heading": "SigmaProp serialization#",
+      "content": "In the reference implementation, values of the SigmaProp type are serialized using SigmaBoolean.serializer."
+    },
+    {
+      "heading": "AvlTree serialization#",
+      "content": "In the reference implementation, values of the AvlTree type are serialized using AvlTreeData.serializer.\nFigure 8: AvlTree serialization format"
+    },
+    {
+      "heading": "Constant Serialization#",
+      "content": "The Constant format is simple and self-sufficient to represent any data value. Serialized bytes in the Constant format contain both the type bytes and the data bytes; thus, they can be stored or transferred over the wire and then later unambiguously interpreted. The format is shown in Figure 9.\nFigure 9: Constant serialization format\nTo parse the Constant format, first, use the type serializer from section 5.1 and read the type. Then use the parsed type as an argument of the data serializer given in section 5.2."
+    },
+    {
+      "heading": "Expression Serialization#",
+      "content": "Expressions of ErgoTree are serialized as tree data structures using the recursive procedure described in Figure 10. Expression nodes are represented in the reference implementation using the Value class hierarchy."
+    },
+    {
+      "heading": "ErgoTree serialization#",
+      "content": "The ErgoTree propositions stored in UTXO boxes are represented in the reference implementation using the ErgoTree class. The class is serialized using the ErgoTree serialization format shown in Figure 11.\nFigure 11: ErgoTree serialization format\nSerialized instances of the ErgoTree class are self-sufficient and can be stored and passed around.\nThe ErgoTree format defines the top-level serialization format of ErgoTree scripts. The interpretation of the byte array depends on the first header byte(s), which use VLQ encoding (up to 30 bits are reserved). We currently define meaning only for the first byte, which may be extended in future versions. The meaning of the bits is shown in Figure 12.\nFigure 12: ErgoTree header bits\nCurrently, we don\u00e2\u0080\u0099t specify interpretation for the second and other bytes of the header. We reserve the possibility to extend the header by using Bit 7 == 1 and chaining additional bytes as in VLQ.\nOnce new bytes are required, a new language version should be created and implemented via soft-forkability. That new language will give an interpretation for the new bytes.\nThe default behavior of ErgoTreeSerializer is to preserve the original structure of ErgoTree and check consistency. In case of any inconsistency, the serializer throws an exception.\nIf the constant segregation bit (Bit 4) is set to 1, then the constants collection contains the constants for which there may be ConstantPlaceholder nodes in the tree. However, if the constant segregation bit is 0, then the constants collection should be empty, and any placeholder in the tree will lead to an exception."
+    }
+  ],
+  "qa_pairs": []
+}

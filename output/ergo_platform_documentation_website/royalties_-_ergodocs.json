@@ -1,0 +1,41 @@
+{
+  "title": "Royalties - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/tokens/nfts/royalties/",
+  "summary": "Ergo's royalty system is integrated into the minting metadata and can be accessed via smart contracts. This integration allows marketplaces to include royalties in their sale contracts, a feature utilized by both Sky Harbor and Auction House. Consequently, any listings on a marketplace that respects royalties will have the royalties embedded in their smart contract, preventing them from being bypassed. Not enforced by the protocol However, it's important to note that NFTs can be transferred directly from one party to another, similar to transferring across addresses. In these cases, or in private sales, the decision to honor the royalties lies with the involved parties.",
+  "keywords": [
+    "ergo",
+    "royalty",
+    "system",
+    "metadata",
+    "contract",
+    "integration",
+    "marketplace",
+    "sale",
+    "feature",
+    "harbor",
+    "auction",
+    "house",
+    "listing",
+    "protocol",
+    "party",
+    "address",
+    "case",
+    "decision",
+    "auctionhouse",
+    "ability",
+    "recipient",
+    "collaboration",
+    "artist"
+  ],
+  "sections": [
+    {
+      "heading": "Royalties#",
+      "content": "Ergo's royalty system is integrated into the minting metadata and can be accessed via smart contracts. This integration allows marketplaces to include royalties in their sale contracts, a feature utilized by both Sky Harbor and Auction House. Consequently, any listings on a marketplace that respects royalties will have the royalties embedded in their smart contract, preventing them from being bypassed.\nNot enforced by the protocol\nHowever, it's important to note that NFTs can be transferred directly from one party to another, similar to transferring across addresses. In these cases, or in private sales, the decision to honor the royalties lies with the involved parties.\nThe upcoming AuctionHouse V3 will introduce the ability to support multiple recipients for royalties. This feature will facilitate collaborations among artists."
+    },
+    {
+      "heading": "Resources#",
+      "content": "EIP-0022: Auction Contract\nEIP-0024: Artwork Contract"
+    }
+  ],
+  "qa_pairs": []
+}

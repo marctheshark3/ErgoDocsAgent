@@ -1,0 +1,31 @@
+{
+  "title": "Ergo Platform documentation",
+  "source_url": "docs/README.md",
+  "summary": "Ergo Platform documentation\n=======================================\n\n[docs.ergoplatform.com](https://docs.ergoplatform.com/)\n\n## Contributing\n\nPlease submit a pull request. ## Running locally\n\nInstall required packages\n\n```\npython -m pip install -r requirements.txt\n```\n\n```\nmkdocs serve\n```",
+  "keywords": [
+    "ergo",
+    "platform",
+    "documentation",
+    "pull",
+    "request",
+    "package",
+    "python",
+    "requirements.txt",
+    "mkdoc"
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Platform documentation",
+      "content": "docs.ergoplatform.com"
+    },
+    {
+      "heading": "Contributing",
+      "content": "Please submit a pull request."
+    },
+    {
+      "heading": "Running locally",
+      "content": "Install required packages\npython -m pip install -r requirements.txt\nmkdocs serve"
+    }
+  ],
+  "qa_pairs": []
+}

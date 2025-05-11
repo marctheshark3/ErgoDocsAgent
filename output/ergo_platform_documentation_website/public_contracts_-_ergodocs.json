@@ -1,0 +1,59 @@
+{
+  "title": "Public Contracts - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/scs/contracts/",
+  "summary": "The ergo-contracts repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling.",
+  "keywords": [
+    "ergo",
+    "contract",
+    "repository",
+    "source",
+    "code",
+    "compilation",
+    "testing",
+    "verification",
+    "tooling"
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Contracts#",
+      "content": "The ergo-contracts repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling.\nAssetsAtomicExchange.scala\nCrowdFundingContractVerification.scala\nDummyContractVerification.scala\nEdex.scala\nICOContractVerification.scala"
+    },
+    {
+      "heading": "ErgoScript Examples#",
+      "content": "Number\nDifficulty\nTitle\n\n\n\n\n1\nBeginner\nPin Lock Contract\n\n\n2\nIntermediate\nSingle-Chain Swap Contracts\n\n\n3\nStarter\nSimple Send\n\n\n4\nIntermediate\nDouble-Chain Swap Contracts\n\n\n5\nBeginner\nTimed Fund Contract\n\n\n6\nBeginner\nGrantor/Beneficiary Pin Lock Contract\n\n\n7\nBeginner\nEscrow Deposit Contract\n\n\n8\nExpert\nToken sales service contract\n\n\n9\nBeginner\nSelf-Replicating Sale Contract\n\n\n10\nIntermediate\nHeads or Tails game Contract\n\n\n11\nExpert\nStealth Address\n\n\n12\nExpert\nHeads or Tails game Contract with Parallelization"
+    },
+    {
+      "heading": "sigmastate-interpreter examples#",
+      "content": "IcoExample.scala\nMany more"
+    },
+    {
+      "heading": "Deployed Contracts#",
+      "content": "GuapSwap\nLilium\nPaideia\nErgoMixer\nRosen Bridge\nThz.FM\nEXLE\nSpectrum Finance\nPheonix Finance (Hodlcoin V2)\nSkyHarbor\nHodlbox\nSigmaO\nSigmaUSD \nErgo Raffle\nAuction Coin\nSigma Finance\nComet Lottery\nDuckpools\nergopad"
+    },
+    {
+      "heading": "EIPs#",
+      "content": "Babel Fees\nOracle Pools v2\nStealth Addresses\nAuction contract V2\nSigmaUSD Bank\nErgoFund"
+    },
+    {
+      "heading": "In Development#",
+      "content": "Dexy\nBitdomains\nErgoNames\nAnalog Ergo\nChaincash\nAnetaBTC\nLithos\nSigmaJoin\nTrade-In Contracts (BlitzTCG)"
+    },
+    {
+      "heading": "Misc#",
+      "content": "smartpooling-contracts\nergo-index\nSubpooling\nchain-name-service\nAgeUSD\nErgoGravity & ErgoNebula\nOracle Pools v0.4a\nNightOwl\nHodlcoin (V1?)"
+    },
+    {
+      "heading": "ToDo#",
+      "content": "single-tx-swap\nGluon\nPalmyra\non-chain swaps contracts"
+    },
+    {
+      "heading": "Resources#",
+      "content": "contract-testing provides a quick tutorial that may be useful for testing your contracts off-chain."
+    },
+    {
+      "heading": "Ergoforum#",
+      "content": "Offchain Bank operating at Layer 2\nDecentralised Grid Contract\nMarket-driven emission contracts\nInterest-Free Loan Contract"
+    }
+  ],
+  "qa_pairs": []
+}

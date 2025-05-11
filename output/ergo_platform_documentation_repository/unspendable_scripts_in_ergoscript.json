@@ -1,0 +1,42 @@
+{
+  "title": "Unspendable Scripts in ErgoScript",
+  "source_url": "docs/dev/scs/ergoscript/no-one-can-spend.md",
+  "summary": "# Unspendable Scripts in ErgoScript In contrast to the [previous examples](anyone-can-spend.md), ErgoScript can also create programs at the opposite end of the flexibility spectrum that always evaluate to `false`. Here's an example of such a script:\n\n```scala\ntrue && false  // Corresponds to address m3iBKr65o53izn\n```\n\nThe script in the example above results in an address to which funds can be sent, but not spent. These scripts are referred to as **no-one-can-spend scripts** due to this characteristic. It's crucial to remember not to send funds to these addresses as they cannot be retrieved.",
+  "keywords": [
+    "unspendable",
+    "scripts",
+    "ergoscript",
+    "contrast",
+    "examples](anyone",
+    "spend.md",
+    "program",
+    "flexibility",
+    "spectrum",
+    "example",
+    "script",
+    "false",
+    "correspond",
+    "result",
+    "address",
+    "fund",
+    "characteristic",
+    "ergo",
+    "concept",
+    "garbage",
+    "collection",
+    "storage",
+    "rent](rent.md",
+    "mechanism",
+    "blockchain",
+    "time",
+    "efficiency",
+    "system"
+  ],
+  "sections": [
+    {
+      "heading": "Unspendable Scripts in ErgoScript",
+      "content": "In contrast to the previous examples, ErgoScript can also create programs at the opposite end of the flexibility spectrum that always evaluate to false.\nHere's an example of such a script:\nscala\ntrue && false  // Corresponds to address m3iBKr65o53izn\nThe script in the example above results in an address to which funds can be sent, but not spent. These scripts are referred to as no-one-can-spend scripts due to this characteristic. It's crucial to remember not to send funds to these addresses as they cannot be retrieved.\nErgo features a concept known as 'garbage collection' or storage rent. This mechanism ensures that boxes, such as those produced by no-one-can-spend scripts, are eventually removed from the blockchain over time to maintain the efficiency of the system."
+    }
+  ],
+  "qa_pairs": []
+}

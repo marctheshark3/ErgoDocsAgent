@@ -1,0 +1,190 @@
+{
+  "title": "Data Model - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/data-model/",
+  "summary": "This document provides a comprehensive and in-depth exploration of Ergo's unique data model, based on the UTXO (Unspent Transaction Output) model, enhanced with powerful smart contract capabilities (eUTXO). Ergo represents a significant advancement in blockchain computational models, extending the traditional Unspent Transaction Output (UTXO) paradigm through its enhanced eUTXO (Extended UTXO) model. Unlike conventional blockchain architectures, Ergo's model introduces: A solid understanding of the blockchain structure lays the groundwork for exploring Ergo\u00e2\u0080\u0099s data model. Ergo blocks contain critical metadata, transactions, and proofs. At the core of Ergo's data model is the \"Box,\" which is Ergo's implementation and extension of the UTXO (Unspent Transaction Output) concept.",
+  "keywords": [
+    "document",
+    "depth",
+    "exploration",
+    "ergo",
+    "data",
+    "model",
+    "utxo",
+    "unspent",
+    "transaction",
+    "output",
+    "contract",
+    "capability",
+    "eutxo",
+    "advancement",
+    "paradigm",
+    "extended",
+    "blockchain",
+    "architecture",
+    "introduce",
+    "understanding",
+    "structure",
+    "groundwork",
+    "ergo\u00e2\u0080\u0099s",
+    "datum",
+    "block",
+    "metadata",
+    "proof",
+    "core",
+    "implementation",
+    "extension",
+    "concept",
+    "coin",
+    "boxes",
+    "role",
+    "value",
+    "feature",
+    "state",
+    "unit",
+    "creation",
+    "lifecycle",
+    "detail",
+    "page",
+    "typed",
+    "register",
+    "purpose",
+    "potential",
+    "spending",
+    "condition",
+    "logic",
+    "ergoscript",
+    "modeling",
+    "overview",
+    "tracker",
+    "container",
+    "interaction",
+    "integrity",
+    "efficiency",
+    "evolution",
+    "ecosystem",
+    "asset",
+    "token",
+    "address",
+    "system",
+    "security",
+    "privacy",
+    "flexibility",
+    "protocol",
+    "user",
+    "wallet",
+    "application",
+    "design",
+    "validation",
+    "approach",
+    "information",
+    "scaling",
+    "section"
+  ],
+  "sections": [
+    {
+      "heading": "The Ergo Data Model#",
+      "content": "This document provides a comprehensive and in-depth exploration of Ergo's unique data model, based on the UTXO (Unspent Transaction Output) model, enhanced with powerful smart contract capabilities (eUTXO)."
+    },
+    {
+      "heading": "1.1 Computational Model Evolution & UTXO vs. Account Model#",
+      "content": "Ergo represents a significant advancement in blockchain computational models, extending the traditional Unspent Transaction Output (UTXO) paradigm through its enhanced eUTXO (Extended UTXO) model. Unlike conventional blockchain architectures, Ergo's model introduces:\nProgrammable State Transitions: Enabling complex computational logic within transaction outputs. This contrasts with the account-based model used in other blockchains (like Ethereum), where state is globally mutable. See UTXO vs Account Model Comparison for a comparison of Ergo's model in terms of parallelism, privacy, and scalability.\nStateless Verification: Allowing efficient validation without maintaining complete blockchain state, facilitated by technologies like NIPoPoWs.\nDeterministic Execution: Ensuring predictable and verifiable transaction outcomes."
+    },
+    {
+      "heading": "1.2 Fundamental Design Principles#",
+      "content": "Computational Completeness: Supporting Turing-complete smart contract execution within strict cryptographic constraints via multi-stage contracts.\nCryptographic Composability: Enabling complex cryptographic protocols through Sigma Protocols.\nScalable State Management: Designing a model that supports parallel transaction processing and efficient state verification."
+    },
+    {
+      "heading": "2. Blockchain Structure: Components and Function#",
+      "content": "A solid understanding of the blockchain structure lays the groundwork for exploring Ergo\u00e2\u0080\u0099s data model. Ergo blocks contain critical metadata, transactions, and proofs."
+    },
+    {
+      "heading": "2.1 Block Components#",
+      "content": "Block Overview: Comprehensive introduction to block structure in Ergo, detailing how blocks aggregate transactions, references, and proofs.\nBlock Header: Detailed examination of block header components, which include references to previous blocks, difficulty, and other crucial metadata.\nBlock Transactions: Understanding how transactions are organized within a block to form the ledger state.\nAD Proofs: Authenticated Data Proofs enable efficient stateless client verification by providing cryptographic proofs of state transitions.\nExtension Section: An exploration of Ergo\u00e2\u0080\u0099s flexible data storage section that can hold additional metadata and information beyond basic transactions."
+    },
+    {
+      "heading": "3. Boxes: Foundational State Units#",
+      "content": "At the core of Ergo's data model is the \"Box,\" which is Ergo's implementation and extension of the UTXO (Unspent Transaction Output) concept. While traditional UTXOs simply track unspent coins, Ergo's Boxes enhance this model with additional programmable capabilities."
+    },
+    {
+      "heading": "3.1 The Box Concept#",
+      "content": "A Box is essentially a \"smart UTXO\" - it serves the same role as a UTXO in tracking unspent value, but extends this with sophisticated computational features. Like a UTXO, a Box is created when value is sent in a transaction and is consumed (spent) when that value is transferred elsewhere. However, Boxes add the following capabilities that go beyond basic UTXOs:\nImmutable State: Each box represents an atomic, immutable state unit that cannot be modified after creation. (Lifecycle details might be added later or linked if a dedicated page exists).\n\n\nTyped Registers: Boxes contain 10 registers (R0-R9) with specific purposes and rich computational potential:\n\nR0: Monetary Value (in nanoERGs)\nR1: Protection Script (Smart Contract)\nR2: Assets/Tokens\nR3: Creation Details\nR4-R9: Flexible, Typed Custom Data Storage\nSupports multiple data types: Int, Long, BigInt, GroupElement, Coll[Byte]\nCan store complex structures and collections\nDensely packed with type-safe access\n\n\n\n\n\nProgrammable Spending Conditions: Each box specifies precise conditions under which it can be spent, enabling complex logic through ErgoScript. See Box Modeling and Box Overview for detailed exploration.\nBy transforming UTXOs from simple value trackers to programmable state containers, Ergo enables more expressive and flexible blockchain interactions while maintaining cryptographic integrity and computational efficiency."
+    },
+    {
+      "heading": "4. Transactions: Engines of State Change#",
+      "content": "Transactions define how boxes are created, transformed, and consumed, and are central to Ergo\u00e2\u0080\u0099s dynamic state evolution."
+    },
+    {
+      "heading": "4.1 Transaction Foundations#",
+      "content": "Transaction Overview: Fundamental principles of how transactions work in Ergo.\nTransaction Composition: Detailed guide to constructing complex transactions off-chain before submitting them on-chain.\nTransaction Format: Technical specification of transaction structure, ensuring interoperability and standardization."
+    },
+    {
+      "heading": "4.2 Advanced Transaction Mechanisms#",
+      "content": "Chained Transactions: Explore how sequentially dependent transactions can be composed.\nMerkle Tree in Transactions: Understanding how Merkle trees provide data integrity and facilitate efficient proofs.\nTransaction Signing and Backend Signing: Cryptographic principles and implementations for authenticating transactions.\nTransaction Validation: Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules."
+    },
+    {
+      "heading": "4.3 Specialized Transaction Features#",
+      "content": "Data Inputs (Read-Only Inputs): Access additional data in transactions without spending boxes.\nTransaction Fees: Understanding fee structures, ensuring that miners are incentivized.\nBabel Fees and Babel Fees Plugin: Innovative mechanisms allowing fees to be paid in alternative tokens."
+    },
+    {
+      "heading": "5. Assets and Tokens: Powering a Diverse Economy#",
+      "content": "Ergo supports a rich ecosystem of assets, from fungible tokens to NFTs, enabling complex economic models."
+    },
+    {
+      "heading": "5.1 Fungible Tokens#",
+      "content": "Token Basics: Introduction to tokens within the Ergo ecosystem and their fundamental characteristics.\nAsset Standard (EIP-4): Standard for creating and managing tokens in Ergo.\nToken Verification (EIP-21): Ensuring token authenticity and integrity."
+    },
+    {
+      "heading": "5.2 Non-Fungible Tokens (NFTs)#",
+      "content": "NFT Overview: Comprehensive introduction to NFTs on Ergo.\nNFT Creation: Guide to minting NFTs.\nNFT Versions (V1 vs V2): Comparison of different NFT implementation standards.\nOn-Chain NFTs: Storing NFT data directly on the blockchain.\nNFT Royalties: Mechanisms for continuous compensation to creators."
+    },
+    {
+      "heading": "5.3 Special Token Concepts#",
+      "content": "Perpetual Tokens: Tokens designed to exist indefinitely.\nToken Burning: Permanently removing tokens from circulation.\nSingletons: Unique tokens with special properties.\nAuction Contract (EIP-22): Standard auction contract implementation details.\nArtwork Contract (EIP-24): Specialized standard for managing digital artwork tokens."
+    },
+    {
+      "heading": "6. Addressing and Identity#",
+      "content": "Ergo uses an address system that ensures security, privacy, and flexibility.\nAddress Basics: Fundamental concepts of Ergo addresses, including encoding, format, and usage.\nAddress Types: Detailed overview of Pay-to-Public-Key (P2PK), Pay-to-Script-Hash (P2SH), and Pay-to-Script (P2S) address types.\nAddress Validation: Methods and best practices for validating Ergo addresses, including checksum verification and format validation."
+    },
+    {
+      "heading": "7. Payment Standards and Protocols#",
+      "content": "Ergo defines protocols to streamline user interactions with wallets and applications.\nErgoPay Protocol (EIP-20): Interaction protocol for mobile wallets and dApps.\nPayment Request URI (EIP-25): Standard format for payment requests.\nProxy Contracts (EIP-17): Mechanisms to manage funds and logic via intermediary contracts."
+    },
+    {
+      "heading": "8. Cryptographic Foundations#",
+      "content": "Ergo\u00e2\u0080\u0099s cryptographic design ensures robust security, privacy, and flexibility."
+    },
+    {
+      "heading": "8.1 Sigma Protocols#",
+      "content": "Non-interactive Zero-Knowledge Proofs: Private transaction verification without revealing sensitive data.\nFlexible Signature Schemes: Supporting multiple signature types via Sigma Protocols.\nPrivacy-Preserving Mechanisms: Advanced features to protect user privacy."
+    },
+    {
+      "heading": "8.2 Cryptographic Primitives#",
+      "content": "Discrete Logarithm Proofs: Foundational to signature verification (Schnorr).\nRing Signatures: Enhanced privacy through signer ambiguity.\nThreshold Signatures: Enabling multi-party computational scenarios."
+    },
+    {
+      "heading": "9.1 Transaction Validation and Script Execution#",
+      "content": "Ergo employs a robust, stateless transaction validation approach:\nTransaction Construction & Signing: See Transaction Composition, Transaction Format, and Signing.\nOn-Chain Verification: Transaction Validation and Merkle Proofs.\nScript Validation: Detailed in ErgoTree Script Validation and the ErgoScript Language Specification.\nExecution Environment: Access blockchain state via Context Variables, ensure deterministic evaluation, and apply [cost constraints]](jitc.md)."
+    },
+    {
+      "heading": "9.2 Consensus Algorithm & Storage Rent#",
+      "content": "Difficulty Adjustment: A dynamic mechanism that adjusts mining difficulty every epoch to maintain a target block time of approximately 2 minutes, ensuring network stability and predictable block creation despite fluctuations in mining power.\nStorage Rent Mechanism: A novel approach that prevents blockchain bloat and ensures long-term sustainability by requiring users to pay rent for storing data on-chain. See the linked page and the detailed guide for implementation, fees, and economic incentives."
+    },
+    {
+      "heading": "10. Data Structures and Performance#",
+      "content": "General Data Structures\nProof of Proof-of-Work (PoPow): Consensus mechanism enhancement for light clients, related to NIPoPoWs."
+    },
+    {
+      "heading": "10.1 Authenticated Data Structures#",
+      "content": "Merkle Trees for efficient state commitment.\nMerkle Batch Proof\nMerkle Extension\nMerkle Light Proof\n\n\nAVL+ Trees for authenticated key-value storage.\nInterlink Vectors: Lightweight blockchain verification.\nAD Proofs: Supporting stateless clients."
+    },
+    {
+      "heading": "10.2 Scalability and Efficiency#",
+      "content": "Parallel transaction validation inherent in the eUTXO model.\nStateless validation reduces computational and storage overhead.\n[Just-in-time costing]](jitc.md) ensures resource use is always checked.\nFor more information see the scaling section."
+    },
+    {
+      "heading": "11.1 Multi-Stage Transactions#",
+      "content": "Multi-Stage Transactions: Understanding how to design and implement complex, multi-step transaction flows using the eUTXO model."
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Bootstrap an Oracle Pool - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/tutorials/oracle-bootstrap/",
+  "summary": "Let's say we have 5 operators. We want to keep consensus above \u00bd, so it means we can start a pool of 9 oracles (oracle_tokens:quantity: 9, ballot_tokens:quantity: 9), with 5 oracles threshold for minimum data points (min_data_points: 5) and voting (min_votes: 5). This way, we'll have 3 vacant oracles places in case someone wants to join later. Generate an oracle config file from the default template with: and set the required parameters: Run I made the following changes: So in the end, it looked like - https://gist.github.com/greenhat/2c6135462fba48773196ad45dd6c7404 (old version, before oracle/pool split configs)",
+  "keywords": [
+    "operator",
+    "consensus",
+    "pool",
+    "oracle",
+    "oracle_tokens",
+    "quantity",
+    "ballot_token",
+    "threshold",
+    "data",
+    "point",
+    "min_data_point",
+    "place",
+    "case",
+    "config",
+    "file",
+    "default",
+    "template",
+    "parameter",
+    "change",
+    "https://gist.github.com/greenhat/2c6135462fba48773196ad45dd6c7404",
+    "version",
+    "split",
+    "token",
+    "update",
+    "reward",
+    "ballot",
+    "address",
+    "https://github.com/ergoplatform/oracle-core/blob/develop/scripts/send_new_oracle.sh",
+    "task",
+    "following",
+    "refresh"
+  ],
+  "sections": [
+    {
+      "heading": "Plan pool parameters#",
+      "content": "Let's say we have 5 operators. We want to keep consensus above \u00bd, so it means we can start a pool of 9 oracles (oracle_tokens:quantity: 9, ballot_tokens:quantity: 9), with 5 oracles threshold for minimum data points (min_data_points: 5) and voting (min_votes: 5). This way, we'll have 3 vacant oracles places in case someone wants to join later."
+    },
+    {
+      "heading": "Step 1. Generate a bootstrap config template#",
+      "content": "Generate an oracle config file from the default template with:\noracle-core generate-oracle-config\nand set the required parameters:\noracle_address to my node's wallet address (make sure you have coins).\nnode_url, node_api_key - node connection parameters;\nRun\noracle-core bootstrap --generate-config-template bootstrap.yaml"
+    },
+    {
+      "heading": "Step 2. Edit your bootstrap config template#",
+      "content": "I made the following changes:\nSet the parameters described in Plan pool parameters\nName the tokens in tokens_to_mint section.\nSet data point source data_point_source: NanoErgXau\nSo in the end, it looked like - https://gist.github.com/greenhat/2c6135462fba48773196ad45dd6c7404 (old version, before oracle/pool split configs)"
+    },
+    {
+      "heading": "Step 3. Run bootstrap command#",
+      "content": "Run\noracle-core bootstrap bootstrap.yaml\nIt submitted the txs to mint the tokens and make pool, refresh, update boxes. Besides that, it created pool_config.yaml config file to run an oracle."
+    },
+    {
+      "heading": "Step 4. Invite other operators#",
+      "content": "To invite other operators, I'm sending one oracle, reward, and ballot tokens to the operator's oracle addresses. I'm using https://github.com/ergoplatform/oracle-core/blob/develop/scripts/send_new_oracle.sh for this task."
+    },
+    {
+      "heading": "Step 5. Start your oracle#",
+      "content": "I started my oracle with the following:\noracle-core run\nAnd it posted the first data point."
+    },
+    {
+      "heading": "Step 6. Send pool config to the operators#",
+      "content": "Besides the tokens the pool config file that you are running now should be sent as well. Send pool_config.yaml to the operators and ask them to start the oracle with\noracle-core run\nAfter they start their oracles keep an eye on your oracle log file and wait for refresh tx generated. It means your pool is running and the pool box was updated."
+    },
+    {
+      "heading": "References#",
+      "content": "How I bootsrapped an ERG/XAU pool on testnet"
+    }
+  ],
+  "qa_pairs": []
+}

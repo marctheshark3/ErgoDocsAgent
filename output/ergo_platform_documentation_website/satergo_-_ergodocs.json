@@ -1,0 +1,57 @@
+{
+  "title": "Satergo - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/wallet/satergo/",
+  "summary": "Explore the robust capabilities of Satergo, a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for those who wish to support network decentralization or prefer self-reliance. Embark on a visual journey to master Satergo with our in-depth video tutorial, accessible here. Satergo stands out as the sole wallet in the Ergo ecosystem that offers full node support, enabling users to actively participate in the network or opt for a remote node connection for convenience. Satergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices. It operates independently, requiring no additional software, making it a versatile choice for users on the go.",
+  "keywords": [
+    "capability",
+    "satergo",
+    "desktop",
+    "wallet",
+    "ergo",
+    "ecosystem",
+    "node",
+    "network",
+    "decentralization",
+    "self",
+    "reliance",
+    "embark",
+    "journey",
+    "depth",
+    "video",
+    "tutorial",
+    "support",
+    "user",
+    "connection",
+    "convenience",
+    "feature",
+    "experience",
+    "device",
+    "software",
+    "choice",
+    "operating",
+    "system"
+  ],
+  "sections": [
+    {
+      "heading": "Satergo Wallet#",
+      "content": "Explore the robust capabilities of Satergo, a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for those who wish to support network decentralization or prefer self-reliance.\nComprehensive Video Guide\nEmbark on a visual journey to master Satergo with our in-depth video tutorial, accessible here."
+    },
+    {
+      "heading": "Empowering Users with Full Node Support#",
+      "content": "Satergo stands out as the sole wallet in the Ergo ecosystem that offers full node support, enabling users to actively participate in the network or opt for a remote node connection for convenience."
+    },
+    {
+      "heading": "Lightweight and Feature-Rich#",
+      "content": "Satergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices. It operates independently, requiring no additional software, making it a versatile choice for users on the go."
+    },
+    {
+      "heading": "Universal Compatibility#",
+      "content": "Satergo's cross-platform support ensures a consistent and reliable experience across all major desktop operating systems."
+    },
+    {
+      "heading": "Connect with Satergo#",
+      "content": "Discover more on the Satergo Website\nFollow the latest updates on Twitter\nJoin the community on Telegram\nContribute or explore the code on GitHub\nLearn more about the Satergo Offline Vault, an Android application that securely stores your encrypted seed phrase and connects with desktops via Bluetooth for transaction safety."
+    }
+  ],
+  "qa_pairs": []
+}

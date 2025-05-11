@@ -1,0 +1,76 @@
+{
+  "title": "Starter Tutorial - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/basics/",
+  "summary": "This tutorial will teach you the very basics of interacting with the ergo blockchain to receive\nand send funds for multiple programming languages. For more in-depth information on the different\nSDKs available, please refer to their specific pages. Import the SDK for the build system you are using in your project. Ergo Platform uses public key cryptography to ensure that every transaction is secure: every personal wallet has a keypair consisting of a public key and a secret key. The public key is always safe to share \u00e2\u0080\u0094 other people need it to verify that you authorized a transaction.",
+  "keywords": [
+    "tutorial",
+    "basic",
+    "ergo",
+    "blockchain",
+    "fund",
+    "programming",
+    "language",
+    "depth",
+    "information",
+    "page",
+    "build",
+    "system",
+    "project",
+    "platform",
+    "cryptography",
+    "transaction",
+    "wallet",
+    "keypair",
+    "people",
+    "email",
+    "address",
+    "access",
+    "password",
+    "word",
+    "seed",
+    "phrase",
+    "master",
+    "number",
+    "index",
+    "pair",
+    "string",
+    "representation",
+    "mnemonic",
+    "payment",
+    "bitcoin",
+    "model",
+    "input",
+    "output",
+    "step",
+    "level",
+    "method",
+    "task",
+    "payer",
+    "asset",
+    "explorer",
+    "interface"
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Platform Basic Starter Tutorial#",
+      "content": "This tutorial will teach you the very basics of interacting with the ergo blockchain to receive\nand send funds for multiple programming languages. For more in-depth information on the different\nSDKs available, please refer to their specific pages."
+    },
+    {
+      "heading": "Import the SDK#",
+      "content": "Import the SDK for the build system you are using in your project.\nGradleMavenSBTnpmyarnpip\n\n\n implementation (\"org.ergoplatform:ergo-appkit_2.12:5.0.0\")\n\n\n\n<dependency>\n    <groupId>org.ergoplatform</groupId>\n    <artifactId>ergo-appkit_2.12</artifactId>\n    <version>5.0.0</version>\n</dependency>\n\n\n\ntbd\n\n\n\n  npm install @fleet-sdk/core    \n\n\n\n  yarn install @fleet-sdk/core    \n\n\n\n  pip install ergpy"
+    },
+    {
+      "heading": "Create keys and an address#",
+      "content": "Ergo Platform uses public key cryptography to ensure that every transaction is secure: every personal wallet has a keypair consisting of a public key and a secret key. The public key is always safe to share \u00e2\u0080\u0094 other people need it to verify that you authorized a transaction. It's like an email address. \nThe secret key, however, is private information that proves you own \u00e2\u0080\u0094 and gives you access to \u00e2\u0080\u0094 your private wallet. It's like a password, and you should never share it with anyone.\nOn Ergo, the secret key is usually a 15 words mnemonic seed phrase that is used to derive the internally used binary master key. From this master key, an infinite number of private and public keys can be derived with an index. So for every mnemonic seed phrase, there are existing multiple key pairs and addresses defined by an index. The main address is always at index 0.\nYou can create this address from a mnemonic phrase the following way:\nJavaKotlinScalaJavaScriptPython\n\n\n    String ergoAddress = Address.createEip3Address(\n      index,\n      NetworkType.MAINNET,\n      SecretString.create(mnemonic),\n      SecretString.empty(),\n      false\n    ).toString()\n\n\n\n    val ergoAddress = Address.createEip3Address(\n      index,\n      NetworkType.MAINNET,\n      SecretString.create(mnemonic),\n      SecretString.empty(),\n      false\n    ).toString()\n\n\n\nval ergoAddress = Address.createEip3Address(\n  index, \n  NetworkType.MAINNET, \n  SecretString.create(mnemonic),\n  SecretString.empty(),\n  false\n).toString\n\n\n\ntbd\n\n\nfrom jpype import java\nfrom ergpy import helper_functions, appkit\n\nergo = appkit.ErgoAppKit(node_url=node_url)\nergo_address = helper_functions.get_wallet_address(ergo=ergo, amount=1, wallet_mnemonic=mnemonic)[0]\n\n# Proper exit()\nhelper_functions.exit()\nHaving the string representation of the address for your mnemonic, you can already receive payments."
+    },
+    {
+      "heading": "Sending payments#",
+      "content": "If you created an address like described above and sent some ERG to it, you can send payments from this address.\nSending payments on Ergo is always done within a transaction. Ergo follows Bitcoin's model: A transaction is a set of input boxes and output boxes. The input boxes are spent within a transaction, and output boxes are created. For a transaction to be valid, it must be signed with \nthe private key of the address of the input boxes.\nSo sending payments needs the following steps to be done:\nSearch for unspent boxes covering the amount to be send\nCreate an unsigned transaction with the input boxes found and output boxes for the payment recipient\nSign the transaction\nSubmit the transaction to the network\nLuckily, our SDKs help you by providing high-level methods for this common task.\nJavaJavaScriptPython\n\n\nErgoClient ergoClient = RestApiErgoClient.create(nodeUrl, NetworkType.MAINNET, \"\", RestApiErgoClient.getDefaultExplorerUrl(NetworkType.MAINNET));\n\n//address receiving the tx\nAddress recipient = Address.create(recipientAddress);\n//amount to send\nlong amountToSend = 1000L * 1000L * 1000L // 1 ERG in nanoERGs\nergoClient.execute((BlockchainContext ctx) -> {\n    ErgoProver prover = ctx.newProverBuilder().withMnemonic(\n      SecretString.create(mnemonic),\n      SecretString.empty(),\n      false\n    ).withEip3Secret(0).build()\n\n    String txId = BoxOperations.createForProver(prover, ctx)\n            .withAmountToSpend(amountToSend)\n            .withInputBoxesLoader(new ExplorerAndPoolUnspentBoxesLoader().withAllowChainedTx(true))\n            .send(recipient);\n});\n\n\n\nimport { TransactionBuilder, OutputBuilder } from \"@fleet-sdk/core\";\n\nnew TransactionBuilder(creationHeight);\n\ntype Box = {\n  boxId: string;\n  value: string | bigint;\n  assets: { tokenId: string; amount: string | bigint }[];\n  ergoTree: string;\n  creationHeight: number;\n  additionalRegisters: NonMandatoryRegisters;\n  index: number;\n  transactionId: TransactionId;\n};\n\nnew TransactionBuilder(creationHeight..."
+    },
+    {
+      "heading": "Receiving payments#",
+      "content": "You don\u00e2\u0080\u0099t actually need to do anything to receive payments: if a payer makes a successful \ntransaction to send assets to you, those assets will automatically be added to your wallet.\nHowever, you may want to keep an eye out for incoming payments. For this, you can make use of\nour Ergo Explorer API. The API's interfaces are \nshipping with some of our SDKs.\nJavaJavaScriptPython\n\n\n    // appkit ships with a Retrofit interface\n    DefaultApi ergoApiService = Retrofit.Builder()\n        .baseUrl(RestApiErgoClient.defaultMainnetExplorerUrl)\n        .addConverterFactory(GsonConverterFactory.create())\n        .build().create(DefaultApi.class)\n\n    // call methods on ergoApiService here\n\n\n\ntbd    \n\n\ntbd"
+    }
+  ],
+  "qa_pairs": []
+}

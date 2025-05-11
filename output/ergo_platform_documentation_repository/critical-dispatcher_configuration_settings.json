@@ -1,0 +1,62 @@
+{
+  "title": "Critical-Dispatcher Configuration Settings",
+  "source_url": "docs/node/conf/conf-crit.md",
+  "summary": "# Critical-Dispatcher Configuration Settings\n\nThe `critical-dispatcher` is a dedicated actor dispatcher, utilized exclusively by the block candidate generator and `NodeViewHolder` actors within the system. This dispatcher is integral to maintaining critical tasks which require isolation from other non-critical activities. ## Dispatcher Type\n```conf\ntype = Dispatcher\n```\nThis configuration sets the type of the dispatcher. In this case, it is set as `Dispatcher`. ## Executor\n```conf\nexecutor = \"thread-pool-executor\"\n```\nThe `executor` is the mechanism responsible for running tasks given to it by the dispatcher.",
+  "keywords": [
+    "critical",
+    "dispatcher",
+    "configuration",
+    "settings",
+    "actor",
+    "block",
+    "candidate",
+    "generator",
+    "nodeviewholder",
+    "system",
+    "task",
+    "isolation",
+    "activity",
+    "type",
+    "case",
+    "executor",
+    "thread",
+    "pool",
+    "mechanism",
+    "worker",
+    "size",
+    "number",
+    "throughput",
+    "message",
+    "setting",
+    "complete",
+    "code",
+    "execution"
+  ],
+  "sections": [
+    {
+      "heading": "Critical-Dispatcher Configuration Settings",
+      "content": "The critical-dispatcher is a dedicated actor dispatcher, utilized exclusively by the block candidate generator and NodeViewHolder actors within the system. This dispatcher is integral to maintaining critical tasks which require isolation from other non-critical activities."
+    },
+    {
+      "heading": "Dispatcher Type",
+      "content": "conf\ntype = Dispatcher\nThis configuration sets the type of the dispatcher. In this case, it is set as Dispatcher."
+    },
+    {
+      "heading": "Executor",
+      "content": "conf\nexecutor = \"thread-pool-executor\"\nThe executor is the mechanism responsible for running tasks given to it by the dispatcher. Here, it is configured to use the \"thread-pool-executor\", which creates a pool of worker threads for executing tasks."
+    },
+    {
+      "heading": "fixed-pool-size",
+      "content": "conf\nfixed-pool-size = 2\nThis configuration specifies the number of threads in the thread pool for the thread-pool-executor. It is set to a fixed size of 2 in this configuration."
+    },
+    {
+      "heading": "Throughput",
+      "content": "conf\nthroughput = 1\nthroughput is the maximum number of messages to be processed per actor before the thread is made available to other actors. This setting helps control how long a thread can be occupied by an actor. In this case, it is set to 1."
+    },
+    {
+      "heading": "Complete Configuration Code",
+      "content": "conf\ncritical-dispatcher {\n  type = Dispatcher\n  executor = \"thread-pool-executor\"\n  thread-pool-executor {\n    fixed-pool-size = 2\n  }\n  throughput = 1\n}\nThis configuration ensures that critical tasks handled by the block candidate generator and NodeViewHolder actors are allocated dedicated threads, thereby promoting efficient execution."
+    }
+  ],
+  "qa_pairs": []
+}

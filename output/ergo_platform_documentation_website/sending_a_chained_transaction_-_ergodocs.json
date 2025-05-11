@@ -1,0 +1,65 @@
+{
+  "title": "Sending A Chained Transaction - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/anatomy/transactions/chained/",
+  "summary": "Chained transactions allow for the sequential use of outputs from off-chain transactions. This guide will walk you through the process of submitting a chained transaction on Ergo. The basic method demonstrated here is based on the ergpy examples. For managing extensive interlinked transactions, you can refer to the Transaction Group framework provided by GetBlok. Start by defining the URL of the node to connect to the Ergo blockchain.",
+  "keywords": [
+    "transaction",
+    "output",
+    "chain",
+    "guide",
+    "process",
+    "ergo",
+    "method",
+    "ergpy",
+    "example",
+    "group",
+    "framework",
+    "getblok",
+    "node",
+    "blockchain",
+    "mainnet",
+    "testnet",
+    "connection",
+    "ergoappkit",
+    "wallet",
+    "sentence",
+    "password",
+    "address",
+    "amount",
+    "sleep",
+    "time",
+    "delay",
+    "submission",
+    "genesis",
+    "outbox",
+    "simple_send",
+    "helper_function",
+    "module",
+    "function",
+    "input",
+    "console"
+  ],
+  "sections": [
+    {
+      "heading": "Executing a Chained Transaction#",
+      "content": "Chained transactions allow for the sequential use of outputs from off-chain transactions. This guide will walk you through the process of submitting a chained transaction on Ergo. The basic method demonstrated here is based on the ergpy examples. For managing extensive interlinked transactions, you can refer to the Transaction Group framework provided by GetBlok."
+    },
+    {
+      "heading": "Establish a Blockchain Connection#",
+      "content": "Start by defining the URL of the node to connect to the Ergo blockchain. This could be either a MainNet or TestNet node URL. The connection is then established using the ErgoAppKit.\n# Assign the node URL\nnode_url: str = \"http://213.239.193.208:9052/\"\n\n# Establish the connection\nergo = appkit.ErgoAppKit(node_url=node_url)"
+    },
+    {
+      "heading": "Set Up Wallet Mnemonic#",
+      "content": "Next, prepare your wallet mnemonic. This is a sentence-like password that will be used to access your wallet. This example includes receiver addresses and the amount to be sent in each transaction. Furthermore, it sets a sleep time, which is the delay between transaction submissions. The required amount for the genesis outbox, which is the first transaction in the chain, is also calculated.\n# Define the wallet mnemonic\nwallet_mnemonic = \"decline reward asthma enter three clean borrow repeat identify wisdom horn pull entire adapt neglect.\"\n\n# Specify receiver addresses\nreceiver_addresses = [\n    \"3WwdXmYP39DLmDWJ6grH9ArXbWuCt2uGAh46VTfeGPrHKJJY6cSJ\",\n    \"3WwuG9amNVDwkJdgT5Ce7aJCfeoafVmd9tag9AEiAZwgPi7pYX3w\",\n    \"3Wxk5oofZ3Laq2CpFW4Fi9YQiaep9bZr6QFg4s4xpzz4bi9tZq2U\"\n]\n\n# Define the amount for each transaction\namount = [0.22, 0.33, 0.11]\n\n# Set the number of consecutive transactions\nconsecutive_transactions = 3\n\n# Define the time gap between submissions of transactions\nsleep_time = 0.5 \n\n# Calculate the total amount for the genesis outbox\ngenesis_amount = [consecutive_transactions * (0.22 + 0.33 + 0.11) + (consecutive_transactions + 1) * 0.001]\n\n# Wallet of the sender\ngenesis_receiver = [\"\"]"
+    },
+    {
+      "heading": "Generate an Output Box#",
+      "content": "To create an output box from the signed transaction, we use the simple_send method from the helper_functions module. The function returns a signed transaction, which we then use to obtain the genesis outbox.\n# Generate a signed transaction\ngenesis_tx = helper_functions.simple_send(ergo=ergo, amount=genesis_amount, wallet_mnemonic=wallet_mnemonic,\n                                          receiver_addresses=genesis_receiver, return_signed=True)\n# Get the genesis outbox\ngenesis_outbox = appkit.get_outputs_to_spend(genesis_tx, 0)"
+    },
+    {
+      "heading": "Submit the Transactions#",
+      "content": "Finally, we submit the transactions to the node. For each transaction in the chain, we use the output box from the previous transaction as the input box for the current transaction. The first transaction retrieves the input box from the genesis outbox. The last transaction is not chained, i.e., its output box\nwill not be used as an input box in any subsequent transaction. The ID of the genesis transaction and the last transaction are printed to the console. After the final transaction is submitted, the process ends.\n# Print the transaction ID of the genesis transaction\nprint(ergo.txId(genesis_tx))  \n\noutBox_list = []\n\n# Process all the transactions in the chain\nfor x in range(consecutive_transactions):\n    # If it's the first transaction\n    if x == 0: \n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=genesis_outbox,\n                                            return_signed=True, chained=True)\n    # If it's the last transaction\n    elif x == consecutive_transactions - 1: \n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=outBox_list[x - 1],\n                                            return_signed=True)\n    # If it's neither the first nor the last transaction\n    else: \n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=outBox_list[x - 1],\n                                            return_signed=True, chained=True)\n    # Get the outbox from the current transaction\n    tx_1_outbox = appkit.get_outputs_to_spend(tx_1, 0)\n    outBox_list.append(tx_1_outbox)\n\n    # Pause before processing the next transaction\n    time.sleep(sleep_time)\n\n# P..."
+    }
+  ],
+  "qa_pairs": []
+}

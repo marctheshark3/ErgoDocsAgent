@@ -1,0 +1,52 @@
+{
+  "title": "Autolykos",
+  "source_url": "docs/dev/protocol/autolykos-protocol.md",
+  "summary": "---\ntags:\n  - Autolykos\n  - Proof of Work\n  - Mining\n---\n\n# Autolykos\n\n*(Back to: [Protocol Overview](protocol-overview.md))*\n\nErgo [mining](mining-overview.md) is based on **[Autolykos](autolykos.md)**, a fairly launched efficient [ASIC-resistant](asic.md) Proof of Work algorithm. ::cards::\n\n[\n  {\n    \"title\": \"Start Mining\",\n    \"url\": \"../../mining/setup/join.md\",\n    \"content\": \"Getting setup with a mining pool. \"\n  },\n  {\n    \"title\": \"Algorithm\",\n    \"url\": \"../../mining/autolykos.md\",\n    \"content\": \"Dive into the Autolykos Algorithm.",
+  "keywords": [
+    "autolykos",
+    "proof",
+    "work",
+    "mining",
+    "protocol",
+    "overview](protocol",
+    "ergo",
+    "mining](mining",
+    "overview.md",
+    "autolykos](autolykos.md",
+    "asic",
+    "resistant](asic.md",
+    "algorithm",
+    "card",
+    "title",
+    "start",
+    "/mining",
+    "setup",
+    "content",
+    "pool",
+    "autolykos.md",
+    "governance",
+    "governance.md",
+    "people",
+    "storage",
+    "rent",
+    "rent.md",
+    "chain",
+    "garbage",
+    "collection",
+    "problem",
+    "bloat",
+    "difficulty",
+    "adjustment",
+    "difficulty.md",
+    "emission",
+    "emission.md",
+    "schedule"
+  ],
+  "sections": [
+    {
+      "heading": "Autolykos",
+      "content": "(Back to: Protocol Overview)\nErgo mining is based on Autolykos, a fairly launched efficient ASIC-resistant Proof of Work algorithm.\n::cards::\n[\n  {\n    \"title\": \"Start Mining\",\n    \"url\": \"../../mining/setup/join.md\",\n    \"content\": \"Getting setup with a mining pool.\"\n  },\n  {\n    \"title\": \"Algorithm\",\n    \"url\": \"../../mining/autolykos.md\",\n    \"content\": \"Dive into the Autolykos Algorithm.\"\n  },\n  {\n    \"title\": \"Governance\",\n    \"url\": \"../../mining/governance.md\",\n    \"content\": \"PoW To The People\"\n  },\n  {\n    \"title\": \"Storage Rent\",\n    \"url\": \"../../mining/rent.md\",\n    \"content\": \"On-chain garbage collection that reduces the problem of blockchain bloat\"\n  },\n  {\n    \"title\": \"Difficulty Adjustment\",\n    \"url\": \"../../mining/difficulty.md\",\n    \"content\": \"See how the mining difficulty is calculated.\"\n},\n  {\n    \"title\": \"Emission\",\n    \"url\": \"../../mining/emission.md\",\n    \"content\": \"The Ergo emission schedule\"\n  },\n]\n::/cards::"
+    }
+  ],
+  "qa_pairs": []
+}

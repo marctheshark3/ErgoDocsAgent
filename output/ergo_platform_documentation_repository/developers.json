@@ -1,0 +1,58 @@
+{
+  "title": "Developers",
+  "source_url": "docs/dev/start.md",
+  "summary": "---\ntags:\n  - Developers\n  - Getting Started\n  - Overview\n---\n\n# Developers\n\n\nThere are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users. ## Stack\n\n::cards:: [\n  {\n    \"title\": \"Server\",\n    \"content\": \"Interact with the blockchain locally or via a remote server. \",\n    \"image\": \"../assets/img/dev-grid/server.png\",\n    \"url\": \"stack/server.md\"\n  },\n  {\n    \"title\": \"Browser\",\n    \"content\": \"Interact with users in browser\",\n    \"image\": \"../assets/img/dev-grid/browser.png\",\n    \"url\": \"stack/browser.md\"\n  },\n  {\n    \"title\": \"Desktop\",\n    \"content\": \"Create a local application. \",\n    \"image\": \"../assets/img/dev-grid/desktop.png\",\n    \"url\": \"stack/desktop.md\"\n  },\n  {\n    \"title\": \"Mobile Application\",\n    \"content\": \"Creating a bundled mobile app for Android or iOS.\",\n    \"image\": \"../assets/img/dev-grid/mobile.png\",\n    \"url\": \"stack/mobile.md\"\n  },\n\n]\n\n::/cards::\n\n## Just Starting Out\n\n::cards::\n\n[\n  {\n    \"title\": \"Basics Tutorial\",\n    \"content\": \"Generate keys and address, send and receive payments.",
+  "keywords": [
+    "developers",
+    "start",
+    "overview",
+    "developer",
+    "tool",
+    "library",
+    "framework",
+    "utility",
+    "blockchain",
+    "application",
+    "user",
+    "stack",
+    "card",
+    "title",
+    "server",
+    "content",
+    "image",
+    "grid",
+    "server.md",
+    "browser",
+    "browser.md",
+    "desktop",
+    "desktop.md",
+    "mobile",
+    "android",
+    "mobile.md",
+    "basics",
+    "tutorial",
+    "generate",
+    "address",
+    "payment",
+    "noob.png",
+    "beginner",
+    "water",
+    "introduction.md",
+    "frameworks.jpg"
+  ],
+  "sections": [
+    {
+      "heading": "Developers",
+      "content": "There are many tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users."
+    },
+    {
+      "heading": "Stack",
+      "content": "::cards::\n[\n  {\n    \"title\": \"Server\",\n    \"content\": \"Interact with the blockchain locally or via a remote server.\",\n    \"image\": \"../assets/img/dev-grid/server.png\",\n    \"url\": \"stack/server.md\"\n  },\n  {\n    \"title\": \"Browser\",\n    \"content\": \"Interact with users in browser\",\n    \"image\": \"../assets/img/dev-grid/browser.png\",\n    \"url\": \"stack/browser.md\"\n  },\n  {\n    \"title\": \"Desktop\",\n    \"content\": \"Create a local application.\",\n    \"image\": \"../assets/img/dev-grid/desktop.png\",\n    \"url\": \"stack/desktop.md\"\n  },\n  {\n    \"title\": \"Mobile Application\",\n    \"content\": \"Creating a bundled mobile app for Android or iOS.\",\n    \"image\": \"../assets/img/dev-grid/mobile.png\",\n    \"url\": \"stack/mobile.md\"\n  },\n]\n::/cards::"
+    },
+    {
+      "heading": "Just Starting Out",
+      "content": "::cards::\n[\n  {\n    \"title\": \"Basics Tutorial\",\n    \"content\": \"Generate keys and address, send and receive payments.\",\n    \"image\": \"../assets/img/dev-grid/noob.png\",\n    \"url\": \"stack/basics.md\"\n  },\n  {\n    \"title\": \"Beginner\",\n    \"content\": \"Just testing the waters? Not sure where to start?\",\n    \"image\": \"../assets/img/dev-grid/noob.png\",\n    \"url\": \"stack/introduction.md\"\n  },\n  {\n    \"title\": \"Frameworks\",\n    \"content\": \"Jump straight to an overview of all frameworks\",\n    \"image\": \"../assets/img/dev-grid/frameworks.jpg\",\n    \"url\": \"stack/introduction.md#frameworks\"\n  },\n]\n::/cards::"
+    }
+  ],
+  "qa_pairs": []
+}

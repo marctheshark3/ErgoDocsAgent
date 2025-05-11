@@ -1,0 +1,25 @@
+{
+  "title": "RustKit - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/stack/rustkit/",
+  "summary": "A SDK for building applications on the Ergo blockchain. Our goal is to create a library that creates a simple and easy to use interface for developers to build applications. Currently, the library is in the early stages of development and is not recommended for production use. crates.io/crates/ergo-rustkit",
+  "keywords": [
+    "building",
+    "application",
+    "ergo",
+    "blockchain",
+    "goal",
+    "library",
+    "interface",
+    "developer",
+    "stage",
+    "development",
+    "production"
+  ],
+  "sections": [
+    {
+      "heading": "Rustkit#",
+      "content": "A SDK for building applications on the Ergo blockchain. Our goal is to create a library that creates a simple and easy to use interface for developers to build applications. Currently, the library is in the early stages of development and is not recommended for production use.\ncrates.io/crates/ergo-rustkit"
+    }
+  ],
+  "qa_pairs": []
+}

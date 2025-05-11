@@ -1,0 +1,21 @@
+{
+  "title": "Software - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/mining/software/",
+  "summary": "",
+  "keywords": [],
+  "sections": [
+    {
+      "heading": "Software#",
+      "content": "Coins\nMiners\nnvidia\nAMD\nIntel\nDev Fee\n\n\n\n\nERG\nlolminer\n\u00e2\u009c\u0093\n\u00e2\u009c\u0093\n\u00e2\u009c\u0093\n1.5 %\n\n\nERG\nNanominer\n\u00e2\u009c\u0093\n\u00e2\u009c\u0093\n\n2.5 % or 5 %\n\n\nERG\nSRB Miner\n\u00e2\u009c\u0093\n\u00e2\u009c\u0093\n\n2 %\n\n\nERG\nNB Miner\n\u00e2\u009c\u0093\n\n\n2 %\n\n\nERG\nTeam Red Miner\n\n\u00e2\u009c\u0093\n\n2 %\n\n\nERG\nTrex Miner\n\n\u00e2\u009c\u0093\n\n2 %\n\n\nERG+KAS\nBzMiner\n\u00e2\u009c\u0093\n\n\n\n\n\nERG+KAS\nGminer\n\u00e2\u009c\u0093\n\n\n\n\n\nERG+KAS\nSRB Miner\n\n\u00e2\u009c\u0093\n\n2 %"
+    },
+    {
+      "heading": "Source Code Miners#",
+      "content": "AMD miner\nNvidia miner"
+    },
+    {
+      "heading": "Other Miners#",
+      "content": "CUDA-based GPU miner for Ergo for NVidia cards\nOpenCL miner for ERGO for AMD cards"
+    }
+  ],
+  "qa_pairs": []
+}

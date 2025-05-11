@@ -1,0 +1,79 @@
+{
+  "title": "Asset Standard - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/tokens/standards/eip4/",
+  "summary": "\u00f0\u009f\u0094\u0097 From EIP-0004: This standard provides a uniform way to issue Ergo tokens. A standard interface allows any tokens on Ergo to be re-used by other applications: from wallets to decentralized exchanges. Ergo supports custom tokens as first-class citizens. There are also indirect limits: A transaction can create out-of-thin-air tokens in its outputs if the token identifier is equal to the identifier of the first input box of the transaction.",
+  "keywords": [
+    "\u00f0\u009f\u0094\u0097",
+    "eip-0004",
+    "standard",
+    "ergo",
+    "token",
+    "interface",
+    "application",
+    "wallet",
+    "exchange",
+    "custom",
+    "class",
+    "citizen",
+    "limit",
+    "transaction",
+    "output",
+    "identifier",
+    "input",
+    "info",
+    "limitation",
+    "storage",
+    "rent",
+    "component",
+    "miner",
+    "ergs",
+    "protocol",
+    "structure",
+    "register",
+    "coll[byte",
+    "type",
+    "ergoscript",
+    "representation",
+    "bytearray",
+    "string",
+    "example",
+    "issue",
+    "decimal",
+    "block",
+    "explorer",
+    "extension",
+    "asset",
+    "byte",
+    "value",
+    "category",
+    "share",
+    "tokens",
+    "subcategory",
+    "picture",
+    "artwork",
+    "ergomixer",
+    "issuance",
+    "catagory",
+    "need",
+    "standardization"
+  ],
+  "sections": [
+    {
+      "heading": "EIP-0004: Asset Standard#",
+      "content": "\u00f0\u009f\u0094\u0097 From EIP-0004:\nThis standard provides a uniform way to issue Ergo tokens.\nA standard interface allows any tokens on Ergo to be re-used by other applications: from wallets to decentralized exchanges."
+    },
+    {
+      "heading": "Ergo tokens background#",
+      "content": "Ergo supports custom tokens as first-class citizens.\nNamely, a special register (R2) of a box contains (tokenId -> amount) pairs.\nA box can contain at most 255 secondary tokens.\nThere are also indirect limits:\nA box can be no larger than 4 kilobytes\nTokens add to the computational cost of the transaction.\nA transaction can create out-of-thin-air tokens in its outputs if the token identifier is equal to the identifier of the first input box of the transaction.\nInfo\nWhy does the limitation of 1 new token per transaction exist?\nAs the box identifier is cryptographically unique, there is no chance of having the second token with the same identifier while the hash function is collision-resistant.\nThis rule also means that only one new token per transaction can be created.\nUnlike ergs, other tokens can be burnt: the total amount for a token in transaction inputs should be no less than the amount of the outputs.\nStorage rent component allows a miner to collect (or burn) all the tokens inside a box if it is expired, and there are not enough Ergs in the box to pay the storage rent fee."
+    },
+    {
+      "heading": "Ergo tokens standard#",
+      "content": "Though this is not required by the protocol, we propose the following structure for the box that issues a token:\nRegister\nDescription\nExample\nEncoded\n\n\n\n\nR2\nToken id and amount pair\n[(\"7d...09\", 100000)]\n\n\n\nR4\nToken verbose name (UTF-8 representation)\n\"USD\"\n\"0e03555344\"\n\n\nR5\nToken description (UTF-8 representation)\n\"Nothing backed USD token\"\n\"0e184e6f7468696e67206261636b65642055534420746f6b656e\"\n\n\nR6\nNumber of decimals\n\"2\"\n\"0e0132\"\nNote, that additional registers (R4-R6) are encoded as Coll[Byte] type of ErgoScript and their encoded representation is received as '\\x0e' + intToVlq(byteArray.length) + byteArray where byteArray is UTF-8 representation of the original string.\nThe example above issues one thousand tokens called \"USD\" with two decimals each.\nThe transaction that issues such a token was included in block 98288 and may be found in block explorer)"
+    },
+    {
+      "heading": "Ergo asset types#",
+      "content": "This standard is an extension of token standard:\nIn the asset type standard, R7 is a required two-byte value encoded as Coll[Byte]. The first byte represents the asset category, for example, NFT or Share Tokens. The second byte specifies the exact subcategory, for example, Picture Artwork NFT or ErgoMixer's Share Tokens. The second byte can be omited so that the issuance only specifies the catagory and not the subcatagory, for example, Share Tokens.\nAlso, the remaining R8 and R9 registers can be used by each individual asset types based on their needs.\nThe standardization of various asset types can be found below:\nAsset type\nR7\nR8\nR9\n\n\n\n\nNFT - picture artwork\n[0x01, 0x01] - i.e., \"0e020101\"\nSHA256 hash of the picture\nOptional - link to the artwork (UTF-8 representation)\n\n\nNFT - audio artwork\n[0x01, 0x02] - i.e., \"0e020102\"\nSHA256 hash of the audio\nOptional - link to the audio encoded as Coll[Byte] or (link to the audio, link to the image cover) encoded as (Coll[Byte], Coll[Byte]) (UTF-8 representation)\n\n\nNFT - video artwork\n[0x01, 0x03] - i.e., \"0e020103\"\nSHA256 hash of the video\nOptional - link to the video (UTF-8 representation)\n\n\nMembership token - threshold signature\n[0x02, 0x01] - i.e., \"0e020201\"\nNumber of required signatures (Integer) - i.e., 4 in case of 4-of-10 threshold signature\nDeposit address of the funds controlled by the threshold signature (Ergo tree byte array)\nThe above registers (R7-R9) are also encoded as Coll[Byte] type unless stated otherwise."
+    }
+  ],
+  "qa_pairs": []
+}

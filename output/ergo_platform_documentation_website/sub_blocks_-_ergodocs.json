@@ -1,0 +1,81 @@
+{
+  "title": "Sub Blocks - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/uses/sidechains/subblocks/",
+  "summary": "With the renaming and introduction of sub-blocks, Ergo now distinguishes between sub-blocks (also called input blocks) and full blocks (now called ordering blocks). This change reduces typical onchain confirmation times from about 2 minutes to roughly 2 seconds, achieving a 17\u00c3\u0097 improvement in detecting transaction failures and transforming the current competitive mempool into a more cooperative environment. Sub-blocks (Input Blocks): These are block candidates generated with a lower difficulty threshold than full blocks. They are produced approximately once per second and carry most transaction data.",
+  "keywords": [
+    "renaming",
+    "introduction",
+    "block",
+    "ergo",
+    "input",
+    "change",
+    "confirmation",
+    "time",
+    "minute",
+    "second",
+    "17\u00e3\u0097",
+    "improvement",
+    "transaction",
+    "failure",
+    "mempool",
+    "environment",
+    "candidate",
+    "difficulty",
+    "threshold",
+    "datum",
+    "ergo\u00e2\u0080\u0099s",
+    "proof",
+    "work",
+    "system",
+    "consensus",
+    "security",
+    "blockchain",
+    "note",
+    "\u00e2\u0080\u009cinput",
+    "blocks\u00e2\u0080\u009d",
+    "detail",
+    "document",
+    "rapid",
+    "onchain",
+    "confirmations",
+    "everyday",
+    "token",
+    "exchange",
+    "swap",
+    "wallet",
+    "transfers\u00e2\u0080\u0094are",
+    "detection",
+    "seconds\u00e2\u0080\u0094a",
+    "responsiveness",
+    "cooperative",
+    "design",
+    "shift",
+    "multiplayer",
+    "network",
+    "speed",
+    "reliability",
+    "user",
+    "instant",
+    "experience",
+    "dive"
+  ],
+  "sections": [
+    {
+      "heading": "Subblocks in Ergo#",
+      "content": "TLDR\nWith the renaming and introduction of sub-blocks, Ergo now distinguishes between sub-blocks (also called input blocks) and full blocks (now called ordering blocks). This change reduces typical onchain confirmation times from about 2 minutes to roughly 2 seconds, achieving a 17\u00c3\u0097 improvement in detecting transaction failures and transforming the current competitive mempool into a more cooperative environment."
+    },
+    {
+      "heading": "What Are Sub-blocks and Ordering Blocks?#",
+      "content": "Sub-blocks (Input Blocks):\n  These are block candidates generated with a lower difficulty threshold than full blocks. They are produced approximately once per second and carry most transaction data. This allows transactions to propagate and confirm much faster.\n\n\nOrdering Blocks:\n  These are the traditional full blocks of Ergo\u00e2\u0080\u0099s proof-of-work system, now renamed as ordering blocks. They are generated roughly every 2 minutes and maintain the overall consensus and security of the blockchain.\nNote: The naming \u00e2\u0080\u009cinput blocks\u00e2\u0080\u009d (or sub-blocks) and \u00e2\u0080\u009cordering blocks\u00e2\u0080\u009d was proposed in detail in this document."
+    },
+    {
+      "heading": "Enhanced User Experience#",
+      "content": "Rapid Onchain Confirmations:\n  Everyday transactions\u00e2\u0080\u0094like receiving tokens from decentralized exchange (DEX) swaps or wallet-to-wallet transfers\u00e2\u0080\u0094are now confirmed in approximately 2 seconds.\n\n\nFaster Failure Detection:\n  Instead of waiting up to 6 minutes to detect a transaction failure, the new system detects failures in about 2 seconds\u00e2\u0080\u0094a 17\u00c3\u0097 improvement in responsiveness.\n\n\nA More Cooperative Mempool:\n  The design shift transforms the mempool from a competitive (PvP) environment into a cooperative, multiplayer-like system, enhancing overall network responsiveness."
+    },
+    {
+      "heading": "In a Nutshell#",
+      "content": "Ergo\u00e2\u0080\u0099s renaming and introduction of sub-blocks (input blocks) paired with ordering blocks significantly improves transaction processing speed and reliability. These changes provide users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network.\nFor a deep dive into the technical details behind these changes, see the technical details."
+    }
+  ],
+  "qa_pairs": []
+}

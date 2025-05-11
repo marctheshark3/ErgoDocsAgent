@@ -1,0 +1,82 @@
+{
+  "title": "Burning a token",
+  "source_url": "docs/dev/tokens/burn.md",
+  "summary": "# Burning a token\n\nThere are sometimes occasions when you want to delete a token from your wallet. - Your address was airdropped a token you no longer want\n- You created an NFT but something about it is not right. - A project sent you voting or other tokens that you no longer need\n\nTo get rid of those tokens, you have a few options. - **Mobile Wallet:** [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires an Ergopay compatible wallet like Ergo Mobile Wallet)\n- **Nautilus:**",
+  "keywords": [
+    "token",
+    "occasion",
+    "wallet",
+    "address",
+    "project",
+    "voting",
+    "option",
+    "mobile",
+    "tokenjay](https://www.tokenjay.app",
+    "ergopay",
+    "ergo",
+    "nautilus",
+    "minter",
+    "burner](https://github.com",
+    "thierrym1212",
+    "safew",
+    "script)](p2s.md",
+    "representation",
+    "condition",
+    "--todo",
+    "hash",
+    "register",
+    "explorer",
+    "0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb",
+    "type",
+    "descriptor",
+    "byte",
+    "array",
+    "length",
+    "file",
+    "unspent",
+    "transaction",
+    "output",
+    "utxo",
+    "appkit",
+    "appkit](appkit.md",
+    "builder",
+    "method",
+    "purpose",
+    "integration",
+    "burn",
+    "functionality",
+    "here](https://github.com",
+    "blob",
+    "index.js#l254",
+    "step",
+    "input",
+    "amount",
+    "consideration",
+    "change",
+    "json",
+    "detail",
+    "network",
+    "approach",
+    "process",
+    "integrity"
+  ],
+  "sections": [
+    {
+      "heading": "Burning a token",
+      "content": "There are sometimes occasions when you want to delete a token from your wallet.\nYour address was airdropped a token you no longer want\nYou created an NFT but something about it is not right. \nA project sent you voting or other tokens that you no longer need\nTo get rid of those tokens, you have a few options.\nMobile Wallet: TokenJay (This requires an Ergopay compatible wallet like Ergo Mobile Wallet)\nNautilus: Ergo Token Minter / Burner\nSAFEW supports token burning natively.\nSend to 4MQyMKvMbnCJG3aJ, a P2S (Pay-to-Script) representation of a \u201cfalse\u201d condition, i.e. the box is unspendable."
+    },
+    {
+      "heading": "Programmatically",
+      "content": "To burn tokens programmatically, simply spend an Unspent Transaction Output (UTXO) containing the tokens you wish to eliminate. Ensure not to include these tokens in the output of the transaction."
+    },
+    {
+      "heading": "Using AppKit",
+      "content": "If you're working with AppKit, the transaction builder conveniently offers a burntoken method tailored for this purpose."
+    },
+    {
+      "heading": "Ergo Token Minter Integration",
+      "content": "The burn token functionality integrated by ThierryM1212 can be observed here. The crucial steps involved are as follows:\nIdentify and select the input boxes holding the tokens to be burnt, along with a small ERG amount.\nConstruct the output boxes, excluding consideration of the tokens. The transaction builder automatically appends an additional output change box encompassing all tokens.\nRetrieve the transaction JSON representation.\nEdit the output change box details to eliminate the tokens intended for burning.\nDispatch the modified transaction (JSON) to the network.\nThis streamlined approach simplifies the process of burning tokens while maintaining transaction integrity."
+    }
+  ],
+  "qa_pairs": []
+}

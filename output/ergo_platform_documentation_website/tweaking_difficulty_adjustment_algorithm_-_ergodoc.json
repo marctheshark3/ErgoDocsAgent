@@ -1,0 +1,74 @@
+{
+  "title": "Tweaking Difficulty Adjustment Algorithm - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/mining/standards/eip37/",
+  "summary": "\u00f0\u009f\u0093\u0096 Full Documentation The goal of a difficulty adjustment algorithm is to stabilize the time it takes to produce a new block, based on how fast blocks are being mined. In Ergo, we aim for a 120-second average block time. While Bitcoin's algorithm works well in certain conditions, it has its limitations\u00e2\u0080\u0094especially in fluctuating mining environments.",
+  "keywords": [
+    "\u00f0\u009f\u0093\u0096",
+    "documentation",
+    "goal",
+    "difficulty",
+    "adjustment",
+    "algorithm",
+    "time",
+    "block",
+    "ergo",
+    "bitcoin",
+    "condition",
+    "mining",
+    "environment",
+    "change",
+    "proposal",
+    "issue",
+    "coin",
+    "hopping",
+    "miner",
+    "profit",
+    "method",
+    "behavior",
+    "blend",
+    "feature",
+    "model",
+    "scenario",
+    "price",
+    "fluctuation",
+    "growth",
+    "error",
+    "delay",
+    "reference",
+    "protocol",
+    "client",
+    "version",
+    "4.0.100"
+  ],
+  "sections": [
+    {
+      "heading": "Overview#",
+      "content": "Author: kushti\nStatus: Implemented\nCreated On: September 23, 2022\nType of Change: Hard Fork Required\n\u00f0\u009f\u0093\u0096 Full Documentation"
+    },
+    {
+      "heading": "Why Is This Important?#",
+      "content": "The goal of a difficulty adjustment algorithm is to stabilize the time it takes to produce a new block, based on how fast blocks are being mined. In Ergo, we aim for a 120-second average block time. While Bitcoin's algorithm works well in certain conditions, it has its limitations\u00e2\u0080\u0094especially in fluctuating mining environments. Ergo's original algorithm performed well but was prone to erratic difficulty changes. This proposal aims to make the algorithm more stable and responsive."
+    },
+    {
+      "heading": "Background and Comparative Analysis#",
+      "content": "Bitcoin uses a relatively simple adjustment algorithm, but it can struggle with issues like \"coin hopping,\" where miners switch between coins to maximize profits. Ergo previously used a predictive method to anticipate such behaviors. To improve upon both, this proposal blends features from Bitcoin's \"classic\" algorithm and Ergo's predictive model."
+    },
+    {
+      "heading": "Key Proposed Changes#",
+      "content": "Shorter Epoch Length: Reducing the epoch length to 128 blocks, making the system more responsive.\nDual Calculations: Use both a predictive method based on the last eight epochs and the classic Bitcoin-style method.\nPredictive Limits: Cap the changes in predictive difficulty to a maximum of 50% per epoch.\nOverall Limits: Finally, take an average of both calculated difficulties and limit changes to a maximum of 50% per epoch."
+    },
+    {
+      "heading": "Simulation Results#",
+      "content": "We've simulated various scenarios including price fluctuations, consistent growth, and coin hopping. The proposed changes consistently result in lower errors and delays compared to the existing algorithms. This suggests that the proposed changes will make the algorithm more robust and efficient."
+    },
+    {
+      "heading": "Activation Criteria#",
+      "content": "Activation Window: Between block #843,776 and block #851,969.\nVote Requirement: At least 232 votes for activation within the last 256 blocks.\nVote Checking: Voting status will be checked every 128 blocks."
+    },
+    {
+      "heading": "How To Upgrade#",
+      "content": "To adopt these changes, please update to the Ergo reference protocol client version 4.0.100 or newer."
+    }
+  ],
+  "qa_pairs": []
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Efficient Script Validation",
+  "source_url": "docs/dev/scs/ergotree/script-validation.md",
+  "summary": "# Efficient Script Validation\n\nFor a transaction that has an `INPUTS` collection of boxes to spend, each input box can have a script (termed as the `propositionBytes` property) that protects it. This script needs to be executed within the context of the current transaction. To maintain steady block validation of `1000` transactions per second, a simple transaction with a single input box requires validation of 1000 scripts per second. To increase the probability of successful mining, the block validation time should be minimized. This allows a miner to start solving the PoW puzzle as soon as possible.",
+  "keywords": [
+    "efficient",
+    "script",
+    "validation",
+    "transaction",
+    "inputs",
+    "collection",
+    "input",
+    "propositionbytes",
+    "property",
+    "context",
+    "block",
+    "second",
+    "probability",
+    "mining",
+    "time",
+    "miner",
+    "puzzle",
+    "step",
+    "object",
+    "self",
+    "ergotree",
+    "cost",
+    "graph",
+    "estimation",
+    "limit",
+    "sigma",
+    "proposition",
+    "sigmaprop",
+    "protocol",
+    "verification",
+    "procedure"
+  ],
+  "sections": [
+    {
+      "heading": "Efficient Script Validation",
+      "content": "For a transaction that has an INPUTS collection of boxes to spend, each input box can have a script (termed as the propositionBytes property) that protects it. This script needs to be executed within the context of the current transaction. To maintain steady block validation of 1000 transactions per second, a simple transaction with a single input box requires validation of 1000 scripts per second.\nTo increase the probability of successful mining, the block validation time should be minimized. This allows a miner to start solving the PoW puzzle as soon as possible.\nTo validate every script (of an input box), the following steps are performed:\nA Context object is created with SELF = box.\nErgoTree is traversed to build a cost graph for cost estimation.\nThe cost estimation is computed by evaluating the cost graph with the current context.\nIf the cost is within the limit, the ErgoTree is evaluated using the context to obtain a sigma proposition (see SigmaProp).\nThe Sigma protocol verification procedure is executed."
+    }
+  ],
+  "qa_pairs": []
+}

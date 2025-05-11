@@ -1,0 +1,32 @@
+{
+  "title": "How to set up and configure a full Ergo node",
+  "source_url": "docs/node/install/linux.md",
+  "summary": "## How to set up and configure a full Ergo node\n\nThis page explains how to install and run a full Ergo node. It does not cover mining. Linux Systems can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)\n\n```bash\ncurl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>\n```\n\nWith this script you'll have the latest Ergo node installed without any hassle. If you'd prefer to get set up manually, here's a [step-by-step.](tutorial.md)",
+  "keywords": [
+    "ergo",
+    "node",
+    "page",
+    "mining",
+    "linux",
+    "systems",
+    "installer.sh](https://github.com",
+    "ergoplatform",
+    "blob",
+    "master",
+    "bash",
+    "curl",
+    "https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh",
+    "key=<your_api_key",
+    "script",
+    "hassle",
+    "step",
+    "step.](tutorial.md"
+  ],
+  "sections": [
+    {
+      "heading": "How to set up and configure a full Ergo node",
+      "content": "This page explains how to install and run a full Ergo node. It does not cover mining.\nLinux Systems can run ergo-installer.sh\nbash\ncurl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>\nWith this script you'll have the latest Ergo node installed without any hassle.\nIf you'd prefer to get set up manually, here's a step-by-step."
+    }
+  ],
+  "qa_pairs": []
+}

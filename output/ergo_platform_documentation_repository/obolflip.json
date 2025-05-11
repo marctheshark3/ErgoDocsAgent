@@ -1,0 +1,25 @@
+{
+  "title": "Obolflip",
+  "source_url": "docs/eco/obolflip.md",
+  "summary": "---\ntags:\n  - Obolflip\n  - Gaming\n  - Betting\n  - dApp\n---\n\n# Obolflip\n\n[ObolFlip](https://github.com/ObolFlip/obolflip-client) client can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location. You can even deploy it on a server and let other users do bets, earning extra revenue for withdrawals.",
+  "keywords": [
+    "obolflip",
+    "gaming",
+    "dapp",
+    "obolflip](https://github.com",
+    "client",
+    "flip",
+    "revenue",
+    "location",
+    "server",
+    "user",
+    "withdrawal"
+  ],
+  "sections": [
+    {
+      "heading": "Obolflip",
+      "content": "ObolFlip client can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location. You can even deploy it on a server and let other users do bets, earning extra revenue for withdrawals."
+    }
+  ],
+  "qa_pairs": []
+}

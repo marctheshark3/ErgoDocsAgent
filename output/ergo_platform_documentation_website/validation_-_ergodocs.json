@@ -1,0 +1,106 @@
+{
+  "title": "Validation - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/structures/merkle/merkle-validation/",
+  "summary": "Merkle proofs are fundamental to ensuring the integrity of data within a blockchain. By validating a Merkle proof, you can confirm that a specific piece of data, such as a transaction, is included in a block without having to download the entire blockchain. This document outlines the detailed process for validating Merkle proofs in Ergo, using cryptographic hash functions and a structured approach. The validation process involves computing a series of hashes based on the provided proof elements and comparing the final result with the expected Merkle root. The steps below describe this process in detail: Begin by computing the hash of the leaf node, which represents the transaction or data element you want to prove is included in the block.",
+  "keywords": [
+    "merkle",
+    "proof",
+    "integrity",
+    "datum",
+    "blockchain",
+    "piece",
+    "transaction",
+    "block",
+    "document",
+    "process",
+    "ergo",
+    "hash",
+    "function",
+    "approach",
+    "validation",
+    "series",
+    "element",
+    "result",
+    "root",
+    "step",
+    "detail",
+    "leaf",
+    "node",
+    "data",
+    "byte",
+    "prefix",
+    "blake2b256",
+    "code",
+    "implementation",
+    "computation",
+    "codebase",
+    "scorex.crypto.authds.merkle",
+    "package",
+    "scrypto",
+    "library",
+    "level",
+    "information",
+    "position",
+    "tree",
+    "sibling",
+    "compute",
+    "next",
+    "iteration",
+    "logic",
+    "correctness",
+    "batchmerkleproof.scala",
+    "file",
+    "repository",
+    "value",
+    "comparison",
+    "flowchart",
+    "example",
+    "header",
+    "inclusion",
+    "structure",
+    "verification",
+    "need",
+    "security",
+    "efficiency",
+    "application"
+  ],
+  "sections": [
+    {
+      "heading": "Overview#",
+      "content": "Merkle proofs are fundamental to ensuring the integrity of data within a blockchain. By validating a Merkle proof, you can confirm that a specific piece of data, such as a transaction, is included in a block without having to download the entire blockchain. This document outlines the detailed process for validating Merkle proofs in Ergo, using cryptographic hash functions and a structured approach."
+    },
+    {
+      "heading": "Validation Process#",
+      "content": "The validation process involves computing a series of hashes based on the provided proof elements and comparing the final result with the expected Merkle root. The steps below describe this process in detail:"
+    },
+    {
+      "heading": "1. Compute the Leaf Node Hash#",
+      "content": "Begin by computing the hash of the leaf node, which represents the transaction or data element you want to prove is included in the block. This is done by prepending a 1-byte zero prefix to the leaf data and then hashing the result using the Blake2b256 hash function.\nCode Implementation: The leaf node hash computation is implemented within the Ergo codebase, primarily found in the scorex.crypto.authds.merkle package of the Scrypto library, which is used by Ergo.\nval leafData = Base16.decode(txId).get\nval leafHash = Blake2b256(0.toByte +: leafData)"
+    },
+    {
+      "heading": "2. Iterate Through the Proof#",
+      "content": "The proof consists of multiple levels, each providing information about the position of the node within the Merkle tree and its sibling hash. For each level, the following steps are performed:\nCheck the 1-Byte Prefix:\n\nIf the prefix is 0, this indicates that the computed hash from the previous step should be on the left side.\nIf the prefix is 1, this indicates that the computed hash should be on the right side.\n\n\n\nCompute the Hash for the Next Level:\n\nDepending on the prefix, concatenate the computed hash from the previous step with the sibling hash and the prefix. Then, hash the concatenated result using Blake2b256.\nCode Implementation: The iteration process and validation logic are crucial for verifying the correctness of the Merkle proof. This is implemented in the BatchMerkleProof.scala file in the scrypto repository.\nval levels = Seq(\"0139b79af823a92aa72ced2c6d9e7f7f4687de5b5af7fab0ad205d3e54bda3f3ae\")\nval computedHash = levels.foldLeft(leafHash) { case (hash, level) =>\n    val bytes = Base16.decode(level).get\n    val prefix = bytes.head\n    val siblingHash = bytes.tail\n\n    val concatenated = if (prefix == 0.toByte) {\n        hash ++ siblingHash\n    } else {\n        siblingHash ++ hash\n    }\n\n    Blake2b256(prefix +: concatenated)\n}"
+    },
+    {
+      "heading": "3. Compare with Merkle Root#",
+      "content": "After iterating through all levels of the proof, the final computed hash should be compared with the expected Merkle root value. If the hashes match, the proof is valid, confirming that the transaction or data element is included in the block.\nCode Implementation: The comparison of the computed hash with the expected Merkle root is the final step in the validation process. This ensures that the entire proof is correct and that the data has not been tampered with.\nassert(computedHash == expectedMerkleRoot)"
+    },
+    {
+      "heading": "Flowchart of Merkle Proof Validation#",
+      "content": "The following flowchart visualizes the Merkle proof validation process described above:\ngraph TD\n        A[Compute Leaf Node Hash] --> B{Check Prefix}\n        B --> |Prefix is 0| C[Concatenate Hash with Sibling Hash and Prefix]\n        B --> |Prefix is 1| D[Concatenate Prefix with Sibling Hash and Hash]\n        C --> E[Hash the Result using Blake2b256]\n        D --> E[Hash the Result using Blake2b256]\n        E --> F{Next Level?}\n        F --> |Yes| B\n        F --> |No| G[Compare Final Hash with Merkle Root]"
+    },
+    {
+      "heading": "Example: Validating a Transaction's Inclusion in a Block#",
+      "content": "Here is a concrete example of how to validate a Merkle proof for a transaction included in an Ergo block header:\nCode Implementation: This example demonstrates how to validate a transaction's inclusion in a block using a Merkle proof. The code is based on the structures and functions provided in the Scrypto library and the Ergo codebase.\nimport scorex.crypto.authds.merkle.MerkleProof\nimport scorex.crypto.authds.{LeafData, Side}\nimport scorex.crypto.hash.{Blake2b256, Digest32}\nimport scorex.util.encode.Base16\n\nimplicit val hashFn: Blake2b256.type = Blake2b256\n\nval txId = \"642c15c62553edd8fd9af9a6f754f3c7a6c03faacd0c9b9d5b7d11052c6c6fe8\"\nval msgPreimage = Base16.decode(\"01fb9e35f8a73c128b73e8fde5c108228060d68f11a69359ee0fb9bfd84e7ecde6d19957ccbbe75b075b3baf1cac6126b6e80b5770258f4cec29fbde92337faeec74c851610658a40f5ae74aa3a4babd5751bd827a6ccc1fe069468ef487cb90a8c452f6f90ab0b6c818f19b5d17befd85de199d533893a359eb25e7804c8b5d7514d784c8e0e52dabae6e89a9d6ed9c84388b228e7cdee09462488c636a87931d656eb8b40f82a507008ccacbee05000000\").get\n\nval txsRoot = msgPreimage.slice(65, 97)\nval leafHash = Blake2b256(0.toByte +: Base16.decode(txId).get)\n\nval levelsEncoded = Seq(\"0139b79af823a92aa72ced2c6d9e7f7f4687de5b5af7fab0ad205d3e54bda3f3ae\")\nval levels = levelsEncoded.map { le =>\n    val leBytes = Base16.decode(le).get\n    val side: Byte = leBytes.head\n    val digest = leBytes.tail\n    (Digest32 @@ digest, Side @@ side)\n}\n\nval merkleProof = MerkleProof[Digest32](LeafData @@ Base16.decode(txId).get, levels)\nassert(merkleProof.valid(Digest32 @@ txsRoot))"
+    },
+    {
+      "heading": "Conclusion#",
+      "content": "Validating Merkle proofs is a crucial process that ensures data integrity and enables efficient verification without the need to download the entire blockchain. By understanding and implementing this process in Ergo, you can enhance the security and efficiency of your blockchain applications."
+    },
+    {
+      "heading": "Source References:#",
+      "content": "Scrypto: Merkle Proofs Implementation: This repository contains the core cryptographic components used in Ergo, including the implementation of Merkle proofs.\nErgo: BlockTransactions.scala: Provides the logic for handling transactions within a block, including Merkle Tree construction and proof validation."
+    }
+  ],
+  "qa_pairs": []
+}

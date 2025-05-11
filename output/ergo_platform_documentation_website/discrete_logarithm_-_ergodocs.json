@@ -1,0 +1,60 @@
+{
+  "title": "Discrete Logarithm - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/data-model/dlog/",
+  "summary": "Discrete logarithm proofs are a fundamental cryptographic primitive in Ergo's signature verification mechanism, based on the computational hardness of the discrete logarithm problem in elliptic curve cryptography. In ErgoScript, discrete logarithm proofs are implemented using the proveDlog() predicate, which returns true if a valid proof of knowledge can be provided.",
+  "keywords": [
+    "logarithm",
+    "proof",
+    "primitive",
+    "ergo",
+    "signature",
+    "verification",
+    "mechanism",
+    "hardness",
+    "problem",
+    "curve",
+    "cryptography",
+    "ergoscript",
+    "predicate",
+    "knowledge"
+  ],
+  "sections": [
+    {
+      "heading": "Overview#",
+      "content": "Discrete logarithm proofs are a fundamental cryptographic primitive in Ergo's signature verification mechanism, based on the computational hardness of the discrete logarithm problem in elliptic curve cryptography."
+    },
+    {
+      "heading": "Key Characteristics#",
+      "content": "Cryptographic Foundation: Proofs of knowledge of a discrete logarithm (DLog) verify signature authenticity without revealing the secret key\nSchnorr Signature Basis: Ergo uses Schnorr signatures built on discrete logarithm proofs"
+    },
+    {
+      "heading": "Technical Details#",
+      "content": "Proof Structure: Demonstrate knowledge of secret exponent w such that g^w = x\ng: Generator of an elliptic curve group\nx: Public key point\nw: Private key"
+    },
+    {
+      "heading": "Related Cryptographic Concepts#",
+      "content": "Sigma Protocols\nThreshold Signatures\nRing Signatures"
+    },
+    {
+      "heading": "Implementation in ErgoScript#",
+      "content": "In ErgoScript, discrete logarithm proofs are implemented using the proveDlog() predicate, which returns true if a valid proof of knowledge can be provided.\n// DLog-based signature verification\nval pubKey = ...  // Public key point\nval signature = ...  // Signature proof\nproveDlog(pubKey)"
+    },
+    {
+      "heading": "Practical Examples#",
+      "content": "Schnorr Signature Verification\nPublic Key Cryptography"
+    },
+    {
+      "heading": "Security Considerations#",
+      "content": "Based on discrete logarithm problem hardness\nEfficient and compact signature verification\nSupports multi-signatures and ring signatures"
+    },
+    {
+      "heading": "Advanced Applications#",
+      "content": "Cryptographic Foundations\nZeroJoin Privacy Protocol\nSidechains Interoperability"
+    },
+    {
+      "heading": "References#",
+      "content": "Cryptographic Primitives\nErgoScript Capabilities"
+    }
+  ],
+  "qa_pairs": []
+}

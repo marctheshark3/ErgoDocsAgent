@@ -1,0 +1,22 @@
+{
+  "title": "Obolflip - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/eco/obolflip/",
+  "summary": "ObolFlip client can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location. You can even deploy it on a server and let other users do bets, earning extra revenue for withdrawals.",
+  "keywords": [
+    "obolflip",
+    "client",
+    "flip",
+    "revenue",
+    "location",
+    "server",
+    "user",
+    "withdrawal"
+  ],
+  "sections": [
+    {
+      "heading": "Obolflip#",
+      "content": "ObolFlip client can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location. You can even deploy it on a server and let other users do bets, earning extra revenue for withdrawals."
+    }
+  ],
+  "qa_pairs": []
+}

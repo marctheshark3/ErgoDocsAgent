@@ -1,0 +1,69 @@
+{
+  "title": "Nautilus - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/wallet/nautilus/",
+  "summary": "Nautilus Wallet is a privacy-focused, web-based wallet designed for the secure management of digital assets within the Ergo ecosystem. It offers an intuitive user interface that caters to both novice and experienced users. Nautilus can be easily installed as a browser extension. Select the version compatible with your browser: For a step-by-step guide on setting up and using Nautilus, watch the comprehensive video tutorial. There is community interest in providing Nautilus Wallet translations for different languages to improve accessibility.",
+  "keywords": [
+    "nautilus",
+    "wallet",
+    "privacy",
+    "management",
+    "asset",
+    "ergo",
+    "ecosystem",
+    "user",
+    "interface",
+    "novice",
+    "browser",
+    "extension",
+    "version",
+    "step",
+    "guide",
+    "video",
+    "tutorial",
+    "community",
+    "interest",
+    "translation",
+    "language",
+    "accessibility",
+    "support",
+    "process",
+    "channel",
+    "status",
+    "contribution",
+    "guideline",
+    "update",
+    "discussion",
+    "telegram",
+    "discord",
+    "chat",
+    "conversation",
+    "experience"
+  ],
+  "sections": [
+    {
+      "heading": "Nautilus Wallet#",
+      "content": "Nautilus Wallet is a privacy-focused, web-based wallet designed for the secure management of digital assets within the Ergo ecosystem. It offers an intuitive user interface that caters to both novice and experienced users."
+    },
+    {
+      "heading": "Features#",
+      "content": "Privacy Enhanced: Nautilus prioritizes user privacy, employing advanced security measures to protect your digital assets.\nLedger Integration: For those seeking an extra layer of security, Nautilus supports Ledger hardware wallets, currently available in developer mode for advanced users and developers."
+    },
+    {
+      "heading": "Installation#",
+      "content": "Nautilus can be easily installed as a browser extension. Select the version compatible with your browser:\nChrome Web Store - Install Nautilus for Google Chrome.\nFirefox Add-ons - Get Nautilus for Mozilla Firefox."
+    },
+    {
+      "heading": "Getting Started#",
+      "content": "Comprehensive Video Guide\nFor a step-by-step guide on setting up and using Nautilus, watch the comprehensive video tutorial."
+    },
+    {
+      "heading": "Internationalization (i18n)#",
+      "content": "There is community interest in providing Nautilus Wallet translations for different languages to improve accessibility. While multi-language support may be planned, the specific process for contributing translations might vary. If you are interested in contributing translations, please inquire in the Nautilus community channels linked below for the current status and contribution guidelines."
+    },
+    {
+      "heading": "Community Support#",
+      "content": "Connect with the Nautilus community for support, updates, and discussions:\nJoin the Nautilus community on Telegram or Discord, where the chats are bridged between each other for a cohesive conversation experience."
+    }
+  ],
+  "qa_pairs": []
+}

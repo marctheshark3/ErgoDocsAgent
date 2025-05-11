@@ -1,0 +1,161 @@
+{
+  "title": "Layer 2 - ErgoDocs",
+  "source_url": "https://docs.ergoplatform.com/dev/protocol/scaling/layer2/",
+  "summary": "Layer 2 solutions are secondary frameworks or protocols constructed on top of a Layer 1 blockchain protocol. Their purpose is to enhance the efficiency, scalability, and capabilities of the underlying blockchain by facilitating off-chain transactions or computations. Ergo is compatible with a broad range of Layer 2 solutions derived from other UTXO blockchains. The platform can implement various off-chain solutions like Hydra and sidechains, which help alleviate blockchain congestion and offer benefits akin to ZK-rollups. Join the Layer 2 discussion on Telegram or Discord.",
+  "keywords": [
+    "layer",
+    "solution",
+    "framework",
+    "protocol",
+    "blockchain",
+    "purpose",
+    "efficiency",
+    "scalability",
+    "capability",
+    "chain",
+    "transaction",
+    "computation",
+    "ergo",
+    "range",
+    "utxo",
+    "platform",
+    "hydra",
+    "sidechain",
+    "congestion",
+    "benefit",
+    "rollup",
+    "discussion",
+    "telegram",
+    "discord",
+    "ergoscript",
+    "design",
+    "part",
+    "instance",
+    "developer",
+    "model",
+    "token",
+    "address",
+    "advancement",
+    "time",
+    "datum",
+    "completeness",
+    "input",
+    "contract",
+    "sigma",
+    "enhancement",
+    "variety",
+    "issue",
+    "settlement",
+    "application",
+    "block",
+    "scaling",
+    "sigmachains",
+    "merge",
+    "feature",
+    "chaincash",
+    "peer",
+    "system",
+    "signature",
+    "project",
+    "tree",
+    "structure",
+    "property",
+    "dataset",
+    "ledger",
+    "plasma",
+    "user",
+    "bank",
+    "change",
+    "snapshot",
+    "library",
+    "building",
+    "nipopows",
+    "interoperability",
+    "lightning",
+    "network",
+    "payment",
+    "channel",
+    "wallet",
+    "participant",
+    "exchange",
+    "asset",
+    "price",
+    "oracle",
+    "trading",
+    "borrowing",
+    "lending",
+    "type",
+    "research"
+  ],
+  "sections": [
+    {
+      "heading": "Layer 2: Off-Chain#",
+      "content": "Layer 2 solutions are secondary frameworks or protocols constructed on top of a Layer 1 blockchain protocol. Their purpose is to enhance the efficiency, scalability, and capabilities of the underlying blockchain by facilitating off-chain transactions or computations.\nErgo is compatible with a broad range of Layer 2 solutions derived from other UTXO blockchains. The platform can implement various off-chain solutions like Hydra and sidechains, which help alleviate blockchain congestion and offer benefits akin to ZK-rollups.\nJoin the Layer 2 discussion on Telegram or Discord."
+    },
+    {
+      "heading": "ErgoScript: Powering Layer 2 Transactions#",
+      "content": "ErgoScript's flexible design allows large parts of transactions to be executed on Layer 2, which are then settled on the Ergo blockchain in a single transaction. For instance, a developer successfully used the eUTXO model to airdrop native tokens to 10,000 addresses simultaneously.\nErgoScript features several advancements like time-weighted data, Turing completeness, read-only data inputs, multi-stage contracts, sigma protocols, NIPoPoWs, and more. These enhancements enable a variety of Layer 2 protocols, each addressing scalability issues in their unique way.\nErgo serves as a settlement layer for multiple Layer 2 protocols and applications."
+    },
+    {
+      "heading": "Layer 2 Solutions Leveraging Sub-Blocks#",
+      "content": "While sub-blocks are a Layer 1 protocol enhancement, they enable several Layer 2 scaling solutions:\nFaster confirmation times for Layer 2 protocols\nEnhanced support for payment channels\nMore efficient state channel operations\nImproved settlement layer for off-chain transactions\nLayer 2 protocols can utilize sub-blocks to:\nGroup off-chain transactions more efficiently\nReduce settlement times\nIncrease throughput for Layer 2 applications\nEnable more responsive user experiences"
+    },
+    {
+      "heading": "SigmaChains and Sidechains#",
+      "content": "SigmaChains leverage Ergo's Sigma contracts to create versatile sidechains that can operate as either merge-mined sidechains or standalone blockchains. Key features include:\nEnhanced scalability and privacy features\nExperimental platform for new features\nVarious chain commitment options for main chain security\nComprehensive technical documentation in \"Sigma Deck 2\""
+    },
+    {
+      "heading": "ChainCash#",
+      "content": "ChainCash is developing a decentralized, peer-to-peer monetary system using Layer 2 derivative signature chains. The project features:\nElastic money creation capabilities\nDigital notes representing various values\nSupport for digital tokens and real-world assets\nImplementation of top-up transactions and blockchain scanning"
+    },
+    {
+      "heading": "Plasma: Enhancing Data Structures#",
+      "content": "Ergo inherently supports AVL trees, an efficient authenticated data structure that allows for proving different properties of the data without accessing the entire dataset.\nThe ledger is maintained as an AVL tree using Plasma. Users conduct off-chain transactions with the bank, resulting in changes in the ledger. The bank periodically publishes a compact snapshot of the ledger on the blockchain.\nThe Plasma Library enables the building of Plasma chains, currently used primarily for:\nData compression\nContract simplification\nPlasma staking contracts\nOff-chain operation management"
+    },
+    {
+      "heading": "NIPoPoWs: Facilitating Scalability#",
+      "content": "NiPoPoWs enhance blockchain interoperability and scalability through:"
+    },
+    {
+      "heading": "Enhanced Security through Interoperability#",
+      "content": "Smaller chains can leverage security of larger networks\nPeriodic proof-of-work submissions between chains\nCryptographically secure asset transfers\nEnables seamless asset transfers without centralized intermediaries"
+    },
+    {
+      "heading": "Cross-Chain Communications#",
+      "content": "Facilitates smart contract executions across networks\nEnables consolidated data verification\nSupports integrated blockchain ecosystems\nImproves scalability of Layer 2 solutions like sidechains"
+    },
+    {
+      "heading": "Applications in Layer 2 Technologies#",
+      "content": "Sidechains: NIPoPoWs enable sidechains to operate more autonomously while maintaining security\nState Channels: Transactions can be processed off-chain with assurances of eventual consistency\nCross-Chain Verification: Enables efficient verification of transactions across different chains\nSecurity Enhancement: Smaller chains can leverage the security of larger networks"
+    },
+    {
+      "heading": "Lightning Network#",
+      "content": "The Lightning Network creates payment channels through multi-signature wallets, enabling off-chain transactions between participants."
+    },
+    {
+      "heading": "Rainbow Network#",
+      "content": "A non-custodial exchange and payment network supporting multiple assets through price oracles, enabling off-chain trading, borrowing, and lending."
+    },
+    {
+      "heading": "Rollups#",
+      "content": "Two primary types of rollups are being explored:\nOptimistic Rollups: Handle transactions on parallel chains using fraud-proof principles\nZK-Rollups: Utilize zkSNARKs to bundle hundreds of transfers off-chain"
+    },
+    {
+      "heading": "Additional Solutions#",
+      "content": "Hydra: Implements isomorphic state channels for multi-party transactions\nZero-Knowledge Contingent Payments: Enable trustless knowledge-based payments\nFairSwap/FastSwap protocols: Provide secure and efficient transaction methods\nCoinpools: Group transactions for improved efficiency"
+    },
+    {
+      "heading": "Security and Consensus#",
+      "content": "Careful evaluation of security implications for new Layer 2 solutions\nSelection of appropriate consensus mechanisms for different applications\nImplementation of robust fraud prevention measures"
+    },
+    {
+      "heading": "User Experience#",
+      "content": "Development of mempool chaining for immediate transaction feedback\nFocus on seamless integration between Layer 1 and Layer 2 solutions\nOptimization of transaction processing and confirmation times"
+    },
+    {
+      "heading": "Research and Development#",
+      "content": "Ongoing research continues to explore:\nAdvanced sharding techniques\nNovel consensus mechanisms\nImproved transaction ordering\nEnhanced mempool management"
+    }
+  ],
+  "qa_pairs": []
+}
