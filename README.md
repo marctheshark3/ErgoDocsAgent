@@ -113,6 +113,7 @@ ErgoDocsAgent/
 ├── config.json               # Configuration file
 ├── requirements.txt          # Python dependencies
 ├── env.example               # Example environment variables
+├── diagrams.md               # Architecture diagrams
 ├── src/                      # Source code
 │   ├── main.py               # Main entry point
 │   ├── ingestion/            # Source ingestion modules
@@ -122,6 +123,15 @@ ErgoDocsAgent/
 │   └── utils/                # Utility functions
 └── output/                   # Generated documentation
 ```
+
+## Architecture Diagrams
+
+The system architecture and workflows are documented with Mermaid diagrams in [diagrams.md](./diagrams.md), which includes:
+
+- Component Architecture
+- Sequence Diagram
+- Process Flow
+- Class Diagram
 
 ## Contributing
 
