@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of proxy contracts?",
+    "answer": "The purpose of proxy contracts is to outsource transaction generation to an external service or dApp, such as avoiding wallet limitations or scaling dApps to fulfill many requests without double-spending or data invalidation."
+  },
+  {
+    "question": "What are some examples of dApp infrastructure violations that proxy contracts should prevent?",
+    "answer": "Proxy contracts should prevent malicious activities such as a whale trying to steal UI fees, prevent user requests from being executed, or imitate the bank box to take fees."
+  },
+  {
+    "question": "What are the general design goals for proxy contracts?",
+    "answer": "Proxy contracts should be designed to prevent dApp developers or attackers from taking advantage of user's funds, and to preserve the integrity of the whole dApp infrastructure."
+  },
+  {
+    "question": "What is the background of proxy contracts?",
+    "answer": "The idea of proxy contracts came to life with the Ergo Assembler, which helped dApp developments like Ergo Auction House, ErgoUtils, and SigmaUSD web interface, despite the lack of a wallet-bridge like MetaMask in the Ergo ecosystem."
+  },
+  {
+    "question": "How did the structure of proxy contracts evolve over time?",
+    "answer": "The initial structure of proxy contracts focused on protecting users from losing their funds, but proved insufficient for preserving the integrity of the whole dApp infrastructure, leading to the need for a more comprehensive design."
+  }
+]

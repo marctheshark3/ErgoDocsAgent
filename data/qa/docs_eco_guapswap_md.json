@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is GuapSwap?",
+    "answer": "GuapSwap is a fully decentralized smart contract profit swapping service on the Ergo Blockchain."
+  },
+  {
+    "question": "What are the key features of GuapSwap?",
+    "answer": "GuapSwap is a DEX (decentralized exchange), allows swapping, and is a dApp (decentralized application)."
+  },
+  {
+    "question": "Where can I find the GuapSwap GitHub repository?",
+    "answer": "The GuapSwap GitHub repository can be found at https://github.com/GuapSwap."
+  },
+  {
+    "question": "Where can I find the GuapSwap project report?",
+    "answer": "The GuapSwap project report can be found at ../events/pdf/GuapSwap_-_ErgoHack3_Project_Report.pdf."
+  },
+  {
+    "question": "What blockchain is GuapSwap built on?",
+    "answer": "GuapSwap is built on the Ergo Blockchain."
+  }
+]

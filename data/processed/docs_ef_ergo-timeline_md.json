@@ -1,0 +1,38 @@
+{
+  "id": "docs_ef_ergo-timeline_md",
+  "title": "ergo-timeline.md",
+  "summary": "This document is a redirect page that informs the reader that the content previously located at this URL has been moved to the \"roadmap.md\" file. The document contains a brief introduction and metadata tags indicating that this page was a timeline or roadmap.",
+  "qa_pairs": [
+    {
+      "question": "What is the title of the document?",
+      "answer": "ergo-timeline.md"
+    },
+    {
+      "question": "What is the main content of the document?",
+      "answer": "This page has moved to [roadmap](roadmap.md)"
+    },
+    {
+      "question": "What are the tags associated with the document?",
+      "answer": "Timeline, Roadmap"
+    },
+    {
+      "question": "What is the format of the document?",
+      "answer": "Markdown"
+    },
+    {
+      "question": "What is the purpose of the document?",
+      "answer": "To provide a timeline or roadmap"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Timeline\n  - Roadmap\n---\n\nThis page has moved to [roadmap](roadmap.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/ef/ergo-timeline.md",
+  "processed_at": "2025-05-11T19:49:25.988882",
+  "ai_processed": true
+}

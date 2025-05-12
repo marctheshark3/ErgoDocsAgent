@@ -1,0 +1,38 @@
+{
+  "id": "docs_uses_mixer_md",
+  "title": "Mixers",
+  "summary": "Mixers, also known as coin tumblers, are tools that restore the fungibility of digital notes. The basic mixing scheme on Ergo, ZeroJoin, is based on ring signatures and proof of knowledge for a Diffie-Hellman tuple, and is implemented as ErgoMixer.",
+  "qa_pairs": [
+    {
+      "question": "What are coin mixers or tumblers?",
+      "answer": "Coin mixers or tumblers are basic tools that restore the fungibility of digital notes."
+    },
+    {
+      "question": "What is the basic mixing scheme on Ergo called?",
+      "answer": "The basic mixing scheme on Ergo is called ZeroJoin, and it is based on ring signatures and proof of knowledge for a Diffie-Hellman tuple."
+    },
+    {
+      "question": "How is ZeroJoin implemented on Ergo?",
+      "answer": "ZeroJoin is implemented as ErgoMixer on Ergo."
+    },
+    {
+      "question": "What is the purpose of coin mixers or tumblers?",
+      "answer": "The purpose of coin mixers or tumblers is to restore the fungibility of digital notes."
+    },
+    {
+      "question": "What are the key technical details of the ZeroJoin mixing scheme?",
+      "answer": "ZeroJoin is based on ring signatures and proof of knowledge for a Diffie-Hellman tuple."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mixers",
+      "level": 1,
+      "content": "Coin *Mixers* or *Tumblers* are basic tools that restore the fungibility of digital notes.\n\nThe basic mixing scheme on Ergo, ZeroJoin, is based on ring signatures and proof of knowledge for a [Diffie-Hellman tuple](diffie.md). It is implemented as [ErgoMixer](ergomixer.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/mixer.md",
+  "processed_at": "2025-05-11T20:03:09.784068",
+  "ai_processed": true
+}

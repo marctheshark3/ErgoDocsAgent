@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is SNISP?",
+    "answer": "Succinct Non-Interactive Share Proofs (SNISPs) that allow for accurate and efficient calculations of performed work on the blockchain."
+  },
+  {
+    "question": "How do SNISPs work?",
+    "answer": "SNISPs use a combination of traditional shared calculation methods and concepts from NEPA Palace to compress the amount of work and the total set of shares that each miner creates, enabling the creation of efficient and decentralised mining pools."
+  },
+  {
+    "question": "What are the benefits of SNISPs?",
+    "answer": "SNISPs incentivise miners to mine near their ideal top values, resulting in more secure and scalable mining pools with greater efficiency and decentralisation than traditional centralised mining pools."
+  },
+  {
+    "question": "What are the applications of SNISPs?",
+    "answer": "SNISPs are applicable to any Proof of Work blockchain and can be used for other applications that involve measuring performed work, such as direct work-based governance or work-backed assets."
+  },
+  {
+    "question": "How do SNISPs compare to centralized mining pools?",
+    "answer": "Centralized mining pools require users to trust the pool operator to distribute rewards fairly, while SNISPs provide a trustless solution for calculating and distributing work."
+  }
+]

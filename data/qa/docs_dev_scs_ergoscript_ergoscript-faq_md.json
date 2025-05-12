@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# ErgoScript FAQ\n\n## Why Does Ergo Use [Coll] Instead of an Array?\n\nErgo uses [Coll] instead of an Array to maintain a one-to-one correspondence between ErgoScript and Scala. In Scala, an Array is mut..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "ErgoScript FAQ"
+  },
+  {
+    "question": "What is the 'Why Does Ergo Use [Coll] Instead of an Array?' section about?",
+    "answer": "Ergo uses [Coll] instead of an Array to maintain a one-to-one correspondence between ErgoScript and ..."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the installation script mentioned in the content?",
+    "answer": "The installation script is used to install a certain software or application."
+  },
+  {
+    "question": "What warning is given about the installation script?",
+    "answer": "The installation script is experimental, as indicated by the warning."
+  },
+  {
+    "question": "What command is provided to run the installation script?",
+    "answer": "The command to run the installation script is: bash -c \"$(curl -s https://node.phenotype.dev)\""
+  },
+  {
+    "question": "What platforms are supported for the installation?",
+    "answer": "The supported platforms are Mac, Linux, Pi, and Windows."
+  },
+  {
+    "question": "Where can the user find more information about the installation for each platform?",
+    "answer": "The user can find more information about the installation for each platform in the corresponding .md files: mac.md, linux.md, pi.md, and windows.md."
+  }
+]

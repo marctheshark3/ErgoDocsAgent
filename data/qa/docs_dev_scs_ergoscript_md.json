@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoScript?",
+    "answer": "ErgoScript is a powerful, developer-friendly programming language designed specifically for writing smart contracts on the Ergo blockchain."
+  },
+  {
+    "question": "How does ErgoScript differ from the account model used by Ethereum?",
+    "answer": "ErgoScript uses a declarative eUTXO-based programming model, where contracts specify conditions under which funds can be spent, rather than dictating state changes like the imperative account model."
+  },
+  {
+    "question": "What is the role of Sigma Protocols in Ergo's scripting language?",
+    "answer": "Ergo's support for Sigma Protocols (generalized Schnorr proofs) provides efficient and composable building blocks for zero-knowledge proofs, enabling advanced cryptographic functionalities like ring signatures and threshold signatures."
+  },
+  {
+    "question": "How does Ergo's architecture improve scalability compared to the account model?",
+    "answer": "In Ergo, transactions are typically created off-chain, and only the validation checks occur on-chain, significantly reducing the computational load on validating nodes. The immutable nature of the transaction graph also allows for various optimizations to improve throughput."
+  },
+  {
+    "question": "What is the purpose of light verifying nodes (NIPoPoWs) in Ergo's network?",
+    "answer": "Ergo's design facilitates light verifying nodes (via NIPoPoWs), enhancing network scalability and accessibility by allowing for efficient verification of the blockchain without requiring full node synchronization."
+  }
+]

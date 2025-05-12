@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the difference between the Account model and the UTXO model?",
+    "answer": "In the Account model, you have a single account where you receive your coins. In the UTXO model, every transaction creates a new 'box', and your balance is the sum of all the boxes linked to your addresses."
+  },
+  {
+    "question": "How do new addresses and boxes work in the UTXO model?",
+    "answer": "When you generate a new address, a secondary box is created to hold your coins. You can create an unlimited number of new boxes to hold your coins, and every receiving and spending action will also create an additional unique box."
+  },
+  {
+    "question": "How does the network process transactions in the UTXO model?",
+    "answer": "The network scans your 'boxes' to verify if you have your tokens and then initiates the transaction. You cannot predict which boxes are going to be spent when making a transaction."
+  },
+  {
+    "question": "What is the difference in how coins are stored between the Account model and the UTXO model?",
+    "answer": "In the Account model, coins remain in the same box. In the UTXO model, coins are stored in one-use UTXO boxes and not in long-living accounts."
+  },
+  {
+    "question": "Why might you see a long list of tokens when swapping a small amount of coins in the UTXO model?",
+    "answer": "This is how the UTXO model Transaction works - its storage is different from the Accounts model, where coins will be stored in one-use UTXO boxes and not in long-living accounts."
+  }
+]

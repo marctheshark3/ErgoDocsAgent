@@ -1,0 +1,58 @@
+{
+  "id": "docs_mining_standards_eip27_md",
+  "title": "EIP27: Emission Retargeting Soft-Fork",
+  "summary": "Ergo is a Proof of Work blockchain with a defined emission schedule for the release of ERG tokens. The original emission schedule was set to be completed within eight years with a total supply of 97,739,925 ERG. Recently, the Ergo Foundation proposed EIP27 to extend the emission schedule by approximately 17.38 years to ensure the long-term sustainability of the mining protocol. The proposal was approved by the mining community with over 90% of the votes. The new emission rules will integrate with the original schedule, where block rewards are reduced every three months by 3 ERG/block. Once implemented, a portion of the block rewards will be sent to a remission contract that will release block rewards until approximately 2045.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of EIP27?",
+      "answer": "EIP27 proposes an adjustment to Ergo's emission schedule to ensure the long-term sustainability of the mining protocol."
+    },
+    {
+      "question": "What was the original emission schedule for Ergo?",
+      "answer": "For the first two years, each block was set to release 75 ERG into circulation. After that, the emission rate was set to drop by 3 ERG/block every three months until the total supply of 97,739,925 ERG was completely mined over eight years."
+    },
+    {
+      "question": "How does EIP27 change the emission schedule?",
+      "answer": "EIP27 extends the emission schedule by approximately 17.38 years, with a portion of the supply being put into a remission contract that will release block rewards until around 2045."
+    },
+    {
+      "question": "What was the process for approving EIP27?",
+      "answer": "EIP27 required a 90% pass vote from the Ergo mining community in order to be scheduled for implementation, and the mining community voted over 90% in favor of the proposal."
+    },
+    {
+      "question": "What was the motivation behind the emission schedule changes proposed in EIP27?",
+      "answer": "The Ergo Foundation was concerned that the ecosystem may need more time before the end of the original eight-year emission schedule to develop enough dApps and users to incentivize miners to maintain the network through transaction fees and storage rent."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - EIP\n---"
+    },
+    {
+      "heading": "EIP27: Emission Retargeting Soft-Fork",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Ergo Tokenomics and Emission",
+      "level": 2,
+      "content": "As a Proof of Work blockchain, Ergo has a defined emission schedule for the release of ERG tokens. When Ergo launched in 2019, there was no ICO (initial coin offering), no pre-mine and no pre-allocation of tokens to any founders or venture capitalists. Once the mainnet was activated, Ergo\u2019s emission schedule was set to be completed within eight years with a strict supply of 97,739,925 ERG. During the first two and a half (2.5) years, the emission schedule sent a small portion of each block to the Ergo Foundation Treasury - for the purposes of funding promotion and development on Ergo. After two and a half years, the Ergo Foundation ceased to receive any rewards from the mining protocol and will have received 4.43% of the total ERG supply to fund that entity\u2019s initiatives."
+    },
+    {
+      "heading": "The Original Emission Schedule",
+      "level": 2,
+      "content": "Ergo currently mines blocks every two minutes. For the first two years, each block was set to release 75 ERG into circulation. At the end of the 2nd year, the emission rate was set to drop by 3 ERG/block with a schedule that would see block rewards further reduced by 3 ERG every three months. After eight years, the total supply of ERG would have been completely mined and the mining protocol would be reliant on transaction fees and Storage Rent to reward miners."
+    },
+    {
+      "heading": "EIP27 and the Adjustment of Ergo\u2019s Emission Schedule",
+      "level": 2,
+      "content": "Recently, the Ergo Foundation undertook the initiative to ensure the long-term sustainability of the mining protocol by proposing an amendment to the emission schedule. As the blockchain is still in the early stages of focusing on promotion and development, there was a concern that the ecosystem may need more time before the end of the eight-year emission schedule. If there are not enough dApps and users in the ecosystem at the end of the original emission schedule, there may not be enough transactions to incentivize miners to maintain the network.\n\nErgo\u2019s co-founder, Alex Chepurnoy, proposed a solution to this possible scenario. The proposal, EIP27, would see Ergo emissions extended by approximately 17.38 years, thereby offering the time to develop the necessary crypto-economic security for the blockchain. The plan alters the amount of the block rewards so that a portion of the supply can be put into a remission contract that will release block rewards until approximately 2045.\n\nOn Ergo, miners enjoy the ability to suggest and vote on proposed changes to the network. With EIP27, the proposal required a 90% pass vote in order to be scheduled for implementation. The mining community voted over 90% in favor of this proposal and after successful testnet implementation, the new emission schedule is slated for deployment with block #777217.\n\nChepurnoy provided the following breakdown of the remission in a recent EIP27 update on an Ergo Forum post:\n\n> \u201cIf block reward is not less than 15 ERG, send 12 ERG from it to the remission contract\".\n> \"Otherwise, block reward R is less than 15 ERG, send R - 3 ERG from it to the remission contract.\u201d\n\nThese new emission rules will be integrated with the original emission schedule of the Whitepaper. Currently, block rewards are reduced every three months by 3 ERG/block - this will still be the case after EIP27 is activated. However, once implemented (approximately June 21), the block size will be 51 ERG/block. Based on the original emission schedule, the next reduction in rewards will take place around July 2, 2022. The block rewards will be reduced by 3 ERG, therefore the total reward for each block will be 48 ERG. Three months from that date, the block rewards will be 45 ERG/block, and so on. This reduction schedule will continue until block rewards are 3 ERG/block. Block rewards will remain steady at 3 ERG/block until the remission contract has been depleted.\n\nEIP27 is a commitment to ensuring the long-term and sustained growth of Ergo. Since changes in the emission schedule can not be implemented without consensus within the mining community (90% pass is required), EIP27 represents the collaborative spirit of the Ergo community to collectively build a better blockchain for everyone. For more details on the implementation of EIP27, please see Chepurnoy's Ergo Forum post."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/standards/eip27.md",
+  "processed_at": "2025-05-11T19:53:11.032085",
+  "ai_processed": true
+}

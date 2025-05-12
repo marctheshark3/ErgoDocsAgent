@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the standard defined in BIP-0044 for deterministic wallets?",
+    "answer": "BIP-0044 defines a logical hierarchy for deterministic wallets with a path of m / 44' / coin_type' / account' / change / address_index."
+  },
+  {
+    "question": "What is the coin type for the Ergo ecosystem according to EIP-0003?",
+    "answer": "The coin type for the Ergo ecosystem is 429, derived from the numerical values of the ASCII characters for the word 'ergo'."
+  },
+  {
+    "question": "How does the 'change' level differ between BIP-0044 and EIP-0003?",
+    "answer": "In BIP-0044, the constant 0 is used for external addresses and constant 1 for internal/change addresses. EIP-0003 does not use constant 1 at all, and all wallets should have any change within a transaction go back to the address using constant 0."
+  },
+  {
+    "question": "How can you derive an address using the Ergo node's wallet API?",
+    "answer": "Navigate to localhost:9053/swagger#/wallet/walletDeriveKey, click 'Try it out', enter the derivation path 'm/44'/429'/0'/0/0', and click execute to get the derived address."
+  },
+  {
+    "question": "What is the default first key pair for an Ergo wallet according to the EIP-0003 standard?",
+    "answer": "The default first key pair for an Ergo wallet is m / 44' / 429' / 0' / 0 / 0."
+  }
+]

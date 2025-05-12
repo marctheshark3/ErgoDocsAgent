@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Ergo's 'demurrage' or storage rent mechanism?",
+    "answer": "Starting from block 1,051,200 (July 20th, 2023), miners can charge storage rent or fully spend the box if its value doesn't cover the rent."
+  },
+  {
+    "question": "What are the key features of Ergo's storage rent mechanism?",
+    "answer": "- Storage fees serve as an additional source of rewards for miners, supplementing block and transaction rewards.\n- By reducing the storage load, storage fees eliminate potential extra costs that could arise from excessive state growth.\n- Storage fees stimulate coin circulation and deter deflation, thereby preventing illiquidity and congestion in the currency system."
+  },
+  {
+    "question": "How is the storage rent fee calculated in Ergo?",
+    "answer": "Demurrage is a nominal fee levied on unspent output after four years. The fee per byte is determined by the storage rent subprotocol. For a box without tokens and complex scripts, this amounts to approximately 0.14 ERG every four years."
+  },
+  {
+    "question": "How does Ergo's demurrage mechanism reward miners?",
+    "answer": "Ergo's demurrage mechanism rewards miners uniquely by allowing them to claim valuable assets within a UTXO if the ERGs available are insufficient to cover the rent. This principle applies to various assets, including NFTs and stablecoins like SigUSD."
+  },
+  {
+    "question": "What is the potential risk for users regarding Ergo's demurrage mechanism?",
+    "answer": "While it enhances network security and reduces blockchain bloat, Ergo's demurrage mechanism could lead to uninformed users inadvertently losing valuable assets if they fail to maintain enough ERGs to protect their valuable assets. Users are strongly advised to thoroughly understand Ergo's demurrage mechanism."
+  }
+]

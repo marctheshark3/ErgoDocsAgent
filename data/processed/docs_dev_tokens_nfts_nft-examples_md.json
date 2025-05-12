@@ -1,0 +1,78 @@
+{
+  "id": "docs_dev_tokens_nfts_nft-examples_md",
+  "title": "NFT Examples",
+  "summary": "This document provides examples and code snippets for minting NFTs (Non-Fungible Tokens) on the Ergo blockchain. It covers two approaches:\n\n1. Using Scala with the \"minting-for-dummies\" tool, which provides a basic way to mint NFTs quickly.\n\n2. Using the Ergo Python Appkit, which allows minting NFTs by initializing an ErgoAppKit instance and calling the `mintToken` method with the required parameters.\n\nThe document also includes references to related Ergo Python Appkit modules and classes, as well as additional examples for bulk minting NFTs with royalties and on-chain NFTs. It provides links to the relevant GitHub repositories and documentation for further information.",
+  "qa_pairs": [
+    {
+      "question": "What is the minting-for-dummies tool used for?",
+      "answer": "minting-for-dummies is a basic tool for NFT minting quickly in Scala."
+    },
+    {
+      "question": "Where can you find the mint() logic in the minting-for-dummies project?",
+      "answer": "You can see the mint() logic at https://github.com/lucagdangelo/minting-for-dummies/blob/cd99049f13eb6ab4489f0f880e8d36e33b27bdb2/src/main/scala/app/MintForDummiesCommands.scala#L11"
+    },
+    {
+      "question": "How do you mint an NFT using the Ergo Python Appkit?",
+      "answer": "To mint an NFT using the Ergo Python Appkit, you need to initialize the ErgoAppKit instance with the appropriate parameters and then call the mintToken method with the required parameters such as value, tokenId, tokenName, tokenDesc, mintAmount, decimals, and contract."
+    },
+    {
+      "question": "What are the required parameters for the mintToken method in the Ergo Python Appkit?",
+      "answer": "The required parameters for the mintToken method include value, tokenId, tokenName, tokenDesc, mintAmount, decimals, and contract."
+    },
+    {
+      "question": "What is the purpose of the ergo-python-appkit library?",
+      "answer": "The ergo-python-appkit library provides a way to mint NFTs on the Ergo blockchain using Python."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "NFT Examples",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Using Scala",
+      "level": 2,
+      "content": "[minting-for-dummies](https://github.com/lucagdangelo/minting-for-dummies) is a basic tool for NFT minting quickly in Scala. \n\nYou can see the [mint() logic here](https://github.com/lucagdangelo/minting-for-dummies/blob/cd99049f13eb6ab4489f0f880e8d36e33b27bdb2/src/main/scala/app/MintForDummiesCommands.scala#L11)"
+    },
+    {
+      "heading": "Using Ergo Python Appkit",
+      "level": 2,
+      "content": "To mint an NFT using the [Ergo Python Appkit](https://github.com/ergo-pad/ergo-python-appkit), you can utilize the `mintToken` method provided by the `ErgoAppKit` class. First, you need to initialize the ErgoAppKit instance with the appropriate parameters such as nodeUrl, networkType, explorerUrl, and nodeApiKey. Then, you can call the mintToken method with the required parameters, including the value, tokenId, tokenName, tokenDesc, mintAmount, decimals, and contract.\n\nHere's an example of how to mint an NFT using the ergo-python-appkit:\n\n```python\nfrom ergo_python_appkit import ErgoAppKit\nfrom org.ergoplatform.appkit import ErgoContract"
+    },
+    {
+      "heading": "Initialize ErgoAppKit instance",
+      "level": 1,
+      "content": "appKit = ErgoAppKit(nodeUrl=\"https://ergo-node-url\", networkType=\"mainnet\", explorerUrl=\"https://ergo-explorer-url\", nodeApiKey=\"your-node-api-key\")"
+    },
+    {
+      "heading": "Define the NFT parameters",
+      "level": 1,
+      "content": "value = 1000000\ntokenId = \"your-token-id\"\ntokenName = \"Your Token Name\"\ntokenDesc = \"Your Token Description\"\nmintAmount = 1\ndecimals = 0"
+    },
+    {
+      "heading": "Compile the contract",
+      "level": 1,
+      "content": "contract = ErgoContract.compile(\"sigmaProp(true)\")"
+    },
+    {
+      "heading": "Mint the NFT",
+      "level": 1,
+      "content": "appKit.mintToken(value, tokenId, tokenName, tokenDesc, mintAmount, decimals, contract)\n```\n\nAfter minting the NFT, you can use other methods provided by the ErgoAppKit class to interact with the NFT, such as transferring it to another address or querying its properties.\n\nReference links:\n\n- [ErgoBox](https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/ErgoBox.py)\n- [ErgoAppKit](https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/appkit.py)\n- [ErgoTransaction](https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/ErgoTransaction.py)\n- [ergo-python-appkit module](https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/__init__.py)\n- [Building transaction and minting a token using AppKit from Python](appkit-node.md)."
+    },
+    {
+      "heading": "More Examples",
+      "level": 2,
+      "content": "- [Bulk Mint with Royalties using v1 design in Python](https://github.com/mgpai22/ergpy/blob/main/examples/example_5_bulk_mint_with_royalty.py)\n- [On-Chain NFTs](on-chain.md)"
+    },
+    {
+      "heading": "References",
+      "level": 2,
+      "content": "* [Eip4TokenBuilder on GitHub](https://github.com/ergoplatform/ergo-appkit/lib-impl/src/main/java/org/ergoplatform/appkit/impl/Eip4TokenBuilder.java)\n* [Eip4Token on GitHub](https://github.com/ergoplatform/ergo-appkit/common/src/main/java/org/ergoplatform/appkit/Eip4Token.java)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tokens/nfts/nft-examples.md",
+  "processed_at": "2025-05-11T19:37:27.793384",
+  "ai_processed": true
+}

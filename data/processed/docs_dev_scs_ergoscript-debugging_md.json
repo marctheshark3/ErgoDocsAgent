@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_scs_ergoscript-debugging_md",
+  "title": "Debugging ErgoScript",
+  "summary": "This document provides an overview of the current best practices and available tools for debugging ErgoScript, the smart contract language used in the Ergo blockchain. It emphasizes the importance of thorough off-chain testing and careful contract design, as on-chain debugging is limited. The document discusses current mechanisms like the experimental `debug()` function and transaction failure analysis, as well as external tools such as the Spectrum Finance ErgoScript Simulator, Fleet SDK Playground, and escript.online. The document also outlines future desired features, including execution traces, improved debug output channels, and enhanced simulator capabilities. Overall, the document highlights the challenges of debugging smart contracts on the blockchain and the need for robust off-chain testing and verification.",
+  "qa_pairs": [
+    {
+      "question": "What are the current best practices for debugging ErgoScript smart contracts?",
+      "answer": "1. Thorough Unit Testing, 2. Careful Logic Design, 3. Code Reviews, 4. Formal Verification (Advanced)"
+    },
+    {
+      "question": "What is the purpose of the `debug()` function in ErgoScript?",
+      "answer": "The `debug()` function is intended to output information during script evaluation, likely visible in node logs when a transaction using the script is validated."
+    },
+    {
+      "question": "What are some external tools and simulators available for testing and debugging ErgoScript?",
+      "answer": "1. Spectrum Finance ErgoScript Simulator, 2. Fleet SDK Playground / REPL, 3. escript.online"
+    },
+    {
+      "question": "Why is a strong emphasis placed on off-chain testing and careful design when debugging ErgoScript contracts?",
+      "answer": "Due to the limitations of on-chain debugging, as the code executes within the constrained and deterministic environment of the blockchain, standard interactive debuggers or extensive logging are often not available during on-chain execution."
+    },
+    {
+      "question": "How can transaction failure analysis be used to debug ErgoScript contracts?",
+      "answer": "If a transaction attempting to spend a contract box fails, the node logs might provide some information about the reason, which can offer clues, though they might not pinpoint the exact line of code."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoScript\n  - Smart Contracts\n  - Debugging\n  - Testing\n  - Tools\n  - Guide\n---"
+    },
+    {
+      "heading": "Debugging ErgoScript",
+      "level": 1,
+      "content": "Debugging smart contracts written in ErgoScript presents unique challenges compared to traditional software development. Since the code executes within the constrained and deterministic environment of the blockchain, standard interactive debuggers or extensive logging are often not available during on-chain execution.\n\nThis guide outlines current best practices, available tools, and potential future directions for debugging ErgoScript contracts."
+    },
+    {
+      "heading": "Current Best Practices",
+      "level": 2,
+      "content": "Given the limitations of on-chain debugging, a strong emphasis is placed on **off-chain testing and careful design**:\n\n1.  **Thorough Unit Testing:** This is the most crucial aspect of ensuring contract correctness. Use testing frameworks provided by SDKs like [Appkit (Scala)](../lang/scala.md), [Fleet SDK (JS/TS)](fleet-sdk-recipes.md), or [Sigma-Rust](../lang/rust.md) to simulate transaction scenarios.\n    *   Create test cases covering expected behavior (happy paths).\n    *   Create test cases for edge cases and potential failure conditions (e.g., incorrect inputs, invalid context, insufficient funds, incorrect spending proofs).\n    *   Verify expected outputs, register values, and created boxes.\n    *   Test contract logic under various simulated blockchain heights and context variable states.\n\n2.  **Careful Logic Design:**\n    *   Keep contracts as simple as possible while meeting requirements. Complexity increases the surface area for bugs.\n    *   Break down complex logic into smaller, verifiable parts if feasible.\n    *   Reason carefully about all possible execution paths and state transitions.\n    *   Consider potential economic exploits or unintended consequences.\n\n3.  **Code Reviews:** Have other developers review your contract logic for potential flaws or oversights.\n\n4.  **Formal Verification (Advanced):** For highly critical contracts, formal verification methods might be considered, although tooling for ErgoScript is still evolving in this area."
+    },
+    {
+      "heading": "On-Chain Debugging Mechanisms (Limited)",
+      "level": 2,
+      "content": "Direct debugging on the live blockchain is generally not possible. However, some mechanisms exist or are under development:\n\n1.  **`debug()` Function (Experimental):**\n    *   A `debug()` function has been discussed and potentially added to the interpreter (See Issue [#1035](https://github.com/ergoplatform/sigmastate-interpreter/issues/1035)).\n    *   **Status:** *[Note: Check the linked issue and latest interpreter release notes for current status and availability.]*\n    *   **Purpose:** Intended to output information during script evaluation, likely visible in node logs when a transaction using the script is validated (requires specific node configuration, potentially `-logLevel=debug`).\n    *   **Usage:** *(Add specific syntax, output format/channel details, and configuration requirements here once the feature is finalized and documented in sigmastate-interpreter).*\n    *   **Caution:** Using `debug()` extensively in production contracts might increase execution cost and log verbosity. It's primarily intended for development and testing phases.\n\n2.  **Transaction Failure Analysis:**\n    *   If a transaction attempting to spend a contract box fails, the node logs might provide some information about the reason (e.g., script evaluation failed, assertion triggered). Analyzing these logs can offer clues, though they might not pinpoint the exact line of code."
+    },
+    {
+      "heading": "External Tools & Simulators",
+      "level": 2,
+      "content": "Off-chain simulators provide a more controlled environment for testing and debugging:\n\n1.  **Spectrum Finance ErgoScript Simulator:**\n    *   **Repository:** [github.com/spectrum-finance/ergoscript-simulator](https://github.com/spectrum-finance/ergoscript-simulator)\n    *   **Features:** Allows simulating ErgoScript execution off-chain, potentially offering more insight into evaluation steps than simple unit tests. *(Refer to the simulator's documentation for specific capabilities).*\n\n2.  **Fleet SDK Playground / REPL:**\n    *   The [Fleet SDK](https://fleet-sdk.github.io/docs/overview) might offer playground or REPL (Read-Eval-Print Loop) environments where you can experiment with script snippets and context building.\n\n3.  **escript.online:**\n    *   This online tool ([escript.online](https://escript.online/)) allows writing and compiling ErgoScript, potentially aiding in catching syntax errors and understanding compilation outputs."
+    },
+    {
+      "heading": "Future Directions & Desired Tooling",
+      "level": 2,
+      "content": "The developer community has expressed a desire for more advanced debugging tools, potentially including:\n\n*   **Execution Traces:** Similar to Aiken's `trace` (`?`), providing a step-by-step log of execution flow and intermediate values.\n*   **Improved Debug Output Channels:** Standardized ways for debug information to be routed (e.g., dedicated callbacks for IDEs/tools) beyond simple node logs. (See discussion [here](https://discord.com/channels/668903786361651200/669989266478202917/1311349222850826324)).\n*   **Enhanced Simulator Capabilities:** More sophisticated off-chain simulators with features like breakpoints or state inspection.\n\nAs the Ergo ecosystem evolves, improved debugging tools and techniques are likely to emerge. For now, rigorous off-chain testing remains the cornerstone of developing reliable ErgoScript contracts."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscript-debugging.md",
+  "processed_at": "2025-05-11T19:27:49.613309",
+  "ai_processed": true
+}

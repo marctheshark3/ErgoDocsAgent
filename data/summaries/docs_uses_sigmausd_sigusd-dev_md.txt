@@ -1,0 +1,9 @@
+This document provides a detailed guide on how developers can interact with SigmaUSD, a decentralized stablecoin protocol on the Ergo blockchain, using various frameworks and approaches. It covers three main methods:
+
+1. Accessing SigmaUSD through Mosaik, a lightweight framework for building decentralized applications on Ergo, which includes examples of fetching bank details and calculating SigmaUSD exchange rates.
+
+2. Accessing SigmaUSD through AppKit, a comprehensive framework for interacting with Ergo smart contracts and UTXO management, including setting up an Ergo node and creating transactions.
+
+3. Building new dApps with the ErgoMix approach, which demonstrates a robust mechanism for integrating SigmaUSD into backend services using a service-oriented approach to handle transactions, ensuring privacy and seamless interaction with the SigmaUSD protocol.
+
+The document concludes by highlighting the key features and benefits of each approach, allowing developers to choose the best method for their needs and seamlessly integrate SigmaUSD into their decentralized applications on the Ergo blockchain.

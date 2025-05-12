@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Scrypto?",
+    "answer": "Scrypto is a comprehensive open-source cryptographic toolkit designed to streamline and bolster the integration of cryptography into applications."
+  },
+  {
+    "question": "What are the key features of Scrypto?",
+    "answer": "Scrypto offers features such as AVL+ Trees for efficient and secure data access, and batch Merkle proof serialization and deserialization for efficient data verification."
+  },
+  {
+    "question": "What is the foundation of Scrypto?",
+    "answer": "Scrypto is built on the robust foundation of Scorex, a modular open-source platform renowned for its sturdy blockchain and cryptocurrency frameworks."
+  },
+  {
+    "question": "How does Scrypto benefit developers?",
+    "answer": "By utilizing Scrypto, developers can leverage powerful and reliable cryptographic functionalities, reducing the risks associated with such implementations and enhancing the security of their applications."
+  },
+  {
+    "question": "What is the purpose of AVL+ Trees in Scrypto?",
+    "answer": "AVL+ Trees in Scrypto ensure efficient and secure access to data, guaranteeing optimal performance and data integrity."
+  }
+]

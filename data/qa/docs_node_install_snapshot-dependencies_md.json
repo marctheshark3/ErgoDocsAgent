@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Node\n  - Installation\n  - Build\n  - Source Code\n  - SBT\n  - Development\n  - Release Candidate\n  - SNAPSHOT\n  - Dependencies\n  - Troubleshooting\n---\n\n# Handling SNAPSHOT Dependencies When..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Handling SNAPSHOT Dependencies When Building Ergo Node"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Node\n  - Installation\n  - Build\n  - Source Code\n  - SBT\n  - Development\n  - Release Ca..."
+  },
+  {
+    "question": "What is the 'Handling SNAPSHOT Dependencies When Building Ergo Node' section about?",
+    "answer": "When [building the Ergo node from source](build-from-source.md), especially when working with develo..."
+  },
+  {
+    "question": "What is the 'The Problem' section about?",
+    "answer": "*   **What are SNAPSHOTs?** SNAPSHOT versions represent unstable, work-in-progress builds of librari..."
+  }
+]

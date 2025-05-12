@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoScript?",
+    "answer": "ErgoScript is a powerful and flexible language for creating smart contracts on the Ergo blockchain."
+  },
+  {
+    "question": "What are some of the key tools and resources available for ErgoScript development?",
+    "answer": "Some key tools and resources include playgrounds like escript.online, ErgoScript Playground, Scastie, and Kiosk, as well as courses and tutorials like the ErgoScript 101 Crash Course, Learn ErgoScript By Example Via The Ergo Playground, and the ErgoScript Developer Course from DeCo Education."
+  },
+  {
+    "question": "How does ErgoScript compare to other smart contract languages?",
+    "answer": "ErgoScript is inspired by Scala and is designed specifically for the Ergo blockchain. While it is not Turing-complete, it can be used to build Turing-complete applications by leveraging the extended UTXO model of the Ergo blockchain."
+  },
+  {
+    "question": "What are some of the key features and capabilities of ErgoScript?",
+    "answer": "ErgoScript allows developers to create secure and efficient smart contracts on the Ergo blockchain. It offers a wide range of tools and resources to help developers at all levels, from beginners to experienced professionals."
+  },
+  {
+    "question": "What are some practical applications of ErgoScript?",
+    "answer": "ErgoScript can be used to build a variety of decentralized applications on the Ergo blockchain, including financial applications, supply chain management systems, and more."
+  }
+]

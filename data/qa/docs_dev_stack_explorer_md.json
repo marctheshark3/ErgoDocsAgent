@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Explorer?",
+    "answer": "The Ergo Explorer is a tool that serves as an interface with the Ergo blockchain, helping users explore and monitor the activities happening on the Ergo blockchain."
+  },
+  {
+    "question": "What are some public Ergo explorers?",
+    "answer": "Some public Ergo explorers include explorer.ergoplatform.com, ergexplorer.com, and sigmaspace.io."
+  },
+  {
+    "question": "What are some Ergo toolkits?",
+    "answer": "Some Ergo toolkits include Ergo Nix Toolkit, Ergo Bootstrap, and ergo-setup."
+  },
+  {
+    "question": "What is uExplorer?",
+    "answer": "uExplorer is a supplementary, lightweight Ergo explorer with a CassandraDB backend."
+  },
+  {
+    "question": "What are some popular mirrors for the Ergo explorer and GraphQL?",
+    "answer": "Some popular mirrors include api.ergo.aap.cornell.edu and sigmaexplorer."
+  }
+]

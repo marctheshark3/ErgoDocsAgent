@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the core return type of every ErgoScript contract?",
+    "answer": "Sigma Propositions (SigmaProp)"
+  },
+  {
+    "question": "What do SigmaProp values represent?",
+    "answer": "Conditions related to the transaction that must be met to spend a specific box"
+  },
+  {
+    "question": "How can SigmaProp values be constructed in ErgoScript?",
+    "answer": "Two common methods are: 1) Creating SigmaProp from boolean expressions using the sigmaProp function, and 2) Creating SigmaProp from public keys using functions like proveDlog"
+  },
+  {
+    "question": "What is the purpose of the pin-lock contract example?",
+    "answer": "The pin-lock contract allows spending the input box only if the output box contains the Blake2b256 hash of the byte collection in the input box's register R4"
+  },
+  {
+    "question": "How does the pin-lock contract using the SELF context variable differ from the earlier example?",
+    "answer": "The pin-lock contract using SELF explicitly refers to the box being spent within its own contract, rather than implicitly assuming it is INPUTS(0)"
+  }
+]

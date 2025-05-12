@@ -1,0 +1,9 @@
+The document provides an overview of the Ergo Mosaik UI system for Ergo dApps. It covers the following key points:
+
+- Processing data with backendRequest(): This action allows executing a POST request to the backend with input values from the current screen, and expecting a response with an action to run subsequently. This enables complex logic in the backend to operate on user input.
+
+- Altering the screen content with changeView(): This action allows replacing the current screen content with a new view content, which includes a new root view element and a list of actions. The new actions are added to the existing set, and the new root view replaces the existing one.
+
+- The document explains the concepts of view elements, view groups, and view content, and how they relate to the changeView() action.
+
+- The document demonstrates an example of using changeView() to update the screen title based on user input, instead of showing a message box.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main new function of money highlighted in this work?",
+    "answer": "The main new function of money highlighted in this work is as a unit of contract execution, referred to as 'contractual money'."
+  },
+  {
+    "question": "How does Bitcoin bind coins to a contract instead of just a public key?",
+    "answer": "In Bitcoin, a coin is bound to a contract that combines statements about secrets and predicates on the blockchain."
+  },
+  {
+    "question": "What is the state of Bitcoin represented by?",
+    "answer": "The state of Bitcoin is represented by the entire UTXO (Unspent Transaction Output) set."
+  },
+  {
+    "question": "What is the weak conservation law that Bitcoin transactions adhere to?",
+    "answer": "The total number of tokens in the outputs of a Bitcoin transaction may be less than or equal to that in the inputs."
+  },
+  {
+    "question": "What are the two scripts that determine the validity of a Bitcoin transaction?",
+    "answer": "The locking script and the unlocking script executed together determine the validity of a Bitcoin transaction."
+  }
+]

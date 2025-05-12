@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is SigmaRSV and how does it represent a call option on the ERG held in the reserve portion of the SigmaUSD contract?",
+    "answer": "SigmaRSV is a call option on a percentage of the ERG held in the reserve portion of the SigmaUSD contract. Fees are continually added to the ERG held in reserve as users interact with the contract, ensuring liquidity and offering a mechanism of return beyond trading. SigmaRSV represents a price/book (P/B Ratio) on the ERG held in reserve."
+  },
+  {
+    "question": "What are the three key mechanisms that influence the outcome for users of SigmaRSV?",
+    "answer": "The three key mechanisms are: 1) Fees accumulate as users interact with the contract, 2) The amount of ERG held in reserve floats (up/down) as users interact with the contract, and 3) The price ERG/USD floats (up/down) as users trade ERG."
+  },
+  {
+    "question": "How does the balance in the reserve and the price of ERG/USD affect the value of a user's SigmaRSV position?",
+    "answer": "If the reserve balance increases, the user's SigmaRSV represents a call option on a larger amount of ERG. If the reserve balance decreases, the user's SigmaRSV represents a call option on a smaller amount of ERG. If the price of ERG/USD increases, the value of the user's SigmaRSV position increases. If the price of ERG/USD decreases, the value of the user's SigmaRSV position decreases."
+  },
+  {
+    "question": "What is the basic overview of how SigmaUSD works?",
+    "answer": "SigmaUSD represents a call option on the dollar value of ERG held in reserve. Ergo's oracle pools infrastructure is used to calculate and adjust the current ERG/USD exchange rate. The reserve always backs SigmaUSD, and the price ERG/USD floats (up/down) as users trade ERG."
+  },
+  {
+    "question": "How does the value of ERG/USD affect the redemption value of SigmaUSD?",
+    "answer": "If the price of ERG/USD drops, the user can redeem their SigmaUSD for a larger amount of ERG. If the price of ERG/USD increases, the user can redeem their SigmaUSD for a smaller amount of ERG."
+  }
+]

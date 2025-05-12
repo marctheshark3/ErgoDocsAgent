@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Mining Software\n  - Mining\n  - GPU\n  - AMD\n  - Nvidia\n  - Intel\n---\n\n# Software\n\n\n| Coins | Miners | nvidia | AMD | Intel | Dev Fee |\n|-------|--------|--------|-----|-------|---------|\n..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Software"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Mining Software\n  - Mining\n  - GPU\n  - AMD\n  - Nvidia\n  - Intel\n---"
+  },
+  {
+    "question": "What is the 'Software' section about?",
+    "answer": "| Coins | Miners | nvidia | AMD | Intel | Dev Fee |\n|-------|--------|--------|-----|-------|-------..."
+  },
+  {
+    "question": "What is the 'Source Code Miners' section about?",
+    "answer": "- [AMD miner](https://github.com/mhssamadani/Autolykos2_AMD_Miner)\n- [Nvidia miner](https://github.c..."
+  }
+]

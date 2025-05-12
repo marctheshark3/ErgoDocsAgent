@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the first step to set up Ergo solo mining?",
+    "answer": "Setup a [Ergo Node for solo mining](solo-node.md), making sure to include the EIP27 rules."
+  },
+  {
+    "question": "What is the purpose of ErgoStratumServer?",
+    "answer": "Setup [ErgoStratumServer](https://github.com/mhssamadani/ErgoStratumServer) (the pool server)."
+  },
+  {
+    "question": "What is the purpose of ErgoStratumProxy?",
+    "answer": "ErgoStratumProxy is used when you want to mine with open source miner (client side app)."
+  },
+  {
+    "question": "What is the purpose of the 'varDiff' parameter in the start.js configuration?",
+    "answer": "Variable difficulty is a feature that will automatically adjust difficulty for individual miners based on their hashrate in order to lower networking overhead."
+  },
+  {
+    "question": "What should you do if you get the 'fatal:unable to connect to github.com' error?",
+    "answer": "Run `git config --global url.https://github.com/.insteadOf git://github.com/`."
+  }
+]

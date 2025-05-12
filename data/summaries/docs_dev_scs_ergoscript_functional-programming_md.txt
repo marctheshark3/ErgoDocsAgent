@@ -1,0 +1,7 @@
+The document discusses the use of functional programming features in ErgoScript, a programming language used in the Ergo blockchain platform. It presents two examples that demonstrate the application of functional programming concepts in ErgoScript.
+
+The first example shows how to create an ErgoScript program that allows a box to be spent only if the spender knows the discrete log of a given elliptic curve point and all input boxes are protected by the same ErgoScript program.
+
+The second example builds upon the first by adding an additional condition that the box can only be spent if the sum of all input values is greater than 1 Erg. It demonstrates how to compute the sum of all inputs using functional programming techniques in ErgoScript.
+
+The document highlights the importance of functional programming in ErgoScript and how it can be used to implement complex conditions for spending boxes on the Ergo blockchain.

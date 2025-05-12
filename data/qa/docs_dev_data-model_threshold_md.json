@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key characteristic of threshold signatures?",
+    "answer": "Distributed Signing: Requires a minimum number of participants to authorize a transaction."
+  },
+  {
+    "question": "How can the threshold be configured in threshold signatures?",
+    "answer": "Flexible Thresholds: Can be configured as k-out-of-n signatures (e.g., 3-out-of-5)."
+  },
+  {
+    "question": "What enables complex collaborative signing scenarios in threshold signatures?",
+    "answer": "Multi-Party Computation: Enables complex collaborative signing scenarios."
+  },
+  {
+    "question": "What is the overview of threshold signatures?",
+    "answer": "Threshold signatures are a cryptographic mechanism that allows a subset of a group to collectively sign a transaction, providing enhanced security and distributed trust."
+  },
+  {
+    "question": "Where are threshold signatures used?",
+    "answer": "Threshold signatures are used in the Ergo blockchain."
+  }
+]

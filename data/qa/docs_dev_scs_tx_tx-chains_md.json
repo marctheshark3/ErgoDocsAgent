@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a transaction chain in a multi-stage protocol?",
+    "answer": "A transaction chain is a sequence of transactions executed in a specific order to achieve a particular outcome or goal, where each transaction in the chain depends on the successful execution of the previous one."
+  },
+  {
+    "question": "How does a transaction chain work in a decentralized exchange (DEX) protocol?",
+    "answer": "In a DEX protocol, a transaction chain might involve steps such as approving the DEX contract, depositing tokens, placing an order, matching the order, executing the trade, and withdrawing the traded tokens and payment."
+  },
+  {
+    "question": "How are the stages of a transaction chain represented?",
+    "answer": "The stages of a transaction chain are represented as a sequence of states (S0, S1, ..., Sn), where each state corresponds to a UTXO protected by a specific script and containing relevant data, and a transaction (Txi) acts as the transition between state Si-1 and state Si."
+  },
+  {
+    "question": "How does the script for a state Si-1 enforce the transition to the next state Si?",
+    "answer": "The script for state Si-1 must enforce conditions on the transaction (Txi) that spends it, specifically requiring that Txi creates an output box representing state Si with the correct script and data."
+  },
+  {
+    "question": "What optimization is commonly used to reduce script size in transaction chains?",
+    "answer": "Instead of checking the full script code, it's common practice to work with hashes. The script checks blake2b256(out.propositionBytes) == state_n_code_hash, where state_n_code_hash is a known constant hash of the expected script for the next stage."
+  }
+]

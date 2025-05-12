@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_monsterpub_md",
+  "title": "Monster Pub Brawl",
+  "summary": "Monster Pub Brawl is a gaming dApp that revolves around the scarcity of alcohol, a rare resource that can enhance the power of monsters. The game features an annual Monster Pub Crawl where contestants compete in a series of battles across regions to acquire glory, booze, and a spot in the inner circle. The raw materials to produce alcohol are found in extremely hostile territories, and only skilled alchemists can distill them into a potable concoction.",
+  "qa_pairs": [
+    {
+      "question": "What is the main focus of the document?",
+      "answer": "The main focus of the document is the Monster Pub Brawl, a gaming dApp where contestants battle for glory, booze, and a spot in the inner circle."
+    },
+    {
+      "question": "What is the rare resource that can enhance the monsters?",
+      "answer": "Alcohol is the rare resource that can enhance the monsters."
+    },
+    {
+      "question": "Where are the raw materials for producing alcohol found?",
+      "answer": "The raw materials for producing alcohol are found in extremely hostile territories."
+    },
+    {
+      "question": "Who are the only people capable of distilling the raw materials into a potable concoction?",
+      "answer": "Only the most skilled of alchemists are able to distill the raw materials into a potable concoction."
+    },
+    {
+      "question": "What are the main prizes for winning the Monster Pub Crawl?",
+      "answer": "The main prizes for winning the Monster Pub Crawl are glory, booze, and a spot in the inner circle."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Monster Pub Brawl\n  - Gaming\n  - dApp\n  - dApp-InDev\n---"
+    },
+    {
+      "heading": "Monster Pub Brawl",
+      "level": 1,
+      "content": "Alcohol is an exceptionally rare resource capable of enhancing the monsters who use them with untold power. The raw materials to produce it are found in extremely hostile territories, and only the most skilled of alchemists are able to distill these materials into a potable concoction.\n\nBecause of the difficulties associated with acquiring alcohol, most people in search sign up for the annual Monster Pub Crawl where contestants take part in a series of battles across the regions for glory, booze, and a spot in the inner circle."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/monsterpub.md",
+  "processed_at": "2025-05-11T19:45:42.045077",
+  "ai_processed": true
+}

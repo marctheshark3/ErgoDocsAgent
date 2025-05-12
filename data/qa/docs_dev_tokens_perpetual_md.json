@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Perpetual Tokens\n\nErgoScript allows the creation of a '*perpetual token*', a token that is designed to exist indefinitely, unless it is removed by garbage collection.\n\n```scala\n    {\n      val isPer..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Perpetual Tokens"
+  },
+  {
+    "question": "What is the 'Perpetual Tokens' section about?",
+    "answer": "ErgoScript allows the creation of a '*perpetual token*', a token that is designed to exist indefinit..."
+  },
+  {
+    "question": "What is the 'Multi-Stage Protocols' section about?",
+    "answer": "Multi-stage protocols are beneficial in situations where multiple scripts need to interact. In these..."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "\n## Video Transcript\n\n- A UTXO platform like Bitcoin\n- Advanced scripting capabilities using Ergoscript\n    - Functional programming using scala-like syntax\n        - `INPUTS.exist({utxo:Box} => utxo...."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "notes.md"
+  },
+  {
+    "question": "What is the 'Video Transcript' section about?",
+    "answer": "- A UTXO platform like Bitcoin\n- Advanced scripting capabilities using Ergoscript\n    - Functional p..."
+  },
+  {
+    "question": "What is the 'Ergo\u2019s approach' section about?",
+    "answer": "This is essentially the approach that Ergo takes, providing superior support for real-world financia..."
+  }
+]

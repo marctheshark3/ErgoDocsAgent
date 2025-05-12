@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the simplest form of ErgoScript?",
+    "answer": "A single boolean predicate."
+  },
+  {
+    "question": "What does the script `true` correspond to?",
+    "answer": "The address `4MQyML64GnzMxZgm`."
+  },
+  {
+    "question": "What can anyone do with funds sent to an anyone-can-spend script?",
+    "answer": "Spend the funds."
+  },
+  {
+    "question": "What is the address corresponding to the script `true && (false || true)`?",
+    "answer": "NwAyzZpF2KcXAGBJvPrAH."
+  },
+  {
+    "question": "What are scripts that consistently evaluate to `true` and their corresponding boxes called?",
+    "answer": "Anyone-can-spend scripts."
+  }
+]

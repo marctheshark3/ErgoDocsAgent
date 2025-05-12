@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_scs_tx_rock-paper-scissor_md",
+  "title": "rock-paper-scissor.md",
+  "summary": "The document introduces the Rock-Paper-Scissors game as an example of a multi-stage smart contract. The game is played between two players, Alice and Bob, who choose secret moves. To prevent the first player from being disadvantaged, the game uses a commitment scheme where Alice first commits to her move, and then both players reveal their moves. The summary covers the three phases of the game: the Commitment Phase where Alice commits to her move, the Reveal Phase where Bob reveals his move, and the Reveal Phase where Alice reveals her original move and the secret to verify the commitment. The document also discusses the challenge of handling edge cases where a malicious player might refuse to reveal their commitment.",
+  "qa_pairs": [
+    {
+      "question": "What are the possible secret moves in the Rock-Paper-Scissors game?",
+      "answer": "The possible secret moves are 0 (rock), 1 (paper), and 2 (scissors)."
+    },
+    {
+      "question": "How is the winner determined in the Rock-Paper-Scissors game?",
+      "answer": "If the difference between the players' moves modulo 3 is 1, the first player wins. If the difference is 2, the second player wins. If the moves are the same, it's a draw."
+    },
+    {
+      "question": "What is the purpose of the commitment phase in the modified Rock-Paper-Scissors game?",
+      "answer": "The commitment phase prevents the first player from adaptively choosing their move after the second player has revealed their move."
+    },
+    {
+      "question": "How does the first player commit to their secret move in the modified game?",
+      "answer": "The first player (Alice) chooses a secret move `a` and a secret random value `s`, then computes a commitment `c = H(a || s)` and publishes `c`."
+    },
+    {
+      "question": "What happens in the reveal phase of the modified Rock-Paper-Scissors game?",
+      "answer": "In the reveal phase, the second player (Bob) chooses and reveals their move `b`. At this point, the first player (Alice) knows the outcome based on their secret move `a` and Bob's move `b`, but Bob does not know the outcome yet."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "Our next example of a multi-stage contract is the Rock-Paper-Scissors game, often used as an introductory example for smart contracts. The game is played between two players, Alice and Bob. Each player chooses a secret move independently, and the game outcome is decided after both secrets are revealed.\n\nLet `a`, `b` \u2208 Z<sub>3</sub> be the secret choices of Alice and Bob, respectively, where (0, 1, 2) represent (rock, paper, scissors). If `a = b`, the game is a draw. Otherwise, if `a - b mod 3 = 1`, Alice wins; if `a - b mod 3 = 2`, Bob wins. A key challenge is that the first party to reveal their secret is disadvantaged, as the other party could then adaptively choose their move to guarantee a win. In the physical world, simultaneous revelation prevents this. In the virtual world of blockchains, however, simultaneity cannot be strictly enforced. This potential attack must be handled using cryptographic commitments. The first party (Alice) initially reveals only a commitment to her secret, not the secret itself.\n\nThe modified game using commitments proceeds as follows:\n\n1.  **Commitment Phase**: Alice chooses her secret move `a` and a secret random value `s`. She computes a commitment `c = H(a || s)` (where `H` is a hash function like Blake2b256) and publishes `c` (e.g., by locking funds in a contract containing `c`).\n2.  **Reveal Phase (Bob)**: Bob chooses and reveals his move `b`. At this point, Alice knows the outcome based on `a` and `b`, but Bob doesn't know `a`.\n3.  **Reveal Phase (Alice)**: Alice reveals her original move `a` and the secret `s`. Anyone can now verify that `c = H(a || s)`, confirming Alice didn't change her move after seeing Bob's. The winner is then determined based on `a` and `b`.\n\nThis protocol works assuming Alice behaves honestly and reveals `a` and `s` regardless of the outcome. However, a malicious Alice might refuse to reveal her commitment if she knows she lost. Smart contracts must handle such edge cases, as they cannot be easily fixed after deployment. In this example, we must penalize Alice (e.g., by forfeiting her stake) if she fails to reveal her commitment within a specified timeframe (deadline).\n\nThe complete game is implemented in ErgoScript using a two-stage protocol:\n\n1.  **Stage 1 (Start Game)**: Alice creates a \"start-game\" box. This box locks her stake and contains her commitment `c`. The script guarding this box defines the rules for the next stage.\n2.  **Stage 2 (End Game)**: Bob spends the start-game box by revealing his move `b` and contributing his stake. This transaction creates one or two \"end-game\" boxes. These boxes contain the combined stake and are spendable only according to the game's outcome rules (including Alice revealing `a` and `s`, handling draws, wins, losses, and timeouts).\n\nTo initiate the game, Alice decides on the stake amount `x` (in nanoErgs), chooses her move `a` and secret `s`, computes the commitment `c = H(a || s)`, and locks `x` nanoErgs along with `c` in the start-game box, protected by the following script (`startGameScript`):\n\n```scala\nOUTPUTS.forall(\n    {(out:Box) =>\n        val b = out.R4[Byte].get\n        val bobDeadline = out.R6[Int].get\n        bobDeadline >= HEIGHT+30 && out.value >= SELF.value &&\n        (b == 0 || b == 1 || b == 2) &&\n        out.propositionBytes == outScript\n    }\n) && OUTPUTS.size == 2 && OUTPUTS(0).R7[SigmaProp].get == alice &&\nOUTPUTS(0).R4[Byte].get == OUTPUTS(1).R4[Byte].get // same b\n```\n\nThe above code requires that the spending transaction create exactly two outputs, one paying to each player in the event of a draw or both paying to the winner otherwise. In particular, the code requires that (1) register R7 of the first output must contain Alice\u2019s public key (for use in the draw scenario), (2) register R4 of each output must contain Bob\u2019s choice, and (3) each output must contain at least x tokens protected by outScript, which is given below:\n\n```scala\nval s = getVar[Coll[Byte]](0).get // Alice\u2019s secret byte string s\nval a = getVar[Byte](1).get // Alice\u2019s secret choice a\nval b = SELF.R4[Byte].get // Bob\u2019s public choice b\nval bob = SELF.R5[SigmaProp].get // Bob\u2019s public key\nval bobDeadline = SELF.R6[Int].get // after this, Bob wins by default\nval drawPubKey = SELF.R7[SigmaProp].get\nval valid_a = (a == 0 || a == 1 || a == 2)\nval validCommitment = blake2b256(s ++ Coll(a)) == c\nval validAliceChoice = valid_a && validAliceChoice\nval aliceWins = (a - b) == 1 || (a - b) == -2\nval receiver = if (a == b) drawPubKey else (if (aliceWins) alice else bob)\n(bob && HEIGHT > bobDeadline) || (receiver && validAliceChoice)\n```\n\nThe above code protects the two end-game boxes that Bob generates. The condition `(bob && HEIGHT > bobDeadline)` guarantees that Bob automatically wins if Alice does not open her commitment before a certain deadline. Note that Bob has to ensure that R7 of the second output contains his public key. Additionally, he must ensure that R5 of both outputs contains his public key (see below). We do not encode these conditions because if Bob does not follow the protocol, he will automatically lose."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/tx/rock-paper-scissor.md",
+  "processed_at": "2025-05-11T19:32:09.952412",
+  "ai_processed": true
+}

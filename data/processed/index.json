@@ -1,0 +1,2958 @@
+{
+  "documents": [
+    {
+      "id": "README_md",
+      "title": "README.md",
+      "path": "processed/README_md.json"
+    },
+    {
+      "id": "dev_Integration_guide_md",
+      "title": "Ergo Platform Blockchain Integration Guide",
+      "path": "processed/dev_Integration_guide_md.json"
+    },
+    {
+      "id": "dev_data-model_structures_merkle_merkle-tree_md",
+      "title": "Merkle Trees in Ergo",
+      "path": "processed/dev_data-model_structures_merkle_merkle-tree_md.json"
+    },
+    {
+      "id": "docs_README_md",
+      "title": "README.md",
+      "path": "processed/docs_README_md.json"
+    },
+    {
+      "id": "docs_ai_md",
+      "title": "Ergo's eUTXO: Architecting the Future of Artificial Economic Intelligence",
+      "path": "processed/docs_ai_md.json"
+    },
+    {
+      "id": "docs_archive_## What are Ergo's future plans, especia_md",
+      "title": "## What are Ergo's future plans, especia.md",
+      "path": "processed/docs_archive_## What are Ergo's future plans, especia_md.json"
+    },
+    {
+      "id": "docs_archive_categories_categories-overview_md",
+      "title": "All Categories",
+      "path": "processed/docs_archive_categories_categories-overview_md.json"
+    },
+    {
+      "id": "docs_archive_dApp-dev_md",
+      "title": "dApp-dev.md",
+      "path": "processed/docs_archive_dApp-dev_md.json"
+    },
+    {
+      "id": "docs_archive_dev_scs_ergoscript-primer_md",
+      "title": "ErgoScript: A Beginner's Guide",
+      "path": "processed/docs_archive_dev_scs_ergoscript-primer_md.json"
+    },
+    {
+      "id": "docs_archive_dev_scs_powerful_but_safe_md",
+      "title": "powerful_but_safe.md",
+      "path": "processed/docs_archive_dev_scs_powerful_but_safe_md.json"
+    },
+    {
+      "id": "docs_archive_dev_scs_smart-contracts-overview_md",
+      "title": "Smart Contracts",
+      "path": "processed/docs_archive_dev_scs_smart-contracts-overview_md.json"
+    },
+    {
+      "id": "docs_archive_ef_transparency-report_md",
+      "title": "Ergo Foundation Transparency Report",
+      "path": "processed/docs_archive_ef_transparency-report_md.json"
+    },
+    {
+      "id": "docs_archive_ergo-foundation-2022_md",
+      "title": "Ergo Foundation Transparency Report 2022",
+      "path": "processed/docs_archive_ergo-foundation-2022_md.json"
+    },
+    {
+      "id": "docs_archive_getting-started_md",
+      "title": "Welcome to Ergo",
+      "path": "processed/docs_archive_getting-started_md.json"
+    },
+    {
+      "id": "docs_archive_interoperability_md",
+      "title": "interoperability.md",
+      "path": "processed/docs_archive_interoperability_md.json"
+    },
+    {
+      "id": "docs_archive_interview_md",
+      "title": "interview.md",
+      "path": "processed/docs_archive_interview_md.json"
+    },
+    {
+      "id": "docs_archive_mining_algorithm_md",
+      "title": "Autolykos Algorithm",
+      "path": "processed/docs_archive_mining_algorithm_md.json"
+    },
+    {
+      "id": "docs_archive_mining_merged_md",
+      "title": "Merged Mining on Ergo",
+      "path": "processed/docs_archive_mining_merged_md.json"
+    },
+    {
+      "id": "docs_archive_node-config_md",
+      "title": "Node Config File",
+      "path": "processed/docs_archive_node-config_md.json"
+    },
+    {
+      "id": "docs_archive_notes_md",
+      "title": "notes.md",
+      "path": "processed/docs_archive_notes_md.json"
+    },
+    {
+      "id": "docs_archive_off-chain_md",
+      "title": "Off-Chain Components in DeFi",
+      "path": "processed/docs_archive_off-chain_md.json"
+    },
+    {
+      "id": "docs_archive_quick_md",
+      "title": "Quick Install",
+      "path": "processed/docs_archive_quick_md.json"
+    },
+    {
+      "id": "docs_archive_todo_md",
+      "title": "todo.md",
+      "path": "processed/docs_archive_todo_md.json"
+    },
+    {
+      "id": "docs_archive_use_md",
+      "title": "use.md",
+      "path": "processed/docs_archive_use_md.json"
+    },
+    {
+      "id": "docs_contribute_md",
+      "title": "Contributing to Ergo",
+      "path": "processed/docs_contribute_md.json"
+    },
+    {
+      "id": "docs_contribute_bounties_md",
+      "title": "Bounties",
+      "path": "processed/docs_contribute_bounties_md.json"
+    },
+    {
+      "id": "docs_contribute_devs_md",
+      "title": "Developers",
+      "path": "processed/docs_contribute_devs_md.json"
+    },
+    {
+      "id": "docs_contribute_docs_md",
+      "title": "Contributing to the Documentation",
+      "path": "processed/docs_contribute_docs_md.json"
+    },
+    {
+      "id": "docs_contribute_grants_md",
+      "title": "Funding Opportunities",
+      "path": "processed/docs_contribute_grants_md.json"
+    },
+    {
+      "id": "docs_contribute_marketing_md",
+      "title": "marketing.md",
+      "path": "processed/docs_contribute_marketing_md.json"
+    },
+    {
+      "id": "docs_contribute_roles_md",
+      "title": "Career Opportunities at Ergo",
+      "path": "processed/docs_contribute_roles_md.json"
+    },
+    {
+      "id": "docs_contribute_sigmanauts_md",
+      "title": "Sigmanauts: Empowering the Ergo Community",
+      "path": "processed/docs_contribute_sigmanauts_md.json"
+    },
+    {
+      "id": "docs_contribute_standards_md",
+      "title": "Ecosystem Standards",
+      "path": "processed/docs_contribute_standards_md.json"
+    },
+    {
+      "id": "docs_contribute_standards_analytics_md",
+      "title": "Analytics",
+      "path": "processed/docs_contribute_standards_analytics_md.json"
+    },
+    {
+      "id": "docs_contribute_standards_chat-bridge_md",
+      "title": "Chat Bridge",
+      "path": "processed/docs_contribute_standards_chat-bridge_md.json"
+    },
+    {
+      "id": "docs_contribute_standards_guidelines_md",
+      "title": "Community Guidelines",
+      "path": "processed/docs_contribute_standards_guidelines_md.json"
+    },
+    {
+      "id": "docs_contribute_standards_kya_md",
+      "title": "Know Your Assumptions (KYA) in Ergo",
+      "path": "processed/docs_contribute_standards_kya_md.json"
+    },
+    {
+      "id": "docs_contribute_standards_moderation_md",
+      "title": "Moderation Guide",
+      "path": "processed/docs_contribute_standards_moderation_md.json"
+    },
+    {
+      "id": "docs_contribute_standards_tipbot_md",
+      "title": "Ergotipper",
+      "path": "processed/docs_contribute_standards_tipbot_md.json"
+    },
+    {
+      "id": "docs_contribute_technical-guidelines_md",
+      "title": "Technical Contribution Guidelines",
+      "path": "processed/docs_contribute_technical-guidelines_md.json"
+    },
+    {
+      "id": "docs_crypto_md",
+      "title": "Cryptographic",
+      "path": "processed/docs_crypto_md.json"
+    },
+    {
+      "id": "docs_dev_Integration_guide_md",
+      "title": "Ergo Platform Blockchain Integration Guide",
+      "path": "processed/docs_dev_Integration_guide_md.json"
+    },
+    {
+      "id": "docs_dev_anatomy_transactions_chained_md",
+      "title": "Executing a Chained Transaction",
+      "path": "processed/docs_dev_anatomy_transactions_chained_md.json"
+    },
+    {
+      "id": "docs_dev_anatomy_transactions_payments_md",
+      "title": "Payments",
+      "path": "processed/docs_dev_anatomy_transactions_payments_md.json"
+    },
+    {
+      "id": "docs_dev_crypto_zerojoin_md",
+      "title": "Exploring ZeroJoin",
+      "path": "processed/docs_dev_crypto_zerojoin_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_block-adproofs_md",
+      "title": "ADProofs (Authenticated Data Proofs)",
+      "path": "processed/docs_dev_data-model_block-adproofs_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_block-header_md",
+      "title": "Block Header",
+      "path": "processed/docs_dev_data-model_block-header_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_block-transactions_md",
+      "title": "Block Transactions",
+      "path": "processed/docs_dev_data-model_block-transactions_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_block_md",
+      "title": "Understanding Blocks in Ergo",
+      "path": "processed/docs_dev_data-model_block_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_box_md",
+      "title": "The Ergo 'Box' model",
+      "path": "processed/docs_dev_data-model_box_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_box_box_modeling_md",
+      "title": "Ergo Box Design: A Comprehensive Guide",
+      "path": "processed/docs_dev_data-model_box_box_modeling_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_box_lifecycle_md",
+      "title": "Box Lifecycle",
+      "path": "processed/docs_dev_data-model_box_lifecycle_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_box_registers_md",
+      "title": "Ergo Box Registers",
+      "path": "processed/docs_dev_data-model_box_registers_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_box_tokens_md",
+      "title": "Tokens on Ergo",
+      "path": "processed/docs_dev_data-model_box_tokens_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_data-model_md",
+      "title": "The Ergo Data Model",
+      "path": "processed/docs_dev_data-model_data-model_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_data-structures_md",
+      "title": "Data Structures in Ergo",
+      "path": "processed/docs_dev_data-model_data-structures_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_dlog_md",
+      "title": "Discrete Logarithm Proofs in Ergo",
+      "path": "processed/docs_dev_data-model_dlog_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_extension-section_md",
+      "title": "Ergo Block Structure: The Extension Section",
+      "path": "processed/docs_dev_data-model_extension-section_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_nizk_md",
+      "title": "Non-Interactive Zero-Knowledge Proofs in Ergo",
+      "path": "processed/docs_dev_data-model_nizk_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_ring_md",
+      "title": "Ring Signatures in Ergo",
+      "path": "processed/docs_dev_data-model_ring_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_interlink-vectors_md",
+      "title": "Interlink Vectors in Ergo",
+      "path": "processed/docs_dev_data-model_structures_interlink-vectors_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-batch-impl_md",
+      "title": "Using Merkle Batch Proofs on Ergo",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-batch-impl_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-batch-proof_md",
+      "title": "Merkle Batch Proofs in Ergo",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-batch-proof_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-batch-testing_md",
+      "title": "Testing Merkle Batch Proofs",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-batch-testing_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-considerations_md",
+      "title": "Considerations for Developers",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-considerations_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-extension_md",
+      "title": "Extension Block Merkle Tree in Ergo",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-extension_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-format_md",
+      "title": "Merkle Tree Format in Ergo",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-format_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-light-proof_md",
+      "title": "Example: Lite Client Checking Merkle Proof",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-light-proof_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-tree_md",
+      "title": "Merkle Trees in Ergo",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-tree_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_merkle_merkle-validation_md",
+      "title": "Validation of Merkle Proofs in Ergo",
+      "path": "processed/docs_dev_data-model_structures_merkle_merkle-validation_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_structures_popow_md",
+      "title": "Proof of Proof-of-Work (PoPow) Data Structures in Ergo",
+      "path": "processed/docs_dev_data-model_structures_popow_md.json"
+    },
+    {
+      "id": "docs_dev_data-model_threshold_md",
+      "title": "Threshold Signatures in Ergo",
+      "path": "processed/docs_dev_data-model_threshold_md.json"
+    },
+    {
+      "id": "docs_dev_deco_md",
+      "title": "**DeCo (Decentralised Collaboration)**",
+      "path": "processed/docs_dev_deco_md.json"
+    },
+    {
+      "id": "docs_dev_get-started_md",
+      "title": "Developer's Guide",
+      "path": "processed/docs_dev_get-started_md.json"
+    },
+    {
+      "id": "docs_dev_interact_md",
+      "title": "Interacting with Ergo",
+      "path": "processed/docs_dev_interact_md.json"
+    },
+    {
+      "id": "docs_dev_lang_csharp_md",
+      "title": "Ergo Platform and C#",
+      "path": "processed/docs_dev_lang_csharp_md.json"
+    },
+    {
+      "id": "docs_dev_lang_go_md",
+      "title": "Ergo Platform and Go",
+      "path": "processed/docs_dev_lang_go_md.json"
+    },
+    {
+      "id": "docs_dev_lang_java_md",
+      "title": "Java Development with Ergo",
+      "path": "processed/docs_dev_lang_java_md.json"
+    },
+    {
+      "id": "docs_dev_lang_js_md",
+      "title": "JavaScript & TypeScript",
+      "path": "processed/docs_dev_lang_js_md.json"
+    },
+    {
+      "id": "docs_dev_lang_jvm_md",
+      "title": "JVM",
+      "path": "processed/docs_dev_lang_jvm_md.json"
+    },
+    {
+      "id": "docs_dev_lang_kotlin_md",
+      "title": "Kotlin",
+      "path": "processed/docs_dev_lang_kotlin_md.json"
+    },
+    {
+      "id": "docs_dev_lang_python_md",
+      "title": "Python",
+      "path": "processed/docs_dev_lang_python_md.json"
+    },
+    {
+      "id": "docs_dev_lang_rust_md",
+      "title": "Rust",
+      "path": "processed/docs_dev_lang_rust_md.json"
+    },
+    {
+      "id": "docs_dev_lang_scala_md",
+      "title": "Scala Development with Ergo",
+      "path": "processed/docs_dev_lang_scala_md.json"
+    },
+    {
+      "id": "docs_dev_lib_eip12-types_md",
+      "title": "EIP12-Types: Enhancing Ergo Blockchain's dApp Connector Protocol with Static Typing",
+      "path": "processed/docs_dev_lib_eip12-types_md.json"
+    },
+    {
+      "id": "docs_dev_lib_plasma_md",
+      "title": "Plasma",
+      "path": "processed/docs_dev_lib_plasma_md.json"
+    },
+    {
+      "id": "docs_dev_lib_scrypto_md",
+      "title": "Scrypto: A Comprehensive Cryptographic Toolkit",
+      "path": "processed/docs_dev_lib_scrypto_md.json"
+    },
+    {
+      "id": "docs_dev_lib_sigmajs_md",
+      "title": "Sigma JS",
+      "path": "processed/docs_dev_lib_sigmajs_md.json"
+    },
+    {
+      "id": "docs_dev_libraries_md",
+      "title": "Libraries",
+      "path": "processed/docs_dev_libraries_md.json"
+    },
+    {
+      "id": "docs_dev_oc_dex_bots_md",
+      "title": "Spectrum.DEX off-chain services",
+      "path": "processed/docs_dev_oc_dex_bots_md.json"
+    },
+    {
+      "id": "docs_dev_oc_ergo_utilities_md",
+      "title": "Ergo Utilities in Rust",
+      "path": "processed/docs_dev_oc_ergo_utilities_md.json"
+    },
+    {
+      "id": "docs_dev_oc_off-chain-overview_md",
+      "title": "Building Off-Chain Services for Ergo dApps",
+      "path": "processed/docs_dev_oc_off-chain-overview_md.json"
+    },
+    {
+      "id": "docs_dev_oc_oracle_md",
+      "title": "Oracle Core",
+      "path": "processed/docs_dev_oc_oracle_md.json"
+    },
+    {
+      "id": "docs_dev_p2p_BlockP2P_md",
+      "title": "BlockP2P: The Backbone of Ergo's Decentralized Communication",
+      "path": "processed/docs_dev_p2p_BlockP2P_md.json"
+    },
+    {
+      "id": "docs_dev_p2p_modifiers-exchange_md",
+      "title": "Modifier Exchange",
+      "path": "processed/docs_dev_p2p_modifiers-exchange_md.json"
+    },
+    {
+      "id": "docs_dev_p2p_network_md",
+      "title": "Network Messages in Ergo's P2P Protocol",
+      "path": "processed/docs_dev_p2p_network_md.json"
+    },
+    {
+      "id": "docs_dev_p2p_p2p-handshake_md",
+      "title": "Handshaking in P2P Protocol",
+      "path": "processed/docs_dev_p2p_p2p-handshake_md.json"
+    },
+    {
+      "id": "docs_dev_p2p_p2p-protocol-overview_md",
+      "title": "Overview of Ergo's P2P Protocol",
+      "path": "processed/docs_dev_p2p_p2p-protocol-overview_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_audit_md",
+      "title": "Security Audit",
+      "path": "processed/docs_dev_protocol_audit_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_autolykos-protocol_md",
+      "title": "Autolykos",
+      "path": "processed/docs_dev_protocol_autolykos-protocol_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_avl_md",
+      "title": "AVL Trees in Ergo: An Overview",
+      "path": "processed/docs_dev_protocol_avl_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_eip_md",
+      "title": "Ergo Improvement Proposals (EIPs)",
+      "path": "processed/docs_dev_protocol_eip_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_eutxo_md",
+      "title": "Extending the Power of the UTXO Model",
+      "path": "processed/docs_dev_protocol_eutxo_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_eutxo_accountveutxo_md",
+      "title": "UTXO vs Account: Understanding Ergo's Transaction Model",
+      "path": "processed/docs_dev_protocol_eutxo_accountveutxo_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_eutxo_atomic_md",
+      "title": "Atomic Swaps",
+      "path": "processed/docs_dev_protocol_eutxo_atomic_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_eutxo_ergo_vs_cardano_md",
+      "title": "Comparing Ergo and Cardano's eUTXO Models",
+      "path": "processed/docs_dev_protocol_eutxo_ergo_vs_cardano_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_eutxo_utxo-state_md",
+      "title": "UTXO State",
+      "path": "processed/docs_dev_protocol_eutxo_utxo-state_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_nipopow_logspace_md",
+      "title": "Log-Space Mining",
+      "path": "processed/docs_dev_protocol_nipopow_logspace_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_nipopow_nipopow-sidechains_md",
+      "title": "NiPoPoW Sidechains",
+      "path": "processed/docs_dev_protocol_nipopow_nipopow-sidechains_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_nipopow_nipopow_nodes_md",
+      "title": "Light Clients and NIPoPoWs in Ergo",
+      "path": "processed/docs_dev_protocol_nipopow_nipopow_nodes_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_nipopows_md",
+      "title": "Non-interactive Proof-of-Proof-of-Work (NIPoPoWs)",
+      "path": "processed/docs_dev_protocol_nipopows_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_protocol-overview_md",
+      "title": "Powering the future of finance",
+      "path": "processed/docs_dev_protocol_protocol-overview_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_scaling_md",
+      "title": "Scaling Ergo",
+      "path": "processed/docs_dev_protocol_scaling_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_scaling_TPS_md",
+      "title": "Understanding Transaction Speed in Blockchains",
+      "path": "processed/docs_dev_protocol_scaling_TPS_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_scaling_atomic-composability_md",
+      "title": "Understanding Atomic Composability in Blockchain Systems",
+      "path": "processed/docs_dev_protocol_scaling_atomic-composability_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_scaling_layer0_md",
+      "title": "Layer 0: The Network Layer",
+      "path": "processed/docs_dev_protocol_scaling_layer0_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_scaling_layer1_md",
+      "title": "Layer 1: On-chain Scalability in Ergo",
+      "path": "processed/docs_dev_protocol_scaling_layer1_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_scaling_layer2_md",
+      "title": "Layer 2: Off-Chain",
+      "path": "processed/docs_dev_protocol_scaling_layer2_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_scaling_scaling-roadmap_md",
+      "title": "Ergo Scaling Roadmap",
+      "path": "processed/docs_dev_protocol_scaling_scaling-roadmap_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_storage-rent_md",
+      "title": "Ergo's Storage Rent System",
+      "path": "processed/docs_dev_protocol_storage-rent_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_transactions_md",
+      "title": "Transactions",
+      "path": "processed/docs_dev_protocol_transactions_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_babel-fees_md",
+      "title": "Babel Fees",
+      "path": "processed/docs_dev_protocol_tx_babel-fees_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_babel-fleet_md",
+      "title": "Babel Fees Plugin Documentation",
+      "path": "processed/docs_dev_protocol_tx_babel-fleet_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_babel-howto_md",
+      "title": "babel-howto.md",
+      "path": "processed/docs_dev_protocol_tx_babel-howto_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_babel-impl_md",
+      "title": "Babel Fees Implementation Guide",
+      "path": "processed/docs_dev_protocol_tx_babel-impl_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_composing_md",
+      "title": "Composing Transactions",
+      "path": "processed/docs_dev_protocol_tx_composing_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_format_md",
+      "title": "Box Format",
+      "path": "processed/docs_dev_protocol_tx_format_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_min-fee_md",
+      "title": "Transaction Fees in Ergo",
+      "path": "processed/docs_dev_protocol_tx_min-fee_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_model-tx_md",
+      "title": "Understanding Model Transaction",
+      "path": "processed/docs_dev_protocol_tx_model-tx_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_multi-stage-txs_md",
+      "title": "Multi-Stage Transactions",
+      "path": "processed/docs_dev_protocol_tx_multi-stage-txs_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_read-only-inputs_md",
+      "title": "Data Inputs in ErgoScript",
+      "path": "processed/docs_dev_protocol_tx_read-only-inputs_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_signing_md",
+      "title": "Transaction Signing Process",
+      "path": "processed/docs_dev_protocol_tx_signing_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_standards_md",
+      "title": "Transaction Standards",
+      "path": "processed/docs_dev_protocol_tx_standards_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_tx-merkle_md",
+      "title": "Transaction Merkle Tree",
+      "path": "processed/docs_dev_protocol_tx_tx-merkle_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_unified_md",
+      "title": "Unified Transactions in Ergo",
+      "path": "processed/docs_dev_protocol_tx_unified_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_tx_validation_md",
+      "title": "Transaction Validation Rules",
+      "path": "processed/docs_dev_protocol_tx_validation_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_why_md",
+      "title": "Why Ergo?",
+      "path": "processed/docs_dev_protocol_why_md.json"
+    },
+    {
+      "id": "docs_dev_protocol_zkp_md",
+      "title": "Understanding Zero-Knowledge Proofs and Sigma Protocols",
+      "path": "processed/docs_dev_protocol_zkp_md.json"
+    },
+    {
+      "id": "docs_dev_scs_blockchain-context_md",
+      "title": "The Blockchain Context",
+      "path": "processed/docs_dev_scs_blockchain-context_md.json"
+    },
+    {
+      "id": "docs_dev_scs_boxes-and-registers_md",
+      "title": "Boxes and Registers",
+      "path": "processed/docs_dev_scs_boxes-and-registers_md.json"
+    },
+    {
+      "id": "docs_dev_scs_contracts_md",
+      "title": "ErgoScript Contracts",
+      "path": "processed/docs_dev_scs_contracts_md.json"
+    },
+    {
+      "id": "docs_dev_scs_debugging_md",
+      "title": "Debugging ErgoScript",
+      "path": "processed/docs_dev_scs_debugging_md.json"
+    },
+    {
+      "id": "docs_dev_scs_debugging_external-tools_md",
+      "title": "External Tools & Simulators for ErgoScript Debugging",
+      "path": "processed/docs_dev_scs_debugging_external-tools_md.json"
+    },
+    {
+      "id": "docs_dev_scs_debugging_on-chain-mechanisms_md",
+      "title": "On-Chain Debugging Mechanisms (Limited)",
+      "path": "processed/docs_dev_scs_debugging_on-chain-mechanisms_md.json"
+    },
+    {
+      "id": "docs_dev_scs_debugging_scala-debugging_md",
+      "title": "Scala-Based ErgoScript Debugging",
+      "path": "processed/docs_dev_scs_debugging_scala-debugging_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript-debugging_md",
+      "title": "Debugging ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript-debugging_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript-tooling_md",
+      "title": "ErgoScript Tooling",
+      "path": "processed/docs_dev_scs_ergoscript-tooling_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_md",
+      "title": "ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_anyone-can-spend_md",
+      "title": "Anyone-Can-Spend Scripts",
+      "path": "processed/docs_dev_scs_ergoscript_anyone-can-spend_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_box-structure_md",
+      "title": "Deep Dive into ErgoScript's Box Structure",
+      "path": "processed/docs_dev_scs_ergoscript_box-structure_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_code-blocks_md",
+      "title": "Using Code-Blocks in ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_code-blocks_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_compiler-phases_md",
+      "title": "ErgoScript Compiler Phases",
+      "path": "processed/docs_dev_scs_ergoscript_compiler-phases_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_context-variables_md",
+      "title": "Leveraging Context Variables in ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_context-variables_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_ergoscript-faq_md",
+      "title": "ErgoScript FAQ",
+      "path": "processed/docs_dev_scs_ergoscript_ergoscript-faq_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_ergoscript-key-concepts_md",
+      "title": "Core Concepts and Key Principles of ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_ergoscript-key-concepts_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_functional-programming_md",
+      "title": "Functional Programming in ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_functional-programming_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_no-one-can-spend_md",
+      "title": "Unspendable Scripts in ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_no-one-can-spend_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_public-keys_md",
+      "title": "Public Key Scripts in ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_public-keys_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_reusable-functions_md",
+      "title": "reusable-functions.md",
+      "path": "processed/docs_dev_scs_ergoscript_reusable-functions_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_rustvssigma_md",
+      "title": "Sigma-Rust vs SigmaState Interpreter",
+      "path": "processed/docs_dev_scs_ergoscript_rustvssigma_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_scastie_md",
+      "title": "Ergo Blockchain Development with Scastie (Scala Online Compiler)",
+      "path": "processed/docs_dev_scs_ergoscript_scastie_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscript_storing-data_md",
+      "title": "Data Storage in ErgoScript",
+      "path": "processed/docs_dev_scs_ergoscript_storing-data_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergoscriptvergotree_md",
+      "title": "ergoscriptvergotree.md",
+      "path": "processed/docs_dev_scs_ergoscriptvergotree_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_md",
+      "title": "ErgoTree: Reference Manual",
+      "path": "processed/docs_dev_scs_ergotree_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_encoding_md",
+      "title": "Understanding ErgoTree Encoding",
+      "path": "processed/docs_dev_scs_ergotree_encoding_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_ergotree-intro_md",
+      "title": "ErgoTree Introduction",
+      "path": "processed/docs_dev_scs_ergotree_ergotree-intro_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_ergotree-lang_md",
+      "title": "ErgoTree as a Language",
+      "path": "processed/docs_dev_scs_ergotree_ergotree-lang_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_ergotree-templates_md",
+      "title": "Templatized ErgoTree",
+      "path": "processed/docs_dev_scs_ergotree_ergotree-templates_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_evaluation_md",
+      "title": "ErgoTree Evaluation",
+      "path": "processed/docs_dev_scs_ergotree_evaluation_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_functions_md",
+      "title": "ErgoTree Functions",
+      "path": "processed/docs_dev_scs_ergotree_functions_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_script-optimisation_md",
+      "title": "Potential Script Processing Optimization",
+      "path": "processed/docs_dev_scs_ergotree_script-optimisation_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_script-validation_md",
+      "title": "Efficient Script Validation",
+      "path": "processed/docs_dev_scs_ergotree_script-validation_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_serialization_md",
+      "title": "Serialization",
+      "path": "processed/docs_dev_scs_ergotree_serialization_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_types_md",
+      "title": "Predefined types",
+      "path": "processed/docs_dev_scs_ergotree_types_md.json"
+    },
+    {
+      "id": "docs_dev_scs_ergotree_typing_md",
+      "title": "ErgoTree Typing",
+      "path": "processed/docs_dev_scs_ergotree_typing_md.json"
+    },
+    {
+      "id": "docs_dev_scs_flowcards_md",
+      "title": "flowcards.md",
+      "path": "processed/docs_dev_scs_flowcards_md.json"
+    },
+    {
+      "id": "docs_dev_scs_global-functions_md",
+      "title": "Global Functions",
+      "path": "processed/docs_dev_scs_global-functions_md.json"
+    },
+    {
+      "id": "docs_dev_scs_microcredit_md",
+      "title": "microcredit.md",
+      "path": "processed/docs_dev_scs_microcredit_md.json"
+    },
+    {
+      "id": "docs_dev_scs_multi_md",
+      "title": "Multi-Stage Protocols",
+      "path": "processed/docs_dev_scs_multi_md.json"
+    },
+    {
+      "id": "docs_dev_scs_p2s_md",
+      "title": "Developing Simple Pay-to-Script Applications with ErgoScript",
+      "path": "processed/docs_dev_scs_p2s_md.json"
+    },
+    {
+      "id": "docs_dev_scs_puppet_md",
+      "title": "Ergo Puppet",
+      "path": "processed/docs_dev_scs_puppet_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma-lang_md",
+      "title": "The ***'Sigma Language'***",
+      "path": "processed/docs_dev_scs_sigma-lang_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_md",
+      "title": "Sigma Protocols",
+      "path": "processed/docs_dev_scs_sigma_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_3-out-of-5_md",
+      "title": "3-out-of-5 Threshold Signature",
+      "path": "processed/docs_dev_scs_sigma_3-out-of-5_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_diffie_md",
+      "title": "Diffie-Hellman (DH) Protocol in Ergo",
+      "path": "processed/docs_dev_scs_sigma_diffie_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_improved-signatures_md",
+      "title": "improved-signatures.md",
+      "path": "processed/docs_dev_scs_sigma_improved-signatures_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_lang-ops_md",
+      "title": "Language Operations",
+      "path": "processed/docs_dev_scs_sigma_lang-ops_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_lang-spec_md",
+      "title": "ErgoScript Language Description",
+      "path": "processed/docs_dev_scs_sigma_lang-spec_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_schnorr_md",
+      "title": "Schnorr Signature",
+      "path": "processed/docs_dev_scs_sigma_schnorr_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_sigma-prop_md",
+      "title": "Sigma Propositions",
+      "path": "processed/docs_dev_scs_sigma_sigma-prop_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigma_verifying_md",
+      "title": "Schnorr Signatures",
+      "path": "processed/docs_dev_scs_sigma_verifying_md.json"
+    },
+    {
+      "id": "docs_dev_scs_sigmastate-interpreter_md",
+      "title": "Sigmastate Interpreter",
+      "path": "processed/docs_dev_scs_sigmastate-interpreter_md.json"
+    },
+    {
+      "id": "docs_dev_scs_syntax_md",
+      "title": "ErgoScript Syntax",
+      "path": "processed/docs_dev_scs_syntax_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_context-enrichment_md",
+      "title": "Context Enrichment",
+      "path": "processed/docs_dev_scs_tx_context-enrichment_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_fsm-example_md",
+      "title": "Tutorial: Finite State Machines (FSM) in Ergo",
+      "path": "processed/docs_dev_scs_tx_fsm-example_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_ico_md",
+      "title": "ico.md",
+      "path": "processed/docs_dev_scs_tx_ico_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_mast-example_md",
+      "title": "Tutorial: Merkleized Abstract Syntax Trees (MAST) in Ergo",
+      "path": "processed/docs_dev_scs_tx_mast-example_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_reversible-address_md",
+      "title": "Reversible Addresses",
+      "path": "processed/docs_dev_scs_tx_reversible-address_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_rock-paper-scissor_md",
+      "title": "rock-paper-scissor.md",
+      "path": "processed/docs_dev_scs_tx_rock-paper-scissor_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_tx-chains_md",
+      "title": "Transaction Chains",
+      "path": "processed/docs_dev_scs_tx_tx-chains_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_tx-graphs_md",
+      "title": "Transaction Graphs",
+      "path": "processed/docs_dev_scs_tx_tx-graphs_md.json"
+    },
+    {
+      "id": "docs_dev_scs_tx_tx-tree_md",
+      "title": "Transaction Tree",
+      "path": "processed/docs_dev_scs_tx_tx-tree_md.json"
+    },
+    {
+      "id": "docs_dev_scs_types_sigmaboolean_md",
+      "title": "SigmaBoolean",
+      "path": "processed/docs_dev_scs_types_sigmaboolean_md.json"
+    },
+    {
+      "id": "docs_dev_stack_android_md",
+      "title": "Android",
+      "path": "processed/docs_dev_stack_android_md.json"
+    },
+    {
+      "id": "docs_dev_stack_api-howto_md",
+      "title": "api-howto.md",
+      "path": "processed/docs_dev_stack_api-howto_md.json"
+    },
+    {
+      "id": "docs_dev_stack_api_md",
+      "title": "APIs",
+      "path": "processed/docs_dev_stack_api_md.json"
+    },
+    {
+      "id": "docs_dev_stack_appkit_md",
+      "title": "Appkit",
+      "path": "processed/docs_dev_stack_appkit_md.json"
+    },
+    {
+      "id": "docs_dev_stack_appkit_appkit-node_md",
+      "title": "Interacting with a local node.",
+      "path": "processed/docs_dev_stack_appkit_appkit-node_md.json"
+    },
+    {
+      "id": "docs_dev_stack_appkit_appkit_py_md",
+      "title": "Using AppKit from Python",
+      "path": "processed/docs_dev_stack_appkit_appkit_py_md.json"
+    },
+    {
+      "id": "docs_dev_stack_appkit_gradle_md",
+      "title": "Gradle",
+      "path": "processed/docs_dev_stack_appkit_gradle_md.json"
+    },
+    {
+      "id": "docs_dev_stack_appkit_tutorial_md",
+      "title": "tutorial.md",
+      "path": "processed/docs_dev_stack_appkit_tutorial_md.json"
+    },
+    {
+      "id": "docs_dev_stack_assembler_md",
+      "title": "Assembler",
+      "path": "processed/docs_dev_stack_assembler_md.json"
+    },
+    {
+      "id": "docs_dev_stack_basics_md",
+      "title": "Ergo Platform Basic Starter Tutorial",
+      "path": "processed/docs_dev_stack_basics_md.json"
+    },
+    {
+      "id": "docs_dev_stack_browser_md",
+      "title": "Browser",
+      "path": "processed/docs_dev_stack_browser_md.json"
+    },
+    {
+      "id": "docs_dev_stack_bundled_md",
+      "title": "bundled.md",
+      "path": "processed/docs_dev_stack_bundled_md.json"
+    },
+    {
+      "id": "docs_dev_stack_compiler_md",
+      "title": "ErgoScript Compiler",
+      "path": "processed/docs_dev_stack_compiler_md.json"
+    },
+    {
+      "id": "docs_dev_stack_desktop_md",
+      "title": "Desktop",
+      "path": "processed/docs_dev_stack_desktop_md.json"
+    },
+    {
+      "id": "docs_dev_stack_ergo-lib-python_md",
+      "title": "ergo-lib-python Documentation",
+      "path": "processed/docs_dev_stack_ergo-lib-python_md.json"
+    },
+    {
+      "id": "docs_dev_stack_ergoscala_md",
+      "title": "ErgoScala compiler",
+      "path": "processed/docs_dev_stack_ergoscala_md.json"
+    },
+    {
+      "id": "docs_dev_stack_ergotool_md",
+      "title": "ErgoTool",
+      "path": "processed/docs_dev_stack_ergotool_md.json"
+    },
+    {
+      "id": "docs_dev_stack_ergpy_md",
+      "title": "Ergpy",
+      "path": "processed/docs_dev_stack_ergpy_md.json"
+    },
+    {
+      "id": "docs_dev_stack_explorer_md",
+      "title": "Explorers",
+      "path": "processed/docs_dev_stack_explorer_md.json"
+    },
+    {
+      "id": "docs_dev_stack_explorer_explorer_local_md",
+      "title": "Explorer",
+      "path": "processed/docs_dev_stack_explorer_explorer_local_md.json"
+    },
+    {
+      "id": "docs_dev_stack_explorer_graphql_md",
+      "title": "GraphQL",
+      "path": "processed/docs_dev_stack_explorer_graphql_md.json"
+    },
+    {
+      "id": "docs_dev_stack_fleet_md",
+      "title": "Fleet",
+      "path": "processed/docs_dev_stack_fleet_md.json"
+    },
+    {
+      "id": "docs_dev_stack_fleetsharp_md",
+      "title": "FleetSharp",
+      "path": "processed/docs_dev_stack_fleetsharp_md.json"
+    },
+    {
+      "id": "docs_dev_stack_frameworks_md",
+      "title": "Frameworks",
+      "path": "processed/docs_dev_stack_frameworks_md.json"
+    },
+    {
+      "id": "docs_dev_stack_headless_md",
+      "title": "Ergo Headless dApp Framework (HDF)",
+      "path": "processed/docs_dev_stack_headless_md.json"
+    },
+    {
+      "id": "docs_dev_stack_headless_modules_md",
+      "title": "modules.md",
+      "path": "processed/docs_dev_stack_headless_modules_md.json"
+    },
+    {
+      "id": "docs_dev_stack_iOS_md",
+      "title": "iOS",
+      "path": "processed/docs_dev_stack_iOS_md.json"
+    },
+    {
+      "id": "docs_dev_stack_interpreters_md",
+      "title": "Interpreters",
+      "path": "processed/docs_dev_stack_interpreters_md.json"
+    },
+    {
+      "id": "docs_dev_stack_introduction_md",
+      "title": "Resources",
+      "path": "processed/docs_dev_stack_introduction_md.json"
+    },
+    {
+      "id": "docs_dev_stack_jde_md",
+      "title": "JSON dApp Environment (JDE)",
+      "path": "processed/docs_dev_stack_jde_md.json"
+    },
+    {
+      "id": "docs_dev_stack_kiosk_md",
+      "title": "ErgoScript Playground with KioskWeb",
+      "path": "processed/docs_dev_stack_kiosk_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mobile-build-constraints_md",
+      "title": "Mobile Build Constraints for Scala/JVM Components",
+      "path": "processed/docs_dev_stack_mobile-build-constraints_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mobile_md",
+      "title": "Mobile",
+      "path": "processed/docs_dev_stack_mobile_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_md",
+      "title": "mosaik.md",
+      "path": "processed/docs_dev_stack_mosaik_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_examples_md",
+      "title": "Ergo Mosaik: A UI system for Ergo dApps",
+      "path": "processed/docs_dev_stack_mosaik_examples_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_intro_md",
+      "title": "1: *Ergo Mosaik*: A UI system for Ergo dApps",
+      "path": "processed/docs_dev_stack_mosaik_intro_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_mosaik-docker-flux_md",
+      "title": "Ergo Mosaik: Build, dockerize and deploy",
+      "path": "processed/docs_dev_stack_mosaik_mosaik-docker-flux_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_tutorial2_md",
+      "title": "Ergo Mosaik: A UI system for Ergo dApps",
+      "path": "processed/docs_dev_stack_mosaik_tutorial2_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_tutorial3_md",
+      "title": "Ergo Mosaik: A UI system for Ergo dApps",
+      "path": "processed/docs_dev_stack_mosaik_tutorial3_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_tutorial4_md",
+      "title": "Ergo Mosaik: A UI system for Ergo dApps",
+      "path": "processed/docs_dev_stack_mosaik_tutorial4_md.json"
+    },
+    {
+      "id": "docs_dev_stack_mosaik_tutorial5_md",
+      "title": "Ergo Mosaik: A UI system for Ergo dApps",
+      "path": "processed/docs_dev_stack_mosaik_tutorial5_md.json"
+    },
+    {
+      "id": "docs_dev_stack_rpi-blockchain-explorer_md",
+      "title": "Tutorial: Blockchain Explorer with Raspberry Pi",
+      "path": "processed/docs_dev_stack_rpi-blockchain-explorer_md.json"
+    },
+    {
+      "id": "docs_dev_stack_rustkit_md",
+      "title": "Rustkit",
+      "path": "processed/docs_dev_stack_rustkit_md.json"
+    },
+    {
+      "id": "docs_dev_stack_server_md",
+      "title": "Server",
+      "path": "processed/docs_dev_stack_server_md.json"
+    },
+    {
+      "id": "docs_dev_stack_sigma-rust-constrained_md",
+      "title": "Using Sigma-Rust in Resource-Constrained Environments",
+      "path": "processed/docs_dev_stack_sigma-rust-constrained_md.json"
+    },
+    {
+      "id": "docs_dev_stack_sigma-rust_md",
+      "title": "Sigma Rust",
+      "path": "processed/docs_dev_stack_sigma-rust_md.json"
+    },
+    {
+      "id": "docs_dev_stack_utilities_plutomonkey_md",
+      "title": "Compiling ErgoScript",
+      "path": "processed/docs_dev_stack_utilities_plutomonkey_md.json"
+    },
+    {
+      "id": "docs_dev_start_md",
+      "title": "Developers",
+      "path": "processed/docs_dev_start_md.json"
+    },
+    {
+      "id": "docs_dev_start_resources_md",
+      "title": "Resources",
+      "path": "processed/docs_dev_start_resources_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_burn_md",
+      "title": "Burning a token",
+      "path": "processed/docs_dev_tokens_burn_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_nfts_create_md",
+      "title": "Creating an NFT",
+      "path": "processed/docs_dev_tokens_nfts_create_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_nfts_nft-examples_md",
+      "title": "NFT Examples",
+      "path": "processed/docs_dev_tokens_nfts_nft-examples_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_nfts_nfts-overview_md",
+      "title": "Non-Fungible Tokens on Ergo",
+      "path": "processed/docs_dev_tokens_nfts_nfts-overview_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_nfts_on-chain_md",
+      "title": "On-chain NFTs",
+      "path": "processed/docs_dev_tokens_nfts_on-chain_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_nfts_royalties_md",
+      "title": "Royalties",
+      "path": "processed/docs_dev_tokens_nfts_royalties_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_nfts_v1v2_md",
+      "title": "Design Choices: V1 vs V2",
+      "path": "processed/docs_dev_tokens_nfts_v1v2_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_perpetual_md",
+      "title": "Perpetual Tokens",
+      "path": "processed/docs_dev_tokens_perpetual_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_singletons_md",
+      "title": "Singletons",
+      "path": "processed/docs_dev_tokens_singletons_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_standards_eip21_md",
+      "title": "EIP-0021: Genuine Token Verification",
+      "path": "processed/docs_dev_tokens_standards_eip21_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_standards_eip22_md",
+      "title": "EIP-0022: Auction Contract",
+      "path": "processed/docs_dev_tokens_standards_eip22_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_standards_eip24_md",
+      "title": "EIP-0024: Artwork Contract",
+      "path": "processed/docs_dev_tokens_standards_eip24_md.json"
+    },
+    {
+      "id": "docs_dev_tokens_standards_eip4_md",
+      "title": "EIP-0004: Asset Standard",
+      "path": "processed/docs_dev_tokens_standards_eip4_md.json"
+    },
+    {
+      "id": "docs_dev_tutorials_md",
+      "title": "tutorials.md",
+      "path": "processed/docs_dev_tutorials_md.json"
+    },
+    {
+      "id": "docs_dev_tutorials_blockchain-indexing_md",
+      "title": "Indexing Ergo Blockchain Data",
+      "path": "processed/docs_dev_tutorials_blockchain-indexing_md.json"
+    },
+    {
+      "id": "docs_dev_tutorials_blockchain-indexing_custom-indexer_md",
+      "title": "Indexing Strategy: Building a Custom Indexer",
+      "path": "processed/docs_dev_tutorials_blockchain-indexing_custom-indexer_md.json"
+    },
+    {
+      "id": "docs_dev_tutorials_blockchain-indexing_explorer-apis_md",
+      "title": "Indexing Strategy: Using Public Explorer APIs",
+      "path": "processed/docs_dev_tutorials_blockchain-indexing_explorer-apis_md.json"
+    },
+    {
+      "id": "docs_dev_tutorials_blockchain-indexing_node-api-direct_md",
+      "title": "Indexing Strategy: Querying Node API Directly",
+      "path": "processed/docs_dev_tutorials_blockchain-indexing_node-api-direct_md.json"
+    },
+    {
+      "id": "docs_dev_tutorials_fleet-sdk-recipes_md",
+      "title": "Fleet SDK Recipes",
+      "path": "processed/docs_dev_tutorials_fleet-sdk-recipes_md.json"
+    },
+    {
+      "id": "docs_dev_tutorials_hardware-wallet-integration_md",
+      "title": "Hardware Wallet Integration with sigma-rust",
+      "path": "processed/docs_dev_tutorials_hardware-wallet-integration_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_address_md",
+      "title": "Addresses",
+      "path": "processed/docs_dev_wallet_address_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_address_address_types_md",
+      "title": "Address Types",
+      "path": "processed/docs_dev_wallet_address_address_types_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_address_address_validation_md",
+      "title": "Address validation",
+      "path": "processed/docs_dev_wallet_address_address_validation_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_eip-standards_md",
+      "title": "Wallet Interaction Standards (EIPs) for dApp Developers",
+      "path": "processed/docs_dev_wallet_eip-standards_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_keys_md",
+      "title": "Hierarchical keys",
+      "path": "processed/docs_dev_wallet_keys_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_minotaur-multisig_md",
+      "title": "Multi-Signature Wallet",
+      "path": "processed/docs_dev_wallet_minotaur-multisig_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_minotaur_md",
+      "title": "Minotaur Wallet",
+      "path": "processed/docs_dev_wallet_minotaur_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_multisig_md",
+      "title": "MultiSig",
+      "path": "processed/docs_dev_wallet_multisig_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_nautilus_md",
+      "title": "Nautilus Wallet",
+      "path": "processed/docs_dev_wallet_nautilus_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_paper-wallet_md",
+      "title": "Ergo Paper Wallet",
+      "path": "processed/docs_dev_wallet_paper-wallet_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_dApp_md",
+      "title": "dApp Connector",
+      "path": "processed/docs_dev_wallet_payments_dApp_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_ergoauth_md",
+      "title": "ErgoAuth: user authentication protocol between wallet applications and dApps",
+      "path": "processed/docs_dev_wallet_payments_ergoauth_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_ergopay_ep-tutorial_md",
+      "title": "ep-tutorial.md",
+      "path": "processed/docs_dev_wallet_payments_ergopay_ep-tutorial_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_ergopay_ergo-pay_md",
+      "title": "ErgoPay",
+      "path": "processed/docs_dev_wallet_payments_ergopay_ergo-pay_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_ledger_md",
+      "title": "Ledger",
+      "path": "processed/docs_dev_wallet_payments_ledger_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_proxy_md",
+      "title": "Proxy Contracts",
+      "path": "processed/docs_dev_wallet_payments_proxy_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_standards_eip17_md",
+      "title": "Proxy contracts",
+      "path": "processed/docs_dev_wallet_payments_standards_eip17_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_standards_eip20_md",
+      "title": "ErgoPay: A Wallet and dApp Interaction Protocol",
+      "path": "processed/docs_dev_wallet_payments_standards_eip20_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_payments_standards_eip25_md",
+      "title": "EIP-0025: URI scheme for payment requests",
+      "path": "processed/docs_dev_wallet_payments_standards_eip25_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_safew_md",
+      "title": "SafeW",
+      "path": "processed/docs_dev_wallet_safew_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_satergo-vault_md",
+      "title": "Satergo Offline Vault",
+      "path": "processed/docs_dev_wallet_satergo-vault_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_satergo_md",
+      "title": "Satergo Wallet",
+      "path": "processed/docs_dev_wallet_satergo_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_standards_eip1_md",
+      "title": "EIP-0001: UTXO-Set Scanning Wallet API",
+      "path": "processed/docs_dev_wallet_standards_eip1_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_standards_eip19_md",
+      "title": "EIP-0019 Cold Wallet: an interaction protocol between Hot and Cold mobile wallets",
+      "path": "processed/docs_dev_wallet_standards_eip19_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_standards_eip3_md",
+      "title": "EIP-0003: Deterministic Wallet Standard",
+      "path": "processed/docs_dev_wallet_standards_eip3_md.json"
+    },
+    {
+      "id": "docs_dev_wallet_standards_eip5_md",
+      "title": "EIP-0005: Contract Template Documentation",
+      "path": "processed/docs_dev_wallet_standards_eip5_md.json"
+    },
+    {
+      "id": "docs_dev_wallets_md",
+      "title": "Choosing an Ergo Wallet",
+      "path": "processed/docs_dev_wallets_md.json"
+    },
+    {
+      "id": "docs_devdao_md",
+      "title": "Developer DAO",
+      "path": "processed/docs_devdao_md.json"
+    },
+    {
+      "id": "docs_doc_ergoscript-whitepaper_md",
+      "title": "ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs",
+      "path": "processed/docs_doc_ergoscript-whitepaper_md.json"
+    },
+    {
+      "id": "docs_doc_on-contractual-money_md",
+      "title": "On Contractual Money",
+      "path": "processed/docs_doc_on-contractual-money_md.json"
+    },
+    {
+      "id": "docs_doc_privacy-guide_md",
+      "title": "Privacy and Security in Bitcoin: Dispelling Myths and Enhancing User Protection",
+      "path": "processed/docs_doc_privacy-guide_md.json"
+    },
+    {
+      "id": "docs_doc_whitepaper_md",
+      "title": "Ergo: A Resilient Platform For Contractual Money",
+      "path": "processed/docs_doc_whitepaper_md.json"
+    },
+    {
+      "id": "docs_documents_md",
+      "title": "Documents",
+      "path": "processed/docs_documents_md.json"
+    },
+    {
+      "id": "docs_eco_analog-ergo_md",
+      "title": "Analog Ergo",
+      "path": "processed/docs_eco_analog-ergo_md.json"
+    },
+    {
+      "id": "docs_eco_auction-coin_md",
+      "title": "Auction Coin: A Decentralized Token Issuance Model on Ergo Blockchain",
+      "path": "processed/docs_eco_auction-coin_md.json"
+    },
+    {
+      "id": "docs_eco_azorus_md",
+      "title": "Azorus",
+      "path": "processed/docs_eco_azorus_md.json"
+    },
+    {
+      "id": "docs_eco_bene_md",
+      "title": "Bene: Fundraising Platform",
+      "path": "processed/docs_eco_bene_md.json"
+    },
+    {
+      "id": "docs_eco_blitz_md",
+      "title": "Blitz TCG",
+      "path": "processed/docs_eco_blitz_md.json"
+    },
+    {
+      "id": "docs_eco_blobstopia_md",
+      "title": "Blobstopia",
+      "path": "processed/docs_eco_blobstopia_md.json"
+    },
+    {
+      "id": "docs_eco_crux_md",
+      "title": "Crux Finance",
+      "path": "processed/docs_eco_crux_md.json"
+    },
+    {
+      "id": "docs_eco_crystal-pool_md",
+      "title": "Crystal Pool",
+      "path": "processed/docs_eco_crystal-pool_md.json"
+    },
+    {
+      "id": "docs_eco_cyberaid_md",
+      "title": "Cyberaid",
+      "path": "processed/docs_eco_cyberaid_md.json"
+    },
+    {
+      "id": "docs_eco_cyberverse_md",
+      "title": "Cyberverse",
+      "path": "processed/docs_eco_cyberverse_md.json"
+    },
+    {
+      "id": "docs_eco_cyti_md",
+      "title": "CYTI",
+      "path": "processed/docs_eco_cyti_md.json"
+    },
+    {
+      "id": "docs_eco_dexy_md",
+      "title": "Dexy: A Seigniorage-Based Stablecoin",
+      "path": "processed/docs_eco_dexy_md.json"
+    },
+    {
+      "id": "docs_eco_digigoats_md",
+      "title": "DigiGoats",
+      "path": "processed/docs_eco_digigoats_md.json"
+    },
+    {
+      "id": "docs_eco_duckpools_md",
+      "title": "DuckPools: Ergo Lending Protocol",
+      "path": "processed/docs_eco_duckpools_md.json"
+    },
+    {
+      "id": "docs_eco_ergo-auctions_md",
+      "title": "Ergo Auction House",
+      "path": "processed/docs_eco_ergo-auctions_md.json"
+    },
+    {
+      "id": "docs_eco_ergomixer_md",
+      "title": "ErgoMixer",
+      "path": "processed/docs_eco_ergomixer_md.json"
+    },
+    {
+      "id": "docs_eco_ergomixer_best-practices_md",
+      "title": "Mixer Best Practices",
+      "path": "processed/docs_eco_ergomixer_best-practices_md.json"
+    },
+    {
+      "id": "docs_eco_ergomixer_identifiability_md",
+      "title": "Identifiability",
+      "path": "processed/docs_eco_ergomixer_identifiability_md.json"
+    },
+    {
+      "id": "docs_eco_ergomixer_mixer-android_md",
+      "title": "How to Set Up the Ergo Mixer on an Android Device",
+      "path": "processed/docs_eco_ergomixer_mixer-android_md.json"
+    },
+    {
+      "id": "docs_eco_ergomixer_mixer-faq_md",
+      "title": "FAQ",
+      "path": "processed/docs_eco_ergomixer_mixer-faq_md.json"
+    },
+    {
+      "id": "docs_eco_ergomixer_token_md",
+      "title": "ErgoMixer Token",
+      "path": "processed/docs_eco_ergomixer_token_md.json"
+    },
+    {
+      "id": "docs_eco_ergonames_md",
+      "title": "ErgoNames: Decentralized Naming System for Ergo",
+      "path": "processed/docs_eco_ergonames_md.json"
+    },
+    {
+      "id": "docs_eco_ergonation_md",
+      "title": "ErgoNation: A Community-Driven Project for Decentralized Identity Verification",
+      "path": "processed/docs_eco_ergonation_md.json"
+    },
+    {
+      "id": "docs_eco_ergone_md",
+      "title": "ErgOne",
+      "path": "processed/docs_eco_ergone_md.json"
+    },
+    {
+      "id": "docs_eco_ergopad_md",
+      "title": "Ergopad",
+      "path": "processed/docs_eco_ergopad_md.json"
+    },
+    {
+      "id": "docs_eco_ergopos_md",
+      "title": "ErgoPOS",
+      "path": "processed/docs_eco_ergopos_md.json"
+    },
+    {
+      "id": "docs_eco_ergoraffle_md",
+      "title": "ErgoRaffle",
+      "path": "processed/docs_eco_ergoraffle_md.json"
+    },
+    {
+      "id": "docs_eco_ergowell_md",
+      "title": "ErgoWell",
+      "path": "processed/docs_eco_ergowell_md.json"
+    },
+    {
+      "id": "docs_eco_exle_md",
+      "title": "EXLE (Ergo-Lend)",
+      "path": "processed/docs_eco_exle_md.json"
+    },
+    {
+      "id": "docs_eco_gluon_md",
+      "title": "Gluon",
+      "path": "processed/docs_eco_gluon_md.json"
+    },
+    {
+      "id": "docs_eco_grand-gambit_md",
+      "title": "Grand Gambit",
+      "path": "processed/docs_eco_grand-gambit_md.json"
+    },
+    {
+      "id": "docs_eco_guapswap_md",
+      "title": "GuapSwap",
+      "path": "processed/docs_eco_guapswap_md.json"
+    },
+    {
+      "id": "docs_eco_hodlbox_md",
+      "title": "Hodlbox: Incentivizing Long-Term Holding in the Ergo Ecosystem",
+      "path": "processed/docs_eco_hodlbox_md.json"
+    },
+    {
+      "id": "docs_eco_hodlcoin_md",
+      "title": "Hodlcoin: A High-Risk, High-Reward Game",
+      "path": "processed/docs_eco_hodlcoin_md.json"
+    },
+    {
+      "id": "docs_eco_lilium_md",
+      "title": "Lilium",
+      "path": "processed/docs_eco_lilium_md.json"
+    },
+    {
+      "id": "docs_eco_lithos_md",
+      "title": "Lithos",
+      "path": "processed/docs_eco_lithos_md.json"
+    },
+    {
+      "id": "docs_eco_machina-finance_md",
+      "title": "Machina Finance",
+      "path": "processed/docs_eco_machina-finance_md.json"
+    },
+    {
+      "id": "docs_eco_mew-finance_md",
+      "title": "Mew Finance",
+      "path": "processed/docs_eco_mew-finance_md.json"
+    },
+    {
+      "id": "docs_eco_miner-tooling_md",
+      "title": "Miner Tooling",
+      "path": "processed/docs_eco_miner-tooling_md.json"
+    },
+    {
+      "id": "docs_eco_miners-rights_md",
+      "title": "Mining Rights Protocol: A Technical Analysis of Blockchain-Based Mining Rights Management",
+      "path": "processed/docs_eco_miners-rights_md.json"
+    },
+    {
+      "id": "docs_eco_monsterpub_md",
+      "title": "Monster Pub Brawl",
+      "path": "processed/docs_eco_monsterpub_md.json"
+    },
+    {
+      "id": "docs_eco_moria-finance_md",
+      "title": "Moria Finance: Decentralized Fund Management on Ergo",
+      "path": "processed/docs_eco_moria-finance_md.json"
+    },
+    {
+      "id": "docs_eco_nightowl_md",
+      "title": "NightOwl",
+      "path": "processed/docs_eco_nightowl_md.json"
+    },
+    {
+      "id": "docs_eco_obolflip_md",
+      "title": "Obolflip",
+      "path": "processed/docs_eco_obolflip_md.json"
+    },
+    {
+      "id": "docs_eco_onergo_md",
+      "title": "ONERGO",
+      "path": "processed/docs_eco_onergo_md.json"
+    },
+    {
+      "id": "docs_eco_optionPools_md",
+      "title": "OptionPools: Unleashing the Power of Ergo for Decentralized Options Trading",
+      "path": "processed/docs_eco_optionPools_md.json"
+    },
+    {
+      "id": "docs_eco_optioncoin_md",
+      "title": "OptionCoin: Decentralized Options Trading for Token Emission",
+      "path": "processed/docs_eco_optioncoin_md.json"
+    },
+    {
+      "id": "docs_eco_oracles-v2_md",
+      "title": "Oracle Pools Version 2",
+      "path": "processed/docs_eco_oracles-v2_md.json"
+    },
+    {
+      "id": "docs_eco_p2p-trading_md",
+      "title": "P2P Trading",
+      "path": "processed/docs_eco_p2p-trading_md.json"
+    },
+    {
+      "id": "docs_eco_paideia_md",
+      "title": "Paideia",
+      "path": "processed/docs_eco_paideia_md.json"
+    },
+    {
+      "id": "docs_eco_palmyra_md",
+      "title": "Palmyra ComDEX",
+      "path": "processed/docs_eco_palmyra_md.json"
+    },
+    {
+      "id": "docs_eco_pandav_md",
+      "title": "PandaV",
+      "path": "processed/docs_eco_pandav_md.json"
+    },
+    {
+      "id": "docs_eco_project-tesseract_md",
+      "title": "Project Tesseract: An Inside Look at ErgoGames.io's Upcoming Release",
+      "path": "processed/docs_eco_project-tesseract_md.json"
+    },
+    {
+      "id": "docs_eco_quantum-swap_md",
+      "title": "quantum-swap.md",
+      "path": "processed/docs_eco_quantum-swap_md.json"
+    },
+    {
+      "id": "docs_eco_reputation-system_md",
+      "title": "Reputation System",
+      "path": "processed/docs_eco_reputation-system_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_md",
+      "title": "Rosen Bridge: The Future of Cross-Chain Asset Transfers",
+      "path": "processed/docs_eco_rosen_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_bitcoin-watcher_md",
+      "title": "Bitcoin Rosen Bridge Watcher Setup",
+      "path": "processed/docs_eco_rosen_bitcoin-watcher_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_ergo-watcher_md",
+      "title": "Ergo Rosen Bridge Watcher Setup",
+      "path": "processed/docs_eco_rosen_ergo-watcher_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_rosen-faq_md",
+      "title": "FAQs: Rosen Bridge Operations and Features",
+      "path": "processed/docs_eco_rosen_rosen-faq_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_rosen-guard_md",
+      "title": "Rosen Guards",
+      "path": "processed/docs_eco_rosen_rosen-guard_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_rosen-preq_md",
+      "title": "Rosen Watcher Prerequisites",
+      "path": "processed/docs_eco_rosen_rosen-preq_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_rosen-team_md",
+      "title": "Rosen Team",
+      "path": "processed/docs_eco_rosen_rosen-team_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_rosen-tokenomics_md",
+      "title": "Tokenomics",
+      "path": "processed/docs_eco_rosen_rosen-tokenomics_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_rosen-uses_md",
+      "title": "Rosen Bridge: Connecting Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain",
+      "path": "processed/docs_eco_rosen_rosen-uses_md.json"
+    },
+    {
+      "id": "docs_eco_rosen_watcher_md",
+      "title": "Ergo Rosen Bridge Watcher Setup",
+      "path": "processed/docs_eco_rosen_watcher_md.json"
+    },
+    {
+      "id": "docs_eco_sigma-stamp_md",
+      "title": "Sigma Stamp",
+      "path": "processed/docs_eco_sigma-stamp_md.json"
+    },
+    {
+      "id": "docs_eco_sigma-subscriptions_md",
+      "title": "Sigma Subscriptions",
+      "path": "processed/docs_eco_sigma-subscriptions_md.json"
+    },
+    {
+      "id": "docs_eco_sigmafi_md",
+      "title": "SigmaFi",
+      "path": "processed/docs_eco_sigmafi_md.json"
+    },
+    {
+      "id": "docs_eco_sigmajoin_md",
+      "title": "Sigmajoin",
+      "path": "processed/docs_eco_sigmajoin_md.json"
+    },
+    {
+      "id": "docs_eco_sigmao_md",
+      "title": "Sigma'O",
+      "path": "processed/docs_eco_sigmao_md.json"
+    },
+    {
+      "id": "docs_eco_sigmarand_md",
+      "title": "SigmaRand: Secure Random Number Generation for Ergo",
+      "path": "processed/docs_eco_sigmarand_md.json"
+    },
+    {
+      "id": "docs_eco_sigmavalley_md",
+      "title": "SigmaValley",
+      "path": "processed/docs_eco_sigmavalley_md.json"
+    },
+    {
+      "id": "docs_eco_single-tx-swap_md",
+      "title": "Single Transaction Swap",
+      "path": "processed/docs_eco_single-tx-swap_md.json"
+    },
+    {
+      "id": "docs_eco_skyharbor_md",
+      "title": "SkyHarbor",
+      "path": "processed/docs_eco_skyharbor_md.json"
+    },
+    {
+      "id": "docs_eco_snisp_md",
+      "title": "SNISP",
+      "path": "processed/docs_eco_snisp_md.json"
+    },
+    {
+      "id": "docs_eco_solaris_md",
+      "title": "Solaris",
+      "path": "processed/docs_eco_solaris_md.json"
+    },
+    {
+      "id": "docs_eco_spectrum_md",
+      "title": "Spectrum Finance",
+      "path": "processed/docs_eco_spectrum_md.json"
+    },
+    {
+      "id": "docs_eco_swamp-audio_md",
+      "title": "Swamp Audio",
+      "path": "processed/docs_eco_swamp-audio_md.json"
+    },
+    {
+      "id": "docs_eco_tabbypos_md",
+      "title": "TabbyPOS",
+      "path": "processed/docs_eco_tabbypos_md.json"
+    },
+    {
+      "id": "docs_eco_tensile_md",
+      "title": "Tensile",
+      "path": "processed/docs_eco_tensile_md.json"
+    },
+    {
+      "id": "docs_eco_the-field_md",
+      "title": "The Field",
+      "path": "processed/docs_eco_the-field_md.json"
+    },
+    {
+      "id": "docs_eco_thz-fm_md",
+      "title": "THz.FM",
+      "path": "processed/docs_eco_thz-fm_md.json"
+    },
+    {
+      "id": "docs_eco_token-jay_md",
+      "title": "Token Jay",
+      "path": "processed/docs_eco_token-jay_md.json"
+    },
+    {
+      "id": "docs_eco_zengate_md",
+      "title": "Zengate",
+      "path": "processed/docs_eco_zengate_md.json"
+    },
+    {
+      "id": "docs_ef_ef-future_md",
+      "title": "The Ergo Foundation's Future",
+      "path": "processed/docs_ef_ef-future_md.json"
+    },
+    {
+      "id": "docs_ef_ef-scope_md",
+      "title": "The Scope of the Ergo Foundation",
+      "path": "processed/docs_ef_ef-scope_md.json"
+    },
+    {
+      "id": "docs_ef_ef-treasury_md",
+      "title": "Ergo Foundation Treasury",
+      "path": "processed/docs_ef_ef-treasury_md.json"
+    },
+    {
+      "id": "docs_ef_ef-votes_md",
+      "title": "ef-votes.md",
+      "path": "processed/docs_ef_ef-votes_md.json"
+    },
+    {
+      "id": "docs_ef_ergo-foundation_md",
+      "title": "The Ergo Foundation",
+      "path": "processed/docs_ef_ergo-foundation_md.json"
+    },
+    {
+      "id": "docs_ef_ergo-timeline_md",
+      "title": "ergo-timeline.md",
+      "path": "processed/docs_ef_ergo-timeline_md.json"
+    },
+    {
+      "id": "docs_efyt_md",
+      "title": "Ergo-First-Year-Token (EFYT)",
+      "path": "processed/docs_efyt_md.json"
+    },
+    {
+      "id": "docs_events_ergohack_md",
+      "title": "ERGOHACK: Building the Ergo Ecosystem",
+      "path": "processed/docs_events_ergohack_md.json"
+    },
+    {
+      "id": "docs_events_ergosummit_md",
+      "title": "ErgoSummit",
+      "path": "processed/docs_events_ergosummit_md.json"
+    },
+    {
+      "id": "docs_events_events-overview_md",
+      "title": "Ergo Events",
+      "path": "processed/docs_events_events-overview_md.json"
+    },
+    {
+      "id": "docs_events_pdf_ergohackvii_REPUTATION_SYSTEM_md",
+      "title": "Reputation System",
+      "path": "processed/docs_events_pdf_ergohackvii_REPUTATION_SYSTEM_md.json"
+    },
+    {
+      "id": "docs_faq_md",
+      "title": "FAQ",
+      "path": "processed/docs_faq_md.json"
+    },
+    {
+      "id": "docs_fud-faq_md",
+      "title": "Common Misconceptions",
+      "path": "processed/docs_fud-faq_md.json"
+    },
+    {
+      "id": "docs_glossary_md",
+      "title": "glossary.md",
+      "path": "processed/docs_glossary_md.json"
+    },
+    {
+      "id": "docs_index_md",
+      "title": "Welcome to Ergo!",
+      "path": "processed/docs_index_md.json"
+    },
+    {
+      "id": "docs_mining_algo-technical_md",
+      "title": "Autolykos Line-by-line",
+      "path": "processed/docs_mining_algo-technical_md.json"
+    },
+    {
+      "id": "docs_mining_asic_md",
+      "title": "The Mechanics of ASIC Resistance in Autolykos v2",
+      "path": "processed/docs_mining_asic_md.json"
+    },
+    {
+      "id": "docs_mining_autolykos_md",
+      "title": "Autolykos",
+      "path": "processed/docs_mining_autolykos_md.json"
+    },
+    {
+      "id": "docs_mining_cpu_md",
+      "title": "GPU vs. CPU Mining: A Comparative Analysis of Autolykos and RandomX",
+      "path": "processed/docs_mining_cpu_md.json"
+    },
+    {
+      "id": "docs_mining_difficulty_md",
+      "title": "Understanding Difficulty Adjustment in Ergo",
+      "path": "processed/docs_mining_difficulty_md.json"
+    },
+    {
+      "id": "docs_mining_eip9_md",
+      "title": "EIP-0009 Hard-fork Activation Protocol",
+      "path": "processed/docs_mining_eip9_md.json"
+    },
+    {
+      "id": "docs_mining_emission_md",
+      "title": "Ergo Emission Schedule",
+      "path": "processed/docs_mining_emission_md.json"
+    },
+    {
+      "id": "docs_mining_gov_forking_md",
+      "title": "Forking",
+      "path": "processed/docs_mining_gov_forking_md.json"
+    },
+    {
+      "id": "docs_mining_gov_hard-fork_md",
+      "title": "Hard Forks in Ergo",
+      "path": "processed/docs_mining_gov_hard-fork_md.json"
+    },
+    {
+      "id": "docs_mining_gov_soft-fork_md",
+      "title": "Soft Forks",
+      "path": "processed/docs_mining_gov_soft-fork_md.json"
+    },
+    {
+      "id": "docs_mining_gov_velvet-fork_md",
+      "title": "Velvet Forks",
+      "path": "processed/docs_mining_gov_velvet-fork_md.json"
+    },
+    {
+      "id": "docs_mining_gov_voting_md",
+      "title": "Voting Cycles and Types of Changes",
+      "path": "processed/docs_mining_gov_voting_md.json"
+    },
+    {
+      "id": "docs_mining_governance_md",
+      "title": "Governance",
+      "path": "processed/docs_mining_governance_md.json"
+    },
+    {
+      "id": "docs_mining_log_space_md",
+      "title": "Mining in Logarithmic Space",
+      "path": "processed/docs_mining_log_space_md.json"
+    },
+    {
+      "id": "docs_mining_mining-overview_md",
+      "title": "Mining",
+      "path": "processed/docs_mining_mining-overview_md.json"
+    },
+    {
+      "id": "docs_mining_mining-resources_md",
+      "title": "Mining Resources",
+      "path": "processed/docs_mining_mining-resources_md.json"
+    },
+    {
+      "id": "docs_mining_os_md",
+      "title": "Operating Systems for Mining",
+      "path": "processed/docs_mining_os_md.json"
+    },
+    {
+      "id": "docs_mining_overclocking_md",
+      "title": "Overclocking for Ergo Mining",
+      "path": "processed/docs_mining_overclocking_md.json"
+    },
+    {
+      "id": "docs_mining_pools_md",
+      "title": "Mining Pools",
+      "path": "processed/docs_mining_pools_md.json"
+    },
+    {
+      "id": "docs_mining_rent_md",
+      "title": "Ergo's Demurrage (aka Storage Rent)",
+      "path": "processed/docs_mining_rent_md.json"
+    },
+    {
+      "id": "docs_mining_rent_rent-fees_md",
+      "title": "Ergo Storage Rent Fees",
+      "path": "processed/docs_mining_rent_rent-fees_md.json"
+    },
+    {
+      "id": "docs_mining_rent_rent-paper_md",
+      "title": "Understanding Cryptocurrency Fees: A Multi-Dimensional Approach",
+      "path": "processed/docs_mining_rent_rent-paper_md.json"
+    },
+    {
+      "id": "docs_mining_rent_rent-spending_md",
+      "title": "How to Spend an Expired Ergo Box",
+      "path": "processed/docs_mining_rent_rent-spending_md.json"
+    },
+    {
+      "id": "docs_mining_rent_rent-tokens_md",
+      "title": "What about tokens, NFTs, etc?",
+      "path": "processed/docs_mining_rent_rent-tokens_md.json"
+    },
+    {
+      "id": "docs_mining_revenue_md",
+      "title": "Sustaining Ergo Mining: Revenue Streams Beyond Emissions",
+      "path": "processed/docs_mining_revenue_md.json"
+    },
+    {
+      "id": "docs_mining_setup_join_md",
+      "title": "Start Mining",
+      "path": "processed/docs_mining_setup_join_md.json"
+    },
+    {
+      "id": "docs_mining_setup_miningcore_md",
+      "title": "\ud83e\uddf1 MiningCore Setup Tutorial for Linux",
+      "path": "processed/docs_mining_setup_miningcore_md.json"
+    },
+    {
+      "id": "docs_mining_setup_pool_md",
+      "title": "Hosting a Pool on Ergo",
+      "path": "processed/docs_mining_setup_pool_md.json"
+    },
+    {
+      "id": "docs_mining_setup_pool_win_md",
+      "title": "MiningCore Setup Tutorial on Windows 10",
+      "path": "processed/docs_mining_setup_pool_win_md.json"
+    },
+    {
+      "id": "docs_mining_setup_rig_md",
+      "title": "Building a Mining Rig",
+      "path": "processed/docs_mining_setup_rig_md.json"
+    },
+    {
+      "id": "docs_mining_setup_solo-faq_md",
+      "title": "Solo Mining FAQ",
+      "path": "processed/docs_mining_setup_solo-faq_md.json"
+    },
+    {
+      "id": "docs_mining_setup_solo-node_md",
+      "title": "Solo Node Configuration",
+      "path": "processed/docs_mining_setup_solo-node_md.json"
+    },
+    {
+      "id": "docs_mining_setup_solo_md",
+      "title": "Solo Mining",
+      "path": "processed/docs_mining_setup_solo_md.json"
+    },
+    {
+      "id": "docs_mining_setup_stratum_md",
+      "title": "stratum.md",
+      "path": "processed/docs_mining_setup_stratum_md.json"
+    },
+    {
+      "id": "docs_mining_setup_subpool_md",
+      "title": "Subpool",
+      "path": "processed/docs_mining_setup_subpool_md.json"
+    },
+    {
+      "id": "docs_mining_smartpools_md",
+      "title": "SmartPools: A Decentralized Mining Solution",
+      "path": "processed/docs_mining_smartpools_md.json"
+    },
+    {
+      "id": "docs_mining_software_md",
+      "title": "Software",
+      "path": "processed/docs_mining_software_md.json"
+    },
+    {
+      "id": "docs_mining_solution-verification_md",
+      "title": "Solution Verification",
+      "path": "processed/docs_mining_solution-verification_md.json"
+    },
+    {
+      "id": "docs_mining_standards_eip27_md",
+      "title": "EIP27: Emission Retargeting Soft-Fork",
+      "path": "processed/docs_mining_standards_eip27_md.json"
+    },
+    {
+      "id": "docs_mining_standards_eip37_md",
+      "title": "EIP37: Tweaking Difficulty Adjustment Algorithm",
+      "path": "processed/docs_mining_standards_eip37_md.json"
+    },
+    {
+      "id": "docs_mining_withdraw_md",
+      "title": "Spending Mining Rewards",
+      "path": "processed/docs_mining_withdraw_md.json"
+    },
+    {
+      "id": "docs_node_6tx-testing_md",
+      "title": "Testing 6.0 Specific Transactions Against 5.x and 6.0 Nodes",
+      "path": "processed/docs_node_6tx-testing_md.json"
+    },
+    {
+      "id": "docs_node_architecture_md",
+      "title": "Node Architecture",
+      "path": "processed/docs_node_architecture_md.json"
+    },
+    {
+      "id": "docs_node_conf_md",
+      "title": "Overview of Node Configuration Files",
+      "path": "processed/docs_node_conf_md.json"
+    },
+    {
+      "id": "docs_node_conf_applicationconf_md",
+      "title": "application.conf",
+      "path": "processed/docs_node_conf_applicationconf_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-akka_md",
+      "title": "Akka Configuration Settings",
+      "path": "processed/docs_node_conf_conf-akka_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-api_md",
+      "title": "API Dispatcher Configuration",
+      "path": "processed/docs_node_conf_conf-api_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-bounded_md",
+      "title": "Bounded Mailbox Configuration",
+      "path": "processed/docs_node_conf_conf-bounded_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-cache_md",
+      "title": "Cache Configuration",
+      "path": "processed/docs_node_conf_conf-cache_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-chain_md",
+      "title": "Chain Configuration Settings",
+      "path": "processed/docs_node_conf_conf-chain_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-crit_md",
+      "title": "Critical-Dispatcher Configuration Settings",
+      "path": "processed/docs_node_conf_conf-crit_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-node_md",
+      "title": "Node Configuration",
+      "path": "processed/docs_node_conf_conf-node_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-scorex_md",
+      "title": "Scorex Configuration",
+      "path": "processed/docs_node_conf_conf-scorex_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-voting_md",
+      "title": "Voting Configuration Settings",
+      "path": "processed/docs_node_conf_conf-voting_md.json"
+    },
+    {
+      "id": "docs_node_conf_conf-wallet_md",
+      "title": "Wallet Configuration",
+      "path": "processed/docs_node_conf_conf-wallet_md.json"
+    },
+    {
+      "id": "docs_node_digest-state_md",
+      "title": "Digest State",
+      "path": "processed/docs_node_digest-state_md.json"
+    },
+    {
+      "id": "docs_node_history-pruning_md",
+      "title": "History Pruning",
+      "path": "processed/docs_node_history-pruning_md.json"
+    },
+    {
+      "id": "docs_node_indexed-node_md",
+      "title": "Indexed Node API",
+      "path": "processed/docs_node_indexed-node_md.json"
+    },
+    {
+      "id": "docs_node_install_md",
+      "title": "The Ergo Reference Client (Node)",
+      "path": "processed/docs_node_install_md.json"
+    },
+    {
+      "id": "docs_node_install_build-from-source_md",
+      "title": "Building the Ergo Node from Source",
+      "path": "processed/docs_node_install_build-from-source_md.json"
+    },
+    {
+      "id": "docs_node_install_docker_md",
+      "title": "Docker",
+      "path": "processed/docs_node_install_docker_md.json"
+    },
+    {
+      "id": "docs_node_install_linux_md",
+      "title": "linux.md",
+      "path": "processed/docs_node_install_linux_md.json"
+    },
+    {
+      "id": "docs_node_install_mac_md",
+      "title": "Mac",
+      "path": "processed/docs_node_install_mac_md.json"
+    },
+    {
+      "id": "docs_node_install_manual_md",
+      "title": "Ergo Full Node Installation Guide",
+      "path": "processed/docs_node_install_manual_md.json"
+    },
+    {
+      "id": "docs_node_install_node-android_md",
+      "title": "Running an Ergo Node on Android",
+      "path": "processed/docs_node_install_node-android_md.json"
+    },
+    {
+      "id": "docs_node_install_node-android_proot-rocksdb_md",
+      "title": "Android Node: Arch Linux via proot (RocksDB/UTXO Mode)",
+      "path": "processed/docs_node_install_node-android_proot-rocksdb_md.json"
+    },
+    {
+      "id": "docs_node_install_node-android_termux-digest_md",
+      "title": "Android Node: Direct Termux Setup (Digest Mode)",
+      "path": "processed/docs_node_install_node-android_termux-digest_md.json"
+    },
+    {
+      "id": "docs_node_install_node-faq_md",
+      "title": "Ergo Node FAQ & Guidelines",
+      "path": "processed/docs_node_install_node-faq_md.json"
+    },
+    {
+      "id": "docs_node_install_one-liner_md",
+      "title": "one-liner.md",
+      "path": "processed/docs_node_install_one-liner_md.json"
+    },
+    {
+      "id": "docs_node_install_pi_md",
+      "title": "ErgoPi",
+      "path": "processed/docs_node_install_pi_md.json"
+    },
+    {
+      "id": "docs_node_install_snapshot-dependencies_md",
+      "title": "Handling SNAPSHOT Dependencies When Building Ergo Node",
+      "path": "processed/docs_node_install_snapshot-dependencies_md.json"
+    },
+    {
+      "id": "docs_node_install_troubleshooting_md",
+      "title": "Node Troubleshooting Guide",
+      "path": "processed/docs_node_install_troubleshooting_md.json"
+    },
+    {
+      "id": "docs_node_install_windows_md",
+      "title": "Windows",
+      "path": "processed/docs_node_install_windows_md.json"
+    },
+    {
+      "id": "docs_node_jitc_md",
+      "title": "Just-In-Time Costing",
+      "path": "processed/docs_node_jitc_md.json"
+    },
+    {
+      "id": "docs_node_modes_md",
+      "title": "Node Modes of Operation",
+      "path": "processed/docs_node_modes_md.json"
+    },
+    {
+      "id": "docs_node_modes_archival-node_md",
+      "title": "Archival Node Mode in Ergo",
+      "path": "processed/docs_node_modes_archival-node_md.json"
+    },
+    {
+      "id": "docs_node_modes_archive-node-workflow_md",
+      "title": "Full Archival Node Technical Workflow",
+      "path": "processed/docs_node_modes_archive-node-workflow_md.json"
+    },
+    {
+      "id": "docs_node_modes_full-node_md",
+      "title": "Full-Node Mode",
+      "path": "processed/docs_node_modes_full-node_md.json"
+    },
+    {
+      "id": "docs_node_modes_light-full-node_md",
+      "title": "Light Full-Node Mode",
+      "path": "processed/docs_node_modes_light-full-node_md.json"
+    },
+    {
+      "id": "docs_node_modes_light-spv-mode-workflow_md",
+      "title": "Light SPV Mode Technical Workflow",
+      "path": "processed/docs_node_modes_light-spv-mode-workflow_md.json"
+    },
+    {
+      "id": "docs_node_modes_light-spv-node_md",
+      "title": "Light-SPV Mode",
+      "path": "processed/docs_node_modes_light-spv-node_md.json"
+    },
+    {
+      "id": "docs_node_modes_light-techworkflow_md",
+      "title": "Light Full Node Technical Workflow",
+      "path": "processed/docs_node_modes_light-techworkflow_md.json"
+    },
+    {
+      "id": "docs_node_modes_pruned-full-node_md",
+      "title": "Pruned Full-Node Mode",
+      "path": "processed/docs_node_modes_pruned-full-node_md.json"
+    },
+    {
+      "id": "docs_node_modes_pruned_pruned-impl_md",
+      "title": "Implementation Details for UTXO Set Snapshots",
+      "path": "processed/docs_node_modes_pruned_pruned-impl_md.json"
+    },
+    {
+      "id": "docs_node_modes_spv_md",
+      "title": "Simplified Payment Verification (SPV)",
+      "path": "processed/docs_node_modes_spv_md.json"
+    },
+    {
+      "id": "docs_node_modifiers-processing_md",
+      "title": "Ergo Modifiers Processing",
+      "path": "processed/docs_node_modifiers-processing_md.json"
+    },
+    {
+      "id": "docs_node_modifiers-validation_md",
+      "title": "Ergo Modifiers Validation",
+      "path": "processed/docs_node_modifiers-validation_md.json"
+    },
+    {
+      "id": "docs_node_modifiers_md",
+      "title": "Ergo Modifiers",
+      "path": "processed/docs_node_modifiers_md.json"
+    },
+    {
+      "id": "docs_node_peer-management_md",
+      "title": "Peer Management Protocol",
+      "path": "processed/docs_node_peer-management_md.json"
+    },
+    {
+      "id": "docs_node_protocol_md",
+      "title": "Ergo Node Protocol",
+      "path": "processed/docs_node_protocol_md.json"
+    },
+    {
+      "id": "docs_node_sigs_md",
+      "title": "Improved distributed signatures",
+      "path": "processed/docs_node_sigs_md.json"
+    },
+    {
+      "id": "docs_node_swagger_md",
+      "title": "Swagger UI for Ergo Node",
+      "path": "processed/docs_node_swagger_md.json"
+    },
+    {
+      "id": "docs_node_swagger_openapi_md",
+      "title": "Ergo Node API v5.0.15",
+      "path": "processed/docs_node_swagger_openapi_md.json"
+    },
+    {
+      "id": "docs_node_swagger_swagger_api_md",
+      "title": "Swagger API",
+      "path": "processed/docs_node_swagger_swagger_api_md.json"
+    },
+    {
+      "id": "docs_node_synchronisation_md",
+      "title": "Blockchain Synchronization",
+      "path": "processed/docs_node_synchronisation_md.json"
+    },
+    {
+      "id": "docs_node_testnet_md",
+      "title": "Testnet",
+      "path": "processed/docs_node_testnet_md.json"
+    },
+    {
+      "id": "docs_node_testnet_cpu-mining_md",
+      "title": "CPU Mining",
+      "path": "processed/docs_node_testnet_cpu-mining_md.json"
+    },
+    {
+      "id": "docs_node_testnet_devnetconf_md",
+      "title": "Ergo Node Devnet Configuration Documentation",
+      "path": "processed/docs_node_testnet_devnetconf_md.json"
+    },
+    {
+      "id": "docs_node_testnet_mine-your-own-chain_md",
+      "title": "Fork Your Own Ergo Chain",
+      "path": "processed/docs_node_testnet_mine-your-own-chain_md.json"
+    },
+    {
+      "id": "docs_node_testnet_testnet-full_md",
+      "title": "Synchronising a full node",
+      "path": "processed/docs_node_testnet_testnet-full_md.json"
+    },
+    {
+      "id": "docs_node_testnet_testnet-resources_md",
+      "title": "Testnet Resources",
+      "path": "processed/docs_node_testnet_testnet-resources_md.json"
+    },
+    {
+      "id": "docs_node_testnet_testnetconf_md",
+      "title": "Testnet Configuration",
+      "path": "processed/docs_node_testnet_testnetconf_md.json"
+    },
+    {
+      "id": "docs_node_tor_md",
+      "title": "Running your Node over Tor",
+      "path": "processed/docs_node_tor_md.json"
+    },
+    {
+      "id": "docs_node_wallet-setup_md",
+      "title": "Ergo Wallet Setup and Security",
+      "path": "processed/docs_node_wallet-setup_md.json"
+    },
+    {
+      "id": "docs_node_wallet_md",
+      "title": "wallet.md",
+      "path": "processed/docs_node_wallet_md.json"
+    },
+    {
+      "id": "docs_roadmap_md",
+      "title": "Ergo Development Roadmap & History",
+      "path": "processed/docs_roadmap_md.json"
+    },
+    {
+      "id": "docs_security_md",
+      "title": "The Howey Test and Ergo",
+      "path": "processed/docs_security_md.json"
+    },
+    {
+      "id": "docs_sig-scheme_md",
+      "title": "Signature Scheme Internals on Ergo",
+      "path": "processed/docs_sig-scheme_md.json"
+    },
+    {
+      "id": "docs_social_contract_md",
+      "title": "Ergo's Social Contract",
+      "path": "processed/docs_social_contract_md.json"
+    },
+    {
+      "id": "docs_students_index_md",
+      "title": "Students",
+      "path": "processed/docs_students_index_md.json"
+    },
+    {
+      "id": "docs_tags_md",
+      "title": "Tags",
+      "path": "processed/docs_tags_md.json"
+    },
+    {
+      "id": "docs_tutorials_access-issues_md",
+      "title": "Access Issues",
+      "path": "processed/docs_tutorials_access-issues_md.json"
+    },
+    {
+      "id": "docs_tutorials_airdrops_md",
+      "title": "airdrops.md",
+      "path": "processed/docs_tutorials_airdrops_md.json"
+    },
+    {
+      "id": "docs_tutorials_arb_md",
+      "title": "arb.md",
+      "path": "processed/docs_tutorials_arb_md.json"
+    },
+    {
+      "id": "docs_tutorials_chained-tx_md",
+      "title": "Sending Chained Transactions",
+      "path": "processed/docs_tutorials_chained-tx_md.json"
+    },
+    {
+      "id": "docs_tutorials_cold-wallet_md",
+      "title": "cold-wallet.md",
+      "path": "processed/docs_tutorials_cold-wallet_md.json"
+    },
+    {
+      "id": "docs_tutorials_create-a-p2s_md",
+      "title": "Developing Simple Pay-to-Script Applications with ErgoScript",
+      "path": "processed/docs_tutorials_create-a-p2s_md.json"
+    },
+    {
+      "id": "docs_tutorials_cup-of-sugar_md",
+      "title": "cup-of-sugar.md",
+      "path": "processed/docs_tutorials_cup-of-sugar_md.json"
+    },
+    {
+      "id": "docs_tutorials_gaming-tutorial_md",
+      "title": "gaming-tutorial.md",
+      "path": "processed/docs_tutorials_gaming-tutorial_md.json"
+    },
+    {
+      "id": "docs_tutorials_lending-pools_md",
+      "title": "lending-pools.md",
+      "path": "processed/docs_tutorials_lending-pools_md.json"
+    },
+    {
+      "id": "docs_tutorials_message-signing_md",
+      "title": "Message signing and user authentication with Nautilus wallet and sigma-rust",
+      "path": "processed/docs_tutorials_message-signing_md.json"
+    },
+    {
+      "id": "docs_tutorials_one-stop-shop_md",
+      "title": "Ergo Newcomer Document - One Stop Shop",
+      "path": "processed/docs_tutorials_one-stop-shop_md.json"
+    },
+    {
+      "id": "docs_tutorials_oracle-bootstrap_md",
+      "title": "Bootstrap an Oracle Pool",
+      "path": "processed/docs_tutorials_oracle-bootstrap_md.json"
+    },
+    {
+      "id": "docs_tutorials_rsERGLP_md",
+      "title": "Comprehensive Guide: Participating in rsERG Liquidity Pools",
+      "path": "processed/docs_tutorials_rsERGLP_md.json"
+    },
+    {
+      "id": "docs_tutorials_sig_md",
+      "title": "3-out-of-5 Threshold Signature",
+      "path": "processed/docs_tutorials_sig_md.json"
+    },
+    {
+      "id": "docs_tutorials_sign-tx_md",
+      "title": "Signing Transactions Using a Backend Wallet",
+      "path": "processed/docs_tutorials_sign-tx_md.json"
+    },
+    {
+      "id": "docs_tutorials_token_integration_md",
+      "title": "Cross-Chain Token Integration Guide for Rosen Bridge Tokens",
+      "path": "processed/docs_tutorials_token_integration_md.json"
+    },
+    {
+      "id": "docs_tutorials_trading-options_md",
+      "title": "trading-options.md",
+      "path": "processed/docs_tutorials_trading-options_md.json"
+    },
+    {
+      "id": "docs_tutorials_yield_md",
+      "title": "Yielding Success: How to Farm and Provide Liquidity on Ergo",
+      "path": "processed/docs_tutorials_yield_md.json"
+    },
+    {
+      "id": "docs_uses_ErgoData_md",
+      "title": "ErgoData",
+      "path": "processed/docs_uses_ErgoData_md.json"
+    },
+    {
+      "id": "docs_uses_PoW_tokens_md",
+      "title": "Proof-of-Work Backed Tokens",
+      "path": "processed/docs_uses_PoW_tokens_md.json"
+    },
+    {
+      "id": "docs_uses_arbit_md",
+      "title": "Arbit Documentation",
+      "path": "processed/docs_uses_arbit_md.json"
+    },
+    {
+      "id": "docs_uses_blocked_web_md",
+      "title": "Utilizing (E)mail Client for Restricted or Unavailable Internet Access",
+      "path": "processed/docs_uses_blocked_web_md.json"
+    },
+    {
+      "id": "docs_uses_bonding_md",
+      "title": "Bonding Curves",
+      "path": "processed/docs_uses_bonding_md.json"
+    },
+    {
+      "id": "docs_uses_cbdc_md",
+      "title": "Ergo: The Decentralised Bank Digital Currency For Everyone",
+      "path": "processed/docs_uses_cbdc_md.json"
+    },
+    {
+      "id": "docs_uses_chaincash_md",
+      "title": "ChainCash: A Practical Approach to Elastic Money Creation with Trust and Blockchain Assets",
+      "path": "processed/docs_uses_chaincash_md.json"
+    },
+    {
+      "id": "docs_uses_collateral-mining_md",
+      "title": "Collateral Mining",
+      "path": "processed/docs_uses_collateral-mining_md.json"
+    },
+    {
+      "id": "docs_uses_context-claims_md",
+      "title": "Efficient Global Context Claims on Ergo Platform Blockchain",
+      "path": "processed/docs_uses_context-claims_md.json"
+    },
+    {
+      "id": "docs_uses_crowdfunding_md",
+      "title": "Crowdfunding",
+      "path": "processed/docs_uses_crowdfunding_md.json"
+    },
+    {
+      "id": "docs_uses_dao_md",
+      "title": "DAO",
+      "path": "processed/docs_uses_dao_md.json"
+    },
+    {
+      "id": "docs_uses_degfi_md",
+      "title": "DegFi: Pure Degenerate Finance on the Blockchain",
+      "path": "processed/docs_uses_degfi_md.json"
+    },
+    {
+      "id": "docs_uses_deriv_md",
+      "title": "Derivatives and Decentralized Options Trading on Ergo",
+      "path": "processed/docs_uses_deriv_md.json"
+    },
+    {
+      "id": "docs_uses_dex-buyback_md",
+      "title": "Buy Back Guarantees",
+      "path": "processed/docs_uses_dex-buyback_md.json"
+    },
+    {
+      "id": "docs_uses_dex_md",
+      "title": "Decentralised Exchanges (DEXs)",
+      "path": "processed/docs_uses_dex_md.json"
+    },
+    {
+      "id": "docs_uses_ergo-ico_md",
+      "title": "Initial Coin Offerings",
+      "path": "processed/docs_uses_ergo-ico_md.json"
+    },
+    {
+      "id": "docs_uses_ergofund_md",
+      "title": "ErgoFund",
+      "path": "processed/docs_uses_ergofund_md.json"
+    },
+    {
+      "id": "docs_uses_financial-options_md",
+      "title": "Options",
+      "path": "processed/docs_uses_financial-options_md.json"
+    },
+    {
+      "id": "docs_uses_flash-loans_md",
+      "title": "Flash Loans in Ergo's eUTXO Model",
+      "path": "processed/docs_uses_flash-loans_md.json"
+    },
+    {
+      "id": "docs_uses_gaming_md",
+      "title": "Gaming on Ergo",
+      "path": "processed/docs_uses_gaming_md.json"
+    },
+    {
+      "id": "docs_uses_grid_trading_md",
+      "title": "Decentralized Grid Trading",
+      "path": "processed/docs_uses_grid_trading_md.json"
+    },
+    {
+      "id": "docs_uses_index_coins_md",
+      "title": "Index Coins",
+      "path": "processed/docs_uses_index_coins_md.json"
+    },
+    {
+      "id": "docs_uses_insurance_md",
+      "title": "Insurance",
+      "path": "processed/docs_uses_insurance_md.json"
+    },
+    {
+      "id": "docs_uses_lending_md",
+      "title": "Lending & Borrowing",
+      "path": "processed/docs_uses_lending_md.json"
+    },
+    {
+      "id": "docs_uses_lets_md",
+      "title": "Local Exchange Trading Systems (LETS)",
+      "path": "processed/docs_uses_lets_md.json"
+    },
+    {
+      "id": "docs_uses_lets_basic-imp_md",
+      "title": "Basic Implementation of a Local Exchange Trading System (LETS)",
+      "path": "processed/docs_uses_lets_basic-imp_md.json"
+    },
+    {
+      "id": "docs_uses_lets_trustless-lets_md",
+      "title": "Trustless Local Exchange Trading Systems (LETS)",
+      "path": "processed/docs_uses_lets_trustless-lets_md.json"
+    },
+    {
+      "id": "docs_uses_lottery_md",
+      "title": "Background",
+      "path": "processed/docs_uses_lottery_md.json"
+    },
+    {
+      "id": "docs_uses_metaverse_md",
+      "title": "Metaverse",
+      "path": "processed/docs_uses_metaverse_md.json"
+    },
+    {
+      "id": "docs_uses_mixer_md",
+      "title": "Mixers",
+      "path": "processed/docs_uses_mixer_md.json"
+    },
+    {
+      "id": "docs_uses_mixicles_md",
+      "title": "Mixicles",
+      "path": "processed/docs_uses_mixicles_md.json"
+    },
+    {
+      "id": "docs_uses_mutual_credit_md",
+      "title": "Mutual Credit System on Ergo",
+      "path": "processed/docs_uses_mutual_credit_md.json"
+    },
+    {
+      "id": "docs_uses_nft_md",
+      "title": "Non-Fungible Tokens",
+      "path": "processed/docs_uses_nft_md.json"
+    },
+    {
+      "id": "docs_uses_off_the_grid_md",
+      "title": "off_the_grid.md",
+      "path": "processed/docs_uses_off_the_grid_md.json"
+    },
+    {
+      "id": "docs_uses_off_the_grid_tut_md",
+      "title": "Getting Started with Off-the-Grid Ergo Trading Bot",
+      "path": "processed/docs_uses_off_the_grid_tut_md.json"
+    },
+    {
+      "id": "docs_uses_oracles_md",
+      "title": "Oracles on Ergo",
+      "path": "processed/docs_uses_oracles_md.json"
+    },
+    {
+      "id": "docs_uses_pouw_md",
+      "title": "Proof of Useful Work",
+      "path": "processed/docs_uses_pouw_md.json"
+    },
+    {
+      "id": "docs_uses_prediction_markets_md",
+      "title": "Trustless Prediction Markets",
+      "path": "processed/docs_uses_prediction_markets_md.json"
+    },
+    {
+      "id": "docs_uses_profit_md",
+      "title": "profit.md",
+      "path": "processed/docs_uses_profit_md.json"
+    },
+    {
+      "id": "docs_uses_sentientchain_md",
+      "title": "SentientChain",
+      "path": "processed/docs_uses_sentientchain_md.json"
+    },
+    {
+      "id": "docs_uses_sidechains_md",
+      "title": "Sidechains on Ergo: Leveraging Sigma Chains and NiPoPoWs",
+      "path": "processed/docs_uses_sidechains_md.json"
+    },
+    {
+      "id": "docs_uses_sidechains_input-blocks_md",
+      "title": "Input Blocks and Ordering Blocks \u2013 Technical Details**",
+      "path": "processed/docs_uses_sidechains_input-blocks_md.json"
+    },
+    {
+      "id": "docs_uses_sidechains_sigma-chains_md",
+      "title": "Sigma Chains",
+      "path": "processed/docs_uses_sidechains_sigma-chains_md.json"
+    },
+    {
+      "id": "docs_uses_sidechains_subblocks_md",
+      "title": "Subblocks in Ergo",
+      "path": "processed/docs_uses_sidechains_subblocks_md.json"
+    },
+    {
+      "id": "docs_uses_sidechains_weak-blocks_md",
+      "title": "Weak Blocks",
+      "path": "processed/docs_uses_sidechains_weak-blocks_md.json"
+    },
+    {
+      "id": "docs_uses_sigmausd_md",
+      "title": "Accessing Sigmausd As A Developer",
+      "path": "processed/docs_uses_sigmausd_md.json"
+    },
+    {
+      "id": "docs_uses_sigmausd_comparison_md",
+      "title": "comparison.md",
+      "path": "processed/docs_uses_sigmausd_comparison_md.json"
+    },
+    {
+      "id": "docs_uses_sigmausd_examples_md",
+      "title": "examples.md",
+      "path": "processed/docs_uses_sigmausd_examples_md.json"
+    },
+    {
+      "id": "docs_uses_sigmausd_mining-incentives_md",
+      "title": "mining-incentives.md",
+      "path": "processed/docs_uses_sigmausd_mining-incentives_md.json"
+    },
+    {
+      "id": "docs_uses_sigmausd_sigusd-dev_md",
+      "title": "sigusd-dev.md",
+      "path": "processed/docs_uses_sigmausd_sigusd-dev_md.json"
+    },
+    {
+      "id": "docs_uses_sigmausd_why-sigusd_md",
+      "title": "why-sigusd.md",
+      "path": "processed/docs_uses_sigmausd_why-sigusd_md.json"
+    },
+    {
+      "id": "docs_uses_stablecoins_md",
+      "title": "Stablecoins",
+      "path": "processed/docs_uses_stablecoins_md.json"
+    },
+    {
+      "id": "docs_uses_stealth-address_md",
+      "title": "Stealth Addresses",
+      "path": "processed/docs_uses_stealth-address_md.json"
+    },
+    {
+      "id": "docs_uses_trustless-lets_d_md",
+      "title": "trustless-lets_d.md",
+      "path": "processed/docs_uses_trustless-lets_d_md.json"
+    },
+    {
+      "id": "docs_uses_use-cases-overview_md",
+      "title": "Welcome to the Ergo Ecosystem",
+      "path": "processed/docs_uses_use-cases-overview_md.json"
+    },
+    {
+      "id": "docs_uses_zkt_md",
+      "title": "Zero-Knowledge Treasury",
+      "path": "processed/docs_uses_zkt_md.json"
+    },
+    {
+      "id": "todo_md",
+      "title": "todo.md",
+      "path": "processed/todo_md.json"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "description": "Ergo Platform Documentation Repository",
+  "generated_at": "2025-05-11T20:05:18.678728",
+  "document_count": 590
+}

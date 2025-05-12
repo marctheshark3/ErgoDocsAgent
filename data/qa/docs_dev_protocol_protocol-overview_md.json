@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the underlying Proof of Work algorithm used by Ergo?",
+    "answer": "Ergo uses the Memory-hard ASIC-resistant Proof of Work (PoW) algorithm called Autolykos, which is oriented towards GPUs."
+  },
+  {
+    "question": "What is the eUTXO model used by Ergo?",
+    "answer": "Ergo uses the Extended UTXO (eUTXO) Model, which implies UTXOs with the ability to contain arbitrary data and sophisticated scripts."
+  },
+  {
+    "question": "How does Ergo enable light node support?",
+    "answer": "Ergo enables extended support of light nodes through the use of NIPoPoWs, which makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries."
+  },
+  {
+    "question": "What privacy features does Ergo provide?",
+    "answer": "Ergo provides superior access to discrete log-based zero-knowledge proofs for privacy."
+  },
+  {
+    "question": "What is the purpose of storage rent in Ergo?",
+    "answer": "Storage Rent is a nominal fee incurred by unmoved boxes after four years, which helps maintain the network."
+  }
+]

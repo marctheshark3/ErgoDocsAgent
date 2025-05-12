@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Paper Wallet?",
+    "answer": "The Ergo Paper Wallet offers a straightforward and lightweight solution for securely managing tokens within the Ergo ecosystem."
+  },
+  {
+    "question": "How can the Ergo Paper Wallet be generated securely?",
+    "answer": "The wallet generation process can be completed entirely offline by downloading the standalone HTML file from GitHub, disconnecting from the internet, and opening the file in a web browser."
+  },
+  {
+    "question": "Where can users find a comprehensive video guide on using the Ergo Paper Wallet?",
+    "answer": "Users can view a detailed video tutorial on how to effectively utilize the Ergo Paper Wallet at the provided link."
+  },
+  {
+    "question": "Where is the GitHub repository for the Ergo Paper Wallet located?",
+    "answer": "The GitHub repository for the Ergo Paper Wallet is available at the provided link."
+  },
+  {
+    "question": "What are the key features of the Ergo Paper Wallet?",
+    "answer": "The Ergo Paper Wallet is a self-custodial option that empowers users with full control over their assets."
+  }
+]

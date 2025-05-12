@@ -1,0 +1,59 @@
+{
+  "id": "docs_eco_sigmarand_md",
+  "title": "SigmaRand: Secure Random Number Generation for Ergo",
+  "summary": "The document describes SigmaRand, a secure random number generation service for the Ergo blockchain. It outlines the challenges of generating randomness on a blockchain and proposes the Commit-Reveal protocol as a solution. The Commit-Reveal protocol involves a two-phase process where participants first commit to a random seed value, then reveal it, ensuring that the final random number is equally determined by all participants. The document provides a detailed implementation of the protocol for Ergo, including example transactions and workflows, and references the ergo-randgen GitHub repository for further information.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - SigmaRand\n  - Random Number Generation\n  - RNG\n  - Commit-Reveal\n  - dApp\n---\n\n# SigmaRand: Secure Random Number Generation for Ergo\n\n## Background\n\nGenerating randomness on any blockcha..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "SigmaRand: Secure Random Number Generation for Ergo"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - SigmaRand\n  - Random Number Generation\n  - RNG\n  - Commit-Reveal\n  - dApp\n---"
+    },
+    {
+      "question": "What is the 'Background' section about?",
+      "answer": "Generating randomness on any blockchain is challenging because every node must come to the same conc..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - SigmaRand\n  - Random Number Generation\n  - RNG\n  - Commit-Reveal\n  - dApp\n---"
+    },
+    {
+      "heading": "SigmaRand: Secure Random Number Generation for Ergo",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Background",
+      "level": 2,
+      "content": "Generating randomness on any blockchain is challenging because every node must come to the same conclusion on the state of the blockchain. Naive approaches to generate randomness can be manipulated by miners or observant attackers. Insecure randomness can be exploited by attackers to gain an unfair advantage in games, lotteries, or any other contracts that rely on random number generation."
+    },
+    {
+      "heading": "Problem Statement",
+      "level": 2,
+      "content": "We need a secure random number generation service for Ergo with the following properties:\n\n- The scheme should be secure.\n- The number generated should be equally unpredictable for all participants, i.e., no participant should have an \"upper hand\".\n- All participants must agree on the same random number generated."
+    },
+    {
+      "heading": "Scope",
+      "level": 2,
+      "content": "This document describes how the \"Commit-Reveal\" scheme can be used to solve the problem described above and dives deep into how to implement the protocol for Ergo."
+    },
+    {
+      "heading": "The Commit-Reveal Protocol",
+      "level": 2,
+      "content": "The Commit-Reveal protocol is a multi-party scheme for generating random numbers. It consists of two phases: commit and reveal. The protocol is described in detail on the [ergo-randgen GitHub repository](https://github.com/noob77777/ergo-randgen).\n\n1. **Commit Phase**: In this phase, each participant generates a random seed and calculates its corresponding hash value. They then submit a commitment that contains the hash of their answer and the random seed value. The smart contract stores these commitments on the blockchain.\n\n2. **Reveal Phase**: In this phase, participants reveal their answer and the seed value.\n\nHere's how the protocol works:\n\n1. Party A generates a random number, `randomA`.\n2. Party A sends a message with the hash of `randomA`, `hash(randomA)`. This commits Party A to the value `randomA`, as while no one can guess the value of `randomA`, once Party A provides it, everyone can verify its correctness.\n3. Party B sends a message with another random number, `randomB`.\n4. Party A reveals the value of `randomA` in a third message.\n5. Both parties accept the random number as `randomA ^ randomB`, the exclusive OR (XOR) of the two values.\n\nThe advantage of using XOR is that the final random number is determined equally by both parties, ensuring that neither party can choose an advantageous \"random\" value.\n\nThe [ergo-randgen GitHub repository](https://github.com/noob77777/ergo-randgen) provides a detailed implementation of the Commit-Reveal protocol for Ergo, including example transactions and workflows."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/sigmarand.md",
+  "processed_at": "2025-05-11T19:48:00.660168",
+  "ai_processed": true
+}

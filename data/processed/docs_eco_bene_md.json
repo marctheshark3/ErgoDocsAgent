@@ -1,0 +1,68 @@
+{
+  "id": "docs_eco_bene_md",
+  "title": "Bene: Fundraising Platform",
+  "summary": "Bene: Fundraising Platform is a decentralized application (DApp) built on the Ergo blockchain that enables projects to receive funding in exchange for participation tokens. The platform allows project owners to create a box that holds tokens and set a block limit as a deadline. A minimum amount of tokens must be sold before the project can withdraw funds, and users have the option to exchange their tokens back for ERGs if the minimum is not reached. The box is self-replicating, allowing anyone to spend it as long as they re-create it with the same parameters and add ERGs in exchange for tokens. The platform supports six main processes: box creation, token acquisition, refund tokens, withdraw ERGs, withdraw unsold tokens, and add tokens. The current implementation supports creating new projects and contributing to projects, and a more advanced implementation could include support for other assets beyond ERG.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Bene: Fundraising Platform?",
+      "answer": "Bene: Fundraising Platform is a decentralized application (DApp) that enables projects to receive funding in exchange for participation tokens."
+    },
+    {
+      "question": "How does the box creation process work in the Bene platform?",
+      "answer": "Project owners can create a box that holds an amount of tokens, setting a block limit as a deadline, and requiring a minimum amount of tokens to be sold before the project can withdraw funds."
+    },
+    {
+      "question": "What are the key parameters of a box created on the Bene platform?",
+      "answer": "The key parameters of a box include the amount of tokens, block limit, minimum tokens sold, token sold counter, ERGs per token, withdrawal address, and project content."
+    },
+    {
+      "question": "What is the purpose of the refund option in the Bene platform?",
+      "answer": "If the block limit is reached before the minimum amount of tokens are sold, users have the option to exchange their tokens back for the corresponding ERGs, provided the minimum has not been reached."
+    },
+    {
+      "question": "How does the self-replicating box feature work in the Bene platform?",
+      "answer": "The main box is self-replicating, meaning that anyone can spend the box as long as they re-create it with the same parameters and add ERGs in exchange for a specified amount of tokens."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Bene\n  - Fundraising\n  - Platform\n  - dApp\n---"
+    },
+    {
+      "heading": "Bene: Fundraising Platform",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "**Bene: Fundraising Platform** is a decentralized application (DApp) that enables projects to receive funding in exchange for participation tokens. This DApp allows projects to request ERGs (the native cryptocurrency of the Ergo blockchain) in exchange for participation tokens."
+    },
+    {
+      "heading": "How it Works",
+      "level": 2,
+      "content": "- **Box Creation**: Project owners can create a box that holds an amount of tokens, which may vary, setting a **block limit** as a deadline.\n- **Minimum Token Sale**: A minimum amount of tokens must be sold before the project can withdraw funds. This ensures that the project receives sufficient backing.\n- **Refund Option**: If the block limit is reached before the minimum amount of tokens are sold, users have the option to exchange their tokens back for the corresponding ERGs, provided the minimum has not been reached.\n- **Self-Replicating Box**: The main box is self-replicating, meaning that anyone can spend the box as long as they re-create it with the same parameters and add ERGs in exchange for a specified amount of tokens."
+    },
+    {
+      "heading": "Parameters of a Box",
+      "level": 2,
+      "content": "A box created by a project will have the following parameters:\n\n- **Amount of Tokens**: Represents the number of participation tokens available.\n- **Block Limit (R4)**: The block height limit until which withdrawal or refund is allowed.\n- **Minimum Tokens Sold (R5)**: The minimum amount of tokens that must be sold as required by the contract to enable withdrawals.\n- **Token Sold Counter (R6)**: Token sale counter.\n- **ERGs / Token (R7)**: The exchange rate of ERG per token.\n- **Withdrawal Address (R8)**: The address where the funds can be withdrawn if the conditions are met, specified by the SHA-256 hash of the proposition bytes.\n- **Project Content (R9)**: JSON content with title, description, and other information.\n\nThese parameters ensure that the box remains consistent throughout the funding process and allows for transparency in the exchange process.\n\nIn addition, the following constants are added:\n\n- **Developer Fee**: The percentage fee for the developers.\n- **Developer Address**: The address to which it will be sent, specified by its proposition bytes."
+    },
+    {
+      "heading": "Processes",
+      "level": 2,
+      "content": "The Bene: Fundraising Platform supports six main processes:\n\n1. **Box Creation**:\n   - Allows anyone to create a box with the specified script and parameters.\n   - The box represents the project's request for funds in exchange for a specific amount of tokens.\n   - The tokens of the box are provided by the box creator, that is, the project owner.\n\n2. **Token Acquisition**:\n   - People should be allowed to exchange ERGs for tokens (at the R7 exchange rate) until there are no more tokens left (even if the deadline has passed).\n   - People receive tokens in their own boxes, which can adhere to the standards for tokens, making them visible and transferable through wallets like Nautilus.\n\n3. **Refund Tokens**:\n   - People should be allowed to exchange tokens for ERGs (at the R7 exchange rate) if and only if the deadline has passed and the minimum number of tokens has not been sold.\n   - This ensures that participants can retrieve their contributions if the funding goal isn't met.\n\n4. **Withdraw ERGs**:\n   - Project owners are allowed to withdraw ERGs if and only if the minimum number of tokens has been sold.\n   - Project owners can only withdraw to the address specified in R8.\n\n5. **Withdraw Unsold Tokens**:\n   - Project owners may withdraw unsold tokens from the contract at any time.\n   - Project owners can only withdraw to the address specified in R8.\n\n6. **Add Tokens**:\n   - Project owners may add more tokens to the contract at any time.\n\nThe current client implementation only supports the creation of a new project and contributions to a project. The contract implementation is complete, although it may undergo corrections.\n\nIn addition to the current functionality, a more advanced implementation could include support for other assets beyond ERG. For example, projects could request GAU or other tokens on Ergo. This would provide even more flexibility in terms of the types of contributions a project can receive and enable a broader range of funding options for projects and participants."
+    },
+    {
+      "heading": "Repository",
+      "level": 2,
+      "content": "The repository can be found at: [https://github.com/StabilityNexus/BenefactionPlatform-Ergo](https://github.com/StabilityNexus/BenefactionPlatform-Ergo)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/bene.md",
+  "processed_at": "2025-05-11T19:42:46.558241",
+  "ai_processed": true
+}

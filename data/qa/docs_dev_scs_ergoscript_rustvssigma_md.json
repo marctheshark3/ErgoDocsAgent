@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary difference between sigmastate-interpreter and sigma-rust?",
+    "answer": "sigmastate-interpreter is the original implementation of the ErgoTree interpreter, while sigma-rust is a port of sigmastate-interpreter to Rust."
+  },
+  {
+    "question": "What are the key use cases for sigmastate-interpreter and sigma-rust?",
+    "answer": "sigmastate-interpreter is typically used in scenarios requiring full ErgoScript support, such as Ergo full nodes and complex smart contract deployments, while sigma-rust is often chosen for environments where Rust's performance and safety are critical, such as lightweight clients, mobile applications, and browser-based dApps."
+  },
+  {
+    "question": "What is the current development status and roadmap for sigmastate-interpreter and sigma-rust?",
+    "answer": "sigmastate-interpreter has reached a high level of stability and ongoing development focuses on performance improvements and supporting new features, while sigma-rust is actively being developed to catch up with the features and capabilities of sigmastate-interpreter."
+  },
+  {
+    "question": "What are the key differences in terms of feature completeness between sigmastate-interpreter and sigma-rust?",
+    "answer": "As the original implementation, sigmastate-interpreter is more feature-complete and includes all the necessary components for fully interpreting ErgoScripts, handling advanced cryptographic protocols, and providing comprehensive support for all ErgoTree features, while sigma-rust is still in the process of achieving feature parity."
+  },
+  {
+    "question": "How do the maturity and integration levels differ between sigmastate-interpreter and sigma-rust?",
+    "answer": "sigmastate-interpreter is the more mature implementation, having undergone extensive testing, optimizations, and integration within the larger Ergo ecosystem, while sigma-rust is a newer port that is still being actively developed and integrated into the Ergo ecosystem."
+  }
+]

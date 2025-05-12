@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is SigmaBoolean and how is it used in ErgoScript?",
+    "answer": "SigmaBoolean is a crucial data type in ErgoScript that represents propositions proven using Sigma protocols. It is used by the prover to construct the proof and by the verifier to check the proof, making it a key player in creating and verifying proofs within ErgoScript."
+  },
+  {
+    "question": "What is the structure of SigmaBoolean?",
+    "answer": "SigmaBoolean is an algebraic data type in SigmaScript and SigmaDsl that has an opCode and a size property. The opCode is a unique identifier for the node class, and the size property returns the number of nodes in the proposition tree."
+  },
+  {
+    "question": "How can you serialize a SigmaBoolean from a P2PK (Pay-to-Public-Key) address?",
+    "answer": "To serialize a SigmaBoolean from a P2PK address, you need to decode the address using Base58 encoding, extract the public key bytes, and then incorporate the ProveDlog instruction code with the public key bytes."
+  },
+  {
+    "question": "How can you use the bs58 library in TypeScript to serialize a SigmaBoolean from a P2PK address?",
+    "answer": "You can use the bs58 library in TypeScript to serialize a SigmaBoolean from a P2PK address by decoding the address, extracting the raw bytes, slicing the bytes, combining them, and then converting the result to a base64 string."
+  },
+  {
+    "question": "How can you use the Fleet library in TypeScript to serialize a SigmaBoolean from a P2PK address?",
+    "answer": "You can use the Fleet library in TypeScript to serialize a SigmaBoolean from a P2PK address by extracting the public key from the encoded address and then creating an SSigmaProp object with the public key, which can be encoded to a base64 string or a hex string."
+  }
+]

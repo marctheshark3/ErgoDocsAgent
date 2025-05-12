@@ -1,0 +1,43 @@
+{
+  "id": "docs_node_testnet_md",
+  "title": "Testnet",
+  "summary": "The document provides an introduction to the Ergo testnet, which is an alternative Ergo blockchain used for testing and experimentation. It explains that the testnet runs on different ports than the mainnet and can be accessed by changing the configuration file and running with the --testnet flag. The document also includes a list of cards with links to various testnet-related topics, such as synchronizing from scratch, using a pre-synced testnet node, CPU mining, creating a custom alternative version of Ergo, and testnet resources.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Ergo testnet?",
+      "answer": "The testnet is an alternative Ergo blockchain used for testing and experimentation without using real ERG or worrying about breaking the main chain."
+    },
+    {
+      "question": "How can you access the Ergo testnet?",
+      "answer": "The testnet runs on different ports than the mainnet and can be accessed by changing your `.conf` and running with the `--testnet` flag."
+    },
+    {
+      "question": "What are some ways to set up an Ergo testnet node?",
+      "answer": "Options include synchronizing from scratch, using a pre-synced testnet node from MGPai, and CPU mining."
+    },
+    {
+      "question": "What can you do with the Ergo testnet?",
+      "answer": "You can use the testnet for CPU mining, starting your own alternative version of Ergo with custom parameters, and other testing and experimentation."
+    },
+    {
+      "question": "Where can I find resources for the Ergo testnet?",
+      "answer": "Resources like port numbers, bookmarks, and other testnet information can be found in the 'Resources' section."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Testnet\n  - Node\n  - Setup\n  - Development\n---"
+    },
+    {
+      "heading": "Testnet",
+      "level": 1,
+      "content": "/// details | Testnet\n    {type: info, open: true}\nThe testnet is an alternative Ergo blockchain you can use for testing and experimentation without having to use real ERG or worrying about breaking the main chain. \n\nThe testnet runs on different ports than the mainnet and can be accessed by changing your `.conf` and running with the `--testnet` flag. \n///\n\n\n\n::cards::\n\n[\n  {\n    \"title\": \"Synchronising from scratch\",\n    \"content\": \"Start sychronising with the testnet from genesis\",\n    \"url\": \"testnet/testnet-full.md\"\n  },\n  {\n    \"title\": \"ergo-synced-node\",\n    \"content\": \"A presynced testnet node from MGPai\",\n    \"url\": \"https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup\"\n  },\n  {\n    \"title\": \"CPU Mining\",\n    \"content\": \"You can use your CPU to mine on the testnet\",\n    \"url\": \"testnet/cpu-mining.md\"\n\n  },\n  {\n    \"title\": \"Mine your own chain\",\n    \"content\": \"Start your own alternative version of Ergo with custom parameters.\",\n    \"url\": \"testnet/mine-your-own-chain.md\"\n  },\n  {\n    \"title\": \"Resources\",\n    \"content\": \"Port numbers, bookmarks, and any other testnet resources here!\",\n    \"url\": \"testnet/testnet-resources.md\"\n  }\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/testnet.md",
+  "processed_at": "2025-05-11T19:57:42.555452",
+  "ai_processed": true
+}

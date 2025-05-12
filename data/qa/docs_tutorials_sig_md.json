@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Threshold Signature\n  - Multisig\n  - ErgoScript\n  - P2S\n  - Tutorial\n  - Guide\n---\n\n# 3-out-of-5 Threshold Signature\n\nLet's say you want to create a ***ring spending contract***, where e..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "3-out-of-5 Threshold Signature"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Threshold Signature\n  - Multisig\n  - ErgoScript\n  - P2S\n  - Tutorial\n  - Guide\n---"
+  },
+  {
+    "question": "What is the '3-out-of-5 Threshold Signature' section about?",
+    "answer": "Let's say you want to create a ***ring spending contract***, where either of us can make a transacti..."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the key components of off-chain systems in DeFi?",
+    "answer": "Off-chain systems often encompass REST endpoints and bots that execute tasks such as retrieving data from the blockchain, composing transactions for user signatures, and processing transactions poised for the next phase in the dApp's workflow."
+  },
+  {
+    "question": "What is the role of transaction bots in DeFi?",
+    "answer": "Transaction bots are off-chain systems designed to streamline the composition and processing of transactions, such as the Exle Tx Bot."
+  },
+  {
+    "question": "What is the difference between on-chain and off-chain components in DeFi?",
+    "answer": "On-chain elements pertain to the aspects of a dApp that are directly integrated into the blockchain, while off-chain elements refer to the components that operate outside the blockchain."
+  },
+  {
+    "question": "Where can I find information about the off-chain services that support the functionality of ErgoDex?",
+    "answer": "For a comprehensive understanding of the off-chain services that support the functionality of ErgoDex, refer to the detailed documentation provided in [ErgoDEX off-chain services](dex_bots.md)."
+  },
+  {
+    "question": "How do off-chain components enhance the capabilities of on-chain processes in DeFi?",
+    "answer": "Off-chain components, such as watchers, oracles, and bots, are essential for augmenting the capabilities of on-chain processes and reinforcing the robustness of the DeFi ecosystem."
+  }
+]

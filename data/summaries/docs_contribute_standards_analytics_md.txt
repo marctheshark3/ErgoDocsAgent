@@ -1,0 +1,7 @@
+The document provides an overview of analytics and metrics related to the Ergo blockchain ecosystem. It covers on-chain analytics, integration with DeFiLlama, recognition of developer contributions, and statistics on the developer community and dApps/projects. Key points include:
+
+- On-chain metrics can be found on ergo.watch
+- To be included on DeFiLlama, an adaptor needs to be created
+- Developer contributions can be recognized through developerreport.com and Artemis
+- The Ergo developer community has around 350 total developers, 100 active contributors, and 58+ monthly active developers
+- The Ergo ecosystem has around 40+ sub-ecosystems, tradable tokens listed on Sigmaverse, and a dozen dApps in development

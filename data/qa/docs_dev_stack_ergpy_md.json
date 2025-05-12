@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ergpy?",
+    "answer": "ergpy is a python-jvm wrapper for interacting with the Ergo blockchain."
+  },
+  {
+    "question": "What is SigmaParticle?",
+    "answer": "SigmaParticle is a framework for interacting with the ergo blockchain based on ergpy to be used in cross chain pipeline extensions."
+  },
+  {
+    "question": "What is the purpose of ergpy?",
+    "answer": "The purpose of ergpy is to provide a way to interact with the Ergo blockchain using Python."
+  },
+  {
+    "question": "What is the relationship between ergpy and SigmaParticle?",
+    "answer": "SigmaParticle is a framework that uses ergpy to interact with the Ergo blockchain, specifically for cross-chain pipeline extensions."
+  },
+  {
+    "question": "What are the key features or capabilities of ergpy?",
+    "answer": "The key features or capabilities of ergpy are not explicitly stated in the given content."
+  }
+]

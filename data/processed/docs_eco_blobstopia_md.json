@@ -1,0 +1,58 @@
+{
+  "id": "docs_eco_blobstopia_md",
+  "title": "Blobstopia",
+  "summary": "Blobstopia is a game on the Ergo blockchain where players can own blob fighter smart contracts. Players can engage in PVP fights, where the winner takes the bets minus fees. Players can also feed their blobs to increase their attack or defense levels. PVE fights against a Blobinator, a powerful blob fighter, can be initiated by players who have earned enough Spicy Oatmeal Spicy Oatmeal tokens. The original domain for the game is no longer active, but the game has been restored at a new location, allowing users to withdraw their ERGs. While the game is not being actively updated or improved, it remains operational and available for players to enjoy.",
+  "qa_pairs": [
+    {
+      "question": "What is Blobstopia?",
+      "answer": "Blobstopia is a game on the Ergo blockchain where players can own blob fighters smart contracts."
+    },
+    {
+      "question": "How do players engage in PVP fights in Blobstopia?",
+      "answer": "In PVP, once two blobs wait for the same bet, they can engage in a fight. The winner gets all the bets, minus the miner fees and the Blobinator fee."
+    },
+    {
+      "question": "How can players improve their blob fighters in Blobstopia?",
+      "answer": "Players can feed their blob fighters Oatmeal Oatmeal tokens to increase their Attack or Defense level, making them stronger and increasing the player's winning ratio."
+    },
+    {
+      "question": "What is a Blobinator in Blobstopia?",
+      "answer": "A Blobinator is a super blob fighter that can be invoked once enough fights have occurred. Players can fight against a Blobinator if they have earned enough Spicy Oatmeal Spicy Oatmeal tokens to attract it."
+    },
+    {
+      "question": "Where can players find a fight bot for Blobstopia?",
+      "answer": "The fight bot for Blobstopia is available on GitHub at the link provided in the resources section."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Blobstopia\n  - Gaming\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "Blobstopia",
+      "level": 1,
+      "content": "/// details | Status: Inactive\n     {type: warning, open: true}\nThe original domain name is no longer active, which caused the site to go down. However, it has been restored at [here](http://51.77.221.96:8080/) This will allow users to withdraw their ERGs. While the game is not currently being updated or improved, it is still operational and available for enjoyment.\n///\n\n\n\n\n[Blob's Topia](http://51.77.221.96:8080/) is a game on Ergo blockchain in which you can own blob fighters smart contracts.\n\nThose blob fighters are owning an amount of ERG and can bet an amount for a fight."
+    },
+    {
+      "heading": "PVP",
+      "level": 2,
+      "content": "- Once two blobs wait for the same bet, they can engage a fight.\n- The winner get all the bets, minus the miner fees and the Blobinator fee.\n- Both winner and loser get some Oatmeal Oatmeal tokens to be able to feed their blob.\n- By feeding a blob you can increase their Attack or Defense level to make them stronger and increase your winning ratio.\n- Both winner and loser get some Spicy Oatmeal Spicy Oatmeal tokens to try to attract a Blobinator."
+    },
+    {
+      "heading": "PVE",
+      "level": 2,
+      "content": "- A Blobinator is a kind of super blob fighter that can be invoked once enough fights occured.\n- Any blobs can fight against a Blobinator if the player has earn enough Spicy Oatmeal Spicy Oatmeal to attract the Blobinator.\n- The Blobinator fight is \"free\" for the player that just needs to pay 2 transactions fees to try to get the amount in the Blobinator."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Fight bot](https://github.com/ThierryM1212/blobs-topia/releases/tag/v1.1.0)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/blobstopia.md",
+  "processed_at": "2025-05-11T19:42:59.353529",
+  "ai_processed": true
+}

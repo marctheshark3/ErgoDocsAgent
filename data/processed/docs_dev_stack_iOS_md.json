@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_stack_iOS_md",
+  "title": "iOS",
+  "summary": "The document discusses developing iOS applications using Java, Kotlin, or Scala. It introduces three platforms for polyglot development on iOS: AppKit, Mosaik, and sigma-rust. AppKit is a library for developing Ergo applications, Mosaik is a UI system for dApps, and sigma-rust provides iOS bindings. The document also includes a link to a series of introductory lessons on building mobile apps for Android or iOS using DeCo.",
+  "qa_pairs": [
+    {
+      "question": "What is AppKit?",
+      "answer": "AppKit is a library for polyglot development of Ergo Applications."
+    },
+    {
+      "question": "What is Mosaik?",
+      "answer": "Mosaik is a UI system for dApps."
+    },
+    {
+      "question": "How are iOS bindings implemented?",
+      "answer": "iOS bindings are implemented in sigma-rust."
+    },
+    {
+      "question": "What is the DeCo Intro Lessons video series about?",
+      "answer": "The DeCo Intro Lessons video series is about building a mobile app on Android or iOS."
+    },
+    {
+      "question": "What programming languages can be used to develop for iOS?",
+      "answer": "You can develop for iOS using Java, Kotlin, or Scala."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "iOS",
+      "level": 1,
+      "content": "You want to develop with Java/Kotlin/Scala and run on iOS."
+    },
+    {
+      "heading": "Platforms",
+      "level": 2,
+      "content": "::cards::\n\n[\n\n  {\n    \"title\": \"AppKit\",\n    \"content\": \"A library for polyglot development of Ergo Applications\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"appkit.md\"\n  },\n  {\n    \"title\": \"Mosaik\",\n    \"content\": \"UI system for dApps\",\n    \"image\": \"../../assets/img/dev-grid/mosaik.png\",\n    \"url\": \"mosaik/intro.md\"\n  },\n  {\n    \"title\": \"sigma-rust\",\n    \"content\": \"iOS bindings are implemented in sigma-rust\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"sigma-rust.md\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udcd5 DeCo Intro Lessons: Build a mobile app on Android or iOS\",\n    \"url\": \"https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6\"\n  }\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/iOS.md",
+  "processed_at": "2025-05-11T19:35:15.675124",
+  "ai_processed": true
+}

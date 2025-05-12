@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_data-model_box_lifecycle_md",
+  "title": "Box Lifecycle",
+  "summary": "The document describes the lifecycle of a box in the Ergo blockchain, which includes the stages of creation, existence, spending, and destruction. Key characteristics of a box are its immutability, unique identification, and programmable conditions.",
+  "qa_pairs": [
+    {
+      "question": "What are the stages of a box in the Ergo blockchain?",
+      "answer": "The stages of a box are: 1. Creation, 2. Existence, 3. Spending, and 4. Destruction."
+    },
+    {
+      "question": "What are the key characteristics of a box in the Ergo blockchain?",
+      "answer": "The key characteristics of a box are: immutability, unique identification, and programmable conditions."
+    },
+    {
+      "question": "How is a box generated in the Ergo blockchain?",
+      "answer": "A box is generated as an output of a transaction."
+    },
+    {
+      "question": "What happens when a box is spent in the Ergo blockchain?",
+      "answer": "When a box is spent, it is used as an input in a new transaction."
+    },
+    {
+      "question": "What happens to a box after it is spent in the Ergo blockchain?",
+      "answer": "After a box is spent, it is removed from the UTXO set."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Box Lifecycle",
+      "level": 1,
+      "content": "This page describes the journey of a box from creation to spending and destruction in the Ergo blockchain."
+    },
+    {
+      "heading": "Stages of a Box",
+      "level": 2,
+      "content": "1. **Creation**: A box is generated as an output of a transaction\n2. **Existence**: The box remains in the UTXO set, available to be spent\n3. **Spending**: The box is used as an input in a new transaction\n4. **Destruction**: The box is removed from the UTXO set after being spent"
+    },
+    {
+      "heading": "Key Characteristics",
+      "level": 2,
+      "content": "- Immutability\n- Unique Identification\n- Programmable Conditions"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/box/lifecycle.md",
+  "processed_at": "2025-05-11T19:19:20.268498",
+  "ai_processed": true
+}

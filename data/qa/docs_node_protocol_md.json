@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Node Protocol?",
+    "answer": "The Ergo Node Protocol is a comprehensive overview of the core operational aspects of the Ergo network, covering processing algorithm, validation rules, P2P protocol, and peer management."
+  },
+  {
+    "question": "What is the processing algorithm used in the Ergo network?",
+    "answer": "The processing algorithm is used for processing Ergo modifiers and is applicable across all security modes within the Ergo network, ensuring consistent data processing."
+  },
+  {
+    "question": "What are the validation rules in the Ergo network?",
+    "answer": "The validation rules are consensus-critical and mandatory for every node in the Ergo network to maintain network integrity and security. They ensure that all transactions and blocks adhere to the established network standards."
+  },
+  {
+    "question": "How does the P2P protocol work in the Ergo network?",
+    "answer": "The P2P protocol is used for how nodes communicate and share information, facilitating efficient data exchange within the Ergo network."
+  },
+  {
+    "question": "How do nodes manage their peers in the Ergo network?",
+    "answer": "The peer management section discusses the strategies nodes employ to manage their peers, including peer discovery, connection, and disconnection, to maintain network connectivity."
+  }
+]

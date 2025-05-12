@@ -1,0 +1,58 @@
+{
+  "id": "docs_mining_setup_solo-faq_md",
+  "title": "Solo Mining FAQ",
+  "summary": "The document provides a Solo Mining FAQ for the Ergo platform. It explains why mined funds may not be immediately visible in the wallet, why rewards go to a different address, and how to verify if a block was mined by the user. It also describes the API endpoints for obtaining the user's reward address and public key, as well as the structure of the mining solution response.",
+  "qa_pairs": [
+    {
+      "question": "Why are my mining rewards not visible in my wallet initially?",
+      "answer": "When you mine, the rewards are initially linked to a time-and-pubkey lock script, not your standard P2PK address. To make these funds visible in your wallet, you need to transfer all the funds to your own address in the node wallet."
+    },
+    {
+      "question": "Why do my mining rewards go to a different address?",
+      "answer": "Mining rewards are initially directed to UTXOs (Unspent Transaction Outputs) associated with specific scripts. These scripts lock the rewards to the miner's public keys for 720 blocks. After 720 confirmations, the wallet will display the mined rewards."
+    },
+    {
+      "question": "How can I verify if a block is mined by me?",
+      "answer": "You can obtain your mining rewards address with the /mining/rewardAddress API call, and then verify your rewards on the Ergo Explorer. You can also obtain your raw public key via the /mining/rewardPublicKey endpoint and check block headers for this public key."
+    },
+    {
+      "question": "What information is provided by the /mining/solution API endpoint?",
+      "answer": "The /mining/solution API endpoint provides information about the mining solution, including the public key (pk) in binary format, the nonce (n), and the constant values w and d."
+    },
+    {
+      "question": "How can I locate my mining rewards that are not yet visible in my wallet?",
+      "answer": "The mining rewards are stored in a special node application with id = 9 (wallet application id = 10). You can locate them via the /scan/unspentBoxes/9 API endpoint."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Solo Mining FAQ",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Why Aren't My Funds Visible in My Wallet?",
+      "level": 2,
+      "content": "When you mine, the rewards are initially linked to a *time-and-pubkey lock script*, not your standard P2PK address. To make these funds visible in your wallet, you need to transfer all the funds to your own address in the node wallet. Once the transfer is confirmed on the chain, the Explorer will display them."
+    },
+    {
+      "heading": "Why Do My Rewards Go to a Different Address?",
+      "level": 2,
+      "content": "Mining rewards are initially directed to UTXOs (Unspent Transaction Outputs) associated with specific scripts. These scripts lock the rewards to the miner's public keys for 720 blocks. You can see an example of such a script [here](https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73).\n\nThese UTXOs are not part of the node wallet before the locking height, so they are not included in your balance. However, they are stored in a special node application with `id = 9` (wallet application id = 10). You can locate them via the `/scan/unspentBoxes/9` API endpoint.\n\nAfter 720 confirmations, the wallet will display the mined rewards, even if they are still associated with long scripts instead of short P2PK addresses."
+    },
+    {
+      "heading": "How Do I Verify If a Block Is Mined by Me?",
+      "level": 2,
+      "content": "You can obtain your mining rewards address with the `/mining/rewardAddress` API call. The response should look something like this:\n\n```json\n{\n\u201crewardAddress\u201d: \u201cmPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS\u201d\n}\n```\nYou can then verify your rewards on the [Ergo Explorer](https://explorer.ergoplatform.com/).\n\nYou can also obtain your \"raw\" public key via the `/mining/rewardPublicKey` endpoint:\n\n```json\n{\n\u201crewardPubkey\u201d: \u201c03aa53abda9e6c958ed6046e6092b901662a26a01a2029c417b1c3f29b4b1c2799\u201d\n}\n```\n\nThen, you can check block headers (`pk` field) for this public key."
+    },
+    {
+      "heading": "\u200b/mining\u200b/solution API Endpoint",
+      "level": 2,
+      "content": "```json\n{\n  \"pk\": \"0350e25cee8562697d55275c96bb01b34228f9bd68fd9933f2a25ff195526864f5\",\n  \"w\": \"0366ea253123dfdb8d6d9ca2cb9ea98629e8f34015b1e4ba942b1d88badfcc6a12\",\n  \"n\": \"0000000000000000\",\n  \"d\": 987654321\n}\n```\n\n- **pk** is the public key *in binary format*\n- **n** is the nonce\n- **w** and **d** are no longer used in Autolykos2 and are **constant**."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/setup/solo-faq.md",
+  "processed_at": "2025-05-11T19:52:26.149606",
+  "ai_processed": true
+}

@@ -1,0 +1,7 @@
+Welcome to Ergo, a secure and powerful platform designed to be a fair financial system for everyone. This guide covers various aspects of Ergo, including learning the basics, using Ergo for transactions, building applications, and helping secure the network.
+
+Ergo offers several unique advantages such as being built for everyone, providing secure and private transactions, having a fair launch, offering powerful tools like smart contracts, and being sustainable. The document provides steps for getting started with Ergo, including understanding the basics, getting a wallet, acquiring ERG, exploring use cases, and joining the community.
+
+For intermediate users, the guide covers topics like decentralized exchanges, yield farming and staking, stablecoins, degenerate finance, gaming, running a node, and utilizing off-chain services. For developers, it provides a quickstart, information on ErgoScript, and guidance on building applications on Ergo. For miners, it covers starting mining and understanding the Autolykos algorithm.
+
+The document also highlights the vibrant Ergo community and provides links to various resources, including key features, the Ergo anatomy, the Sigmaverse dApp universe, the Discord community, the Ergo testnet, and a bookmarks page.

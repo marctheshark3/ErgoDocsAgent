@@ -1,0 +1,3 @@
+Introduction: 
+
+This document provides an installation script for a software or service. The script can be run using a single command, which downloads and executes the installation process. The document also includes links to platform-specific installation guides for Mac, Linux, Raspberry Pi, and Windows.

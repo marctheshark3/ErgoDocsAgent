@@ -1,0 +1,1 @@
+Tensile is a decentralized derivatives project on the Ergo blockchain that is currently in a dormant state as the developers have shifted their focus to other priorities. The project includes a DeCo Layment Final Presentation video and code for a Tensile Futures Contract in ErgoScript.

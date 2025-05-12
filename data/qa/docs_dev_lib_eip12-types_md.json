@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the EIP12-Types library?",
+    "answer": "The EIP12-Types library is designed to introduce static typing to the dApp Connector Protocol on the Ergo Blockchain."
+  },
+  {
+    "question": "What are the benefits of using static typing in Ergo dApp development?",
+    "answer": "Static typing provides benefits such as early error detection, performance optimization, and improved code readability and maintainability."
+  },
+  {
+    "question": "Where can developers find instructions on how to integrate EIP12-Types into their Ergo dApp development process?",
+    "answer": "Developers can find instructions on how to integrate EIP12-Types in the official GitHub repository."
+  },
+  {
+    "question": "What is the dApp Connector Protocol on the Ergo Blockchain?",
+    "answer": "The dApp Connector Protocol is a protocol on the Ergo Blockchain that enables the connection between decentralized applications (dApps) and the Ergo blockchain."
+  },
+  {
+    "question": "How does the EIP12-Types library enhance the dApp Connector Protocol on the Ergo Blockchain?",
+    "answer": "The EIP12-Types library enhances the dApp Connector Protocol by introducing static typing, which improves the developer experience on the Ergo platform."
+  }
+]

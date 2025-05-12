@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_stack_frameworks_md",
+  "title": "Frameworks",
+  "summary": "The document provides an overview of the various frameworks and Standard Development Kits (SDKs) available for developing on the Ergo blockchain. The main frameworks mentioned are AppKit, SigmaRust, and Fleet SDK, which cater to different programming languages and use cases. Other frameworks like ergpy, Mosaik, RustKit, Headless dApp Framework, and JSON dApp Environment are also briefly described.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary SDK for JVM developers on the Ergo platform?",
+      "answer": "AppKit is the primary SDK, and the entry-point for JVM developers (Java, Scala, Kotlin, Mobile)."
+    },
+    {
+      "question": "What is SigmaRust?",
+      "answer": "SigmaRust is an alternative and simple implementation of ErgoTree interpreter and transaction building tools."
+    },
+    {
+      "question": "What is the purpose of the Fleet SDK?",
+      "answer": "The Fleet SDK lets you easily create Ergo transactions with a pure JS library."
+    },
+    {
+      "question": "What is the Headless dApp Framework?",
+      "answer": "The Headless dApp Framework is a Rust framework for developing Ergo Headless dApps. It provides developers with the first portable UTXO-based headless dApp development framework on any blockchain."
+    },
+    {
+      "question": "What is the JSON dApp Environment?",
+      "answer": "The JSON dApp Environment is a framework for Ergo dApps."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Frameworks",
+      "level": 1,
+      "content": "There are several Standard Development Kits and Frameworks available on Ergo with the main ones being:\n\n- [AppKit](appkit.md) is the primary SDK, and the entry-point for JVM developers. (Java, Scala, Kotlin, Mobile)\n- [SigmaRust](sigma-rust.md) is an alternative and simple implementation of ErgoTree interpreter and transaction building tools. \n- [Fleet SDK](fleet.md) lets you easily create Ergo transactions with a pure JS library. \n\nSome others are\n\n- [ergpy](ergpy.md) is a python-jvm wrapper for interacting with the Ergo blockchain.\n- [Mosaik](mosaik.md) is a *UI system for Ergo dApps*\n- [RustKit](rustkit.md) is also in development, which aims to bring the Rust experience in-line with the JVM one. \n- [Headless dApp Framework](headless.md) is a Rust framework for developing Ergo Headless dApps. The Ergo HDF provides developers with the first portable UTXO-based headless dApp development framework on any blockchain.\n- [JSON dApp Environment](jde.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/frameworks.md",
+  "processed_at": "2025-05-11T19:34:55.026422",
+  "ai_processed": true
+}

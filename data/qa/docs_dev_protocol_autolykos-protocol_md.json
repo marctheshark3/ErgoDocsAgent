@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Autolykos?",
+    "answer": "Autolykos is a fairly launched efficient ASIC-resistant Proof of Work algorithm used for Ergo mining."
+  },
+  {
+    "question": "What are the key features of the Autolykos algorithm?",
+    "answer": "Autolykos is ASIC-resistant and uses a Proof of Work consensus mechanism."
+  },
+  {
+    "question": "How does the Ergo mining process work?",
+    "answer": "Ergo mining is based on the Autolykos algorithm, which is a Proof of Work consensus mechanism."
+  },
+  {
+    "question": "What is the purpose of the Ergo Storage Rent feature?",
+    "answer": "The Ergo Storage Rent feature reduces the problem of blockchain bloat through on-chain garbage collection."
+  },
+  {
+    "question": "How is the mining difficulty adjusted on the Ergo blockchain?",
+    "answer": "The mining difficulty on the Ergo blockchain is adjusted to maintain a consistent block time."
+  }
+]

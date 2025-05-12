@@ -1,0 +1,7 @@
+ErgoScript is the scripting language used to create smart contracts on the Ergo blockchain. It is designed to be powerful and intuitive, allowing for the creation of complex financial contracts while maintaining readability and security. The document provides an overview of ErgoScript's syntax, its integration with Ergo's UTXO model, and essential concepts for writing robust contracts.
+
+Key points covered include:
+- ErgoScript's syntax is derived from Scala, but it uses a minimal subset of Scala's features, focusing on simplicity and functionality.
+- ErgoScript incorporates constructs specific to the UTXO model, such as Boxes, INPUTS, and OUTPUTS.
+- ErgoScript supports immutable values, functional programming constructs, boolean predicates, and cryptographic operations.
+- The document provides examples demonstrating basic syntax, control structures, data types, and advanced functional programming in ErgoScript.

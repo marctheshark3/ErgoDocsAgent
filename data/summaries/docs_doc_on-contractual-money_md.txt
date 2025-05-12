@@ -1,0 +1,5 @@
+The document discusses the concept of "contractual money" where digital money is bound to an explicit contract in the form of executable code. It highlights a new function of money as a unit of contract execution, in addition to the traditional functions of medium of exchange, store of value, and unit of account.
+
+The paper uses examples from Bitcoin and Ergo to demonstrate how digital money can be programmed with contractual constraints. It presents two examples - a private scrip issued for a microcredit use-case where the borrower is required to spend the money only as prescribed by the contract, and a local government issuing money to promote the local economy with constraints on how the tokens can be spent and exchanged.
+
+The document also reviews the Woergl experiment of 1934, arguing that the main reason for its success was not the demurrage component but the scheme to convert local tax debts into communal works. Finally, it describes a Local Exchange Trading System (LETS) implemented on the Ergo blockchain.

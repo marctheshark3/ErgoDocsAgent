@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_scs_ergoscript_public-keys_md",
+  "title": "Public Key Scripts in ErgoScript",
+  "summary": "The document discusses public key scripts in ErgoScript, the smart contract language in Ergo. ErgoScript allows for the creation of scripts that can be spent by specific individuals, similar to P2PK addresses in Bitcoin. The most common method is using the `proveDlog(ecPoint)` predicate, which returns true if the spender can provide a valid proof of knowledge of the discrete logarithm corresponding to the elliptic curve point. Ergo uses the Secp256k1 curve and Schnorr signatures, unlike Bitcoin's ECDSA. The document provides a step-by-step guide to creating an address that encodes the `proveDlog` script, including obtaining the elliptic curve point and compiling the script.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of public key scripts in ErgoScript?",
+      "answer": "Public key scripts in ErgoScript allow for the creation of scripts that can be spent by specific individuals, increasing the practical utility of Ergo."
+    },
+    {
+      "question": "What is the most commonly used method for creating public key scripts in ErgoScript?",
+      "answer": "The most commonly used method involves the predicate `proveDlog(ecPoint)`, which returns true if the spender can provide a valid proof of knowledge of the discrete logarithm corresponding to `ecPoint`."
+    },
+    {
+      "question": "What curve does Ergo use for representing public key points?",
+      "answer": "Ergo uses the Secp256k1 curve, the same as Bitcoin, for representing public key points."
+    },
+    {
+      "question": "How does Ergo differ from Bitcoin in constructing proofs for public key scripts?",
+      "answer": "Ergo uses Schnorr signatures, not ECDSA, to construct the proofs for public key scripts."
+    },
+    {
+      "question": "What is the first step in creating an address that encodes the `proveDlog` script?",
+      "answer": "The first step is to obtain the Elliptic Curve (EC) point that corresponds to the public key."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Public Key Scripts in ErgoScript",
+      "level": 1,
+      "content": "ErgoScript, the smart contract language in Ergo, allows for the creation of scripts that can be spent by specific individuals, thereby increasing its practical utility. This is achieved by enabling someone to spend a box if they possess the private key corresponding to a certain public key, a concept similar to P2PK (Pay to Public Key) addresses in Bitcoin.\n\nErgoScript offers several methods for creating these \"public-key\" scripts. The most commonly used method involves the predicate `proveDlog(ecPoint)`. This predicate returns true if the spender can provide a valid proof of knowledge of the discrete logarithm corresponding to `ecPoint`\u2014a point on an elliptic curve over a finite field. This is akin to providing a \"signature\" in Bitcoin.\n\nErgo uses the same [Secp256k1 curve as Bitcoin](https://en.bitcoin.it/wiki/Secp256k1), so the representation of `ecPoint` is identical: a 33-byte array where the first byte indicates the sign. (Note: Ergo does not support uncompressed points). However, Ergo differs from Bitcoin in that it uses Schnorr signatures, not ECDSA, to construct these proofs.\n\nHere's a step-by-step guide to creating an address that encodes the `proveDlog` script:\n\n1. First, obtain the Elliptic Curve (EC) point that corresponds to the public key. For this example, we'll use [the same one as Bitcoin](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses).\n    1. The BigInteger secret, hex-encoded, is `18e14a7b6a307f426a94f8114701e7c8e774e7f9a47e2c2035db29a206321725`.\n    2. The corresponding EC point, hex-encoded, is `0250863ad64a87ae8a2fe83c1af1a8403cb53f53e486d8511dad8a04887e5b2352`.\n    3. Convert the EC point from hex to Base64, which gives `AlCGOtZKh66KL+g8GvGoQDy1P1PkhthRHa2KBIh+WyNS`.\n\n2. Then, create the corresponding script `proveDlog(decodePoint(fromBase64(\"AlCGOtZKh66KL+g8GvGoQDy1P1PkhthRHa2KBIh+WyNS\")))`.\n\n3. Compile the script. This [results in the address](https://wallet.plutomonkey.com/p2s/?source=cHJvdmVEbG9nKGRlY29kZVBvaW50KGZyb21CYXNlNjQoIkFsQ0dPdFpLaDY2S0wrZzhHdkdvUUR5MVAxUGtodGhSSGEyS0JJaCtXeU5TIikpKQ==) `LQ7iQ4egnCPsZZy5QKsXmaypCRuMxPNtdyGE95fYWCLze8C2hMMwDcAgPNeV8s`.\n\nFunds sent to the above address can be spent using the secret mentioned earlier. You can verify this in the transaction with ID [dfca9eaa745c79dafbed43b73379fb0008608119080954c337a4022a2a5070a3](https://explorer.ergoplatform.com/en/transactions/dfca9eaa745c79dafbed43b73379fb0008608119080954c337a4022a2a5070a3)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscript/public-keys.md",
+  "processed_at": "2025-05-11T19:28:44.437105",
+  "ai_processed": true
+}

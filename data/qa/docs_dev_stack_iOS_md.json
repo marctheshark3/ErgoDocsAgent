@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is AppKit?",
+    "answer": "AppKit is a library for polyglot development of Ergo Applications."
+  },
+  {
+    "question": "What is Mosaik?",
+    "answer": "Mosaik is a UI system for dApps."
+  },
+  {
+    "question": "How are iOS bindings implemented?",
+    "answer": "iOS bindings are implemented in sigma-rust."
+  },
+  {
+    "question": "What is the DeCo Intro Lessons video series about?",
+    "answer": "The DeCo Intro Lessons video series is about building a mobile app on Android or iOS."
+  },
+  {
+    "question": "What programming languages can be used to develop for iOS?",
+    "answer": "You can develop for iOS using Java, Kotlin, or Scala."
+  }
+]

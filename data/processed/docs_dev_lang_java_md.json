@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_lang_java_md",
+  "title": "Java Development with Ergo",
+  "summary": "The document provides an introduction to Java development with the Ergo AppKit, which is an essential tool for Java developers creating applications using Ergo. The Ergo AppKit utilizes the capabilities of GraalVM and offers a range of features to streamline the development process. It acts as a compact interface to the core elements of the ErgoScript interpreter and Ergo protocol implementations, enabling Java developers to engage with Ergo's foundational infrastructure without the need to explore the Scala codebase. Alternatively, direct interaction with the core Rust implementation is possible via Java (JNI) bindings for sigma-rust. The document highlights that the Ergo AppKit allows Java developers to focus on crafting innovative applications using Ergo, leveraging the unique features and robust blockchain infrastructure that Ergo provides.",
+  "qa_pairs": [
+    {
+      "question": "What is the Ergo AppKit?",
+      "answer": "The Ergo AppKit is an essential tool for Java developers to create applications using Ergo. It utilizes the capabilities of GraalVM and offers a broad spectrum of features to streamline the development process."
+    },
+    {
+      "question": "How does the Ergo AppKit enable Java developers to work with Ergo?",
+      "answer": "The Ergo AppKit acts as a compact interface to the core elements of the ErgoScript interpreter and Ergo protocol implementations, which are developed in Scala. This setup enables Java developers to engage with Ergo's foundational infrastructure without the necessity to explore the Scala codebase."
+    },
+    {
+      "question": "What are the alternative ways for Java developers to interact with Ergo's core components?",
+      "answer": "Alternatively, Java developers can directly interact with the core Rust implementation of Ergo via Java (JNI) bindings for sigma-rust."
+    },
+    {
+      "question": "What are the key benefits of using the Ergo AppKit for Java developers?",
+      "answer": "With the help of the Ergo AppKit, Java developers can concentrate on crafting innovative applications using Ergo, leveraging the unique features and robust blockchain infrastructure that Ergo provides."
+    },
+    {
+      "question": "What are the main technologies and components involved in the Ergo AppKit?",
+      "answer": "The Ergo AppKit utilizes the capabilities of GraalVM and is built on top of the ErgoScript interpreter and Ergo protocol implementations, which are developed in Scala."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Java\n  - AppKit\n  - Ergo\n  - GraalVM\n---"
+    },
+    {
+      "heading": "Java Development with Ergo",
+      "level": 1,
+      "content": "The [Ergo AppKit](appkit.md) is an essential tool for Java developers who are keen on creating applications using Ergo. It utilizes the capabilities of GraalVM, offering a broad spectrum of [features](protocol-overview.md) to [streamline the development process](get-started.md).\n\nThe [Ergo AppKit](appkit.md) acts as a compact interface to the core elements of the [ErgoScript interpreter](sigmastate-interpreter.md) and [Ergo protocol implementations](protocol-overview.md), both of which are developed in [Scala](scala.md). This setup enables Java developers to engage with the Ergo's [foundational infrastructure](protocol-overview.md) without the necessity to explore the Scala codebase. Alternatively, direct interaction with the core [Rust implementation](rust.md) is possible via [Java (JNI) bindings for sigma-rust](sigma-rust.md#bindings).\n\nWith the help of [Ergo AppKit](appkit.md), Java developers can concentrate on crafting innovative [applications](use-cases-overview.md) using Ergo, leveraging the unique [features](protocol-overview.md) and robust [blockchain infrastructure](protocol-overview.md) that Ergo provides."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/lang/java.md",
+  "processed_at": "2025-05-11T19:21:30.274574",
+  "ai_processed": true
+}

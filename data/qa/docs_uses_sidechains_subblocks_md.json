@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are sub-blocks (input blocks) in Ergo?",
+    "answer": "Sub-blocks (input blocks) are block candidates generated with a lower difficulty threshold than full blocks. They are produced approximately once per second and carry most transaction data, allowing transactions to propagate and confirm much faster."
+  },
+  {
+    "question": "What are ordering blocks in Ergo?",
+    "answer": "Ordering blocks are the traditional full blocks of Ergo's proof-of-work system. They are generated roughly every 2 minutes and maintain the overall consensus and security of the blockchain."
+  },
+  {
+    "question": "How do sub-blocks (input blocks) and ordering blocks improve the user experience on the Ergo network?",
+    "answer": "The introduction of sub-blocks (input blocks) and ordering blocks significantly improves transaction processing speed and reliability, providing users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network."
+  },
+  {
+    "question": "How does the new sub-block (input block) and ordering block design transform the Ergo mempool?",
+    "answer": "The new design transforms the mempool from a competitive (PvP) environment into a cooperative, multiplayer-like system, enhancing overall network responsiveness."
+  },
+  {
+    "question": "Where can I find more technical details about the sub-blocks (input blocks) and ordering blocks in Ergo?",
+    "answer": "For a deep dive into the technical details behind these changes, see the [technical details](input-blocks.md)."
+  }
+]

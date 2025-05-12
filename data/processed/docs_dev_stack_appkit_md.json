@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_stack_appkit_md",
+  "title": "Appkit",
+  "summary": "Appkit is a library for polyglot development of Ergo Applications based on GraalVM. It provides a thin wrapper around core components of the ErgoScript interpreter and Ergo protocol implementations, allowing Ergo applications to be written in various languages supported by GraalVM. Appkit offers methods for fetching data from Ergo Explorer API, interacting with Ergo Node, building and signing transactions, and handling cryptographic operations. Ergo applications built with Appkit can be compiled into native code using the GraalVM native-image compiler, providing fast startup times and lower runtime memory overhead compared to a Java VM. The document includes tutorials, code examples, and references for using Appkit to develop Ergo applications.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Java\n  - Scala\n  - Kotlin\n---\n# Appkit\n\n\n\n[Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Appkit"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Java\n  - Scala\n  - Kotlin\n---"
+    },
+    {
+      "question": "What is the 'Appkit' section about?",
+      "answer": "[Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of E..."
+    },
+    {
+      "question": "What is the 'Tutorials' section about?",
+      "answer": "::cards::\n\n[\n  {\n    \"title\": \"General Example\",\n    \"content\": \"\",\n    \"url\": \"appkit/tutorial.md\"\n..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Java\n  - Scala\n  - Kotlin\n---"
+    },
+    {
+      "heading": "Appkit",
+      "level": 1,
+      "content": "[Ergo Appkit](https://github.com/aslesarenko/ergo-appkit) is a library for polyglot development of Ergo Applications based on [GraalVM](https://www.graalvm.org/).\n\nIt is a thin wrapper around core components provided by the ErgoScript interpreter and Ergo protocol implementations which are written in Scala. It is published on [maven repository](https://mvnrepository.com/artifact/org.ergoplatform/ergo-appkit) and cross-compiled to both Java 7 and Java 8+ jars.\n\n\n**AppKit provides methods for the following:**\n\n- Fetch data from Ergo Explorer API\n- Interact with Ergo Node, both public and private methods\n- Build transactions and sign them\n- Helper methods to handle cryptographic like calculating PK addresses from secrets\n\n\nUsing Appkit, Ergo applications can be written in one of the languages supported by GraalVM (i.e. Java, JavaScript, C/C++, Python, Ruby, R) and using this library, applications can communicate with Ergo nodes via unified API and programming model provided by Appkit. In addition, Appkit based Ergo applications can be compiled into native code using native-image ahead of time compiler and then executed without Java VM with very fast startup time and lower runtime memory overhead compared to a Java VM. This is an attractive option for high-performance, low-latency microservices."
+    },
+    {
+      "heading": "Tutorials",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"General Example\",\n    \"content\": \"\",\n    \"url\": \"appkit/tutorial.md\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 AppKit By Example\",\n    \"content\": \"Follow this example to create and programmaticaly send a transaction.\",\n    \"url\": \"https://www.youtube.com/watch?v=Md5s-XV6-Hs\"\n  },\n  {\n    \"title\": \"ErgoPay Example\",\n    \"url\": \"../wallet/payments/ergopay/ergo-pay.md\"\n  },\n  {\n    \"title\": \"Gradle\",\n    \"url\": \"appkit/gradle.md\"\n  },\n  \n\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Videos",
+      "level": 2,
+      "content": "- [AppKit by Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs)"
+    },
+    {
+      "heading": "Code examples",
+      "level": 2,
+      "content": "- [Appkit Examples](https://github.com/aslesarenko/ergo-appkit-examples)\n- [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)"
+    },
+    {
+      "heading": "How-to Guides",
+      "level": 2,
+      "content": "-  [Ergo Android](https://github.com/aslesarenko/ergo-android) application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android."
+    },
+    {
+      "heading": "References",
+      "level": 2,
+      "content": "- [ErgoTool](https://github.com/aslesarenko/ergo-tool) | A Command Line Interface for Ergo based on Appkit and [GraalVM](https://www.graalvm.org/) native-image. Read the [introduction and overview](https://ergoplatform.org/en/blog/2019_12_31_ergo_tool/)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/appkit.md",
+  "processed_at": "2025-05-11T19:33:04.530684",
+  "ai_processed": true
+}

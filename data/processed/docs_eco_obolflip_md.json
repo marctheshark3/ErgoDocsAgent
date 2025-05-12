@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_obolflip_md",
+  "title": "Obolflip",
+  "summary": "Obolflip is a client-side application that can be used for taking bets on a coin flip or for managing flips and earning revenue, depending on local laws. It can be deployed on a server to allow other users to place bets, generating additional revenue from withdrawals.",
+  "qa_pairs": [
+    {
+      "question": "What is Obolflip?",
+      "answer": "Obolflip is a client that can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location."
+    },
+    {
+      "question": "What are the key features of Obolflip?",
+      "answer": "Obolflip can be used to take bets on a flip, manage flips, and earn revenue from withdrawals. It can also be deployed on a server to allow other users to do bets."
+    },
+    {
+      "question": "What are the main use cases of Obolflip?",
+      "answer": "Obolflip can be used for betting on flips and earning revenue from managing flips and withdrawals, depending on local regulations."
+    },
+    {
+      "question": "How can Obolflip be deployed?",
+      "answer": "Obolflip can be deployed on a server to allow other users to do bets and earn extra revenue from withdrawals."
+    },
+    {
+      "question": "What is the technical architecture of Obolflip?",
+      "answer": "The technical details of Obolflip's architecture are not provided in the given content."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Obolflip\n  - Gaming\n  - Betting\n  - dApp\n---"
+    },
+    {
+      "heading": "Obolflip",
+      "level": 1,
+      "content": "[ObolFlip](https://github.com/ObolFlip/obolflip-client) client can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location. You can even deploy it on a server and let other users do bets, earning extra revenue for withdrawals."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/obolflip.md",
+  "processed_at": "2025-05-11T19:45:52.886989",
+  "ai_processed": true
+}

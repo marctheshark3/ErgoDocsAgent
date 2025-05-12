@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_skyharbor_md",
+  "title": "SkyHarbor",
+  "summary": "SkyHarbor is a live NFT marketplace built on the Ergo blockchain. Its goal is to enhance the ENFT (Ergo-based Non-Fungible Token) space by providing features like verified collections, NFT trading histories, and set-price trading. The roadmap includes plans for expanded Ergo token support, NFT mass minting, NFT drops, and publicly available API data.",
+  "qa_pairs": [
+    {
+      "question": "What is SkyHarbor?",
+      "answer": "SkyHarbor is an NFT marketplace built on the Ergo blockchain."
+    },
+    {
+      "question": "What are the key features of SkyHarbor?",
+      "answer": "SkyHarbor features verified collections to stop scams, NFT trading histories, and set-price trading."
+    },
+    {
+      "question": "What is the roadmap for SkyHarbor?",
+      "answer": "The SkyHarbor roadmap includes expanded Ergo token support, NFT mass minting, NFT drops, and publicly available API data."
+    },
+    {
+      "question": "What type of dApp is SkyHarbor?",
+      "answer": "SkyHarbor is a dApp-Live, meaning it is a decentralized application that is currently live and operational."
+    },
+    {
+      "question": "What is the goal of SkyHarbor?",
+      "answer": "The goal of SkyHarbor is to upgrade the ENFT (Ergo Non-Fungible Token) space to match the full potential of the Ergo blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - SkyHarbor\n  - NFT\n  - Marketplace\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "SkyHarbor",
+      "level": 1,
+      "content": "[skyharbor.io](https://www.skyharbor.io/) is live. Their goal is to upgrade the ENFT space to match the full potential of Ergo. Verified collections to stop scams, NFT trading histories, and set-price trading.\n\nTheir roadmap includes expanded Ergo token support, NFT mass minting, NFT drops, publicly available API data, and much more!"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/skyharbor.md",
+  "processed_at": "2025-05-11T19:48:11.389078",
+  "ai_processed": true
+}

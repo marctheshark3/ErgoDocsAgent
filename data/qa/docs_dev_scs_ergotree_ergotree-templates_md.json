@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of using ConstantPlaceholder nodes in ErgoTree?",
+    "answer": "To enable effective optimization through caching by separating constants from the script expression."
+  },
+  {
+    "question": "What are the main components of the serialized ErgoTree format?",
+    "answer": "A collection of segregated constants and the script expression with placeholders instead of constants."
+  },
+  {
+    "question": "How does the templatized ErgoTree approach improve the evaluation process?",
+    "answer": "It allows applying reduction and cost estimation to the constant-less template, before binding the placeholders with the actual values from the constants collection."
+  },
+  {
+    "question": "What are the key steps in the evaluation process of a templatized ErgoTree?",
+    "answer": "1. Apply reduction and cost estimation to the constant-less template, 2. Bind the placeholders with the actual values from the constants collection, 3. Evaluate the cost graph and the ErgoTree."
+  },
+  {
+    "question": "What are the main benefits of the templatized ErgoTree approach?",
+    "answer": "Enables effective optimization through caching, and improves the efficiency of the evaluation process."
+  }
+]

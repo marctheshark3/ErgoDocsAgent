@@ -1,0 +1,53 @@
+{
+  "id": "docs_eco_analog-ergo_md",
+  "title": "Analog Ergo",
+  "summary": "Analog Ergo is a project that aims to create a cross-chain peer-to-peer marketplace using cryptographic primitives. It enables users to set and agree on listing prices and other parameters in a private and fungible manner, without the involvement of intermediaries.\n\nThe project has successfully tested a Scalar Lock contract, which allows locking funds to a scalar value that can be verified using an elliptic curve multiplication operation. This is a key component for enabling Atomic Swaps.\n\nThe document also provides a working example of a 2-party Atomic Swap protocol, which demonstrates how secrets are shared and blockchain interactions occur during the swap process.",
+  "qa_pairs": [
+    {
+      "question": "What is the goal of the Analog Ergo project?",
+      "answer": "The Analog Ergo project aims to use cryptographic primitives as the basis for a cross-chain peer-to-peer marketplace that enables users to set and agree to listing prices and other parameters in a private and fungible manner, without the involvement of intermediaries."
+    },
+    {
+      "question": "What is the purpose of the ScalarLock contract?",
+      "answer": "The ScalarLock contract allows you to lock funds to a scalar value like a random 256-bit number, which can be tested by comparing it with an Elliptic curve multiplication operation against the Secp256k1 Generator. This is a key component for enabling Atomic Swaps."
+    },
+    {
+      "question": "How does the ScalarLock contract work?",
+      "answer": "The ScalarLock contract decodes the generator point, extracts a scalar value from the transaction output, and checks if the point computed from the scalar multiplication of the generator point and the extracted scalar value is equal to a predefined point. If the two points are equal, the transaction is valid."
+    },
+    {
+      "question": "Where can I find a working example of a 2-party Atomic Swap?",
+      "answer": "A working Python example of a 2-party Atomic Swap that can be simulated from 2 shell/terminal windows is available at the 2pAtomicSwapExample repository."
+    },
+    {
+      "question": "What is the purpose of the 2-party Atomic Swap example?",
+      "answer": "The 2-party Atomic Swap example might help people reason about the way in which secrets are shared through the Atomic Swap protocol and at what steps what data transfer or blockchain interaction is supposed to occur."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Analog Ergo\n  - Marketplace\n  - Atomic Swaps\n  - dApp\n  - dApp-InDev\n---"
+    },
+    {
+      "heading": "Analog Ergo",
+      "level": 1,
+      "content": "This project aims to use cryptographic primitives (well established, low level algorithms) as the basis for a cross-chain peer-to-peer marketplace. It will enable users to set and agree to listing prices and other parameters in a private and fungible manner, without the involvement of intermediaries."
+    },
+    {
+      "heading": "ScalarLock",
+      "level": 2,
+      "content": "> Successfully tested a Scalar Lock contract, this allows you to lock funds to a scalar value like a random 256bit number that you can test by comparing it with an Elliptic curve multiplication operation against the Secp256k1 Generator. A key component of how values are checked when verifying cryptographic signatures and will enable the final step to Atomic Swaps!. \nErgoScript makes this quite easy (Once the constants and [registers](registers.md) are figured out):\n\n```scala\n val scalarLockScript: String = {\n        s\"\"\"\n            {\n            val xBYTES = OUTPUTS(0).R4[Coll[Byte]].get\n            val x = byteArrayToBigInt(xBYTES)\n            val G = decodePoint(generator)\n              sigmaProp(\n                receiver &&\n                G.exp(x) == xG\n              )\n            }\n        \"\"\".stripMargin\n```\n\n It compares a given scalar value (x) to an elliptic curve multiplication operation of Secp256k1 generator (G) and checks if they are equal.\n\n It decodes the generator point and extracts a scalar value from the transaction output. It then checks if the point computed from the scalar multiplication of the generator point and the extracted scalar value is equal to a predefined point. If the two points are equal, the transaction is valid.\n\n\n\n\n- [Deploying](https://tn-ergo-explorer.anetabtc.io/en/transactions/b9d6a5796e0fa7b8fdf374426219d8fe2d64e7d9976e04845a0a6886414343b9)\n- [Spending](https://tn-ergo-explorer.anetabtc.io/en/transactions/8c2440eff436a0c2f2af4b8b2d2ac53fbcfd43762b411217a26899f0ce749ba0)\n- [Scala](https://github.com/dzyphr/ScalaSigmaParticle/blob/main/ScalarLock/src/main/scala/ScalarLock.scala)"
+    },
+    {
+      "heading": "2-Party Atomic Swap",
+      "level": 2,
+      "content": "A working python example of a 2-party atomic swap that you can simulate from 2 shell/terminal windows is available at [2pAtomicSwapExample](https://github.com/dzyphr/2pAtomicSwapExample). This might help people reason about the way in which secrets are shared through this protocol and at what steps what data transfer or blockchain interaction is supposed to occur."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/analog-ergo.md",
+  "processed_at": "2025-05-11T19:42:33.857238",
+  "ai_processed": true
+}

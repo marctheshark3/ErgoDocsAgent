@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the plutomonkey website?",
+    "answer": "The plutomonkey website is used to compile ErgoScript contracts into a P2S (Pay-to-Script) address."
+  },
+  {
+    "question": "How can the compiled P2S address be used in Rust code?",
+    "answer": "The compiled P2S address can be utilized within Rust, as demonstrated in the provided code snippet."
+  },
+  {
+    "question": "What is the purpose of the AddressEncoder and eval_out_wo_ctx functions in the Rust code?",
+    "answer": "The AddressEncoder is used to parse the P2S address string into an Address object, and the eval_out_wo_ctx function is used to evaluate the script proposition."
+  },
+  {
+    "question": "What is the expected output of the Rust code snippet?",
+    "answer": "The Rust code snippet is expected to assert that the result of evaluating the script proposition is true."
+  },
+  {
+    "question": "Where can the reader find more information about the Sigma-Rust library used in the Rust code?",
+    "answer": "The reader can find more information about the Sigma-Rust library in the provided link to the GitHub repository."
+  }
+]

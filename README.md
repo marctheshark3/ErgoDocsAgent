@@ -140,3 +140,42 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+# AI Agent Digital Library
+
+Ergo Docs Agent is an AI-powered documentation system for Ergo Platform, featuring:
+
+- Retrieval of official documentation with context
+- Multiple AI models with unique capabilities
+- Smart document handling and validation
+
+## New Feature: MCP Servers Integration
+
+The AI Agent Digital Library now integrates with five Model Context Protocol (MCP) servers to enhance document processing capabilities:
+
+1. **GitHub MCP Server**: Access GitHub repositories for ingestion, updates, and research
+2. **Filesystem MCP Server**: Manage document storage with read/write file operations
+3. **Qdrant MCP Server**: Power RAG capabilities with vector database integration
+4. **Brave Search MCP Server**: Discover web resources via Brave Search API
+5. **Firecrawl MCP Server**: Scrape and crawl websites for content ingestion
+
+These modular MCP servers support four key pipelines:
+- **Ingestion Pipeline**: Process new or updated documents
+- **Update Pipeline**: Periodically refresh existing documents
+- **Research Pipeline**: Search for new data sources
+- **Validation Pipeline**: Assess document quality and relevance
+
+## Getting Started
+
+1. See [mcp_setup.md](mcp_setup.md) for detailed setup instructions for all MCP servers
+2. Configure API keys in your `.env` file (copy from `env.example`)
+3. Start the servers using Docker Compose:
+   ```bash
+   docker-compose up -d
+   ```
+
+## Architecture
+
+The system uses a modular design where each MCP server is an independent component with standardized JSON-RPC interfaces. This allows servers to be replaced with alternatives if needed without affecting the overall system.
+
+AI agents orchestrate the document processing workflows, using the MCP servers as tools to access external data sources, process documents, and serve content to users via RAG.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Headless dApp Framework (HDF)?",
+    "answer": "The Ergo Headless dApp Framework (HDF) is a Rust framework designed for developing portable and reusable off-chain logic for Ergo dApps, often referred to as \"Headless dApps\"."
+  },
+  {
+    "question": "What are the key characteristics and benefits of Headless dApps?",
+    "answer": "Key characteristics and benefits of Headless dApps include separation of concerns, portability, reusability and composability, decentralized ecosystem, and new business models."
+  },
+  {
+    "question": "What are the main goals of the Ergo HDF?",
+    "answer": "The main goals of the Ergo HDF are to enable developers to write off-chain logic once in Rust and target all platforms, provide a clearer path from Ergo dApp Specifications to a working implementation, offer easy-to-use methods for frontend implementors to access dApp state and perform actions, abstract the complexity of finding and selecting input UTXOs, and facilitate building scripts, bots, and complex applications on top of multiple HDF-based dApps."
+  },
+  {
+    "question": "What are the core concepts of the Ergo HDF based on EIP-6?",
+    "answer": "The core concepts of the Ergo HDF based on EIP-6 are Protocol, Stage, and Action, which define the smart contract protocol, specific states within the protocol, and the logic for state transitions, respectively."
+  },
+  {
+    "question": "What does the Ergo HDF provide to developers?",
+    "answer": "The Ergo HDF provides Rust structs, traits, and utilities to define stages, actions, input specifications (BoxSpec), and transaction-building logic for Ergo dApps."
+  }
+]

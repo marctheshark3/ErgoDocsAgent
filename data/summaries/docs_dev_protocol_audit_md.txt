@@ -1,0 +1,9 @@
+The document is a security audit report for the Ergo platform, conducted by Jean-Philippe Aumasson. The audit focused on the Sigma protocol proofs, the wallet's secure storage of secrets, and the Proof-of-Work validation. The report summarizes the findings and provides recommendations:
+
+1. For the Sigma protocol proofs, the implementation challenges were to define a safe and efficient encoding of the proofs, and to implement the proving and verification functionalities correctly.
+
+2. For the wallet, the main risks identified were the absence of checks on the password's length, and the need to enforce a minimum password entropy.
+
+3. For the Proof-of-Work validation, the recommendations were to implement stricter validation of the 'k' and 'n' parameters, and to ensure that these parameters are positive values.
+
+Overall, the audit found no critical issues, but provided several recommendations to improve the security of the Ergo platform.

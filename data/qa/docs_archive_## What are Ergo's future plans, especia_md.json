@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Ergo's future plans for growing its ecosystem?",
+    "answer": "Continue to solve pain points in development, improve UX with sub-blocks, onboard more developers with hardware wallets and resources, address lack of T1 exchanges and professional marketing, push for more on-ramps, and enable minting of new tokens, NFTs, and transactions for next to nothing."
+  },
+  {
+    "question": "How is Ergo well-suited for Artificial Economic Intelligence (AEI)?",
+    "answer": "Ergo's simplicity in handling contracts, enabling easy issuance of peer-to-peer financial instruments like bonds, and flexible contract templates allow for seamless modifications, supporting the evolutionary development of AEI-to-AEI agreements."
+  },
+  {
+    "question": "How does Ergo approach privacy, and how does it plan to avoid legal challenges?",
+    "answer": "Ergo implements privacy features through opt-in protocols, uses proven cryptographic techniques within its eUTXO model, maintains transparency where needed while protecting individual privacy, operates as a fully open-source platform, maintains clear documentation and transparency in its development, and focuses on privacy as a right for ordinary citizens while maintaining compliance capabilities."
+  },
+  {
+    "question": "How does Ergo differentiate itself from other smart contract platforms?",
+    "answer": "Ergo is a UTXO-based blockchain, which offers advantages over the account-based model used by Ethereum. Developing Ergo contracts can be significantly easier than writing and debugging Solidity code. Ergo also offers innovative approaches to bridging with other PoW blockchains, such as Bitcoin, through double merged-mined sidechains."
+  },
+  {
+    "question": "What is Ergo's long-term vision for its ecosystem?",
+    "answer": "Ergo aims to position itself as a basis for unstoppable, grassroots economies, serving as a decentralized central bank digital currency (CBDC) for the people."
+  }
+]

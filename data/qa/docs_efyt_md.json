@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is EFYT?",
+    "answer": "EFYT is the Ergo-First-Year-Token, which was systematically airdropped and then listed on the Waves DEX in May 2017, with an initial supply of 100,000 tokens."
+  },
+  {
+    "question": "How does EFYT differ from ERG?",
+    "answer": "EFYT, which was issued on the Waves Platform, is a separate entity from ERG, the native token of the Ergo blockchain. ERG became available after the launch of the Ergo mainnet and could only be obtained through mining."
+  },
+  {
+    "question": "What is the total supply of EFYT?",
+    "answer": "The maximum supply of EFYT is capped at 1,970,945.0, mirroring 10% of Ergo's first-year token emission which corresponds to the amount of ERGs the Ergo Foundation received in this same period."
+  },
+  {
+    "question": "Where can EFYT token distribution and market information be found?",
+    "answer": "EFYT token distribution can be found on Pywaves, and EFYT market and price tracking can be found on livecoinwatch."
+  },
+  {
+    "question": "What was the EFYT redemption process?",
+    "answer": "EFYT holders could exchange their tokens for ERG at a 1:1 rate via the Waves gateway. This option was available until July 1st, 2021, with unclaimed EFYT tokens totaling 188,330 by the end of the offer. Overall, the Treasury exchanged 1,782,615 ERG for EFYT."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Babel fees on the Ergo platform?",
+    "answer": "Babel fees (introduced via EIP-0031) allow users to pay transaction fees in tokens other than the platform's primary token (ERG)."
+  },
+  {
+    "question": "How do Babel fees work on Ergo?",
+    "answer": "Babel fee payments are facilitated through pre-defined Babel Fee pools, offering a predictable and transparent fee payment process."
+  },
+  {
+    "question": "What are the steps for a user to select and use a Babel Fee box on Ergo?",
+    "answer": "1. Users locate UTXOs for their desired token, 2. Verify sufficient ERG for transaction fees, 3. Evaluate exchange rates, 4. Choose the most favorable rate, 5. Spend the selected UTXO and recreate it with identical parameters."
+  },
+  {
+    "question": "How can users provide liquidity for Babel fees on Ergo?",
+    "answer": "Users can lock up ERG in a smart contract and specify a rate at which they're willing to buy tokens. When users pay transaction fees with those tokens, the liquidity provider automatically receives them in exchange for their ERG."
+  },
+  {
+    "question": "How can developers integrate Babel fees into their Ergo applications?",
+    "answer": "Developers can use the Fleet SDK's babel-fees plugin to easily handle the complexities of token-to-ERG conversions and contract interactions for Babel fees."
+  }
+]

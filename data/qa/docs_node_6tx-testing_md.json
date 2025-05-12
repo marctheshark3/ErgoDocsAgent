@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the guide described in the document?",
+    "answer": "The guide provides instructions on how to test 6.0-specific transactions against both 5.x and 6.0 nodes, ensuring compatibility and smooth network upgrades."
+  },
+  {
+    "question": "What are the new features introduced in Ergo 6.0?",
+    "answer": "Ergo 6.0 introduces enhanced cryptographic operations, improved serialization mechanisms, expanded opcodes and script constructs, and new script validation rules."
+  },
+  {
+    "question": "What is the purpose of the BLS signature verification example?",
+    "answer": "The BLS signature verification example demonstrates how to verify a BLS signature, a new cryptographic primitive introduced in Ergo 6.0."
+  },
+  {
+    "question": "What is the purpose of the AVL tree handling example?",
+    "answer": "The AVL tree handling example demonstrates how to verify a proof against an AVL tree, which can be used to maintain authenticated data structures directly in Ergo smart contracts."
+  },
+  {
+    "question": "What are the key benefits of the new features introduced in Ergo 6.0?",
+    "answer": "The new features in Ergo 6.0 enable more advanced cryptographic operations, more efficient serialization, and the ability to handle complex data structures within smart contracts."
+  }
+]

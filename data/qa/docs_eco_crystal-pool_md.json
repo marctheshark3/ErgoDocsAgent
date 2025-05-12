@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Crystal Pool?",
+    "answer": "Crystal Pool is a decentralized exchange (DEX) built on the Ergo blockchain, enabling real-time order-based trading directly on Layer 1."
+  },
+  {
+    "question": "What are the key features of Crystal Pool?",
+    "answer": "Key features of Crystal Pool include: limit order DEX, partial fill, multiple boxes in one transaction, multiple sellers in one transaction, and multi-token support."
+  },
+  {
+    "question": "How does Crystal Pool work?",
+    "answer": "Crystal Pool leverages Ergo's advanced smart contract capabilities and the eUTXO model to create a decentralized order book and matching engine directly on the blockchain."
+  },
+  {
+    "question": "What are the benefits of using Crystal Pool?",
+    "answer": "The benefits of using Crystal Pool include real-time trading, security and self-custody, transparency and censorship resistance, and composability."
+  },
+  {
+    "question": "How does Crystal Pool compare to centralized exchanges?",
+    "answer": "Crystal Pool provides a user experience comparable to centralized exchanges (CEXs) while maintaining the security and self-custody benefits of a DEX."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Paideia\n  - DAO\n  - Staking\n  - Governance\n  - dApp\n  - dApp-Live\n---\n\n/// details | DeepWiki Documentation\n    {type: info, open: true}\nFor an alternative and potentially more detailed ..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Paideia"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Paideia\n  - DAO\n  - Staking\n  - Governance\n  - dApp\n  - dApp-Live\n---\n\n/// details | D..."
+  },
+  {
+    "question": "What is the 'Paideia' section about?",
+    "answer": "[Paideia](https://www.paideia.im) is a project from the [ergopad](ergopad.md) team whose purpose is ..."
+  },
+  {
+    "question": "What is the 'Using Paideia' section about?",
+    "answer": "This section will cover how to use Paideia. Alternatively, you can watch [Paideia, Joining Your DAO ..."
+  }
+]

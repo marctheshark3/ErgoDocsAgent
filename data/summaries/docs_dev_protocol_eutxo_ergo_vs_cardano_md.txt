@@ -1,0 +1,5 @@
+This document compares the extended UTXO (eUTXO) models of the Ergo and Cardano blockchain platforms. Ergo was founded by Alex Chepurnoy and Dmitry Meshakov, who previously worked on Cardano. Ergo uses the ErgoScript language, while Cardano uses Plutus, both of which are strongly typed and support advanced features. 
+
+The document discusses the differences in token minting policies between the two platforms. Ergo's token issuance is standardized through EIP4, with tokens stored in the R2 register of a box. Cardano's native tokens are identified by a policy ID and asset name, with a minimum ADA value required to transfer them.
+
+The document also compares the global state management approaches of Ergo and Cardano. Ergo utilizes transaction trees to achieve Turing completeness, while Cardano's state management is influenced by its Plutus language and transaction validation process.

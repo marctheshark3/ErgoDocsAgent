@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of FlowCards?",
+    "answer": "FlowCards aim to radically simplify dApp development on Ergo by providing a high-level declarative language, execution runtime, storage format and a graphical notation."
+  },
+  {
+    "question": "How does the Ergo contract model differ from the Ethereum account model?",
+    "answer": "Ergo's UTXO-based programming model is declarative, whereas Ethereum's account model is imperative. Ergo transactions are created off-chain, and only validation checks are performed on-chain, improving scalability."
+  },
+  {
+    "question": "What are the advantages of Ergo's immutable transaction graph over Ethereum's shared mutable state?",
+    "answer": "Ergo's immutable transaction graph is well-suited to the concurrent and distributed nature of blockchains and facilitates light trustless clients, unlike Ethereum's shared mutable state."
+  },
+  {
+    "question": "What is the key difference between the Ergo and Ethereum smart contract execution models?",
+    "answer": "In Ethereum, both storage changes and validity checks are performed on-chain during code execution, while in Ergo, transactions are created off-chain and only validation checks are performed on-chain."
+  },
+  {
+    "question": "What are the benefits of Ergo's UTXO-based programming model compared to Ethereum's account-based model?",
+    "answer": "Ergo's UTXO-based model is declarative, facilitating easier contract development, and its off-chain transaction creation with on-chain validation improves scalability compared to Ethereum's account-based imperative model."
+  }
+]

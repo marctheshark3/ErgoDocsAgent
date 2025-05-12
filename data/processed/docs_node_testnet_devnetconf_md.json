@@ -1,0 +1,73 @@
+{
+  "id": "docs_node_testnet_devnetconf_md",
+  "title": "Ergo Node Devnet Configuration Documentation",
+  "summary": "This document describes the configuration settings for the Ergo node in the Development Network (devnet). It covers the main sections and fields of the configuration file, including network type, chain configuration, wallet configuration, and Scorex configuration. The network type is set to \"devnet\" for development purposes. The chain configuration includes parameters such as protocol version, address prefix, initial difficulty, and voting mechanisms. The wallet configuration sets the directory for the wallet's secret storage. The Scorex configuration covers network settings like magic bytes, bind address, node name, and known peers, as well as the REST API configuration for the API key hash.",
+  "qa_pairs": [
+    {
+      "question": "What is the network type defined in the Ergo node configuration?",
+      "answer": "ergo.networkType = \"devnet\""
+    },
+    {
+      "question": "Where is the initial difficulty for the Ergo devnet network set?",
+      "answer": "ergo.chain.initialDifficultyHex"
+    },
+    {
+      "question": "What is the desired time interval between blocks in the Ergo devnet network?",
+      "answer": "ergo.chain.blockInterval"
+    },
+    {
+      "question": "Where is the directory for the Ergo wallet's secret storage set?",
+      "answer": "ergo.wallet.secretStorage.secretDir"
+    },
+    {
+      "question": "What is the Base16 representation of the genesis state roothash for the Ergo devnet network?",
+      "answer": "ergo.chain.genesisStateDigestHex"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Node Devnet Configuration Documentation",
+      "level": 1,
+      "content": "This document describes the main sections and fields of the [Ergo node configuration file for the Development Network](https://raw.githubusercontent.com/ergoplatform/ergo/master/src/main/resources/devnet.conf). This configuration serves the need for protocol-breaking changes testing."
+    },
+    {
+      "heading": "Ergo Configuration Section",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Network Type",
+      "level": 3,
+      "content": "`ergo.networkType = \"devnet\"`\nThis setting defines the network type. For development purposes, it's set to \"devnet\"."
+    },
+    {
+      "heading": "Chain Configuration",
+      "level": 3,
+      "content": "`ergo.chain`\nThis section includes parameters related to the blockchain.\n\n- `protocolVersion` sets the protocol version.\n- `addressPrefix` is the prefix for network addresses. Reserved values include 0 (for mainnet), 16 (for testnet), and 32 (for devnet).\n- `initialDifficultyHex` sets the initial difficulty for the network.\n- `epochLength` defines the length of an epoch in difficulty recalculation. A value of 1 means difficulty is recalculated every block.\n- `blockInterval` is the desired time interval between blocks.\n- `monetary.minerRewardDelay` sets the delay between when a block is mined and when the reward can be spent.\n- `voting` contains parameters related to the voting mechanism, such as the length of a voting epoch, the number of epochs for soft-fork voting, and activation epochs for a soft-fork after acceptance.\n- `genesisStateDigestHex` is the Base16 representation of the genesis state roothash."
+    },
+    {
+      "heading": "Wallet Configuration",
+      "level": 3,
+      "content": "`ergo.wallet.secretStorage.secretDir`\nSets the directory for the wallet's secret storage."
+    },
+    {
+      "heading": "Scorex Configuration Section",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Network Configuration",
+      "level": 3,
+      "content": "`scorex.network`\nThis section includes parameters related to the network settings.\n\n- `magicBytes` is a unique identifier for the network protocol. \n- `bindAddress` sets the IP address and port number where the node will accept incoming connections. By default, it listens on all available network adapters.\n- `nodeName` assigns a visible name to your node for other participants in the P2P network.\n- `knownPeers` is a list of bootstrap nodes that your node will connect to upon initialization."
+    },
+    {
+      "heading": "REST API Configuration",
+      "level": 3,
+      "content": "`scorex.restApi.apiKeyHash`\nThis parameter represents the hash of your API key. In the devnet configuration, it is set to `null`. The API key protects the invocation of critical API methods.\n\n**Note:** Even though it is set to `null` for development, you must ensure to secure the transmission of the API key in a real-world scenario, as it is transmitted as plain text in the HTTP header and can be intercepted during network transit!"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/testnet/devnetconf.md",
+  "processed_at": "2025-05-11T19:57:52.895143",
+  "ai_processed": true
+}

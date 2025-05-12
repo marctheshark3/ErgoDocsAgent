@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_tokens_standards_eip22_md",
+  "title": "EIP-0022: Auction Contract",
+  "summary": "This EIP proposes an auction contract that allows for the decentralized auctioning of any kind of tokens, including artwork, share tokens, and more. The contract supports features such as using any token as the auction currency alongside ERG, a \"buy it now\" option, precise auction duration based on timestamp, auto-extending the auction duration near the end, minimum bid steps, and royalties for the original token issuer. The contract includes various registers to store information about the auction, such as the seller's and bidder's details, the auction's end time, \"buy it now\" amount, and other metadata. The contract also includes a configuration box that stores settings like the UI fee, UI implementor's address, maximum miner fee, and auction extension parameters.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - EIP\n---\n\n# EIP-0022: Auction Contract\n\n> \ud83d\udd17 From [EIP-0022:](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)\n\n\n## Motivation \nDecentralized auctioning of any kind of tokens ..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "EIP-0022: Auction Contract"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - EIP\n---"
+    },
+    {
+      "question": "What is the 'EIP-0022: Auction Contract' section about?",
+      "answer": "> \ud83d\udd17 From [EIP-0022:](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)"
+    },
+    {
+      "question": "What is the 'Motivation' section about?",
+      "answer": "Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - EIP\n---"
+    },
+    {
+      "heading": "EIP-0022: Auction Contract",
+      "level": 1,
+      "content": "> \ud83d\udd17 From [EIP-0022:](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)"
+    },
+    {
+      "heading": "Motivation",
+      "level": 2,
+      "content": "Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of any blockchain. This EIP is proposing the auction contract with various features listed in the [Design](#design) section"
+    },
+    {
+      "heading": "Design",
+      "level": 2,
+      "content": "This proposed contract allows any kind of tokens to be auctioned while supporting the following features:  \n\n- Any token as the auction's currency alongside ERG\n- \"Buy it now\" which allows a buyer to instantly buy the auctioned token by paying the predefined amount in the auction's currency\n- Auction duration as timestamp which is much more precise than block height and is independent of the network difficulty\n- Auto extending the duration near the end of the auction based on a global config\n- Minimum bid step - each bidder has to increase the previous bid at least by this amount\n- Royalty - The original owner (whomever issued the token) gets a share of the auction every time his/her token is auctioned using a global config"
+    },
+    {
+      "heading": "The contract",
+      "level": 2,
+      "content": "```scala\n{\n  // R4: The seller's ergo tree\n  // R5: Current bidder's ergo tree\n  // R6: (Minimum bid, minimum step)\n  // R7: The auction's end time in timestamp\n  // R8: The auction's \"Buy it now\" amount. -1 if it is not enabled.\n  // R9: Auction info that is needed for UI/UX purposes - stringfied json encoded as Coll[Byte]:\n  //     - initialBid: The auction's initial bid\n  //     - startTime: The auction's start time\n  //     - description: The auction's description\n  //     - Any other info needed in the future\n  //\n  // tokens(0): auctioned token\n  // tokens(1): current bid for non-ERG auctions - doesn't exist otherwise\n  //\n  // dataInputs(0): Auction house configuration - contains configs like UI fee and artist fee\n  //     - R4: UI fee in thousand, e.g. 10 for 1% or 5 for 0.5%\n  //     - R5: UI implementor's ergo tree\n  //     - R6: Maximum miner fee for withdrawal\n  //     - R7: Extend configuration as a Coll[Long] with two values (extendThreshold, extendNum)\n  //             e.g., (30 * 60 * 1000L, 40 * 60 * 1000L) to extend the duration for 40min if 30min is left when the bid is placed\n\n  // originalIssuanceBox: Spent box with ID equal to the NFT ID\n  //     - R4: Royalty percentage - 0 if empty\n  //     - R5: Artist address\n\n  val seller = SELF.R4[Coll[Byte]].get\n  val currBidder = SELF.R5[Coll[Byte]].get\n  val minBid = SELF.R6[Coll[Long]].get(0)\n  val minStep = SELF.R6[Coll[Long]].get(1)\n  val endTime = SELF.R7[Long].get\n  val buyItNowAmount = SELF.R8[Long].get\n\n  // auction currency can be any token like SigUSD\n  val auctionCurrency = if (SELF.tokens.size > 1) SELF.tokens(1)._1\n                        else Coll[Byte]()\n  val isCurrencyERG = auctionCurrency.size == 0\n  val getBoxVal = {(b: Box) => {\n     if (isCurrencyERG) b.value\n     else {\n       if (b.tokens.size == 1 && b.tokens(0)._1 == auctionCurrency) b.tokens(0)._2\n       else if (b.tokens.size == 2 && b.tokens(1)._1 == auctionCurrency) b.tokens(1)._2\n       else 0L\n     }\n  }}\n\n  val currBid = getBoxVal(SELF)\n\n  val auctionConfig = CONTEXT.dataInputs(0)\n\n  // auction is not finished, a bid is being placed\n  val isNextBid = {\n     val extendConfig = auctionConfig.R7[Coll[Long]]\n     val extendThreshold = extendConfig.get(0)\n     val extendNum = extendConfig.get(1)\n     // we extend the auction end time by extendNum if the bid is placed near the very end (extendThreshold)\n     val newEndTime = if (endTime - CONTEXT.preHeader.timestamp <= extendThreshold) endTime + extendNum\n                      else endTime\n\n\n     val newSelf = OUTPUTS(0) // new auction box\n     val oldBidRefundBox = OUTPUTS(1) // refund box\n\n     val isUsingBuyItNow = buyItNowAmount != -1 && getBoxVal(newSelf) >= buyItNowAmount\n\n     // as a general check, ERG value can not be less than the current\n     newSelf.value >= SELF.value &&\n     // auction is not finished\n     CONTEXT.preHeader.timestamp < endTime &&\n     // preserve auctioned tokens\n     newSelf.tokens(0) == SELF.tokens(0) &&\n     // correct value and contract for the new box\n     (getBoxVal(newSelf) >= getBoxVal(SELF) + minStep || getBoxVal(SELF) < minBid || isUsingBuyItNow) &&\n     getBoxVal(newSelf) >= minBid &&\n     newSelf.propositionBytes == SELF.propositionBytes &&\n     // shouldn't be able to add tokens - will change the currency from ERG to a worthless token\n     SELF.tokens.size == newSelf.tokens.size &&\n     // currency must be the same\n     // refund the previous bidder\n     oldBidRefundBox.propositionBytes == currBidder &&\n     getBoxVal(oldBidRefundBox) >= currBid &&\n     // preserve the auction config\n     newSelf.R4[Coll[Byte]].get == seller &&\n     // just making sure that the new R5's type is Coll[Byte]\n     newSelf.R5[Coll[Byte]].get.size > 0 &&\n     newSelf.R6[Coll[Long]].get.size == 2 &&\n     newSelf.R6[Coll[Long]].get(0) == minBid &&\n     newSelf.R6[Coll[Long]].get(1) == minStep &&\n     newSelf.R7[Long].get == newEndTime &&\n     newSelf.R8[Long].get == buyItNowAmount &&\n     newSelf.R9[Coll[Byte]] == SELF.R9[Coll[Byte]]\n\n  }\n\n  // either auction has ended due to time or \"Buy it now\" is being used\n  val isFinishedWithBid = {\n     val winnerBox = OUTPUTS(0)\n     val auctionFeeBox = OUTPUTS(1)\n     val sellerBox = if (OUTPUTS.size < 3) SELF\n                         else OUTPUTS(2)\n     val artistRoyalty = if (OUTPUTS.size < 4) SELF\n                         else OUTPUTS(3)\n     val originalIssuanceBox = if (auctionFeeBox.R4[Box].isDefined) auctionFeeBox.R4[Box].get\n                               else OUTPUTS(OUTPUTS.size - 1)\n\n     val auctionFee = (currBid * auctionConfig.R4[Int].get) / 1000\n     val auctionFeeTo = auctionConfig.R5[Coll[Byte]].get // ui implementor's ergo tree\n\n     val artistSharePerc = if (originalIssuanceBox.R4[Int].isDefined) max(originalIssuanceBox.R4[Int].get, 0)\n                           else 0\n     val artistShare = (currBid * artistSharePerc) / 1000\n\n     val maxFee = auctionConfig.R6[Long].get\n     // if currency is not ERG, then nothing has to be deducted from it for miner fee. Otherwise, 2 * maxFee will be deducted\n     val minerFeeInCurrency = if (isCurrencyERG) maxFee * 2 // one maxFee for the miner fee and one for the seller box\n                              else 0L\n\n     val artistGetsHisShare = {\n       artistShare == 0L || {\n         blake2b256(originalIssuanceBox.bytes) == SELF.tokens(0)._1 && // the same ID as the NFT - the integrity of the box is also ensured with this line\n         getBoxVal(artistRoyalty) >= artistShare && // gets at least the percentage defined in the auction config box\n         artistRoyalty.propositionBytes == originalIssuanceBox.propositionBytes // goes to the artist\n       }\n     }\n\n     val buyItNow = (currBid >= buyItNowAmount && buyItNowAmount != -1)\n\n     val outSize = if (artistShare == 0L) 4\n                   else 5\n\n     // either auction is finished or \"Buy it now\" is used\n     (CONTEXT.preHeader.timestamp >= endTime || buyItNow) &&\n     getBoxVal(auctionFeeBox) >= auctionFee &&\n     auctionFeeBox.propositionBytes == auctionFeeTo &&\n     winnerBox.tokens(0) == SELF.tokens(0) &&\n     winnerBox.propositionBytes == currBidder &&\n     getBoxVal(sellerBox) >= currBid - auctionFee - artistShare - minerFeeInCurrency &&\n     sellerBox.propositionBytes == seller &&\n     artistGetsHisShare &&\n     OUTPUTS.size == outSize\n  }\n\n  // in this case, there is no winner and the seller doesn't need to pay any fee to the auction house or the artist\n  val isFinishedWithoutBid = {\n     val maxFee = auctionConfig.R6[Long].get\n     val minerFeeInCurrency = if (isCurrencyERG) maxFee\n                              else 0L\n     currBid < minBid &&\n     CONTEXT.preHeader.timestamp >= endTime &&\n     OUTPUTS.size == 2 &&\n     OUTPUTS(0).tokens(0) == SELF.tokens(0) &&\n     OUTPUTS(0).propositionBytes == seller &&\n     getBoxVal(OUTPUTS(0)) >= currBid - minerFeeInCurrency\n  }\n\n  val validConfig = auctionConfig.tokens(0)._1 == AUCTION_CONFIG_TOKEN_ID\n  sigmaProp((isNextBid || isFinishedWithBid || isFinishedWithoutBid) && validConfig)\n}\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tokens/standards/eip22.md",
+  "processed_at": "2025-05-11T19:38:24.114554",
+  "ai_processed": true
+}

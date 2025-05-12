@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a Non-interactive Proof-of-Proof-of-Work (NIPoPoW)?",
+    "answer": "NIPoPoWs is a cryptographic protocol that allows verifying that an event took place on a blockchain without requiring a direct network connection or downloading all block headers."
+  },
+  {
+    "question": "How do NIPoPoWs work?",
+    "answer": "NIPoPoWs consist of a prover (a full node on the source blockchain) and a verifier (who does not have access to the full blockchain but knows its genesis block). The prover generates a short proof that convinces the verifier that an event occurred in the source blockchain."
+  },
+  {
+    "question": "What is the security assumption of NIPoPoWs?",
+    "answer": "The security of NIPoPoWs relies on the honest majority assumption. The verifier accepts multiple proofs, and as long as at least one of them is honestly generated, the verifier can extract the correct information about the occurrence of the event."
+  },
+  {
+    "question": "How does Ergo's block structure support NIPoPoWs?",
+    "answer": "Ergo's block structure incorporates an 'extension' section that houses NIPoPoW links, updated every 1,024 block epochs. This allows different types of nodes and clients to selectively download required block sections, optimizing storage, bandwidth, and CPU usage."
+  },
+  {
+    "question": "What is a key application of NIPoPoWs?",
+    "answer": "NIPoPoWs facilitate the creation of efficient light clients, enhancing the accessibility and scalability of blockchain networks. Light clients can operate without maintaining the entire blockchain, as they can verify the occurrence of events using succinct proofs."
+  }
+]

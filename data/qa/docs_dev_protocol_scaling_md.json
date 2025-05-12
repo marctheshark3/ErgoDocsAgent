@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the three key factors that influence blockchain scalability?",
+    "answer": "The three key factors are: cryptoeconomic incentive model, consensus model, and accounting model."
+  },
+  {
+    "question": "How does Ergo's eUTXO approach differ from Ethereum's Account model?",
+    "answer": "In Ergo's eUTXO model, transactions are created off-chain and validation checks are conducted on-chain, reducing the operational load on each network node."
+  },
+  {
+    "question": "What is the advantage of Ergo's immutable transaction graph?",
+    "answer": "The immutability of the transaction graph allows for further optimization and scalability improvements."
+  },
+  {
+    "question": "What is the role of Non-interactive Proofs of Proof-of-Work (NiPoPoWs) in Ergo's scalability?",
+    "answer": "NiPoPoWs are one of the sophisticated scalability features used in Ergo."
+  },
+  {
+    "question": "How does Ergo's approach to scalability set it apart from other blockchain technologies?",
+    "answer": "Ergo's innovative approach to scalability, underpinned by its cryptoeconomic incentive model, consensus model, and accounting model, sets it apart from other blockchain technologies."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of Ergo's explicit transaction fee structure?",
+    "answer": "Ergo's transaction fee structure is designed to be flexible and explicit, unlike Bitcoin's implicit fee system. It requires a separate output to a specific address for fees."
+  },
+  {
+    "question": "What is the minimum transaction fee recommended for Ergo transactions?",
+    "answer": "It is generally recommended to include a fee of 0.001 ERG (1,000,000 NanoErg) for each box involved in the transaction."
+  },
+  {
+    "question": "How do miners prioritize transactions in Ergo's mempool?",
+    "answer": "Miners prioritize transactions based on either the fee per byte or the validation cost unit, which are adjustable via a voting mechanism among miners."
+  },
+  {
+    "question": "What is the purpose of the Dust-prevention Fee in Ergo?",
+    "answer": "The Dust-prevention Fee is a security measure that requires each box to contain a minimum amount of ERG, determined by a parameter voted on by miners and the size of the box. This helps prevent the creation of dust in Ergo and mitigate potential spam attacks."
+  },
+  {
+    "question": "Can transactions without a fee be included in Ergo blocks?",
+    "answer": "Transactions without a fee are less likely to be included in a block by miners, so it is generally recommended to include a fee to incentivize miners to process your transaction."
+  }
+]

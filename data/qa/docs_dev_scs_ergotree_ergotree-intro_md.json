@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ErgoTree language?",
+    "answer": "ErgoTree is used to define logical propositions protecting boxes in the Ergo blockchain."
+  },
+  {
+    "question": "What is the relationship between ErgoScript and ErgoTree?",
+    "answer": "Most Ergo users develop contracts in ErgoScript, which is then compiled into ErgoTree."
+  },
+  {
+    "question": "What are the key properties required for a language used to write contracts on the blockchain?",
+    "answer": "The language must be deterministic, where a contract always behaves predictably and depends only on a well-defined data context."
+  },
+  {
+    "question": "Where are serialized ErgoTree expressions stored?",
+    "answer": "Serialized ErgoTree expressions are written into UTXO boxes and then evaluated by the transaction verifier."
+  },
+  {
+    "question": "What is the reference implementation of ErgoTree?",
+    "answer": "The reference implementation of ErgoTree uses Scala, but alternative implementations can be written in other languages."
+  }
+]

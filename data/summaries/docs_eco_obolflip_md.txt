@@ -1,0 +1,1 @@
+Obolflip is a client-side application that can be used for taking bets on a coin flip or for managing flips and earning revenue, depending on local laws. It can be deployed on a server to allow other users to place bets, generating additional revenue from withdrawals.

@@ -1,0 +1,9 @@
+The Developer DAO (DevDAO) is a decentralized autonomous organization focused on research, development, and maintenance of the Ergo protocol and its associated infrastructure. The DevDAO aims to promote transparency, scalability, and community involvement in the core development efforts of the Ergo ecosystem.
+
+The scope of the DevDAO includes research, core development, infrastructure, and the development of various DeFi tools and applications on the Ergo platform. The DevDAO's vision is to establish Ergo as Digital Gold 2.0, a mineable digital commodity with trustless derivatives and expressive contracts.
+
+The DevDAO has already made significant progress in developing Ergo's infrastructure and DeFi ecosystem, including launching wallets, explorers, and a wide range of DeFi tools. Looking ahead, the DevDAO plans to launch new DeFi tools, implement sidechains, expand Ergo's contractual layer, and experiment with scalability solutions.
+
+To ensure the sustainability and growth of the Ergo ecosystem, the DevDAO is exploring monetization strategies such as receiving a percentage of sidechain token emissions and offering consultancy services. The DevDAO has several committees to track the achievement of its goals, which include organizing discussions, finding funding, maintaining infrastructure, and supporting the needs of dApps and wallets.
+
+The DevDAO is funded by the Ergo Foundation, projects on Ergo, and crypto funds.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of specifying the evaluation semantics of ErgoTree by translating it to Core-\u03bb?",
+    "answer": "The evaluation of ErgoTree is specified by translating it to Core-\u03bb, whose terms form a subset of ErgoTree terms. The typing rules of Core-\u03bb form a subset of the typing rules of ErgoTree."
+  },
+  {
+    "question": "What is the basis for the evaluation semantics of Core-\u03bb?",
+    "answer": "The evaluation semantics of Core-\u03bb is based on call-by-value (CBV) lambda calculus."
+  },
+  {
+    "question": "How is the denotational semantics of Core-\u03bb specified?",
+    "answer": "The denotational semantics of Core-\u03bb is specified by first defining the denotations of types, then the denotations of typed terms, and finally the equations of denotational semantics."
+  },
+  {
+    "question": "What is the purpose of the definitions and notations introduced in the document?",
+    "answer": "The definitions and notations introduced (such as TEnv, Der, DerV, DerC, DerEnv, DerEnvV, DerEnvC, lst, Tup, Apply, MSig, Ov, TyLam, Trait, To, Low, Lam, IfThenElse, False, True, langname, corelang, Denot) are used to specify the evaluation semantics of ErgoTree by translating it to Core-\u03bb."
+  },
+  {
+    "question": "What is the relationship between the typing rules of ErgoTree and Core-\u03bb?",
+    "answer": "The typing rules of Core-\u03bb form a subset of the typing rules of ErgoTree, as Core-\u03bb terms form a subset of ErgoTree terms."
+  }
+]

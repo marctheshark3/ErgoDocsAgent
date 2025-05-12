@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the $LT(left: Value[SInt], right: Value[SInt])$ opcode?",
+    "answer": "$LT(left: Value[SInt], right: Value[SInt])$"
+  },
+  {
+    "question": "What is the difference between $AND(input: Value[SCollection[SBoolean]])$ and $CAND(sigmaTrees: Seq[SigmaTree])$?",
+    "answer": "$AND(input: Value[SCollection[SBoolean]])$ and $CAND(sigmaTrees: Seq[SigmaTree])$"
+  },
+  {
+    "question": "What is the purpose of the $ByteArrayToBigInt(input: Value[SByteArray])$ opcode?",
+    "answer": "$ByteArrayToBigInt(input: Value[SByteArray])$"
+  },
+  {
+    "question": "What is the difference between $SGroupElement$ and $GroupElement$?",
+    "answer": "$SGroupElement$ and $GroupElement$"
+  },
+  {
+    "question": "What is the purpose of the $ProveDiffieHellmanTuple(gv: Value[SGroupElement], hv: Value[SGroupElement], uv: Value[SGroupElement], vv: Value[SGroupElement])$ opcode?",
+    "answer": "$ProveDiffieHellmanTuple(gv: Value[SGroupElement], hv: Value[SGroupElement], uv: Value[SGroupElement], vv: Value[SGroupElement])$"
+  }
+]

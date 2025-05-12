@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the magic bytes used for the Ergo mainnet and testnet?",
+    "answer": "{1, 0, 2, 4} for mainnet, {2, 0, 0, 1} for testnet."
+  },
+  {
+    "question": "What is the format of the Peer record in the Ergo P2P protocol?",
+    "answer": "The Peer record includes fields for agent name, version, peer name, whether a public address exists, the public IP address, the port, and a list of peer features."
+  },
+  {
+    "question": "How is the length of the IP address field encoded in the Peer record?",
+    "answer": "The length of the IP address field is encoded as an unsigned byte that is 4 more than the actual length. When decoding, the value must be subtracted by 4 to get the actual length."
+  },
+  {
+    "question": "What is the purpose of the handshake body checksum field in the message format?",
+    "answer": "The handshake body checksum field contains the first four bytes of the blake2b256 hash of the message body."
+  },
+  {
+    "question": "What other types of records are used in the Ergo P2P protocol besides the Peer record?",
+    "answer": "Other records used in the protocol include Feature, Modifier, and Header records."
+  }
+]

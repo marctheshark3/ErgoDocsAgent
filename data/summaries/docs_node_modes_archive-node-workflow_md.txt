@@ -1,0 +1,6 @@
+The document outlines the technical workflow for the full archival node mode in Ergo. The key steps are:
+1. Send ErgoSyncInfo message to connected peers to get block IDs that are better than the node's best block.
+2. Request headers for the received block IDs and apply them to the node's history.
+3. Request transaction IDs for the applied headers and fetch the transactions.
+4. Apply the transactions to the node's mempool and broadcast the inventory.
+5. Apply the block transactions to the node's history and state, generating ADProofs if in full or pruned-full mode.

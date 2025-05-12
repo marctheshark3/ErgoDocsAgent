@@ -1,0 +1,48 @@
+{
+  "id": "docs_node_conf_conf-bounded_md",
+  "title": "Bounded Mailbox Configuration",
+  "summary": "The document describes the \"bounded-mailbox\" configuration, which limits the maximum number of messages that can be stored in an actor's mailbox. It specifies the mailbox type as \"NonBlockingBoundedMailbox\", which provides a capacity-constrained, non-blocking, and thread-safe message queue. The mailbox capacity is set to 5000 messages, and once this limit is reached, the mailbox refuses to accept more messages until space becomes available. This configuration helps control the load on the actor system and ensures the resilience and stability of the system.",
+  "qa_pairs": [
+    {
+      "question": "What is the mailbox type specified in the configuration?",
+      "answer": "The mailbox type specified is 'akka.dispatch.NonBlockingBoundedMailbox'."
+    },
+    {
+      "question": "What is the purpose of the 'bounded-mailbox' configuration?",
+      "answer": "The 'bounded-mailbox' configuration helps control the load on the actor system by limiting the number of unprocessed messages an actor can receive, preventing it from becoming overwhelmed."
+    },
+    {
+      "question": "What is the mailbox capacity set in the configuration?",
+      "answer": "The mailbox capacity is set to 5000 messages."
+    },
+    {
+      "question": "What are the key features of the 'NonBlockingBoundedMailbox' type?",
+      "answer": "The 'NonBlockingBoundedMailbox' type provides a capacity-constrained, non-blocking, and thread-safe message queue for actors."
+    },
+    {
+      "question": "How does the 'bounded-mailbox' configuration contribute to the resilience and stability of the actor system?",
+      "answer": "The 'bounded-mailbox' configuration helps ensure the resilience and stability of the actor system by preventing actors from becoming overwhelmed with unprocessed messages."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Bounded Mailbox Configuration",
+      "level": 1,
+      "content": "The `bounded-mailbox` configuration specifies the settings for the bounded mailbox type, which limits the maximum number of messages that can be stored in an actor's mailbox."
+    },
+    {
+      "heading": "Mailbox Type",
+      "level": 2,
+      "content": "```conf\nmailbox-type = \"akka.dispatch.NonBlockingBoundedMailbox\"\n```\nThe `mailbox-type` setting determines the type of mailbox used. Here, the `NonBlockingBoundedMailbox` type is selected. This mailbox type provides a capacity-constrained, non-blocking, and thread-safe message queue for your actors."
+    },
+    {
+      "heading": "Mailbox Capacity",
+      "level": 2,
+      "content": "```conf\nmailbox-capacity = 5000\n```\nThe `mailbox-capacity` setting specifies the maximum number of messages that the mailbox can hold. In this configuration, the capacity is set to 5000 messages. Once this limit is reached, the mailbox refuses to accept more messages until space becomes available.\n\nThe `bounded-mailbox` configuration helps control the load on your actor system by limiting the number of unprocessed messages an actor can receive, preventing it from becoming overwhelmed. It is a vital configuration for ensuring the resilience and stability of your system."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/conf/conf-bounded.md",
+  "processed_at": "2025-05-11T19:53:52.304627",
+  "ai_processed": true
+}

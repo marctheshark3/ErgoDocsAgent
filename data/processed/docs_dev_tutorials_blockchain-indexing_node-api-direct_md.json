@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_tutorials_blockchain-indexing_node-api-direct_md",
+  "title": "Indexing Strategy: Querying Node API Directly",
+  "summary": "This document discusses an indexing strategy for accessing blockchain data by querying a node's REST API directly, rather than relying on a third-party explorer. It outlines the concept, how it works, the pros and cons, and when to use this approach. The key points are:\n\n- The application communicates directly with an Ergo node instance that the user controls, rather than a third-party explorer.\n- The application sends HTTP requests to the node's API endpoints to retrieve block, transaction, and state information.\n- Pros include control, no rate limits, direct access to raw data, and near real-time access.\n- Cons include infrastructure overhead, limited query performance, complex application logic, and the requirement for the node to be fully synchronized.\n- This approach is suitable for applications that need access to the latest chain state or specific recent blocks/transactions, and simpler queries that don't require scanning large portions of the blockchain history.\n- For more complex dApps, a custom indexer may be a better solution than querying the node API directly.",
+  "qa_pairs": [
+    {
+      "question": "What are the main approaches to accessing blockchain data?",
+      "answer": "The two main approaches are: 1) Relying on a third-party explorer, or 2) Querying the node API directly."
+    },
+    {
+      "question": "What are the key benefits of querying the node API directly?",
+      "answer": "The key benefits are: 1) Control and trust over the data source, 2) No rate limits, 3) Direct access to raw, unfiltered block and transaction data, and 4) Near real-time access to data."
+    },
+    {
+      "question": "What are the steps involved in querying the node API directly?",
+      "answer": "The steps are: 1) Run an Ergo node, 2) Configure the API, 3) Make API requests, and 4) Process the response."
+    },
+    {
+      "question": "What are the different node modes that can be used?",
+      "answer": "The node can be run in Archival Full mode or Pruned Full mode, depending on whether you need full historical data or just recent state."
+    },
+    {
+      "question": "How is the node's API configured for security?",
+      "answer": "The node's API can be configured with `scorex.restApi.bindAddress` and `apiKeyHash` in the `ergo.conf` file."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Indexing\n  - Node API\n  - REST API\n  - Off-Chain\n---"
+    },
+    {
+      "heading": "Indexing Strategy: Querying Node API Directly",
+      "level": 1,
+      "content": "Another approach to accessing blockchain data is to run your own Ergo node and query its [REST API](swagger.md) directly from your application."
+    },
+    {
+      "heading": "Concept",
+      "level": 2,
+      "content": "Instead of relying on a third-party explorer, your application communicates directly with an Ergo node instance that you control. This node maintains a copy of the blockchain (either full or pruned) and exposes endpoints to retrieve block, transaction, and state information."
+    },
+    {
+      "heading": "How It Works",
+      "level": 2,
+      "content": "1.  **Run an Ergo Node:** Set up and synchronize an Ergo node. You'll need to decide on the appropriate [mode](modes.md) (Archival Full, Pruned Full) based on whether you need full historical data or just recent state.\n2.  **Configure API:** Ensure the node's API is enabled and accessible to your application (configure `scorex.restApi.bindAddress` and potentially `apiKeyHash` for security in `ergo.conf`).\n3.  **Make API Requests:** Your application sends HTTP requests to your node's API endpoints (e.g., `/blocks/{headerId}`, `/transactions/unconfirmed`, `/blockchain/box/byId/{boxId}`).\n4.  **Process Response:** Your application parses the raw JSON data returned by the node and extracts the necessary information."
+    },
+    {
+      "heading": "Pros",
+      "level": 2,
+      "content": "*   **Control & Trust:** You control the data source and don't rely on third parties.\n*   **No Rate Limits:** You are only limited by the performance capabilities of your node and server hardware.\n*   **Direct Access:** Provides access to raw, unfiltered block and transaction data as seen by the node.\n*   **Real-time (Near):** Access to data is typically limited only by block propagation time."
+    },
+    {
+      "heading": "Cons",
+      "level": 2,
+      "content": "*   **Infrastructure Overhead:** Requires setting up, synchronizing, and maintaining an Ergo node, which consumes significant disk space, bandwidth, and computational resources.\n*   **Query Performance:** The node API is designed for retrieving specific blocks or transactions, not for complex, application-level queries across the entire chain history (e.g., \"find all boxes ever created by address X\"). Such queries can be very slow or impractical via the direct API.\n*   **Application Logic Complexity:** Your application needs significant logic to parse the raw API responses, track UTXOs, calculate balances, and manage application-specific state.\n*   **Node Sync Requirement:** The node must be fully synchronized to provide complete and current data."
+    },
+    {
+      "heading": "When to Use",
+      "level": 2,
+      "content": "*   Applications that primarily need access to the latest chain state or specific recent blocks/transactions.\n*   Simpler queries that don't require scanning large portions of the blockchain history.\n*   When running a node is already necessary for other functions (like transaction submission).\n*   Often used as the *data source* for a [custom indexer](./custom-indexer.md), rather than the primary query interface for the dApp frontend.\n\nQuerying the node API directly offers more control than public explorers but often lacks the performance and query flexibility needed for complex dApps, leading many to build [custom indexers](./custom-indexer.md)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tutorials/blockchain-indexing/node-api-direct.md",
+  "processed_at": "2025-05-11T19:39:01.938330",
+  "ai_processed": true
+}

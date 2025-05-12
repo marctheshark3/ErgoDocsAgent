@@ -1,0 +1,63 @@
+{
+  "id": "docs_contribute_standards_md",
+  "title": "Ecosystem Standards",
+  "summary": "This document outlines the standards and recommendations for contributing to projects on the Ergo ecosystem. It covers three main areas: identity, development, and community administration. The identity standards focus on password security and multi-factor authentication. The development standards address server configuration, dependency management, secrets management, and code auditing. The community administration standards cover anti-spam/scam protection, reducing friction between chats, boosting engagement, and educating the community. Specific recommendations are provided for implementing these standards, such as using tools like Snyk, Semgrep, OrgRobot, and Wickbot.",
+  "qa_pairs": [
+    {
+      "question": "What is the minimum password length requirement for associated accounts?",
+      "answer": "Ensure all associated account passwords are at least 12 characters long."
+    },
+    {
+      "question": "What type of authentication is recommended for Telegram admins, GitHub, and email accounts?",
+      "answer": "Ensure all accounts such as Telegram admins, GitHub, and any associated Email accounts use appropriate multi-factor authentication."
+    },
+    {
+      "question": "What is the recommended approach for ensuring server configuration is hardened?",
+      "answer": "Ensure server configuration is hardened according to the recommendations of the application server and frameworks in use."
+    },
+    {
+      "question": "What tool is recommended for detecting outdated dependencies during the build or compile time?",
+      "answer": "Use Snyk or DependencyCheck to ensure all components are up to date."
+    },
+    {
+      "question": "What is the recommended approach for protecting Telegram and Discord groups from spam and scams?",
+      "answer": "Ensure Telegram groups and Discord groups have anti-spam/scam protection in place."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ecosystem Standards",
+      "level": 1,
+      "content": "/// note | Contributing to a project on Ergo?\nThis page serves as a guide for contributing as a project on Ergo. It outlines the standards for identity, development, and community administration. Adhering to these standards ensures a secure and efficient ecosystem.\n///"
+    },
+    {
+      "heading": "V1 Identity",
+      "level": 2,
+      "content": "#       | Description                                                  | [NIST \u00a7](https://pages.nist.gov/800-63-3/sp800-63b.html) |\n ------- | ------------------------------------------------------------ | -------------------------------------------------------- |\n **1.1** | Ensure all associated account passwords are at least 12 characters long ([C6](https://owasp.org/www-project-proactive-controls/#div-numbering)) | 5.1.1.2                                                  |\n **1.2** | Ensure all accounts such as Telegram admins, GitHub, and any associated Email accounts use appropriate multi-factor authentication | 6.1.1                                                    |"
+    },
+    {
+      "heading": "V2 Development",
+      "level": 2,
+      "content": "#       | Description                                                  | [CWE](https://cwe.mitre.org/) |\n ------- | ------------------------------------------------------------ | ----------------------------- |\n **2.1** | Ensure server configuration is hardened according to the recommendations of the application server and frameworks in use | 16                            |\n **2.2** | Ensure all components are up to date, preferably using a dependency checker during build or compile time ([C2](https://owasp.org/www-project-proactive-controls/#div-numbering)) | 1026                          |\n **2.3** | Ensure no secrets are within source code, preferably using a secrets scanner in CI environments ([C8](https://owasp.org/www-project-proactive-controls/#div-numbering)) | 798                           |\n **2.4** | Ensure analytics for third-party providers are configured |                            |\n **2.5** | Ensure code is open-source and publicly audited by the community |                            |"
+    },
+    {
+      "heading": "Recommendations",
+      "level": 3,
+      "content": "#       | Description                                                  |\n ------- | ------------------------------------------------------------ |\n **2.2** | Use [Snyk](https://snyk.io/) or [DependencyCheck](https://github.com/jeremylong/DependencyCheck) |\n **2.3** | Use [Semgrep](https://github.com/marketplace/actions/semgrep-action) with [Secrets Policy](https://semgrep.dev/p/secrets) |\n **2.4** | Ensure [analytics](analytics.md) are connected on sites like defillama |"
+    },
+    {
+      "heading": "V3 Community Administration",
+      "level": 2,
+      "content": "#       | Description                                               |\n ------- | --------------------------------------------------------- |\n **3.1** | Ensure Telegram groups have anti-spam/scam protection in place |\n **3.2** | Ensure Discord groups have anti-spam/scam protection in place  |\n **3.3** | Work towards reducing friction between chats |\n **3.4** | Strive to boost engagement |\n **3.5** | Make efforts to educate your community |"
+    },
+    {
+      "heading": "Recommendations",
+      "level": 3,
+      "content": "#       | Description                                                  |\n ------- | ------------------------------------------------------------ |\n **3.1** | Enable [OrgRobot](https://tgdev.io/bot/orgrobot) with custom questions which has a few handy free bots like [daysandbox_bot](https://tgdev.io/bot/daysandbox_bot), [grep_robot](https://tgdev.io/bot/grep_robot) and @WikiRobot, which can be used to reiterate a message at a set interval. |\n **3.2** | The built-in spam protection should be sufficient if properly configured in `Server Settings -> Moderation -> Saftey Setup` make sure all protections are enabled. Under `Automod` you can define custom words to filter an example would be `.gd, .gg, @everyone, #Support, \u2709\ufe0f, \u27a1\ufe0f, \u27a1, \ud83c\udf9f\ufe0f, \ud83d\udc47, \ud83d\udc49, \ud83c\udf81, \ud83d\udc8c, \ud83d\udce8, \ud83d\udce9, \ud83d\udcea, \ud83d\udced, \ud83c\udd98, adminsupports, bch.gg, Create Ticket, dsc.gg, earn $, https://t.me, Open-Ticket, Raise a ticket, shrtm.nu, Support Ticket, supportservice`. Alternatively you can enable [Wickbot](https://wickbot.com/). |\n **3.2** | The 'thread' permission is often abused by scammers, luring users into private threads where they imitate support staff, you should disable threads entirely if unused, otherwise disable them on a per-channel or role basis. |\n **3.3** | Consider [bridging your chats](chat-bridge.md) with the Ergo Discord |\n **3.3** | Get your Telegram added to [@ErgoChats](https://t.me/Ergo_Chats) on Telegram |\n **3.3** | Create a PR to add yourself to [this documentation](https://github.com/glasgowm148/ergodocs) |\n **3.3** | Get added on [ergcube](https://ergcube.com/index.php?do=static&page=socials) and [sigmaverse](https://github.com/ergoplatform/sigmaverse) |\n **3.4** | Participate in the weekly developer and marketing updates |\n **3.4** | Participate in [ergoforum.org/c/marketing](https://www.ergoforum.org/c/marketing/13) |\n **3.5** | Teach good principles like [KYA](kya.md) |\n **3.5** | Warn users of scams being executed on the platform, particularly in response to support requests |"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/contribute/standards.md",
+  "processed_at": "2025-05-11T19:17:37.124277",
+  "ai_processed": true
+}

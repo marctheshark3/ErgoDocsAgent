@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How many categories are listed in the document?",
+    "answer": "0"
+  },
+  {
+    "question": "What is the title of the document?",
+    "answer": "All Categories"
+  },
+  {
+    "question": "What is the main content of the document?",
+    "answer": "There are a total of 0 categories(s)"
+  },
+  {
+    "question": "What is the format of the content in the document?",
+    "answer": "The content is formatted as a simple statement with the number of categories."
+  },
+  {
+    "question": "What is the purpose of this document?",
+    "answer": "The purpose of this document is to provide a list of all available categories, which currently has 0 categories."
+  }
+]

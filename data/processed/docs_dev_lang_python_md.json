@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_lang_python_md",
+  "title": "Python",
+  "summary": "The document provides an overview of Python development for the Ergo blockchain. It discusses the available libraries and bindings, notably the Python bindings for sigma-rust, which enable core blockchain interaction capabilities. The document also highlights two Python frameworks: ergpy, a python-jvm wrapper for interacting with the Ergo blockchain, and Appkit, which can be used from Python. Additionally, the document mentions ErgoPad, a project that has released a set of Docker containers for a React/MaterialUI frontend, REST API backend, assembler to interact with smart contracts, and supporting services like ergonode, Redis, and PostgreSQL. The document also provides links to specific ErgoPad features like NFT-Locked Vesting and the ergo-python-appkit repository.",
+  "qa_pairs": [
+    {
+      "question": "What libraries and bindings are available for Python developers to interact with the Ergo blockchain?",
+      "answer": "{\"libraries\":[\"ergpy\",\"AppKit\"]}"
+    },
+    {
+      "question": "What is the purpose of the ErgoPad project?",
+      "answer": "ErgoPad has released a set of docker containers combined to create a React/MaterialUI frontend, REST API backend, assembler to interact with smart contracts and supporting services like ergonode, redis and postgres."
+    },
+    {
+      "question": "What are some of the key features or components of the ErgoPad project?",
+      "answer": "{\"features\":[\"NFT-Locked Vesting\",\"ergo-python-appkit\"]}"
+    },
+    {
+      "question": "How can Python developers use the AppKit library to interact with the Ergo blockchain?",
+      "answer": "Python developers can use the [Appkit](appkit.md) library to interact with the Ergo blockchain."
+    },
+    {
+      "question": "What is the purpose of the ergpy library for Python developers?",
+      "answer": "The ergpy library is a python-jvm wrapper for interacting with the Ergo blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Python\n---"
+    },
+    {
+      "heading": "Python",
+      "level": 1,
+      "content": "Python developers can interact with the Ergo blockchain using various [libraries](libraries.md) and [bindings](sigma-rust.md#bindings). Notably, [Python bindings for sigma-rust](sigma-rust.md#bindings) are available, providing core [blockchain interaction](interact.md) capabilities."
+    },
+    {
+      "heading": "Frameworks",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udd17 ergpy\",\n    \"content\": \"A python-jvm wrapper for interacting with the Ergo blockchain.\",\n    \"url\": \"https://github.com/mgpai22/ergpy\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 AppKit\",\n    \"content\": \"Using [Appkit](appkit.md) from Python\",\n    \"url\": \"https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "ErgoPad",
+      "level": 2,
+      "content": "[ErgoPad](ergopad.md) has [released a set of docker containers](https://github.com/ergopad) combined to create a React/MaterialUI [frontend](get-started.md), [REST API](api.md) [backend](get-started.md), [assembler](assembler.md) to interact with [smart contracts](ergoscript.md) and supporting services like [ergonode](install.md), redis and postgres.\n\n\n- [NFT-Locked Vesting](https://github.com/ergopad/ergopad-api/blob/dev/app/contracts/NFTLockedVesting.md)\n- [ergo-python-appkit](https://github.com/ergo-pad/ergo-python-appkit)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/lang/python.md",
+  "processed_at": "2025-05-11T19:21:50.943707",
+  "ai_processed": true
+}

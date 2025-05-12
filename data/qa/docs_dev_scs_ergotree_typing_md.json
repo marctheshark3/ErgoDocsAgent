@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the typing judgement form used in ErgoTree?",
+    "answer": "The typing judgement form used in ErgoTree is $\\Der{\\Gamma}{e : T}$, which says that $e$ is a term of type $T$ in the typing context $\\Gamma$."
+  },
+  {
+    "question": "What is the typing rule for constants in ErgoTree?",
+    "answer": "The typing rule for constants in ErgoTree is $\\frac{}{\\Der{\\Gamma}{C(\\_, T)~:~T}}~(Const)$."
+  },
+  {
+    "question": "What is the typing rule for primitive operations in ErgoTree?",
+    "answer": "The typing rule for primitive operations in ErgoTree is $\\frac{\\Ov{\\DerEnv{e_i:~T_i}}~~ptype(\\delta, \\Ov{T_i}) :~(T_1,\\dots,T_n) \\to T}{\\Apply{\\delta}{\\Ov{e_i}}:~T}~(Prim)$."
+  },
+  {
+    "question": "What is the typing rule for function expressions in ErgoTree?",
+    "answer": "The typing rule for function expressions in ErgoTree is $\\frac{\\Der{\\TEnv,\\Ov{x_i:~T_i}}{e~:~T}}{\\Der{\\Gamma}{\\TyLam{x_i}{T_i}{e}~:~(T_0,\\dots,T_n) \\to T}}~(FuncExpr)$."
+  },
+  {
+    "question": "What is the typing rule for the if-then-else expression in ErgoTree?",
+    "answer": "The typing rule for the if-then-else expression in ErgoTree is $\\frac{\\DerEnv{e_{cond}:~\\lst{Boolean}}~~\\DerEnv{e_1:~T}~~\\DerEnv{e_2 :~T} }{\\DerEnv{\\IfThenElse{e_{cond}}{e_1}{e_2}~:~T} }~\\lst{(If)}$."
+  }
+]

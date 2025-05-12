@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Executing a Chained Transaction\n\nChained transactions allow for the sequential use of outputs from off-chain transactions. This guide will walk you through the process of submitting a chained transa..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Executing a Chained Transaction"
+  },
+  {
+    "question": "What is the 'Executing a Chained Transaction' section about?",
+    "answer": "Chained transactions allow for the sequential use of outputs from off-chain transactions. This guide..."
+  },
+  {
+    "question": "What is the 'Establish a Blockchain Connection' section about?",
+    "answer": "Start by defining the URL of the node to connect to the Ergo blockchain. This could be either a Main..."
+  },
+  {
+    "question": "What is the 'Assign the node URL' section about?",
+    "answer": "node_url: str = \"http://213.239.193.208:9052/\""
+  }
+]

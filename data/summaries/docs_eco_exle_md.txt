@@ -1,0 +1,9 @@
+EXLE (Ergo-Lend) is a decentralized finance (DeFi) initiative on the Ergo Blockchain that aims to enhance financial access globally, particularly for those typically excluded by traditional banking institutions. EXLE employs blockchain technology to create a global lending platform, governed by a decentralized autonomous organization (DAO).
+
+EXLE is currently in private beta, with key developments including peer-to-peer (P2P) lending and a crowdloans backend. The platform is committed to using blockchain for social impact, as seen in its work in Kenya, where it bridges the gap between lenders and borrowers in underserved areas through P2P, uncollateralized loan projects.
+
+EXLE's core mission is to address the challenges faced by the unbanked, offering solutions to the limitations imposed by traditional financial institutions. By focusing on reducing loan costs, the platform aims to make financial services more accessible, benefiting both borrowers and lenders.
+
+EXLE leverages blockchain technology to automate loan processes and create a global pool of lenders, significantly reducing the cost and accessibility barriers associated with traditional loans. The platform's community-driven approach, guided by the principles outlined in The Ergo Manifesto, aims to ensure fairer access to loans and create new economic relationships and opportunities.
+
+With ongoing projects in Kenya and plans for expansion, EXLE is positioned to redefine the landscape of lending, transforming it through blockchain technology to make it more inclusive, efficient, and accessible to all.

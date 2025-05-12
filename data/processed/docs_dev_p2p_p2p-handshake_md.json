@@ -1,0 +1,73 @@
+{
+  "id": "docs_dev_p2p_p2p-handshake_md",
+  "title": "Handshaking in P2P Protocol",
+  "summary": "This document outlines the handshake process in a Peer-to-Peer (P2P) protocol, which is essential for establishing a connection between peers. It covers the format of the handshake message, including peer features, network protocol version, and session information. The document also provides example implementations from the Ergonnection and Ergo Handshake repositories, which demonstrate how to handle the serialization, deserialization, and management of handshake data during the connection establishment process. The handshake procedure involves a peer sending a handshake message, and another peer replying within a specified timeout period.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of handshaking in a P2P protocol?",
+      "answer": "Handshaking is essential for establishing a connection with another peer in a P2P protocol."
+    },
+    {
+      "question": "What are peer features and how are they represented in a handshake message?",
+      "answer": "Peer features are properties that describe a peer, and they are embedded in a handshake message. The format of the feature is arbitrary, and any number can be added to the handshake, subject to the handshake message size limit of 8 KB."
+    },
+    {
+      "question": "What is the format of a handshake message in a P2P protocol?",
+      "answer": "The handshake message format includes fields for time, agent name length, agent name, network protocol version, and peer name length."
+    },
+    {
+      "question": "What are the client capabilities (mode feature) included in a handshake message?",
+      "answer": "The client capabilities (mode feature) include fields for state type, whether the peer is verifying transactions, whether the node bootstrapped via NiPoPoW, NiPoPoW suffix length, and how many blocks are kept."
+    },
+    {
+      "question": "Where can you find example implementations of the handshake process in P2P protocols?",
+      "answer": "The Ergonnection Java library and the Ergo Handshake repository provide practical implementations of the handshake process in the Ergo protocol."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - P2P\n---"
+    },
+    {
+      "heading": "Handshaking in P2P Protocol",
+      "level": 1,
+      "content": "This document outlines the procedure and format of handshake messages, which are essential for establishing a connection with another peer.\n\nFor implementation examples, refer to:\n\n- [Ergonnection](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java), a P2P Java library for Ergo, which provides practical implementation of the handshake process, socket management, and message handling.\n- [Ergo Handshake](https://github.com/SabaunT/ergo-handshake), a repository that provides a reference implementation of the handshake process in the Ergo protocol."
+    },
+    {
+      "heading": "Peer Features",
+      "level": 2,
+      "content": "Peer features are properties that describe a peer. A peer can have multiple features, which are embedded in a handshake message and remain constant throughout the connection. Features are optional, and a peer can add new ones. If a feature is unrecognized by another peer, it will be skipped. The format of the feature is arbitrary, and any number can be added to the handshake, subject to the handshake message size limit of 8 KB.\n\nBefore version 3.3.7, the reference client only supported the \"mode feature\" (which describes the operating regime of the peer). Since version 3.3.7, a new feature that describes network magic and a pseudorandom session ID has been added.\n\n**Example Implementation**:  \n\n- In the [Ergonnection library](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/records/Feature.java), the `Feature` class represents individual peer features with an `id` and `data`. The features are serialized and deserialized to be included in handshake messages, ensuring that they can be transmitted and interpreted correctly during the handshake."
+    },
+    {
+      "heading": "Handshake Format",
+      "level": 2,
+      "content": "The table below outlines the format of a handshake message:\n\n| Length | Field Name              | Details                                                                                   |\n|--------|-------------------------|-------------------------------------------------------------------------------------------|\n| 6-8    | Time                    | Reported handshake time (VLQ-encoded, 6 bytes now, 8 bytes max)                           |\n| 1      | Agent name length       | Length of an agent name string (unsigned byte)                                            |\n| 0-255  | Agent name              | Agent name (e.g., \"Cypra wallet\") in UTF-8 encoding, 255 bytes max                        |\n| 3      | Network protocol version| Protocol version (e.g., [0, 1, 1])                                                        |\n| 1      | Peer name length        | Length of peer name string                                                                |"
+    },
+    {
+      "heading": "For Client Capabilities (Mode Feature):",
+      "level": 3,
+      "content": "| Length | Field Name                                  | Details                                                           |\n|--------|---------------------------------------------|-------------------------------------------------------------------|\n| 1      | Feature id                                  | For mode feature = 16                                              |\n| 1-2    | Feature body length                         | Length of feature description (VLQ-encoded, up to 2 bytes)        |\n| 1      | State type                                  | State representation, 0 = UTXO, 1 = digest                        |\n| 1      | Whether the peer is verifying transactions  | 1 = transactions being verified, 0 = not verified                 |\n| 1      | Whether the node bootstrapped via NiPoPoW   | 1 if yes, 0 if no (then following field is missed)                |\n| (4)    | NiPoPoW suffix length                       | Suffix length for NiPoPoW bootstrapping                           |\n| 1-4    | How many blocks kept                        | Signed integer (ZigZag then VLQ encoded), if -1 then all blocks are stored |\n\n**Example Implementation**:  \n\n- The [Peer class](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/records/Peer.java) in the Ergonnection library represents a peer in the network, including features such as agent name, peer name, version, and a list of features. This class handles serialization and deserialization of peer data during the handshake process."
+    },
+    {
+      "heading": "For Session Peer Feature Introduced in 3.3.7:",
+      "level": 3,
+      "content": "| Length | Field Name                                  | Details                                                           |\n|--------|---------------------------------------------|-------------------------------------------------------------------|\n| 1      | Feature id                                  | For session feature = 3                                           |\n| 1-2    | Feature body length                         | Length of feature description (VLQ-encoded, up to 2 bytes)        |\n| 4      | Network magic                               | Network magic bytes, see notes                                    |\n| 8      | Session id                                  | 64 bits long random session ID                                    |"
+    },
+    {
+      "heading": "Notes:",
+      "level": 3,
+      "content": "1. For the testnet, magic bytes are `[2, 0, 0, 1]` (in decimal). For mainnet, `[1, 0, 2, 4]` (in decimal).\n2. For IPv4 or IPv6 address bytes, \"The result is in network byte order: the highest order byte of the address is in `getAddress()[0]`.\" Please check `Inet4Address.getAddress()` or `Inet6Address.getAddress()` in Java's JDK for details.\n3. For the reference client, the session ID is currently used only to avoid connections to self.\n\n**Example Implementation**:  \n\n- The `Protocol` class in the [Ergonnection library](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/protocol/Protocol.java) manages the deserialization of various protocol messages, including those that handle session features. This ensures that features such as network magic and session IDs are correctly processed during the handshake."
+    },
+    {
+      "heading": "Handshake Procedure",
+      "level": 2,
+      "content": "A peer sends a handshake message, and another peer replies. If no handshake is received within the `handshakeTimeout`, the connection is dropped. The default value for `handshakeTimeout` is 30 seconds.\n\n**Example Implementation**:  \n\n- In the [ErgoSocket class](https://github.com/Satergo/Ergonnection/blob/master/src/main/java/com/satergo/ergonnection/ErgoSocket.java), the handshake process is handled through methods like `sendHandshake()` and `acceptHandshake()`, which manage the serialization and deserialization of handshake data, including the peer's features and session information."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/p2p/p2p-handshake.md",
+  "processed_at": "2025-05-11T19:23:27.012649",
+  "ai_processed": true
+}

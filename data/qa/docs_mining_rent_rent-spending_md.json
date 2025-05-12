@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the minimum storage fee duration required to spend an expired Ergo box?",
+    "answer": "The box must have been retained for at least the designated storage fee period, as validated by calculating the difference between the height of the upcoming block and the creation height of the box."
+  },
+  {
+    "question": "What is the requirement for the spending proof when spending an expired Ergo box?",
+    "answer": "The spending proof for the expired box must be empty, meaning that no cryptographic validation is needed to authorize its spending."
+  },
+  {
+    "question": "How can you check if an expired Ergo box is affected by storage rent?",
+    "answer": "The storage rent endpoint must be queried to ensure compliance with Ergo's storage rent rules."
+  },
+  {
+    "question": "What is the code snippet to verify the storage fee duration for an expired Ergo box?",
+    "answer": "context.preHeader.height - context.self.creationHeight >= Constants.StoragePeriod"
+  },
+  {
+    "question": "What is the purpose of waiving the cryptographic authorization requirement for spending an expired Ergo box?",
+    "answer": "It allows any participant to spend the expired box without needing to prove ownership, as long as the storage fee duration condition is fulfilled."
+  }
+]

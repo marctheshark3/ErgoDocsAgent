@@ -1,0 +1,4 @@
+The document discusses the two implementations of the ErgoScript compiler and ErgoTree interpreter for the Sigma Language:
+
+1. The sigmastate-interpreter for JVM languages, which is used by AppKit.
+2. sigma-rust, an alternative and simple implementation of ErgoTree interpreter and transaction-building tools.

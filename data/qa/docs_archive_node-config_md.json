@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Ergo node configuration file?",
+    "answer": "The Ergo node configuration file allows you to set essential application parameters and other configuration subsections for the Ergo node."
+  },
+  {
+    "question": "What are the key settings in the 'node' section of the configuration file?",
+    "answer": "The 'node' section includes settings for the node view holder regime, such as the state type, whether to verify transactions, the number of blocks to keep, PoPoW bootstrap, and whether mining is enabled."
+  },
+  {
+    "question": "How can you override the default configuration parameters?",
+    "answer": "You can override configuration parameters by providing an additional configuration file as the first command line parameter when starting the Ergo node application."
+  },
+  {
+    "question": "What is the purpose of the 'declaredAddress' parameter in the 'scorex.network' section?",
+    "answer": "The 'declaredAddress' parameter sets the external IP address and port number of the node, which is necessary for the node to work behind a NAT."
+  },
+  {
+    "question": "What is the purpose of the 'bindAddress' parameter in the 'scorex.network' section?",
+    "answer": "The 'bindAddress' parameter sets the IP address of the local network interface on which the Ergo node will accept incoming connections."
+  }
+]

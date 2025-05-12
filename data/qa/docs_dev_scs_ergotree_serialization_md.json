@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of serialization in the context of ErgoTree contracts?",
+    "answer": "Serialization is used to store ErgoTree contracts in persistent stores, transfer them over the wire, and enable cross-platform interoperation."
+  },
+  {
+    "question": "What is the ErgoTree Intermediate Representation (IR) and how is it used?",
+    "answer": "The ErgoTree IR is the representation of the serialized ErgoTree contract, which is used for evaluating the guarding script of a transaction's input box."
+  },
+  {
+    "question": "What are the serialization limits defined in Table 1, and why are they important?",
+    "answer": "The serialization limits, such as maximum size of serialized type term, data instance, and ErgoTree contract, are important for resisting malicious script attacks."
+  },
+  {
+    "question": "What are the various serialization formats defined in Table 2, and what do they represent?",
+    "answer": "Table 2 defines the serialization formats used throughout the document, such as byte, short, int, long, variable-length quantity (VLQ), and others."
+  },
+  {
+    "question": "How are the serialization formats used in the ErgoTree language?",
+    "answer": "The serialization formats defined in Table 2 are used to serialize the types, data values, and expressions of the ErgoTree language."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - EIP\n---\n\n# Ergo Improvement Proposals (EIPs)\n\nErgo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. These proposals enc..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Ergo Improvement Proposals (EIPs)"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - EIP\n---"
+  },
+  {
+    "question": "What is the 'Ergo Improvement Proposals (EIPs)' section about?",
+    "answer": "Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous ..."
+  },
+  {
+    "question": "What is the 'Open EIPs' section about?",
+    "answer": "See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the ..."
+  }
+]

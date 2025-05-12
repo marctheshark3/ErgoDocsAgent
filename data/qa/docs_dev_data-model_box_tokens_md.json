@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two unique characteristics of the ERG token?",
+    "answer": "1. ERGs cannot be burned; the total input and output amounts in any transaction must be equal. 2. Storage rent can only be paid in ERGs."
+  },
+  {
+    "question": "How many secondary tokens can a single box hold?",
+    "answer": "A single box can hold up to 255 secondary tokens."
+  },
+  {
+    "question": "What registers are used by the Ergo reference implementation wallet to store token information?",
+    "answer": "The Ergo reference implementation wallet uses the following registers: R4 for the verbose name, R5 for the description, R6 for the number of decimal places, and R7, R8, R9 for asset-specific information."
+  },
+  {
+    "question": "What are the limitations on the size of a box?",
+    "answer": "The size of a box should not exceed 4 kilobytes, and the presence of tokens increases the computational cost of the transaction."
+  },
+  {
+    "question": "How can tokens be minted on Ergo?",
+    "answer": "Tokens can be minted using the ergoutils web interface or by following the guide for minting a token with the Fleet SDK."
+  }
+]

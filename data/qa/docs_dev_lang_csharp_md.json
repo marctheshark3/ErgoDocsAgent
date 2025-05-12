@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Platform?",
+    "answer": "The Ergo Platform is a blockchain platform."
+  },
+  {
+    "question": "What is the purpose of the FleetSharp project?",
+    "answer": "FleetSharp is an open-source project that simplifies the process of converting data between compatible formats for communication and storage on the Ergo Blockchain."
+  },
+  {
+    "question": "What programming language is used in the Ergo with C# 101 tutorial series?",
+    "answer": "The Ergo with C# 101 tutorial series uses the C# programming language."
+  },
+  {
+    "question": "Where can developers find support for integrating with the Ergo Blockchain using C#?",
+    "answer": "Developers can join the Ergo community's `#development` Discord channel to receive support from seasoned Ergo developers and community members."
+  },
+  {
+    "question": "What is the purpose of the ErgoTree serializer/deserializer in the FleetSharp project?",
+    "answer": "The ErgoTree serializer/deserializer in the FleetSharp project simplifies the process of converting data between compatible formats for communication and storage on the Ergo Blockchain."
+  }
+]

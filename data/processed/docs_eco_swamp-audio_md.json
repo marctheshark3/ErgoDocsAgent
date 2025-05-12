@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_swamp-audio_md",
+  "title": "Swamp Audio",
+  "summary": "Swamp Audio is a music-related project associated with the THZ.FM platform. The document provides an introduction to Swamp Audio, indicating that it can be found at the thz.fm website.",
+  "qa_pairs": [
+    {
+      "question": "What is Swamp Audio?",
+      "answer": "Swamp Audio is a music-related entity described in the content."
+    },
+    {
+      "question": "Where can Swamp Audio be found?",
+      "answer": "Swamp Audio can be found at thz.fm."
+    },
+    {
+      "question": "What are the main topics associated with Swamp Audio?",
+      "answer": "The main topics associated with Swamp Audio are music and NFT."
+    },
+    {
+      "question": "What is the format of the content provided?",
+      "answer": "The content is formatted as YAML front matter with tags."
+    },
+    {
+      "question": "What is the purpose of the content?",
+      "answer": "The purpose of the content is to provide an introduction to Swamp Audio."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Swamp Audio\n  - THZ.FM\n  - Music\n  - NFT\n---"
+    },
+    {
+      "heading": "Swamp Audio",
+      "level": 1,
+      "content": "See [thz.fm]"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/swamp-audio.md",
+  "processed_at": "2025-05-11T19:48:27.105726",
+  "ai_processed": true
+}

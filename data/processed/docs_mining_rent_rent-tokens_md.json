@@ -1,0 +1,38 @@
+{
+  "id": "docs_mining_rent_rent-tokens_md",
+  "title": "What about tokens, NFTs, etc?",
+  "summary": "Ergo's storage rent mechanism allows miners to take over valuable assets inside a UTXO if there are insufficient ERGs to pay rent. This mechanism incentivizes miners by offering them additional rewards, but it also poses risks for users who are unaware of the system or fail to maintain enough ERG. A proposed EIP-33 to address these concerns is under discussion, but there is currently no consensus.",
+  "qa_pairs": [
+    {
+      "question": "What is Ergo's storage rent mechanism?",
+      "answer": "Ergo's storage rent mechanism allows miners to take over valuable assets inside a UTXO if there are insufficient ERGs to pay rent."
+    },
+    {
+      "question": "What are the potential benefits of Ergo's storage rent mechanism?",
+      "answer": "The storage rent mechanism incentivizes miners by offering them additional rewards, making the Ergo blockchain more attractive and encouraging participation, which can enhance the network's security and overall health."
+    },
+    {
+      "question": "What are the potential drawbacks of Ergo's storage rent mechanism?",
+      "answer": "Users who are not aware of the storage rent system or fail to maintain enough ERG in their UTXO may lose valuable assets unintentionally."
+    },
+    {
+      "question": "What is EIP-33: Token burning during rent collection?",
+      "answer": "EIP-33: Token burning during rent collection is a proposal under discussion that could potentially address some of the concerns with Ergo's storage rent mechanism."
+    },
+    {
+      "question": "What is the current status of the consensus around EIP-33?",
+      "answer": "There appears to be no current consensus on the implementation of EIP-33: Token burning during rent collection."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "What about tokens, NFTs, etc?",
+      "level": 1,
+      "content": "Ergo's storage rent mechanism also allows miners to take over valuable assets inside a UTXO if there are insufficient ERGs to pay rent\n\nOn the positive side, this mechanism incentivizes miners by offering them additional rewards, making the Ergo blockchain more attractive and encouraging participation. This increased participation can enhance the network's security and overall health. \n\nHowever, there are drawbacks to this mechanism. Users who are not aware of the storage rent system or fail to maintain enough ERG in their UTXO may lose valuable assets unintentionally. \n\n[EIP-33: Token burning during rent collection #68](https://github.com/ergoplatform/eips/pull/68) is under discussion, which could potentially address some of these concerns in the future. However, it appears there is currently no consensus."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/rent/rent-tokens.md",
+  "processed_at": "2025-05-11T19:51:58.361654",
+  "ai_processed": true
+}

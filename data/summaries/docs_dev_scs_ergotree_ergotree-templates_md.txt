@@ -1,0 +1,6 @@
+The document introduces the concept of Templatized ErgoTree, which aims to address the issue of embedding constants directly in contracts by preventing effective optimization through caching. The key points are:
+
+1. Each constant in the body of an ErgoTree can be replaced with an indexed placeholder node (ConstantPlaceholder, OpCode 63) during the compilation process.
+2. The serialized ErgoTree format contains a collection of segregated constants and the script expression with placeholders instead of constants.
+3. This separation allows using the script expression bytes (the template without constants) as a key in a cache, enabling optimization through caching.
+4. The evaluation process involves applying reduction and cost estimation to the constant-less templates, and then binding the placeholders with the actual values from the constants collection before applying the final steps of signature verification and ErgoTree evaluation.

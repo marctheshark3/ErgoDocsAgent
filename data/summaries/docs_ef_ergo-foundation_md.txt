@@ -1,0 +1,7 @@
+The Ergo Foundation is a community-led organization focused on the development, adoption, and promotion of the Ergo Platform and its native token ERG. The Foundation's mission includes encouraging non-breaking protocol development, fostering ecosystem growth, and upholding privacy as a fundamental human right.
+
+The Foundation is composed of dedicated members who serve as multi-signature custodians, voting on proposals to allocate treasury funds. They oversee various activities such as contracting developers, managing wallet development, and organizing events.
+
+The document provides an overview of the Foundation's structure, governance, and key members, including Justin Simpson, Mark Glasgow, Alexander Slesarenko, Alison Robson, Mohammad Hasan Samadani, and Joseph Armeanio. It also introduces the Foundation's Officers, such as Anastasiia Sidorova and Angie Har, as well as Advisors like Daniel Friedman.
+
+The summary highlights the Foundation's commitment to transparency, with references to additional sections covering the scope of its work, the Ergo timeline, the treasury management, and the Foundation's future plans.

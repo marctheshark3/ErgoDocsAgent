@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Ergo Puppet?",
+    "answer": "Ergo Puppet is an advanced tool that builds upon the Ergo Playground, designed to facilitate experimentation with and unit testing of Ergo contracts in an offchain setting."
+  },
+  {
+    "question": "What is the key feature of Ergo Puppet?",
+    "answer": "One of the key features of Ergo Puppet is that it heavily utilizes AppKit, which implies that the majority of your code should be compatible with Puppet without necessitating any modifications."
+  },
+  {
+    "question": "How does Ergo Puppet simplify the development process?",
+    "answer": "Ergo Puppet serves as an efficient and seamless way to test your Ergo contracts, further simplifying the development process."
+  },
+  {
+    "question": "What is the relationship between Ergo Puppet and Ergo Playgrounds?",
+    "answer": "Ergo Puppet builds upon the foundational capabilities of the Ergo Playgrounds."
+  },
+  {
+    "question": "What are the key tags associated with Ergo Puppet?",
+    "answer": "The key tags associated with Ergo Puppet are Ergo Puppet, Tooling, and Testing."
+  }
+]

@@ -1,0 +1,8 @@
+This document provides a collection of reusable functions and debugging techniques for working with the Ergo platform. It covers topics such as:
+
+- Checking dependency versions and updating the Nautilus wallet to resolve issues
+- Techniques for debugging on-chain boxes, including modifying contract conditions and replacing ErgoTree
+- Guidance on mocking boxes in unit tests
+- Explanations for common questions related to EIP-3 secrets, converting proposition bytes, handling duplicate tokens, fixing signing errors, and learning ErgoScript as a beginner
+- Details on how dApp fees are handled in ErgoScript contracts
+- Examples of using Option types and collection operations like fold, map, and reduce in ErgoScript

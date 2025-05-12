@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_protocol_protocol-overview_md",
+  "title": "Powering the future of finance",
+  "summary": "Ergo is a next-generation smart contract platform that enables anyone to participate in the digital DeFi revolution. It ensures economic freedom for ordinary people through decentralized, private and secure financial tools. Ergo's core components include Autolykos (ASIC-resistant Proof of Work), eUTXO model, NIPoPoWs (light nodes), privacy features, scaling solutions, storage rent, ErgoScript, and various use cases. The document highlights Ergo's capabilities in powering the future of finance.",
+  "qa_pairs": [
+    {
+      "question": "What is the underlying Proof of Work algorithm used by Ergo?",
+      "answer": "Ergo uses the Memory-hard ASIC-resistant Proof of Work (PoW) algorithm called Autolykos, which is oriented towards GPUs."
+    },
+    {
+      "question": "What is the eUTXO model used by Ergo?",
+      "answer": "Ergo uses the Extended UTXO (eUTXO) Model, which implies UTXOs with the ability to contain arbitrary data and sophisticated scripts."
+    },
+    {
+      "question": "How does Ergo enable light node support?",
+      "answer": "Ergo enables extended support of light nodes through the use of NIPoPoWs, which makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries."
+    },
+    {
+      "question": "What privacy features does Ergo provide?",
+      "answer": "Ergo provides superior access to discrete log-based zero-knowledge proofs for privacy."
+    },
+    {
+      "question": "What is the purpose of storage rent in Ergo?",
+      "answer": "Storage Rent is a nominal fee incurred by unmoved boxes after four years, which helps maintain the network."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Protocol\n  - Overview\n---"
+    },
+    {
+      "heading": "Powering the future of finance",
+      "level": 1,
+      "content": "Ergo is a [next-generation](scaling.md) smart contract platform that enables anyone to participate in the digital DeFi revolution *now*.\n\nEnsuring economic freedom for ordinary people through decentralized, private and secure financial tools.\n\n::cards::\n\n[\n  {\n    \"title\": \"Why Ergo?\",\n    \"content\": \"A high-level summary of what puts Ergo head and shoulders above the competition.\",\n    \"url\": \"why.md\"\n  },\n  {\n    \"title\": \"Contributing\",\n    \"content\": \"Ergo operates an open model where contributions from all are welcomed. Participate in decentralised finance!\",\n    \"url\": \"../../contribute.md\"\n  },\n  {\n    \"title\": \"FAQ\",\n    \"content\": \"Check out the Frequently Asked Questions\",\n    \"url\": \"../../faq.md\"\n  },\n\n\n]\n\n::/cards::\n\n> *\"Creating financial contracts on the blockchain isn't just about the functionality; it's about making that functionality safe, accessible, and powerful.\"*"
+    },
+    {
+      "heading": "Core Components",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Autolykos\",\n    \"content\": \"The underlying Memory-hard ASIC-resistant **Proof of Work** (PoW) algorithm oriented towards GPUs. \",\n    \"url\": \"../../mining/autolykos.md\"\n  },\n  {\n    \"title\": \"eUTXO\",\n    \"content\": \"Ergo uses the **Extended UTXO (eUTXO) Model**, which implies UTXOs with the ability to contain **arbitrary data and sophisticated scripts**. \",\n    \"url\": \"eutxo.md\"\n  },\n  {\n    \"title\": \"NIPoPoWs\",\n    \"content\": \"Enable extended support of **light nodes** which makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries. \",\n    \"url\": \"nipopows.md\"\n  },\n  {\n    \"title\": \"Privacy\",\n    \"content\": \"Ergo provides **superior access** to discrete log-based zero-knowledge proofs\",\n    \"url\": \"zkp.md\"\n  },\n  {\n    \"title\": \"Scaling\",\n    \"content\": \"Explore the various scaling solutions being explored on Ergo.\",\n    \"url\": \"scaling.md\"\n  },\n  {\n    \"title\": \"Storage Rent\",\n    \"content\": \"Storage Rent is a nominal fee incurred by unmoved boxes after four years.\",\n    \"url\": \"storage-rent.md\"\n  },\n  {\n    \"title\": \"ErgoScript\",\n    \"content\": \"A simple high-level language enabling clear descriptions of contractual logic.\",\n    \"url\": \"../scs/ergoscript.md\"\n  },\n  {\n    \"title\": \"Uses Cases\",\n    \"content\": \"From oracles to alternative economic systems.\",\n    \"url\": \"../../uses/use-cases-overview.md\"\n  }\n\n\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/protocol-overview.md",
+  "processed_at": "2025-05-11T19:24:42.915014",
+  "ai_processed": true
+}

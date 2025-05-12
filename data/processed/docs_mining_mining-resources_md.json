@@ -1,0 +1,63 @@
+{
+  "id": "docs_mining_mining-resources_md",
+  "title": "Mining Resources",
+  "summary": "This document provides a collection of resources related to Ergo mining, including academic papers, code repositories, test vectors, and discussion threads. The key resources mentioned are the Ergo White Paper and Yellow Paper, a paper on bypassing non-outsourceable proof-of-work schemes, the Ergo GitHub repository containing mining-related code, test vectors for increased N values, and two Ergo Improvement Proposals (EIPs).",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Mining\n  - Resources\n  - Papers\n  - Code\n  - EIP\n  - Test Vectors\n---\n\n# Mining Resources\n\nThis page provides a collection of resources related to Ergo mining. It includes academic paper..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Mining Resources"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Mining\n  - Resources\n  - Papers\n  - Code\n  - EIP\n  - Test Vectors\n---"
+    },
+    {
+      "question": "What is the 'Mining Resources' section about?",
+      "answer": "This page provides a collection of resources related to Ergo mining. It includes academic papers, co..."
+    },
+    {
+      "question": "What is the 'Academic Papers' section about?",
+      "answer": "- [Ergo White Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): This paper provides a comprehens..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Mining\n  - Resources\n  - Papers\n  - Code\n  - EIP\n  - Test Vectors\n---"
+    },
+    {
+      "heading": "Mining Resources",
+      "level": 1,
+      "content": "This page provides a collection of resources related to Ergo mining. It includes academic papers, code repositories, test vectors, and discussion threads."
+    },
+    {
+      "heading": "Academic Papers",
+      "level": 2,
+      "content": "- [Ergo White Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): This paper provides a comprehensive overview of Ergo, including its design principles, consensus algorithm, and economic model.\n\n- [Ergo Yellow Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): The Yellow Paper offers a more technical perspective on Ergo, detailing the platform's underlying algorithms and data structures.\n\n- [\"Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts\"](https://ia.cr/2020/044): This paper discusses a novel approach to bypassing non-outsourceable proof-of-work schemes using smart contracts."
+    },
+    {
+      "heading": "Code",
+      "level": 2,
+      "content": "The [Ergo GitHub repository](https://github.com/ergoplatform/ergo/tree/master/src/main/scala/org/ergoplatform/mining) contains the Scala files related to Ergo's mining algorithm. This is a great resource if you're interested in understanding the technical details of Ergo mining."
+    },
+    {
+      "heading": "Test Vectors",
+      "level": 2,
+      "content": "- [Test vectors for increased N values](https://www.ergoforum.org/t/test-vectors-for-increased-n-values/2887/2): This forum post provides test vectors for Ergo's proof-of-work algorithm with increased N values."
+    },
+    {
+      "heading": "EIPs",
+      "level": 2,
+      "content": "- [EIP27](eip27.md)\n- [EIP37](eip37.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/mining-resources.md",
+  "processed_at": "2025-05-11T19:51:24.282047",
+  "ai_processed": true
+}

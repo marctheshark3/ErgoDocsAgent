@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_protocol_scaling_TPS_md",
+  "title": "Understanding Transaction Speed in Blockchains",
+  "summary": "The document discusses the importance of transaction speed, or Transactions Per Second (TPS), as a crucial performance metric for blockchains. It explains that the primary bottleneck for increasing TPS is the peer-to-peer network layer, and that while measures like supernodes or eliminating mempools could boost TPS, they compromise the decentralization and integrity of the network. The document then provides a comparative analysis of TPS values for several leading blockchains, including Bitcoin, Ethereum, Ripple, Cardano, and Polkadot. It highlights that Ergo's TPS is approximately 47.5 transactions/second, and that its Extended Unspent Transaction Output (eUTXO) model outperforms the traditional UTXO model in terms of efficiency and flexibility, enabling a broad spectrum of DeFi applications. The primary objective in scaling Ergo is to enhance TPS without compromising the fundamental principles and assurances typically linked with blockchain technology.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary bottleneck for increasing transactions per second (TPS) in blockchains?",
+      "answer": "The primary bottleneck for increasing transactions per second (TPS) is the peer-to-peer (p2p) network layer."
+    },
+    {
+      "question": "How do proof-of-work (PoW) and alternative consensus mechanisms compare in terms of efficiency?",
+      "answer": "Proof-of-Work (PoW) is an efficient timestamping protocol for the base layer (Layer 0) because it operates asynchronously, without the need for additional network messages. Many alternative consensus mechanisms require extra bandwidth, making them less efficient."
+    },
+    {
+      "question": "What are the potential drawbacks of introducing measures like supernodes or eliminating mempools to boost TPS?",
+      "answer": "Introducing measures like supernodes or eliminating mempools to boost TPS can compromise the decentralization and integrity of the network, and should be avoided if the goal is to maintain a truly decentralized cryptocurrency."
+    },
+    {
+      "question": "What are the estimated TPS values for some leading blockchains?",
+      "answer": "Bitcoin (BTC) has roughly 7 TPS, Ethereum (ETH) has roughly 15 TPS, Ripple (XRP) has roughly 1500 TPS, Cardano (ADA) has roughly 7 TPS (can reach up to 250 in controlled tests), and Polkadot (DOT) has roughly 1500 TPS."
+    },
+    {
+      "question": "How does Ergo's transaction management system, based on the Extended Unspent Transaction Output (eUTXO) model, compare to the traditional UTXO model?",
+      "answer": "Ergo's eUTXO model outperforms the traditional UTXO model in terms of efficiency and flexibility, allowing for multiple outputs in a single transaction, each potentially carrying different tokens, and enabling the simultaneous execution of complex transactions within a block, thereby boosting its blockchain's performance and scalability."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Understanding Transaction Speed in Blockchains",
+      "level": 1,
+      "content": "The speed of transactions, commonly known as Transactions Per Second (TPS), is a vital performance metric for blockchains. It quantifies the capacity of a blockchain to process transactions, expressed in transactions per second.\n\nThe primary bottleneck for increasing transactions per second (TPS) is the peer-to-peer (p2p) network layer. Proof-of-Work (PoW) is already an efficient timestamping protocol for the base layer (Layer 0) because it operates asynchronously, without the need for additional network messages. Many alternative consensus mechanisms require extra bandwidth, making them less efficient. For instance, the original Ouroboros consensus protocol generated large log files, although this was later improved in the Praos version using Verifiable Random Functions (VRF). However, relying on novel cryptographic primitives can be risky, especially when significant assets are involved.\n\nWhile TPS could be boosted by introducing measures like supernodes or eliminating mempools, as seen in projects like Solana and Avalanche, these approaches compromise the decentralization and integrity of the network. Therefore, if the goal is to maintain a truly decentralized cryptocurrency, these methods should be avoided.\n\nThe remaining viable solution for improving TPS lies in optimizing bandwidth usage and implementing [Layer 2](layer2.md) solutions and sidechains, also known as application-specific chains."
+    },
+    {
+      "heading": "Comparative TPS Values for Renowned Blockchains",
+      "level": 2,
+      "content": "To provide a perspective, here are the estimated TPS values for some of the leading blockchains:\n\n- **Bitcoin (BTC)**: Roughly 7 TPS (Gobbel, 2017).\n- **Ethereum (ETH)**: Roughly 15 TPS (Clincy et al., 2019)\n- **Ripple (XRP)**: Roughly 1500 TPS (Clincy et al., 2019)\n- **Cardano (ADA)**: Roughly 7 TPS (Can reach up to 250 in controlled tests) (Stamoulis, 2021).\n- **Polkadot (DOT)**: Roughly 1500 TPS (Hiemstra et al., 2021)\n\nHowever, the conventional TPS metric only offers a glimpse into Ergo's true potential. It's not merely about the number of transactions; the weight of the transaction and the computational cost limit per block are equally important. These aspects are shaped by several dynamic factors, including the size of the network and the hardware resources available to miners.\n\nWith the [Node v5](jitc.md) already operational, Ergo's raw TPS is approximately **47.5 transactions/second**, with room for further enhancements. For an in-depth technical understanding of how this figure is derived, please refer to [this report](https://github.com/ergoplatform/ergo/blob/d3d95e19b37c83b98de13bdf71d6d62b398e8f0d/metrics/Report.ipynb)."
+    },
+    {
+      "heading": "The Extended Unspent Transaction Output (eUTXO) Model Advantage",
+      "level": 2,
+      "content": "Ergo's transaction management system leverages the Extended Unspent Transaction Output (eUTXO) model, which outperforms the traditional UTXO model in terms of efficiency and flexibility. This model allows for multiple outputs in a single transaction, each potentially carrying different tokens. Moreover, Ergo is capable of handling complex DeFi transactions, thereby enabling a broad spectrum of DeFi applications within the network. By processing multiple token types per transaction output and facilitating the simultaneous execution of complex transactions within a block, Ergo significantly boosts its blockchain's performance and scalability.\n\nThe primary objective in scaling Ergo is to enhance TPS without compromising the fundamental principles and assurances typically linked with blockchain technology."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/scaling/TPS.md",
+  "processed_at": "2025-05-11T19:24:52.805132",
+  "ai_processed": true
+}

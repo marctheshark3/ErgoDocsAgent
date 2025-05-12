@@ -1,0 +1,38 @@
+{
+  "id": "docs_tutorials_cold-wallet_md",
+  "title": "cold-wallet.md",
+  "summary": "Introduction: A cold wallet is a type of cryptocurrency wallet that is not connected to the internet, providing a high level of security for storing digital assets. Cold wallets are typically hardware devices or paper wallets that store private keys offline, protecting them from online threats such as hacking or theft.",
+  "qa_pairs": [
+    {
+      "question": "What is a cold wallet?",
+      "answer": "A cold wallet is a type of cryptocurrency wallet that is not connected to the internet, providing a higher level of security for storing digital assets."
+    },
+    {
+      "question": "What are the main advantages of using a cold wallet?",
+      "answer": "The main advantages of using a cold wallet are increased security, protection from online threats, and reduced risk of theft or loss of funds."
+    },
+    {
+      "question": "How does a cold wallet differ from a hot wallet?",
+      "answer": "A cold wallet is stored offline, while a hot wallet is connected to the internet, making it more vulnerable to cyber attacks."
+    },
+    {
+      "question": "What are the typical devices used to store a cold wallet?",
+      "answer": "Common devices used to store a cold wallet include hardware wallets, paper wallets, and offline computers or USB drives."
+    },
+    {
+      "question": "What are the best practices for managing and securing a cold wallet?",
+      "answer": "Best practices for managing and securing a cold wallet include storing the device in a safe location, regularly backing up the wallet, and avoiding connecting the device to the internet."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/tutorials/cold-wallet.md",
+  "processed_at": "2025-05-11T19:59:28.491400",
+  "ai_processed": true
+}

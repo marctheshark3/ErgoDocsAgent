@@ -1,0 +1,53 @@
+{
+  "id": "docs_node_modes_light-spv-mode-workflow_md",
+  "title": "Light SPV Mode Technical Workflow",
+  "summary": "The document describes the technical workflow for the light-SPV mode in the Ergo blockchain. The workflow consists of two main phases: Bootstrap and Regular. In the Bootstrap phase, the client sends a GetPoPoWProof request to all connections, applies the received PoPoWProof to the History, and then transitions to the Regular regime. In the Regular regime, the client sends ErgoSyncInfo messages to connected peers, receives INV messages with block IDs, requests headers for those blocks, and applies the headers to the History and State. If the header application is successful, the client broadcasts an INV message for the new header; otherwise, it blacklists the peer.",
+  "qa_pairs": [
+    {
+      "question": "What is the first step in the light-SPV mode bootstrap process?",
+      "answer": "Send `GetPoPoWProof` for all connections."
+    },
+    {
+      "question": "What happens after receiving `PoPoWProof`?",
+      "answer": "Apply it to History and determine if it is better than the current best header chain."
+    },
+    {
+      "question": "What is the first step in the regular regime?",
+      "answer": "Send ErgoSyncInfo message to connected peers."
+    },
+    {
+      "question": "What does the node do when it receives a header?",
+      "answer": "If History.apply(header).isSuccess, apply the header to the state. If not in initial bootstrapping, broadcast an INV for this header. Otherwise, blacklist the peer."
+    },
+    {
+      "question": "What is the purpose of the light-SPV mode in Ergo?",
+      "answer": "The light-SPV mode allows nodes to efficiently synchronize the blockchain without downloading the full node."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Light SPV Mode Technical Workflow",
+      "level": 1,
+      "content": "The technical workflow for the light-SPV mode in Ergo is as follows:"
+    },
+    {
+      "heading": "Bootstrap",
+      "level": 3,
+      "content": "1.  Send **`GetPoPoWProof`** for all connections.\n2.  On receiving **`PoPoWProof`**, apply it to History (History should determine whether this PoPoWProof is better than its current best header chain).\n3.  **`GOTO`** regular regime."
+    },
+    {
+      "heading": "Regular",
+      "level": 3,
+      "content": "1.  Send ErgoSyncInfo message to connected peers\n2.  Get a response with an INV message containing the ids of blocks, better than\n    our best block.\n3.  Request headers for all ids from 2.\n4.  On receiving Header:\n\n```java\n    if(History.apply(header).isSuccess) {\n        State.apply(header) // just change state roothash\n    if(!isInitialBootstrapping) Broadcast INV for this header\n    } else {\n        blacklist peer\n    }\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes/light-spv-mode-workflow.md",
+  "processed_at": "2025-05-11T19:56:32.431069",
+  "ai_processed": true
+}

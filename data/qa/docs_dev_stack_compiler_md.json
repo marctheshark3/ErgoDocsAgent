@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the ErgoScript Compiler?",
+    "answer": "The ErgoScript Compiler is a Command Line Interface (CLI) tool designed to compile ErgoScript code into an Ergo address."
+  },
+  {
+    "question": "How do you compile ErgoScript code using the compiler?",
+    "answer": "To compile ErgoScript code, you save your code in a text file, optionally save any referenced symbols in a separate JSON file, and then use the command 'java -cp <jarFile> Compile <ergoScriptFile> <optionalSymbolsFile>' to compile the file."
+  },
+  {
+    "question": "How do you integrate the ErgoScript Compiler into your project?",
+    "answer": "To use the ErgoScript Compiler in your project, you add the following to your build.sbt: 'libraryDependencies += \"io.github.ergoplatform\" %% \"ergoscriptcompiler\" % \"1.0\"', and then call 'util.Compiler.compile(ergoScriptFile: String, symbolsFile: Option[String])'."
+  },
+  {
+    "question": "What information does the compiler output after successfully compiling ErgoScript code?",
+    "answer": "The compiler output includes the ErgoTree corresponding to the script, serialized and hex-encoded, the Blake2b256 hash of the ErgoTree, hex-encoded, and the address corresponding to the ErgoTree."
+  },
+  {
+    "question": "Where can you find sample ErgoScript and symbol files for the compiler?",
+    "answer": "The 'src/test/resources' directory contains sample ErgoScript and symbol files for the compiler."
+  }
+]

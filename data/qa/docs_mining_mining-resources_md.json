@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Mining\n  - Resources\n  - Papers\n  - Code\n  - EIP\n  - Test Vectors\n---\n\n# Mining Resources\n\nThis page provides a collection of resources related to Ergo mining. It includes academic paper..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Mining Resources"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Mining\n  - Resources\n  - Papers\n  - Code\n  - EIP\n  - Test Vectors\n---"
+  },
+  {
+    "question": "What is the 'Mining Resources' section about?",
+    "answer": "This page provides a collection of resources related to Ergo mining. It includes academic papers, co..."
+  },
+  {
+    "question": "What is the 'Academic Papers' section about?",
+    "answer": "- [Ergo White Paper](https://www.docdroid.net/mcoitvK/ergopow-pdf): This paper provides a comprehens..."
+  }
+]

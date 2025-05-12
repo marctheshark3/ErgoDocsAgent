@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Ecosystem?",
+    "answer": "The Ergo Ecosystem is a thriving hub of decentralized applications, tools, and protocols designed to empower users, developers, and communities in the blockchain space."
+  },
+  {
+    "question": "What are the key components of the Ergo Ecosystem?",
+    "answer": "The Ergo Ecosystem includes infrastructure, financial tools, and privacy solutions."
+  },
+  {
+    "question": "What technologies power the Ergo blockchain?",
+    "answer": "The Ergo blockchain is powered by a robust Proof of Work consensus algorithm, sidechains, bridges, and oracle systems."
+  },
+  {
+    "question": "What types of financial applications and services are available in the Ergo ecosystem?",
+    "answer": "The Ergo ecosystem includes decentralized exchanges, stablecoins, lending platforms, and derivatives."
+  },
+  {
+    "question": "What privacy solutions are available in the Ergo ecosystem?",
+    "answer": "Ergo offers non-custodial mixers and stealth addresses to ensure users can conduct transactions with enhanced privacy."
+  }
+]

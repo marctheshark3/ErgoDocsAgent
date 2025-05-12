@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the first step in using Ergo's APIs?",
+    "answer": "Choose an API that suits your needs."
+  },
+  {
+    "question": "Why is it important to read the API documentation?",
+    "answer": "The documentation provides detailed information on the available endpoints, parameters, and response formats."
+  },
+  {
+    "question": "What is the purpose of reviewing the list of available endpoints?",
+    "answer": "Each endpoint serves a specific function and allows you to retrieve or interact with different data or services."
+  },
+  {
+    "question": "What is required for authentication to access certain API endpoints or perform specific actions?",
+    "answer": "Refer to the API documentation to understand the authentication mechanisms and requirements. Obtain any necessary credentials or tokens to authenticate your requests."
+  },
+  {
+    "question": "What is a recommended way to test API endpoints?",
+    "answer": "Use an API testing tool like Postman or cURL to send requests to the API endpoints."
+  }
+]

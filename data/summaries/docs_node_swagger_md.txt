@@ -1,0 +1,8 @@
+The document provides an overview of the Swagger UI for the Ergo Node, which allows users to interact with the node's REST API. It covers the following key points:
+
+- The Ergo node provides a REST API accessible via HTTP, with the full API specification available in the OpenAPI format.
+- The Swagger UI interface is typically available at `127.0.0.1:9053/swagger` when the node is running, allowing users to explore and interact with the API.
+- The Swagger UI enables advanced operations such as creating non-standard transactions, issuing tokens, and using specific boxes as inputs.
+- To access protected API routes, users must provide their API key, which can be done directly within the Swagger UI interface.
+- The document outlines the main API methods available, including wallet initialization, restoration, locking/unlocking, sending payments, and deriving addresses.
+- It also provides an example of how to derive a specific address using the `/wallet/deriveKey` endpoint.

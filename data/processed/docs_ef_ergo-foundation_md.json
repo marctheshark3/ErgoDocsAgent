@@ -1,0 +1,88 @@
+{
+  "id": "docs_ef_ergo-foundation_md",
+  "title": "The Ergo Foundation",
+  "summary": "The Ergo Foundation is a community-led organization focused on the development, adoption, and promotion of the Ergo Platform and its native token ERG. The Foundation's mission includes encouraging non-breaking protocol development, fostering ecosystem growth, and upholding privacy as a fundamental human right.\n\nThe Foundation is composed of dedicated members who serve as multi-signature custodians, voting on proposals to allocate treasury funds. They oversee various activities such as contracting developers, managing wallet development, and organizing events.\n\nThe document provides an overview of the Foundation's structure, governance, and key members, including Justin Simpson, Mark Glasgow, Alexander Slesarenko, Alison Robson, Mohammad Hasan Samadani, and Joseph Armeanio. It also introduces the Foundation's Officers, such as Anastasiia Sidorova and Angie Har, as well as Advisors like Daniel Friedman.\n\nThe summary highlights the Foundation's commitment to transparency, with references to additional sections covering the scope of its work, the Ergo timeline, the treasury management, and the Foundation's future plans.",
+  "qa_pairs": [
+    {
+      "question": "What is the mission of the Ergo Foundation?",
+      "answer": "The Ergo Foundation's mission is to encourage the non-breaking development of the Ergo Platform protocol, advocate for the widespread adoption and use of the Ergo Platform and its native token (ERG), foster the growth of the ecosystem around the Ergo Platform, promote the use of the Ergo Platform and blockchain technology for societal benefit, support truly decentralized infrastructure, and uphold privacy as a fundamental human right."
+    },
+    {
+      "question": "What is the structure of the Ergo Foundation?",
+      "answer": "The Ergo Foundation is composed of dedicated members who primarily function as multi-signature custodians. They vote on proposals to allocate treasury funds in alignment with the Foundation's mission. The Foundation also directly employs several Officers and Advisors."
+    },
+    {
+      "question": "What are the key responsibilities of the Ergo Foundation members?",
+      "answer": "The day-to-day responsibilities of Foundation members include contracting and compensating developers, allocating 'bounties' on core repositories, guiding core protocol development, overseeing wallet development, coordinating exchange listings, managing payments to third parties, facilitating partnership-related expenses, organizing and funding hackathons and summits, and directing marketing and promotional initiatives."
+    },
+    {
+      "question": "Who are some of the key members of the Ergo Foundation?",
+      "answer": "The Ergo Foundation members include Justin Simpson, who has over 13 years of experience in Investment Banking and has been involved with crypto and Bitcoin since 2013, and Mark Glasgow, a Computing Science graduate who is passionate about improving inclusive systems and serves as the Technical Director for Disabled Students UK CIC."
+    },
+    {
+      "question": "What is the role of Alexander Slesarenko (morphic) in the Ergo Foundation?",
+      "answer": "Alexander Slesarenko (morphic) is a graduate of Applied Mathematics from Udmurt State University with over 25 years of experience in software development. He manages the sigmastate-interpreter repository, which is a key component of the Ergo Platform."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Ergo Foundation\n  - Overview\n  - Mission\n  - Structure\n  - Governance\n  - Transparency Report\n  - Treasury\n---"
+    },
+    {
+      "heading": "The Ergo Foundation",
+      "level": 1,
+      "content": "This section provides a comprehensive overview of the Ergo Foundation, aiming to maintain transparency. For more detailed information, please refer to the respective sections:\n\n- Gain insights into the [Structure](#structure) of the Ergo Foundation and its operational mechanisms.\n- Delve into the [Scope](ef-scope.md) of our work to understand our focus areas.\n- Traverse the [Timeline](ergo-timeline.md) to witness the milestones achieved by the Ergo Foundation.\n- Obtain a detailed understanding of the [Treasury](ef-treasury.md) and its management.\n- Uncover our [Future](ef-future.md) plans and the strategic direction we are pursuing."
+    },
+    {
+      "heading": "Mission",
+      "level": 2,
+      "content": "The Ergo Foundation is a community-led organization with a focus on the following areas:\n\n- Encouraging the non-breaking development of the Ergo Platform protocol;\n- Advocating for the widespread adoption and use of the Ergo Platform and its native token (ERG);\n- Fostering the growth of the ecosystem around the Ergo Platform;\n- Promoting the use of the Ergo Platform and blockchain technology for societal benefit;\n- Supporting truly decentralized infrastructure;\n- Upholding privacy as a fundamental human right."
+    },
+    {
+      "heading": "Structure",
+      "level": 2,
+      "content": "The Ergo Foundation is composed of dedicated members who primarily function as multi-signature custodians. They vote on proposals to allocate treasury funds in alignment with the Foundation's mission. The Foundation also directly employs several Officers and Advisors which is outlined below.\n\nThe day-to-day responsibilities of Foundation members are primarily organizational. They engage with exchanges, market-makers, and manage internal accounting and budgeting. They also oversee a variety of activities, including:\n\n- Contracting and compensating developers.\n- Allocating 'bounties' on core repositories.\n- Guiding core protocol development.\n- Overseeing wallet development.\n- Coordinating exchange listings.\n- Managing payments to third parties for administrative and miscellaneous expenses.\n- Facilitating partnership-related expenses.\n- Organizing and funding hackathons and summits.\n- Directing marketing and promotional initiatives.\n\n/// details | Scope\n     {type: info, open: true}\nFor more information about the scope of the Foundation's work, please refer to the [Scope](ef-scope.md) section.\n///"
+    },
+    {
+      "heading": "Ergo Foundation Members",
+      "level": 3,
+      "content": "**Justin Simpson** has over 13 years of experience in Investment Banking and has been involved with crypto and Bitcoin since 2013. He is now exclusively focused on crypto and is passionate about open, permissionless, and decentralized blockchain platforms.\n\n- **Role & Responsibilities:** No official EF duties other than voting. He works in various roles behind the scenes such as investor relations, chinese marketing strategy, banking and accounting and is currently unpaid.\n\n**Mark Glasgow** works across various roles in Ergo, including community management and developer education. As a Computing Science graduate passionate about improving inclusive systems, he also serves as the Technical Director for Disabled Students UK CIC, a non-profit named one of the most influential disability-led organizations in the UK.\n\n- **Role & Responsibilities:** Official duties within the EF are to convey concerns from the community to the EF. Salaried for Community Management/Editorial/Documentation/etc.\n\n**Alexander Slesarenko (morphic)** is a graduate of Applied Mathematics from Udmurt State University. He has over 25 years of experience in software development in various roles such as team leader, software architect, engineer, and researcher. His main focus has been on programming language design and implementation. He also served as an Expert Team Leader at Huawei Research Lab, focusing on high-performance computing and big data processing. He manages [sigmastate-interpreter](sigmastate-interpreter.md) and other JVM-related development.\n\n- **Role & Responsibilities:** No EF duties other than voting. Salaried as a Core Developer (Sigma) but unpaid for EF participation.\n\n**Alison Robson (anon_br)**, serving in Developer Relations, is a software engineer passionate about facilitating crypto adoption through enhanced user experience.\n\n- **Role & Responsibilities:** Director of Engineering/ Developer Adoption: work with community developers to support new frameworks, integration, and tooling needed by the development community. (Fleet, Nautilus, Ledger)\n\n- **Mgpai:**"
+    },
+    {
+      "heading": "Ergo Foundation Honorary Members",
+      "level": 3,
+      "content": "**Mohammad Hasan Samadani (mhs_sam)** holds a PhD in computer science and has over 12 years of experience in security and software development as a product owner, researcher, and team leader. He became a board member of the Ergo Foundation in 2020 after making significant contributions to the development of the Ergo mining infrastructure, Stratum server, and ergopool (a smart contract-based pool to bypass pool resistance of Autolykos v1).\n\n- **Role & Responsibilities:** In addition to his voting duties within the EF, he fosters innovation by incubating projects. His notable contributions include the development of [Ergo Raffle](ergoraffle.md), [ErgoWell](ergowell.md), [Minotaur-wallet](wallets.md), and the [Rosen Bridge](rosen.md).\n\n**Joseph Armeanio** has been involved in crypto on the investment side since 2013 and was a partner CIO at Big Bear Investments. He has been on the board of the Universal Education Foundation, a 501(c)3 organization, since 2008. He is passionate about counter-economic frameworks and tools for societal benefit. His role as a business developer involves creating partnerships in the crypto industry, educational partnerships, and research opportunities while promoting the adoption of Ergo tooling in the public and non-profit sectors.\n\n- **Role & Responsibilities:** His role in the foundation is related to business development, and has recently co-founded Rosen with mhs_sam."
+    },
+    {
+      "heading": "Ergo Foundation Officers",
+      "level": 3,
+      "content": "*While Officers don\u2019t have voting rights, they work closely with the foundation members, help with discussions, and share insights and critiques to aid them in making better decisions.*\n\n**Anastasiia Sidorova** serves as the Treasurer of the Ergo Foundation. She holds a degree in \"Mathematical methods in Economics\" and worked as a banking analyst for four years before transitioning into hospitality. However, her passion for Analytics and Accounting has always remained.\n\n- **Role & Responsibilities:**  Official duties include; Producing financial reports, maintaining internal accounting, payroll, secretarial services & compliance.\n\n**Angie Har**: Graduated a Masters degree in International Management. Angie has served as the Head of Customer Service for a company group, Business Development and Marketing for a Tier 1 media business and several product companies. The scope of her work has covered a broad outlook in the digital sector. An expert in crypto marketing, Angie has worked in the blockchain indusrty since 2017.\n\n- **Role & Responsibilities:**  Managing the editorial team, events"
+    },
+    {
+      "heading": "Ergo Foundation Advisors",
+      "level": 3,
+      "content": "**Daniel Friedman** is a Strategic Advisor to the Ergo Foundation. He began his professional career as a developer for a San Francisco-based software company, 2Bridge. After relocating to Japan, he became CTO of an Osaka-based software development firm specializing in Augmented Reality mobile applications. He serves as a strategic advisor to the Ergo Foundation Board and a business developer for IOHK.\n\n- **Role & Responsibilities:**  Supports the EF Business Development with advice. Acts as an ambassador for Ergo, and engages with the community on weekly AMAs and elsewhere."
+    },
+    {
+      "heading": "Editorial/Marketing",
+      "level": 4,
+      "content": "- **Andy Lowe**: Video Editor\n- **Sean Rice**: Editor\n- **Eva Qing**: Chinese Community Management\n- **Marcelo Roncatti (Marcello)** is a Brazilian multifaceted designer and art director working over 20 years in the graphics and visual arts Co-Founder and Partner of the graphic design studio called Estudio Colletivo, a multidisciplinary design office that works on branding projects, graphic design and interface design.\n\n\n## \nThe Ergo Foundation is made up of a diverse group of individuals, including salaried employees, volunteers, bounty collectors, and independent project developers within the Ergo ecosystem. It's important to note that there is no designated 'core' development team. The Core Marketing team, for instance, is a mix of dedicated community members and salaried professionals. Similarly, contributors who have made significant additions to core repositories may be invited to participate in Core Development discussions, regardless of their employment status."
+    },
+    {
+      "heading": "DevDao",
+      "level": 3,
+      "content": "**Alexander Chepurnoy (kushti)** has been active in the blockchain field since 2011. He has authored over twenty academic papers and has more than fifteen years of experience in software development. Prior to co-founding Ergo, he co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was one of the first employees at IOHK, where he held the positions of Research Fellow and Team Scorex Manager. He manages any bounties relating to the eference client repository and keeps a watch over [sigma-rust](sigma-rust.md) development and any other high-level development and research not covered otherwise.\n\n- **Role & Responsibilities:** Alex stepped back from the Foundation January 2024 to focus solely on development, you can see his announcement post [here](https://www.ergoforum.org/t/core-developer-kushti-is-leaving-ergo-foundation/4648). He plans to launch a DevelopmentDAO and is currently speaking to interested parties. He will continue to manage communications between developers and EF going forward."
+    },
+    {
+      "heading": "Outgoings",
+      "level": 4,
+      "content": "- **Ergo Foundation**: Two members receive a salary for their contributions to the ecosystem, while two others are rewarded with a small amount of ERG. Both kushti and Justin choose not to receive any compensation.\n- **Marketing**: Four individuals are compensated for their efforts. Further details can be found in the [relationship to marketing](#editorialmarketing) section.\n- **Development**: Three individuals are salaried, with additional contributions being covered by [bounties](bounties.md). For more information on this structure see the [relationship to development](#devdao) section.\n\n/// details | Spendings\n     {type: info, open: true}\nA detailed breakdown of our expenditure can be found in the [Treasury](ef-treasury.md) section.\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/ef/ergo-foundation.md",
+  "processed_at": "2025-05-11T19:49:23.248670",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the core of Ergo Mosaik?",
+    "answer": "At its core, Mosaik is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps."
+  },
+  {
+    "question": "What does Mosaik provide for Ergo platform dApps?",
+    "answer": "Mosaik provides elements and interactions typically needed for Ergo platform dApps."
+  },
+  {
+    "question": "How can Mosaik elements be customized by dApp developers?",
+    "answer": "Mosaik elements can't be skinned and adapted in their appearance by the dApp - the actual appearance is defined by the Mosaik executor application."
+  },
+  {
+    "question": "What type of functionality does Mosaik provide for Ergo dApps?",
+    "answer": "Mosaik provides view elements and actions that target typical use cases of blockchain dapps, such as an ErgoAmountInputField."
+  },
+  {
+    "question": "What programming languages can be used to write Mosaik libraries?",
+    "answer": "While the core is JSON-based, the Mosaik reference implementation also contains an easy-to-use domain-specific language for Kotlin."
+  }
+]

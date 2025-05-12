@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_digigoats_md",
+  "title": "DigiGoats",
+  "summary": "DigiGoats is a unique and engaging game developed by the Screaming ERGoat Wine Club, where players can feed, train, and battle their Ergoats, with the goal of reaching the top of the leaderboards. Screaming ERGoats are one-of-a-kind NFTs exclusive to the Ergo Blockchain. The third version of DigiGoats, DigiGoats V3, went live at the end of June and can be accessed on the ergoat.com website. The team is now working on their next project, Project Tesseract.",
+  "qa_pairs": [
+    {
+      "question": "What is DigiGoats?",
+      "answer": "DigiGoats is a unique and engaging game where players can feed, train, and battle their Ergoats."
+    },
+    {
+      "question": "What are Screaming ERGoats?",
+      "answer": "Screaming ERGoats are one-of-a-kind NFTs (Non-Fungible Tokens) that are exclusive to the Ergo Blockchain."
+    },
+    {
+      "question": "What is the current version of DigiGoats?",
+      "answer": "The third version of DigiGoats, known as DigiGoats V3, went live at the end of June."
+    },
+    {
+      "question": "Where can DigiGoats V3 be accessed?",
+      "answer": "DigiGoats V3 can be accessed at http://ergoat.com/digigoats."
+    },
+    {
+      "question": "What is the team's next project?",
+      "answer": "The team is now diligently working on their next project, Project Tesseract."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - DigiGoats\n  - Gaming\n  - NFT\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "DigiGoats",
+      "level": 1,
+      "content": "Developed by the Screaming ERGoat Wine Club, DigiGoats is a unique and engaging game where players can feed, train, and battle their Ergoats. The goal? To reach the top of the leaderboards! Screaming ERGoats are one-of-a-kind NFTs (Non-Fungible Tokens) that are exclusive to the Ergo Blockchain.\n\nThe third version of DigiGoats, known as DigiGoats V3, went live at the end of June and can be accessed [here](http://ergoat.com/digigoats). The team is now diligently working on their next project, [Project Tesseract](project-tesseract.md)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/digigoats.md",
+  "processed_at": "2025-05-11T19:43:27.326407",
+  "ai_processed": true
+}

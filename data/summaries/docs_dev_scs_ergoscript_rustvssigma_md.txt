@@ -1,0 +1,7 @@
+The document compares the `sigmastate-interpreter` and `sigma-rust` implementations of the ErgoTree interpreter, highlighting their origins, feature completeness, use cases, and development status. The key points are:
+
+`sigmastate-interpreter` is the original and more feature-complete implementation, designed within the Scala ecosystem and serving as the reference for ErgoScript evaluation. It is more mature, stable, and deeply integrated into the Ergo ecosystem.
+
+`sigma-rust` is a Rust-based port of `sigmastate-interpreter`, aiming to bring Rust's performance and safety benefits to the Ergo ecosystem. It is actively developed to achieve feature parity, but currently has some gaps compared to the original implementation.
+
+The choice between the two depends on the specific requirements, with `sigmastate-interpreter` being preferred for full ErgoScript support and `sigma-rust` being suitable for environments where Rust's strengths are advantageous, such as lightweight clients, mobile apps, and browser-based dApps.

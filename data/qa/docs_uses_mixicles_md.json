@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Mixicles?",
+    "answer": "Mixicles are a type of smart contract that uses data from an oracle to create a private contract between two or more parties."
+  },
+  {
+    "question": "What is the purpose of Mixicles?",
+    "answer": "Mixicles are designed to be used in situations where privacy is important, and where the terms of the contract are based on data that is provided by an external source."
+  },
+  {
+    "question": "How do Mixicles work?",
+    "answer": "Mixicles work by using the data provided by an oracle to trigger the execution of a smart contract, and the terms of the contract are then automatically enforced based on the data that is received from the oracle."
+  },
+  {
+    "question": "What is a use case for Mixicles?",
+    "answer": "A use case for Mixicles is in the area of supply chain management, where a company might use a Mixicle to create a private contract with a supplier based on data provided by an oracle about the quality and delivery of raw materials."
+  },
+  {
+    "question": "What are the benefits of Mixicles?",
+    "answer": "The benefits of Mixicles are that they offer a way to create private contracts that are based on trusted external data sources, without the need for intermediaries or third parties to oversee the transaction."
+  }
+]

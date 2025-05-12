@@ -1,0 +1,1 @@
+The document provides instructions on how to compile ErgoScript contracts into P2S (Pay-to-Script) addresses using the plutomonkey tool. It then demonstrates how to utilize the resulting P2S address within Rust code, showing an example of a simplified age USD bank contract. The approach can also be applied with JavaScript or TypeScript WASM (WebAssembly) bindings.

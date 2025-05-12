@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the first step in the full archival node technical workflow?",
+    "answer": "Send an ErgoSyncInfo message to connected peers."
+  },
+  {
+    "question": "What happens after receiving a response with an INV message containing block IDs?",
+    "answer": "Request headers for all the block IDs received."
+  },
+  {
+    "question": "What is done when a header is successfully applied to the history?",
+    "answer": "Request transaction ids from the block and, if not in the mempool, request the transaction."
+  },
+  {
+    "question": "What is done when a transaction is successfully applied to the mempool?",
+    "answer": "Broadcast INV for the transaction and get the headers with all transactions."
+  },
+  {
+    "question": "What is the final step in the workflow after obtaining the BlockTransactions?",
+    "answer": "Apply the BlockTransactions to the history and, if successful, broadcast INV for the BlockTransactions."
+  }
+]

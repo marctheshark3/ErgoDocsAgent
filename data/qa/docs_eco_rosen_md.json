@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary focus of Rosen Bridge?",
+    "answer": "Rosen Bridge is primarily focused on Ergo and allows users to seamlessly transfer coins and tokens between Ergo and any other compatible blockchain."
+  },
+  {
+    "question": "How does Rosen Bridge reduce the need for smart contracts on other chains?",
+    "answer": "Rosen Bridge eliminates the need for deploying and using smart contracts on the other chains by achieving consensus on any action on the Ergo platform through a group of entities known as Guards."
+  },
+  {
+    "question": "What are the key components of Rosen Bridge's architecture?",
+    "answer": "The architecture of Rosen Bridge comprises Watchers and Guards. Watchers are responsible for monitoring blockchain activities and reporting them to Guards, who then process these events and execute actions."
+  },
+  {
+    "question": "What is the role of the Rosen Token (RSN) in the Rosen Bridge ecosystem?",
+    "answer": "The Rosen Token (RSN) serves as a mechanism for sybil resistance, a system for fee distribution, and a means to access the services of the Rosen Bridge."
+  },
+  {
+    "question": "How can a project add new token options to the Rosen Bridge?",
+    "answer": "Projects can add new token options to the Rosen Bridge by paying a listing fee to the Rosen Fund, which involves minting wrapped tokens and updating the token map. Potential discounts are available for open-source projects."
+  }
+]

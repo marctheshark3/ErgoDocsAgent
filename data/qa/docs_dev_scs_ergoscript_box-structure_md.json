@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a 'box' in Ergo's ecosystem?",
+    "answer": "A box is a versatile container that holds various types of information (value, tokens, custom data, etc.), making Ergo's boxes highly flexible and functional."
+  },
+  {
+    "question": "What are the key fields that a 'Box' object encapsulates in ErgoScript?",
+    "answer": "A Box encapsulates the following key fields: 1) value, 2) propositionBytes, 3) tokens, and 4) R4..R9 registers."
+  },
+  {
+    "question": "How is a token represented in the 'tokens' array of a Box?",
+    "answer": "Each element in the 'tokens' array is a pair, structured as '(tokenId, amount)'. The 'tokenId' is a 32-byte array, and 'amount' is a 'Long' value."
+  },
+  {
+    "question": "What is the purpose of the script shown in the example?",
+    "answer": "The script checks if the 'tokenId' of the first token in the first output box matches the given base64-encoded string and if the amount of the token is 1."
+  },
+  {
+    "question": "How can the R4..R9 registers of a Box be used?",
+    "answer": "The R4..R9 registers of a Box are capable of storing any type of data, allowing for complex operations to be executed directly on the blockchain."
+  }
+]

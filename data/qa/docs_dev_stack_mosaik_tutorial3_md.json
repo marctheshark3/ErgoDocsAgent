@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Ergo Mosaik UI system?",
+    "answer": "Ergo Mosaik is a UI system for creating Ergo dApps."
+  },
+  {
+    "question": "How can you view the available Mosaik view elements and actions?",
+    "answer": "Start the backend-demo-kotlin subproject and desktop-demo:run, then navigate to localhost:8080 on the desktop demo to see the available view elements and actions."
+  },
+  {
+    "question": "What is the purpose of the backendRequest() action in Mosaik?",
+    "answer": "backendRequest() executes a POST request to the backend containing input values and expects a response with an action to run subsequently, enabling complex logic in the backend."
+  },
+  {
+    "question": "How does the changeView() action work in Mosaik?",
+    "answer": "changeView() contains a new mosaikView view content to attach to the current screen, where the new actions are added to the existing set and the view root replaces an existing view with the same id."
+  },
+  {
+    "question": "What are the differences between view elements, view groups, and view content in Mosaik?",
+    "answer": "A view element is a basic UI element, a view group is a container for view elements, and a view content defines the state of what Mosaik shows for the app."
+  }
+]

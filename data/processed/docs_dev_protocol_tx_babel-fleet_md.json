@@ -1,0 +1,103 @@
+{
+  "id": "docs_dev_protocol_tx_babel-fleet_md",
+  "title": "Babel Fees Plugin Documentation",
+  "summary": "The Babel Fees Plugin is a specialized extension for the Fleet SDK that simplifies the process of using Babel Fees within Ergo transactions. Babel Fees is a mechanism that allows users to pay transaction fees with tokens instead of ERG, which is particularly beneficial for those with limited or no ERG balances. The plugin automates the complex process of token-to-ERG conversion necessary for utilizing Babel Fees.\n\nThe key features of the plugin include transaction extension, Babel Box validation, contract script generation, and developer-friendly design. The plugin can be installed using npm and integrated into a transaction builder to pay for fees using tokens. The document also provides an API reference, details on box discovery and identification, and a step-by-step guide for minting a token, setting up a Babel Box, and utilizing the plugin within a web application.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Babel Fees Plugin?",
+      "answer": "The Babel Fees Plugin is designed to simplify the process of using Babel Fees within Ergo transactions, allowing users to pay transaction fees with tokens instead of ERG."
+    },
+    {
+      "question": "What are the key benefits of Babel Fees?",
+      "answer": "Babel Fees offer accessibility for users with limited or no ERG, flexibility in token choice for fee payments, and easier onboarding for new users to the Ergo ecosystem."
+    },
+    {
+      "question": "What are the key features of the Babel Fees Plugin?",
+      "answer": "The plugin provides a BabelSwapPlugin that integrates with the Fleet SDK's TransactionBuilder, offers utilities for validating Babel Boxes, includes functions for building and verifying Babel Fee contract scripts, and is designed to be developer-friendly."
+    },
+    {
+      "question": "How do you install the Babel Fees Plugin?",
+      "answer": "To install the plugin, you need to run `npm install @fleet-sdk/babel-fees-plugin` and also install the core Fleet SDK with `npm install @fleet-sdk/core`."
+    },
+    {
+      "question": "How do you use the Babel Fees Plugin to pay for transaction fees with tokens?",
+      "answer": "You can use the BabelSwapPlugin in the TransactionBuilder to add Babel Fees logic, specifying the Babel Box, token ID, and token amount to convert for ERG fees."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Babel Fees Plugin Documentation",
+      "level": 1,
+      "content": "The Babel Fees Plugin is a specialized extension for the Fleet SDK designed to simplify the process of using Babel Fees within Ergo transactions. Babel Fees is a mechanism that allows users to pay transaction fees with tokens instead of ERG, particularly beneficial for those with limited or no ERG balances. The plugin automates the complex process of token-to-ERG conversion necessary for utilizing Babel Fees. It integrates seamlessly into the Fleet SDK\u2019s transaction framework, enabling developers to build sophisticated transactions that don't require users to have a native ERG balance for transaction fee payments."
+    },
+    {
+      "heading": "What are Babel Fees?",
+      "level": 2,
+      "content": "At its core, [Babel Fees](babel-fees.md) is an Ergo protocol feature that enables users to pay transaction fees using a variety of tokens, rather than being restricted to using ERG. This is done by leveraging smart contracts which act as liquidity sources (called \u201cBabel Boxes\u201d) for token-to-ERG swaps. These contracts are set up by others who wish to provide this liquidity to users.\n\nBabel Fees offer key benefits:\n\n- **Accessibility**: Allows users with limited or no ERG to interact with the Ergo network.\n- **Flexibility**: Users can choose which tokens they want to use for paying fees.\n- **Onboarding**: Makes it easier for new users to join the ecosystem.\n\n---"
+    },
+    {
+      "heading": "Key Features",
+      "level": 2,
+      "content": "- **Transaction Extension**\n\n    - Provides a BabelSwapPlugin that seamlessly integrates with Fleet SDK's TransactionBuilder\n    - Modifies transaction inputs and outputs to incorporate Babel Fee logic\n\n- **Babel Box Validation**\n\n    - Offers utilities to validate the structure and parameters of Babel Boxes\n    - Ensures compliance with the Babel Fees protocol\n\n- **Contract Script Generation**\n\n    - Includes functions for building and verifying Babel Fee contract scripts (ErgoTree)\n\n- **Developer-Friendly**\n\n    - Supports ESM and CommonJS modules\n    - Tree-shakeable design for smaller bundle sizes\n---"
+    },
+    {
+      "heading": "Installation",
+      "level": 2,
+      "content": "To install the plugin, use the following commands in your project:\n\n```bash\nnpm install @fleet-sdk/babel-fees-plugin\n```\n\nThe core Fleet SDK is also required:\n```bash\nnpm install @fleet-sdk/core\n```\n\n**System Requirements**: Node.js version 18 or newer.\n\n---"
+    },
+    {
+      "heading": "Usage Example: Add Babel Fees to a Transaction",
+      "level": 2,
+      "content": "This example demonstrates how to pay for transaction fees using tokens with BabelSwapPlugin.\n\n\n```typescript\nimport { TransactionBuilder } from '@fleet-sdk/core';\nimport { BabelSwapPlugin } from '@fleet-sdk/babel-fees-plugin';\n\nconst tx = new TransactionBuilder(1000000) // Replace with current block height\n  .from(inputs) // Provide input boxes for the transaction\n  .extend(\n    BabelSwapPlugin(babelBox, {\n      tokenId: \"03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04\",\n      amount: \"50\" // The plugin converts this token amount into ERG to cover fees\n    })\n  )\n  .payMinFee() // Ensure the transaction includes the required network fee\n  .sendChangeTo(\"9hY16vzHmmfyVBwKeFGHvb2bMFsG94A1u7To1QWtUokACyFVENQ\") // Define the address for leftover funds after fee conversion\n  .build();\n\nconsole.log(tx);\n```\n\nExplanation:\n\n- The code initializes a `TransactionBuilder` with the current block height.\n- `from(inputs)` includes input boxes for the transaction.\n- `extend(BabelSwapPlugin(...))` adds the BabelSwapPlugin to the transaction. The plugin takes a Babel Box, token ID, and the token amount to convert for ERG fees.\n- `payMinFee()` ensures the inclusion of minimum required network fees.\n- `sendChangeTo(...)` defines the address for remaining funds after fee conversion.\n- `build()` finalizes the transaction object.\n\nThis example showcases how to use Babel Fees with the plugin without any direct ERG input from the user for transaction fees.\n\n---"
+    },
+    {
+      "heading": "**API Reference**",
+      "level": 2,
+      "content": "**Plugins**\n\n1.  **`BabelSwapPlugin(babelBox: Box<Amount>, token: { tokenId: string, amount: string }): TransactionExtension`**\n\n    *   **Description**: Extends the transaction to incorporate Babel Fees by converting the provided token into ERG needed for fees.\n    *   **Parameters**:\n        *   `babelBox`: A valid Babel Box containing tokens and ERG for conversion.\n        *   `token`: An object containing:\n            *   `tokenId`: The ID of the token to be used for fee conversion.\n            *   `amount`: The amount of tokens to use for the fee payment.\n    *   **Usage**:\n        ```typescript\n        BabelSwapPlugin(babelBox, {\n          tokenId: \"03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04\",\n          amount: \"50\"\n        });\n        ```"
+    },
+    {
+      "heading": "**Utility Functions**",
+      "level": 2,
+      "content": "1.  **`getTokenPrice(babelBox: Box<Amount>): bigint`**\n\n    *   **Description**: Calculates and returns the price of a single token unit in nanoERG based on a specific Babel Box.\n    *   **Example**:\n        ```typescript\n        const price = getTokenPrice(babelBox);\n        console.log(`Price per token: ${price}`);\n        ```\n\n2.  **`buildBabelContract(tokenId: string): string`**\n\n    *   **Description**: Generates the ErgoTree (contract script) for a Babel Box using a specified token ID.\n    *   **Usage**:\n         ```typescript\n          const contract = buildBabelContract(tokenId);\n         ```\n\n3.  **`isValidBabelBox(box: Box<Amount>): boolean`**\n\n    *   **Description**: Determines if a given box is a valid Babel Box.\n    *   **Usage**:\n        ```typescript\n        const isValid = isValidBabelBox(myBox);\n        if (isValid) {\n            console.log('This is a valid babel box');\n        }\n        ```\n\n4.  **`extractTokenIdFromBabelContract(ergoTree: string): string`**\n\n    *   **Description**: Extracts the token ID from a Babel Fee contract script (ErgoTree).\n    *   **Usage**:\n        ```typescript\n        const tokenId = extractTokenIdFromBabelContract(ergoTree);\n        ```\n\n5.  **`isBabelContractForTokenId(ergoTree: string, tokenId: string): boolean`**\n\n    *   **Description**: Validates if an ErgoTree matches the Babel Fee contract for a specific token ID.\n    *   **Usage**:\n        ```typescript\n        const isForToken = isBabelContractForTokenId(ergoTree, tokenId);\n        ```\n---"
+    },
+    {
+      "heading": "Box Discovery and Identification",
+      "level": 2,
+      "content": "A Babel Box is a container that holds a specified token and associated ERG. This combination allows the plugin to determine the conversion rate between tokens and ERG. The plugin references the Babel Box when it performs token-to-ERG conversions.\n\nThe hexadecimal representation of the Babel Fees contract:\n```\n100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202\n```\n\nReplace `{tokenId}` with the target token ID. Use the resulting ErgoTree to discover Babel Boxes through the Ergo platform API:\n\n`https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/{ErgoTree}`\n\n**Example of Fetching a Babel Box:**\n\n```typescript\nconst fetchBabelBox = async (ergoTree: string) => {\n  try {\n    const response = await fetch(`https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/${ergoTree}`);\n    const json = await response.json();\n    return json.items[0]; // Returns the first Babel Box found\n  } catch (error) {\n    console.error(\"Error fetching Babel Box:\", error);\n    return null;\n  }\n};\n```\n\nThis snippet uses the Ergo API to locate and return a Babel Box. Developers supply an ErgoTree string, and the function queries the blockchain to find a box that matches. The returned Babel Box can then serve as the liquidity source for token-to-ERG conversions in transactions.\n\n---"
+    },
+    {
+      "heading": "Step-by-Step",
+      "level": 2,
+      "content": "For a detailed guide on how to mint a token, set up a Babel Box, and utilize the plugin within a web application, refer to [this guide](http://147.182.244.219/ergobabelfees.html).\n\n\n---"
+    },
+    {
+      "heading": "Development Insights",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Key Updates from `CHANGELOG.md`",
+      "level": 3,
+      "content": "- **Validation Enhancements**:\n\n    - Introduced type validation for Babel Box fields (`R4`, `R5`) in version `0.1.16`. This ensures that boxes meet strict requirements.\n\n- **Module Export Fixes**:\n\n     - Adjusted the ESM and CommonJS exports in version `0.1.10` to prevent issues with package imports."
+    },
+    {
+      "heading": "Package Metadata",
+      "level": 3,
+      "content": "- **Version**: `0.1.18`\n- **Dependencies**:\n\n    - `@fleet-sdk/core`  \n    - `@fleet-sdk/common`  \n    - `@fleet-sdk/serializer`  \n      \n- **Environment**:\n\n    - Requires Node.js 18 or newer.\n\n---"
+    },
+    {
+      "heading": "Reference Implementations",
+      "level": 2,
+      "content": "* [Implementing Ergo Babel Fees with Fleet-SDK - May 17, 2024](http://147.182.244.219/ergobabelfees.html)\n* [Nautilus Wallet implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/82)\n* [AppKit implementation](https://github.com/ergoplatform/ergo-appkit/pull/204)\n* [Fleet SDK Babel fees plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)"
+    },
+    {
+      "heading": "Additional Resources",
+      "level": 2,
+      "content": "- **Fleet SDK Documentation**: [Fleet SDK Babel Fees Plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)\n- **Ergo Platform API**: [Ergo API Documentation](https://api.ergoplatform.com/api/v1/docs/)\n- **EIP-0031 Specification**: [Ergo Babel Fees EIP](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/tx/babel-fleet.md",
+  "processed_at": "2025-05-11T19:25:41.685829",
+  "ai_processed": true
+}

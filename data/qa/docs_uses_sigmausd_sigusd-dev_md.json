@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Mosaik and how can it be used to interact with SigmaUSD?",
+    "answer": "Mosaik is a lightweight framework for building decentralized applications on Ergo. It provides an intuitive way to access and interact with SigmaUSD through the AgeUsdService.kt class, which manages key operations such as fetching the current state of the AgeUSD bank and calculating exchange rates for SigmaUSD and SigmaRSV."
+  },
+  {
+    "question": "How can AppKit be used to interact with the SigmaUSD contract?",
+    "answer": "AppKit is a comprehensive framework for interacting with Ergo smart contracts and UTXO management. It can be used to create transactions, manage UTXOs, and sign transactions before submitting them to the Ergo network to interact with the SigmaUSD contract."
+  },
+  {
+    "question": "What are the key steps involved in using AppKit to interact with SigmaUSD?",
+    "answer": "The key steps are: 1) Set up an Ergo node and install the necessary dependencies. 2) Use the AppKit API to create transactions, manage UTXOs, and sign transactions before submitting them to the Ergo network."
+  },
+  {
+    "question": "What are the source files mentioned in the document for accessing SigmaUSD through Mosaik and AppKit?",
+    "answer": "For Mosaik, the source files are AgeUsdService.kt and AgeUsdController.kt. For AppKit, the source files are the examples and documentation available in the ergo-appkit repository."
+  },
+  {
+    "question": "What are the key operations that the AgeUsdService.kt class in Mosaik can perform?",
+    "answer": "The AgeUsdService.kt class can fetch the current state of the AgeUSD bank and calculate exchange rates for SigmaUSD and SigmaRSV."
+  }
+]

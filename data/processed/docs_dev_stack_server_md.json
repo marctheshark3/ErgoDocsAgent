@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_stack_server_md",
+  "title": "Server",
+  "summary": "The document discusses server-side development for blockchain applications. It explains that developers can use various tools to read data from the blockchain, compute using that data, and create transactions to be broadcast. The document lists several platforms that developers can use, including JVM, Rust, Node.js, Python, and Mosaik (a UI system for dApps). It also mentions a specific tool called the JSON dApp Environment.",
+  "qa_pairs": [
+    {
+      "question": "What tools can developers use to interact with the blockchain?",
+      "answer": "Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast."
+    },
+    {
+      "question": "What programming languages can developers use to build blockchain applications?",
+      "answer": "Each tool requires the developer to program in some language, such as JVM, Rust, Node.js, or Python."
+    },
+    {
+      "question": "What is Mosaik?",
+      "answer": "Mosaik is a UI system for dApps."
+    },
+    {
+      "question": "What is the JSON dApp Environment?",
+      "answer": "The JSON dApp Environment is a tool for building blockchain applications."
+    },
+    {
+      "question": "What are the key platforms mentioned for building blockchain applications?",
+      "answer": "The key platforms mentioned are JVM, Rust, Node.js, and Python."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Server",
+      "level": 1,
+      "content": "Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast. Each tool requires the developer to program in some language."
+    },
+    {
+      "heading": "Platforms",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"JVM\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"Rust\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"../lang/rust.md\"\n\n  },\n  {\n    \"title\": \"Node.js\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lang/js.md\"\n  },\n  {\n    \"title\": \"Python\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/python.png\",\n    \"url\": \"../lang/python.md\"\n  },\n  {\n    \"title\": \"Mosaik\",\n    \"content\": \"UI system for dApps\",\n    \"image\": \"../../assets/img/dev-grid/mosaik.png\",\n    \"url\": \"mosaik/intro.md\"\n  },\n\n\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Tools",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"JSON dApp Environment\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/json.png\",\n    \"url\": \"jde.md\"\n  }\n\n\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/server.md",
+  "processed_at": "2025-05-11T19:36:29.032587",
+  "ai_processed": true
+}

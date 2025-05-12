@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of Merkle Batch Proofs in Ergo?",
+    "answer": "Merkle Batch Proofs can enhance efficiency in various blockchain operations, such as proof-of-transaction and securing extension block data."
+  },
+  {
+    "question": "What library provides support for Merkle Trees and Batch Proofs in Ergo?",
+    "answer": "The `sigma-rust` library provides comprehensive tools to create, manage, and verify Merkle Batch Proofs in Rust-based Ergo applications."
+  },
+  {
+    "question": "What are the steps to set up the environment for working with Merkle Batch Proofs in `sigma-rust`?",
+    "answer": "The steps are: 1. Clone the `sigma-rust` repository, 2. Install Rust, and 3. Build the project."
+  },
+  {
+    "question": "How do you create a Merkle Tree using the `sigma-rust` library?",
+    "answer": "You create a Merkle Tree using the `MerkleTree` structure provided by the `sigma-rust` library, and pass in a vector of `MerkleNode` instances."
+  },
+  {
+    "question": "Where can you find the implementation of the `MerkleTree` structure in the `sigma-rust` library?",
+    "answer": "The `MerkleTree` structure is implemented in the `merkletree.rs` file of the `sigma-rust` library."
+  }
+]

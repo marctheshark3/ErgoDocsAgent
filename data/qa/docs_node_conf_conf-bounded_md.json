@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the mailbox type specified in the configuration?",
+    "answer": "The mailbox type specified is 'akka.dispatch.NonBlockingBoundedMailbox'."
+  },
+  {
+    "question": "What is the purpose of the 'bounded-mailbox' configuration?",
+    "answer": "The 'bounded-mailbox' configuration helps control the load on the actor system by limiting the number of unprocessed messages an actor can receive, preventing it from becoming overwhelmed."
+  },
+  {
+    "question": "What is the mailbox capacity set in the configuration?",
+    "answer": "The mailbox capacity is set to 5000 messages."
+  },
+  {
+    "question": "What are the key features of the 'NonBlockingBoundedMailbox' type?",
+    "answer": "The 'NonBlockingBoundedMailbox' type provides a capacity-constrained, non-blocking, and thread-safe message queue for actors."
+  },
+  {
+    "question": "How does the 'bounded-mailbox' configuration contribute to the resilience and stability of the actor system?",
+    "answer": "The 'bounded-mailbox' configuration helps ensure the resilience and stability of the actor system by preventing actors from becoming overwhelmed with unprocessed messages."
+  }
+]

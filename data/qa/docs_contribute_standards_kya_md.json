@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the KYA (Know Your Assumptions) model in the Ergo ecosystem?",
+    "answer": "The Ergo ecosystem embraces the KYA (Know Your Assumptions) model, promoting transparency and user awareness regarding the assumptions made when interacting with decentralized finance (DeFi) protocols."
+  },
+  {
+    "question": "What is the research paper 'KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi' about?",
+    "answer": "The research paper 'KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi' explores key assumptions underlying blockchain and DeFi protocols, highlighting their impact on security, decentralization, and risk management."
+  },
+  {
+    "question": "What are the key areas covered by KYA prompts in the Ergo ecosystem?",
+    "answer": "KYA prompts cover security assumptions, economic assumptions, user responsibilities, external dependencies, and transparency."
+  },
+  {
+    "question": "Which Ergo project has adopted KYA prompts to help users assess critical assumptions?",
+    "answer": "Projects like SigmaFi have adopted KYA prompts, helping users assess critical assumptions and understand the underlying technology."
+  },
+  {
+    "question": "What are the unique set of assumptions that Ergo builds on to ensure a scalable and secure system?",
+    "answer": "Ergo builds on Bitcoin's security with its own unique set of assumptions to ensure a scalable and secure system."
+  }
+]

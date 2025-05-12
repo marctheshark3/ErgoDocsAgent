@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of an ICO contract on Ethereum?",
+    "answer": "An ICO contract provides a mechanism for a project to collect funding (often in stablecoins or the platform's native token) and then issue project \"shares\" (in the form of new tokens) to investors."
+  },
+  {
+    "question": "What are the three main stages of an ICO contract on Ergo?",
+    "answer": "The three stages are: Funding, Issuance, and Withdrawal."
+  },
+  {
+    "question": "How does Ergo handle large datasets in its contracts, unlike Ethereum?",
+    "answer": "Ergo utilizes authenticated data structures like AVL trees to store a compact digest (e.g., ~33 bytes for an AvlTree) representing the root hash and state of a potentially vast (key, value) dictionary."
+  },
+  {
+    "question": "What are the key actions performed by the Issuance stage of the ICO contract?",
+    "answer": "The Issuance stage updates the AVL Tree flags, verifies the token issuance, transitions to the Withdrawal script, and checks the outputs."
+  },
+  {
+    "question": "What are the two types of AVL tree proofs required by the Withdrawal script?",
+    "answer": "The Withdrawal script requires a lookup proof to prove the existence and amounts associated with the investor keys being withdrawn, and a remove proof to prove that these investor entries have been correctly removed from the dictionary."
+  }
+]

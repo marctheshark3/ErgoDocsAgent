@@ -1,0 +1,73 @@
+{
+  "id": "docs_dev_stack_headless_modules_md",
+  "title": "modules.md",
+  "summary": "The document \"modules.md\" provides an overview of the key modules in the Ergo Headless dApp Framework. It covers the following:\n\nBox Spec: Explains the BoxSpec struct for defining UTXO specifications used in smart contract protocols.\n\nBox Traits: Describes the WrappedBox, SpecifiedBox, and ExplorerFindable traits for interacting with ErgoBoxes.\n\nSpecified Boxes: Outlines the currently implemented specified boxes like ErgsBox, ErgUsdOraclePoolBox, and AdaUsdOraclePoolBox.\n\nOutput Builders: Introduces output builder structs like ChangeBox, TokensChangeBox, and TxFeeBox for creating common output UTXOs.\n\nTx Creation: Mentions functions for building UnsignedTransactions.\n\nEncoding: Explains utility functions for converting between different data formats.\n\nProcedural Macros: Describes the WrapBox, SpecBox, and WASMBox macros for simplifying box-related code.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the BoxSpec struct?",
+      "answer": "The BoxSpec struct allows you to create a specification of a UTXO, which is used for defining the boxes required for the actions of your protocol."
+    },
+    {
+      "question": "What are the key features of the WrappedBox, SpecifiedBox, and ExplorerFindable traits?",
+      "answer": "WrappedBox provides a simplified interface for interacting with ErgoBoxes, SpecifiedBox specifies that a WrappedBox also implements a BoxSpec, and ExplorerFindable provides an interface for finding boxes that match the BoxSpec from an Ergo Explorer API instance."
+    },
+    {
+      "question": "What are the currently implemented Specified Boxes?",
+      "answer": "The currently implemented Specified Boxes are ErgsBox, ErgUsdOraclePoolBox, and AdaUsdOraclePoolBox."
+    },
+    {
+      "question": "How can you read the current Erg-USD oracle pool rate using the ErgUsdOraclePoolBox?",
+      "answer": "You can read the current Erg-USD oracle pool rate in 4 lines of code by using the ErgUsdOraclePoolBox and interacting with the Ergo Explorer API."
+    },
+    {
+      "question": "What are the example Output Builders provided in the module?",
+      "answer": "The example Output Builders provided are ChangeBox, TokensChangeBox, and TxFeeBox."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Modules Of The Ergo Headless dApp Framework",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Box Spec",
+      "level": 3,
+      "content": "This module exposes the `BoxSpec` struct, which allows you to create a specification of a UTXO. This is used for defining the boxes which are required for the actions of your protocol.\n\n```rust\n/// A specification which specifies parameters of an `ErgoBox`.\n/// This spec is used as a \"source of truth\" to both verify and find\n/// `ErgoBox`es which match the spec. This is often used for defining\n/// Stages in multi-stage smart contract protocols, but can also be used\n/// to define input boxes for Actions.\n/// All fields are wrapped in `Option`s to allow ignoring specifying\n/// the field.\n#[wasm_bindgen]\n#[derive(Clone)]\npub struct BoxSpec {\n    /// The address of the box\n    address: Option<ErgoAddressString>,\n    /// The allowed range of nanoErgs\n    value_range: Option<Range<NanoErg>>,\n    /// A sorted list of `Constant`s which define registers\n    /// of an `ErgoBox`.\n    /// First element is treated as R4, second as R5, and so on.\n    registers: Vec<Option<Constant>>,\n    /// A sorted list of `TokenSpec`s which define tokens\n    /// of an `ErgoBox`.\n    tokens: Vec<Option<TokenSpec>>,\n    /// An optional predicate which allows for defining custom\n    /// specification logic which gets processed when verifying\n    /// the box.\n    predicate: Option<fn(&ErgoBox) -> bool>,\n}\n```\n\nOnce you've constructed a `BoxSpec`, you have a number of essential methods that simplify the experience of writing off-chain code for dApps.\n\nFor example, `verify_box` allows you to test whether an `ErgoBox` you provide as input matches the specification you created with your `BoxSpec`.\n\n```rust\npub fn verify_box(&self, ergo_box: &ErgoBox) -> Result<()> {\n```"
+    },
+    {
+      "heading": "Box Traits",
+      "level": 3,
+      "content": "This module exposes two traits:\n\n1. `WrappedBox`\n2. `SpecifiedBox`\n3. `ExplorerFindable`\n\nAll `ExplorerFindable` structs are also `SpecifiedBox`es which are all `WrappedBox`es. In your off-chain code you will be defining all of your inputs UTXOs to actions as structs that implement `SpecifiedBox`, while automatically deriving `WrappedBox` and `ExplorerFindable` without any extra work.\n\n`WrappedBox`es provide a simplified interface for interacting with `ErgoBox`es. `SpecifiedBox`es on the other hand specify that a given `WrappedBox` also implements a `BoxSpec` via the `box_spec()` method. And lastly `ExplorerFindable` provides an interface on top of the `SpecifiedBox` trait for finding boxes that match the `BoxSpec` from an Ergo Explorer API instance."
+    },
+    {
+      "heading": "Specified Boxes",
+      "level": 3,
+      "content": "This module exposes generic \"Specified Box\" structs that implement the `SpecifiedBox`/`WrappedBox`/`ExplorerFindable` traits. These boxes can be used as inputs for Actions in your off-chain protocol code, while also enabling front-end devs to easily gain access to on-chain data, such as Oracle Pool data.\n\nCurrently Implemented Specified Boxes:\n1. ErgsBox\n2. ErgUsdOraclePoolBox\n3. AdaUsdOraclePoolBox\n\n`ErgsBox` are used for acquiring inputs that hold Ergs inside of them which can be used within your smart contract protocol actions.\n\n`ErgUsdOraclePoolBox` & `AdaUsdOraclePoolBox` provide an extremely simplified interface for both headless dApp developers as well as front-end implementors to utilize data from the two currently running Oracle Pools. These two specified boxes can even be used by wallets/any off-chain application that needs to read the current rates from the Oracle Pool boxes.\n\nThe code block below shows how in 4 lines you can read the current Erg-USD oracle pool rate from your preferred Ergo Explorer API instance:\n\n```rust\nlet url = ErgUsdOraclePoolBox::explorer_endpoint(\"https://api.ergoplatform.com/api\").unwrap();\nlet response = get(&url).unwrap().text().unwrap();\nlet oracle_pool_box =\n    ErgUsdOraclePoolBox::process_explorer_response(&response).unwrap()[0].clone();\nprintln!(\n    \"Erg-USD Oracle Pool: {} nanoErgs per USD\",\n    oracle_pool_box.datapoint()\n);\n```"
+    },
+    {
+      "heading": "Output Builders",
+      "level": 3,
+      "content": "This module exposes structs which provide you with a basic interface\nfor creating common output UTXOs within your Actions. These are often\nused for creating outputs that hold a user's change or pay a tx fee.\n\nExample Output Builders:\n1. ChangeBox\n2. TokensChangeBox\n3. TxFeeBox"
+    },
+    {
+      "heading": "Tx Creation",
+      "level": 3,
+      "content": "This module exposes a few basic functions for making your life easier when building `UnsignedTransaction`s inside of your Actions."
+    },
+    {
+      "heading": "Encoding",
+      "level": 3,
+      "content": "This module exposes a number of helpful functions related to encoding/decoding/wrapping/unwrapping values from one form into another.\n\nExamples:\n\n```rust\npub fn erg_to_nano_erg(erg_amount: f64) -> u64;\npub fn nano_erg_to_erg(nanoerg_amount: u64) -> f64;\npub fn unwrap_long(c: &Constant) -> Result<i64>;\npub fn serialize_p2s_from_ergo_tree(ergo_tree: ErgoTree) -> P2SAddressString;\n```"
+    },
+    {
+      "heading": "Procedural Macros",
+      "level": 3,
+      "content": "This crate exposes three procedural macros to make the life of devs much simpler:\n\n1. WrapBox\n2. SpecBox\n3. WASMBox\n\n`WrapBox` simply implements the `WrappedBox` trait for you, `SpecBox` implements a customized `new()` method that uses your `BoxSpec` + implements the `ExplorerFindable` trait for you, and `WASMBox` implements the two basic required methods to enable WASM support for your struct (`w_new()` and `w_box_struct()`)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/headless/modules.md",
+  "processed_at": "2025-05-11T19:35:12.481029",
+  "ai_processed": true
+}

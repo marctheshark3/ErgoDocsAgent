@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the unique feature of Ergo's smart contracts that allows referencing UTXOs without spending them?",
+    "answer": "Ergo introduces the concept of data inputs, which allow referencing UTXOs in transactions without spending them."
+  },
+  {
+    "question": "How do global context claims on Ergo leverage data inputs to enable claims about the entire Ergo system?",
+    "answer": "Global context claims on Ergo use data inputs to allow smart contracts to specify conditions that require the existence of particular UTXOs, proving claims about the global state of the Ergo blockchain."
+  },
+  {
+    "question": "What is the role of monetary incentives and verification in Ergo's global context claims?",
+    "answer": "Ergo allows including rewards in smart contracts to incentivize users to validate and prove global context claims by scanning the UTXO set and finding UTXOs that satisfy the claim's conditions."
+  },
+  {
+    "question": "What is the concept of context data accumulators in Ergo, and how do they enable practical use cases?",
+    "answer": "Context data accumulators in Ergo can apply arbitrary functions to the accumulated data from relevant boxes, enabling use cases such as accurate calculation of funds in a DeFi liquidity pool."
+  },
+  {
+    "question": "How do context data accumulators contribute to the scalability and efficiency of Ergo's smart contracts?",
+    "answer": "Context data accumulators can be used to checkpoint the state of the Ergo blockchain, allowing users to parallelize actions within dApps while contributing to a global shared core state, with potential integration with sharding or side-chains to scale smart contracts efficiently."
+  }
+]

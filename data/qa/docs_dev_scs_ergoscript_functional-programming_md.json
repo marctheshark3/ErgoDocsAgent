@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Functional Programming in ErgoScript\n\nFunctional programming is a significant part of ErgoScript's capabilities. The next examples demonstrate the application of functional features in ErgoScript. C..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Functional Programming in ErgoScript"
+  },
+  {
+    "question": "What is the 'Functional Programming in ErgoScript' section about?",
+    "answer": "Functional programming is a significant part of ErgoScript's capabilities. The next examples demonst..."
+  }
+]

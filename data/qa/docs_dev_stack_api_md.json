@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main APIs provided by Ergo?",
+    "answer": "[\"Node API\", \"Explorer API v1\", \"Ergo.Watch API\", \"TokenJay API\", \"Spectrum API\", \"SkyHarbor API\"]"
+  },
+  {
+    "question": "What functionalities does the Node API provide?",
+    "answer": "The Node API provides comprehensive access to Ergo node functionalities, including blockchain data retrieval, transaction submission, wallet management, and more."
+  },
+  {
+    "question": "What information can be accessed through the Explorer API?",
+    "answer": "The Explorer API allows users to explore the Ergo blockchain and retrieve information about blocks, transactions, addresses, and other relevant data."
+  },
+  {
+    "question": "What does the Ergo.Watch API provide access to?",
+    "answer": "The Ergo.Watch API provides access to various data and metrics related to the Ergo blockchain."
+  },
+  {
+    "question": "What functionalities are provided by the Spectrum API?",
+    "answer": "The Spectrum API provides several endpoints for different functionalities related to Automated Market Makers (AMM), price tracking, liquidity mining (LM), history, and more."
+  }
+]

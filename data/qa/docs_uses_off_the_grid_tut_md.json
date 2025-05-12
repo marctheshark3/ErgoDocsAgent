@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Off-the-Grid Ergo Trading Bot?",
+    "answer": "The Off-the-Grid Ergo Trading Bot is a decentralized grid trading bot for the Ergo blockchain."
+  },
+  {
+    "question": "What are the key features of the Off-the-Grid Ergo Trading Bot?",
+    "answer": "The key features include secure contract-based trading, off-chain bots for order tracking and execution, and compatibility with Spectrum AMM for liquidity matching."
+  },
+  {
+    "question": "What are the prerequisites for setting up the Off-the-Grid Ergo Trading Bot?",
+    "answer": "The prerequisites include knowledge of the Ergo blockchain and grid trading strategies, familiarity with Rust programming and CLI tools, and a configured Ergo node and wallet."
+  },
+  {
+    "question": "How do you clone and build the Off-the-Grid Ergo Trading Bot repository?",
+    "answer": "To clone and build the repository, you can either use Nix (recommended for simplicity) or Cargo."
+  },
+  {
+    "question": "What are the limitations of the Off-the-Grid Ergo Trading Bot?",
+    "answer": "The limitations include the contracts not being audited, and profits not being guaranteed due to market risks."
+  }
+]

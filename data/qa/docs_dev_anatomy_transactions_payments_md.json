@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main difference between ErgoPay and web dApp connectors?",
+    "answer": "ErgoPay can connect any wallet with any dApp, while a web dApp connector is limited to web extension wallets and website dApps."
+  },
+  {
+    "question": "What is the limitation of a web dApp connector?",
+    "answer": "A web dApp connector can only connect processes living in the same web browser."
+  },
+  {
+    "question": "Why must a dApp developer run part of their logic on a server?",
+    "answer": "Because the dApp developer may not know which type of wallet application will connect to their dApp."
+  },
+  {
+    "question": "What are the benefits of running some code on the backend for a website dApp?",
+    "answer": "On the backend, the dApp developer is not restricted to using JavaScript or its derivatives and can choose the language and framework that best suits their needs."
+  },
+  {
+    "question": "Does running code on the backend necessarily complicate things for the dApp developer?",
+    "answer": "No, running some code on the backend does not necessarily complicate things for the dApp developer."
+  }
+]

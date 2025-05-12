@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_ergowell_md",
+  "title": "ErgoWell",
+  "summary": "ErgoWell is a project designed for crowdfunding investments. Investors can search for and invest in attractive projects, earning interest and rewards. Venture owners can also use ErgoWell to raise funds through crowdfunding.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoWell?",
+      "answer": "ErgoWell is a project meant to be used for investing in ventures trying to raise money through crowdfunding."
+    },
+    {
+      "question": "What can investors do on ErgoWell?",
+      "answer": "As an investor, you can search and find attractive projects, invest in them, and receive interest and rewards."
+    },
+    {
+      "question": "What can venture owners do on ErgoWell?",
+      "answer": "You can raise money for your project through crowdfunding as a venture owner."
+    },
+    {
+      "question": "What type of project is ErgoWell?",
+      "answer": "ErgoWell is a dApp (decentralized application)."
+    },
+    {
+      "question": "What are the key features of ErgoWell?",
+      "answer": "ErgoWell allows for investing in crowdfunding projects and raising money through crowdfunding."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoWell\n  - Crowdfunding\n  - Investing\n  - dApp\n---"
+    },
+    {
+      "heading": "ErgoWell",
+      "level": 1,
+      "content": "[ErgoWell](https://github.com/mhssamadani/ErgoWell) is a project meant to be used for investing in ventures trying to raise money through crowdfunding. As an investor, you can search and find attractive projects, invest in them, and receive interest and rewards. You can raise money for your project through crowdfunding as a venture owner."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/ergowell.md",
+  "processed_at": "2025-05-11T19:44:33.215780",
+  "ai_processed": true
+}

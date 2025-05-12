@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the core functionality of ZeroJoin?",
+    "answer": "ZeroJoin's core functionality is based on cryptographic proofs that allow participants to mix their tokens with those of others, effectively breaking the link between the sender and receiver to increase privacy and security."
+  },
+  {
+    "question": "What are the two key \u03a3-protocols used in ZeroJoin?",
+    "answer": "The two key \u03a3-protocols used in ZeroJoin are: 1) ProveDlog(u) and 2) ProveDHTuple(g, h, u, v)."
+  },
+  {
+    "question": "How does the step-by-step ZeroJoin process work?",
+    "answer": "The ZeroJoin process operates in four steps: 1) Commitment, 2) Challenge, 3) Response, and 4) Verification."
+  },
+  {
+    "question": "How does ZeroJoin achieve privacy?",
+    "answer": "ZeroJoin achieves privacy by combining multiple users' transactions in a single mixing pool, which breaks the link between a particular input and output, making it difficult for an observer to trace a transaction back to its origin."
+  },
+  {
+    "question": "How does the size of the anonymity set affect the privacy guarantees in ZeroJoin?",
+    "answer": "The larger the number of participants in a mix, the better the overall anonymity and obfuscation, as a small set of participants may not provide significant privacy guarantees."
+  }
+]

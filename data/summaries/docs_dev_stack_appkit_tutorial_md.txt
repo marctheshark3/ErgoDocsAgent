@@ -1,0 +1,8 @@
+This document is a tutorial on using the Ergo Appkit library for developing Ergo blockchain applications in Java. It covers the following key points:
+
+- Introduction to the Ergo Appkit library and its features, including the ability to easily send transactions to an Ergo node programmatically.
+- A step-by-step example of creating a simple console application called FreezeCoin that uses the Appkit library to send a transaction with a custom Ergo contract.
+- Explanation of the Freezer contract used in the example, which locks funds until a specified block height is reached and the transaction is signed by the owner.
+- Details on setting up the development environment, including installing GraalVM and configuring the Appkit library.
+- Comparison of running the Java-based FreezeCoin application using the standard JVM versus compiling it to a native executable using GraalVM, demonstrating the performance benefits of the native approach.
+- Overview of Ergo Appkit's support for polyglot programming, allowing the development of Ergo applications in languages like JavaScript, Python, and Ruby.

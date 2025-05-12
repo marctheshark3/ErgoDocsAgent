@@ -1,0 +1,98 @@
+{
+  "id": "docs_dev_stack_introduction_md",
+  "title": "Resources",
+  "summary": "The document \"Resources\" provides a comprehensive overview of the Ergo blockchain ecosystem, including key features, anatomy, development frameworks, libraries, utilities, and simple examples. It covers introductory materials, overview articles, development-focused articles and courses, as well as various frameworks and tools for building applications on the Ergo platform. The document aims to serve as a central resource for developers interested in exploring and building on the Ergo blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What are the key features of the Ergo blockchain?",
+      "answer": "The key features of Ergo include its anatomy (boxes, registers, and more), the Sigmaverse (the Ergo dApp universe), and the Ergo testnet for experimentation."
+    },
+    {
+      "question": "Where can developers find resources to learn about building on the Ergo blockchain?",
+      "answer": "Developers can find resources to learn about building on Ergo through the Ergo documentation, including articles on introductory blockchain concepts, development tutorials, and online courses."
+    },
+    {
+      "question": "What is the Sigmaverse and how can developers interact with it?",
+      "answer": "The Sigmaverse is the portal to the Ergo dApp universe, where developers can access and build applications on the Ergo blockchain."
+    },
+    {
+      "question": "How can developers get support and participate in the Ergo community?",
+      "answer": "Developers can join the Ergo Discord server for dev-support and participate in regular Hackathons, or search the chats without logging in via the Linen platform."
+    },
+    {
+      "question": "What is the purpose of the Ergo testnet?",
+      "answer": "The Ergo testnet is an alternative blockchain that developers can use for experimentation and testing before deploying their applications on the main Ergo network."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Resources",
+      "level": 1,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Key Features\",\n    \"content\": \"Discover Ergo's key features\",\n    \"image\": \"../../assets/img/dev-grid/key.png\",\n    \"url\": \"../../node/protocol.md\"\n  },\n  {\n    \"title\": \"Anatomy\",\n    \"content\": \"Dive into boxes, registers and more in the anatomy of Ergo.\",\n    \"image\": \"../../assets/img/dev-grid/anatomy.png\",\n    \"url\": \"../data-model/box.md\"\n\n  },\n  {\n    \"title\": \"\ud83d\udd17 Sigmaverse\",\n    \"content\": \"Your portal to the Ergo dApp universe.\",\n    \"image\": \"../../assets/img/dev-grid/sigmaverse.svg\",\n    \"url\": \"https://sigmaverse.io\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Come chat!\",\n    \"content\": \"Join the action on Discord\",\n    \"image\": \"../../assets/img/dev-grid/discord.png\",\n    \"url\": \"https://discord.gg/Q86PNMwRsu\"\n  },\n  {\n    \"title\": \"Testnet\",\n    \"content\": \"An alternative blockchain you can use for experimentation\",\n    \"image\": \"../../assets/img/dev-grid/testnet.png\",\n    \"url\": \"../../node/testnet.md\"\n  },\n  {\n    \"title\": \"Read our FAQ\",\n    \"content\": \"Frequently asked questions.\",\n    \"image\": \"../../assets/img/dev-grid/faq.png\",\n    \"url\": \"../../faq.md\"\n  }\n]\n\n::/cards::\n\nJoin our [Discord server](https://discord.gg/7kWWQeMCwe) dev-support (and regular [Hackathons](ergohack.md)). Alternatively you can search the chats without logging in via [linen.../d/ergo](https://www.linen.../d/ergo)."
+    },
+    {
+      "heading": "Introductory",
+      "level": 2,
+      "content": "General materials not specific to ErgoScript or a particular section of development are categorised below."
+    },
+    {
+      "heading": "Overview Articles",
+      "level": 3,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Blockchain for Beginners: What is a Blockchain?\",\n    \"url\": \"https://medium.com/@ergoplatform/blockchain-for-beginners-what-is-a-blockchain-23f3b66f7c62\"\n  },\n  {\n    \"title\": \"Finding Freedom with Ergo\",\n    \"url\": \"https://sujectiveobjectivity.substack.com/p/finding-freedom-with-ergo\"\n\n  },\n  {\n    \"title\": \"ERGO Deep Dive: The Road to Top 10 Cryptocurrency\",\n    \"url\": \"https://thecryptodrip.com/ergo-deep-dive/\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Dev-Articles",
+      "level": 3,
+      "content": "Need help figuring out where to start developing? This [introduction to Mosaik](intro.md) provides a brief overview of some of the design decisions you'll need to make when creating your application. \n\n::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udd17 Learning blockchains like Cardano and Ergo\",\n    \"url\": \"https://www.youtube.com/watch?v=HDn49bToTMI\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Side tooling for building dApps on Ergo\",\n    \"url\": \"https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826\"\n\n  },\n  {\n    \"title\": \"\ud83d\udd17 DeCo Education: DApp Components - Backend\",\n    \"url\": \"https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Courses",
+      "level": 3,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udd17 DeCo Laymens Course\",\n    \"content\": \"Discover Ergo's key features\",\n    \"url\": \"https://www.youtube.com/watch?v=SAWeW6wajEw&list=PLopsKGshj0B6C1mg6RpDsj0rhYxam3_RZ\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Ergo Blockchain Crash Course\",\n    \"content\": \"\",\n    \"url\": \"https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2\"\n\n  },\n  {\n    \"title\": \"\ud83d\udd17 DeCo Intro Lessons\",\n    \"content\": \"Build a mobile app on Android or iOS.\",\n    \"url\": \"https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Frameworks",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"AppKit\",\n    \"content\": \"for JVM languages (used in Scala, Java and Kotlin projects)\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"appkit.md\"\n  },\n  {\n    \"title\": \"Fleet\",\n    \"content\": \"Lets you easily create Ergo transactions with a pure JS library.\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"fleet.md\"\n\n  },\n  {\n    \"title\": \"Mosaik\",\n    \"content\": \"is a JSON-based markup language served via a REST API intended to be used by Ergo platform dApps.\",\n    \"image\": \"../../assets/img/dev-grid/mosaik.png\",\n    \"url\": \"mosaik.md\"\n  },\n  {\n    \"title\": \"Headless dApp Framework\",\n    \"content\": \"A Rust framework for developing Ergo *headless* dApps.\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"headless.md\"\n  },\n  {\n    \"title\": \"RustKit\",\n    \"content\": \"(WIP), a library on top of sigma-rust for easily creating transactions.\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"rustkit.md\"\n  },\n  {\n    \"title\": \"JDE\",\n    \"content\": \"JSON dApp Environment\",\n    \"image\": \"../../assets/img/dev-grid/json.png\",\n    \"url\": \"jde.md\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "ErgoScript Interpreter/Compilers",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"sigmastate-interpreter\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"Sigma-Rust\",\n    \"content\": \"An alternative and simple implementation of ErgoTree interpreter and transaction-building tools.\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"sigma-rust.md\"\n  },\n  {\n    \"title\": \"Sigma.JS\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lib/sigmajs.md\"\n  },\n\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Libraries",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"GetBlok Plasma\",\n    \"content\": \"a library on top of Ergo Appkit that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code.\",\n    \"url\": \"../lib/plasma.md\"\n  },\n  {\n    \"title\": \"Scrypto\",\n    \"content\": \"cryptographic toolkit designed to make it easier and safer for developers to use cryptography in their applications.\",\n    \"url\": \"../lib/scrypto.md\"\n\n  },\n  {\n    \"title\": \"EIP12-types\",\n    \"content\": \"static typing library\",\n    \"url\": \"../lib/eip12-types.md\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Utilities",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Node & Explorer Tools\",\n    \"content\": \"\",\n    \"url\": \"explorer.md\"\n  },\n  {\n    \"title\": \"APIs\",\n    \"content\": \"\",\n    \"url\": \"../stack/api.md\"\n\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Simple Examples",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Creating a simple *pay-to-script* app\",\n    \"content\": \"\",\n    \"url\": \"../scs/p2s.md\"\n  },\n  {\n    \"title\": \"Creating a signature\",\n    \"content\": \"\",\n    \"url\": \"../scs/sigma/3-out-of-5.md\"\n\n  },\n  {\n    \"title\": \"Sending a chained transaction\",\n    \"content\": \"\",\n    \"url\": \"../anatomy/transactions/chained.md\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Utilities",
+      "level": 2,
+      "content": "- [Miner rewards script](https://github.com/lorien/ergotools) | Simple command-line tool to find miner rewards not spent and form withdrawing transaction requests for them\n- [Ergo P2S Playground](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) | A web-based tool to quickly get the address corresponding to some script  \n- [ergo-monitoring](https://github.com/SabaunT/ergo-monitoring) | Debug service printing out useful for developers and managers information about ergo blockchain state.\n- [Transaction builder](https://thierrym1212.github.io/txbuilder/) |  The application allows you to manipulate Ergo JSON transactions with a UI and to sign them with Yoroi or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)\n- [ergo-puppet](https://github.com/dav009/ergo-puppet)"
+    },
+    {
+      "heading": "Test vectors",
+      "level": 2,
+      "content": "- [Ergo transaction serialization](https://git.io/fjqwX)\n- [Signature scheme](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/test/scala/sigmastate/crypto/SigningSpecification.scala)"
+    },
+    {
+      "heading": "Analysis",
+      "level": 2,
+      "content": "- [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses\n- [Ergo Intelligence](https://github.com/Eeysirhc/ergo_intelligence)\n- [Ergo.watch](https://ergo.watch), [Github](https://github.com/abchrisxyz/ergowatch)\n- [ErgoStats](https://github.com/ach2swift/ErgoStats)\n- [Ergo-monitoring](https://github.com/SabaunT/ergo-monitoring)\n- [Ergo Utils](https://github.com/anon-real/ErgoUtils)\n- [Ergo Tokenautics](https://github.com/babygrenade/ergo-tokenautics)\n- [Tidy Ergo](https://github.com/Eeysirhc/tidyergo)\n- [Ergo Analytics](https://github.com/gsblabsio/ergo-analytics)\n\n> Make sure to check out the *dev-tools* tab on [sigmaverse.io](https://sigmaverse.io/)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/introduction.md",
+  "processed_at": "2025-05-11T19:35:24.077553",
+  "ai_processed": true
+}

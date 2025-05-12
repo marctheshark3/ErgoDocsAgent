@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is OptionPools?",
+    "answer": "OptionPools is a groundbreaking pool-to-peer Automated Market Maker (AMM) trading protocol designed to bridge the gap between traditional finance and decentralized finance (DeFi) in the realm of options trading."
+  },
+  {
+    "question": "What are the key challenges faced by existing DeFi options protocols?",
+    "answer": "The key challenges faced by existing DeFi options protocols include high risks, liquidity challenges, and performance bottlenecks."
+  },
+  {
+    "question": "How does Ergo provide a solution to the challenges of DeFi options?",
+    "answer": "Ergo provides a solution by allowing OptionPools to be built directly on Layer 1, minimizing the set of risk assumptions and potential attack surfaces, and enabling high-performance on-chain option pricing using the Black-Scholes model."
+  },
+  {
+    "question": "How does OptionPools address the liquidity challenges faced by existing DeFi options protocols?",
+    "answer": "OptionPools addresses the liquidity challenges by integrating directly with duckpools for undercollateralized lending, offering capital-efficient options trading."
+  },
+  {
+    "question": "What are the key benefits of building OptionPools on the Ergo blockchain?",
+    "answer": "Building OptionPools on the Ergo blockchain allows for minimizing the set of risk assumptions, reducing the risk of vulnerabilities, and enabling high-performance on-chain option pricing."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a code-block in ErgoScript?",
+    "answer": "In ErgoScript, multiple lines must be contained within a code-block, which is enclosed in braces {}."
+  },
+  {
+    "question": "How does Scala access arrays compared to Java or Python?",
+    "answer": "Scala accesses arrays using round parentheses () instead of square brackets []."
+  },
+  {
+    "question": "What is the purpose of the last line in an ErgoScript code-block?",
+    "answer": "The last line of an ErgoScript code-block serves as the returned value of that block."
+  },
+  {
+    "question": "What is the difference between 'val' and 'var' in ErgoScript?",
+    "answer": "ErgoScript only supports the 'val' keyword to define immutable variables, and does not have a 'var' keyword like Scala."
+  },
+  {
+    "question": "What is the address associated with the example ErgoScript code?",
+    "answer": "The example ErgoScript code maps to the address 2EUTBShk4TbLWJNwGpkVYh8dAPqbrfvb3p."
+  }
+]

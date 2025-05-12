@@ -1,0 +1,1 @@
+The document discusses the potential of edge computing in the development ecosystem and the ergo-play-boilerplate project, which provides a starting point for newcomers to the Ergo blockchain development. It includes links to the Edge and ergo-play-boilerplate GitHub repositories, as well as a link to a video on the "Completeness of Ergo" presented at the Ergoversary Summit 2023.

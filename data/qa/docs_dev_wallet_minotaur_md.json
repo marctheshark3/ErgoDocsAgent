@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Minotaur Wallet\n\n[Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) stands as the inaugural multi-platform wallet tailored for the Ergo ecosystem, offering a suite of features designed to ..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Minotaur Wallet"
+  },
+  {
+    "question": "What is the 'Minotaur Wallet' section about?",
+    "answer": "[Minotaur](https://github.com/minotaur-ergo/minotaur-wallet) stands as the inaugural multi-platform ..."
+  },
+  {
+    "question": "What is the 'Key Features:' section about?",
+    "answer": "- Wallet generation and restoration compatible with Yoroi, Ergo node, and Ergo's Android app.\n- Supp..."
+  },
+  {
+    "question": "What is the 'Upcoming Features:' section about?",
+    "answer": "- Dynamic dApp integration protocol to add new dApps without requiring wallet updates.\n- Minotaur dA..."
+  }
+]

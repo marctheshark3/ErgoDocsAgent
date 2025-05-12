@@ -1,0 +1,1 @@
+Fleet is a JavaScript library that makes it easy to create Ergo transactions. It is lightweight, powerful, and has 100% code coverage. The library provides a fluent API for creating complex transactions. The document also mentions that there is an alternative and potentially more detailed documentation source available on DeepWiki.

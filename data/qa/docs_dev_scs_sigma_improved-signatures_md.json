@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "\nThe initial implementation of distributed signatures support in the Ergo node worked well in simple cases, and ZK Treasury was built on top of it. However, in complex scenarios, it exhibited some pro..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "improved-signatures.md"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "The initial implementation of distributed signatures support in the Ergo node worked well in simple ..."
+  }
+]

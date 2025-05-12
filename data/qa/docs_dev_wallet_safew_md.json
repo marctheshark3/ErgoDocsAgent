@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What type of wallet is SAFEW?",
+    "answer": "SAFEW is a Simple And Fast Ergo Wallet that integrates a dApp connector compatible with EIP-12."
+  },
+  {
+    "question": "What platforms is SAFEW compatible with?",
+    "answer": "SAFEW is compatible with Chrome-based browsers (Opera, Brave, Edge, Kiwi, etc.) and Firefox."
+  },
+  {
+    "question": "What advanced features does SAFEW provide?",
+    "answer": "SAFEW provides access to the ErgoMixer, a transaction builder in Expert mode, and additional advanced features."
+  },
+  {
+    "question": "How are wallets stored in SAFEW?",
+    "answer": "Wallets are stored in the local storage of the SAFEW browser extension, with the mnemonic encrypted with AES-256 using the spending password."
+  },
+  {
+    "question": "What types of wallets does SAFEW support?",
+    "answer": "SAFEW supports mnemonic-based wallets, Ergopay/Read-only wallets, and Ledger hardware wallet support."
+  }
+]

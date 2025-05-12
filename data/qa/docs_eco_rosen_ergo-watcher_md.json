@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are watchers in the context of Rosen Bridge?",
+    "answer": "Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion."
+  },
+  {
+    "question": "What is the first step in setting up the Ergo Rosen Bridge Watcher?",
+    "answer": "Clone the operational repository and navigate to the appropriate directory."
+  },
+  {
+    "question": "What file needs to be created and configured to set up the environment?",
+    "answer": "Create and configure the environment file from the template provided, by creating a .env file and setting the necessary environment variables like POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB, and POSTGRES_PORT."
+  },
+  {
+    "question": "What is the purpose of setting the environment variables in the .env file?",
+    "answer": "The environment variables in the .env file are used to configure the Postgres database, including the password, user, database name, and port."
+  },
+  {
+    "question": "What is the default Postgres port set in the example environment variables?",
+    "answer": "The default Postgres port set in the example environment variables is 5432, but it can be changed if needed."
+  }
+]

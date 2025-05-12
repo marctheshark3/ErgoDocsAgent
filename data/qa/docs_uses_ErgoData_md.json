@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoData?",
+    "answer": "ErgoData is a potential sidechain that could be launched on Ergo to serve the needs of data-intensive applications, such as land registries and certificate directories."
+  },
+  {
+    "question": "What is the current status of ErgoData?",
+    "answer": "The plans for ErgoData are currently unclear, and it will only be launched if users show demand for it after Ergo has established a solid infrastructure base."
+  },
+  {
+    "question": "Who will receive ErgoData tokens?",
+    "answer": "If the ErgoData chain is launched, EFYT holders at the moment of Ergo's launch will receive ErgoData tokens."
+  },
+  {
+    "question": "How is the snapshot of EFYT holders taken?",
+    "answer": "A snapshot of EFYT holders at the moment of Ergo's launch has already been done."
+  },
+  {
+    "question": "What is the relationship between Ergo and ErgoData?",
+    "answer": "ErgoData will be the same or very similar to the existing Ergo Protocol, but with some modified parameters."
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "id": "docs_tutorials_oracle-bootstrap_md",
+  "title": "Bootstrap an Oracle Pool",
+  "summary": "This document provides a step-by-step guide on how to bootstrap an Oracle Pool on the Ergo blockchain. It covers the following key points:\n\n1. Planning the pool parameters, such as the number of oracles, minimum data points, and voting requirements.\n2. Generating a bootstrap config template and setting the required parameters.\n3. Editing the bootstrap config template with the planned pool parameters and other details.\n4. Running the bootstrap command to mint the tokens and create the pool.\n5. Inviting other operators by sending them the necessary tokens.\n6. Starting the oracle and monitoring the pool's operation.\n7. Sending the pool config file to the other operators so they can start their oracles.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Oracle Pool\n  - Bootstrap\n  - Setup\n  - Tutorial\n  - Guide\n  - oracle-core\n  - Testnet\n---\n\n# Bootstrap an Oracle Pool\n\n## Before you start\n\n### Plan pool parameters\n\nLet's say we have 5..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Bootstrap an Oracle Pool"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Oracle Pool\n  - Bootstrap\n  - Setup\n  - Tutorial\n  - Guide\n  - oracle-core\n  - Testnet..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Oracle Pool\n  - Bootstrap\n  - Setup\n  - Tutorial\n  - Guide\n  - oracle-core\n  - Testnet\n---"
+    },
+    {
+      "heading": "Bootstrap an Oracle Pool",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Before you start",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Plan pool parameters",
+      "level": 3,
+      "content": "Let's say we have 5 operators. We want to keep consensus above 1/2, so it means we can start a pool of 9 oracles (`oracle_tokens:quantity: 9`, `ballot_tokens:quantity: 9`), with 5 oracles threshold for minimum data points (`min_data_points: 5`) and voting (`min_votes: 5`). This way, we'll have 3 vacant oracles places in case someone wants to join later."
+    },
+    {
+      "heading": "Step 1. Generate a bootstrap config template",
+      "level": 2,
+      "content": "Generate an oracle config file from the default template with:\n\n```bash\noracle-core generate-oracle-config\n```\n\nand set the required parameters:\n\n- `oracle_address` to my node's wallet address (make sure you have coins).\n- `node_url`, `node_api_key` - node connection parameters;\n\nRun\n\n```bash\noracle-core bootstrap --generate-config-template bootstrap.yaml\n```"
+    },
+    {
+      "heading": "Step 2. Edit your bootstrap config template",
+      "level": 2,
+      "content": "I made the following changes:\n\n- Set the parameters described in [Plan pool parameters](#plan-pool-parameters)\n- Name the tokens in `tokens_to_mint` section.\n- Set data point source `data_point_source: NanoErgXau`\n\nSo in the end, it looked like - <https://gist.github.com/greenhat/2c6135462fba48773196ad45dd6c7404> (old version, before oracle/pool split configs)"
+    },
+    {
+      "heading": "Step 3. Run `bootstrap` command",
+      "level": 2,
+      "content": "Run\n\n```bash\noracle-core bootstrap bootstrap.yaml\n```\n\nIt submitted the txs to mint the tokens and make pool, refresh, update boxes. Besides that, it created `pool_config.yaml` config file to run an oracle."
+    },
+    {
+      "heading": "Step 4. Invite other operators",
+      "level": 2,
+      "content": "To invite other operators, I'm sending one oracle, reward, and ballot tokens to the operator's oracle addresses. I'm using <https://github.com/ergoplatform/oracle-core/blob/develop/scripts/send_new_oracle.sh> for this task."
+    },
+    {
+      "heading": "Step 5. Start your oracle",
+      "level": 2,
+      "content": "I started my oracle with the following:\n\n```bash\noracle-core run\n```\n\nAnd it posted the first data point."
+    },
+    {
+      "heading": "Step 6. Send pool config to the operators",
+      "level": 2,
+      "content": "Besides the tokens the pool config file that you are running now should be sent as well. Send `pool_config.yaml` to the operators and ask them to start the oracle with\n\n```bash\noracle-core run\n```\n\nAfter they start their oracles keep an eye on your oracle log file and wait for refresh tx generated. It means your pool is running and the pool box was updated."
+    },
+    {
+      "heading": "References",
+      "level": 2,
+      "content": "- [How I bootsrapped an ERG/XAU pool on testnet](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/tutorials/oracle-bootstrap.md",
+  "processed_at": "2025-05-11T20:00:09.796317",
+  "ai_processed": true
+}

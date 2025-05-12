@@ -1,0 +1,53 @@
+{
+  "id": "docs_mining_setup_pool_md",
+  "title": "Hosting a Pool on Ergo",
+  "summary": "This document provides a step-by-step guide on how to host a pool on the Ergo blockchain. It covers the following key points:\n\n1. Set up a local instance of the Ergo node, following the instructions in the \"solo-node.md\" guide and including the EIP27 rules.\n2. Choose the pool software to use, either Miningcore or Ergo Stratum Server.\n3. Configure the miner to point to the chosen pool software, using either the NV or AMD miner depending on the hardware.\nThe document also provides a link to the Ergo Discord community for support.",
+  "qa_pairs": [
+    {
+      "question": "What are the two pool software options supported on Ergo?",
+      "answer": "Ergo supports two pool software options: Miningcore and Ergo Stratum Server."
+    },
+    {
+      "question": "What is the first step in hosting a pool on Ergo?",
+      "answer": "The first step in hosting a pool on Ergo is to set up a local instance of the Ergo node."
+    },
+    {
+      "question": "What is the purpose of including the EIP27 rules when setting up the Ergo node?",
+      "answer": "The EIP27 rules need to be included in order to be able to spend your ERG."
+    },
+    {
+      "question": "What are the two miner options recommended for configuring your miner to point to the pool software?",
+      "answer": "The two miner options recommended are the NV miner and the AMD miner."
+    },
+    {
+      "question": "Where can users find community support for hosting a pool on Ergo?",
+      "answer": "Community support is available on the Ergo Discord server."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Hosting a Pool on Ergo",
+      "level": 1,
+      "content": "Hosting a pool on Ergo involves setting up a local instance of the Ergo node and configuring it to point to your pool software. This guide will walk you through the process step by step."
+    },
+    {
+      "heading": "Step 1: Set Up the Ergo Node",
+      "level": 2,
+      "content": "First, you need to set up a local instance of the Ergo node. You can find detailed instructions on how to do this [here](solo-node.md).\n\n/// admonition | Remember EIP-27!\n    type: warning\n\nYou will need to include the EIP27 rules mentioned on [this page](solo-node.md) to be able to spend your ERG.\n///"
+    },
+    {
+      "heading": "Step 2: Choose Your Pool Software",
+      "level": 2,
+      "content": "Next, you need to choose your pool software. Ergo supports two options: [Miningcore](miningcore.md) and [Ergo Stratum Server](stratum.md). Choose the one that best suits your needs."
+    },
+    {
+      "heading": "Step 3: Configure Your Miner",
+      "level": 2,
+      "content": "Finally, you need to configure your miner to point to your pool software. Depending on your hardware, you can use either the [NV](https://https://github.com/mhssamadani/Autolykos2_NV_Miner) or [AMD](https://github.com/mhssamadani/Autolykos2_AMD_Miner) miner.\n\n> Community support available on [Discord](https://discord.gg/kxbrHVwnm5).\n\nCongratulations! You have now set up your own Ergo mining pool. Happy mining!"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/setup/pool.md",
+  "processed_at": "2025-05-11T19:52:14.071451",
+  "ai_processed": true
+}

@@ -1,0 +1,5 @@
+Arbit is a simple and intuitive arbitrage platform designed for decentralized trading on the Ergo and Cardano blockchains. It aims to simplify the arbitrage process, enabling users to identify and execute profitable swaps with minimal setup.
+
+Arbit supports ERG, ADA, and RSN tokens, and integrates with the Ergo Dex and Splash exchanges. It provides predefined arbitrage strategies called "Arbits" that focus on simplicity and usability. The platform calculates profitability based on fixed token values ($50 and $100) to avoid complexity.
+
+The document covers Arbit's key features, how it works, and deployment instructions for a local setup. It also describes the implemented arbitrage strategies, including the ERG ↔ ADA arbitrage that leverages both direct and reverse swap paths.

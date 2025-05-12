@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_scs_tx_fsm-example_md",
+  "title": "Tutorial: Finite State Machines (FSM) in Ergo",
+  "summary": "This tutorial provides an introduction to Finite State Machines (FSMs) and how they can be implemented in Ergo using the eUTXO model. It covers the key concepts of state representation, transitions, and immutability. The tutorial includes an example of a simple vending machine FSM implementation in ErgoScript, highlighting the benefits of using FSMs in Ergo, such as clear state management, composability, security, and predictability. The document also mentions advanced concepts like Merkleized Finite State Machines (MFSMs) and long-lived contracts, and emphasizes the importance of careful planning when implementing robust FSMs.",
+  "qa_pairs": [
+    {
+      "question": "What is a Finite State Machine (FSM) in the context of Ergo?",
+      "answer": "In the context of Ergo's eUTXO model, an FSM contract is implemented as a sequence of transactions, where each transaction consumes a box representing the current state and creates a new box representing the next state."
+    },
+    {
+      "question": "How is the current state of an FSM contract represented in Ergo?",
+      "answer": "The current state of the FSM is encoded within an Ergo box, typically using its registers (e.g., R4 might hold a state identifier like an Int or Byte). Other registers hold data associated with that state."
+    },
+    {
+      "question": "What are the key components of an FSM transition in Ergo?",
+      "answer": "The ErgoScript guarding the state box defines the valid transitions. It checks the conditions required to move from the current state (e.g., specific inputs provided, signatures, blockchain height) and that the output box correctly represents the next valid state (e.g., the state identifier in R4 is updated correctly, other registers are preserved or updated according to protocol rules)."
+    },
+    {
+      "question": "What are the benefits of using FSMs in Ergo?",
+      "answer": "Benefits include clear state management, composability (FSM contracts can interact with other contracts and protocols), security (validation rules are enforced on-chain for each state transition), and predictability (contract behavior is determined by the defined states and transitions)."
+    },
+    {
+      "question": "Can you provide an example of an FSM implementation in Ergo?",
+      "answer": "The document provides an example of a simple vending machine FSM with two states (Locked and Paid) and two transitions (Locked to Paid, and Paid to Locked)."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoScript\n  - Smart Contracts\n  - FSM\n  - Finite State Machine\n  - Tutorial\n  - Advanced\n  - Multi-Stage Contracts\n---"
+    },
+    {
+      "heading": "Tutorial: Finite State Machines (FSM) in Ergo",
+      "level": 1,
+      "content": "Finite State Machines (FSMs) are a computational model used to design systems that can be in one of a finite number of states at any given time. The machine transitions from one state to another based on specific inputs or conditions. This model is particularly valuable for implementing [multi-stage protocols](../multi.md) or contracts on the blockchain, where the allowed actions depend on the current state of the contract."
+    },
+    {
+      "heading": "Concept",
+      "level": 2,
+      "content": "In the context of Ergo's [eUTXO model](eutxo.md), an FSM contract is implemented as a sequence of transactions, where each transaction consumes a box representing the *current state* and creates a new box representing the *next state*.\n\n*   **State Representation:** The current state of the FSM is encoded within an Ergo box, typically using its [registers](../boxes-and-registers.md) (e.g., R4 might hold a state identifier like an `Int` or `Byte`). Other registers hold data associated with that state.\n*   **Transitions:** The [ErgoScript](../ergoscript.md) guarding the state box defines the valid transitions. It checks:\n    *   The conditions required to move from the current state (e.g., specific inputs provided, signatures, blockchain height).\n    *   That the output box correctly represents the *next* valid state (e.g., the state identifier in R4 is updated correctly, other registers are preserved or updated according to protocol rules).\n*   **Immutability:** Each transaction creates a *new* box for the next state, preserving the immutable nature of the blockchain. The previous state box is consumed (spent)."
+    },
+    {
+      "heading": "Example: Simple Vending Machine FSM",
+      "level": 2,
+      "content": "Let's model a simple vending machine:\n\n*   **States:**\n    *   `Locked` (State 0): Waiting for payment.\n    *   `Paid` (State 1): Payment received, waiting for item selection/dispensing.\n*   **Transitions:**\n    *   `Locked` -> `Paid`: Requires a transaction input providing the correct payment amount. The output box must be in the `Paid` state.\n    *   `Paid` -> `Locked`: Requires a transaction input signaling item dispensing (e.g., signed by the vendor). The output box must return to the `Locked` state, potentially with changed value (representing dispensed item cost).\n\n**Implementation Sketch (ErgoScript):**\n\n```scala\n// --- Script for a box in the 'Locked' state (State 0) ---\n{\n  // Constants defined: requiredPayment (Long), vendorPk (SigmaProp)\n  // R4[Int] stores the state identifier (0 for Locked)\n\n  val currentState = SELF.R4[Int].getOrElse(-1) // Get current state ID\n\n  // Transition 1: Payment Received\n  val paymentCondition = sigmaProp(\n    // Check if exactly one output exists\n    OUTPUTS.size == 1 &&\n    // Check if the input box value matches the required payment\n    INPUTS(0).value >= requiredPayment &&\n    // Check if the output box represents the 'Paid' state (State 1)\n    OUTPUTS(0).R4[Int].getOrElse(-1) == 1 &&\n    // Ensure the output script is the same (points back to this FSM logic)\n    OUTPUTS(0).propositionBytes == SELF.propositionBytes &&\n    // Ensure vendor PK is preserved (example of preserving data)\n    OUTPUTS(0).R5[SigmaProp].getOrElse(sigmaProp(false)) == SELF.R5[SigmaProp].getOrElse(sigmaProp(false)) &&\n    // Ensure output value reflects payment minus potential change logic (simplified here)\n    OUTPUTS(0).value >= requiredPayment\n  )\n\n  // Allow vendor to reclaim funds anytime (example of another path)\n  val reclaimCondition = vendorPk\n\n  sigmaProp(currentState == 0) && (paymentCondition || reclaimCondition)\n}\n\n// --- Script for a box in the 'Paid' state (State 1) ---\n{\n  // Constants defined: vendorPk (SigmaProp)\n  // R4[Int] stores the state identifier (1 for Paid)\n\n  val currentState = SELF.R4[Int].getOrElse(-1) // Get current state ID\n\n  // Transition 2: Dispense Item (triggered by vendor signature)\n  val dispenseCondition = sigmaProp(\n    // Check if exactly one output exists\n    OUTPUTS.size == 1 &&\n    // Check if the output box represents the 'Locked' state (State 0)\n    OUTPUTS(0).R4[Int].getOrElse(-1) == 0 &&\n    // Ensure the output script is the same\n    OUTPUTS(0).propositionBytes == SELF.propositionBytes &&\n    // Ensure vendor PK is preserved\n    OUTPUTS(0).R5[SigmaProp].getOrElse(sigmaProp(false)) == SELF.R5[SigmaProp].getOrElse(sigmaProp(false)) &&\n    // Ensure output value reflects remaining funds (simplified)\n    OUTPUTS(0).value == SELF.value // Assuming item cost is handled off-chain or via tokens\n  ) && vendorPk // Requires vendor signature to dispense\n\n  sigmaProp(currentState == 1) && dispenseCondition\n}\n```\n\n*(Note: This is a simplified sketch. Real implementations need careful handling of values, tokens, change, multiple inputs/outputs, and robust error checking.)*"
+    },
+    {
+      "heading": "Benefits in Ergo",
+      "level": 2,
+      "content": "*   **Clear State Management:** Explicitly encodes state in boxes and transitions in scripts.\n*   **Composability:** FSM contracts can interact with other contracts and protocols.\n*   **Security:** Validation rules are enforced on-chain for each state transition.\n*   **Predictability:** Contract behavior is determined by the defined states and transitions."
+    },
+    {
+      "heading": "Resources & Examples",
+      "level": 2,
+      "content": "*   **Specifications in `sigmastate-interpreter`:**\n    *   [`FsmExampleSpecification.scala`](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/sc/shared/src/test/scala/sigmastate/utxo/examples/FsmExampleSpecification.scala): Provides Scala code demonstrating FSM concepts in a testing context.\n*   **Real-World Examples:**\n    *   **ChainCash:** Contracts like [`note.es`](https://github.com/ChainCashLabs/chaincash/blob/master/contracts/onchain/note.es) implement FSM patterns for managing promissory notes and reserves.\n*   **Related Concepts:**\n    *   [Multi-Stage Contracts](../multi.md)\n    *   [eUTXO Model](eutxo.md)\n    *   [Box Registers](../boxes-and-registers.md)"
+    },
+    {
+      "heading": "Advanced Concepts",
+      "level": 2,
+      "content": "In Ergo, we can implement Merkleized Finite State Machines (MFSMs) which are now possible to implement directly in ErgoScript. This approach allows for more complex state transitions while maintaining efficiency.\n\nAs described in the \"Advanced ErgoScript Tutorial,\" we can emulate long-lived contracts by creating new boxes with the same script. While the box ID will change, the contract logic persists across state transitions.\n\nImplementing robust FSMs requires careful planning of states, transitions, and the data that needs to be preserved or updated in registers at each step."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/tx/fsm-example.md",
+  "processed_at": "2025-05-11T19:31:48.054326",
+  "ai_processed": true
+}

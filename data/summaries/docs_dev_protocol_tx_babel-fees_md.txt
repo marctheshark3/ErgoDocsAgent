@@ -1,0 +1,7 @@
+Babel fees on the Ergo platform allow users to pay transaction fees in tokens other than the primary token (ERG). This system differs from Cardano's approach, where users broadcast incomplete transactions and wait for a third party to pay fees in ADA.
+
+On Ergo, Babel fee payments are facilitated through pre-defined Babel Fee pools, offering a predictable and transparent fee payment process. Users can locate UTXOs for their desired token, verify sufficient ERG, evaluate exchange rates, and choose the most favorable rate.
+
+Providing liquidity for Babel fees is a way to earn passive income while helping new users onboard to Ergo. Liquidity providers lock up ERG in a smart contract and specify a rate at which they're willing to buy tokens. When users pay transaction fees with those tokens, the providers automatically receive them in exchange for their ERG.
+
+Developers can implement Babel fees in their applications using the Fleet SDK's babel-fees plugin, which handles the complexities of token-to-ERG conversions and contract interactions.

@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_protocol_scaling_layer0_md",
+  "title": "Layer 0: The Network Layer",
+  "summary": "Layer 0, the Network or Peer-to-Peer (P2P) layer, forms the foundation of decentralized communication in a blockchain network. It facilitates the exchange of data and information across the network, allowing nodes to distribute and validate transactions, blocks, and other data without a centralized authority.\n\nErgo supports multiple client types, each offering different levels of security and resource requirements, to cater to various use cases and network conditions, contributing to the overall scalability of the Ergo network. These client types include Full 'Archive' Node Mode, Pruned-Fullnode Mode, Light-Fullnode Mode, and Light-SPV Mode.\n\nErgo also introduces \"subblocks,\" which are block candidates with lower proof-of-work difficulty, to enable faster transaction confirmations and optimize network bandwidth. To address state bloat, Ergo employs persistent updatable storage and a Storage Rent Fee.\n\nErgo provides miners with the flexibility to adjust parameters such as block size and transaction size to balance the network's capacity and computational load, contributing to its scalability.",
+  "qa_pairs": [
+    {
+      "question": "What is the role of Layer 0 (the Network or Peer-to-Peer layer) in a blockchain network?",
+      "answer": "Layer 0 forms the bedrock of decentralized communication within a blockchain network, facilitating the exchange of data and information across the network and allowing nodes to distribute and validate transactions, blocks, and other data types without the need for a centralized authority."
+    },
+    {
+      "question": "What are the different client types available in the Ergo blockchain network and how do they impact scalability?",
+      "answer": "The available client types in Ergo are: Full 'Archive' Node Mode, Pruned-Fullnode Mode, and Light-Fullnode Mode. Each mode offers different levels of security and resource requirements, contributing to the overall scalability of the Ergo network."
+    },
+    {
+      "question": "What is the role of 'subblocks' in Ergo's Layer 0 scalability improvements?",
+      "answer": "Subblocks are block candidates with lower proof-of-work difficulty, serving as temporary placeholders that facilitate faster transaction confirmations and optimize network bandwidth, leading to quicker, weakly confirmed transactions for end-users."
+    },
+    {
+      "question": "How does Ergo address the challenge of state bloat management to ensure network scalability?",
+      "answer": "Ergo addresses state bloat through persistent updatable storage and a Storage Rent Fee, which allow updates to be verified by a blockchain contract and deter spam/recycle unused data, respectively, reducing network pollution and encouraging user activity."
+    },
+    {
+      "question": "What are the miner-adjustable parameters in Ergo that can impact the network's scalability?",
+      "answer": "The miner-adjustable parameters in Ergo that can impact scalability are block size and transaction size. Miners can adjust these parameters to balance the network's capacity to process transactions and the computational load on nodes."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Layer 0: The Network Layer",
+      "level": 1,
+      "content": "Layer 0, also known as the *Network* or *Peer-to-Peer* (P2P) layer, forms the bedrock of decentralized communication within a blockchain network. It plays a pivotal role in facilitating the exchange of data and information across the network, allowing nodes to distribute and validate transactions, blocks, and other data types without the need for a centralized authority."
+    },
+    {
+      "heading": "Client Types",
+      "level": 2,
+      "content": "In the context of scaling, the type of client used can significantly impact the performance and efficiency of a blockchain network. Ergo supports multiple types of clients, each offering different levels of security and resource requirements. These client types are designed to cater to various use cases and network conditions, thereby contributing to the overall scalability of the Ergo network. Here are the available client types:\n\n- [**Full 'Archive' Node Mode**](full-node.md): This is the standard mode, akin to a full Bitcoin node. It stores all blocks from the genesis block onwards, checks the proofs of work, verifies the correctness of the linking structure, and maintains a copy of the entire UTXO set. This mode offers the highest level of security but requires significant storage resources, making it less scalable for devices with limited storage capacity.\n\n- [**Pruned-Fullnode Mode**](pruned-full-node.md): This mode downloads all headers, validates proofs-of-work, and links structures. It then downloads a UTXO snapshot from peers and the full blocks succeeding it. By pruning unnecessary data, this mode improves storage efficiency, contributing to network scalability.\n\n- [**Light-Fullnode Mode**](light-full-node.md): This mode only holds the root digest of the dictionary and checks full blocks or a suffix of the blockchain, depending on the setting. It offers a balance between security and resource efficiency, making it a scalable choice for devices with moderate resources.\n\n- [**Light-SPV Mode**](light-spv-node.md): A lightweight mode that enables users to verify transactions with a small sample of block headers. This mode requires the least resources, making it highly scalable for devices with limited storage and computational capabilities.\n\nIn addition to these, Ergo also supports **[Logarithmic space mining](logspace.md)**, which enables the existence of *light miners*. Similar to light clients, light miners can bootstrap using block headers without downloading the entire blockchain. This feature can be integrated into Ergo through a velvet (soft) fork, further enhancing the scalability of the network."
+    },
+    {
+      "heading": "Sub Blocks",
+      "level": 2,
+      "content": "In the quest for Layer 0 (L0) scalability improvements, one of the most promising advancements is the introduction of \"subblocks.\" These are essentially block candidates with lower proof-of-work difficulty, serving as temporary placeholders that facilitate faster transaction confirmations and optimize network bandwidth. For end-users, this translates into quicker, weakly confirmed transactions\u2014often within 20 seconds\u2014while also making better use of network resources. For a more in-depth look at weak blocks, their advantages, and their role in Ergo's scalability strategy, see this [page](subblocks.md)."
+    },
+    {
+      "heading": "State Bloat Management",
+      "level": 2,
+      "content": "One of the key challenges in scaling blockchain networks is managing the growth of the state size, often referred to as 'state bloat'. As the state size increases, it becomes more resource-intensive to maintain and validate, which can limit the scalability of the network. Ergo addresses this issue with effective state bloat management strategies, ensuring that the network remains scalable without compromising on functionality. It achieves this through:\n\n- Persistent updatable storage: This feature allows updates to be verified by a blockchain contract. However, only the digest of the authenticated data structure (along with a few additional bytes, less than 40) is stored in the UTXO set, regardless of the data set size.\n- [Storage Rent](rent.md) Fee: Ergo uses a Storage Rent Fee to deter spam and recycle unused data bytes, also known as dust. This fee helps in reducing network pollution and encourages user activity."
+    },
+    {
+      "heading": "Miner-Adjustable Parameters",
+      "level": 2,
+      "content": "In the context of scaling, Ergo provides miners with the flexibility to modify certain parameters that can directly impact the network's scalability:\n\n- **Block size:** Miners can adjust this parameter based on the observed decrease in full block validation time due to advancements in hardware and software. The current block size is set to `8MB`. A larger block size can accommodate more transactions, improving the network's throughput. However, it also requires more computational resources, which can affect the network's decentralization.\n- **Transaction size:** As of node `4.0.23`, the transaction size limit for the mempool is `96kb`. Transactions exceeding this size can only be included manually by miners. This limit can be adjusted to balance the network's capacity to process transactions and the computational load on nodes.\n\nFor more details on how these parameters can be adjusted and their impact on the network's scalability, please refer to the [Governance](governance.md) section."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/scaling/layer0.md",
+  "processed_at": "2025-05-11T19:25:03.651810",
+  "ai_processed": true
+}

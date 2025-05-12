@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_stack_jde_md",
+  "title": "JSON dApp Environment (JDE)",
+  "summary": "The JSON dApp Environment (JDE) is a programming tool that allows tech-savvy users and developers to interact with Ergo dApps using JSON as the programming language. It provides a \"sandbox\" mode where users can execute arbitrary scripts without worrying about malicious programs. JDE enables users to perform various tasks such as finding boxes, extracting values, performing computations, and creating transaction requests. It is designed to be user-friendly and enable remote hosting of the JDE service. The document provides details on the capabilities, usage, and important notes about the experimental nature of JDE.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# JSON dApp Environment (JDE) \n\nErgo enables sophisticated dApps via smart contracts written in [ErgoScript](ergoscript.md).\n\nInteracting with such smart contracts requires a developer to write code i..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "JSON dApp Environment (JDE)"
+    },
+    {
+      "question": "What is the 'JSON dApp Environment (JDE)' section about?",
+      "answer": "Ergo enables sophisticated dApps via smart contracts written in [ErgoScript](ergoscript.md).\n\nIntera..."
+    },
+    {
+      "question": "What is the 'Goals' section about?",
+      "answer": "This JDE is designed with the following goals in mind:\n\n1. Enable tech-savvy users and developers to..."
+    },
+    {
+      "question": "What is the 'Capabilities' section about?",
+      "answer": "Let us take the use-case of purchasing, say, 10 Sigma-USD reserve coins as an example, which involve..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "JSON dApp Environment (JDE)",
+      "level": 1,
+      "content": "Ergo enables sophisticated dApps via smart contracts written in [ErgoScript](ergoscript.md).\n\nInteracting with such smart contracts requires a developer to write code in a language such as Scala (using the [AppKit](appkit.md) framework) or Rust (using [HDF](headless.md) or [sigma-rust](sigma-rust.md))\n\nThe [JSON dApp Environment (JDE)](https://github.com/ergoplatform/ergo-jde) described on this page is another programming tool you can use to interact with Ergo dApps. The differentiating feature of JDE is that its programming language is **JSON**."
+    },
+    {
+      "heading": "Goals",
+      "level": 3,
+      "content": "This JDE is designed with the following goals in mind:\n\n1. Enable tech-savvy users and developers to interact with existing (and future) Ergo dApps such as Sigma USD by programming the off-chain logic user-friendly. \n \n2. Provide a \"sandbox\" mode, where users can send arbitrary scripts for execution such that the server does not have to worry about malicious programs. This enables the JDE service to be hosted remotely. An example is [Kiosk-Web](https://kioskweb.org/session/#kiosk.Wallet.txBuilder), where you can post arbitrary scripts (such as [this](https://raw.githubusercontent.com/ergoplatform/ergo-jde/main/sample-scripts/getReserveCoinInfo.json), which gets the reserve coin rate) in \"Tx Builder\" and obtain results.\n\nGoal #2 rules out many programming languages such as Java/Scala and Rust. This rules out all the so-called \"Turing-complete\" languages."
+    },
+    {
+      "heading": "Capabilities",
+      "level": 3,
+      "content": "Let us take the use-case of purchasing, say, 10 Sigma-USD reserve coins as an example, which involves the following steps: \n\n   1. Find the current oracle pool box and obtain the rate from register R4.\n   2. Find the current bank box and obtain the relevant parameters (tokens in circulation and base reserves).\n   3. Use the formulae to obtain the delta in base reserves. \n   4. Compute the details of the new bank box to be created (nano-Ergs, tokens, registers)\n   5. Compute the details of the new receipt box to be created (nano-Ergs, tokens, registers)\n   6. Make a transaction creation request to the Ergo node with the above details. \n\nAll the above tasks can be programmed in JDE, as done [in this script](https://raw.githubusercontent.com/ergoplatform/ergo-jde/main/sample-scripts/mintReserveCoinAdvanced.json).  \n\nIn general, JDE allows us to do the following:\n\n1. Find some boxes by address and/or box Id\n2. Extract values from those boxes (nanoErgs, registers and tokens), and define variables using those.\n3. Define constant values\n4. Perform computation using the constants and variables. JDE supports the if-then-else construct for control flow. However, it does not support loops. \n5. Define outputs using the values computed\n6. Make a transaction creation request to the Ergo node"
+    },
+    {
+      "heading": "How to use JDE",
+      "level": 3,
+      "content": "A compiled JAR is available on the [release](https://github.com/ergoplatform/ergo-jde/releases) page. You can also generate the JAR yourself using the `sbt assembly` command. \n\nThe following are the steps in using JDE. \n\n1. Understand the scripting language by looking at the sample scripts and the documentation.\n2. Ensure you have a fully synced Ergo node running.\n3. Write your script or edit the existing script for the task at hand.\n4. Invoke JDE via CLI to generate a transaction creation request (aka unsigned transaction) and some returned values.\n\nDepending on your use case, you will be using the output of Step 4 differently.\n\n- End users will use it to send a transaction on the Ergo blockchain\n- Wallet authors will append some of their inputs/outputs before sending the transaction.\n- dApp authors will use the returned values for further computation.\n\nJDE also includes a web-service mode for the last two use-cases. \n\nPlease see the [documentation](https://github.com/ergoplatform/ergo-jde/blob/main/readme.md) for details."
+    },
+    {
+      "heading": "Important Notes",
+      "level": 3,
+      "content": "- JDE is experimental. Please use with caution at your own risk. Always inspect the created transaction before sending it. \n- If you discover a bug, please make an issue and a PR. \n- If you find some feature missing, please make an issue."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/jde.md",
+  "processed_at": "2025-05-11T19:35:28.818962",
+  "ai_processed": true
+}

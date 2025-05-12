@@ -1,0 +1,7 @@
+This document provides an overview of how to interact with the Ergo blockchain. It covers three main aspects:
+
+1. Ergo Node: It discusses a public node available at 213.239.193.208:9053, as well as a list of available public nodes at api.tokenjay.app/peers/list. It also provides information on setting up your own Ergo node.
+
+2. Ergo Explorer: It introduces the Ergo Explorer, a tool that allows users to explore and monitor activities on the Ergo blockchain. It lists several public explorers available, such as explorer.ergoplatform.com, ergexplorer.com, and sigmaspace.io.
+
+3. Ergo APIs: It mentions that Ergo provides several APIs that offer different functionalities and services for developers and users, allowing interaction with the Ergo blockchain, access to network data, and integration of Ergo into various applications.

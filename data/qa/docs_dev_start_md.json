@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main categories of tools and technologies developers can use to interact with the blockchain?",
+    "answer": "{\"Server\",\"Browser\",\"Desktop\",\"Mobile Application\"}"
+  },
+  {
+    "question": "What are some key features or capabilities provided by the \"Server\" category of blockchain development tools?",
+    "answer": "Interact with the blockchain locally or via a remote server."
+  },
+  {
+    "question": "What are some key features or capabilities provided by the \"Browser\" category of blockchain development tools?",
+    "answer": "Interact with users in browser."
+  },
+  {
+    "question": "What are some key features or capabilities provided by the \"Desktop\" category of blockchain development tools?",
+    "answer": "Create a local application."
+  },
+  {
+    "question": "What are some key features or capabilities provided by the \"Mobile Application\" category of blockchain development tools?",
+    "answer": "Creating a bundled mobile app for Android or iOS."
+  }
+]

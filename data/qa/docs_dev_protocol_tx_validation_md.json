@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two stages of transaction validation?",
+    "answer": "The validation of a single transaction is divided into two stages: stateless checks and stateful checks."
+  },
+  {
+    "question": "What are the limits on the number of inputs and outputs in a transaction?",
+    "answer": "A transaction must spend at least one input and create at least one output. A transaction can spend up to 32767 inputs and create up to 32767 outputs."
+  },
+  {
+    "question": "What are the requirements for output amounts and asset types in a transaction?",
+    "answer": "All output amounts must be non-negative. An output cannot contain more than four assets, and all the assets' amounts must be positive. The transaction outputs collectively cannot contain more than 16 assets."
+  },
+  {
+    "question": "What are the requirements for the input boxes and spending proofs in a transaction?",
+    "answer": "All the input boxes must be members of the UTXO set or created by other transactions within the same block. All the inputs must have valid spending proofs."
+  },
+  {
+    "question": "What are the requirements for full-block validation?",
+    "answer": "Every transaction in a block must reference inputs from the UTXO set or created by previous transactions in the block. Every transaction in a block must be valid. The total cost of validation of all the inputs of all the transactions in the block must not exceed the allowed limit. The root hash of the authenticated UTXO set after applying the block transactions must match the one in the header. For a node maintaining UTXO, the hash of the calculated state transformations proof must match the one announced in the block's header. The header must be valid."
+  }
+]

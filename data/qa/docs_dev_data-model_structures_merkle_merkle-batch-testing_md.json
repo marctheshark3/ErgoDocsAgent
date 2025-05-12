@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of testing Merkle Batch Proofs in the Ergo blockchain?",
+    "answer": "Testing Merkle Batch Proofs is crucial to ensure the correctness of their implementation in the Ergo blockchain."
+  },
+  {
+    "question": "How are Merkle Batch Proofs tested in Rust using the sigma-rust library?",
+    "answer": "In Rust, the sigma-rust library provides the necessary tools to create and test Merkle Batch Proofs, including tests for creation, verification, serialization, and deserialization."
+  },
+  {
+    "question": "How are Merkle Batch Proofs tested in Scala using the scrypto library?",
+    "answer": "In Scala, the scrypto library is used to test Merkle Batch Proofs, including tests for tree creation, proof generation, verification, and serialization."
+  },
+  {
+    "question": "What are the key components involved in testing Merkle Batch Proofs in Rust?",
+    "answer": "The key components involved in testing Merkle Batch Proofs in Rust include the MerkleTree, BatchMerkleProof, and ScorexSerializable classes."
+  },
+  {
+    "question": "What are the key components involved in testing Merkle Batch Proofs in Scala?",
+    "answer": "The key components involved in testing Merkle Batch Proofs in Scala include the MerkleTree, BatchMerkleProof, BatchMerkleProofSerializer, and Blake2b256 hash function."
+  }
+]

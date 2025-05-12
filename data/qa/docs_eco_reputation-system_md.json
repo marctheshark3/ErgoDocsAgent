@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a reputation system in a blockchain ecosystem?",
+    "answer": "A reputation system aims to bridge the trust gap by providing a decentralized, user-driven mechanism for assigning and transferring reputation."
+  },
+  {
+    "question": "How does the Sigma Reputation System align with the principles of the Ergo Manifesto?",
+    "answer": "The Sigma Reputation System is decentralized, open and auditable, created for regular people, cost-competitive, and has a long-term focus, aligning with the principles of the Ergo Manifesto."
+  },
+  {
+    "question": "How are reputation proofs represented and managed in the Sigma Reputation System?",
+    "answer": "Reputation proofs are represented as Boxes, where users can delegate reputation from their own proofs to new proofs they generate, and any user can assign reputation to any reputation proof by locking the value of their proof and entering the proof to which reputation is being assigned as metadata."
+  },
+  {
+    "question": "What are the key conditions enforced by the ErgoScript contract for reputation proofs?",
+    "answer": "The ErgoScript contract ensures that: 1) reputation proofs cannot be spent if they assign reputation to an object, 2) only the wallet with permissions can spend the proof, and 3) reputation is delegated only to other reputation proofs."
+  },
+  {
+    "question": "How does the Sigma Reputation System allow for subjective reputation evaluation by users?",
+    "answer": "The value of each reputation token is subjective for each user, so everyone must calculate the reputation that their reputation proof graph assigns to each object."
+  }
+]

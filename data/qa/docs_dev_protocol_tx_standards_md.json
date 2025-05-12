@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the focus of the Transaction Standards section?",
+    "answer": "This section details the transaction standards that are supported by Ergo."
+  },
+  {
+    "question": "Where can you find more information on the Ergo transaction standards?",
+    "answer": "You can find more information in the Ergo Improvement Proposals (EIPs) repository."
+  },
+  {
+    "question": "What is the purpose of the Ergo Improvement Proposals (EIPs) repository?",
+    "answer": "The EIPs repository contains information on the transaction standards supported by Ergo."
+  },
+  {
+    "question": "What type of technical details are covered in the Transaction Standards section?",
+    "answer": "The Transaction Standards section provides details on the transaction standards supported by Ergo."
+  },
+  {
+    "question": "How can users learn about the practical applications of the Ergo transaction standards?",
+    "answer": "Users can find information on the practical applications of the Ergo transaction standards in the EIPs repository."
+  }
+]

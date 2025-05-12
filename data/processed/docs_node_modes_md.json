@@ -1,0 +1,53 @@
+{
+  "id": "docs_node_modes_md",
+  "title": "Node Modes of Operation",
+  "summary": "The document discusses the different modes of operation for the Ergo node, including Archival Full Node, Pruned Full Node, Digest (Stateless) Node, and Light SPV Client. It compares the features, configuration, resource requirements, and capabilities of each mode, to help users choose the appropriate mode based on their specific use case and requirements. The document also provides links to additional resources for further details on each mode and related topics.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Node\n  - Modes\n  - Full Node\n  - Pruned Node\n  - Light Node\n  - Digest Node\n  - Stateless Node\n  - SPV\n  - Configuration\n  - Comparison\n---\n\n# Node Modes of Operation\n\n*(Back to: [Node I..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Node Modes of Operation"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Node\n  - Modes\n  - Full Node\n  - Pruned Node\n  - Light Node\n  - Digest Node\n  - Statel..."
+    },
+    {
+      "question": "What is the 'Node Modes of Operation' section about?",
+      "answer": "*(Back to: [Node Installation](install.md))*\n\nThe [Ergo node](install.md) offers several modes of op..."
+    },
+    {
+      "question": "What is the 'Mode Comparison' section about?",
+      "answer": "| Feature / Mode        | [Archival Full Node](modes/archival-node.md) | [Pruned Full Node](modes/pr..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Node\n  - Modes\n  - Full Node\n  - Pruned Node\n  - Light Node\n  - Digest Node\n  - Stateless Node\n  - SPV\n  - Configuration\n  - Comparison\n---"
+    },
+    {
+      "heading": "Node Modes of Operation",
+      "level": 1,
+      "content": "*(Back to: [Node Installation](install.md))*\n\nThe [Ergo node](install.md) offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions.\n\nThe primary modes are configured using settings in your `ergo.conf` file, mainly `node.stateType` and `node.blocksToKeep`. Bootstrapping options like `node.utxoBootstrap` and `node.nipopowBootstrap` can significantly speed up the initial synchronization for certain modes but do not define the mode itself.\n\nHere's a comparison of the main operational modes:"
+    },
+    {
+      "heading": "Mode Comparison",
+      "level": 2,
+      "content": "| Feature / Mode        | [Archival Full Node](modes/archival-node.md) | [Pruned Full Node](modes/pruned-full-node.md) | [Digest (Stateless) Node](modes/light-full-node.md)\u00b9 | [Light SPV Client](modes/light-spv-node.md) |\n| :-------------------- | :------------------------------------------- | :-------------------------------------------- | :-------------------------------------------------- | :------------------------------------------ |\n| **Primary Goal**      | Max Security, Full History                   | Full Security, Reduced Storage                | Full Security, Minimal Storage                      | Tx Verification, Minimal Resources          |\n| **Key Config**        | `stateType=\"utxo\"`<br>`blocksToKeep=-1`      | `stateType=\"utxo\"`<br>`blocksToKeep > 0`      | `stateType=\"digest\"`<br>`blocksToKeep > 0`         | N/A (Client Software)                       |\n| **Bootstrapping**     | Full Sync from Genesis | Full Sync / UTXO Snapshot (`utxoBootstrap=true`) / NiPoPoW (`nipopowBootstrap=true`) | Full Sync / NiPoPoW (`nipopowBootstrap=true`) / UTXO Snapshot\u00b9 | NiPoPoW Sync |\n| **Storage (Initial)** | Very High (100s GB+) | Medium (Snapshot: ~1-2GB + Recent Blocks) | Low (Headers + State: ~1-3GB + Recent Blocks) | Very Low (MBs) |\n| **Storage (Ongoing)** | High (Grows with chain) | Medium (Grows slowly with `blocksToKeep`) | Low (Grows slowly with `blocksToKeep`) | Very Low |\n| **Resource Needs**    | High (CPU/RAM/Disk IO) | Moderate | Moderate-Low | Very Low |\n| **Sync Time**         | Very Long          | Fast (with bootstrap) | Fast (with bootstrap) | Very Fast |\n| **Full Tx Validation**| Yes                | Yes (for kept blocks) | Yes (for kept blocks, via ADProofs) | No (Header validation only) |\n| **API Support**       | Full               | Full (for available data) | Limited (May lack endpoints requiring full UTXO set) | N/A (Relies on Full Node API) |\n| **Wallet Compatibility**| Full (incl. restore) | New Wallets OK; **No Restore** | New Wallets OK; **No Restore**; Potential issues with standard P2P tx submission reported\u00b2 | Verification only; Relies on Full Node for tx submission/balance |\n| **Use Cases**         | Mining, Archiving, Max Trust Backend | dApp Backend, Personal Wallet Backend (New Wallet) | Mobile Node Backend ([Android Guide](install/node-android.md)), dApp Backend (Specific Needs), Personal Wallet Backend (New Wallet, check compatibility) | Light Wallets, Quick Verification Tools |\n\n**Detailed Explanations & Notes:**\n\n1.  **Bootstrapping (`utxoBootstrap`, `nipopowBootstrap`):**\n    *   These settings significantly speed up the initial sync for Pruned and Digest nodes by downloading a compressed UTXO set snapshot (`utxoBootstrap`) or using NiPoPoW proofs (`nipopowBootstrap`) instead of processing the entire chain history from genesis.\n    *   Using `utxoBootstrap=true` is common for Pruned nodes.\n    *   Using `nipopowBootstrap=true` is common for Digest nodes.\n    *   It's often beneficial to enable *both* `utxoBootstrap=true` and `nipopowBootstrap=true` for the fastest initial sync, especially on resource-constrained devices like mobile phones. The node will attempt the fastest method available from peers.\n    *   Note \u00b9: While `utxoBootstrap` can technically be used with `stateType=\"digest\"`, it's less common as NiPoPoW bootstrap is generally preferred for this mode.\n    *   **Progress Indication:** Be aware that the initial download phase when using bootstrapping (especially `utxoBootstrap`) can take a significant amount of time depending on network speed and peer availability. The node logs may not show detailed progress during large snapshot downloads. It's often helpful to monitor your system's network activity or the increasing size of the node's data directory (`.ergo/snapshots` or similar) to gauge progress during this phase.\n\n2.  **Digest Mode (`stateType=\"digest\"`) Limitations:**\n    *   This mode keeps only an authenticated digest (root hash) of the UTXO set, verifying state transitions using [ADProofs](block-adproofs.md) contained in blocks.\n    *   **Wallet Compatibility:** While functional for creating new wallets and basic operations, users have reported issues submitting standard P2P transactions from wallets connected *only* to a digest-mode node. Compatibility with specific wallets or dApps requiring full UTXO set access may vary. **Verification is recommended.**\n    *   **API Limitations:** Some API endpoints that rely on scanning the full UTXO set might not be available or may return limited data.\n    *   **Peer Relaying:** Digest nodes typically cannot relay transactions received from peers, as they don't validate them against the full UTXO set.\n\n3.  **Wallet Restoration (Pruned & Digest Modes):**\n    *   Nodes running with `blocksToKeep` set to a positive value (Pruned and Digest modes) **cannot** be used to restore wallets from seed phrases if those wallets were used *before* the oldest block kept by the node. They lack the historical transaction data needed for the scan.\n    *   You **must** use an Archival Full Node (`blocksToKeep = -1`) or a trusted explorer service for restoring older wallets. For new wallets created and used *only* while the pruned/digest node is running, restoration might work, but using an archival node is the safest approach.\n\n4.  **Resource Usage:**\n    *   The storage figures are estimates and depend heavily on the `blocksToKeep` setting and chain activity. A typical light/mobile setup using digest mode with bootstrapping might initially consume around 3GB.\n    *   Memory requirements (`-Xmx` flag) also vary. While an archival node might need 8GB+, pruned/digest nodes can often run with 2-4GB, though more may be needed during intense activity or bootstrapping."
+    },
+    {
+      "heading": "Further Reading",
+      "level": 2,
+      "content": "- [Configuration File](conf.md)\n- [Pruned Full Node Details](pruned-full-node.md)\n- [Light Full (Digest) Node Details](light-full-node.md) (Covers `stateType=\"digest\"`)\n- [Light SPV Clients / NiPoPoWs](nipopow_nodes.md)\n- [History Pruning (`blocksToKeep`)](history-pruning.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes.md",
+  "processed_at": "2025-05-11T19:56:11.484502",
+  "ai_processed": true
+}

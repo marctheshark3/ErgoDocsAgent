@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the GetBlok Plasma library?",
+    "answer": "The GetBlok Plasma library provides an abstraction layer to simplify the process of integrating AVL Trees (Plasma) into off-chain code, giving developers an easy way to use this Layer-2 scaling solution in contracts, off-chain code, and distributed systems managing the Plasma itself."
+  },
+  {
+    "question": "How are Plasma Maps different from normal Scala maps?",
+    "answer": "Plasma Maps use 32 byte digests and Blake2b256 hashing, and can store any class so long as there is a corresponding implicit ByteConversion for that class."
+  },
+  {
+    "question": "What is the purpose of a ProxyPlasmaMap?",
+    "answer": "A ProxyPlasmaMap applies changes on a temporary tree which allows you to receive proofs for the operations you perform, but none of these changes are saved to storage until the commitChanges() function is called, ensuring that unexpected errors can be dealt with easily."
+  },
+  {
+    "question": "How do you create a LocalPlasmaMap?",
+    "answer": "To create a LocalPlasmaMap, you must use a VersionedLDBAVLStorage and an LDBVersionedStore, and pass these to the constructor of the LocalPlasmaMap class."
+  },
+  {
+    "question": "What is the difference between a normal Plasma Map and a LocalPlasmaMap?",
+    "answer": "A normal Plasma Map is un-stored / temporary, while a LocalPlasmaMap is locally stored and uses a VersionedLDBAVLStorage and LDBVersionedStore to persist the data."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of AVL Trees in the Ergo ecosystem?",
+    "answer": "AVL Trees in Ergo are used to store and authenticate dynamic sets of data in a compact and efficient manner, ensuring efficient and secure access to data and optimal performance and data integrity."
+  },
+  {
+    "question": "How are Merkle Trees used in the Ergo blockchain?",
+    "answer": "Merkle Trees are used in the Ergo blockchain to ensure the integrity and authenticity of data, including in the construction of the Transaction Merkle Tree, the Extension Block Merkle Tree, and for generating compact proofs of state transitions."
+  },
+  {
+    "question": "What is the purpose of Sigma Trees (ErgoTree) in the Ergo blockchain?",
+    "answer": "Sigma Trees, also known as ErgoTrees, are used to represent logical propositions and cryptographic conditions in the execution of smart contracts and scripts, encapsulating complex logic and cryptographic proofs."
+  },
+  {
+    "question": "Where are AVL Trees used in the Ergo ecosystem?",
+    "answer": "AVL Trees in Ergo are used in the storage of UTXO states, and in applications like off-chain code and distributed systems managing the Plasma infrastructure, where privacy-preserving transactions need to verify inclusion or exclusion of certain elements without revealing all details."
+  },
+  {
+    "question": "How are Merkle Batch Proofs used in the Ergo blockchain?",
+    "answer": "Merkle Batch Proofs in Ergo support the serialization and deserialization of Merkle proofs in batches, significantly improving the speed and efficiency of data verification processes."
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "id": "docs_node_conf_conf-cache_md",
+  "title": "Cache Configuration",
+  "summary": "The document outlines the cache configuration settings for a system, including the size of the cache for block sections, headers, and indexes, as well as the settings for the invalid modifiers bloom filter and cache. The key points are:\n\n- The block sections cache size is set to 12, meaning the last 12 block sections are stored in memory.\n- The headers cache size is set to 1000, storing the last 1000 headers in memory.\n- The indexes cache size is set to 10000, storing the last 10000 indexes in memory.\n- The invalid modifiers bloom filter capacity is set to 10000000, with an expiration rate of 0.1.\n- The invalid modifiers cache size is set to 10000, with an expiration time of 6 hours.",
+  "qa_pairs": [
+    {
+      "question": "What does the `blockSectionsCacheSize` setting determine?",
+      "answer": "The `blockSectionsCacheSize` setting determines the number of recently used block sections that will be kept in memory."
+    },
+    {
+      "question": "How many recently used block sections are stored in the example configuration?",
+      "answer": "In the example configuration, the last 12 block sections are stored."
+    },
+    {
+      "question": "What does the `headersCacheSize` setting specify?",
+      "answer": "The `headersCacheSize` setting specifies the number of recently used headers that will be kept in memory."
+    },
+    {
+      "question": "How many recently used headers are stored in the example configuration?",
+      "answer": "In the example configuration, the last 1000 headers are stored."
+    },
+    {
+      "question": "What does the `indexesCacheSize` setting determine?",
+      "answer": "The `indexesCacheSize` setting determines the number of recently used indexes that will be kept in memory."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Cache Configuration",
+      "level": 1,
+      "content": "The `cache` configuration specifies what data to keep in memory to optimize the performance of the system."
+    },
+    {
+      "heading": "History",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Block Sections Cache Size",
+      "level": 3,
+      "content": "```conf\nblockSectionsCacheSize = 12\n```\nThe `blockSectionsCacheSize` setting determines the number of recently used block sections that will be kept in memory. In this configuration, the last 12 block sections are stored."
+    },
+    {
+      "heading": "Headers Cache Size",
+      "level": 3,
+      "content": "```conf\nheadersCacheSize = 1000\n```\nThe `headersCacheSize` setting specifies the number of recently used headers that will be kept in memory. Here, the last 1000 headers are stored."
+    },
+    {
+      "heading": "Indexes Cache Size",
+      "level": 3,
+      "content": "```conf\nindexesCacheSize = 10000\n```\nThe `indexesCacheSize` setting determines the number of recently used indexes that will be kept in memory. In this configuration, the last 10000 indexes are stored."
+    },
+    {
+      "heading": "Network",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Invalid Modifiers Bloom Filter Capacity",
+      "level": 3,
+      "content": "```conf\ninvalidModifiersBloomFilterCapacity = 10000000\n```\nThe `invalidModifiersBloomFilterCapacity` setting specifies the maximum number of invalid modifiers that the DeliveryTracker will keep."
+    },
+    {
+      "heading": "Invalid Modifiers Bloom Filter Expiration Rate",
+      "level": 3,
+      "content": "```conf\ninvalidModifiersBloomFilterExpirationRate = 0.1\n```\nThe `invalidModifiersBloomFilterExpirationRate` setting defines the rate of element expiration when the capacity is full. It's represented as a non-zero fraction of 1. The lower the number, the more gradual the expiration. In this configuration, a rate of 0.1 is represented as 10 bloom filters expiring one by one."
+    },
+    {
+      "heading": "Invalid Modifiers Cache Size",
+      "level": 3,
+      "content": "```conf\ninvalidModifiersCacheSize = 10000\n```\nThe `invalidModifiersCacheSize` setting determines the maximum number of invalid modifiers kept in the cache. Any modifiers beyond this number are kept in bloom filters."
+    },
+    {
+      "heading": "Invalid Modifiers Cache Expiration",
+      "level": 3,
+      "content": "```conf\ninvalidModifiersCacheExpiration = 6h\n```\nThe `invalidModifiersCacheExpiration` setting defines how long invalid modifiers are kept in the cache. In this configuration, they are kept for 6 hours."
+    },
+    {
+      "heading": "Mempool",
+      "level": 2,
+      "content": "The mempool section has the same configuration options as the network section, with the same parameters, but they apply to the mempool rather than the network. In particular, these settings control how many invalid modifiers are kept in memory and how long they are kept before being removed. \n\nOverall, the cache configuration allows you to manage your memory usage and performance effectively, helping to keep your system running smoothly even under heavy load."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/conf/conf-cache.md",
+  "processed_at": "2025-05-11T19:53:56.741179",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Non-Fungible Tokens (NFTs)?",
+    "answer": "Non-Fungible Tokens are blockchain-based assets that represent ownership of unique digital items such as art, collectibles, and more."
+  },
+  {
+    "question": "How do NFTs enable the democratization of art markets?",
+    "answer": "NFTs provide artists with a global platform to sell their artwork free from governmental restrictions or the need for centralized licensing firms."
+  },
+  {
+    "question": "What are some examples of NFT marketplaces mentioned in the content?",
+    "answer": "The examples mentioned are Rarible, Opensea, ErgoAuctions, SkyHarbor, and Mew Finance."
+  },
+  {
+    "question": "What is the issue with gas prices for minting NFTs on Ethereum?",
+    "answer": "The gas prices for minting an NFT on Ethereum can reach up to $100."
+  },
+  {
+    "question": "How does Ergo's design address the gas price issue for minting NFTs?",
+    "answer": "Ergo's scalable and efficient design significantly reduces the gas costs for minting NFTs without compromising on security or speed."
+  }
+]

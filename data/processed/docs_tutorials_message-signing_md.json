@@ -1,0 +1,48 @@
+{
+  "id": "docs_tutorials_message-signing_md",
+  "title": "Message signing and user authentication with Nautilus wallet and sigma-rust",
+  "summary": "This document provides a tutorial on how to use the Nautilus wallet and sigma-rust library to perform message signing and user authentication for Ergo blockchain applications. It demonstrates how to sign a message with the user's wallet address and then verify the signature on the server-side using sigma-rust. The document also discusses security considerations, such as implementing an expiration mechanism for signed messages and checking the user's token balance on every request to ensure they still own the required NFT. The tutorial is aimed at developers who want to build Ergo-based applications that require secure user authentication and access control.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of message signing and user authentication with Nautilus wallet and sigma-rust?",
+      "answer": "To verify that the user/client is the owner of the address they are claiming to be."
+    },
+    {
+      "question": "How can you sign a message using the Nautilus wallet?",
+      "answer": "const message = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]); const signature = ergo.sign_data('<your_addr>', message);"
+    },
+    {
+      "question": "How can you verify the signature using sigma-rust?",
+      "answer": "import * as ergoWasm from 'ergo-lib-wasm-nodejs' const isValid = ergoWasm.verify_signature(addr, message, signature);"
+    },
+    {
+      "question": "What are some security tips mentioned in the document?",
+      "answer": "1. Implement a user expiration mechanism, 2. Check the token balance on every request."
+    },
+    {
+      "question": "What are some practical applications of message signing and user authentication with Nautilus wallet and sigma-rust?",
+      "answer": "Allow NFT owners to edit their plot information and upload custom models, build an NFT-based ticketing system."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Message Signing\n  - Authentication\n  - Nautilus\n  - sigma-rust\n  - Wallet\n  - Security\n  - Tutorial\n  - Guide\n---"
+    },
+    {
+      "heading": "Message signing and user authentication with Nautilus wallet and sigma-rust",
+      "level": 1,
+      "content": "Did you know that besides transactions you can sign any piece of data?\nHere is how you do it using Nautilus wallet\n```javascript\nconst message = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);\nconst signature = ergo.sign_data('<your_addr>', message);\n```\n\nYeah\u2026 but why? you may ask.\nWell, because now you can post it to your NodeJS backend application and do this, using sigma-rust:\n\n```javascript\nimport * as ergoWasm from 'ergo-lib-wasm-nodejs'\nconst isValid = ergoWasm.verify_signature(addr, message, signature);\nif (isValid) { // authenticated!!! }\n```\n\nThis is called wallet authentication\u200a-\u200athe way to verify that the user/client is the owner of the address he is claiming to be.\n\nIn SigmaValley we allow NFT owners to edit their plot information and upload custom models. So if isValid === true and the backend knows that the request came from the wallet owner, I can now request all the tokens on that address and provide the client with access to protected functionality or data.\n\n```javascript\nconst balance = await request\n  .get(`https://api.ergoplatform.com/api/v1/addresses/${addr}/balance/confirmed`)\n  .then(res => res.body);\nif (balance.tokens.find(token => token.tokenId === '<valid token>') {\n   // Allow user break SigmaValley\n}\n```\n\nYou can use the same method to allow your users to upload their NFT as a character in your game or build an NFT-based ticketing system, the uses are limitless."
+    },
+    {
+      "heading": "Next steps/security tips",
+      "level": 2,
+      "content": "1. **User expiration mechanism**\u200a-\u200aThe example above is very simplified, you can use it right away, but for more secure applications you may consider implementing some message expiration mechanism. Instead of signing a random message, you can include an expiration date to it and force users to sign a new message once in a while. You can also switch to a more popular JTW token authentication once the user is verified.\n2. **Check the token balance on every request**\u200a-\u200ait's not enough to check whether the user holds the NFT only once. The user can get access and sell his NFT to someone else. It's a good idea to move the balance check and the verification to authentication middleware to be executed on every request to your protected routes.\n\n\nReferences:\n\n1. **Sigma-rust** https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm\n2. **Sigma-rust discord** https://discord.com/channels/668903786361651200/729692906209673257"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/tutorials/message-signing.md",
+  "processed_at": "2025-05-11T19:59:52.457812",
+  "ai_processed": true
+}

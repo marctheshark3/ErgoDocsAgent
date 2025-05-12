@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_wallet_address_address_types_md",
+  "title": "Address Types",
+  "summary": "The document describes the different types of addresses used in the Ergo blockchain network. The main address types are:\n\n- Mainnet (0x00) and Testnet (0x10) network types\n- Pay-to-PublicKey (P2PK), Pay-to-Script-Hash (P2SH), and Pay-to-Script (P2S) address types\n- The format and content of each address type, including the prefix byte, content bytes, and checksum\n- Comparison of P2S and P2SH addresses, with P2S being easier to use but P2SH being cheaper for on-chain storage\n- Suggestion that P2SH could be a good candidate for a pre-defined contract template using EIP-5",
+  "qa_pairs": [
+    {
+      "question": "What are the possible network types for addresses?",
+      "answer": "Mainnet - `0x00`, Testnet - `0x10`"
+    },
+    {
+      "question": "What are the different address types?",
+      "answer": "`0x01` - Pay-to-PublicKey(P2PK), `0x02` - Pay-to-Script-Hash(P2SH), `0x03` - Pay-to-Script(P2S)"
+    },
+    {
+      "question": "How are the content bytes formed for each address type?",
+      "answer": "* **P2PK** - serialized (compressed) public key\n* **P2SH** - first 192 bits of the Blake2b256 hash of serialized script bytes\n* **P2S** - serialized script"
+    },
+    {
+      "question": "What is the general structure of an address?",
+      "answer": "* **Prefix byte** = `network type + address type`\n* **checksum** = `leftmost_4_bytes (blake2b256 (prefix byte || content bytes))`\n* **address** = `prefix byte || content bytes || checksum`"
+    },
+    {
+      "question": "Why is P2S typically preferred over P2SH?",
+      "answer": "P2S is a lot easier to use. P2SH requires keeping the contract ready off-chain to be submitted when creating the transaction, and if you lose it, your funds are stuck forever. P2SH is technically cheaper since you store less data on-chain, but likely won't be used until there is heavy load on-chain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Address Types",
+      "level": 1,
+      "content": "Possible network types are:\n\n* Mainnet - `0x00`\n* Testnet - `0x10`\n\nAddress types are (semantics described below):\n\n* `0x01` - Pay-to-PublicKey(P2PK) address\n* `0x02` - Pay-to-Script-Hash(P2SH)\n* `0x03` - Pay-to-Script(P2S)\n\n\nFor an address type, we form content bytes as follows:\n\n* **P2PK** - serialized (compressed) public key\n* **P2SH** - first 192 bits of the Blake2b256 hash of serialized script bytes\n* **P2S**  - serialized script (this is where mining rewards go!)\n\nFor example, \n\n- Sending 10 ERG to a **P2PK** address usually means that a corresponding transaction will contain a box in which 10 Ergs are locked by a public key encoded in the **P2PK** Address. \n- Similarly, in the case of a **P2S** address, the box will be locked by a script encoded in the Address. \n- In the most complicated case of a **P2SH** script, the box will be protected by a special predefined script that takes the first 192 bits of *Blake2b256* hash value for a script shown by an input spending the box. \n\nHere are some examples of the various types of addresses you'll see on the testnet: \n\n* **P2PK** (`3WvsT2Gm4EpsM9Pg18PdY6XyhNNMqXDsvJTbbf6ihLvAmSb7u5RN`)\n* **P2SH** (`rbcrmKEYduUvADj9Ts3dSVSG27h54pgrq5fPuwB`)\n* **P2S** (`Ms7smJwLGbUAjuWQ`)\n\nAnd here is how what they look like on the mainnet:\n\n* **P2PK** (`9fRAWhdxEsTcdb8PhGNrZfwqa65zfkuYHAMmkQLcic1gdLSV5vA`)\n* **P2SH** (`8UApt8czfFVuTgQmMwtsRBZ4nfWquNiSwCWUjMg`)\n* **P2S** (`4MQyML64GnzMxZgm, BxKBaHkvrTvLZrDcZjcsxsF7aSsrN73ijeFZXtbj4CXZHHcvBtqSxQ`)\n\n> Note: **P2S** can start with any number, D, M, or any other of base58. `9` is always a **P2PK** address on the mainnet."
+    },
+    {
+      "heading": "Summary",
+      "level": 2,
+      "content": "* **Prefix byte** = `network type + address type` \n    * (for example, P2S script on the testnet starts with `0x13` before Base58)\n* **checksum** = `leftmost_4_bytes (blake2b256 (prefix byte || content bytes))`\n* **address** = `prefix byte || content bytes || checksum`"
+    },
+    {
+      "heading": "P2S vs P2SH",
+      "level": 2,
+      "content": "**Typically most people use P2S because it is a lot easier to use. P2SH means you have to keep the contract ready off-chain to be submitted when you create the transaction, and if you lose it, then your funds are stuck forever.** This also makes it harder for other people to use your dApp as they need the contract themselves, rather than just the address. P2SH is technically cheaper since you store less data on-chain, but likely we won't see anyone using P2SH until we start to get heavy load on-chain.\n\nP2SH is a good candidate for a pre-defined contract template (in terms of [EIP-5](eip5.md)) From this perspective context var id can be a template parameter. So fixing concrete id is not necessary. The template hex can be created once and then used across dApps. Sigma already support ContractTemplate, and the corresponding code can be made available in Fleet via Sigma-js."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/address/address_types.md",
+  "processed_at": "2025-05-11T19:39:32.384471",
+  "ai_processed": true
+}

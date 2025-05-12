@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a singleton token in Ergo?",
+    "answer": "In Ergo, a token minted with a value of one is termed a singleton token."
+  },
+  {
+    "question": "What is the purpose of the administrative contract in the LETS system?",
+    "answer": "The administrative contract oversees a singleton box that encompasses the members of the LETS system and facilitates the addition of new members."
+  },
+  {
+    "question": "How does the administrative contract store member information?",
+    "answer": "Instead of storing members, the box merely holds a succinct digest of an authenticated data structure based on the members' directory."
+  },
+  {
+    "question": "How are new members added to the LETS system?",
+    "answer": "Each member is linked with a singleton token minted during a transaction that adds the member to the directory, and a new member's box is generated to record the initial balance."
+  },
+  {
+    "question": "What is the role of the trade contract in the LETS system?",
+    "answer": "The trade contract safeguards the member's box."
+  }
+]

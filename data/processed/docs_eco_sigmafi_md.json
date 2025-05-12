@@ -1,0 +1,48 @@
+{
+  "id": "docs_eco_sigmafi_md",
+  "title": "SigmaFi",
+  "summary": "SigmaFi is a decentralized finance (DeFi) platform that enables peer-to-peer (P2P) lending through a bond market. It allows Ergo wallet holders to request loans, specifying the amount, term, and interest rate, with the loans being secured by collateral. The platform utilizes the extended unspent transaction output (eUTXO) model to create these loans, and all contracts are open-source, providing a foundation for developers to build upon. SigmaFi exemplifies DeFi by facilitating direct lending between individuals without the need for intermediaries. The platform offers various real-world financial instruments and agreements, encouraging developers to learn from and enhance DeFi applications in the Ergo ecosystem.",
+  "qa_pairs": [
+    {
+      "question": "What is SigmaFi?",
+      "answer": "SigmaFi is a P2P DeFi bond market that is currently live and open-source."
+    },
+    {
+      "question": "How does SigmaFi enable loans?",
+      "answer": "SigmaFi enables any Ergo wallet holder to request a loan, specifying the loan amount, term, and interest, with the loans guaranteed by collateral."
+    },
+    {
+      "question": "What is the role of smart contracts in SigmaFi?",
+      "answer": "Each new loan request generates a smart contract that outlines the loan terms, holds the collateral, and offers the loan on the SigmaFi website."
+    },
+    {
+      "question": "What model does SigmaFi utilize?",
+      "answer": "SigmaFi utilizes the extended unspent transaction output (eUTXO) model to create these loans."
+    },
+    {
+      "question": "What is the purpose of SigmaFi?",
+      "answer": "SigmaFi exemplifies decentralized finance (DeFi), facilitating the creation and funding of loan requests directly between individuals, without the need for banks or other intermediaries."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - SigmaFi\n  - DeFi\n  - Bonds\n  - Lending\n  - P2P\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "SigmaFi",
+      "level": 1,
+      "content": "[SigmaFi](https://sigmafi.app/) is a P2P DeFi bond market that is currently live and open-source. \n\nSigmaFi enables any Ergo wallet holder to request a loan, specifying the loan amount, term, and interest. The loans are guaranteed by collateral, which the lender can claim if the loan is not repaid by the end of the term. Due to the volatility of cryptocurrencies, loans need to be over-collateralized to get funded. For instance, a loan of 100 SigUSD might require ERG worth 150 SigUSD as collateral.\n\nEach new loan request generates a smart contract that outlines the loan terms. This contract holds the collateral and offers the loan on the SigmaFi website. If a user agrees to the loan terms, they can lend the money via the website. The requester then receives the loan, and the lender is either repaid with interest or claims the collateral.\n\nSigmaFi exemplifies decentralized finance (DeFi), facilitating the creation and funding of loan requests directly between individuals, without the need for banks or other intermediaries.\n\nThe platform utilizes the extended unspent transaction output (eUTXO) model to create these loans. All SigmaFi contracts are open-source, providing a foundation for developers to build upon. SigmaFi implements various real-world financial instruments and agreements, encouraging developers to learn from and enhance DeFi applications in the Ergo ecosystem."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Telegram](https://t.me/sigmafi)\n- [Documentation](https://sigmafi.gitbook.io/sigmafi-docs/)\n- [Contracts](https://github.com/K-Singh/Sigma-Finance)\n- [User Interface](https://github.com/capt-nemo429/sigmafi-ui)\n- [Off-chain Plugins](https://github.com/capt-nemo429/sigmafi-ui/blob/main/src/offchain/plugins.ts)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/sigmafi.md",
+  "processed_at": "2025-05-11T19:47:47.974281",
+  "ai_processed": true
+}

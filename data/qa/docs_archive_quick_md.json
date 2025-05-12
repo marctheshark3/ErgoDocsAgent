@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What command is provided to quickly install the required software?",
+    "answer": "bash -c \"$(curl -s https://node.phenotype.dev)\""
+  },
+  {
+    "question": "What are the prerequisite software requirements for this installation?",
+    "answer": "Java, Python, and Windows Subsystem if running Windows"
+  },
+  {
+    "question": "How can Java be installed on the system?",
+    "answer": "curl -s \"https://get.sdkman.io\" | bash\nsdk install java"
+  },
+  {
+    "question": "What is the recommended version of Java to install?",
+    "answer": "Java 11 is recommended"
+  },
+  {
+    "question": "How can Python be installed on an Ubuntu system?",
+    "answer": "sudo apt update && upgrade\nsudo apt install python3 python3-pip ipython3"
+  }
+]

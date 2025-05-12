@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two logical functions described in the content?",
+    "answer": "The two logical functions described are AllOf and AnyOf."
+  },
+  {
+    "question": "What does the AllOf function do?",
+    "answer": "The AllOf function takes a collection of booleans and returns a boolean indicating whether all booleans within the collection evaluate to true."
+  },
+  {
+    "question": "What does the AnyOf function do?",
+    "answer": "The AnyOf function takes a collection of booleans and returns a boolean indicating whether at least one boolean within the collection evaluates to true."
+  },
+  {
+    "question": "How are the AllOf and AnyOf functions related to logical operators?",
+    "answer": "The AllOf function is equivalent to inserting && between each boolean in the collection, and the AnyOf function is equivalent to inserting || between each boolean in the collection."
+  },
+  {
+    "question": "Where can a complete reference for all global functions and types in ErgoScript be found?",
+    "answer": "A complete reference for all global functions and types can be found in the ErgoScript LangSpec."
+  }
+]

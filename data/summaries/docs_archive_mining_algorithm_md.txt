@@ -1,0 +1,5 @@
+Autolykos is a proof-of-work algorithm designed for the Ergo blockchain. It was initially introduced as Autolykos v1, which featured non-outsourceable puzzles to resist mining pools. Autolykos v2 was later introduced, removing the non-outsourceable puzzles and optimizing the algorithm to use a table of around 2GB in size, which grows over time.
+
+The algorithm is based on the k-sum problem, where miners must find k (32) out of N (2^26) elements such that the hash of their sum is less than the target value. The indexes (k) are pseudorandom values derived from the block candidate and nonce, while the elements (N) are derived from the block height and constants.
+
+The document covers several Ergo Improvement Proposals (EIPs) that have impacted the Autolykos algorithm, including EIP-0009 (The Hardening Hard-Fork), EIP27 (Emission Retargeting Soft-Fork), and EIP37 (Tweaking Difficulty Adjustment Algorithm). It also provides information on the table size evolution and test vectors for the algorithm.

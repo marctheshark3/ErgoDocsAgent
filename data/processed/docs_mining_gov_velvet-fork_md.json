@@ -1,0 +1,43 @@
+{
+  "id": "docs_mining_gov_velvet-fork_md",
+  "title": "Velvet Forks",
+  "summary": "Velvet Forks is a novel approach for introducing protocol changes in a backward-compatible and inclusive manner. The key idea is to render modifications to the protocol backward-compatible, enabling a gradual deployment without harming miners who have not upgraded to the new rules. Velvet forks are a special form of protocol update where the new set of reducing protocol rules is conditionally applied only when the considered elements are valid under the new rules. The key advantages of velvet forks are inclusive deployment, backward compatibility, and gradual adoption. While velvet forks present a promising approach, further research is needed to understand the security implications and impact on the game-theoretic incentives of the underlying blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What is velvet forking?",
+      "answer": "Velvet forking is a novel approach that allows for introducing protocol changes in a backward-compatible and inclusive manner."
+    },
+    {
+      "question": "What is the key idea behind velvet forks?",
+      "answer": "The key idea is to render modifications to the protocol backward-compatible, enabling a gradual deployment without harming miners who have not upgraded to the new rules."
+    },
+    {
+      "question": "How do velvet forks work?",
+      "answer": "Velvet forks are a special form of protocol update where the new set of reducing protocol rules P' is conditionally applied only when the considered elements, such as blocks or transactions, are valid under the new rules."
+    },
+    {
+      "question": "What are the key advantages of velvet forks?",
+      "answer": "The key advantages of velvet forks are inclusive deployment, as they do not require support from a majority of participants, and backward compatibility, as valid blocks adhering to the new rules are also valid blocks under the old rules."
+    },
+    {
+      "question": "What is the relationship between velvet forks and protocol forks?",
+      "answer": "Since the new rules in P' are reducing, velvet protocol changes never incur a permanent protocol fork, as any element considered valid under P' is also considered valid under P."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Forking\n  - Fork\n---"
+    },
+    {
+      "heading": "Velvet Forks",
+      "level": 1,
+      "content": "Velvet forking is a novel approach introduced in the paper [\"A Wild Velvet Fork Appears! Inclusive Blockchain Protocol Changes in Practice\"](http://diyhpl.us/~bryan/papers2/bitcoin/A%20wild%20velvet%20fork%20appears:%20Inclusive%20blockchain%20protocol%20changes%20in%20practice%20-%202018.pdf) by Zamyatin et al. It allows for introducing protocol changes in a backward-compatible and inclusive manner. The key idea is to render modifications to the protocol backward-compatible, enabling a gradual deployment without harming miners who have not upgraded to the new rules.\n\nVelvet forks are a special form of protocol update where the new set of reducing protocol rules P' is conditionally applied only when the considered elements, such as blocks or transactions, are valid under the new rules. If not, the new rules are ignored, and the previous protocol rules P are relied upon to determine validity. Since the new rules in P' are reducing, velvet protocol changes never incur a permanent protocol fork, as any element considered valid under P' is also considered valid under P.\n\nThe key advantages of velvet forks are:\n\n1. **Inclusive Deployment**: They do not require support from a majority of participants and can potentially avoid rule disagreement forks altogether. Legacy nodes remain unaware of the changes introduced by the velvet fork.\n\n2. **Backward Compatibility**: Valid blocks adhering to the new rules are also valid blocks under the old rules, ensuring compatibility with non-upgraded nodes.\n\n3. **Gradual Adoption**: Velvet forks leverage the consensus mechanism of the existing protocol P to bootstrap their own consensus rules P', allowing for a gradual adoption of the new rules.\n\nWhile velvet forks present a promising approach for introducing protocol changes, they may also introduce new potential attacks and threats, as well as impact the game-theoretic incentives of the underlying blockchain. Further research is needed to understand the security implications of velvet forks and their potential applications in various blockchain protocols.\n\nErgo's design allows for the implementation of velvet forks, enabling the introduction of new features and protocol changes in a backward-compatible and inclusive manner. This capability is particularly useful for incorporating auxiliary protocols and data from miners, as well as enabling the gradual deployment of scaling solutions and other improvements without disrupting the network or requiring a hard fork."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/gov/velvet-fork.md",
+  "processed_at": "2025-05-11T19:51:02.619930",
+  "ai_processed": true
+}

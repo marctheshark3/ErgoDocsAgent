@@ -1,0 +1,48 @@
+{
+  "id": "docs_eco_duckpools_md",
+  "title": "DuckPools: Ergo Lending Protocol",
+  "summary": "DuckPools is a decentralized finance (DeFi) application built on the Ergo blockchain that offers lending pools for users to lend ERG and its tokens to earn yield and borrow assets. It features algorithmic lending pools and collateralized loans. DuckPools aims to be a catalyst for the Ergo DeFi ecosystem, increasing the utility of ERG and Ergo native assets and boosting the Total Value Locked (TVL) in Ergo DeFi.",
+  "qa_pairs": [
+    {
+      "question": "What is DuckPools?",
+      "answer": "DuckPools is a decentralized finance (DeFi) application (dApp) built on the Ergo blockchain that offers lending pools allowing users to lend ERG and its tokens to earn yield and borrow assets."
+    },
+    {
+      "question": "What are the key features of DuckPools?",
+      "answer": "DuckPools offers algorithmic lending pools where users can provide ERG or native assets to earn passive income, and collateralized loans where users can secure funds with their collateral."
+    },
+    {
+      "question": "What is the goal of DuckPools?",
+      "answer": "DuckPools aims to be a catalyst for an explosive DeFi ecosystem on Ergo, facilitating increased utility of ERG and Ergo native assets and boosting the Total Value Locked (TVL) in Ergo DeFi."
+    },
+    {
+      "question": "Where can I find more information about DuckPools?",
+      "answer": "You can find more information about DuckPools on their website (duckpools.io), Discord (discord.gg/znRMge8kQm), and GitHub (github.com/duckpools)."
+    },
+    {
+      "question": "What blockchain is DuckPools built on?",
+      "answer": "DuckPools is built on the Ergo blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - DuckPools\n  - Lending\n  - DeFi\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "DuckPools: Ergo Lending Protocol",
+      "level": 1,
+      "content": "[duckpools.io](https://duckpools.io/) is a decentralized finance (DeFi) application (dApp) built on the Ergo blockchain. It offers lending pools that allow users to lend ERG and its tokens to earn yield and borrow assets."
+    },
+    {
+      "heading": "DuckPools: A Collateralized Lending Platform with Algorithmic Lending Pools",
+      "level": 2,
+      "content": "**About DuckPools:**\n\nDuckPools is a lending platform developed on the Ergo blockchain. It is currently developing features such as:\n\n- **Algorithmic Lending Pools:** Users can provide ERG or native assets to lending pools and earn passive income on their capital.\n\n- **Collateralized Loans:** Users can secure funds with their collateral!\n\nDuckPools aims to be a catalyst for an explosive DeFi ecosystem on Ergo. The platform facilitates increased utility of ERG and Ergo native assets and boosts the Total Value Locked (TVL) in Ergo DeFi.\n\n**Community Resources**\n\n- [Website](https://duckpools.io)\n- [Discord](https://discord.gg/znRMge8kQm)\n- [Github](https://github.com/duckpools)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/duckpools.md",
+  "processed_at": "2025-05-11T19:43:31.673399",
+  "ai_processed": true
+}

@@ -1,0 +1,1 @@
+The document provides the API documentation for Ergo Node version 5.0.15. It includes information on the base URLs, authentication using an API key, and various API endpoints such as getSnapshotsInfo, getHeaderIds, sendMinedBlock, and getFullBlockAt. The document provides code samples in multiple programming languages for interacting with these API endpoints.

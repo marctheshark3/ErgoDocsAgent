@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - EIP\n---\n\n# EIP-0022: Auction Contract\n\n> \ud83d\udd17 From [EIP-0022:](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)\n\n\n## Motivation \nDecentralized auctioning of any kind of tokens ..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "EIP-0022: Auction Contract"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - EIP\n---"
+  },
+  {
+    "question": "What is the 'EIP-0022: Auction Contract' section about?",
+    "answer": "> \ud83d\udd17 From [EIP-0022:](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)"
+  },
+  {
+    "question": "What is the 'Motivation' section about?",
+    "answer": "Decentralized auctioning of any kind of tokens (artwork, share tokens, etc.) is an important part of..."
+  }
+]

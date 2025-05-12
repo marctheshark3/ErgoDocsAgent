@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_scs_ergotree_md",
+  "title": "ErgoTree: Reference Manual",
+  "summary": "ErgoTree is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect boxes (coin abstractions) in the Ergo blockchain. It serves as a specialized language that directly interacts with key components such as Boxes, Tokens, and Zero-Knowledge Sigma-Propositions. ErgoTree is optimized for efficient storage and rapid execution, and it is essential for creating, securing, and managing boxes on the Ergo blockchain. ErgoTree is structured as a typed abstract syntax tree and functions as an authentication language, verifying specific conditions through secret data predicates and blockchain context predicates. ErgoTree's versatility extends its applicability to various digital platforms, including other cryptocurrencies and Central Bank Digital Currencies. The document provides additional resources and key concepts related to ErgoTree.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - ErgoTree\n  - Reference Manual\n---\n\n# ErgoTree: Reference Manual\n\nErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract syntax of the ErgoTree la..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "ErgoTree: Reference Manual"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - ErgoTree\n  - Reference Manual\n---"
+    },
+    {
+      "question": "What is the 'ErgoTree: Reference Manual' section about?",
+      "answer": "ErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract synt..."
+    },
+    {
+      "question": "What is the 'Understanding ErgoTree' section about?",
+      "answer": "ErgoTree serves as a specialized language, encapsulating the [*universal language*](https://www.mart..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoTree\n  - Reference Manual\n---"
+    },
+    {
+      "heading": "ErgoTree: Reference Manual",
+      "level": 1,
+      "content": "ErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect [boxes](box.md) (coin abstractions) in Ergo. While ErgoTree is fundamental, most users interact with it indirectly, primarily developing contracts using a higher-level language called [ErgoScript](ergoscript.md), which later compiles into ErgoTree."
+    },
+    {
+      "heading": "Understanding ErgoTree",
+      "level": 2,
+      "content": "ErgoTree serves as a specialized language, encapsulating the [*universal language*](https://www.martinfowler.com/bliki/UbiquitousLanguage.html) of the [Ergo blockchain](protocol-overview.md). It directly interacts with key components such as [Boxes](box.md), [Tokens](eip4.md), and [Zero-Knowledge Sigma-Propositions](sigma.md). ErgoTree is optimized for efficient storage and rapid execution.\n\nA language intended for writing [blockchain contracts](contracts.md) must be deterministic to ensure spam-resistance. It also needs to be simple yet expressive enough to function as a solid platform for [contractual money](on-contractual-money.md). ErgoTree meets these requirements, making it an essential tool for creating, securing, and managing boxes on the [Ergo blockchain](protocol-overview.md).\n\nComplementing ErgoTree is a frontend language named [ErgoScript](ergoscript.md). Drawing inspiration from Scala/Kotlin, ErgoScript shares common subsets with Java and C#, making it user-friendly for programmers acquainted with these languages. ErgoScript is designed to attract a broad spectrum of programmers with its intuitive approach."
+    },
+    {
+      "heading": "Structure, Authentication, and Application",
+      "level": 2,
+      "content": "ErgoTree, distinct from low-level languages like stack-based EVM assembly, is structured as a *typed abstract syntax tree*. In this regard, ErgoTree is a kind of authentication language aka *\"smart signature\"* used to validate transactions or actions by verifying specific conditions.\n\nErgoTree achieves this by combining:\n\n- **Secret Data Predicates**: Conditions verifying confidential information such as [digital signatures](signing.md) or [secret keys](wallets.md).\n- **[Blockchain Context](blockchain-context.md) Predicates**: Conditions dependent on the [transaction's specific context](blockchain-context.md) within the [blockchain](protocol-overview.md).\n\nBy evaluating these predicates, ErgoTree authenticates [transactions](transactions.md), ensuring their legitimacy and adherence to set rules. Its ability to validate and secure transactions while adapting to the transaction context makes ErgoTree a versatile tool, extending its applicability to various digital platforms, including other [cryptocurrencies](protocol-overview.md) and [Central Bank Digital Currencies (CBDCs)](cbdc.md), or even non-monetary digital objects where smart access could be needed. Off-chain applications often need to perform similar validations; see [Fleet SDK Recipes](fleet-sdk-recipes.md) for examples using JavaScript/TypeScript.\n\n- Additional parties can be authorized\n- Parties can delegate authorization\n- AND/OR expressions\n- Conditions can extend beyond signer identity."
+    },
+    {
+      "heading": "Key ErgoTree Concepts",
+      "level": 2,
+      "content": "- ErgoTree is written into [UTXO boxes](box.md) and is subsequently evaluated by the [transaction verifier](validation.md).\n- The propositions are stored in the [blockchain](protocol-overview.md) in the [ErgoTree serialization format](https://ergoplatform.org/docs/ErgoTree.pdf). This format optimizes for compact storage, swift [script execution](sigmastate-interpreter.md), and efficient [transaction validation](validation.md).\n- The reference implementation of ErgoTree is in Scala, but alternative implementations can utilize other languages.\n- ErgoTree's binary format intentionally omits metadata, which might be necessary for various Ergo applications."
+    },
+    {
+      "heading": "Additional Resources",
+      "level": 2,
+      "content": "- ErgoTree serialization section [available here](https://ergoplatform.org/docs/ErgoTree.pdf).\n- [Constant-less lambdas](https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264).\n- [ErgoTree as an Authentication Language](https://www.ergoforum.org/t/ergotree-as-an-authentication-language/).\n- [Human representation for ergo tree #812](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812).\n- [ErgoTree pseudo-code](https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code): Generates pseudo code for compiled ErgoTrees on a best effort basis."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergotree.md",
+  "processed_at": "2025-05-11T19:29:13.791736",
+  "ai_processed": true
+}

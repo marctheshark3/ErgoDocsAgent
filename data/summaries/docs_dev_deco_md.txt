@@ -1,0 +1,5 @@
+DeCo (Decentralised Collaboration) is a grassroots initiative that aims to provide a comprehensive learning experience for newcomers to the Ergo ecosystem. It offers a structured curriculum and community engagement to help people immerse themselves in the technical aspects of Ergo.
+
+DeCo operates courses in a semester format, covering topics related to blockchain technology, the Ergo platform, and developing decentralized applications (dApps) on Ergo. The curriculum includes an introduction to blockchain and Ergo, community engagement, technical guides, advanced topics, and design principles and security.
+
+The courses and resources offered by DeCo include introductory and ErgoScript developer courses, a Discord server for community engagement, and a comprehensive workbook-format educational resource. The initiative emphasizes practical assignments, projects, and community discussions to reinforce the learned concepts and foster a collaborative learning environment.

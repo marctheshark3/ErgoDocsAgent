@@ -1,0 +1,11 @@
+This document provides a step-by-step tutorial for setting up MiningCore on a Windows 10 machine. The key steps include:
+
+1. Install PostgreSQL 10 or the latest version.
+2. Launch the pSQL Shell and log in using the credentials set during PostgreSQL installation.
+3. Create a database role and schema for MiningCore.
+4. Run the necessary database setup scripts.
+5. Create a partition of the shares table for each coin you set up.
+6. Configure the pool by creating a coin-specific JSON config file.
+7. Create a startup batch file to launch the MiningCore pool.
+
+The tutorial ensures the pool is set up and ready to go, with a note to ensure the coin's node is fully synced before launching the pool.

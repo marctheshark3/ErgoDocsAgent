@@ -1,0 +1,5 @@
+Transaction Chains: A transaction chain is a sequence of transactions executed in a specific order to achieve a particular outcome or goal. Each transaction in the chain depends on the successful execution of the previous one, and the overall success of the protocol relies on the successful execution of the entire chain.
+
+Transaction chains are a fundamental concept in Ergo's multi-stage protocols, offering a structured way to achieve specific goals by ensuring transactions execute in the correct order with the necessary dependencies between stages.
+
+The process of creating a transaction chain involves representing stages as nodes, enforcing transitions between stages, and chaining the stages together. This is often done by checking the script and data of the output boxes to ensure the protocol progresses correctly.

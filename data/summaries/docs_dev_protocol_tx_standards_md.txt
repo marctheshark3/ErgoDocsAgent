@@ -1,0 +1,1 @@
+Transaction Standards: This section details the transaction standards that are supported by Ergo. More information can be found in the Ergo Improvement Proposals (EIPs) repository.

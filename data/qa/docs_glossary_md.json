@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is an address in the context of blockchain?",
+    "answer": "A unique address associated with a wallet to send a receive a transaction to and from."
+  },
+  {
+    "question": "What is an API and how does it help different software systems communicate?",
+    "answer": "An API is a set of rules that allows applications to talk to each other and exchange data. It's like a messenger that helps different software systems communicate and share information with each other."
+  },
+  {
+    "question": "What is the difference between APR and APY?",
+    "answer": "APR (Annual Percentage Rate) is a measure of the yearly interest or cost associated with borrowing money or using credit, while APY (Annual Percentage Yield) is a measure of the yearly interest earned or gained on an investment or savings account."
+  },
+  {
+    "question": "What is an ASIC and how is it used in cryptocurrency mining?",
+    "answer": "ASIC (Application-Specific Integrated Circuit) is specialized hardware designed for a specific task, often used in cryptocurrency mining for efficient processing."
+  },
+  {
+    "question": "What is an Automated Market Maker (AMM)?",
+    "answer": "An automated market maker (AMM) is a smart contract that holds liquidity reserves. Users can trade against these reserves at prices determined by a fixed formula. Anyone may contribute liquidity to these smart contracts, earning trading fees in return."
+  }
+]

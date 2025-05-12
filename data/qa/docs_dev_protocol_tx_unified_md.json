@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Unified Transactions in Ergo\n\nTransactions in Ergo are pivotal in enabling a variety of operations within the network. This section delves into the concept of unified transactions, focusing on key e..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Unified Transactions in Ergo"
+  },
+  {
+    "question": "What is the 'Unified Transactions in Ergo' section about?",
+    "answer": "Transactions in Ergo are pivotal in enabling a variety of operations within the network. This sectio..."
+  },
+  {
+    "question": "What is the 'Fee Structure: The Concept of Boxes' section about?",
+    "answer": "In Ergo, transaction fees are uniquely represented as boxes. These boxes are the fundamental units t..."
+  },
+  {
+    "question": "What is the 'No Out-of-Thin-Air Emission in the \"Coinbase\" Transaction' section about?",
+    "answer": "The \"coinbase\" transaction, also referred to as the generation transaction, is the first transaction..."
+  }
+]

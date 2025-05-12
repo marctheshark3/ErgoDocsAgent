@@ -1,0 +1,7 @@
+This document provides instructions for setting up an Ergo node on Windows. It includes the following key steps:
+
+1. Install the Java Runtime Environment.
+2. Download the latest Ergo node from the GitHub repository.
+3. Create a configuration file with the Ergo node directory and mining settings.
+4. Alternatively, enable the Windows Subsystem for Linux (WSL) to run Ergo node on a Linux environment.
+5. Provides a link to a tutorial and a YouTube video for further guidance on setting up an Ergo node on Windows.

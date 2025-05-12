@@ -1,0 +1,53 @@
+{
+  "id": "docs_mining_setup_join_md",
+  "title": "Start Mining",
+  "summary": "This guide provides an introduction to mining Ergo using the Autolykos2 algorithm. It covers the prerequisites, including hardware requirements and familiarity with Ergo, and outlines the steps to start mining: choosing mining software, setting up a wallet, selecting a mining pool, and considering GPU overclocking. The guide also mentions miner tooling and future opportunities for miner governance.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Mining\n  - Getting Started\n  - Pool Mining\n  - Setup\n  - Guide\n---\n\n# Start Mining\n\nThis guide will walk you through the process of starting to mine Ergo using [Autolykos2](autolykos.md)..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Start Mining"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Mining\n  - Getting Started\n  - Pool Mining\n  - Setup\n  - Guide\n---"
+    },
+    {
+      "question": "What is the 'Start Mining' section about?",
+      "answer": "This guide will walk you through the process of starting to mine Ergo using [Autolykos2](autolykos.m..."
+    },
+    {
+      "question": "What is the 'Prerequisites' section about?",
+      "answer": "Before you start mining, make sure you have the following:\n\n- Familiarity with Ergo. If you're new, ..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Mining\n  - Getting Started\n  - Pool Mining\n  - Setup\n  - Guide\n---"
+    },
+    {
+      "heading": "Start Mining",
+      "level": 1,
+      "content": "This guide will walk you through the process of starting to mine Ergo using [Autolykos2](autolykos.md)."
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 2,
+      "content": "Before you start mining, make sure you have the following:\n\n- Familiarity with Ergo. If you're new, start with [What is Ergo?](why.md)\n- A computer with at least one GPU that has more than 6GB of memory. Check the [Autolykos v2 hashrates spreadsheet](https://docs.google.com/spreadsheets/d/1NsuoDB27EwCo_BlSjCP3GMLfTSJRPIWIBsL-wPTllUg) for potential hashrates.\n- If you're considering building a dedicated rig, refer to our guide on [Building a rig](rig.md)."
+    },
+    {
+      "heading": "Steps to Start Mining",
+      "level": 2,
+      "content": "1. Choose your preferred [mining software](software.md). If you're using a dedicated rig, select an appropriate [operating system](os.md).\n2. Set up a [wallet](wallets.md) where your mining payouts will be deposited.\n3. Select a [mining pool](pools.md) to join or look into [solo mining](solo.md)\n4. Consider [overclocking](overclocking.md) your GPU to maximize your mining performance. Be aware that this can increase power consumption and potentially shorten the lifespan of your hardware.\n5. Check out the [Miner Tooling](miner-tooling.md) and keep an eye on ways to participate in [miner governance](governance.md) in future.\n\nHappy mining!"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/setup/join.md",
+  "processed_at": "2025-05-11T19:52:06.973585",
+  "ai_processed": true
+}

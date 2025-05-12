@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the URI scheme proposed in EIP-0025?",
+    "answer": "The purpose of this URI scheme is to enable users to easily make payments by simply clicking links on webpages or in e-mails."
+  },
+  {
+    "question": "How does this URI scheme differ from Ergo Pay (EIP-0020)?",
+    "answer": "In difference to Ergo Pay (EIP-0020), this URI scheme does not contain a prepared transaction that the wallet should sign or discard. Instead, it contains the data that the wallet application should use to fill its payment form."
+  },
+  {
+    "question": "What are the required and optional parameters in the URI scheme?",
+    "answer": "The required parameters are the ergo address. The optional parameters are amount, label, description, and token."
+  },
+  {
+    "question": "How should the wallet handle the URI?",
+    "answer": "The wallet should process the URI as long as it can parse and interpret the content unambiguously. Any ambiguity should be detected and if it cannot be resolved, the wallet should give a descriptive message to the user."
+  },
+  {
+    "question": "What is the minimum requirement for sending tokens?",
+    "answer": "In the case of sending token only, a minimum amount of ERGs MUST also be sent to a new box (it is not possible to create boxes containing tokens only with zero ERGs)."
+  }
+]

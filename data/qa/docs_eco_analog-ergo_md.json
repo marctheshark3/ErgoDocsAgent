@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the goal of the Analog Ergo project?",
+    "answer": "The Analog Ergo project aims to use cryptographic primitives as the basis for a cross-chain peer-to-peer marketplace that enables users to set and agree to listing prices and other parameters in a private and fungible manner, without the involvement of intermediaries."
+  },
+  {
+    "question": "What is the purpose of the ScalarLock contract?",
+    "answer": "The ScalarLock contract allows you to lock funds to a scalar value like a random 256-bit number, which can be tested by comparing it with an Elliptic curve multiplication operation against the Secp256k1 Generator. This is a key component for enabling Atomic Swaps."
+  },
+  {
+    "question": "How does the ScalarLock contract work?",
+    "answer": "The ScalarLock contract decodes the generator point, extracts a scalar value from the transaction output, and checks if the point computed from the scalar multiplication of the generator point and the extracted scalar value is equal to a predefined point. If the two points are equal, the transaction is valid."
+  },
+  {
+    "question": "Where can I find a working example of a 2-party Atomic Swap?",
+    "answer": "A working Python example of a 2-party Atomic Swap that can be simulated from 2 shell/terminal windows is available at the 2pAtomicSwapExample repository."
+  },
+  {
+    "question": "What is the purpose of the 2-party Atomic Swap example?",
+    "answer": "The 2-party Atomic Swap example might help people reason about the way in which secrets are shared through the Atomic Swap protocol and at what steps what data transfer or blockchain interaction is supposed to occur."
+  }
+]

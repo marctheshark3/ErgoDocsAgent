@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the precision of each transaction on the Ergo platform?",
+    "answer": "The precision of each transaction on the Ergo platform is up to $10^{-9}$ ERG, which means transactions can be made with a precision of up to 0.000000001 ERG."
+  },
+  {
+    "question": "What is the average interval time of each block on the Ergo blockchain?",
+    "answer": "The average interval time of each block on the Ergo blockchain is approximately 2 minutes."
+  },
+  {
+    "question": "How can you access the web interface of a public Ergo node?",
+    "answer": "You can access the web interface of a public Ergo node at `127.0.0.1:9053/panel`. On the testnet, the port switches to `9052`."
+  },
+  {
+    "question": "What is the minimum recommended disk space for running an Ergo node?",
+    "answer": "We recommend having at least 100 GB of disk space to ensure seamless operation of an Ergo node."
+  },
+  {
+    "question": "How can you set up a more efficient Ergo node?",
+    "answer": "You can bootstrap a pruned node using a verified UTXO set snapshot and NiPoPoWs for a more efficient Ergo node setup."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a custom indexer for Ergo dApps and services?",
+    "answer": "Building a custom off-chain indexer provides the optimal balance of performance, query flexibility, and control over data for many production dApps and services on Ergo."
+  },
+  {
+    "question": "What are the core tasks involved in building a custom indexer?",
+    "answer": "The core tasks are: 1) Connect to an Ergo node API, 2) Fetch new blocks, 3) Parse block, transaction, and box data, 4) Extract relevant data, 5) Store the extracted data in a database, and 6) Handle blockchain reorganizations."
+  },
+  {
+    "question": "What existing tools and frameworks can be leveraged to simplify the process of building a custom indexer?",
+    "answer": "Existing tools like the Ergo Blockchain Scanner, Explorer Chain-Grabber, and open-source indexers like ErgoWatch and Pragmaxim's Chain Indexer can be used to significantly simplify the process of building a custom indexer."
+  },
+  {
+    "question": "What SDKs are recommended for implementing custom logic within a custom indexer?",
+    "answer": "The recommended SDKs are Sigma-Rust (Rust) for high-performance parsing and data manipulation, Fleet SDK (Node.js) for interacting with node APIs and deserializing data, and Appkit (Scala) for JVM-based indexers."
+  },
+  {
+    "question": "What are the key benefits of using a custom indexer over other approaches?",
+    "answer": "Using a custom indexer provides the optimal balance of performance, query flexibility, and control over data for Ergo dApps and services."
+  }
+]

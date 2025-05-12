@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the JVM?",
+    "answer": "The JVM is the Java Virtual Machine, which is a runtime environment that allows you to run Java, Scala, Kotlin, and other JVM-based languages."
+  },
+  {
+    "question": "What is AppKit?",
+    "answer": "AppKit is a library for polyglot development of Ergo Applications, which allows you to develop using various JVM-based languages."
+  },
+  {
+    "question": "What is ergo-playgrounds?",
+    "answer": "ergo-playgrounds is a tool that allows you to run Ergo contracts and off-chain code in the browser."
+  },
+  {
+    "question": "What is the Ergo Contracts repository?",
+    "answer": "The Ergo Contracts repository contains the source code of the Ergo smart contracts, along with compilation, testing, and formal verification tooling."
+  },
+  {
+    "question": "What programming languages can be used with the JVM and AppKit?",
+    "answer": "Java, Scala, and Kotlin can be used with the JVM and AppKit for developing Ergo Applications."
+  }
+]

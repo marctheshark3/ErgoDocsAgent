@@ -1,0 +1,133 @@
+{
+  "id": "docs_archive_dev_scs_ergoscript-primer_md",
+  "title": "ErgoScript: A Beginner's Guide",
+  "summary": "ErgoScript is a programming language designed for writing smart contracts on the Ergo blockchain. It uses a UTXO-based model, which provides improved security and scalability. ErgoScript is declarative, allowing developers to specify what should happen rather than how. It leverages Sigma Protocols, enabling advanced cryptographic features like complex signature schemes and privacy features. The document provides an introduction to ErgoScript, including its key characteristics and basic syntax. It also mentions development tools like the ErgoScript P2S Playground and the Ergo AppKit framework for building Ergo applications.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoScript?",
+      "answer": "ErgoScript is a powerful, developer-friendly programming language designed specifically for writing smart contracts on the Ergo blockchain."
+    },
+    {
+      "question": "What is the key characteristic of ErgoScript's UTXO-based model?",
+      "answer": "In the UTXO model, contracts define conditions for spending coins, transactions are immutable and more secure, and there is improved scalability and parallel processing."
+    },
+    {
+      "question": "How does the UTXO model differ from account-based blockchains?",
+      "answer": "Unlike account-based blockchains, the UTXO model uses unspent transaction outputs, where contracts define conditions for spending coins."
+    },
+    {
+      "question": "What are the benefits of the UTXO model in ErgoScript?",
+      "answer": "The UTXO model in ErgoScript leads to immutable and more secure transactions, as well as improved scalability and parallel processing."
+    },
+    {
+      "question": "What type of applications can be built with ErgoScript?",
+      "answer": "ErgoScript allows for the creation of complex financial contracts and applications with unprecedented flexibility and security."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoScript\n  - Beginner Guide\n---"
+    },
+    {
+      "heading": "ErgoScript: A Beginner's Guide",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "What is ErgoScript?",
+      "level": 2,
+      "content": "ErgoScript is a powerful, developer-friendly programming language designed specifically for writing [smart contracts](contracts.md) on the [Ergo blockchain](protocol-overview.md). Think of it as a specialized language that allows you to create complex [financial contracts](contracts.md) and applications with unprecedented flexibility and [security](security.md)."
+    },
+    {
+      "heading": "Key Characteristics",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "1. UTXO-Based Model",
+      "level": 3,
+      "content": "Unlike [account-based blockchains](accountveutxo.md), ErgoScript uses the [UTXO (Unspent Transaction Output) model](eutxo.md). This means:\n\n- Contracts define conditions for spending coins\n- [Transactions](transactions.md) are immutable and more secure\n- Improved [scalability](scaling.md) and parallel processing"
+    },
+    {
+      "heading": "2. Declarative Programming",
+      "level": 3,
+      "content": "ErgoScript is declarative, which means you specify **what** should happen, not **how** it happens. For example:\n\n```scala\n// A simple contract that allows spending only after a specific block height\nif (HEIGHT > 100000) signerPubKey else fail()\n```\n\nThis contract says: \"Allow spending only if the current [blockchain height](block-header.md) is greater than 100,000, otherwise fail.\""
+    },
+    {
+      "heading": "3. Sigma Protocols",
+      "level": 3,
+      "content": "ErgoScript leverages advanced cryptographic techniques called [Sigma Protocols](sigma.md), enabling:\n\n- Complex signature schemes\n- [Ring signatures](ring.md)\n- [Threshold signatures](threshold.md)\n- Advanced [privacy features](privacy-guide.md)"
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Basic Syntax",
+      "level": 3,
+      "content": "ErgoScript is a subset of Scala, so if you're familiar with functional programming, you'll feel right at home. Here's a simple example:\n\n```scala\n// A contract that requires two of three signatures to spend\nval pubKey1 = ...\nval pubKey2 = ...\nval pubKey3 = ...\n\nsigmaProp(pubKey1 && pubKey2 || pubKey1 && pubKey3 || pubKey2 && pubKey3)\n```"
+    },
+    {
+      "heading": "Development Tools",
+      "level": 3,
+      "content": "- [ErgoScript P2S Playground](https://wallet.plutomonkey.com/p2s/): Experiment and generate [Ergo addresses](address.md)\n- [Ergo AppKit](appkit.md): Development framework for building Ergo applications"
+    },
+    {
+      "heading": "Common Use Cases",
+      "level": 2,
+      "content": "1. **[Multi-Signature Wallets](threshold.md)**\n   Create wallets requiring multiple parties to approve [transactions](transactions.md)\n\n2. **Time-Locked Contracts**\n   Define contracts that can only be executed after a specific time or [block height](block-header.md)\n\n3. **Conditional Spending**\n   Set complex conditions for spending funds based on various parameters"
+    },
+    {
+      "heading": "Learning Paths",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Beginner",
+      "level": 3,
+      "content": "- [ErgoScript Overview](ergoscript.md)\n- [UTXO Model Explained](eutxo.md)"
+    },
+    {
+      "heading": "Intermediate",
+      "level": 3,
+      "content": "- [Sigma Protocols](sigma.md)\n- [Advanced Contract Patterns](contracts.md)"
+    },
+    {
+      "heading": "Advanced",
+      "level": 3,
+      "content": "- [ErgoTree Compilation](ergoscriptvergotree.md)\n- [Cryptographic Protocols](crypto.md)"
+    },
+    {
+      "heading": "Best Practices",
+      "level": 2,
+      "content": "1. Keep contracts simple and readable\n2. Use built-in [cryptographic primitives](crypto.md)\n3. Always consider [transaction validation](validation.md) overhead\n4. Test contracts thoroughly in the playground"
+    },
+    {
+      "heading": "Common Pitfalls to Avoid",
+      "level": 2,
+      "content": "- Overcomplicating contract logic\n- Ignoring performance implications\n- Neglecting error handling\n- Not understanding [UTXO model](eutxo.md) nuances"
+    },
+    {
+      "heading": "Community and Support",
+      "level": 2,
+      "content": "- [Ergo Developer Forum](https://www.ergoforum.org/)\n- [Ergo GitHub Discussions](https://github.com/ergoplatform/ergo/discussions)\n- [Ergo Developer Telegram](https://t.me/ergo_dev)"
+    },
+    {
+      "heading": "Next Steps",
+      "level": 2,
+      "content": "1. Experiment with the P2S Playground\n2. Study example contracts\n3. Join community discussions\n4. Start building your first dApp!"
+    },
+    {
+      "heading": "Recommended Reading",
+      "level": 2,
+      "content": "- [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)\n- [ErgoScript Technical Documentation](ergoscript.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/archive/dev/scs/ergoscript-primer.md",
+  "processed_at": "2025-05-11T19:15:35.787627",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main functions of the Transactions section in an Ergo block?",
+    "answer": "The Transactions section enables value transfer, state transition, and smart contract execution on the Ergo blockchain."
+  },
+  {
+    "question": "What are the core components of an Ergo transaction?",
+    "answer": "The core components are inputs, data inputs, and output candidates."
+  },
+  {
+    "question": "What are the two main types of validation performed on Ergo transactions?",
+    "answer": "Ergo transactions undergo stateless validation and stateful validation."
+  },
+  {
+    "question": "What is the purpose of data inputs in an Ergo transaction?",
+    "answer": "Data inputs reference boxes that a transaction needs to access for its scripts, without requiring ownership."
+  },
+  {
+    "question": "How do Ergo transactions update the state of the UTXO set?",
+    "answer": "Transactions consume existing unspent boxes and create new boxes with potentially modified values and ownership, updating the UTXO set."
+  }
+]

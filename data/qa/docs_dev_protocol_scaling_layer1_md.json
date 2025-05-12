@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Extended UTXO Model (EUTXO) used in Ergo?",
+    "answer": "Ergo utilizes an enhanced version of Bitcoin's UTXO model, known as EUTXO, which enables Turing Complete smart contracts, parallel transaction processing, higher throughput compared to account-based models, and efficient state management."
+  },
+  {
+    "question": "What are some recent protocol optimizations that have improved Ergo's efficiency?",
+    "answer": "Recent developments have improved the protocol's efficiency through the removal of unused complexity from the Sigma protocol, enhanced code readability and maintenance, refined transaction ordering and mempool tracking, and regular node version updates addressing performance."
+  },
+  {
+    "question": "How does Ergo's Layer 1 design focus on scalability?",
+    "answer": "Ergo's Layer 1 is designed with a focus on scalability, incorporating features that boost transaction processing capacity and overall throughput."
+  },
+  {
+    "question": "What are the core functions of Layer 1 in a blockchain system?",
+    "answer": "Layer 1, the foundational protocol layer of a blockchain system, is responsible for core functions such as transaction processing, consensus mechanisms, and security protocols."
+  },
+  {
+    "question": "What are the key features of the Extended UTXO Model (EUTXO) used in Ergo?",
+    "answer": "The EUTXO model enables Turing Complete smart contracts, parallel transaction processing, higher throughput compared to account-based models, and efficient state management."
+  }
+]

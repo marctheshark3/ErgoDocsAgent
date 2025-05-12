@@ -1,0 +1,68 @@
+{
+  "id": "docs_eco_ergomixer_best-practices_md",
+  "title": "Mixer Best Practices",
+  "summary": "The document outlines best practices for using the ErgoMixer, a decentralized mixing protocol that enhances privacy by obfuscating transaction trails. Key points include:\n\n- Withdraw mixed funds to multiple addresses over time to maintain privacy.\n- The mixer operates through \"mini-mixes\" where your funds are mixed with another user's available box from the pool.\n- Larger pool size and more honest participants increase the anonymity set and security.\n- Longer mixing intervals increase the likelihood of mixing with honest parties, reducing an attacker's ability to track funds.\n- As long as at least one honest party is mixing, the resulting mapping will be indistinguishable to some degree from an attacker's perspective.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary purpose of the ErgoMixer protocol?",
+      "answer": "The ErgoMixer protocol is a non-interactive, decentralized mixing protocol that enhances privacy by obfuscating the trail of transactions."
+    },
+    {
+      "question": "What is the recommended withdrawal strategy when using the ErgoMixer?",
+      "answer": "Avoid withdrawing all mixed funds to a single address. Instead, withdraw to multiple addresses over time intervals to maintain privacy."
+    },
+    {
+      "question": "How does the mixing process work in the ErgoMixer?",
+      "answer": "The mixer operates as a series of 'mini-mixes' or rounds, where your funds are mixed with another user's available box (UTXO) from the pool. There is no direct interaction between users."
+    },
+    {
+      "question": "How does the anonymity set and security work in the ErgoMixer?",
+      "answer": "Theoretically, each round's distinguishability for an external observer is 2^-1, while it's 100% for the participants. The final distinguishability is 2^(-rounds) in theory, but in practice, it can be 100% if there are only two parties mixing."
+    },
+    {
+      "question": "How can a larger pool size with more honest participants increase the indistinguishability in the ErgoMixer?",
+      "answer": "A larger pool size with more honest participants increases indistinguishability, as some boxes will be mixed with parties other than the attacker. The mixer cannot differentiate between boxes in the pool and only knows your boxes and the mapping of the last mixed boxes."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Mixer Best Practices",
+      "level": 1,
+      "content": "The ErgoMixer is a non-interactive, decentralized mixing protocol that enhances privacy by obfuscating the trail of transactions. To maximize the security benefits, it's essential to follow best practices:"
+    },
+    {
+      "heading": "Withdrawal Strategy",
+      "level": 2,
+      "content": "- Avoid withdrawing all mixed funds to a single address. Instead, withdraw to multiple addresses over time intervals to maintain privacy."
+    },
+    {
+      "heading": "Understanding the Mixing Process",
+      "level": 2,
+      "content": "- The mixer operates as a series of \"mini-mixes\" or rounds, where your funds are mixed with another user's available box (UTXO) from the pool.\n- There is no direct interaction between users. You fetch available boxes, select one, create a transaction spending your box, and generate two new 50-50 boxes.\n- Only you and the other party involved in the round know the mapping, ensuring privacy from external observers."
+    },
+    {
+      "heading": "Anonymity Set and Security",
+      "level": 2,
+      "content": "- Theoretically, each round's distinguishability for an external observer is 2^-1, while it's 100% for the participants.\n- The final distinguishability is 2^(-rounds) in theory, but in practice, it can be 100% if there are only two parties (you and an attacker) mixing.\n- A larger pool size with more honest participants increases indistinguishability, as some boxes will be mixed with parties other than the attacker.\n- The mixer cannot differentiate between boxes in the pool and only knows your boxes and the mapping of the last mixed boxes."
+    },
+    {
+      "heading": "Mixing Frequency and Timing",
+      "level": 2,
+      "content": "- You can configure the mixer to mix at intervals ranging from every 10 minutes to every 10 days.\n- Longer intervals increase the likelihood of mixing with honest parties, reducing the attacker's ability to track your funds."
+    },
+    {
+      "heading": "Security Considerations",
+      "level": 2,
+      "content": "- If all other parties are colluding with an attacker, the security gain is zero.\n- As long as at least one honest party is mixing in the pool, the resulting mapping will be indistinguishable to some degree from the attacker's perspective.\n\nFor more insights into how ErgoMixer clients receive Rings, Fees, Levels, and other details, please refer to [this forum post](https://www.ergoforum.org/t/ergomixer-zerojoin-mixer-for-erg-and-tokens/318/10?u=anon2020s)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/ergomixer/best-practices.md",
+  "processed_at": "2025-05-11T19:43:44.646112",
+  "ai_processed": true
+}

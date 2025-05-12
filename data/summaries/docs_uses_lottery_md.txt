@@ -1,0 +1,5 @@
+The document discusses the concept of "proof of activity" as a smart contract, which aims to incentivize members for running a full node. The primary method behind both proof of stake and proof of activity is "follow-the-satoshi", which selects a random satoshi from all the generated ones, and the holder of that satoshi becomes eligible for the reward.
+
+The focus of the post is on replicating the follow-the-satoshi protocol to establish a provably fair lottery system, similar to a physical lottery where tickets are sold in sequential serial numbers, and the winner is determined by a random number generated between 0 and the last unsold serial number.
+
+The document outlines how this lottery system can be emulated using Ergo, where a "lottery box" contains tokens and the current available serial number, and a "purchase box" stores the start and end serial numbers of purchased tokens. After the lottery concludes, the winner is determined using randomness from the previous block header.

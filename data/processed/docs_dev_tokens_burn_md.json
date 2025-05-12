@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_tokens_burn_md",
+  "title": "Burning a token",
+  "summary": "The document discusses the process of burning tokens, which involves deleting unwanted tokens from your wallet. It provides several options for burning tokens, including using mobile wallets, the Nautilus wallet, and the SAFEW platform. The document also explains how to burn tokens programmatically, using the AppKit transaction builder, and provides a detailed overview of the steps involved in the Ergo Token Minter integration. The key points covered are the reasons for burning tokens, the available methods, and the technical details of the programmatic approach.",
+  "qa_pairs": [
+    {
+      "question": "What are the main reasons someone might want to burn a token?",
+      "answer": "The main reasons are: 1) Your address was airdropped a token you no longer want, 2) You created an NFT but something about it is not right, 3) A project sent you voting or other tokens that you no longer need."
+    },
+    {
+      "question": "What are the different methods for burning a token?",
+      "answer": "The different methods are: 1) Using a mobile wallet like TokenJay, 2) Using the Ergo Token Minter/Burner in Nautilus, 3) Using SAFEW which supports token burning natively, 4) Sending the tokens to a P2S (Pay-to-Script) address that is unspendable."
+    },
+    {
+      "question": "How can you burn tokens programmatically?",
+      "answer": "To burn tokens programmatically, you can spend an Unspent Transaction Output (UTXO) containing the tokens you wish to eliminate, ensuring not to include these tokens in the output of the transaction. If using AppKit, the transaction builder offers a 'burntoken' method tailored for this purpose."
+    },
+    {
+      "question": "What are the key steps involved in burning tokens using the Ergo Token Minter integration?",
+      "answer": "The key steps are: 1) Identify and select the input boxes holding the tokens to be burnt, along with a small ERG amount, 2) Construct the output boxes, excluding consideration of the tokens, 3) Retrieve the transaction JSON representation, 4) Edit the output change box details to eliminate the tokens intended for burning, 5) Dispatch the modified transaction (JSON) to the network."
+    },
+    {
+      "question": "What is the purpose of the P2S (Pay-to-Script) address mentioned in the document?",
+      "answer": "The P2S (Pay-to-Script) address '4MQyMKvMbnCJG3aJ' represents a 'false' condition, meaning the box is unspendable. Sending tokens to this address effectively burns them."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Burning a token",
+      "level": 1,
+      "content": "There are sometimes occasions when you want to delete a token from your wallet. \n\n- Your address was airdropped a token you no longer want\n- You created an NFT but something about it is not right. \n- A project sent you voting or other tokens that you no longer need\n\nTo get rid of those tokens, you have a few options.\n\n- **Mobile Wallet:** [TokenJay](https://www.tokenjay.app/app/#burntoken) (This requires an Ergopay compatible wallet like Ergo Mobile Wallet)\n- **Nautilus:** [Ergo Token Minter / Burner](https://github.com/ThierryM1212/ergo-token-minter)\n- **[SAFEW](https://github.com/ThierryM1212/SAFEW)** supports token burning natively.\n- Send to `4MQyMKvMbnCJG3aJ`, a **[P2S (Pay-to-Script)](p2s.md)** representation of a \u201cfalse\u201d condition, i.e. the box is unspendable. <!--TODO: What? Hash is written into `R4` register of the box, in the explorer It looks like `0e2047ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb`, where `0e` is type descriptor (byte array), `20` is bytestring length (0x20 in hex = 32), `47ee2cbd52be01e0876c3e0b989a0d4d5f8955200b1fab0e6eeb2b182555c2fb` is the hash of the file. --->"
+    },
+    {
+      "heading": "Programmatically",
+      "level": 2,
+      "content": "To burn tokens programmatically, simply spend an Unspent Transaction Output (UTXO) containing the tokens you wish to eliminate. Ensure not to include these tokens in the output of the transaction."
+    },
+    {
+      "heading": "Using AppKit",
+      "level": 3,
+      "content": "If you're working with [AppKit](appkit.md), the transaction builder conveniently offers a `burntoken` method tailored for this purpose."
+    },
+    {
+      "heading": "Ergo Token Minter Integration",
+      "level": 3,
+      "content": "The burn token functionality integrated by `ThierryM1212` can be observed [here](https://github.com/ThierryM1212/ergo-token-minter/blob/main/src/index.js#L254). The crucial steps involved are as follows:\n\n1. Identify and select the input boxes holding the tokens to be burnt, along with a small ERG amount.\n2. Construct the output boxes, excluding consideration of the tokens. The transaction builder automatically appends an additional output change box encompassing all tokens.\n3. Retrieve the transaction JSON representation.\n4. Edit the output change box details to eliminate the tokens intended for burning.\n5. Dispatch the modified transaction (JSON) to the network.\n\nThis streamlined approach simplifies the process of burning tokens while maintaining transaction integrity."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tokens/burn.md",
+  "processed_at": "2025-05-11T19:37:17.758911",
+  "ai_processed": true
+}

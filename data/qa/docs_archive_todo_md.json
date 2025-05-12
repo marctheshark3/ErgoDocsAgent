@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ergo-play-boilerplate repository?",
+    "answer": "The ergo-play-boilerplate repository provides a barebone code for newcomers to jump into the world of Ergo development and get their feet wet quickly."
+  },
+  {
+    "question": "What is the role of edge in the Ergo development ecosystem?",
+    "answer": "Edge can play a big part in the Ergo development ecosystem if it's being utilized, maintained, and improved over time."
+  },
+  {
+    "question": "What is the topic of the Completeness of Ergo video by Kushti?",
+    "answer": "The video discusses the completeness of the Ergo blockchain platform."
+  },
+  {
+    "question": "Where can the Ergo-play-boilerplate repository be found?",
+    "answer": "The Ergo-play-boilerplate repository can be found at https://github.com/kii-dot/ergo-play-boilerplate."
+  },
+  {
+    "question": "Where can the Edge repository be found?",
+    "answer": "The Edge repository can be found at https://github.com/Ergo-Lend/edge."
+  }
+]

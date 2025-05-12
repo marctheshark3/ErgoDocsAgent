@@ -1,0 +1,148 @@
+{
+  "id": "docs_dev_scs_global-functions_md",
+  "title": "Global Functions",
+  "summary": "The document provides an overview of global functions available for use in ErgoScript, a programming language for the Ergo blockchain. It covers three main categories of functions:\n\nLogical Functions: These include `allOf`, `anyOf`, and `xorOf`, which perform logical operations on collections of boolean values.\n\nZero-Knowledge Functions: These include `atLeast` and `ZKProof`, which allow evaluating SigmaProps (Sigma Propositions) while preserving zero-knowledge properties.\n\nCryptographic Functions: These are functions related to cryptography, such as hashing and calculations over `GroupElement` values.\n\nThe document also provides a reference to the complete list of global functions and types in the ErgoScript LangSpec.",
+  "qa_pairs": [
+    {
+      "question": "What are the two logical functions described in the content?",
+      "answer": "The two logical functions described are AllOf and AnyOf."
+    },
+    {
+      "question": "What does the AllOf function do?",
+      "answer": "The AllOf function takes a collection of booleans and returns a boolean indicating whether all booleans within the collection evaluate to true."
+    },
+    {
+      "question": "What does the AnyOf function do?",
+      "answer": "The AnyOf function takes a collection of booleans and returns a boolean indicating whether at least one boolean within the collection evaluates to true."
+    },
+    {
+      "question": "How are the AllOf and AnyOf functions related to logical operators?",
+      "answer": "The AllOf function is equivalent to inserting && between each boolean in the collection, and the AnyOf function is equivalent to inserting || between each boolean in the collection."
+    },
+    {
+      "question": "Where can a complete reference for all global functions and types in ErgoScript be found?",
+      "answer": "A complete reference for all global functions and types can be found in the ErgoScript LangSpec."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Global Functions\n  - ErgoScript\n---"
+    },
+    {
+      "heading": "Global Functions",
+      "level": 1,
+      "content": "There are a variety of global functions available for use in ErgoScript. Here, we will go through some of the most commonly used functions (besides `sigmaProp`). A complete reference for all global functions and types can be found in the [ErgoScript LangSpec](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md)."
+    },
+    {
+      "heading": "Logical Functions",
+      "level": 2,
+      "content": "Logical functions are global functions that operate on booleans. These functions include operators such as `&&` and `||`, along with the following commonly used functions."
+    },
+    {
+      "heading": "AllOf",
+      "level": 3,
+      "content": "The `allOf` function takes a collection of booleans and returns a boolean indicating whether all booleans within the collection evaluate to true. It is equivalent to inserting `&&` between each boolean in the collection."
+    },
+    {
+      "heading": "AnyOf",
+      "level": 3,
+      "content": "The `anyOf` function takes a collection of booleans and returns a boolean indicating whether at least one boolean within the collection evaluates to true. It is equivalent to inserting `||` between each boolean in the collection."
+    },
+    {
+      "heading": "XorOf",
+      "level": 3,
+      "content": "The `xorOf` function takes a collection of booleans and applies the XOR operation across the booleans within the collection. Therefore, `xorOf` returns true if an odd number of booleans within the collection evaluates to true, and false if an even number evaluates to true."
+    },
+    {
+      "heading": "Zero-Knowledge Functions",
+      "level": 2,
+      "content": "Zero-knowledge functions allow evaluating SigmaProps while preserving the zero-knowledge properties needed to verify the truth of the given SigmaProps."
+    },
+    {
+      "heading": "AtLeast",
+      "level": 3,
+      "content": "The `atLeast` function takes an integer `k` and a collection of SigmaProps and returns whether at least `k` SigmaProps within the collection evaluate to true. All SigmaProps are evaluated with zero knowledge."
+    },
+    {
+      "heading": "ZKProof",
+      "level": 3,
+      "content": "The `ZKProof` function takes a block of code and evaluates all operations within the code block under zero-knowledge scoping. This may be useful if some operations within your contract must be kept private. The code block must not use boolean operations to ensure zero-knowledge and must evaluate to a single root SigmaProp."
+    },
+    {
+      "heading": "Cryptographic Functions",
+      "level": 2,
+      "content": "Cryptographic functions are functions related to cryptography, such as hashing and calculations over `GroupElement` values."
+    },
+    {
+      "heading": "Blake2b256",
+      "level": 3,
+      "content": "`blake2b256` takes a `Coll[Byte]` and returns a new `Coll[Byte]` representing the hash according to the Blake2b256 algorithm. The Blake2b256 algorithm is the main hashing algorithm used within Ergo and is also incorporated as part of the Autolykos PoW algorithm used to mine Ergo."
+    },
+    {
+      "heading": "Sha256",
+      "level": 3,
+      "content": "`sha256` takes a `Coll[Byte]` and returns a new `Coll[Byte]` representing the hash according to the SHA256 hashing function."
+    },
+    {
+      "heading": "DecodePoint",
+      "level": 3,
+      "content": "`decodePoint` takes a `Coll[Byte]` representing a group element and converts it into the `GroupElement` type."
+    },
+    {
+      "heading": "ProveDHTuple",
+      "level": 3,
+      "content": "`proveDHTuple` takes four `GroupElement` values and constructs a public key represented by a SigmaProp according to the Diffie-Hellman signature protocol. This is useful for creating shared public keys in multisignature and ring signature settings."
+    },
+    {
+      "heading": "ProveDLog",
+      "level": 3,
+      "content": "`proveDlog` takes a `GroupElement` and creates a SigmaProp representing a public key based on the discrete logarithm problem."
+    },
+    {
+      "heading": "Compile-Time Functions",
+      "level": 2,
+      "content": "Compile-time functions are not evaluated during the spending of the script; instead, these functions are used when compiling an ErgoScript contract into the native ErgoTree language. These functions take Strings (which is not an actual ErgoScript type) and convert them into an ErgoScript type during contract compilation. These values are stored directly within the contract and cannot change once the contract has been compiled."
+    },
+    {
+      "heading": "FromBase",
+      "level": 3,
+      "content": "Two functions, `fromBase64` and `fromBase58`, take strings in their respective base and convert them into a `Coll[Byte]` at compile time."
+    },
+    {
+      "heading": "PK",
+      "level": 3,
+      "content": "The `PK` function takes an address string (which is a base58 encoded `GroupElement` with a network identifier prefix) and converts it into a `SigmaProp` representing a public key at compile time. This is done using many of the functions listed above."
+    },
+    {
+      "heading": "Deserialize",
+      "level": 3,
+      "content": "The `deserialize[T]` function takes a type parameter `T` and a base58 encoded string of binary data. The string value is converted into a value of ErgoScript type `T` at compile time."
+    },
+    {
+      "heading": "Other Functions",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "GetVar",
+      "level": 3,
+      "content": "`getVar[T]` takes a type parameter `T` and an integer `tag`, returning a Context Variable of the given type associated with that `tag`. Context Variables are specific off-chain variables that can be attached to any box at the time of transaction creation. Context variables allow for robust changes to certain parameters within your contract. It is especially useful for providing generic contracts that rely on off-chain information that may change between different spending transactions."
+    },
+    {
+      "heading": "SubstConstants",
+      "level": 3,
+      "content": "The `substConstants` function has the following signature:\n\n```scala\ndef substConstants[T](scriptBytes: Coll[Byte],\n positions: Coll[Int], newValues: Coll[T]): Coll[Byte]\n```\n\nIt allows constructing another contract\u2019s proposition bytes using the given parameters. Because a contract\u2019s address is created using its contents, inputting different constants within a contract can change its address (and therefore, the contract itself). This function allows for a contract of the same \u201ctemplate\u201d to be created using a new set of constants. To be used properly, one must provide a sample of the contract\u2019s proposition bytes (parameter `scriptBytes`), along with the `positions` at which certain constants of type `T` must be replaced with the corresponding values in the `newValues` parameter."
+    },
+    {
+      "heading": "Example: Alcohol Sale Proxy Contract",
+      "level": 2,
+      "content": "```scala\n{\n\t// ====== Alcohol Sale Proxy Contract Example ====== // \n\n\t// Hard-coded constants expected at compile time are written in UpperCamelCase.\n\t\n\t// INPUTS:\n\t// license          = INPUTS(0)\n\t// buyerProxyInputs = INPUTS - INPUTS(0)\n\t//\n\t// OUTPUTS:\n\t// storeBox              = OUTPUTS(0)\n\t// provincialSalesTaxBox = OUTPUTS(1)\n\t// federalSalesTaxBox    = OUTPUTS(2)\n\t// buyerWalletBox        = OUTPUTS(3)\n\t// minerFeeBox           = OUTPUTS(4)\n\t//\n\t// (*) Note: \n\t//           1. Mining fee box is always the last box in the set of OUTPUTS of a transaction,\n\t//              I am just showing this for clarity, but it will not be accessed in this contract.\n    \t//           2. If there is any that change remains in the proxy, \n\t//\t\t\t\tit is sent back to the buyer wallet.\n\n\t// Contract variables\n  \tval buyerPK: SigmaProp          = PK(buyerPKString)\n\tval buyerProxyInputs: Coll[Box] = INPUTS.filter({ (input: Box) => input.propositionBytes == SELF.propositionBytes })\n\tval buyerAmount: Long           = buyerProxyInputs.fold(0L)({ (input: Box, acc: Long) => acc + input.value })\n\tval provincialSalesTax: Long    = (AlcoholSaleAmount * ProvincialSalesTaxNum) / ProvincialSalesTaxDenom\n\tval federalSalesTax: Long       = (AlcoholSaleAmount * FederalSalesTaxNum) / FederalSalesTaxDenom\n\tval totalCost: Long             = AlcoholSaleAmount + provincialSalesTax + federalSalesTax + MinerFee\n\t\n\t// Variables associated with the buyer's license\n\tval license = INPUTS(0)\n\tval id      = license.R4[Coll[Byte]].get\n\tval name    = license.R5[Coll[Byte]].get\n\tval bDay    = license.R6[Coll[Byte]].get\n\tval address = license.R7[Coll[Byte]].get\n\tval expDate = license.R8[Coll[Byte]].get\n\n\t// Context variables needed for the proxy contract, assuming they are provided correctly\n\tval licenseTemplateContractBytes = getVar[Coll[Byte]](0).get\n\n\t// Substitute the constants of the license template contract bytes\n\t// and create the new contract bytes for the buyer's license\n\tval newLicenseContractBytes = {\n\t\t\n\t\t// New positions\n\t\tval newPositions_SigmaProp: Coll[Int] = Coll(0)\n\t\tval newPositions_Coll_Byte: Coll[Int] = Coll(1, 2, 3, 4, 5)\n\t\n\t\t// New constants\n\t\tval newConstants_SigmaProp: Coll[SigmaProp] = Coll(buyerPK)\n\t\tval newConstants_Coll_Byte: Coll[Byte] = Coll(id, name, bDay, address, expDate)\n\n\t\t// New contract bytes with substituted buyer PK\n\t\tval newContractBytes_SigmaProp = substConstants(licenseTemplateContractBytes, newPositions_SigmaProp, newConstants_SigmaProp)\n\t\t\n\t\t// New contract bytes with substituted buyer license information\n\t\tval newContractBytes_Coll_Byte = substConstants(newContractBytes_SigmaProp, newPositions_Coll_Byte, newConstants_Coll_Byte)\n\t\tval newContractBytes = newContractBytes_Coll_Byte\n\t\t\n\t\tnewContractBytes\n\t}\n\n\t// Check for a valid sale\n\tval validSale = {\n\n\t\t// Check for a valid license \n\t\tval validLicense = {\n\t\t\tallOf(Coll(\n\t\t\t\tBuyerLicenseContractBytes == newLicenseContractBytes,\n\t\t\t\tlicense.propositionBytes == newLicenseContractBytes\n\t\t\t))\n\t\t}\n\n\t\t// Check for a valid proxy amount\n    \t\tval validProxyAmount = {\n\t    \t\tbuyerAmount >= totalAmount\n\t\t}\n\n\t\t// Check for a valid store\n\t\tval validStore = {\n\t\t\tval storeBox = OUTPUTS(0)\n\t\t\tstoreBox.propBytes == StoreBoxPropositionBytes\n\t\t}\n\n\t\t// Check for valid sales taxes\n\t\tval validSalesTaxes = {\n\t\t\t\n\t\t\t// Check for a valid provincial tax\n\t\t\tval validProvincialSalesTax = {\n\t\t\t\tval provincialSalesTaxBox = OUTPUTS(1)\n\t\t\t\tallOf(Coll(\n\t\t\t\t\t(provincialSalesTaxBox.propositionBytes == ProvincialSalesTaxPK),\n\t\t\t\t\t(provincialSalesTaxBox.value >= provincialSalesTax)\n\t\t\t\t))\n\t\t\t}\n\n\t\t\t// Check for a valid federal tax\n\t\t\tval validFederalSalesTax = {\n\t\t\t\tval federalSalesTaxBox = OUTPUTS(2)\n\t\t\t\tallOf(Coll(\n\t\t\t\t\t(federalSalesTaxBox.propositionBytes == FederalSalesTaxPK),\n\t\t\t\t\t(federalSalesTaxBox.value >= federalSalesTax)\n\t\t\t\t))\n\t\t\t}\n      \n      \t\t\t// Demand that both sales taxes are valid\n      \t\t\tallOf(Coll(\n        \t\t\tvalidProvincialSalesTax,\n        \t\t\tvalidFederalSalesTax\n      \t\t\t))\n\n\t\t}\n\n\t\t// Check for a valid buyer wallet to return any change\n\t\tval validBuyerWallet = {\n\t\t\tif (buyerAmount > totalCost) {\n\t\t\t\tval buyerWalletBox = OUTPUTS(3)\n\t\t\t\tbuyerWalletBox.propositionBytes == buyerPK.propBytes\n\t\t\t} else {\n\t\t\t\ttrue\n\t\t\t}\n\t\t}\t\t\n\t\n\t\t// Demand that all the conditions are valid\n\t\tallOf(Coll(\n\t\t\tvalidLicense,\n\t\t\tvalidProxyAmount,\n\t\t\tvalidStore,\n\t\t\tvalidSalesTaxes,\n\t\t\tvalidBuyerWallet\n\t\t))\n\n\t}\n\n\t// Check for a valid refund\n\tval validRefund = {\n\t\tval refundWalletBox = OUTPUTS(0)\n\t\tallOf(Coll(\n\t\t\t(refundWalletBox.propositionBytes == buyerPK.propBytes),\n\t\t\t(refundWalletBox.value >= buyerAmount - MinerFee)\n\t\t))\n\t}\n\n\t// Obtain the appropriate sigma proposition\n\tsigmaProp(anyOf(Coll(\n\t\tvalidSale,\n\t\tvalidRefund\n\t)))\n\n}\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/global-functions.md",
+  "processed_at": "2025-05-11T19:30:16.773347",
+  "ai_processed": true
+}

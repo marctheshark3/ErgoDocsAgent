@@ -1,0 +1,1 @@
+The document provides a Solo Mining FAQ for the Ergo platform. It explains why mined funds may not be immediately visible in the wallet, why rewards go to a different address, and how to verify if a block was mined by the user. It also describes the API endpoints for obtaining the user's reward address and public key, as well as the structure of the mining solution response.

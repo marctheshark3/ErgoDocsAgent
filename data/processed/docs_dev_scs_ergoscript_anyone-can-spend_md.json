@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_scs_ergoscript_anyone-can-spend_md",
+  "title": "Anyone-Can-Spend Scripts",
+  "summary": "The document discusses \"Anyone-Can-Spend Scripts\" in ErgoScript, which are the simplest form of ErgoScript and consist of a single boolean predicate that always evaluates to true. This means that any funds sent to the corresponding address can be spent by anyone. The document provides an example of such a script, `true && (false || true)`, which corresponds to the address `NwAyzZpF2KcXAGBJvPrAH`.",
+  "qa_pairs": [
+    {
+      "question": "What is the simplest form of ErgoScript?",
+      "answer": "A single boolean predicate."
+    },
+    {
+      "question": "What does the script `true` correspond to?",
+      "answer": "The address `4MQyML64GnzMxZgm`."
+    },
+    {
+      "question": "What can anyone do with funds sent to an anyone-can-spend script?",
+      "answer": "Spend the funds."
+    },
+    {
+      "question": "What is the address corresponding to the script `true && (false || true)`?",
+      "answer": "NwAyzZpF2KcXAGBJvPrAH."
+    },
+    {
+      "question": "What are scripts that consistently evaluate to `true` and their corresponding boxes called?",
+      "answer": "Anyone-can-spend scripts."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Anyone-Can-Spend Scripts",
+      "level": 1,
+      "content": "The simplest form of ErgoScript is a single boolean predicate. For example, `true` corresponds to the address [4MQyML64GnzMxZgm](https://wallet.plutomonkey.com/p2s/?source=dHJ1ZQ==) `4MQyML64GnzMxZgm`.\n\nAny funds sent to this address can be spent by anyone, as the script always evaluates to `true`.\n\nScripts that consistently evaluate to `true`, and their corresponding boxes, are referred to as **anyone-can-spend** scripts.\n\n\n\n```\ntrue && (false || true)     // address NwAyzZpF2KcXAGBJvPrAH\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscript/anyone-can-spend.md",
+  "processed_at": "2025-05-11T19:28:02.963000",
+  "ai_processed": true
+}

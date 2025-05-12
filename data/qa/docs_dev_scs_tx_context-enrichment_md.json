@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the minimum level of context required for a UTXO-based system to support transaction trees?",
+    "answer": "Level 2: current transaction (inputs and outputs)"
+  },
+  {
+    "question": "What are the four levels of context defined in the document?",
+    "answer": "1. current UTXO, height and timestamp, 2. current transaction (inputs and outputs), 3. current block header and block solution, 4. current block (other sibling transactions)"
+  },
+  {
+    "question": "Which level of context does Bitcoin operate at?",
+    "answer": "Level 1"
+  },
+  {
+    "question": "Which level of context does Ergo operate at?",
+    "answer": "Level 3"
+  },
+  {
+    "question": "What are the two conditions checked in the example Scala code to ensure the protocol is followed?",
+    "answer": "1. Whether the propositionBytes of the out box is equal to state_n_code, 2. Whether the R4 register of the out box is equal to the R4 register of the current SELF box"
+  }
+]

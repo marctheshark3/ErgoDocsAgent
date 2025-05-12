@@ -1,0 +1,1 @@
+Introduction to the Ergo Platform documentation. The documentation is hosted at docs.ergoplatform.com. Contributions can be made by submitting a pull request. To run the documentation locally, install the required packages using pip and then run the mkdocs serve command.

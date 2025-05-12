@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_tokens_nfts_create_md",
+  "title": "Creating an NFT",
+  "summary": "The document provides a comprehensive guide on how to create an NFT on the Ergo blockchain. It covers the quickest way to mint an NFT using the ergoauctions.org platform, as well as how to programmatically mint an NFT using examples provided on the nft-examples.md page. The document also discusses the EIP-0024: Artwork Contract standard, which outlines the process of issuing NFTs, including the V1 and V2 design versions. Additionally, the document provides resources for minting NFTs online, such as ergoauctions.org and Lilium, as well as developer resources like ergpy and ergo-nft-bulk-minter.",
+  "qa_pairs": [
+    {
+      "question": "What is the quickest way to create an NFT?",
+      "answer": "The quickest way to create an NFT is to follow the visual guide at https://ergoplatform.org/en/blog/2022-03-08-how-to-minting-a-non-fungible-token-nft-on-the-ergo-blockchain/ and mint your NFT through ergoauctions.org."
+    },
+    {
+      "question": "How can I programmatically mint an NFT on the Ergo Blockchain?",
+      "answer": "See the page nft-examples.md for simple examples that demonstrate how to programmatically mint an NFT on the Ergo Blockchain."
+    },
+    {
+      "question": "What is the standard for artwork issuance on Ergo?",
+      "answer": "The standard for artwork issuance on Ergo is EIP-0024: Artwork Contract, which outlines the process of issuing NFTs, including the two different design versions, V1 and V2, and the importance of artist identity."
+    },
+    {
+      "question": "What are the differences between V1 and V2 of the Artwork Contract?",
+      "answer": "V2 of the Artwork Contract offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information, compared to V1."
+    },
+    {
+      "question": "What are some tools for minting and selling NFTs on the Ergo Blockchain?",
+      "answer": "ergoauctions.org allows NFT minting, and Lilium is a tool for artists to mint and sell their NFT collections."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Creating an NFT",
+      "level": 1,
+      "content": "/// details | How do I mint a NFT?\n    {type: tip, open: true}\nThe quickest way to create an NFT is to follow [this visual guide](https://ergoplatform.org/en/blog/2022-03-08-how-to-minting-a-non-fungible-token-nft-on-the-ergo-blockchain/) that'll show you how to mint your NFT through [ergoauctions.org](https://ergoauctions.org/)\n///"
+    },
+    {
+      "heading": "Creating an NFT programmatically",
+      "level": 2,
+      "content": "See [this page](nft-examples.md) for some simple examples that demonstrate how to programmatically mint a NFT on the Ergo Blockchain."
+    },
+    {
+      "heading": "Standard",
+      "level": 2,
+      "content": "The standard for artwork issuance on Ergo is [EIP-0024: Artwork Contract](eip24.md). This standard outlines the process of issuing NFTs, including the two different design versions, [V1 and V2](v1v2.md), and the importance of artist identity. V2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Minting your NFT online",
+      "level": 3,
+      "content": "- [ergoauctions.org](https://ergoauctions.org/#/auction/active?type=all) Allows NFT minting. ([HowTo](https://ergoplatform.org/en/blog/2022-03-08-how-to-minting-a-non-fungible-token-nft-on-the-ergo-blockchain/))\n- [Lilium](lilium.md) is a tool for artists to mint and sell their collections."
+    },
+    {
+      "heading": "Developer Resources",
+      "level": 3,
+      "content": "- [ergpy](https://github.com/mgpai22/ergpy) has bulk-minting (with royalties!) \n- [ergo-nft-bulk-minter](https://github.com/mgpai22/ergo-nft-bulk-minter)\n- [ergonfts.org](https://ergonfts.org/)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tokens/nfts/create.md",
+  "processed_at": "2025-05-11T19:37:22.673866",
+  "ai_processed": true
+}

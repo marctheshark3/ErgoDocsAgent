@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of this guide?",
+    "answer": "This guide details the method for running an Ergo node on Android using an Arch Linux environment within Termux via proot."
+  },
+  {
+    "question": "Why is the proot-distro method necessary for running the Ergo node?",
+    "answer": "The proot-distro method is necessary if you need to run the node with stateType=\"utxo\" (which uses RocksDB for state storage) or if you encounter database issues (e.g., LevelDB failures) with the direct Termux setup."
+  },
+  {
+    "question": "What are the prerequisites for following this guide?",
+    "answer": "The prerequisites are: an Android device meeting the requirements, and Termux installed from F-Droid."
+  },
+  {
+    "question": "What are the key differences between the proot-distro method and the direct Termux setup?",
+    "answer": "The proot-distro method adds overhead compared to the direct Termux setup, but it is primarily required for specific use cases needing RocksDB/UTXO mode. For most mobile users, the direct Termux setup with stateType=\"digest\" is recommended."
+  },
+  {
+    "question": "What are the database engines used by the Ergo node, and why is the proot-distro method necessary for RocksDB?",
+    "answer": "The Ergo node uses database engines like LevelDB by default and RocksDB as an option, especially for stateType=\"utxo\". The proot-distro method is necessary because the Java bindings for RocksDB often rely on the standard GNU C Library (glibc), while Android/Termux typically use a different C library (musl libc via Bionic), leading to incompatibility issues."
+  }
+]

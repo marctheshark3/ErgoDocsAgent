@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the possible network types for addresses?",
+    "answer": "Mainnet - `0x00`, Testnet - `0x10`"
+  },
+  {
+    "question": "What are the different address types?",
+    "answer": "`0x01` - Pay-to-PublicKey(P2PK), `0x02` - Pay-to-Script-Hash(P2SH), `0x03` - Pay-to-Script(P2S)"
+  },
+  {
+    "question": "How are the content bytes formed for each address type?",
+    "answer": "* **P2PK** - serialized (compressed) public key\n* **P2SH** - first 192 bits of the Blake2b256 hash of serialized script bytes\n* **P2S** - serialized script"
+  },
+  {
+    "question": "What is the general structure of an address?",
+    "answer": "* **Prefix byte** = `network type + address type`\n* **checksum** = `leftmost_4_bytes (blake2b256 (prefix byte || content bytes))`\n* **address** = `prefix byte || content bytes || checksum`"
+  },
+  {
+    "question": "Why is P2S typically preferred over P2SH?",
+    "answer": "P2S is a lot easier to use. P2SH requires keeping the contract ready off-chain to be submitted when creating the transaction, and if you lose it, your funds are stuck forever. P2SH is technically cheaper since you store less data on-chain, but likely won't be used until there is heavy load on-chain."
+  }
+]

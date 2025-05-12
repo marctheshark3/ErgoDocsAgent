@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a Local Exchange Trading System (LETS)?",
+    "answer": "A Local Exchange Trading System (LETS) is an innovative mutual credit association that empowers communities to create their own local currencies, fostering sustainable economies independent of traditional monetary systems."
+  },
+  {
+    "question": "How does a LETS work?",
+    "answer": "In a LETS, members can generate common credit money individually, which is then recorded in a shared ledger. This system enhances the velocity of trade, goods, and services within a community, providing a robust mechanism for economic resilience."
+  },
+  {
+    "question": "Why are blockchain-based LETS beneficial?",
+    "answer": "A blockchain-based LETS could offer a more secure, transparent, and scalable solution by enabling interoperability between different LETS, improving resilience, and allowing the design of new financial products to strengthen the system."
+  },
+  {
+    "question": "How can LETS be implemented on the Ergo blockchain?",
+    "answer": "Ergo's blockchain offers unique capabilities to implement a Trustless LETS on Ergo with no need for a membership record or management committee, allowing the system to operate with complete autonomy."
+  },
+  {
+    "question": "When have LETS historically emerged as a solution?",
+    "answer": "LETS have historically emerged as a solution during economic crises, such as the Canadian town's depression in 1981 and the Argentine Great Depression (1998-2002)."
+  }
+]

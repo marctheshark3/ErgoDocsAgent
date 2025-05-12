@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key advantage of SigmaUSD over Ethereum-based crypto-backed stablecoins like DAI?",
+    "answer": "No liquidations!"
+  },
+  {
+    "question": "How is the stability of SigmaUSD different from that of UST?",
+    "answer": "SigmaUSD is over-collateralized, with every SigUSD backed by $3, while the breaking point of the UST peg is unclear."
+  },
+  {
+    "question": "What is the key difference between the collateral ratios of SigmaUSD and Terra's stablecoin system?",
+    "answer": "The collateral ratio for SigmaUSD is higher, meaning better capital efficiency, but Terra's system needs an additional mechanism to ensure stability when the collateral (Luna) value drops."
+  },
+  {
+    "question": "How does the Luna supply dependency affect the stability of Terra's stablecoin system compared to SigmaUSD?",
+    "answer": "The Luna supply depends on Terra usage, which can lead to Luna price pumping when the trend is up but dumping harder when the trend is down, creating a risk of a bank run."
+  },
+  {
+    "question": "What is the key benefit of SigmaUSD's explicit peg breaking point compared to the uncertainty in Terra's stablecoin system?",
+    "answer": "With SigmaUSD, the breaking point of the peg is explicit and open for anyone to see, which stops a bank run at its inception, while with Terra's system, no one knows at which price point the trust in the protocol disappears."
+  }
+]

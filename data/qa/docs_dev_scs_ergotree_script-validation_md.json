@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of script validation in Ergo transactions?",
+    "answer": "To protect the input boxes by executing the script within the context of the current transaction."
+  },
+  {
+    "question": "What is the target block validation time for Ergo to maintain steady block validation of 1000 transactions per second?",
+    "answer": "The block validation time should be minimized to increase the probability of successful mining."
+  },
+  {
+    "question": "What are the steps involved in validating every script of an input box?",
+    "answer": "1. Create a Context object with SELF = box, 2. Traverse the ErgoTree to build a cost graph, 3. Compute the cost estimation by evaluating the cost graph, 4. If the cost is within the limit, evaluate the ErgoTree using the context to obtain a sigma proposition, 5. Execute the Sigma protocol verification procedure."
+  },
+  {
+    "question": "What is the purpose of the cost estimation step in script validation?",
+    "answer": "To ensure that the cost of evaluating the script is within the limit."
+  },
+  {
+    "question": "What is the final step in the script validation process?",
+    "answer": "Execute the Sigma protocol verification procedure."
+  }
+]

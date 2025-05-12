@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Ergo's storage rent mechanism?",
+    "answer": "Ergo's storage rent mechanism allows miners to take over valuable assets inside a UTXO if there are insufficient ERGs to pay rent."
+  },
+  {
+    "question": "What are the potential benefits of Ergo's storage rent mechanism?",
+    "answer": "The storage rent mechanism incentivizes miners by offering them additional rewards, making the Ergo blockchain more attractive and encouraging participation, which can enhance the network's security and overall health."
+  },
+  {
+    "question": "What are the potential drawbacks of Ergo's storage rent mechanism?",
+    "answer": "Users who are not aware of the storage rent system or fail to maintain enough ERG in their UTXO may lose valuable assets unintentionally."
+  },
+  {
+    "question": "What is EIP-33: Token burning during rent collection?",
+    "answer": "EIP-33: Token burning during rent collection is a proposal under discussion that could potentially address some of the concerns with Ergo's storage rent mechanism."
+  },
+  {
+    "question": "What is the current status of the consensus around EIP-33?",
+    "answer": "There appears to be no current consensus on the implementation of EIP-33: Token burning during rent collection."
+  }
+]

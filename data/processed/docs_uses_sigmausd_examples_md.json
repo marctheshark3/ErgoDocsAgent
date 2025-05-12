@@ -1,0 +1,53 @@
+{
+  "id": "docs_uses_sigmausd_examples_md",
+  "title": "examples.md",
+  "summary": "SigmaRSV is a call option on a percentage of the ERG held in the reserve portion of the SigmaUSD contract. Fees accumulate as users interact with the contract, the reserve amount fluctuates, and the ERG/USD price also fluctuates. SigmaUSD represents a call option on the dollar value of ERG held in reserve, with the price ERG/USD floating as users trade ERG. SigmaUSD is an essential building block for a functioning DeFi system, and the focus for Ergo is now on building use and utility, with the importance of stable value being critical to the long-term prosperity of the Ergo Network.",
+  "qa_pairs": [
+    {
+      "question": "What is SigmaRSV and how does it represent a call option on the ERG held in the reserve portion of the SigmaUSD contract?",
+      "answer": "SigmaRSV is a call option on a percentage of the ERG held in the reserve portion of the SigmaUSD contract. Fees are continually added to the ERG held in reserve as users interact with the contract, ensuring liquidity and offering a mechanism of return beyond trading. SigmaRSV represents a price/book (P/B Ratio) on the ERG held in reserve."
+    },
+    {
+      "question": "What are the three key mechanisms that influence the outcome for users of SigmaRSV?",
+      "answer": "The three key mechanisms are: 1) Fees accumulate as users interact with the contract, 2) The amount of ERG held in reserve floats (up/down) as users interact with the contract, and 3) The price ERG/USD floats (up/down) as users trade ERG."
+    },
+    {
+      "question": "How does the balance in the reserve and the price of ERG/USD affect the value of a user's SigmaRSV position?",
+      "answer": "If the reserve balance increases, the user's SigmaRSV represents a call option on a larger amount of ERG. If the reserve balance decreases, the user's SigmaRSV represents a call option on a smaller amount of ERG. If the price of ERG/USD increases, the value of the user's SigmaRSV position increases. If the price of ERG/USD decreases, the value of the user's SigmaRSV position decreases."
+    },
+    {
+      "question": "What is the basic overview of how SigmaUSD works?",
+      "answer": "SigmaUSD represents a call option on the dollar value of ERG held in reserve. Ergo's oracle pools infrastructure is used to calculate and adjust the current ERG/USD exchange rate. The reserve always backs SigmaUSD, and the price ERG/USD floats (up/down) as users trade ERG."
+    },
+    {
+      "question": "How does the value of ERG/USD affect the redemption value of SigmaUSD?",
+      "answer": "If the price of ERG/USD drops, the user can redeem their SigmaUSD for a larger amount of ERG. If the price of ERG/USD increases, the user can redeem their SigmaUSD for a smaller amount of ERG."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "SigmaRSV (Reservecoin) Simplified",
+      "level": 2,
+      "content": "- SigmaRSV is a call option on a % of the ERG held in the reserve portion of the SigmaUSD contract\n- Fees are continually added to the ERG held in reserve as users interact with the contract. This mechanism ensures liquidity and offers a mechanism of return beyond trading. SigmaRSV represents a price/book (P/B Ratio) on the ERG held in reserve.\n\n> It is important to understand three mechanisms that influence the outcome of each user of SigmaRSV \n\n1. Fees accumulate as users interact with the contract. Nothing is Free. \n2. The amount of ERG held in reserve floats (up/down) as users interact with the contract.\n3. The price ERG/USD floats (up/down) as users trade ERG."
+    },
+    {
+      "heading": "Overview",
+      "level": 3,
+      "content": "- Imagine the Reserve amount is 100 ERG.\n- Alice holds SigmaRSV, which represents 10% of the (P/B Ratio) contained in the reserves.\n- Alice's SigmaRSV position is a call option on 10 ERG (minus the exchange fee)\n- Let's imagine the price of ERG is 2$.\n- Alice's SigmaRSV represents 20$ in ERG (minus the exchange fee)\n\n**THE BALANCE IN RESERVE CAN GO UP**\n\n- Imagine, based on use, the reserve now holds 114 ERG.\n- Alice has SigmaRSV, which represents 10% of the (P/B Ratio) contained in the reserves.\n- Alice's SigmaRSV represents a call option on 11.4 ERGs.\n- Let's imagine the price of ERG is still 2$.\n- Alice has 22.80$ in ERG (minus the exchange fee)\n\n**THE BALANCE IN RESERVE CAN GO DOWN**\n\n- Imagine, based on use, the reserve now holds 90 ERG.\n- Alice has SigmaRSV, which represents 10% of the (P/B Ratio) contained in the reserves.\n- Alice's SigmaRSV represents a call option on 9 ERGs.\n- Let's imagine the price of ERG is still 2$.\n- Alice has 18.00$ in ERG (minus the exchange fee)\n\n**THE VALUE, ERG/USD, CAN GO UP**\n\n- Imagine, based on use, the reserve now holds 114 ERG.\n- Alice has SigmaRSV, which represents 10% of the (P/B Ratio) contained in the reserves.\n- Alice's SigmaRSV represents a call option on 11.4 ERGs.\n- Let's imagine the price of ERG is still NOW 3$.\n- Alice has a call option 34.20$ in ERG (minus the exchange fee)\n\n**THE VALUE, ERG/USD, CAN GO DOWN**\n\n- Imagine, based on use, the reserve now holds 114 ERG.\n- Alice has SigmaRSV, which represents 10% of the (P/B Ratio) contained in the reserves.\n- Alice's SigmaRSV represents a call option on 11.4 ERGs.\n- Let's imagine the price of ERG is still NOW 1$.\n- Alice has a call option 11.40$ in ERG (minus the exchange fee)"
+    },
+    {
+      "heading": "SigmaUSD (Stablecoin) Simplified",
+      "level": 2,
+      "content": "> SigmaUSD represents a call option on the dollar value of ERG held in reserve. \n\n\nSigmaUSD uses Ergo's oracle pools infrastructure to calculate and adjust the current ERG/USD exchange rate. Reserve always backs sigma USD. The price ERG/USD floats (up/down) as users trade ERG.\n\n\n**BASIC OVERVIEW**\n\n- Bobs has 20 SigmaUSD, representing a 20 USD value in ERG.\n- These ERGs are held in Reserve.\n- This 20$ value is backed by reserves of at least\n- (4x1)(80$ of ERG)(40 ERG @ $2)\n- Bob at 2$ Bob can Redeem his 20 SigmaUSD for 10 ERG (minus the exchange fee)\n\n**ERG/USD VALUE DROPS**\n\n- Let us imagine the price of ERG drops from $2 to $1.\n- Bobs 20$ of value is backed by at least\n- (4x1)(80$ of ERG)(80 ERG @ $1)\n- Bob can call 20 ERG (minus the exchange fee)\n\n**ERG/USD VALUE INCREASES**\n\n- Let us imagine the price of ERG increases from $2 to $4.\n- Bob's $20 value is backed by at least\n- (4x1)(80$ of ERG)(20 ERG @ $4)\n- Bob can call 5 ERG (minus the exchange fee)"
+    },
+    {
+      "heading": "Longterm framework of SigmaUSD.",
+      "level": 3,
+      "content": "- SigmaUSD is an essential building block for a functioning DeFi System.  \n- The focus for ERG now shifts to building on the foundation it has set. \n- Gateways, Dex's, Liquidity Pools, LETS systems. It is time to build use and utility. \n- The importance and significance of stable value cannot be overstated. \n- This is critical to the long-term prosperity of the Ergo Network and is important to understand."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/sigmausd/examples.md",
+  "processed_at": "2025-05-11T20:04:33.164506",
+  "ai_processed": true
+}

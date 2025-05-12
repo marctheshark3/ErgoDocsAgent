@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_wallet_satergo_md",
+  "title": "Satergo Wallet",
+  "summary": "Satergo Wallet is a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for users who wish to support network decentralization or prefer self-reliance. It offers a visual tutorial, full node support, lightweight design, and cross-platform compatibility. Users can connect with Satergo through its website, social media, and the Satergo Offline Vault, an Android application that securely stores encrypted seed phrases and connects with desktops via Bluetooth for transaction safety.",
+  "qa_pairs": [
+    {
+      "question": "What is the key feature of the Satergo wallet?",
+      "answer": "Satergo offers full node support, enabling users to actively participate in the Ergo network or use a remote node connection."
+    },
+    {
+      "question": "What are the benefits of Satergo's lightweight design?",
+      "answer": "Satergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices."
+    },
+    {
+      "question": "What platforms is Satergo compatible with?",
+      "answer": "Satergo offers cross-platform support, providing a consistent and reliable experience across all major desktop operating systems."
+    },
+    {
+      "question": "Where can users find more information about Satergo?",
+      "answer": "Users can discover more on the Satergo Website, follow updates on Twitter, join the community on Telegram, and explore the code on GitHub."
+    },
+    {
+      "question": "What is the Satergo Offline Vault?",
+      "answer": "The Satergo Offline Vault is an Android application that securely stores the user's encrypted seed phrase and connects with desktops via Bluetooth for transaction safety."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Satergo Wallet",
+      "level": 1,
+      "content": "Explore the robust capabilities of [Satergo](https://satergo.com/), a comprehensive desktop wallet designed for the Ergo ecosystem, featuring an integrated full node for those who wish to support network decentralization or prefer self-reliance.\n\n/// details | Comprehensive Video Guide\n    {type: info, open: true}\nEmbark on a visual journey to master Satergo with our in-depth video tutorial, accessible [here](https://www.youtube.com/watch?v=68d5_3vkXO4).\n///"
+    },
+    {
+      "heading": "Empowering Users with Full Node Support",
+      "level": 2,
+      "content": "Satergo stands out as the sole wallet in the Ergo ecosystem that offers full node support, enabling users to actively participate in the network or opt for a remote node connection for convenience."
+    },
+    {
+      "heading": "Lightweight and Feature-Rich",
+      "level": 2,
+      "content": "Satergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices. It operates independently, requiring no additional software, making it a versatile choice for users on the go."
+    },
+    {
+      "heading": "Universal Compatibility",
+      "level": 2,
+      "content": "Satergo's cross-platform support ensures a consistent and reliable experience across all major desktop operating systems."
+    },
+    {
+      "heading": "Connect with Satergo",
+      "level": 2,
+      "content": "- Discover more on the [Satergo Website](https://satergo.com/)\n- Follow the latest updates on [Twitter](https://twitter.com/SatergoWallet)\n- Join the community on [Telegram](https://t.me/Satergo)\n- Contribute or explore the code on [GitHub](https://github.com/Satergo)\n- Learn more about the [Satergo Offline Vault](satergo-vault.md), an Android application that securely stores your encrypted seed phrase and connects with desktops via Bluetooth for transaction safety."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/satergo.md",
+  "processed_at": "2025-05-11T19:41:29.763257",
+  "ai_processed": true
+}

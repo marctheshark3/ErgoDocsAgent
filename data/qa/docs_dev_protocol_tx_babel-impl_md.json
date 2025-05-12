@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Babel Fees Implementation Guide\n\n## Overview\n\nThis guide provides detailed instructions for implementing Babel fees in your Ergo applications. The implementation example demonstrates how to enable u..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Babel Fees Implementation Guide"
+  },
+  {
+    "question": "What is the 'Overview' section about?",
+    "answer": "This guide provides detailed instructions for implementing Babel fees in your Ergo applications. The..."
+  },
+  {
+    "question": "What is the 'Prerequisites' section about?",
+    "answer": "1. Node.js and npm (tested with Node v20.10.0)\n2. Fleet SDK core and babel-fees plugin\n3. Webpack fo..."
+  }
+]

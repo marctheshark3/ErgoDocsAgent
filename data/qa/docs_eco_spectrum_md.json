@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Spectrum Finance?",
+    "answer": "Spectrum Finance is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks."
+  },
+  {
+    "question": "What are the current features of Spectrum Finance?",
+    "answer": "The current features of Spectrum Finance include Liquidity Provision & Yield Farming, and Babel Fees which allow transaction fees to be paid with various tokens."
+  },
+  {
+    "question": "What is Spectrum Bloom?",
+    "answer": "Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes)."
+  },
+  {
+    "question": "What are the key highlights of the Spectrum Bloom white paper?",
+    "answer": "The key highlights include addressing early DEX limitations, focusing on decentralization and openness, utilizing the eUTxO blockchain model, introducing a novel DEX protocol, unique approaches to liquidity pooling and order execution, universal order composition, and the Autonomous Account (AA) feature."
+  },
+  {
+    "question": "What are the potential future extensions and applications of the Autonomous Account (AA) concept beyond DEXes?",
+    "answer": "The white paper discusses potential extensions and applications of the Autonomous Account concept beyond DEXes."
+  }
+]

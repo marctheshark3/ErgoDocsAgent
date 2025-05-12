@@ -1,0 +1,63 @@
+{
+  "id": "docs_node_history-pruning_md",
+  "title": "History Pruning",
+  "summary": "History Pruning is a feature in Ergo's blockchain that allows nodes to reduce the amount of stored historical block data, which can lead to a significant decrease in storage requirements. The concept of pruning involves the removal of less relevant data while keeping the information necessary for maintaining the network's security and functionality. This is achieved using the `ergo.node.blocksToKeep` parameter, which dictates the number of full blocks the node should store. Once this limit is reached, the node will start pruning older blocks, removing the full transactions but retaining the block headers. The block headers are crucial for the operation of the blockchain, as they help maintain the integrity and continuity of the blockchain. By keeping the block headers, a node can still participate in verifying and validating new blocks and transactions, thus maintaining full-node security.",
+  "qa_pairs": [
+    {
+      "question": "What is History Pruning in Ergo's blockchain?",
+      "answer": "History Pruning is a feature in Ergo's blockchain that allows nodes to reduce the amount of stored historical block data, which can lead to a significant decrease in storage requirements."
+    },
+    {
+      "question": "How does History Pruning work in Ergo's blockchain?",
+      "answer": "History Pruning is achieved using the `ergo.node.blocksToKeep` parameter, which dictates the number of full blocks that the node should store. Once this limit is reached, the node will start pruning older blocks, removing the full transactions but retaining the block headers."
+    },
+    {
+      "question": "Why are block headers important in a blockchain?",
+      "answer": "A block header in a blockchain contains metadata about the block, including the reference to the previous block, the difficulty target, and a nonce value. The block header is crucial for the operation of the blockchain, as it helps maintain the integrity and continuity of the blockchain."
+    },
+    {
+      "question": "What is the purpose of pruning in blockchain technology?",
+      "answer": "The purpose of pruning in blockchain technology is to remove some of the less relevant data on a node while keeping the information necessary for maintaining the network's security and functionality."
+    },
+    {
+      "question": "Who is the target audience for the feature of History Pruning in Ergo's blockchain?",
+      "answer": "History Pruning in Ergo's blockchain is particularly useful for nodes running on devices with limited storage capacity."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - History Pruning\n  - Node\n  - Storage\n  - Configuration\n---"
+    },
+    {
+      "heading": "History Pruning",
+      "level": 1,
+      "content": "\"History Pruning\" is a feature in Ergo's blockchain that allows nodes to reduce the amount of stored historical block data, which can lead to a significant decrease in storage requirements. It's particularly useful for nodes running on devices with limited storage capacity."
+    },
+    {
+      "heading": "What is History Pruning?",
+      "level": 2,
+      "content": "The concept of pruning in blockchain technology involves the removal of some of the less relevant data on a node while keeping the information necessary for maintaining the network's security and functionality. In Ergo's case, this means removing certain block data but keeping all block headers."
+    },
+    {
+      "heading": "How does it work?",
+      "level": 2,
+      "content": "This is achieved using the [`ergo.node.blocksToKeep`](conf-node.md#blocks-to-keep) parameter. This parameter dictates the number of full blocks (i.e., blocks containing all transactions) that the node should store. Once this limit is reached, the node will start pruning older blocks, removing the full transactions but retaining the block headers."
+    },
+    {
+      "heading": "Importance of Block Headers",
+      "level": 2,
+      "content": "A block header in a blockchain is a portion of a block that contains metadata about the block, including the reference to the previous block (which establishes the chain's sequence), the difficulty target for the block, and a nonce value that is part of the Proof-of-Work system. The block header is crucial for the operation of the blockchain, as it helps maintain the integrity and continuity of the blockchain."
+    },
+    {
+      "heading": "Full-Node Security",
+      "level": 2,
+      "content": "By keeping the block headers, a node can still participate in verifying and validating new blocks and transactions, thus maintaining full-node security. Full-node security refers to the ability of a node to independently validate the rules of the network without relying on other nodes."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/history-pruning.md",
+  "processed_at": "2025-05-11T19:54:29.259432",
+  "ai_processed": true
+}

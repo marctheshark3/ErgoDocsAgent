@@ -1,0 +1,38 @@
+{
+  "id": "docs_uses_index_coins_md",
+  "title": "Index Coins",
+  "summary": "Index Coins are a type of cryptocurrency that allow investors to gain exposure to a basket of different cryptocurrencies. Dynamic market-making algorithms are necessary to adjust the funds after price changes. The creators of index tokens must have market knowledge to decide which tokens to include and in what proportions. Examples of index coins running on Ethereum include ASSY, YETI, PIPT, and YLA, issued by the Powerpool Protocol.",
+  "qa_pairs": [
+    {
+      "question": "What are index coins?",
+      "answer": "Index coins are tokens that allow investors to gain exposure to a basket of different cryptocurrencies."
+    },
+    {
+      "question": "What is the role of dynamic market-making (DMM) algorithms in index coins?",
+      "answer": "DMM algorithms are necessary to adjust the funds in index coins after price changes."
+    },
+    {
+      "question": "What are some examples of index coins running on Ethereum?",
+      "answer": "Examples of index coins running on Ethereum include ASSY, YETI, PIPT, and YLA issued by Powerpool Protocol."
+    },
+    {
+      "question": "What is the importance of market knowledge in creating index tokens?",
+      "answer": "People who release index tokens must have market knowledge to decide which tokens to include in the index and in what percentages."
+    },
+    {
+      "question": "What is the purpose of index coins for crypto investors?",
+      "answer": "Index coins allow crypto investors to benefit from exposure to a diversified basket of cryptocurrencies."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Index Coins",
+      "level": 1,
+      "content": "Not all crypto investors are conscient of different blockchain use cases. Some of the investors may want to benefit from indexed tokens to invest in various cryptocurrencies. For such an innovation, dynamic market-making(DMM) algorithms would be necessary to adjust the funds after price changes. Besides, people who will release index tokens must have the market knowledge to decide which tokens must be involved in the indexed and for how many percentage. Some examples of index coins running on Ethereum are ASSY, YETI, PIPT, YLA issued by [Powerpool Protocol](https://powerpool.finance/)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/index_coins.md",
+  "processed_at": "2025-05-11T20:02:35.591041",
+  "ai_processed": true
+}

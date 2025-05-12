@@ -1,0 +1,38 @@
+{
+  "id": "todo_md",
+  "title": "todo.md",
+  "summary": "The document discusses the potential of edge computing in the development ecosystem and the ergo-play-boilerplate project, which provides a starting point for newcomers to get into Ergo development. It includes a link to a video on the completeness of Ergo, presented by Kushti at the Ergoversary Summit 2023.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the ergo-play-boilerplate project?",
+      "answer": "The ergo-play-boilerplate project provides a barebone code for newcomers to jump into the world of ergo development and get their feet wet quickly."
+    },
+    {
+      "question": "What is the role of edge in the Ergo development ecosystem?",
+      "answer": "Edge can play a big part in the development ecosystem if it's being utilized, maintained and improved over time."
+    },
+    {
+      "question": "What is the Completeness of Ergo topic discussed in the Ergoversary Summit 2023 video?",
+      "answer": "The Completeness of Ergo topic is discussed in the Ergoversary Summit 2023 video by Kushti."
+    },
+    {
+      "question": "What are the two GitHub projects mentioned in the document?",
+      "answer": "The two GitHub projects mentioned are Edge (https://github.com/Ergo-Lend/edge) and ergo-play-boilerplate (https://github.com/kii-dot/ergo-play-boilerplate)."
+    },
+    {
+      "question": "What is the purpose of the Completeness of Ergo video?",
+      "answer": "The purpose of the Completeness of Ergo video is to discuss the completeness of the Ergo platform."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "I think that edge can play a big part in the development ecosystem if it\u2019s being utilized, maintained and improved over time. And ergo-play-boilerplate can give newcomers barebone code to jump into the world of ergo development and get their feet wet super quickly. \n\n Edge - https://github.com/Ergo-Lend/edge\nErgo-play-boilerplate - https://github.com/kii-dot/ergo-play-boilerplate \n\n\n- [Completeness of Ergo | Kushti | Ergoversary Summit 2023](https://www.youtube.com/watch?v=49UmOkx6pj0&list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY&index=2)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "todo.md",
+  "processed_at": "2025-05-11T20:05:16.825814",
+  "ai_processed": true
+}

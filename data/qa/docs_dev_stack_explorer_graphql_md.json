@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of GraphQL queries?",
+    "answer": "GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching."
+  },
+  {
+    "question": "What is gql.ergoplatform.com?",
+    "answer": "gql.ergoplatform.com is a GraphQL server on top of Ergo Platform's explorer database schema."
+  },
+  {
+    "question": "What are some examples of public community/partner-maintained explorer instances with GraphQL support?",
+    "answer": "Examples include gql.ergoplatform.com, explore.sigmaspace.io/api/graphql, graphql.erg.zelcore.io/, and sigmaexplorer.org/."
+  },
+  {
+    "question": "What is the testnet instance for the Ergo GraphQL server?",
+    "answer": "The testnet instance is gql-testnet.ergoplatform.com/."
+  },
+  {
+    "question": "What are some example query categories based on the Ergo GraphQL schema?",
+    "answer": "Examples include fetching box details, fetching multiple boxes with specific conditions, fetching specific tokens, fetching tokens associated with a box, fetching inputs by transaction or box ID, fetching transactions with specific conditions, and more."
+  }
+]

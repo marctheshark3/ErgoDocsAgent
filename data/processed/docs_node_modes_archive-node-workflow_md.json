@@ -1,0 +1,38 @@
+{
+  "id": "docs_node_modes_archive-node-workflow_md",
+  "title": "Full Archival Node Technical Workflow",
+  "summary": "The document outlines the technical workflow for the full archival node mode in Ergo. The key steps are:\n1. Send ErgoSyncInfo message to connected peers to get block IDs that are better than the node's best block.\n2. Request headers for the received block IDs and apply them to the node's history.\n3. Request transaction IDs for the applied headers and fetch the transactions.\n4. Apply the transactions to the node's mempool and broadcast the inventory.\n5. Apply the block transactions to the node's history and state, generating ADProofs if in full or pruned-full mode.",
+  "qa_pairs": [
+    {
+      "question": "What is the first step in the full archival node technical workflow?",
+      "answer": "Send an ErgoSyncInfo message to connected peers."
+    },
+    {
+      "question": "What happens after receiving a response with an INV message containing block IDs?",
+      "answer": "Request headers for all the block IDs received."
+    },
+    {
+      "question": "What is done when a header is successfully applied to the history?",
+      "answer": "Request transaction ids from the block and, if not in the mempool, request the transaction."
+    },
+    {
+      "question": "What is done when a transaction is successfully applied to the mempool?",
+      "answer": "Broadcast INV for the transaction and get the headers with all transactions."
+    },
+    {
+      "question": "What is the final step in the workflow after obtaining the BlockTransactions?",
+      "answer": "Apply the BlockTransactions to the history and, if successful, broadcast INV for the BlockTransactions."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Full Archival Node Technical Workflow",
+      "level": 1,
+      "content": "This document outlines the technical workflow for the full archival node mode in Ergo. The process is as follows:\n\n1. Send an **ErgoSyncInfo** message to connected peers.\n2. Receive a response with an INV message containing the IDs of blocks that are better than our best block.\n3. Request headers for all the block IDs received in step 2.\n\nUpon receiving a header, the following operations are performed:\n\n\n```java\nif(history.apply(header).isSuccess) {\n    if(!isInitialBootstrapping) Broadcast INV for this Header\n    Request transaction ids from this block\n    } else {\n    blacklist peer\n    }\n```\n\n\nWhen transaction IDs from the Header are received, the following operations are performed:\n\n```java\ntransactionIdsForHeader.filter(txId => !MemPool.contains(txId)).foreach { txId =>\n    request transaction with txId\n}\n```\n\nUpon receiving a transaction, the following operations are performed:\n\n```java\nif(Mempool.apply(transaction).isSuccess) {\n    if(!isInitialBootstrapping) Broadcast INV for this transaction\n        Mempool.getHeadersWithAllTransactions { BlockTransactions =>\n            GOTO 7\n    }\n}\n```\n\nNow we have **BlockTransactions**: all transactions corresponding to some Header\n\n```java\n\nif(History.apply(BlockTransactions) == Success(ProgressInfo)) {\n\n    if(!isInitialBootstrapping) Broadcast INV for BlockTransactions\n\n    /*We should notify our neighbours that now we have all the transactions\n    State apply modifiers (may be empty for a block in a forked chain)\n    and generate ADProofs for them.\n    TODO requires a different interface from scorex-core,\n    because it should return ADProofs\n    TODO when minimal state apply Progress info,\n    it may also create UTXOSnapshot\n    (e.g. every 30000 blocks like in Ethereum).\n    This UTXOSnapshot should be required for mining by Rollerchain*/\n    \n    if(State().apply(ProgressInfo) == Success((newState, ADProofs))) {\n        if(\"mode\"=\"full\" || \"mode\"==\"pruned-full\") ADProofs.foreach ( ADProof => History.apply(ADProof))\n        if(\"mode\"==\"pruned-full\" || \"mode\"==\"light-full\") drop BlockTransactions and ADProofs older than BlocksToKeep\n    } else {\n        //Drop Header from history because its transaction sequence is not valid\n        History.drop(BlockTransactions.headerId)\n    }\n} else {\nblacklist peer who sent Header\n}\n```\nFor more information, please refer to the [Bootstrapping section of modifiers processing](modifiers-processing.md#bootstrapping)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes/archive-node-workflow.md",
+  "processed_at": "2025-05-11T19:56:19.472107",
+  "ai_processed": true
+}

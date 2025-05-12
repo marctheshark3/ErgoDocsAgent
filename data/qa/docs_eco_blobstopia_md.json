@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Blobstopia?",
+    "answer": "Blobstopia is a game on the Ergo blockchain where players can own blob fighters smart contracts."
+  },
+  {
+    "question": "How do players engage in PVP fights in Blobstopia?",
+    "answer": "In PVP, once two blobs wait for the same bet, they can engage in a fight. The winner gets all the bets, minus the miner fees and the Blobinator fee."
+  },
+  {
+    "question": "How can players improve their blob fighters in Blobstopia?",
+    "answer": "Players can feed their blob fighters Oatmeal Oatmeal tokens to increase their Attack or Defense level, making them stronger and increasing the player's winning ratio."
+  },
+  {
+    "question": "What is a Blobinator in Blobstopia?",
+    "answer": "A Blobinator is a super blob fighter that can be invoked once enough fights have occurred. Players can fight against a Blobinator if they have earned enough Spicy Oatmeal Spicy Oatmeal tokens to attract it."
+  },
+  {
+    "question": "Where can players find a fight bot for Blobstopia?",
+    "answer": "The fight bot for Blobstopia is available on GitHub at the link provided in the resources section."
+  }
+]

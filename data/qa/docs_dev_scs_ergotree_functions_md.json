@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ConstantPlaceholder function in ErgoTree?",
+    "answer": "ConstantPlaceholder creates a special ErgoTree node which can be replaced by a constant with a given id."
+  },
+  {
+    "question": "What is the purpose of the SubstConstants function in ErgoTree?",
+    "answer": "SubstConstants replaces constants in a given collection of bytes, integers, or generic types."
+  },
+  {
+    "question": "How does the ByteArrayToBigInt function work in ErgoTree?",
+    "answer": "ByteArrayToBigInt converts a big-endian bytes representation (Coll[Byte]) to a BigInt value."
+  },
+  {
+    "question": "What is the purpose of the Downcast and Upcast functions in ErgoTree?",
+    "answer": "Downcast casts a numeric value to a smaller type, throwing an exception on overflow, while Upcast casts a numeric value to a bigger type."
+  },
+  {
+    "question": "What do the LT, LE, GT, and GE functions do in ErgoTree?",
+    "answer": "These functions compare two values and return a boolean indicating if the left operand is less than, less than or equal to, greater than, or greater than or equal to the right operand, respectively."
+  }
+]

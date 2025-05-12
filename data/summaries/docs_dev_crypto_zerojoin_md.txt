@@ -1,0 +1,7 @@
+ZeroJoin is a privacy-centric mechanism designed for the Ergo blockchain, providing users with the ability to restore fungibility to digital tokens through anonymous transactions. It leverages Sigma protocols and cryptographic techniques such as ring signatures and Diffie-Hellman Tuples to obfuscate the transaction trail, ensuring privacy and security.
+
+The core functionality of ZeroJoin is based on cryptographic proofs that allow participants to mix their tokens with those of others, effectively breaking the link between the sender and receiver. This is accomplished through the use of two key Σ-protocols: ProveDlog and ProveDHTuple.
+
+ZeroJoin's privacy is achieved by combining multiple users' transactions in a single mixing pool, which breaks the link between a particular input and output. The more participants in the pool, the stronger the anonymity set and the better the overall privacy guarantees.
+
+ZeroJoin also incorporates ring signatures and non-interactive mixing, enabled through the Fiat-Shamir transformation, to further enhance privacy and usability. When combined with Stealth Addresses and Covert Addresses, ZeroJoin provides even stronger privacy protections, making it nearly impossible to trace transactions on the Ergo blockchain.

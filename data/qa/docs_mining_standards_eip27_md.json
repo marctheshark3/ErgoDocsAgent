@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of EIP27?",
+    "answer": "EIP27 proposes an adjustment to Ergo's emission schedule to ensure the long-term sustainability of the mining protocol."
+  },
+  {
+    "question": "What was the original emission schedule for Ergo?",
+    "answer": "For the first two years, each block was set to release 75 ERG into circulation. After that, the emission rate was set to drop by 3 ERG/block every three months until the total supply of 97,739,925 ERG was completely mined over eight years."
+  },
+  {
+    "question": "How does EIP27 change the emission schedule?",
+    "answer": "EIP27 extends the emission schedule by approximately 17.38 years, with a portion of the supply being put into a remission contract that will release block rewards until around 2045."
+  },
+  {
+    "question": "What was the process for approving EIP27?",
+    "answer": "EIP27 required a 90% pass vote from the Ergo mining community in order to be scheduled for implementation, and the mining community voted over 90% in favor of the proposal."
+  },
+  {
+    "question": "What was the motivation behind the emission schedule changes proposed in EIP27?",
+    "answer": "The Ergo Foundation was concerned that the ecosystem may need more time before the end of the original eight-year emission schedule to develop enough dApps and users to incentivize miners to maintain the network through transaction fees and storage rent."
+  }
+]

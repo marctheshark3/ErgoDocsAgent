@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Gradle?",
+    "answer": "Gradle is a build tool used for many JVM languages and frameworks. It can be used to set up and build Java and Kotlin projects, both client-side (for desktop or Android) or server-side applications (for example Spring)."
+  },
+  {
+    "question": "How do you set up a Gradle project for Android?",
+    "answer": "To set up a Gradle project for Android, install Android Studio and create a new project with your preferred language."
+  },
+  {
+    "question": "How do you set up a Gradle project for Spring?",
+    "answer": "To set up a Gradle project for Spring, use the Spring Initializr to create a new project with your preferred language, and don't forget to select Gradle."
+  },
+  {
+    "question": "How do you add the Ergo Appkit library to a Gradle project?",
+    "answer": "To add the Ergo Appkit library to a Gradle project, add the following line to the dependencies block: 'implementation ('org.ergoplatform:ergo-appkit_2.11:4.0.6')'"
+  },
+  {
+    "question": "What can you do with the Ergo Appkit library?",
+    "answer": "The Ergo Appkit library provides methods for fetching data from the Ergo Explorer API, interacting with the Ergo Node, building and signing transactions, and handling cryptographic operations."
+  }
+]

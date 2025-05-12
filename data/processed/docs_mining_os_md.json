@@ -1,0 +1,43 @@
+{
+  "id": "docs_mining_os_md",
+  "title": "Operating Systems for Mining",
+  "summary": "The document discusses different operating systems that can be used for mining Ergo cryptocurrency. It covers four popular options: HiveOS, Minerstat, RaveOS, and Simple Mining OS. Each operating system is briefly described, and links to guides on how to set up Ergo mining on them are provided. The document emphasizes that users should choose the operating system that best fits their mining setup and preferences.",
+  "qa_pairs": [
+    {
+      "question": "What are some popular operating systems for mining Ergo?",
+      "answer": "Some popular operating systems for mining Ergo include Hive OS, Minerstat, Rave OS, and Simple Mining OS."
+    },
+    {
+      "question": "How can I set up Ergo mining on Hive OS?",
+      "answer": "You can follow the guide 'Mining Ergo on HiveOS' to set up Ergo mining on Hive OS."
+    },
+    {
+      "question": "How can I set up Ergo mining on Windows?",
+      "answer": "You can follow the guide 'Mining Ergo on Windows' to set up Ergo mining on Windows."
+    },
+    {
+      "question": "What are the features and benefits of the different operating systems for mining?",
+      "answer": "Each operating system has its own features and benefits, so you should choose the one that best fits your mining setup and preferences."
+    },
+    {
+      "question": "Where can I find more information on mining Ergo on these operating systems?",
+      "answer": "You can find more information on mining Ergo on these operating systems in the links provided in the content."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Operating System\n  - Mining\n  - HiveOS\n  - Minerstat\n  - RaveOS\n  - Simple Mining OS\n---"
+    },
+    {
+      "heading": "Operating Systems for Mining",
+      "level": 1,
+      "content": "Different operating systems can be used for mining Ergo. Here are some popular options along with guides on how to set up Ergo mining on them:\n\n- [Hive OS](https://hiveos.farm/)\n    - [Guide: Mining Ergo on HiveOS](https://ergoplatform.org/en/blog/2022-03-22-mining-ergo-on-hiveos/)\n    - [Guide: Mining Ergo on Windows](https://ergoplatform.org/en/blog/2022-03-17-mining-ergo-on-windows/)\n- [Minerstat](https://minerstat.com/)\n- [Rave OS](https://raveos.com/)\n- [Simple Mining OS](https://simplemining.net/)\n\nEach of these operating systems has its own features and benefits. Choose the one that best fits your mining setup and preferences."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/os.md",
+  "processed_at": "2025-05-11T19:51:27.982046",
+  "ai_processed": true
+}

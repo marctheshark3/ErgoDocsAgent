@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Is there a plan to create a Plutus Pioneer-style program for ErgoScript?",
+    "answer": "Yes, the Ergo Foundation can sponsor the money for educational programs, which is one of the core goals of the Ergo Foundation as an organization."
+  },
+  {
+    "question": "How does the Ergo network plan to fund development over time?",
+    "answer": "Longer-term, a community development DAO is proposed to operate in parallel to the Ergo Foundation, potentially funded through projects that tokenize on the Ergo Blockchain."
+  },
+  {
+    "question": "Does the Ergo network encourage competition for dApps?",
+    "answer": "Yes, the Ergo network actively encourages competing dApps, as competition is a critical part of creating a DEFI environment."
+  },
+  {
+    "question": "What are some of the unique challenges in building on the Ergo network compared to other blockchain platforms?",
+    "answer": "Much of the infrastructure has to be created from scratch to match Ergo's Extended UTXO model, which is a bi-product of leading the Extended UTXO model to market."
+  },
+  {
+    "question": "Who are the current primary users of the Ergo network and what are the plans to capture additional markets?",
+    "answer": "The primary users of Ergo are currently either investors or miners, but the focus is to create the basic tooling to support demand on top of the base layer and capture multiple markets."
+  }
+]

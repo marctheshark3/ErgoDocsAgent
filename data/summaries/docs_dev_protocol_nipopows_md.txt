@@ -1,0 +1,7 @@
+Non-interactive Proof-of-Proof-of-Work (NIPoPoWs) is a powerful cryptographic protocol integrated into the Ergo blockchain, enabling efficient authentication of blockchain events using proof-of-work. NIPoPoWs allow verifying that an event took place without requiring a direct network connection or downloading all block headers, making them useful for cross-chain communication, sidechains, and light clients.
+
+NIPoPoWs consist of a prover and a verifier, where the prover generates a short proof that convinces the verifier that an event occurred in the source blockchain. Ergo's block structure incorporates NIPoPoW links, allowing different types of nodes and clients to selectively download required block sections.
+
+NIPoPoWs facilitate the creation of efficient light clients, enable logarithmic space mining, and enable the construction of trustless proof-of-work sidechains. They also enable generic cross-chain communication, allowing smart contracts on one blockchain to receive and react to events on another blockchain.
+
+To adopt NIPoPoWs, the source blockchain needs to support interlink structures, which can be added through a velvet fork. The target blockchain must be able to run the NIPoPoW verification function. Ergo is dedicated to continually exploring the potential of NIPoPoWs and expanding this research area.

@@ -1,0 +1,63 @@
+{
+  "id": "docs_mining_mining-overview_md",
+  "title": "Mining",
+  "summary": "The document provides an overview of mining on the Ergo blockchain, which is based on the Autolykos ASIC-resistant Proof of Work algorithm. It covers the basics of getting started with Ergo mining, including joining a mining pool or solo mining, setting up wallets, and understanding the Autolykos algorithm and related concepts like SmartPools and subpooling. The document also includes links to community spaces like Discord, Telegram, and Reddit, as well as useful mining utilities such as a breakeven price calculator, difficulty and epoch monitor, and the Ergo Explorer.",
+  "qa_pairs": [
+    {
+      "question": "What is the Autolykos algorithm?",
+      "answer": "Autolykos is an ASIC-resistant Proof of Work algorithm written in Scala that is used for Ergo mining."
+    },
+    {
+      "question": "What are the recommended mining options for Ergo?",
+      "answer": "The recommended mining options are joining a mining pool or solo mining if you have 1%+ of the network hash rate."
+    },
+    {
+      "question": "What are the key resources for getting started with Ergo mining?",
+      "answer": "Key resources include setting up a wallet, learning about Autolykos, and understanding SmartPools and subpooling."
+    },
+    {
+      "question": "What are the main community spaces for Ergo mining?",
+      "answer": "The main community spaces are Discord, Telegram, Reddit, and the Ergo Mining Guide."
+    },
+    {
+      "question": "What is the purpose of the Autolykos algorithm?",
+      "answer": "The Autolykos algorithm is designed to be ASIC-resistant, making Ergo mining accessible to a wide range of participants."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Mining\n  - Overview\n  - Autolykos\n  - Proof of Work\n---"
+    },
+    {
+      "heading": "Mining",
+      "level": 1,
+      "content": "Ergo mining is based on [**Autolykos**](autolykos.md), an [ASIC-resistant](asic.md) Proof of Work algorithm written in Scala."
+    },
+    {
+      "heading": "Start Mining",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Join a pool\",\n    \"content\": \"Join a mining pool and start mining today.\",\n    \"url\": \"setup/join.md\"\n  },\n  {\n    \"title\": \"Solo Mining\",\n    \"content\": \"Only recommended if you have 1%+ of the network hash rate.\",\n    \"url\": \"setup/solo.md\"\n  },\n\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Wallets\",\n    \"content\": \"Get your wallet setup.\",\n    \"url\": \"../dev/wallets.md\"\n  },\n  {\n    \"title\": \"Autolykos\",\n    \"content\": \"Read about the Autolykos Algorithm, Governance, Storage Rent and more.\",\n    \"url\": \"autolykos.md\"\n  },\n\n  {\n    \"title\": \"SmartPools and *Subpooling*\",\n    \"content\": \"Mine in localised subpools using SmartPools.\",\n    \"url\": \"smartpools.md\"\n  },\n\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Community spaces",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Discord\",\n    \"content\": \"Join us on Discord.\",\n    \"url\": \"https://discord.gg/Q86PNMwRsu\"\n  },\n  {\n    \"title\": \"Telegram\",\n    \"content\": \"Join us on Telegram.\",\n    \"url\": \"https://t.me/ergo_mining\"\n  },\n  {\n    \"title\": \"Reddit\",\n    \"content\": \"Join us on Reddit.\",\n    \"url\": \"https://reddit.com/r/erg_miners\"\n  },\n  {\n    \"title\": \"Mining Guide\",\n    \"content\": \"Join us on Reddit.\",\n    \"url\": \"https://ergonaut.space/en/Mining\"\n  },\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Utilities",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Mining Breakeven Price Calculator\",\n    \"content\": \"\",\n    \"url\": \"https://babygrenade.github.io/ergo-profit-calc/\"\n  },\n  {\n    \"title\": \"Difficulty and epoch monitor\",\n    \"content\": \"\",\n    \"url\": \"http://cds.oette.info/ergo_diff.htm\"\n  },\n  {\n    \"title\": \"Ergo Explorer\",\n    \"content\": \"\",\n    \"url\": \"https://explorer.ergoplatform.com\"\n  },\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/mining-overview.md",
+  "processed_at": "2025-05-11T19:51:20.376946",
+  "ai_processed": true
+}

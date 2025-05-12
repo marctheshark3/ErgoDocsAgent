@@ -1,0 +1,53 @@
+{
+  "id": "docs_node_modes_pruned-full-node_md",
+  "title": "Pruned Full-Node Mode",
+  "summary": "The document introduces a new feature in the Ergo Protocol Reference Client 5.0.13 called \"Pruned Full-Node Mode\". This mode allows users to achieve full node security on a standard laptop within minutes by bootstrapping using a verified UTXO set snapshot and NiPoPoWS. This addresses the increasing demands for downloading, storing, and processing the entire blockchain. The mode is similar to the \"fast-sync\" in Geth or Grothendieck and \"warp-mode\" in Parity, used by Ethereum protocol clients, but with more aggressive optimizations. The document provides instructions on how to enable this mode and notes that the node may not provide detailed progress updates during the UTXO snapshot download phase. It also explains the technical details of the UTXO set authentication using an AVL+ tree.",
+  "qa_pairs": [
+    {
+      "question": "What is Pruned Full-Node Mode?",
+      "answer": "Pruned Full-Node Mode is a new feature introduced in the Ergo Protocol Reference Client 5.0.13 that allows you to achieve full node security on a standard laptop within minutes, eliminating the need to check approximately 95% of the blockchain."
+    },
+    {
+      "question": "How does Pruned Full-Node Mode work?",
+      "answer": "Pruned Full-Node Mode uses a verified UTXO set snapshot and NiPoPoWS to bootstrap the node, allowing for faster synchronization compared to checking the entire blockchain."
+    },
+    {
+      "question": "What are the key differences between Pruned Full-Node Mode and other fast-sync options like Geth's fast-sync or Parity's warp-mode?",
+      "answer": "Pruned Full-Node Mode has more aggressive optimizations compared to the fast-sync in Geth or warp-mode in Parity used by Ethereum protocol clients."
+    },
+    {
+      "question": "What are the technical details behind the UTXO set authentication in Pruned Full-Node Mode?",
+      "answer": "The UTXO set authentication uses an AVL+ tree, as outlined in research papers, and can be as secure as processing all blocks under certain statistical assumptions."
+    },
+    {
+      "question": "What is the recommended approach for users with an old wallet when using Pruned Full-Node Mode?",
+      "answer": "The recommended approach is to create a new wallet and transfer funds to it, as you cannot restore an old wallet with a pruned node."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Snapshots\n  - nipopows\n---"
+    },
+    {
+      "heading": "Pruned Full-Node Mode",
+      "level": 1,
+      "content": "The [Ergo Protocol Reference Client 5.0.13](https://github.com/ergoplatform/ergo/releases/tag/v5.0.13) introduced a new feature: bootstrapping using a *verified UTXO set snapshot* and [NiPoPoWS](nipopows.md). This feature allows you to achieve full node security on a standard laptop within minutes, eliminating the need to check approximately 95% of the blockchain. This addresses the increasing demands for downloading, storing, and processing the entire blockchain.\n\nThis mode is akin to the *fast-sync* in Geth or Grothendieck and *warp-mode* in Parity, used by Ethereum protocol clients, but with more aggressive optimizations."
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "> Important: You cannot restore an old wallet with a pruned node. The recommended approach is to create a new wallet and transfer funds to it.\n\nAdd the following `utxo` and `nipopow` sections to your node configuration to enable UTXO Set Snapshots. \n\n```conf\nergo {\n    node {\n        mining = false\n\n        utxo {\n           utxoBootstrap = true\n           storingUtxoSnapshots = 0\n        }\n        nipopow {\n           nipopowBootstrap = true\n           p2pNipopows = 2\n        }\n    }\n    \n}\n\nscorex {\n    restApi {\n        apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n    }\n}\n```\n\n**Note on Progress Reporting:** Currently, the node may not provide detailed progress updates specifically during the *download phase* of the UTXO snapshot itself when `utxoBootstrap = true`. Synchronization progress for headers and subsequent blocks is typically visible via the node panel (`/panel`) or logs, but the snapshot download phase might appear as a period of inactivity before regular block processing resumes."
+    },
+    {
+      "heading": "Technical Details",
+      "level": 2,
+      "content": "The UTXO set authentication uses an AVL+ tree, outlined in [this research paper](https://eprint.iacr.org/2016/994.pdf) and available in the [Scrypto framework](https://github.com/input-output-hk/scrypto). [This research paper](https://eprint.iacr.org/2018/129) indicates that this method can be as secure as processing all blocks under certain statistical assumptions. \n\nFor more information see the [Technical Details](pruned-impl.md)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes/pruned-full-node.md",
+  "processed_at": "2025-05-11T19:56:45.643961",
+  "ai_processed": true
+}

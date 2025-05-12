@@ -1,0 +1,98 @@
+{
+  "id": "docs_dev_wallet_eip-standards_md",
+  "title": "Wallet Interaction Standards (EIPs) for dApp Developers",
+  "summary": "This document provides an overview of the Ergo Improvement Proposals (EIPs) that define standards for interaction between decentralized applications (dApps) and wallets, focusing primarily on EIP-0012 (dApp Connector). It covers the supported wallets, the typical connection flow, the Connection API and Context API functions, and best practices for security and testing. The document highlights the importance of requesting minimal permissions, ensuring user intent, providing transaction clarity, validating inputs, managing state securely, and avoiding storing sensitive data. It also covers considerations for mobile dApp development and provides recommendations for thorough testing across multiple wallets, on the Ergo Testnet, and for handling edge cases.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Wallets\n  - EIPs\n  - Standards\n  - dApp Connector\n  - EIP-0012\n  - EIP-0001\n  - EIP-0003\n  - get_used_addresses\n  - dApp Development\n  - Security\n  - Testing\n---\n\n# Wallet Interaction St..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Wallet Interaction Standards (EIPs) for dApp Developers"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Wallets\n  - EIPs\n  - Standards\n  - dApp Connector\n  - EIP-0012\n  - EIP-0001\n  - EIP-00..."
+    },
+    {
+      "question": "What is the 'Wallet Interaction Standards (EIPs) for dApp Developers' section about?",
+      "answer": "Ergo Improvement Proposals (EIPs) define standards for interaction between dApps and wallets, ensuri..."
+    },
+    {
+      "question": "What is the 'Supported Wallets (EIP-0012)' section about?",
+      "answer": "Currently, the primary wallets implementing the EIP-0012 dApp Connector standard are:\n\n*   **[Nautil..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Wallets\n  - EIPs\n  - Standards\n  - dApp Connector\n  - EIP-0012\n  - EIP-0001\n  - EIP-0003\n  - get_used_addresses\n  - dApp Development\n  - Security\n  - Testing\n---"
+    },
+    {
+      "heading": "Wallet Interaction Standards (EIPs) for dApp Developers",
+      "level": 1,
+      "content": "Ergo Improvement Proposals (EIPs) define standards for interaction between dApps and wallets, ensuring a consistent and secure experience for users and developers. This page highlights key EIPs and expected behaviors relevant to dApp development, focusing primarily on EIP-0012 (dApp Connector).\n\n*(Note: This page is not a substitute for the full EIP specifications. Refer to the official [Ergo EIPs repository](https://github.com/ergoplatform/eips) for complete details. This aims to clarify common implementation points based on developer feedback.)*"
+    },
+    {
+      "heading": "Supported Wallets (EIP-0012)",
+      "level": 2,
+      "content": "Currently, the primary wallets implementing the EIP-0012 dApp Connector standard are:\n\n*   **[Nautilus Wallet](nautilus.md)** (Browser Extension)\n*   **Ergo Mobile Wallet (Android/iOS)**\n\n**Note:** Yoroi Wallet's Ergo support is deprecated. Developers and users should utilize Nautilus or the official Ergo Mobile Wallet for dApp interactions. See the main [Wallets page](../wallets.md) for more options."
+    },
+    {
+      "heading": "EIP-0012: dApp Connector Overview",
+      "level": 2,
+      "content": "EIP-0012 defines a standard JavaScript interface injected into the dApp's web context by the wallet (usually as `window.ergoConnector.ergo` or just `window.ergo` after connection). It separates functions into two main categories:\n\n*   **Connection API:** Functions for establishing and managing the connection between the dApp and the wallet (e.g., `connect`, `disconnect`, `check`, `isConnected`). These are typically accessed via `ergoConnector`.\n*   **Context API:** Functions available *after* a connection is established, allowing the dApp to interact with the wallet's context (e.g., get addresses, balances, request signing). These are accessed via the `ergo` object obtained after successful connection."
+    },
+    {
+      "heading": "Typical Connection Flow (Conceptual JS)",
+      "level": 3,
+      "content": "```javascript\nasync function connectWallet() {\n  // Check if the connector object exists (wallet extension installed)\n  if (typeof ergoConnector === 'undefined' || !ergoConnector.ergo) {\n    console.error(\"Ergo Wallet Connector not found. Please install Nautilus or use a compatible wallet.\");\n    // Optionally prompt user to install\n    return null;\n  }\n\n  try {\n    // Check if already connected\n    const isConnected = await ergoConnector.ergo.isConnected();\n    if (isConnected) {\n      console.log(\"Wallet already connected.\");\n      return ergo; // Return the existing context API object\n    }\n\n    // Request read access (prompts user in wallet)\n    const granted = await ergoConnector.ergo.connect(); \n    \n    if (!granted) {\n      console.log(\"Wallet connection request denied by user.\");\n      return null;\n    } else {\n      console.log(\"Wallet connected successfully!\");\n      // 'ergo' object (Context API) is now available globally or via ergoConnector.ergo\n      // You might want to store this 'ergo' object reference in your dApp's state\n      return ergo; \n    }\n  } catch (error) {\n    console.error(\"Error connecting to wallet:\", error);\n    // Handle specific errors (e.g., user cancellation, timeouts)\n    return null;\n  }\n}\n\n// Usage:\n// const ergoContext = await connectWallet();\n// if (ergoContext) {\n//   // Now use ergoContext.get_used_addresses(), ergoContext.sign_tx(), etc.\n// }\n```"
+    },
+    {
+      "heading": "Connection API Functions (Examples)",
+      "level": 3,
+      "content": "*   **`ergoConnector.ergo.connect()`:** Initiates the connection request. Returns `true` if access granted, `false` otherwise.\n*   **`ergoConnector.ergo.disconnect()`:** Disconnects the dApp (if supported by the wallet).\n*   **`ergoConnector.ergo.isConnected()`:** Checks if the dApp currently has read access without prompting the user."
+    },
+    {
+      "heading": "Context API Functions (`ergo.*`) & Expected Behavior",
+      "level": 3,
+      "content": "*(Available only after `connect()` returns `true`)*\n\n*   **`ergo.get_used_addresses(paging?)`:**\n    *   **Purpose:** Returns addresses involved in past transactions. Crucial for discovering user funds.\n    *   **Return (Empty Wallet):** **MUST return `[]` (empty array)** if no addresses have been used. Do not rely on error codes for this case, although older wallets might have thrown errors.\n    *   **Pagination:** Supports `{ page: number, limit: number }` argument. Handle paginated results if expecting many addresses.\n    *   **Error Handling:** Catch potential errors (e.g., user session expired, wallet internal error).\n*   **`ergo.get_unused_addresses()`:**\n    *   **Purpose:** Returns addresses generated but not yet seen on-chain. Useful for providing fresh deposit addresses.\n    *   **Error Handling:** Catch potential errors.\n*   **`ergo.get_balance(token_id?)`:**\n    *   **Purpose:** Returns confirmed and unconfirmed balance for ERG (if `token_id` omitted) or a specific token.\n    *   **Error Handling:** Catch potential errors.\n*   **`ergo.sign_tx(unsignedTx)`:**\n    *   **Purpose:** Sends an *unsigned* transaction (built according to EIP-12 structure) to the wallet for the user to review and sign.\n    *   **Return:** Returns the *signed* transaction if approved by the user.\n    *   **Error Handling:** Crucial to handle user rejection (often throws a specific error code/message), insufficient funds errors from the wallet's pre-check, or malformed transaction errors.\n*   **`ergo.submit_tx(signedTx)`:**\n    *   **Purpose:** Sends a *signed* transaction to the wallet for submission to the network via the wallet's connected node.\n    *   **Return:** Returns the transaction ID upon successful submission.\n    *   **Error Handling:** Handle network errors, node rejection errors (e.g., double spends, invalid transaction), or wallet internal errors. Note that successful submission doesn't guarantee inclusion in a block.\n\n*(Refer to the full EIP-0012 specification for exact function signatures, parameter/return types, and detailed error codes.)*"
+    },
+    {
+      "heading": "Security Best Practices",
+      "level": 2,
+      "content": "*   **Request Minimal Permissions:** Only request read access initially (`connect`). Don't request signing permissions upfront if not immediately needed.\n*   **User Intent:** Ensure all signing requests (`sign_tx`) clearly correspond to an explicit user action within your dApp. Don't trigger signing requests unexpectedly.\n*   **Transaction Clarity:** Display the key details of any transaction clearly to the user *before* sending it to the wallet for signing. The wallet should also display this information, but providing context in the dApp is crucial.\n*   **Input Validation:** Sanitize and validate any user input used in transaction construction to prevent injection attacks or malformed requests.\n*   **State Management:** Securely manage the connection state within your dApp. Verify `isConnected()` before attempting Context API calls if needed.\n*   **Avoid Storing Sensitive Data:** Never ask for or store user private keys or seed phrases in your dApp. All signing happens within the wallet."
+    },
+    {
+      "heading": "Mobile Considerations",
+      "level": 2,
+      "content": "*   **Connection Initiation:** The method for initiating a connection might differ slightly on mobile (e.g., via deeplinking or a dedicated browser within the mobile wallet app) compared to browser extensions. Check mobile wallet documentation.\n*   **User Experience:** Ensure your dApp's UI is responsive and works well on mobile screens when interacting with the wallet interface."
+    },
+    {
+      "heading": "Testing Recommendations",
+      "level": 2,
+      "content": "*   **Multiple Wallets:** Test your dApp integration with all supported wallets (Nautilus, Ergo Mobile Wallet) on different platforms (desktop, mobile).\n*   **Testnet:** Thoroughly test all connection flows, data fetching, and transaction signing/submission scenarios on the Ergo Testnet before deploying to Mainnet.\n*   **Edge Cases:** Test user cancellation flows (rejecting connection, rejecting signing), network errors, insufficient funds, and handling of empty/new wallets.\n*   **Wallet State Changes:** Test how your dApp handles the user switching accounts or disconnecting the wallet while the dApp is active."
+    },
+    {
+      "heading": "Troubleshooting Common Issues",
+      "level": 2,
+      "content": "*   **`ergoConnector` Undefined:** Wallet extension is not installed, not enabled, or not injecting the connector object correctly. Prompt user to install/enable.\n*   **Connection Rejected:** User explicitly denied the connection request in the wallet prompt. Handle gracefully.\n*   **`sign_tx` Errors:**\n    *   User rejected the signature: Catch the specific error thrown by the wallet.\n    *   Insufficient funds: Wallet might pre-check and reject. Ensure input selection logic is correct.\n    *   Malformed transaction: Double-check the structure of the `unsignedTx` object against EIP-12 specs.\n*   **`submit_tx` Errors:** Network issues, node errors (transaction invalid), or wallet unable to connect to its node. Provide feedback to the user; they might need to check their wallet's network connection.\n*   **Incorrect Data (`get_used_addresses`, `get_balance`):** Ensure the wallet is fully synced. Check for pagination issues with `get_used_addresses`."
+    },
+    {
+      "heading": "Other Relevant EIPs",
+      "level": 2,
+      "content": "*   **[EIP-0001: Ergo Address Allocation and Encoding](https://github.com/ergoplatform/eips/blob/master/eip-0001.md):** Defines the standard address formats (P2PK, P2S).\n*   **[EIP-0003: Deterministic Wallet Standard (BIP32/BIP44)](https://github.com/ergoplatform/eips/blob/master/eip-0003.md):** Defines derivation paths for hierarchical deterministic (HD) wallets.\n*   *(Others like EIP-0004 (Assets), EIP-0020 (ErgoPay), EIP-0027 (Asset Linking) may also be relevant depending on dApp functionality).*"
+    },
+    {
+      "heading": "Example Implementations",
+      "level": 2,
+      "content": "*   *(Placeholder: Link to well-known open-source dApps or libraries demonstrating good EIP-0012 integration, e.g., Spectrum UI, Nautilus examples, Fleet examples, if available).*\n\n---\n\nBy understanding and correctly implementing these standards, particularly EIP-0012, dApps can provide a smoother, more secure, and reliable interaction experience across different Ergo wallets."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/eip-standards.md",
+  "processed_at": "2025-05-11T19:39:42.158109",
+  "ai_processed": true
+}

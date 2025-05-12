@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Babel Fees Plugin?",
+    "answer": "The Babel Fees Plugin is designed to simplify the process of using Babel Fees within Ergo transactions, allowing users to pay transaction fees with tokens instead of ERG."
+  },
+  {
+    "question": "What are the key benefits of Babel Fees?",
+    "answer": "Babel Fees offer accessibility for users with limited or no ERG, flexibility in token choice for fee payments, and easier onboarding for new users to the Ergo ecosystem."
+  },
+  {
+    "question": "What are the key features of the Babel Fees Plugin?",
+    "answer": "The plugin provides a BabelSwapPlugin that integrates with the Fleet SDK's TransactionBuilder, offers utilities for validating Babel Boxes, includes functions for building and verifying Babel Fee contract scripts, and is designed to be developer-friendly."
+  },
+  {
+    "question": "How do you install the Babel Fees Plugin?",
+    "answer": "To install the plugin, you need to run `npm install @fleet-sdk/babel-fees-plugin` and also install the core Fleet SDK with `npm install @fleet-sdk/core`."
+  },
+  {
+    "question": "How do you use the Babel Fees Plugin to pay for transaction fees with tokens?",
+    "answer": "You can use the BabelSwapPlugin in the TransactionBuilder to add Babel Fees logic, specifying the Babel Box, token ID, and token amount to convert for ERG fees."
+  }
+]

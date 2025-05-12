@@ -1,0 +1,1 @@
+ErgoPOS is a point-of-sale (POS) system that is also referred to as TabbyPOS. The document provides an introduction to ErgoPOS and indicates that more information can be found in the TabbyPOS article.

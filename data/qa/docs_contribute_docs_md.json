@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the prerequisites for contributing to the documentation?",
+    "answer": "The prerequisites are: a GitHub account and Python (3.7 or higher) if planning to build the documentation locally."
+  },
+  {
+    "question": "How can you make minor changes to the documentation?",
+    "answer": "For minor changes, log into GitHub, click the edit arrow at the top-right of the page, save the changes, and open a pull request."
+  },
+  {
+    "question": "What are the steps to set up the development environment for major changes?",
+    "answer": "The steps are: 1. Clone the repository, 2. Install dependencies, 3. Build the project, 4. Start the development server, and 5. Open the documentation in the browser."
+  },
+  {
+    "question": "What is the command to build the project locally?",
+    "answer": "The command to build the project locally is `mkdocs build`."
+  },
+  {
+    "question": "What is the command to start the development server?",
+    "answer": "The command to start the development server is `mkdocs serve`."
+  }
+]

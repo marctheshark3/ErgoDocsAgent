@@ -1,0 +1,88 @@
+{
+  "id": "docs_dev_scs_syntax_md",
+  "title": "ErgoScript Syntax",
+  "summary": "ErgoScript is the scripting language used to create smart contracts on the Ergo blockchain. It is designed to be powerful and intuitive, allowing for the creation of complex financial contracts while maintaining readability and security. The document provides an overview of ErgoScript's syntax, its integration with Ergo's UTXO model, and essential concepts for writing robust contracts.\n\nKey points covered include:\n- ErgoScript's syntax is derived from Scala, but it uses a minimal subset of Scala's features, focusing on simplicity and functionality.\n- ErgoScript incorporates constructs specific to the UTXO model, such as Boxes, INPUTS, and OUTPUTS.\n- ErgoScript supports immutable values, functional programming constructs, boolean predicates, and cryptographic operations.\n- The document provides examples demonstrating basic syntax, control structures, data types, and advanced functional programming in ErgoScript.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of ErgoScript?",
+      "answer": "ErgoScript is a scripting language designed specifically for the Ergo blockchain, enabling the creation of secure and efficient smart contracts."
+    },
+    {
+      "question": "How does ErgoScript integrate with Ergo's UTXO model?",
+      "answer": "ErgoScript incorporates constructs like Box, INPUTS, and OUTPUTS that are specific to the UTXO model used by the Ergo blockchain."
+    },
+    {
+      "question": "What are the key concepts of ErgoScript related to the UTXO model?",
+      "answer": "Key concepts include Box, UTXO-specific constructs, and Turing completeness."
+    },
+    {
+      "question": "What are the key features of ErgoScript's syntax?",
+      "answer": "ErgoScript's syntax is derived from Scala and includes immutable values, array access, functional programming constructs, boolean predicates, and cryptographic operations."
+    },
+    {
+      "question": "How does ErgoScript support Turing-complete applications despite not being Turing complete itself?",
+      "answer": "Although ErgoScript is not Turing complete, Turing-complete applications can still be built using ErgoScript, as detailed in a peer-reviewed paper."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Syntax\n  - ErgoScript\n---"
+    },
+    {
+      "heading": "ErgoScript Syntax",
+      "level": 1,
+      "content": "ErgoScript is a strongly typed language designed specifically for the Ergo blockchain, enabling the creation of secure and efficient smart contracts. This guide provides an introduction to ErgoScript's syntax, its integration with Ergo's UTXO model, and essential concepts that will help you write robust contracts on the Ergo platform."
+    },
+    {
+      "heading": "Introduction to ErgoScript",
+      "level": 2,
+      "content": "ErgoScript, inspired by Scala, is the scripting language used to create smart contracts on the Ergo blockchain. It is designed to be both powerful and intuitive, allowing for the creation of complex financial contracts while maintaining readability and security. Understanding the syntax and structure of ErgoScript is crucial for developing contracts that are not only functional but also secure."
+    },
+    {
+      "heading": "ErgoScript and the UTXO Model",
+      "level": 3,
+      "content": "Ergo operates on the UTXO (Unspent Transaction Output) model and employs a Proof-of-Work consensus mechanism. However, Ergo enhances the traditional UTXO model with its *extended-UTXO model*, which supports the execution of intricate financial contracts, similar to those possible on Ethereum's account-based model.\n\nKey concepts of ErgoScript related to the UTXO model include:\n\n- **Box**: A `Box` is essentially a UTXO in Ergo and can store data across up to ten registers. Like Bitcoin, Ergo transactions consume one or more existing boxes (represented by the `INPUTS` array) and produce one or more new boxes (represented by the `OUTPUTS` array).\n- **UTXO-Specific Constructs**: ErgoScript incorporates constructs like `Box`, `INPUTS`, and `OUTPUTS` that are specific to the UTXO model. The [LangSpec.md](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md) document provides a comprehensive list of these constructs.\n- **Turing Completeness**: Although ErgoScript itself is not Turing complete, you can still build Turing-complete applications, as detailed in [this peer-reviewed paper](https://arxiv.org/pdf/1806.10116v1.pdf)."
+    },
+    {
+      "heading": "ErgoScript Syntax Overview",
+      "level": 3,
+      "content": "ErgoScript\u2019s syntax is derived from Scala, but you don\u2019t need to be a Scala expert to write ErgoScript. The language uses a minimal subset of Scala\u2019s features, focusing on simplicity and functionality:\n\n- **Immutable Values**: In ErgoScript, you define values using `val`, ensuring immutability (similar to constants in other languages). Unlike Scala, ErgoScript does not support the `var` keyword, meaning all defined values are immutable.\n- **Array Access**: Both Scala and ErgoScript use round parentheses for array access. For example, `OUTPUTS(0)` refers to the first element of the `OUTPUTS` array.\n- **Functional Programming**: ErgoScript supports functional programming constructs such as `foreach`, `exists`, and `fold`, making it easier to work with collections. More details on these can be found in the [ErgoScript Compiler Documentation](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/ergoscript-compiler.md).\n- **Boolean Predicates**: ErgoScript programs, like ErgoTree, consist of sequences of boolean predicates connected using `&&` (AND) and `||` (OR).\n- **Cryptographic Operations**: ErgoScript supports cryptographic operations with `BigInt` and `GroupElement` types, allowing for addition, multiplication, and exponentiation. Note that `BigInt` operations in ErgoScript are performed modulo `2^256`, so overflow management is crucial."
+    },
+    {
+      "heading": "Example: Basic ErgoScript Syntax",
+      "level": 3,
+      "content": "Here\u2019s a simple ErgoScript example to help you get started:\n\n```scala\nval bool: Boolean = true\n```\n\nIn this example:\n\n- **`val`**: A keyword used to create an immutable value.\n- **`bool`**: The name of the variable being created.\n- **`: Boolean`**: The type of the variable (Boolean in this case). Specifying the type is optional but recommended for clarity.\n- **`= true`**: Assigns the value `true` to `bool`."
+    },
+    {
+      "heading": "More ErgoScript Syntax Examples",
+      "level": 3,
+      "content": "Let's explore a more complex example that demonstrates control structures, data types, and basic operations:\n\n```scala\nif(bool == true){\n    val x = 0\n    val y = 1\n    val z = ((x * y) + 5) - (3 / 2)\n}else{\n    val x = 2L\n    val y: Coll[Long]  = Coll(0L, 1L, x) // Creating a collection of Long elements\n    val z: (Long, Long) = (3, 4)\n    val a: (Long, Coll[Long]) = (x, y) // Combining Long and collection types\n    val b: Coll[((Long, Long), Boolean)] = Coll(((2L, 4L), true), ((7L, 2L), false))\n}\n```\n\nIn this code:\n\n- **Control Structures**: The `if-else` statement directs the flow based on the `bool` value.\n- **Data Types**:\n\n      - `x` and `y` are integers.\n      - `z` is calculated based on arithmetic operations.\n      - `y` in the `else` block is a collection of `Long` values (`Coll[Long]`).\n      - `a` is a tuple combining a `Long` and a collection.\n      - `b` is a collection of tuples with pairs of `Long` values and Booleans."
+    },
+    {
+      "heading": "Def vs Val: Understanding Function Definitions",
+      "level": 3,
+      "content": "ErgoScript allows you to define functions using either `def` or `val`. Understanding the distinction is crucial for writing efficient and effective scripts:"
+    },
+    {
+      "heading": "Example Code",
+      "level": 4,
+      "content": "```scala\ndef computeAsDef(myInt: Int): Int = {\n  myInt + 1\n}\n\nval computeAsVal: Int = {\n  (myInt: Int) =>\n    myInt + 1\n}\n```\n\nBoth functions accomplish the same task but differ in when the computation occurs:\n\n- **`computeAsDef`**: Defined using `def`, this function is evaluated each time it is called, allowing for dynamic computation.\n- **`computeAsVal`**: Defined using `val`, this is a function literal (lambda). The computation is defined at script initialization and only executed when the function is invoked."
+    },
+    {
+      "heading": "Advanced Functional Programming in ErgoScript",
+      "level": 3,
+      "content": "ErgoScript supports higher-order functions and advanced functional programming constructs, allowing for powerful data manipulation:\n\n```scala\nval myMap: Coll[(Int, Long)] = {      \n  val intCollection = Coll(0, 1, 2)\n  intCollection.map{\n    (myInt: Int) =>                   \n    (myInt, myInt.toLong)\n  }                                      \n}\n```\n\nIn this example:\n\n- **`Coll[(Int, Long)]`**: Defines a collection of tuples with `Int` and `Long` pairs.\n- **`map` Function**: Applies a transformation to each element in the collection using a lambda expression, converting each `Int` to a `Long`.\n\nFor more details on collections and functional programming in ErgoScript, refer to the [Colls.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/core/shared/src/main/scala/sigma/Colls.scala) file."
+    },
+    {
+      "heading": "Additional Resources",
+      "level": 2,
+      "content": "For further learning and a deeper dive into ErgoScript, explore the following resources:\n\n- [Deco Education - ErgoScript Developer Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course/blob/main/Class-Documents/Class-1/Materials/Class1.MD)\n- [ErgoScript Specification](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md): Detailed reference for Sigma Protocols and ErgoScript.\n- [LangSpec.md](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md): Comprehensive language specification for ErgoScript.\n- [ErgoScript Reference Guide](https://ergoplatform.org/en/blog/2021_07_26_ergo_script_guide/): A detailed guide on writing ErgoScript."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/syntax.md",
+  "processed_at": "2025-05-11T19:31:39.437615",
+  "ai_processed": true
+}

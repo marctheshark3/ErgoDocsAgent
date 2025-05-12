@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_scs_ergoscript_no-one-can-spend_md",
+  "title": "Unspendable Scripts in ErgoScript",
+  "summary": "ErgoScript can create programs that always evaluate to false, resulting in addresses to which funds can be sent but not spent. These are referred to as no-one-can-spend scripts. It is important not to send funds to these addresses as they cannot be retrieved. Ergo has a mechanism called 'garbage collection' or storage rent that ensures boxes produced by no-one-can-spend scripts are eventually removed from the blockchain to maintain system efficiency.",
+  "qa_pairs": [
+    {
+      "question": "What is an unspendable script in ErgoScript?",
+      "answer": "An unspendable script in ErgoScript is a program that always evaluates to false, meaning funds sent to the corresponding address cannot be spent."
+    },
+    {
+      "question": "What is the purpose of unspendable scripts in Ergo?",
+      "answer": "Unspendable scripts are used to create addresses to which funds can be sent, but not spent, which is referred to as a 'no-one-can-spend' script."
+    },
+    {
+      "question": "What is the concept of 'garbage collection' or storage rent in Ergo?",
+      "answer": "Ergo features a mechanism called 'garbage collection' or storage rent, which ensures that boxes, such as those produced by no-one-can-spend scripts, are eventually removed from the blockchain over time to maintain the efficiency of the system."
+    },
+    {
+      "question": "What is the example of an unspendable script provided in the document?",
+      "answer": "The example of an unspendable script provided in the document is `true && false`, which corresponds to the address m3iBKr65o53izn."
+    },
+    {
+      "question": "Why is it crucial to remember not to send funds to unspendable script addresses?",
+      "answer": "It is crucial to remember not to send funds to unspendable script addresses because the funds cannot be retrieved, as they are designed to be unspendable."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Unspendable Scripts in ErgoScript",
+      "level": 1,
+      "content": "In contrast to the [previous examples](anyone-can-spend.md), ErgoScript can also create programs at the opposite end of the flexibility spectrum that always evaluate to `false`. \n\nHere's an example of such a script:\n\n```scala\ntrue && false  // Corresponds to address m3iBKr65o53izn\n```\n\nThe script in the example above results in an address to which funds can be sent, but not spent. These scripts are referred to as **no-one-can-spend scripts** due to this characteristic. It's crucial to remember not to send funds to these addresses as they cannot be retrieved.\n\nErgo features a concept known as [*'garbage collection'* or storage rent](rent.md). This mechanism ensures that boxes, such as those produced by no-one-can-spend scripts, are eventually removed from the blockchain over time to maintain the efficiency of the system."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscript/no-one-can-spend.md",
+  "processed_at": "2025-05-11T19:28:40.343697",
+  "ai_processed": true
+}

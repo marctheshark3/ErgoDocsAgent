@@ -1,0 +1,11 @@
+Trustless Local Exchange Trading Systems (LETS) are decentralized systems where participants use a form of "local currency" pegged to the national currency. LETS have several variations:
+
+LETS-1 (Zero Sum, Collateral): Requires a time-locked joining fee in ergs as collateral, has zero-sum LETS balances, and allows negative balances within a limit.
+
+LETS-2 (Zero Sum, No Collateral): Similar to LETS-1 but with a non-refundable joining fee.
+
+LETS-3 (Positive Sum, Collateral): Has a time-locked joining fee, positive-sum LETS balances, and requires collateral in ergs.
+
+LETS-4 (Positive Sum, No Collateral): Similar to LETS-3 but with a non-refundable joining fee.
+
+The document also discusses the need to reform the global financial system, especially in the wake of the COVID-19 pandemic, and how technology like Ergo can help build bridges into and within local economies without the need for commercial or central banks.

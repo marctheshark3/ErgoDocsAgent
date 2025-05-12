@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the primary ways Go developers can interact with the Ergo blockchain?",
+    "answer": "Go developers can interact with the Ergo blockchain primarily through bindings to the core `sigma-rust` library."
+  },
+  {
+    "question": "What is the ergo-golang project?",
+    "answer": "The ergo-golang project is a tool for integrating with Ergo, which is currently in its initial stages and may not have extensive features or be fully tested."
+  },
+  {
+    "question": "What is the ergo-lib-go project?",
+    "answer": "ergo-lib-go is a Go wrapper around C bindings for ErgoLib from sigma-rust, providing Go developers the ability to interact with the Ergo blockchain using the functionalities of ErgoLib."
+  },
+  {
+    "question": "Where can Go developers find support for integrating with Ergo?",
+    "answer": "Go developers can connect with the Ergo community, especially the `#development` Discord channel, to receive support from seasoned Ergo developers and community members."
+  },
+  {
+    "question": "What is the current state of Go-based resources for integrating with Ergo?",
+    "answer": "The resources for integrating Ergo using the Go programming language are currently limited compared to some other languages."
+  }
+]

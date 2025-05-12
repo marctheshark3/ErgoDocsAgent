@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key advantage of Ergo's approach to merged mining compared to Bitcoin's?",
+    "answer": "Ergo's approach to merged mining is more flexible compared to Bitcoin's, as it is not strictly tied to the coinbase transaction due to Ergo's expressive smart contracts (ErgoScript) and extended UTXO model."
+  },
+  {
+    "question": "How does the mechanism for merged-mined Sigma Chains work?",
+    "answer": "The state and progress of the sidechain are represented as a data tuple, which is submitted via a dedicated UTXO on the Ergo mainchain that acts as the official record carrier for the sidechain's merged mining data."
+  },
+  {
+    "question": "What are the key aspects of merged mining in the Sigma Chains ecosystem?",
+    "answer": "Sigma Chains are algorithm agnostic, allowing for merged mining across different hardware classes; they provide an economic sustainability model where miners are paid in sidechain tokens while still requiring ERG for transaction fees; and they enable efficient and trustless cross-chain interoperability between Ergo and its sidechains."
+  },
+  {
+    "question": "What is the role of merged mining in the Sigma Chains framework?",
+    "answer": "Merged mining is proposed as a key consensus mechanism, particularly for pegged sidechains within the Sigma Chains framework, enabling these sidechains to leverage the security of the main Ergo blockchain without requiring dedicated mining hardware."
+  },
+  {
+    "question": "How does merged mining on Sigma Chains help revitalize Proof-of-Work (PoW)?",
+    "answer": "Merged mining on Sigma Chains allows Ergo miners to contribute to the security of the ecosystem by mining various sidechain tokens, making mining profitable for a wider range of hardware classes and reinforcing the utility of the ERG token."
+  }
+]

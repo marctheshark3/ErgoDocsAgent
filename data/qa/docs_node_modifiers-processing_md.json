@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two broad categories of modifiers in Ergo?",
+    "answer": "The two broad categories of modifiers in Ergo are In-memory Modifiers and Persistent Modifiers."
+  },
+  {
+    "question": "What are the types of In-memory Modifiers in Ergo?",
+    "answer": "The types of In-memory Modifiers in Ergo are Transaction, TransactionIdsForHeader, and UTXOSnapshotManifest."
+  },
+  {
+    "question": "What are the types of Persistent Modifiers in Ergo?",
+    "answer": "The types of Persistent Modifiers in Ergo are BlockTransactions, ADProofs, Header, UTXOSnapshotChunk, and PoPoWProof."
+  },
+  {
+    "question": "What is the role of the Header modifier in Ergo?",
+    "answer": "The Header modifier contains essential data needed to verify Proof of Work (PoW), provides a link to the previous block, and carries the state root hash and root hash to its payload."
+  },
+  {
+    "question": "What is the purpose of the UTXOSnapshotChunk modifier in Ergo?",
+    "answer": "The UTXOSnapshotChunk modifier represents a portion of the UTXO set, allowing the UTXO set to be managed in manageable chunks, improving efficiency."
+  }
+]

@@ -1,0 +1,8 @@
+The document introduces EIP-0001, which proposes extending the Ergo node wallet to provide a flexible scanning interface for external applications. The key points are:
+
+- Currently, the Ergo node wallet can only search for boxes protected by simple P2PK scripts, which is a barrier for dApp development.
+- The proposed extension would allow the wallet to serve the needs of external applications by providing a flexible scanning interface and the ability for applications to register scans.
+- Scans have a unique ID, and boxes matching a scan are tracked by the wallet and associated with the scan ID.
+- The wallet will provide predefined scans, such as for wallet public keys and mining rewards, and allow users or external applications to add additional scans.
+- The scanning mechanism is based on predicates, which are functions that return a boolean value for a given box.
+- The document specifies the available predicate types, such as checking for a value in a register, checking for a specific asset, and combining multiple predicates.

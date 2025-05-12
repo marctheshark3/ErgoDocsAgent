@@ -1,0 +1,1 @@
+Azorus is an intelligence platform for UTXO blockchains, providing analytics and dApp capabilities. It is currently in a dormant state as the developers have shifted their focus to other priorities, but will be resumed when there is sufficient demand. The project includes a demo, whitepaper, IDO on ergopad, and use cases for DeFi trader analytics with no code.

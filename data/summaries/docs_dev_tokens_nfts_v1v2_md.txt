@@ -1,0 +1,7 @@
+The document discusses the design choices between Version 1 (V1) and Version 2 (V2) of the artwork issuance process defined in EIP-0024. The main difference lies in the issuer box:
+
+V1 focuses on handling royalties for the artist or proxy contract, with the royalty percentage and recipient contract specified in the issuer box.
+
+V2 offers more flexibility, including handling multiple royalty recipients, detailed artwork traits, and additional information in the issuer box.
+
+The document also explains that the artist's identity is established by the first P2PK input in the transaction chain leading to the artwork issuance, rather than solely by the issuance box, to prevent NFT scams and unauthorized copies.

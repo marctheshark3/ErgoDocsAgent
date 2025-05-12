@@ -1,0 +1,8 @@
+Ergo is a new flexible blockchain protocol designed for developing decentralized applications, with a focus on providing an efficient, secure, and easy way to implement financial contracts. Key features of Ergo include:
+
+- Use of ErgoScript, a powerful scripting language based on Σ-protocols, to encode conditions for spending coins.
+- Extended support for light nodes to allow running contracts on untrusted commodity hardware.
+- A survivability approach using widely-researched solutions to prevent security issues and performance degradation over time.
+- A self-amendable protocol to absorb new ideas and improve itself in the future.
+- Autolykos, a unique Proof-of-Work consensus protocol that is both memory-hard and pool-resistant.
+- A long-term focus on decentralization, serving regular people, and enabling contractual money applications.

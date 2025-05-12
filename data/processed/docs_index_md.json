@@ -1,0 +1,68 @@
+{
+  "id": "docs_index_md",
+  "title": "Welcome to Ergo!",
+  "summary": "Welcome to Ergo, a secure and powerful platform designed to be a fair financial system for everyone. This guide covers various aspects of Ergo, including learning the basics, using Ergo for transactions, building applications, and helping secure the network.\n\nErgo offers several unique advantages such as being built for everyone, providing secure and private transactions, having a fair launch, offering powerful tools like smart contracts, and being sustainable. The document provides steps for getting started with Ergo, including understanding the basics, getting a wallet, acquiring ERG, exploring use cases, and joining the community.\n\nFor intermediate users, the guide covers topics like decentralized exchanges, yield farming and staking, stablecoins, degenerate finance, gaming, running a node, and utilizing off-chain services. For developers, it provides a quickstart, information on ErgoScript, and guidance on building applications on Ergo. For miners, it covers starting mining and understanding the Autolykos algorithm.\n\nThe document also highlights the vibrant Ergo community and provides links to various resources, including key features, the Ergo anatomy, the Sigmaverse dApp universe, the Discord community, the Ergo testnet, and a bookmarks page.",
+  "qa_pairs": [
+    {
+      "question": "What are the unique advantages of Ergo?",
+      "answer": "Ergo offers several unique advantages: built for everyone, secure & private, fair launch, powerful tools, and sustainable."
+    },
+    {
+      "question": "What are the key steps for getting started with Ergo?",
+      "answer": "Key steps for getting started with Ergo include understanding the basics, getting a wallet, acquiring and securely storing ERG, exploring use cases, finding answers to common questions, and joining the community."
+    },
+    {
+      "question": "What are some intermediate-level use cases for Ergo?",
+      "answer": "Intermediate-level use cases for Ergo include exploring decentralized exchanges (DEXs), earning yield through farming and staking, understanding stablecoins like SigmaUSD, engaging with degenerate finance (DegFi), participating in airdrops and token sales, exploring gaming on Ergo, running a node, and utilizing off-chain services."
+    },
+    {
+      "question": "What are the key resources for developers building on Ergo?",
+      "answer": "Key resources for developers building on Ergo include the Developer Quickstart, learning ErgoScript, and the Start Developing guide."
+    },
+    {
+      "question": "What is the purpose of the Ergo platform?",
+      "answer": "Ergo is designed to be a fair financial system for everyone, with a focus on security, privacy, and accessibility for regular people, not just tech experts."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Welcome to Ergo!",
+      "level": 1,
+      "content": "New to cryptocurrency or looking to understand what makes Ergo special? You're in the right place! Ergo is a secure and powerful platform designed to be a fair financial system for everyone. Think of it as a next-generation digital money system built with privacy and everyday people in mind.\n\nThis guide helps you find what you need, whether you want to learn the basics, use Ergo for transactions, build applications, or help secure the network.\n\n::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udd2c Learn\",\n    \"content\": \"Get a high-level overview of how Ergo works. \",\n    \"image\": \"./assets/img/grid/01.png\",\n    \"url\": \"dev/protocol/protocol-overview.md\"\n  },\n  {\n    \"title\": \"\ud83d\udee0 Start Developing\",\n    \"content\": \"Get started on your development journey.\",\n    \"image\": \"./assets/img/grid/02.png\",\n    \"url\": \"dev/start.md\"\n\n  },\n  {\n    \"title\": \"\u26cf Start Mining\",\n    \"content\": \"Start mining ERG today or explore unique mining features available on Ergo.\",\n    \"image\": \"./assets/img/grid/06.png\",\n    \"url\": \"mining/mining-overview.md\"\n  },\n  {\n    \"title\": \"\ud83e\udd1d Contribute\",\n    \"content\": \"'Lets create grassroots finance'\",\n    \"image\": \"./assets/img/grid/04.png\",\n    \"url\": \"contribute.md\"\n  },\n  {\n    \"title\": \"\ud83d\udcb3 Wallets\",\n    \"content\": \"Storing your ERG safely & securely.\",\n    \"image\": \"./assets/img/grid/05.png\",\n    \"url\": \"dev/wallets.md\"\n  },\n  {\n    \"title\": \"\u2753 FAQ\",\n    \"content\": \"View some of the most frequently asked questions.\",\n    \"image\": \"./assets/img/grid/03.png\",\n    \"url\": \"faq.md\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Why Choose Ergo?",
+      "level": 2,
+      "content": "Ergo offers several unique advantages:\n\n*   **Built for Everyone:** Designed to be accessible and useful for regular people, not just tech experts.\n*   **Secure & Private:** Uses advanced cryptography to keep your funds safe and transactions private.\n*   **Fair Launch:** No pre-mine or initial coin offerings (ICOs) mean a fairer distribution from the start.\n*   **Powerful Tools:** Supports advanced features like smart contracts for building useful applications (dApps).\n*   **Sustainable:** Features like Storage Rent help keep the network efficient and long-lasting.\n\n[**Learn more about Ergo\u2019s Vision**](dev/protocol/why.md) and [**Key Features**](dev/protocol/protocol-overview.md)"
+    },
+    {
+      "heading": "Getting Started with Ergo",
+      "level": 2,
+      "content": "If you're new to cryptocurrencies or just starting with Ergo, here are some key steps:\n\n*   **Understand the Basics:** What is blockchain? What is ERG? Check out the [**Glossary**](glossary.md) for simple explanations of common terms.\n*   **Get a Wallet:** A digital wallet is needed to store your ERG securely. Learn about different [**Wallet Options**](dev/wallets.md) and how to set one up safely.\n*   **Get ERG & Stay Safe:** Learn how to acquire and securely store ERG with this [**Security Guide**](https://ergonaut.space/en/Guides/yield/getting-started).\n*   **Explore What You Can Do:** Discover simple ways to use Ergo, like sending ERG or exploring applications built on Ergo (dApps). See the [**Ecosystem Overview**](uses/use-cases-overview.md).\n*   **Common Questions:** Find answers to frequently asked questions in the [**FAQ**](faq.md) and [**Common Misconceptions**](fud-faq.md).\n*   **Join the Community:** Connect with other users! See the community links below, or learn how to [**Contribute to Marketing**](contribute/marketing.md) or join the [**Sigmanauts Program**](contribute/sigmanauts.md)."
+    },
+    {
+      "heading": "Using Ergo (Intermediate)",
+      "level": 3,
+      "content": "Ready to explore more?\n\n*   **Explore Decentralized Exchanges (DEXs):** Learn how to trade tokens directly on Ergo ([**DEX Overview**](uses/dex.md)), engage in [**Peer-to-Peer Trading**](eco/p2p-trading.md), explore [**Arbitrage Opportunities**](tutorials/arb.md), or dive into [**Options Trading**](tutorials/trading-options.md).\n*   **Earn Yield:** Discover ways to earn passive income through [**Yield Farming & Staking**](tutorials/yield.md).\n*   **Understand Stablecoins:** Discover SigmaUSD, Ergo's native stablecoin ([**SigmaUSD**](uses/sigmausd.md)).\n*   **Explore DegFi:** Navigate high-risk, high-reward opportunities with [**Degenerate Finance**](uses/degfi.md).\n*   **Engage with the Ecosystem:** Learn about [**Airdrops & Token Sales**](tutorials/airdrops.md) or explore [**Gaming on Ergo**](tutorials/gaming-tutorial.md).\n*   **Run Your Own Node:** Contribute to the network's decentralization ([**Running a Node**](node/install.md)).\n*   **Use Off-Chain Services:** Understand and utilize off-chain bots and services ([**Off-Chain Overview**](dev/oc/off-chain-overview.md))."
+    },
+    {
+      "heading": "Building on Ergo (Developers)",
+      "level": 3,
+      "content": "Want to create applications on Ergo?\n\n*   **Developer Quickstart:** Get set up and start building. See [**Start Developing**](dev/start.md).\n*   **Learn ErgoScript:** Dive into Ergo's powerful smart contract language. See [**ErgoScript**](dev/scs/ergoscript.md)."
+    },
+    {
+      "heading": "Securing the Network (Miners)",
+      "level": 3,
+      "content": "Help secure the Ergo blockchain and earn rewards.\n\n*   **Start Mining:** Find pools, software, and guides. See [**Start Mining**](mining/mining-overview.md).\n*   **Learn about Autolykos:** Understand Ergo's unique mining algorithm. See [**Autolykos**](mining/autolykos.md)."
+    },
+    {
+      "heading": "Engage with the Ergo Community",
+      "level": 2,
+      "content": "Ergo\u2019s community is vibrant and continuously evolving. Keep updated with the latest developments, participate in community discussions, and find support through forums and social platforms.\n\n::cards::\n\n[\n  {\n    \"title\": \"Key Features\",\n    \"content\": \"Discover Ergo's key features\",\n    \"image\": \"./assets/img/grid/01.png\", # Corrected image path assumption (relative from root docs)\n    \"url\": \"dev/protocol/protocol-overview.md\" # Corrected link path\n  },\n  {\n    \"title\": \"Anatomy\",\n    \"content\": \"Dive into boxes, registers and more in the anatomy of Ergo.\",\n    \"image\": \"./assets/img/grid/05.png\", # Corrected image path assumption (using existing wallet image)\n    \"url\": \"dev/data-model/box.md\" # Corrected link path\n\n  },\n  {\n    \"title\": \"\ud83d\udd17 Sigmaverse\",\n    \"content\": \"Your portal to the Ergo dApp universe.\",\n    \"image\": \"./assets/img/grid/02.png\", # Corrected image path assumption (using existing dev image)\n    \"url\": \"https://sigmaverse.io\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Come chat!\",\n    \"content\": \"Join the action on Discord\",\n    \"image\": \"./assets/img/grid/04.png\", # Corrected image path assumption (using existing contribute image)\n    \"url\": \"https://discord.gg/Q86PNMwRsu\"\n  },\n  {\n    \"title\": \"Testnet\",\n    \"content\": \"An alternative blockchain you can use for experimentation\",\n    \"image\": \"./assets/img/grid/06.png\", # Corrected image path assumption (using existing mining image)\n    \"url\": \"node/testnet.md\" # Corrected link path\n  },\n  {\n    \"title\": \"Bookmarks\",\n    \"content\": \"An overview of Ergo resources\",\n    \"image\": \"./assets/img/grid/03.png\", # Corrected image path assumption (using existing faq image)\n    \"url\": \"https://direct.me/ergo\"\n  }\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/index.md",
+  "processed_at": "2025-05-11T19:50:09.016457",
+  "ai_processed": true
+}

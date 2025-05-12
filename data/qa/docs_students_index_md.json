@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the focus of the 'Intersections with Computer Science' section?",
+    "answer": "The 'Intersections with Computer Science' section explores how students can leverage their academic knowledge in computer science to contribute to the development of the Ergo blockchain, including topics like databases, programming languages, networks, and systems programming."
+  },
+  {
+    "question": "What are some of the recommended resources for students to get started with Ergo?",
+    "answer": "Recommended resources for students to get started with Ergo include the 'Why Ergo?' guide, the Ergo Platform Overview, the FAQ, introductory videos and courses, and the Ergo chatbots."
+  },
+  {
+    "question": "What is ErgoScript and why is it important for students to learn?",
+    "answer": "ErgoScript is a powerful scripting language that enables the creation of flexible crypto-contracts based on Sigma Protocols. Learning ErgoScript is crucial for understanding and developing on the Ergo blockchain."
+  },
+  {
+    "question": "What are some of the resources available for learning ErgoScript?",
+    "answer": "Resources for learning ErgoScript include the ErgoScript Primer, the Sigma Language documentation, tutorials on creating simple pay-to-script applications, and various tools and platforms for experimenting with ErgoScript."
+  },
+  {
+    "question": "How can students engage with the Ergo community and collaborate with other developers?",
+    "answer": "Students can engage with the Ergo community and collaborate with other developers by participating in the community forums, attending meetups and conferences, and contributing to the development of the Ergo ecosystem."
+  }
+]

@@ -1,0 +1,10 @@
+Ergo's future plans include:
+- Continuing to solve pain points in development, with a focus on improving user experience through sub-blocks and providing more developer resources like hardware wallets, courses, tutorials, and guides
+- Expanding to more top-tier exchanges and improving marketing efforts
+- Enabling the minting and transacting of new tokens, NFTs, and other assets for low fees in an open-source ecosystem
+- Empowering the community to grow the ecosystem in a decentralized way through DAOs
+- Positioning Ergo as a decentralized central bank digital currency (CBDC) for the people
+
+Ergo sees itself as well-suited for Artificial Economic Intelligence (AEI) due to its simple contract handling and flexible templates. The community is building resources like SharkNet and an AI chatbot to support AEI development.
+
+Privacy is a core principle for Ergo, implemented through opt-in protocols and robust cryptography. Ergo aims to avoid legal challenges by operating as a fully open-source platform with clear documentation and transparent development, as well as innovations like the ErgoMixer, SigmaJoin, and Mixicles.

@@ -1,0 +1,98 @@
+{
+  "id": "docs_node_install_node-faq_md",
+  "title": "Ergo Node FAQ & Guidelines",
+  "summary": "The document provides an FAQ and guidelines for running an Ergo node. It covers the general benefits of running a node, how to view public nodes, and the minimum requirements for running a node, including Java version and hardware specifications. It also provides instructions for safely shutting down a node using API commands or terminating the ports. The document emphasizes the importance of running a node to contribute to the security of the Ergo network.",
+  "qa_pairs": [
+    {
+      "question": "What are the benefits of running an Ergo node?",
+      "answer": "There is no direct financial incentive to run a node. However, doing so contributes to increasing the security of the network."
+    },
+    {
+      "question": "Can Ergo nodes be viewed publicly?",
+      "answer": "Yes, public nodes can be viewed at ergonodes.net. However, unless your node is hosted on a publicly accessible web-server, your node should be protected by your router."
+    },
+    {
+      "question": "How can you run a public Ergo node?",
+      "answer": "To run a public node, refer to the nginx.conf example provided in the document."
+    },
+    {
+      "question": "What are the risks of using a remote Ergo node?",
+      "answer": "Be cautious when using a remote node as it can be insecure."
+    },
+    {
+      "question": "Where can the minimum requirements for running an Ergo node be found?",
+      "answer": "The minimum requirements for running an Ergo node are not provided in the given content."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Node FAQ & Guidelines",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "General",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "What benefits are there for running a node?",
+      "level": 3,
+      "content": "There is no direct financial incentive to run a node. However, doing so contributes to increasing the security of the network."
+    },
+    {
+      "heading": "Can nodes be viewed anywhere?",
+      "level": 3,
+      "content": "Yes, public nodes can be viewed at [ergonodes](http://ergonodes.net/). However, unless your node is hosted on a publicly accessible web-server, your node should be protected by your router.\n\n- To run a public node, refer to this [nginx.conf](https://github.com/glasgowm148/ergoscripts/blob/main/misc/nginx.config) example.\n- Be cautious when using a [remote node](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/mainnet.conf) as it can be insecure."
+    },
+    {
+      "heading": "Minimum Requirements",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Java",
+      "level": 3,
+      "content": "An Ergo node requires a **JDK/JRE version >= 9** installed on your system. We recommend using [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html) or SDKMAN for Unix-based systems:\n\n```bash\ncurl -s \"https://get.sdkman.io\" | bash\nsdk install java 11.0.13.8.1-amzn\n```"
+    },
+    {
+      "heading": "Hardware",
+      "level": 3,
+      "content": "The only hardware requirements are ~20GB of storage for the blockchain and ~8GB of RAM for handling the sync. The node utilizes Java, so it should work across all operating systems. You can even run it on a [Raspberry Pi](pi.md). \n\n> Note: Due to the intensive disk I/O, we recommend having 4-6GB of RAM with a fast SSD, running with the `-Xmx4G` flag on JVM9/11."
+    },
+    {
+      "heading": "Running the Node",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "API Commands",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "/node/shutdown",
+      "level": 3,
+      "content": "Use the following command to safely shut down your node\n\n```\ncurl -X POST \"http://127.0.0.1:9053/node/shutdown\" -H \"api_key: hello\"\n```\n\nIf a safe shutdown is not possible, you can terminate the ports:\n\n```\nkill -9 $(lsof -t -i:9053)\nkill -9 $(lsof -t -i:9030)\n```\n\n\nPlease refer to the section on [swagger](../swagger.md) for more information."
+    },
+    {
+      "heading": "Security",
+      "level": 3,
+      "content": "Your node should be protected by your router unless it's running on a publicly accessible web-server. If you wish to host a public node, consider the following:\n\n- The `ergo.conf` file must never be made public.\n- Sensitive API methods require a security token that should not be transmitted over untrusted channels.\n- Restrict access to the Ergo REST API to known hosts only. Specifically, the API should not be accessible from the Internet."
+    },
+    {
+      "heading": "Compiling from Source",
+      "level": 3,
+      "content": "Instead of downloading the precompiled Ergo jar, you can clone the repository and compile the jar from source using the [`sbt assembly`](https://www.scala-sbt.org/) command."
+    },
+    {
+      "heading": "Running as a Service",
+      "level": 3,
+      "content": "Create a service file:\n\n```\nvi /etc/systemd/system/node.service\n```\n\nAnd enter the following content:\n\n```\n[Unit]\nDescription=ErgoNode Service\n[Service]\nUser=user\nWorkingDirectory=/mnt/HC_Volume_19304500/ergo\nExecStart=/mnt/HC_Volume_19304500/run_node.sh\nSuccessExitStatus=143\nTimeoutStopSec=10\nRestart=on-failure\nRestartSec=5\n\n[Install]\nWantedBy=multi-user.target\n```\n\nNext, create the `sh` file:\n\n```bash\necho \"#!/bin/sh\nsudo /usr/bin/java -jar -Xmx4G ergo.jar --mainnet -c ergo.conf\" > run_node.sh\nchmod +x run_node.sh\n```\n\nFinally, enable and start the service:\n\n```\nsudo systemctl daemon-reload\nsudo systemctl enable node.service\nsudo systemctl start node\nsudo systemctl status node\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/node-faq.md",
+  "processed_at": "2025-05-11T19:55:36.076716",
+  "ai_processed": true
+}

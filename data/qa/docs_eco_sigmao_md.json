@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is SigmaO?",
+    "answer": "SigmaO is an innovative platform that brings the complex world of options trading to the Ergo blockchain, allowing users to engage in call and put options across a variety of Ergo EIP-4 tokens."
+  },
+  {
+    "question": "What are the two main types of options?",
+    "answer": "The two main types of options are call options, which let you buy something at a set price in the future, and put options, which let you sell something at a set price in the future."
+  },
+  {
+    "question": "How can options be used for hedging?",
+    "answer": "You can buy a put option to sell your Ergo tokens at a fixed price, protecting you from losses if the price falls."
+  },
+  {
+    "question": "How can options be used for speculation?",
+    "answer": "You can buy a call option to purchase Ergo tokens at a set price in the future, and then sell them at the higher market price to make a profit."
+  },
+  {
+    "question": "How can options be used to generate income?",
+    "answer": "You can sell a call option if you don't think Ergo's price will rise significantly, and you'll receive money upfront without having to sell any tokens."
+  }
+]

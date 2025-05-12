@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Diffie-Hellman (DH) protocol?",
+    "answer": "The Diffie-Hellman protocol allows two parties to generate a shared secret over a public communication channel, which can then be used to encrypt future communications."
+  },
+  {
+    "question": "How does the Diffie-Hellman protocol work without exchanging the secret itself?",
+    "answer": "The two parties collaboratively generate the shared secret, ensuring that the secret remains secure, even if an observer intercepts their communication."
+  },
+  {
+    "question": "What is a Diffie-Hellman tuple (DHT) in the context of Ergo?",
+    "answer": "In Ergo, Diffie-Hellman tuples (DHTs) are used to prove knowledge of a shared secret without revealing it, consisting of public group elements g, h, u, and v."
+  },
+  {
+    "question": "How does the interactive Diffie-Hellman protocol work in Ergo?",
+    "answer": "The prover selects a random value r, computes temporary values t0 and t1, sends them to the verifier, who then selects a random challenge c and sends it back. The prover computes the response z and sends it to the verifier, who then verifies the proof."
+  },
+  {
+    "question": "How is the Diffie-Hellman protocol implemented in a non-interactive way in Ergo?",
+    "answer": "In Ergo, the Fiat-Shamir transformation is used to make the Diffie-Hellman protocol non-interactive, where the verifier's challenge c is replaced with a cryptographic hash function H of the temporary values t0, t1, and the message m."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Ergo Modifiers?",
+    "answer": "In Ergo's P2P protocol, the fundamental units of data exchanged between nodes, such as blocks and transactions, are referred to as \"modifiers.\" Modifiers are transmitted as part of the network synchronization process."
+  },
+  {
+    "question": "What are the four distinct sections that make up an Ergo block?",
+    "answer": "The Ergo block comprises four distinct sections (modifiers): Header, Block Transactions, ADProofs, and Extension."
+  },
+  {
+    "question": "What information is contained in the Header section of an Ergo block?",
+    "answer": "The Header section contains the minimal information necessary to synchronize the chain and validate Proof-of-Work (PoW) correctness, including cryptographic hashes (roots) of the other sections."
+  },
+  {
+    "question": "What is the purpose of the ADProofs section in an Ergo block?",
+    "answer": "The ADProofs section contains Authenticated Dictionary proofs associated with the transactions in the BlockTransactions section, allowing light clients to validate transactions against the UTXO set state root hash found in the header."
+  },
+  {
+    "question": "What types of data can be stored in the Extension section of an Ergo block?",
+    "answer": "The Extension section functions as a key-value store capable of holding various data relevant to the block or protocol state, such as blockchain parameters and NiPoPoW interlinks."
+  }
+]

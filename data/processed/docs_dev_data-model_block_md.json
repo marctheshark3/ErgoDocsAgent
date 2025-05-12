@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_data-model_block_md",
+  "title": "Understanding Blocks in Ergo",
+  "summary": "This document provides an overview of blocks in the Ergo blockchain. It explains that blocks are fundamental units of data that group together transactions, forming a secure and transparent record of all transactions on the blockchain. Ergo uses a Proof-of-Work (PoW) consensus mechanism, where miners solve complex mathematical problems to add new blocks to the blockchain. The document outlines the structure of Ergo blocks, which include a header, block transactions, ADProofs, and an extension section. This structured approach enhances efficiency and allows for greater flexibility in incorporating new features and upgrades. The document also mentions related concepts such as Ergo modifiers and superblock clients.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of blocks in blockchain technology?",
+      "answer": "Blocks group together a set of transactions and are linked chronologically to form a secure and transparent record of all transactions on the blockchain."
+    },
+    {
+      "question": "How does Ergo's block structure differ from other Proof-of-Work blockchains?",
+      "answer": "Ergo's block structure is more sophisticated, with distinct sections for the header, transactions, ADProofs, and an extension section for additional data."
+    },
+    {
+      "question": "What is the purpose of the ADProofs section in Ergo's block structure?",
+      "answer": "The ADProofs section allows light clients (nodes with limited storage) to verify transactions without downloading the entire block or the full UTXO set."
+    },
+    {
+      "question": "What is the emission schedule for Ergo's block rewards?",
+      "answer": "Initially, each block rewarded miners with 75 ERG, which were distributed among them and the Ergo Foundation Treasury. This emission schedule applied for the first two years of the network's operation."
+    },
+    {
+      "question": "What are Ergo Modifiers, and how are they used in the peer-to-peer network protocol?",
+      "answer": "In Ergo's peer-to-peer network protocol, blocks and transactions are referred to as 'modifiers,' which are exchanged between nodes to keep the network synchronized."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Block\n  - Data Model\n---"
+    },
+    {
+      "heading": "Understanding Blocks in Ergo",
+      "level": 1,
+      "content": "*(Back to: [Data Model Overview](data-model.md))*\n\nIn blockchain technology, a **block** is a fundamental unit of data that groups together a set of [transactions](transactions.md). These blocks are linked together chronologically to form a \"blockchain,\" serving as a secure and transparent record of all transactions.\n\n[Proof-of-Work (PoW)](autolykos.md) is a consensus mechanism that requires [miners](mining-overview.md) to solve complex mathematical problems to add new blocks to the blockchain. This process, known as \"[mining](mining-overview.md),\" involves significant computational effort, ensuring the security and immutability of the blockchain.\n\nErgo, like other Proof-of-Work (PoW) blockchains such as Bitcoin, uses blocks to record transactions and ensure the integrity of the network. However, Ergo's block structure is more sophisticated, offering enhanced functionality and efficiency.\n\nIn Ergo, a new block is created approximately every **two minutes**. Initially, each block rewarded miners with 75 ERG, which were distributed among them and the [Ergo Foundation Treasury](ef-treasury.md). This [emission schedule](emission.md) applied for the first two years of the network's operation. You can find more details in the [emission section](emission.md)."
+    },
+    {
+      "heading": "Ergo Block Structure",
+      "level": 2,
+      "content": "Ergo's blocks are divided into distinct sections to optimize organization and functionality:\n\n1. [**Header**](block-header.md): The header acts as a summary of the block's content. It includes metadata (block version, timestamp, etc.), hashes linking to other block sections, and the Proof-of-Work solution.\n\n2. [**Block Transactions**](block-transactions.md): This section contains the core data of the block \u2013 a list of all transactions included within it. These transactions define how [tokens](tokens.md) and assets are transferred on the Ergo blockchain.\n\n3. [**ADProofs**](block-adproofs.md): These cryptographic proofs, short for Authenticated Data Proofs, allow [light clients](modes.md) ([nodes](install.md) with limited storage) to verify transactions without downloading the entire block or the full [UTXO set](eutxo.md).\n\n4. [**Extension**](extension-section.md): This section provides a flexible space to store additional data that doesn't fit into the other sections. It includes interlinks for [NiPoPoWs](nipopows.md) (efficient proof-of-work verification) and system parameters (e.g., block size).\n\nThis structured approach enhances efficiency and allows for greater flexibility in incorporating new features and upgrades into the Ergo blockchain."
+    },
+    {
+      "heading": "Related Concepts",
+      "level": 2,
+      "content": "* **Ergo Modifiers:** In Ergo's [peer-to-peer network protocol](p2p-protocol-overview.md), blocks and transactions are referred to as \"[modifiers](modifiers.md).\" These modifiers are exchanged between nodes to keep the network synchronized. [More details](modifiers.md)\n* **Superblock Clients:** Ergo supports \"superblock clients,\" which provide an additional layer of efficiency and flexibility for specific use cases, related to [logarithmic space mining](log_space.md). [More details](log_space.md)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/block.md",
+  "processed_at": "2025-05-11T19:19:07.907501",
+  "ai_processed": true
+}

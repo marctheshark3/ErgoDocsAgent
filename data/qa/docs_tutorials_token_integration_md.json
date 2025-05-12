@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of this guide?",
+    "answer": "This guide outlines the process for integrating and listing tokens that have been bridged between networks using Rosen Bridge."
+  },
+  {
+    "question": "What are the key networks supported by Rosen Bridge for cross-chain token bridging?",
+    "answer": "Ergo, Cardano, and Ethereum are the key networks supported by Rosen Bridge for cross-chain token bridging."
+  },
+  {
+    "question": "What are the key considerations for managing tokens with a multi-chain presence?",
+    "answer": "Key considerations include: each bridged version represents the same token on different networks, liquidity needs to be managed across all chains, analytics and trading platforms should be integrated per network, and community education is needed for cross-chain functionality."
+  },
+  {
+    "question": "What is the first phase outlined in the guide?",
+    "answer": "The first phase outlined in the guide is Initial Listing and Market Data Setup."
+  },
+  {
+    "question": "What are the supported future networks that will be added to Rosen Bridge?",
+    "answer": "Future networks that will be supported include BSC and DOGE."
+  }
+]

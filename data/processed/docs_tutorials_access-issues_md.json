@@ -1,0 +1,73 @@
+{
+  "id": "docs_tutorials_access-issues_md",
+  "title": "Access Issues",
+  "summary": "This document provides solutions to common access issues with Ergo wallets, including scenarios where users have their seed phrase but the restored wallet doesn't contain any ERG or shows a different address, and situations where users do not have their seed phrase. It covers troubleshooting steps, instructions on deriving additional addresses, and best practices for securely storing seed phrases, such as avoiding digital storage, using physical writing, maintaining redundancy, and limiting access.",
+  "qa_pairs": [
+    {
+      "question": "What should you do if you have your seed phrase but the restored wallet doesn't contain any ERG and is a different address?",
+      "answer": "Try deriving additional addresses."
+    },
+    {
+      "question": "What should you do if you were using the Ergo mobile wallet or the Ergo Reference Client and the wallet was created before October 18th, 2022?",
+      "answer": "Verify if your wallet was affected by the BIP32 key derivation bug using satergo.com."
+    },
+    {
+      "question": "What should you do if you recorded your seed phrase by taking a screenshot?",
+      "answer": "Ensure that the mnemonic represents the wallet you are trying to recover."
+    },
+    {
+      "question": "What should you do if you are using Yoroi and do not have your seed phrase?",
+      "answer": "Decrypt the wallet using yoroi-ergo-wallet-recover."
+    },
+    {
+      "question": "What does the Ergo node use for the change address?",
+      "answer": "The Ergo node uses a secret root key (derived from seed) for the change address."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Access Issues\n  - Wallet\n  - Troubleshooting\n  - Seed Phrase\n  - Recovery\n  - Guide\n---"
+    },
+    {
+      "heading": "Access Issues",
+      "level": 1,
+      "content": "This page provides solutions to common access issues that users may encounter with their Ergo wallets. It covers scenarios where you have your seed phrase but the restored wallet doesn't contain any ERG or shows a different address, and situations where you do not have your seed phrase. It also provides instructions on deriving additional addresses and best practices for storing your seed securely.\n\n/// details | Your seed phrase / mnemonic\n     {type: info, open: true}\nA wallet is simply an *interface* for the blockchain, if you have your seed phrase, simply restore in one of our [wallets](wallets.md)\n///"
+    },
+    {
+      "heading": "I have my seed phrase but the wallet restored doesn't contain any ERG and is a different address",
+      "level": 2,
+      "content": "- **Were you using the Ergo mobile wallet or the Ergo Reference Client?**\n    - **Yes**: Try [deriving additional addresses](#deriving-additional-addresses).\n    - **Was the wallet created before October 18th, 2022?**\n        - **Yes**: There was a [BIP32 key derivation bug](https://github.com/ergoplatform/ergo-appkit/pull/139) impacting certain wallets. Verify if your wallet was affected using [satergo.com](https://satergo.com/) which [checks this for you](https://t.me/Satergo/9509) when you restore.\n- **How did you record your seed phrase?**\n    - **Written down**: Are any characters hard to read or ambiguous? Refer to the [BIP-39 wordlist](https://www.blockplate.com/pages/bip-39-wordlist) for clarification.\n    - **Screenshot**: Are you sure this mnemonic represents the wallet you are trying to recover?"
+    },
+    {
+      "heading": "I do not have my seed phrase",
+      "level": 2,
+      "content": "- **using Yoroi?**: \n    - **Yes**: Decrypt the wallet using [yoroi-ergo-wallet-recover](https://github.com/satsen/yoroi-ergo-wallet-recover)\n- **iOS Terminus / Ergo Mobile Wallet**:\n    - **Do you still have access to the mobile wallet/Terminus but are facing a 'User not authenticated' error?**\n        - **Yes**: This error often indicates a change in device credentials, possibly due to biometric changes or system updates.\n        - **No**: Explore other recovery options\n    - **Were you using the iOS Beta version?**\n        - **Yes**: The developer may be able to reactivate the beta if asked nicely. Ensure to attempt resolving it yourself first."
+    },
+    {
+      "heading": "Deriving Additional Addresses",
+      "level": 2,
+      "content": "Ergo node uses a secret root key (derived from seed) for the change address"
+    },
+    {
+      "heading": "In the Ergo Mobile Wallet / Terminus",
+      "level": 3,
+      "content": "Does the address that's been generated belong to the wallet you've restored? Check the derivation index and derive up to that number in `wallet config -> addresses -> derive more`\n\nSimply select the wallet"
+    },
+    {
+      "heading": "In the Reference Client/Node",
+      "level": 3,
+      "content": "Navigate to `localhost:9053/swagger#/wallet/walletDeriveKey` \n\nClick ***\"Try it out\"***\n\n```bash\n\"derivationPath\": \"m/44'/429'/0'/0/0\" \n```\n\n- The wallet needs to be unlocked, and you need to authorize on top right on swagger\n- Click execute and check the address you get in the response"
+    },
+    {
+      "heading": "Best practices for storing your seed securely",
+      "level": 2,
+      "content": "If you've followed the steps above and managed to recover your funds, please store your seed inline with these best practices below to avoid further issues.\n\n\n1. **Avoid Digital Storage**: Never store the seed phrase on digital devices prone to hacking.\n2. **Physical Writing**: Write the seed phrase on paper or durable materials like metal.\n3. **Secure Storage**: Keep it in a safe or lockbox, protected from theft and environmental damage.\n4. **Redundancy**: Have multiple copies in different secure locations.\n5. **Splitting**: Divide the seed phrase and store parts separately for added security.\n6. **No Cloud Storage**: Avoid using cloud services for storing the seed phrase.\n7. **Limit Access**: Restrict knowledge of the seed phrase's location to only essential individuals.\n8. **Regular Checks**: Periodically verify the condition and security of the stored seed phrase.\n9. **Use Reputable Services**: If using third-party storage, ensure they are trustworthy.\n10. **Stay Informed**: Keep up-to-date with security practices and threats.\n11. **Plan for Emergencies**: Arrange for the safe transfer of your seed phrase in case of death or incapacitation."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/tutorials/access-issues.md",
+  "processed_at": "2025-05-11T19:59:01.074862",
+  "ai_processed": true
+}

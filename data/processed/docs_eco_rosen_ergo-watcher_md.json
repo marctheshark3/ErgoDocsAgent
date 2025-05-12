@@ -1,0 +1,93 @@
+{
+  "id": "docs_eco_rosen_ergo-watcher_md",
+  "title": "Ergo Rosen Bridge Watcher Setup",
+  "summary": "Ergo Rosen Bridge Watcher Setup: This document provides instructions for setting up a Rosen Bridge watcher, which serves as a cross-chain oracle for the Ergo network. It covers cloning the repository, configuring the environment, setting up Docker for ARM devices (if applicable), pulling Docker images, starting the watcher, and configuring the `local.yaml` file for the Ergo network.",
+  "qa_pairs": [
+    {
+      "question": "What are watchers in the context of Rosen Bridge?",
+      "answer": "Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion."
+    },
+    {
+      "question": "What is the first step in setting up the Ergo Rosen Bridge Watcher?",
+      "answer": "Clone the operational repository and navigate to the appropriate directory."
+    },
+    {
+      "question": "What file needs to be created and configured to set up the environment?",
+      "answer": "Create and configure the environment file from the template provided, by creating a .env file and setting the necessary environment variables like POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB, and POSTGRES_PORT."
+    },
+    {
+      "question": "What is the purpose of setting the environment variables in the .env file?",
+      "answer": "The environment variables in the .env file are used to configure the Postgres database, including the password, user, database name, and port."
+    },
+    {
+      "question": "What is the default Postgres port set in the example environment variables?",
+      "answer": "The default Postgres port set in the example environment variables is 5432, but it can be changed if needed."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Rosen Bridge Watcher Setup",
+      "level": 1,
+      "content": "Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.\n\n/// admonition | This section is adapted from the [deploy-docker.md](https://github.com/rosen-bridge/operation/blob/dev/docs/watcher/deploy-docker.md) section on the Rosen Bridge documentation.\n    type: info\n///"
+    },
+    {
+      "heading": "Clone the Repository and Prepare the Environment",
+      "level": 2,
+      "content": "First, clone the operational repository and navigate to the appropriate directory:\n\n```shell\ngit clone https://github.com/rosen-bridge/operation.git\ncd operation/watcher/\n```\n\nCreate and configure the environment file from the template provided:\n\n```shell\ncp env.template .env"
+    },
+    {
+      "heading": "Edit the .env file to set POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB, and POSTGRES_PORT",
+      "level": 1,
+      "content": "```"
+    },
+    {
+      "heading": "Configure Environment Variables and Permissions",
+      "level": 2,
+      "content": "Set up necessary environment variables in the `.env` file and adjust file permissions:\n\n```shell"
+    },
+    {
+      "heading": "Example environment variables setting",
+      "level": 1,
+      "content": "POSTGRES_PASSWORD=your_password # a random alphanumeric password without special characters (like $%!-#)\nPOSTGRES_USER=your_user # a random name\nPOSTGRES_DB=your_db # a random name\nPOSTGRES_PORT=5432 # 5432 is set as default, you can change it"
+    },
+    {
+      "heading": "Set permissions and create local.yaml",
+      "level": 1,
+      "content": "sudo chown -R 3000:3000 logs\ntouch config/local.yaml\n```\n\nFor MacOS users, adjust the permissions for the `logs` directory:\n\n```shell\nsudo chmod -R 707 logs\n```"
+    },
+    {
+      "heading": "Configure Docker for ARM Devices (if applicable)",
+      "level": 2,
+      "content": "/// details | Raspberry Pi ARM \n     {type: info, open: false}\n\nIf you're running on a Raspberry Pi ARM device, specify an ARM-compatible Docker image and adjust the volume mapping in the docker-compose file:\n\n```yaml"
+    },
+    {
+      "heading": "Example docker-compose configuration for ARM64v8",
+      "level": 1,
+      "content": "db:\n  image: arm64v8/postgres:16.0\n  env_file:\n    - .env\n  volumes:\n    - postgres-data:/var/lib/postgresql/data/\n  networks:\n    - rosen_network\n  restart: always\n  healthcheck:\n    test: ['CMD-SHELL', 'pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB']\n    interval: 10s\n    timeout: 5s\n    retries: 3\n```\n///"
+    },
+    {
+      "heading": "Pull Docker Images and Start the Watcher",
+      "level": 2,
+      "content": "Before starting the watcher, pull the necessary Docker images and run the service:\n\n```shell\ndocker compose pull\ndocker compose up -d\n```"
+    },
+    {
+      "heading": "Configure the `local.yaml` File for Ergo",
+      "level": 3,
+      "content": "Set up the `local.yaml` configuration file specifically for the Ergo network:\n\n```yaml\nnetwork: ergo\napi:\n  apiKeyHash: 'YOUR_API_KEY_HASH'\nergo:\n  type: node\n  initialHeight: <latest height>\n  mnemonic: 'YOUR_WALLET_MNEMONIC'\n  node:\n    url: 127.0.0.1:9053\nobservation:\n  confirmation: 10\n  validThreshold: 720\n```\n\nMake sure to use the actual values and URLs as per your setup requirements."
+    },
+    {
+      "heading": "Start the Watcher and Monitor",
+      "level": 2,
+      "content": "After configuring all files and setting up the environment, start the watcher:\n\n```shell\ndocker compose up -d\n```\n\nAccess the watcher UI by visiting `http://localhost:3030` to monitor network information and health status."
+    },
+    {
+      "heading": "Note",
+      "level": 2,
+      "content": "- Adjust the `apiKeyHash` and `mnemonic` in the `local.yaml` or through the `.env` file for added security.\n- Ensure your Docker environment is properly configured, especially when deploying on different architectures like ARM.\n- Regularly update your configuration files and Docker images to keep up with network changes and software updates.\n\n\n/// admonition | For tips, troubleshooting, FAQs, and other information, please refer to the main [watcher documentation](watcher.md).\n    type: info\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/rosen/ergo-watcher.md",
+  "processed_at": "2025-05-11T19:47:04.519220",
+  "ai_processed": true
+}

@@ -1,0 +1,7 @@
+This document provides instructions for forking your own Ergo chain. The key steps include:
+
+1. Modifying the configuration file (testnet.conf) to set a unique address prefix and custom magic bytes to avoid conflicts with the Ergo mainnet and public testnet.
+2. Compiling the Ergo node using the sbt assembly command.
+3. Running the node with the custom configuration.
+4. Initializing and unlocking the wallet through the web panel.
+The document also provides community support channels for further assistance with deeper modifications.

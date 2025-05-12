@@ -1,0 +1,73 @@
+{
+  "id": "docs_eco_ergomixer_mixer-android_md",
+  "title": "How to Set Up the Ergo Mixer on an Android Device",
+  "summary": "This document provides a step-by-step guide on how to set up the Ergo Mixer on an Android device. It covers the device requirements, prerequisites such as installing Termux and Ubuntu, downloading and running the Ergo Mixer, and accessing the Ergo Mixer dashboard. The guide also includes tips and tricks, such as using a different keyboard and installing tmux to run multiple programs simultaneously.",
+  "qa_pairs": [
+    {
+      "question": "What are the minimum system requirements to run ErgoMixer on Android?",
+      "answer": "Android OS of version 7.0 or higher, a minimum of 10GB of available storage, and a minimum of 1GB ram available for apps."
+    },
+    {
+      "question": "What terminal emulator app is required to run an Ergo node on an Android device?",
+      "answer": "Termux, which can be downloaded from the F-Droid catalog of FOSS applications for Android."
+    },
+    {
+      "question": "What package is necessary to run OpenJDK-8 in Ubuntu on Android?",
+      "answer": "proot-distro."
+    },
+    {
+      "question": "How do you install Ubuntu with proot-distro?",
+      "answer": "proot-distro install ubuntu."
+    },
+    {
+      "question": "What packages need to be installed after updating Ubuntu?",
+      "answer": "wget and openjdk-8-jdk."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "How to Set Up the Ergo Mixer on an Android Device",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "Running ErgoMixer on an Android device is important because it enables an individual who may not own a desktop or laptop computer to take advantage of the privacy features available in ErgoMixer. It will make it possible for someone with a mobile device to utilize Ergo's Sigma protocols to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security."
+    },
+    {
+      "heading": "Device Requirements",
+      "level": 2,
+      "content": "There are some minimum system requirements to run ErgoMixer on Android. Android OS of version 7.0 or higher, a minimum of 10GB of available storage, and a minimum of 1GB ram available for apps. So far, this has been tested and is working well on a Samsung Galaxy S8+."
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 2,
+      "content": "A terminal emulator app is required to run an Ergo node on an Android device. The emulator app, Termux, has been tested and works well for running the node. To download Termux, you will need first to download and install [F-Droid](https://f-droid.org), an installable catalog of FOSS (Free and Open Source Software) applications for the Android platform. \n\nWithin F-droid, search for `Termux - Terminal emulator with packages` and then download and install it."
+    },
+    {
+      "heading": "Installing Packages in Termux",
+      "level": 2,
+      "content": "The next step is to launch Termux and update and upgrade all packages. Using the default responses to all the prompts during the upgrade is okay.\n\n```bash\npkg upgrade\n```\n\nNow install the package proot-distro. This is necessary to run OpenJDK-8 in Ubuntu, as it is currently unavailable for the base Linux environment in Android.\n\n```bash\npkg install proot-distro\n```\n\nThe next step is to download Ubuntu with proot-distro.\n\n```bash\nproot-distro install ubuntu\n```\n\nNow we need to log in to Ubuntu. \n\n```bash\nproot-distro login ubuntu\n```\n\nAnd now, we need to update Ubuntu; then, we can install wget and OpenJDK-8.\n\n```bash\napt-get update\n```\n```bash\napt-get install wget openjdk-8-jdk\n```"
+    },
+    {
+      "heading": "ErgoMixer Release Download & Running the Mixer",
+      "level": 2,
+      "content": "The next step is to download the latest release of ErgoMixer using wget. You can find the latest release [here.](https://github.com/ergoMixer/ergoMixBack/releases/tag/4.2.0)\n\n```bash\nwget https://github.com/ergoMixer/ergoMixBack/releases/download/4.2.0/ergoMixer-4.2.0.jar\n```\n\nAnd now, you can run the mixer with the following command:\n\n```bash\njava -jar ergoMixer-4.2.0.jar\n```\n\nIn the event of a restart of the phone or after terminating Termux, the mixer can be started again by logging back into Ubuntu with `proot` and re-issuing the java command to start the mixer."
+    },
+    {
+      "heading": "Accessing ErgoMixer Dashboard",
+      "level": 2,
+      "content": "At this point, the mixer will begin running on the device. To view the ErgoMixer dashboard, open a browser on the device and navigate to [http://0.0.0.0:9000/dashboard](http://0.0.0.0:9000/dashboard)."
+    },
+    {
+      "heading": "Tips & Tricks",
+      "level": 2,
+      "content": "I recommend downloading a different keyboard to be used in Termux. The stock Samsung keyboard was not working well in my case. You can find a keyboard called Hacker's Keyboard in F-Droid that worked great for me.\n\nInstalling a package called tmux will help if you want to run other programs alongside the Ergo Mixer within Termux. It is possible to run the Ergo node in one tmux pane and the mixer in another."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/ergomixer/mixer-android.md",
+  "processed_at": "2025-05-11T19:43:55.122405",
+  "ai_processed": true
+}

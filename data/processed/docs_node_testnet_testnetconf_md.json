@@ -1,0 +1,79 @@
+{
+  "id": "docs_node_testnet_testnetconf_md",
+  "title": "Testnet Configuration",
+  "summary": "The document describes the configuration settings for the Ergo node on the Ergo testnet. It covers the main sections and fields of the testnet configuration file, including network type, node configuration, chain configuration, voting configuration, wallet configuration, network configuration, and REST API configuration. The key points include settings for the network type, block synchronization, mining, transaction costs, checkpoint, protocol version, difficulty, block interval, monetary policy, voting, and network/API parameters.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# Testnet Configuration\n\nThis document describes the main sections and fields of the [Ergo node configuration file for the Test Network](https://github.com/ergoplatform/ergo/blob/master/src/main/resou..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Testnet Configuration"
+    },
+    {
+      "question": "What is the 'Testnet Configuration' section about?",
+      "answer": "This document describes the main sections and fields of the [Ergo node configuration file for the Te..."
+    },
+    {
+      "question": "What is the 'Network Type' section about?",
+      "answer": "`ergo.networkType = \"testnet\"`\nThis setting defines the network type. For testing purposes, it's set..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Testnet Configuration",
+      "level": 1,
+      "content": "This document describes the main sections and fields of the [Ergo node configuration file for the Test Network](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/testnet.conf). This configuration serves the need for non-breaking changes testing."
+    },
+    {
+      "heading": "Ergo Configuration Section",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Network Type",
+      "level": 3,
+      "content": "`ergo.networkType = \"testnet\"`\nThis setting defines the network type. For testing purposes, it's set to \"testnet\"."
+    },
+    {
+      "heading": "Node Configuration",
+      "level": 3,
+      "content": "`ergo.node`\nThis section contains parameters related to the node settings.\n\n- `headerChainDiff` defines the maximum allowed number of blocks difference between the current local chain and the network. If the difference exceeds this value, the node is considered unsynchronized.\n- `internalMinersCount` sets the number of internal miner threads. This helps reproduce real-world scenarios like having multiple GPU miners.\n- `internalMinerPollingInterval` is the polling interval for GPU miners.\n- `maxTransactionCost` sets the maximum cost for a transaction to be propagated across the network.\n- `adProofsSuffixLength` determines the size of the suffix for dumping ADProofs during bootstrapping.\n- `checkpoint` is a mandatory checkpoint introduced due to some violations in the PaiNet."
+    },
+    {
+      "heading": "Chain Configuration",
+      "level": 3,
+      "content": "`ergo.chain`\nThis section includes parameters related to the blockchain.\n\n- `protocolVersion` sets the protocol version.\n- `addressPrefix` is the prefix for network addresses. Reserved values include 0 (for mainnet) and 16 (for testnet).\n- `initialDifficultyHex` sets the initial difficulty for the network.\n- `epochLength` defines the length of an epoch in difficulty recalculation. A value of 1 means difficulty is recalculated every block.\n- `blockInterval` is the desired time interval between blocks.\n- `monetary.minerRewardDelay` sets the delay between when a block is mined and when the reward can be spent.\n- `voting` contains parameters related to the voting mechanism, such as the length of a voting epoch, the number of epochs for soft-fork voting, and activation epochs for a soft-fork after acceptance.\n- `reemission` includes parameters related to the emission process. \n- `genesisStateDigestHex` is the Base16 representation of the genesis state roothash."
+    },
+    {
+      "heading": "Voting Configuration",
+      "level": 3,
+      "content": "`ergo.voting`\nThis section allows configuration of voting parameters."
+    },
+    {
+      "heading": "Wallet Configuration",
+      "level": 3,
+      "content": "`ergo.wallet.secretStorage.secretDir`\nSets the directory for the wallet's secret storage."
+    },
+    {
+      "heading": "Scorex Configuration Section",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Network Configuration",
+      "level": 3,
+      "content": "`scorex.network`\nThis section includes parameters related to the network settings.\n\n- `magicBytes` is a unique identifier for the network protocol. \n- `bindAddress` sets the IP address and port number where the node will accept incoming connections. By default, it listens on all available network adapters.\n- `nodeName` assigns a visible name to your node for other participants in the P2P network.\n- `knownPeers` is a list of bootstrap nodes that your node will connect to upon initialization."
+    },
+    {
+      "heading": "REST API Configuration",
+      "level": 3,
+      "content": "`scorex.restApi`\nThis section allows the setting of the node's REST API parameters.\n\n- `apiKeyHash` is the hash of your API key. The API key protects the invocation of critical API methods.\n\n**Note:** Ensure to secure the transmission of the API key as it is transmitted as plain text in the HTTP header and can be intercepted during network transit!"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/testnet/testnetconf.md",
+  "processed_at": "2025-05-11T19:58:08.594675",
+  "ai_processed": true
+}

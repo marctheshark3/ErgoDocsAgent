@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of ErgoScript?",
+    "answer": "ErgoScript is a scripting language designed specifically for the Ergo blockchain, enabling the creation of secure and efficient smart contracts."
+  },
+  {
+    "question": "How does ErgoScript integrate with Ergo's UTXO model?",
+    "answer": "ErgoScript incorporates constructs like Box, INPUTS, and OUTPUTS that are specific to the UTXO model used by the Ergo blockchain."
+  },
+  {
+    "question": "What are the key concepts of ErgoScript related to the UTXO model?",
+    "answer": "Key concepts include Box, UTXO-specific constructs, and Turing completeness."
+  },
+  {
+    "question": "What are the key features of ErgoScript's syntax?",
+    "answer": "ErgoScript's syntax is derived from Scala and includes immutable values, array access, functional programming constructs, boolean predicates, and cryptographic operations."
+  },
+  {
+    "question": "How does ErgoScript support Turing-complete applications despite not being Turing complete itself?",
+    "answer": "Although ErgoScript is not Turing complete, Turing-complete applications can still be built using ErgoScript, as detailed in a peer-reviewed paper."
+  }
+]

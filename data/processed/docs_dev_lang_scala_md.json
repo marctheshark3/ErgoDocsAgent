@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_lang_scala_md",
+  "title": "Scala Development with Ergo",
+  "summary": "This document provides an introduction to Scala development with the Ergo platform. Ergo's primary language is Scala, and its scripting language ErgoScript is also based on Scala. The document highlights the advantages of Scala, such as its cross-platform capabilities, conciseness, and multi-paradigm nature. It also discusses the migration of Ergo's core components to Scala 3, including the rationale and implications for developers. The document includes a list of learning resources, such as tutorials and guides, as well as development resources like the sigmastate-interpreter, ScoreX, and Scrypto libraries, which can assist developers in their Scala development journey with Ergo.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary language used in Ergo?",
+      "answer": "Ergo's primary language is Scala."
+    },
+    {
+      "question": "What is the scripting language used by Ergo?",
+      "answer": "The scripting language used by Ergo is ErgoScript, which is also based on Scala."
+    },
+    {
+      "question": "What are some key features of Scala that make it a good choice for Ergo development?",
+      "answer": "Scala is truly cross-platform, concise, multi-paradigm, and can be more efficient than Java code."
+    },
+    {
+      "question": "What version of Scala is used in Ergo's core components?",
+      "answer": "Ergo's core components, including the reference node and sigmastate-interpreter, have undergone migration to Scala 3."
+    },
+    {
+      "question": "What are the potential impacts of the Scala 3 migration for Ergo developers?",
+      "answer": "Developers contributing to or building upon Ergo's core libraries need to ensure their development environment and build tools are compatible with Scala 3, and be aware of potential syntax changes or library compatibility adjustments."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Scala\n  - Development\n  - Ergo\n---"
+    },
+    {
+      "heading": "Scala Development with Ergo",
+      "level": 1,
+      "content": "Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, [*ErgoScript*](ergoscript.md), is also based on Scala.\n\nIf you're new to Scala development with Ergo, the [Ergo Scala Skeleton App](https://github.com/dav009/ergo-scala-skeleton-app) is a great place to start."
+    },
+    {
+      "heading": "Why Scala?",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Why Scala?",
+      "level": 3,
+      "content": "Ergo's primary language is Scala. Similarly, the scripting language used by Ergo, [ErgoScript](ergoscript.md), is also based on Scala, but the [off-chain code](off-chain-overview.md) can be written in any language. Developers have access to a growing selection of [tools](get-started.md) and [Software Development Kits (SDKs)](frameworks.md) for [JVM](jvm.md), [Rust](rust.md) and [JS/TS](js.md).\n\n\nScala has several features that set it apart from other [JVM](jvm.md) languages.\n\n- Firstly, it is truly cross-platform, as the same code can run on [JVM](jvm.md) and [JavaScript](js.md) natively. This is a feature that is not found in many other languages.\n- Additionally, key ecosystem libraries for Scala support all platforms, and the popularity of Scala.js and Scala-native is increasing.\n- Another advantage of Scala is its conciseness, both in terms of [syntax](syntax.md) and conceptual level.\n- Despite its high-level nature, Scala can also be more efficient than similar [Java](java.md) code due to its ability to use primitive unboxed types, and the ability of the Scala compiler to perform code specialization.\n- Furthermore, Scala is multi-paradigm, allowing for the combination of OOP, FP, and LP, making it suitable for a wide range of domains.\n- Lastly, Scala 3 brings even more powerful features such as metaprogramming and tools for zero-cost abstractions."
+    },
+    {
+      "heading": "Scala Versioning (Scala 3)",
+      "level": 3,
+      "content": "Ergo's core components, including the [reference node](install.md) and [`sigmastate-interpreter`](sigmastate-interpreter.md), have undergone migration to **Scala 3**. This migration leverages the newer language features, improved type system, and tooling enhancements offered by Scala 3.\n\n*   **Rationale & Implications:** For a detailed understanding of the motivations behind the Scala 3 migration and its potential impact on the ecosystem (including Long-Term Support plans), refer to the official Scala blog post: [Next Steps for Scala 3 and Scala 2 Long-Term Support](https://www.scala-lang.org/blog/next-scala-lts.html).\n*   **Developer Impact:** Developers contributing to or building upon these core libraries need to ensure their development environment and build tools (like SBT) are compatible with Scala 3. While Scala 3 offers significant improvements, developers should be aware of potential syntax changes or library compatibility adjustments compared to Scala 2."
+    },
+    {
+      "heading": "Learning Resources",
+      "level": 2,
+      "content": "Here are some tutorials, guides, and explanations to help you get started with Scala development on Ergo:\n\n- [ErgoScript](ergoscript.md): Learn about ErgoScript, Ergo's scripting language.\n- [AppKit](appkit.md): Discover how to use Ergo's AppKit to develop [applications](use-cases-overview.md).\n- [Ergo Tutorials by Zackbalbin](https://github.com/zackbalbin/ErgoTutorials): A collection of tutorials for Ergo development.\n- [Learning Ergo 101: Development Workflow](https://blog.cryptostars.is/learning-ergo-101-development-workflow-aa17dd63ef6): A guide to the [development workflow](get-started.md) for Ergo."
+    },
+    {
+      "heading": "Development Resources",
+      "level": 2,
+      "content": "Here are some resources that can assist you in your Scala development journey with Ergo:\n\n- [sigmastate-interpreter](sigmastate-interpreter.md): This is an [ErgoScript compiler](compiler.md) and [ErgoTree Interpreter](ergotree.md) implementation for Ergo blockchain's [*Sigma Language*](sigma-lang.md). For the development of Ergo applications using [JVM](jvm.md) languages, consider using [Appkit](appkit.md).\n- [ScoreX](https://github.com/scorexfoundation/scorex): An open-source, modular blockchain & cryptocurrency framework.\n- [Scrypto](scrypto.md): An open-source cryptographic toolkit designed to make it easier and safer for developers to use [cryptography](crypto.md) in their applications. It's based on Scorex and used internally in [Ergo Node](install.md) and [ergo-wallet](wallet.md).\n- [Ergo Scala Style Guide](https://github.com/ergoplatform/ergo-scala-style-guide): Follow this guide to maintain consistency and readability in your Scala code.\n\n> Note: The public interfaces of these libraries are subject to change."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/lang/scala.md",
+  "processed_at": "2025-05-11T19:22:00.148549",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Sigmastate Interpreter\n  - ErgoTree\n  - ErgoScript\n  - Compiler\n  - Interpreter\n---\n\n# Sigmastate Interpreter\n\nThe [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Sigmastate Interpreter"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Sigmastate Interpreter\n  - ErgoTree\n  - ErgoScript\n  - Compiler\n  - Interpreter\n---"
+  },
+  {
+    "question": "What is the 'Sigmastate Interpreter' section about?",
+    "answer": "The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter) repository ..."
+  },
+  {
+    "question": "What is the 'Key Components' section about?",
+    "answer": "- **ErgoScript Compiler**:\n    - The [ErgoScript Compiler](https://github.com/ScorexFoundation/sigma..."
+  }
+]

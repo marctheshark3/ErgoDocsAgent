@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_protocol_eip_md",
+  "title": "Ergo Improvement Proposals (EIPs)",
+  "summary": "Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo, covering core protocol specifications, client APIs, dApp/contract standards, and more. The document outlines several EIPs that have been proposed and implemented, including EIP-0001 (UTXO-Set Scanning Wallet API), EIP-0020 (ErgoPay), EIP-0037 (Tweaking Difficulty Adjustment Algorithm), and EIP-0027 (Emission Retargeting Soft-Fork). The document also provides information on open EIPs, such as EIP-0042 (Multi-Signature Wallet) and EIP-50 (Sigma 6.0), and a hardfork wishlist item related to the limitation of 1 new token per transaction.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - EIP\n---\n\n# Ergo Improvement Proposals (EIPs)\n\nErgo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. These proposals enc..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Ergo Improvement Proposals (EIPs)"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - EIP\n---"
+    },
+    {
+      "question": "What is the 'Ergo Improvement Proposals (EIPs)' section about?",
+      "answer": "Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous ..."
+    },
+    {
+      "question": "What is the 'Open EIPs' section about?",
+      "answer": "See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the ..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - EIP\n---"
+    },
+    {
+      "heading": "Ergo Improvement Proposals (EIPs)",
+      "level": 1,
+      "content": "Ergo Improvement Proposals (EIPs) are a set of guidelines and standards designed for the continuous improvement of Ergo. These proposals encompass a wide range of aspects, including but not limited to, core protocol specifications, client APIs, dApp/contract standards, and more.\n\nHere are some of the EIPs that have been proposed and implemented:\n\n- [x] [EIP-0001: UTXO-Set Scanning Wallet API](eip1.md): This EIP focuses on extending the wallet to serve the needs of external applications by providing a flexible scanning interface.\n- [x] [EIP-0020: ErgoPay](eip20.md): An interaction protocol between wallet application and dApp for creating, signing and sending Ergo transactions.\n- [x] [EIP-0037: Tweaking Difficulty Adjustment Algorithm](eip37.md): This EIP proposes changes to make the current difficulty readjustment more reactive and smoother.\n- [x] [EIP-0027: Emission Retargeting Soft-Fork](eip27.md): This EIP proposes an amendment to the emission schedule to ensure the long-term sustainability of the mining protocol.\n\nTo gain a better understanding of the structure and formatting of EIPs, we encourage you to review the existing EIPs on [GitHub](https://github.com/ergoplatform/eips) or within [this documentation](https://docs.ergoplatform.com/tags/#eip). This will provide you with a clear picture of the expectations and standards associated with EIPs."
+    },
+    {
+      "heading": "Open EIPs",
+      "level": 4,
+      "content": "See the [Pull requests](https://github.com/ergoplatform/eips/pulls) section for full details on the open EIPs, some of the most notable are;\n\n- [ ] [Ready to merge/implemented PRs #86](https://github.com/ergoplatform/eips/issues/86)\n- [ ] EIP-0042 Multi-Signature Wallet\n- [ ] [[WIP] EIP-50 - Sigma 6.0](https://github.com/ergoplatform/eips/pull/100)"
+    },
+    {
+      "heading": "Hardfork Wishlist",
+      "level": 2,
+      "content": "- [Why does the limitation of 1 new token per transaction exist?](https://github.com/ergoplatform/ergo/issues/2013)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/eip.md",
+  "processed_at": "2025-05-11T19:23:49.384681",
+  "ai_processed": true
+}

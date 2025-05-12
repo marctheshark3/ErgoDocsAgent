@@ -1,0 +1,73 @@
+{
+  "id": "docs_contribute_marketing_md",
+  "title": "marketing.md",
+  "summary": "The document outlines various ways for the Ergo community to get involved in marketing efforts. Key points include:\n\n- Joining the conversation on Telegram and Discord to collaborate and share ideas\n- Contributing to the Ergo Wiki to make the platform more accessible globally\n- Creating and sharing content like graphics, infographics, videos, and blog posts\n- Engaging in community outreach through initiatives like ErgOne, local meetups, and webinars\n- Collaborating with influencers and spreading the word on social media\n- Providing feedback and suggestions to the development team\n- Organizing fundraising and crowdfunding campaigns to support marketing initiatives\n\nThe document emphasizes that any level of participation and commitment can make a significant impact in building a stronger Ergo community.",
+  "qa_pairs": [
+    {
+      "question": "What are the main hubs for community marketing efforts in Ergo?",
+      "answer": "The main hubs for community marketing efforts in Ergo are the Telegram group and the #marketing channel on Discord."
+    },
+    {
+      "question": "How can users contribute to the Ergo Wiki?",
+      "answer": "Users can contribute to the comprehensive Ergo Wiki at ergonaut.space, which is available in over forty languages."
+    },
+    {
+      "question": "What resources are available for creating and sharing visual content for Ergo?",
+      "answer": "Users can access a Shared Figma Graphic Space, graphics via Dropbox, and official Ergo logos from the awesome-ergo repository."
+    },
+    {
+      "question": "What types of content can users create and share to promote Ergo?",
+      "answer": "Users can create and share infographics, memes, videos, blog posts, and articles to promote Ergo and reach a broader audience."
+    },
+    {
+      "question": "How can users engage in community outreach for Ergo?",
+      "answer": "Users can participate in the ErgOne initiative, organize or attend local meet-ups and events, and host webinars or live streams to engage with the Ergo community."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "How to Get Involved in Community Marketing",
+      "level": 2,
+      "content": "Ergo has a lively and diverse community made up of various sub-ecosystems. Here\u2019s how you can get involved and make a difference:"
+    },
+    {
+      "heading": "Join the Conversation",
+      "level": 3,
+      "content": "- **Telegram and Discord**: Dive into discussions on our [Telegram group](https://t.me/ErgoSocials) or the [#marketing channel on Discord](https://discord.gg/TBFXMzha7X). These are the main hubs for community marketing efforts, where you can collaborate, share ideas, and help steer our grassroots initiatives."
+    },
+    {
+      "heading": "Contribute to Our Wiki",
+      "level": 3,
+      "content": "- **Ergonaut.space**: Help expand our comprehensive Wiki at [ergonaut.space](https://ergonaut.space/en/home), available in over forty languages. Your contributions can make Ergo more accessible to a global audience."
+    },
+    {
+      "heading": "Create and Share Content",
+      "level": 3,
+      "content": "- **Shared Figma Space**: Enhance your visual content or team up on design projects using our [Shared Figma Graphic Space](https://www.figma.com/file/pd92vgB3xNFThaacIKodYs/Guide-ID?node-id=1%3A756).\n- **Graphics and Logos**: Access a wide range of graphics via our [Dropbox](https://www.dropbox.com/sh/jionpgnj89eod2f/AAC5S1vnOwO3gm2vRYOmDBQ-a?dl=0), or get official Ergo logos from [awesome-ergo](https://github.com/ergoplatform/awesome-ergo/tree/master/graphics/Logo).\n- **Infographics and Memes**: Create infographics that explain complex concepts in an easy-to-understand manner or memes to generate buzz and engagement on social media.\n- **Videos**: Produce videos explaining what Ergo is, its unique features, and updates. Share these on YouTube, TikTok, or other video platforms to reach a broader audience.\n- **Blog Posts and Articles**: Share your knowledge and insights by writing blog posts or articles about Ergo. Publish them on your own blog, Medium, or other platforms. Well-written content can help attract new users and investors.\n- **Paid Contributors Program**: We offer a paid contributors program for writers. Technical writers are in high demand, and your contributions can be rewarded. Check out the [Ergo Documentation](https://docs.ergoplatform.com/contribute/marketing/) for more information."
+    },
+    {
+      "heading": "Engage in Community Outreach",
+      "level": 3,
+      "content": "- **Participate in the ErgOne initiative**: [ErgOne](https://app.ergone.io/voting-login) is a Proof-of-Commitment Protocol (PoCoP), a unique approach to blockchain engagement. PoCoP rewards active participation in promoting and supporting the Ergo ecosystem. By creating and sharing content, engaging with the Community, and contributing creatively, you earn $Erg0ne tokens. Your involvement is measured by a Virality Score, ensuring fair distribution of rewards. Simply tag your tweets with #PoCoP and submit them to the [ErgOne dashboard](https://app.ergone.io/voting-login)\n- **Local Meet-Ups and Events**: Organize or participate in local meet-ups and events to promote Ergo. These can be informal gatherings, presentations at local blockchain events, or even booths at conferences.\n- **Webinars and Live Streams**: Host webinars or live streams to discuss Ergo\u2019s latest developments, answer questions, and engage with the community in real-time."
+    },
+    {
+      "heading": "Collaborate and Spread the Word",
+      "level": 3,
+      "content": "- **Influencer Partnerships**: Partner with influencers in the blockchain and cryptocurrency space to spread the word about Ergo. Influencers can provide valuable exposure and lend credibility to the project.\n- **Guest Appearances**: Participate in podcasts, YouTube shows, or other media where you can talk about Ergo and its potential.\n- **Social Media**: Promote Ergo on platforms like Nostr, Bsky, Instagram, TikTok, Facebook, and subreddits. Wherever people gather online, there\u2019s an opportunity to spread the word about Ergo.\n- **Ergo Forum**: Check out various strategies and tips on the [Ergo Forum](https://www.ergoforum.org/c/marketing/13) to enhance your marketing efforts."
+    },
+    {
+      "heading": "Community Engagement and Support",
+      "level": 3,
+      "content": "- **Help New Users**: Be active on community forums, Discord, Telegram, and social media to help new users with their questions. Providing a welcoming environment can help retain new community members.\n- **Feedback and Suggestions**: Actively provide feedback and suggestions to the Ergo development team. Your insights can help improve the platform and ensure it meets the community\u2019s needs.\n- **Proof of Work**: Show your dedication by creating and executing marketing initiatives. If your work gains traction and community support, consider running a raffle to fund further promotion (e.g., local events, stickers, etc.).\n- **Regional Managers**: If you're passionate about setting up a regional Ergo branch, managing local chats, organizing meet-ups, and fostering a thriving community, we\u2019d love to hear from you. Engage with the community, demonstrate your capabilities, and your proactive involvement could lead to a more significant role."
+    },
+    {
+      "heading": "Fundraising and Crowdfunding",
+      "level": 3,
+      "content": "- **Crowdfunding Campaigns**: Organize crowdfunding campaigns to fund specific projects or initiatives within the Ergo ecosystem. If you have a great marketing idea, consider launching a crowdfunding campaign to gather support from the community.\n- **Create Raffles**: Organize community raffles to raise funds for marketing initiatives. Engage the community by offering exciting prizes and using the proceeds to support various marketing efforts.\n- **Sigmanauts Treasury**: The Sigmanauts have a treasury that is available for community suggestions on how to best spend it. If you have an idea for a marketing campaign or initiative, propose it to the Sigmanauts for potential funding.\n\n\nBy actively participating and demonstrating your commitment, you can help drive Ergo's growth and increase its visibility in the blockchain space. Your contributions, big or small, make a significant impact in building a stronger and more vibrant community."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/contribute/marketing.md",
+  "processed_at": "2025-05-11T19:17:25.297065",
+  "ai_processed": true
+}

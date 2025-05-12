@@ -1,0 +1,1 @@
+Mixers, also known as coin tumblers, are tools that restore the fungibility of digital notes. The basic mixing scheme on Ergo, ZeroJoin, is based on ring signatures and proof of knowledge for a Diffie-Hellman tuple, and is implemented as ErgoMixer.

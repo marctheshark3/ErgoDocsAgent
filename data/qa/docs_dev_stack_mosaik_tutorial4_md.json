@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Ergo Mosaik UI system?",
+    "answer": "Ergo Mosaik is a UI system for creating dApps on the Ergo blockchain."
+  },
+  {
+    "question": "What are the main components used to implement the Send Funds screen?",
+    "answer": "The main components used are AddressChooseButton, ErgAddressInputField, FiatOrErgAmountInputField, and a button to send the transaction."
+  },
+  {
+    "question": "How is the reduced transaction created for the ErgoPay protocol?",
+    "answer": "The reduced transaction is created using the ergo-appkit SDK, by building an unsigned transaction and then reducing it to a context-independent form."
+  },
+  {
+    "question": "What are the two main steps involved in using ErgoPay?",
+    "answer": "The two main steps are: 1) Building a reduced transaction based on user input, and 2) Wrapping the reduced transaction into the ErgoPay protocol."
+  },
+  {
+    "question": "How can a single Spring Boot process serve multiple separated Mosaik apps?",
+    "answer": "A single Spring Boot process can serve multiple separated Mosaik apps by adding new controller classes and using new endpoints for each app."
+  }
+]

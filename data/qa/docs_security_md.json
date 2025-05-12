@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the four criteria of the Howey Test?",
+    "answer": "The four criteria of the Howey Test are: investment of money, common enterprise, reasonable expectation of profits, and entrepreneurial or managerial efforts of others."
+  },
+  {
+    "question": "How does the Howey Test apply to ERG tokens?",
+    "answer": "The first and second criteria of the Howey Test may be met for ERG tokens, but the third criterion is likely not met since the focus is on improving security and functionality rather than investment with a reasonable expectation of profits."
+  },
+  {
+    "question": "What is the fourth criterion of the Howey Test and how does it apply to the ERG token ecosystem?",
+    "answer": "The fourth criterion, entrepreneurial or managerial efforts of others, requires that the efforts of those outside the investor are essential to the success or failure of the enterprise. The ERG token ecosystem is becoming more decentralized and independent of the Ergo Foundation, which suggests this criterion may not be met."
+  },
+  {
+    "question": "What is the eUTXO system mentioned in the content?",
+    "answer": "The eUTXO (extended UTXO) system is a key part of the Ergo Platform that is being advanced through the promotion and use of ERG tokens."
+  },
+  {
+    "question": "What is the main focus of the promotion of ERG tokens within the Ergo ecosystem?",
+    "answer": "The promotion of ERG tokens within Ergo is focused on improving security and functionality through proof-of-work mining and the advancement of the eUTXO system, rather than as an investment with a reasonable expectation of profits."
+  }
+]

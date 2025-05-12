@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ErgoAuth protocol?",
+    "answer": "ErgoAuth is a user authentication protocol between wallet applications and dApps to validate if dApp users are really who they pretend to be, especially for dApps that grant certain abilities to holders of special tokens."
+  },
+  {
+    "question": "What are the key steps in the ErgoAuth authentication protocol?",
+    "answer": "1) The dApp prepares a unique message and a SigmaBoolean that the user needs to authenticate for. 2) The dApp presents an ErgoAuth link or QR code for the user to open in the wallet app. 3) The wallet app obtains the ErgoAuthRequest data and presents it to the user. 4) The user agrees to authenticate, and the wallet app adds its own bytes to the request and signs it."
+  },
+  {
+    "question": "What are the benefits of the ErgoAuth protocol for dApps?",
+    "answer": "ErgoAuth allows dApps to authenticate users without requiring them to send their tokens to a depositary address, which can be undesirable, especially for valuable tokens. It provides a trustless way for dApps to validate user access privileges without the user having to move their funds."
+  },
+  {
+    "question": "How does ErgoAuth support cold wallet integration?",
+    "answer": "A future enhancement of ErgoAuth could allow the authentication request to be relayed to a cold wallet device, which would be an enhancement of EIP-0019 and would not change the ErgoAuth protocol."
+  },
+  {
+    "question": "What are the key data formats defined in the ErgoAuth protocol?",
+    "answer": "The key data format is the ErgoAuthRequest, which contains the information needed for the wallet app to authenticate the user."
+  }
+]

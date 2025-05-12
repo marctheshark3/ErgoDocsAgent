@@ -1,0 +1,8 @@
+This document discusses an indexing strategy for accessing blockchain data by querying a node's REST API directly, rather than relying on a third-party explorer. It outlines the concept, how it works, the pros and cons, and when to use this approach. The key points are:
+
+- The application communicates directly with an Ergo node instance that the user controls, rather than a third-party explorer.
+- The application sends HTTP requests to the node's API endpoints to retrieve block, transaction, and state information.
+- Pros include control, no rate limits, direct access to raw data, and near real-time access.
+- Cons include infrastructure overhead, limited query performance, complex application logic, and the requirement for the node to be fully synchronized.
+- This approach is suitable for applications that need access to the latest chain state or specific recent blocks/transactions, and simpler queries that don't require scanning large portions of the blockchain history.
+- For more complex dApps, a custom indexer may be a better solution than querying the node API directly.

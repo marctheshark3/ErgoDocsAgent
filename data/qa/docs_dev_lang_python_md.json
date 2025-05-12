@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What libraries and bindings are available for Python developers to interact with the Ergo blockchain?",
+    "answer": "{\"libraries\":[\"ergpy\",\"AppKit\"]}"
+  },
+  {
+    "question": "What is the purpose of the ErgoPad project?",
+    "answer": "ErgoPad has released a set of docker containers combined to create a React/MaterialUI frontend, REST API backend, assembler to interact with smart contracts and supporting services like ergonode, redis and postgres."
+  },
+  {
+    "question": "What are some of the key features or components of the ErgoPad project?",
+    "answer": "{\"features\":[\"NFT-Locked Vesting\",\"ergo-python-appkit\"]}"
+  },
+  {
+    "question": "How can Python developers use the AppKit library to interact with the Ergo blockchain?",
+    "answer": "Python developers can use the [Appkit](appkit.md) library to interact with the Ergo blockchain."
+  },
+  {
+    "question": "What is the purpose of the ergpy library for Python developers?",
+    "answer": "The ergpy library is a python-jvm wrapper for interacting with the Ergo blockchain."
+  }
+]

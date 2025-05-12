@@ -1,0 +1,69 @@
+{
+  "id": "docs_contribute_md",
+  "title": "Contributing to Ergo",
+  "summary": "This document outlines the various ways to contribute to the Ergo project, an open-source blockchain platform. It covers development contributions, documentation improvements, marketing and outreach, community support and engagement, testing, design, and research. The document provides guidance on how to get started, including exploring the different contribution areas, connecting with the community on Discord, finding tasks that match your skills and interests, and following the specific guidelines for each contribution area. The document emphasizes that every contribution, big or small, helps strengthen the Ergo ecosystem.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - contribute\n  - community\n  - development\n  - marketing\n  - documentation\n  - bounties\n  - grants\n  - sigmanauts\n  - getting started\n---\n\n# Contributing to Ergo\n\nErgo is an open-source pr..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Contributing to Ergo"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - contribute\n  - community\n  - development\n  - marketing\n  - documentation\n  - bounties\n..."
+    },
+    {
+      "question": "What is the 'Contributing to Ergo' section about?",
+      "answer": "Ergo is an open-source project driven by its community. Contributions of all kinds are welcome and e..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - contribute\n  - community\n  - development\n  - marketing\n  - documentation\n  - bounties\n  - grants\n  - sigmanauts\n  - getting started\n---"
+    },
+    {
+      "heading": "Contributing to Ergo",
+      "level": 1,
+      "content": "Ergo is an open-source project driven by its community. Contributions of all kinds are welcome and essential for the ecosystem's growth and success. Whether you're a developer, writer, designer, marketer, researcher, or simply an enthusiastic user, there are many ways to get involved!\n\nThis page serves as a central hub for finding contribution opportunities."
+    },
+    {
+      "heading": "Ways to Contribute",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Development",
+      "level": 3,
+      "content": "*   **Code Contributions:** Help build and improve Ergo's core protocol, node software, SDKs, tooling, and ecosystem projects.\n    *   **Getting Started:** Check out the [Developer Contribution Overview](devs.md) and the [Technical Contribution Guidelines](technical-guidelines.md).\n    *   **Finding Tasks:**\n        *   Look for issues tagged `good first issue` or `help wanted` in core repositories like [ergo](https://github.com/ergoplatform/ergo/issues), [sigmastate-interpreter](https://github.com/ergoplatform/sigmastate-interpreter/issues), [sigma-rust](https://github.com/ergoplatform/sigma-rust/issues?q=is%3Aissue+state%3Aopen+label%3A%22good+first+issue%22), [ergo-appkit](https://github.com/ergoplatform/ergo-appkit/issues).\n        *   Explore the official [Ergo Bounties Board](bounties.md) for funded tasks.\n        *   Consider applying for [Development Grants](grants.md) for larger projects.\n    *   **Community:** Join the development discussions on the [Ergo Discord Server](https://discord.gg/ergo-platform-668903786361651200) (check relevant `#dev` channels)."
+    },
+    {
+      "heading": "Documentation",
+      "level": 3,
+      "content": "*   **Improve ErgoDocs:** Help enhance this documentation site by fixing errors, improving clarity, adding examples, translating content, or writing new guides.\n    *   **Guide:** [Contributing to the Docs](docs.md)\n    *   **Repository:** [ergodocs on GitHub](https://github.com/glasgowm148/ergodocs) (Submit issues or Pull Requests here!)"
+    },
+    {
+      "heading": "Marketing & Outreach",
+      "level": 3,
+      "content": "*   **Spread the Word:** Help raise awareness about Ergo through social media, content creation (articles, videos), community engagement, and organizing local meetups.\n    *   **Guide:** [Marketing Contributions](marketing.md)"
+    },
+    {
+      "heading": "Community Support & Engagement",
+      "level": 3,
+      "content": "*   **Help Others:** Assist new users and developers in community channels like Discord and Telegram.\n*   **Sigmanauts Program:** Join the [Sigmanauts Program](sigmanauts.md) for a more structured way to contribute to community building, education, and testing.\n\n***'Let's create grassroots finance!'***\n\n*   **Testing:** Help test new node releases, wallet updates, and dApps.\n*   **Design:** Contribute UI/UX improvements for wallets and applications.\n*   **Research:** Explore new cryptographic techniques, economic models, or protocol enhancements relevant to Ergo."
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "1.  **Explore:** Browse the different contribution areas linked above.\n2.  **Connect:** Join the [Ergo Discord Server](https://discord.gg/ergo-platform-668903786361651200) and introduce yourself in relevant channels (e.g., `#development`, `#documentation`, `#marketing`).\n3.  **Find a Task:** Look for open issues, bounties, or areas needing improvement that match your skills and interests. Don't hesitate to ask for guidance!\n4.  **Contribute:** Follow the specific guidelines for the area you're contributing to (e.g., technical guidelines for code, documentation style guide for docs).\n\nEvery contribution, big or small, helps strengthen the Ergo ecosystem. Thank you for your interest!"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/contribute.md",
+  "processed_at": "2025-05-11T19:17:06.321769",
+  "ai_processed": true
+}

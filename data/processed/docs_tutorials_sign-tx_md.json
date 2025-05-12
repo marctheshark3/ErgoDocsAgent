@@ -1,0 +1,59 @@
+{
+  "id": "docs_tutorials_sign-tx_md",
+  "title": "Signing Transactions Using a Backend Wallet",
+  "summary": "This document provides instructions on how to sign transactions using a backend wallet in the context of Ergo. It covers two common use cases: an NFT vending machine and an off-chain bot that withdraws funds from contracts. The document outlines the necessary code snippets and emphasizes the importance of avoiding storing the seed phrase in the code, instead recommending the use of a secret manager. It also provides additional references to the sigma-rust library, the sigma-rust Discord channel, and the dAppstep repository for further information on using the backend wallet for transaction signing.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Signing Transactions\n  - Backend\n  - Wallet\n  - sigma-rust\n  - NodeJS\n  - Tutorial\n  - Guide\n---\n\n# Signing Transactions Using a Backend Wallet\n\nThere are various scenarios where signing..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Signing Transactions Using a Backend Wallet"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Signing Transactions\n  - Backend\n  - Wallet\n  - sigma-rust\n  - NodeJS\n  - Tutorial\n  -..."
+    },
+    {
+      "question": "What is the 'Signing Transactions Using a Backend Wallet' section about?",
+      "answer": "There are various scenarios where signing a transaction on the backend is necessary. This documentat..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Signing Transactions\n  - Backend\n  - Wallet\n  - sigma-rust\n  - NodeJS\n  - Tutorial\n  - Guide\n---"
+    },
+    {
+      "heading": "Signing Transactions Using a Backend Wallet",
+      "level": 1,
+      "content": "There are various scenarios where signing a transaction on the backend is necessary. This documentation provides instructions on how to accomplish this task using Ergo. We will outline two common use cases: NFT vending machine and off-chain bots that withdraw funds from contracts."
+    },
+    {
+      "heading": "Use Cases",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "NFT Vending Machine",
+      "level": 3,
+      "content": "In this use case, you may need to mint a token and send it to a user when their address is funded. To achieve this, it is recommended to define a wallet on your backend that can sign the transactions. The following code snippet demonstrates how this can be done:\n\n```javascript\nimport SignerWallet from '../src/services/WalletFromMnemonics';\n\n// Example transaction\nconst unsignedTx = {\n  inputs: [...], \n  outputs: [...],\n  ...\n}\n\n// It is crucial to avoid storing the seed phrase in your code; always use a secret manager.\nconst wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phrase here');\n\nconst signedTx = wallet.sign(unsignedTx);\n\n// The signed transaction can now be submitted to the mempool.\n\n```"
+    },
+    {
+      "heading": "Off-Chain Bot",
+      "level": 3,
+      "content": "In this use case, an off-chain bot is responsible for withdrawing funds from a contract. Similar to the previous use case, you will need a backend wallet to sign the transactions. The code snippet below illustrates how to achieve this:\n\n```javascript\nimport SignerWallet from '../src/services/WalletFromMnemonics';\n\n// Example transaction\nconst unsignedTx = {\n  inputs: [...], \n  outputs: [...],\n  ...\n}\n\n// It is crucial to avoid storing the seed phrase in your code; always use a secret manager.\nconst wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phrase here');\n\nconst signedTx = wallet.sign(unsignedTx);\n\n// The signed transaction can now be submitted to the mempool.\n\n```"
+    },
+    {
+      "heading": "Additional References",
+      "level": 2,
+      "content": "1. **Sigma-rust** - For more details on Ergo's sigma-rust library, please refer to the [sigma-rust repository](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm).\n2. **Sigma-rust Discord** - Join the [Sigma-rust Discord channel](https://discord.com/channels/668903786361651200/729692906209673257) to engage in discussions and receive support related to Ergo's sigma-rust library.\n3. **dAppstep Repo** - Visit the [dAppstep repository](https://github.com/nirvanush/dappstep-play/blob/main/src/services/WalletFromMnemonics.ts) for further information on using the backend wallet for transaction signing."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/tutorials/sign-tx.md",
+  "processed_at": "2025-05-11T20:00:35.584593",
+  "ai_processed": true
+}

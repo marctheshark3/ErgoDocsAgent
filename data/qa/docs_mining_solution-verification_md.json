@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is solution verification in cryptocurrency mining?",
+    "answer": "Solution verification is the process of validating that a miner has solved the mathematical puzzle required to add a block to the blockchain network."
+  },
+  {
+    "question": "Why are test vectors necessary for solution verification in cryptocurrency mining?",
+    "answer": "Test vectors provide a standardized set of inputs and outputs to test the verification process's accuracy and correctness."
+  },
+  {
+    "question": "What is the purpose of the verification process in cryptocurrency mining?",
+    "answer": "The network must verify the solution produced by miners before it can be accepted as valid and included in the blockchain, ensuring the integrity of the mining process and the blockchain's security."
+  },
+  {
+    "question": "What does a miner produce when they solve a mining puzzle?",
+    "answer": "Miners produce a solution that is essentially a hash value that meets a specific set of criteria."
+  },
+  {
+    "question": "How do test vectors help ensure the correctness of the verification process?",
+    "answer": "Test vectors provide a consistent and reliable way to test the verification process and identify any errors or inconsistencies by comparing the expected output from the test vector with the actual output produced by the verification process."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the key features that Ergo believes DeFi should have?",
+    "answer": "According to the document, Ergo believes the key features DeFi should have are privacy, scalability, interoperability, and decentralization."
+  },
+  {
+    "question": "How does Ergo's Sigma Protocols enable both privacy and transparency in DeFi?",
+    "answer": "Ergo's Sigma Protocols offer robust, customizable cryptography that can provide both privacy and the ability to selectively reveal information where necessary."
+  },
+  {
+    "question": "What is Ergo's approach to scalability in DeFi?",
+    "answer": "Ergo has its own approach to scalability, but also recognizes the importance of centralized services in driving user adoption of DeFi."
+  },
+  {
+    "question": "What is the current state of interoperability in DeFi according to the document?",
+    "answer": "The document states that cross-platform composability is currently limited, and that full interoperability - the ability for a user to execute a smart contract on one platform and have it seamlessly interact with another blockchain - is needed to enable the flow of liquidity throughout the DeFi world."
+  },
+  {
+    "question": "What is Ergo working on to improve interoperability in DeFi?",
+    "answer": "Ergo is working on an atomic swap-powered decentralized exchange (DEX) to enable the first stage of interoperability - atomic swaps."
+  }
+]

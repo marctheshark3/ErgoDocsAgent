@@ -1,0 +1,93 @@
+{
+  "id": "docs_node_conf_conf-chain_md",
+  "title": "Chain Configuration Settings",
+  "summary": "This document outlines the chain configuration settings for the Ergo blockchain. It covers parameters such as the protocol version, address prefix, block reward schedule, and reemission configuration. The key points are:\n\n- The protocol version should not be manually adjusted.\n- The address prefix is 0 for Ergo mainnet and 16 for Ergo testnet.\n- The block reward remains fixed for approximately 2 years, with a portion going to the foundation.\n- The block reward decreases by a fixed amount every 90 days.\n- There is a delay between when a block is mined and when the miner can spend the reward.\n- The document also mentions reemission configuration parameters, but their exact roles are not specified.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the 'protocolVersion' parameter?",
+      "answer": "The 'protocolVersion' parameter represents the version of the blockchain protocol that the client supports."
+    },
+    {
+      "question": "What is the current value of the 'addressPrefix' parameter?",
+      "answer": "The 'addressPrefix' parameter is currently set to 16, which denotes the Ergo testnet network."
+    },
+    {
+      "question": "How long is the 'fixedRatePeriod' set to?",
+      "answer": "The 'fixedRatePeriod' is set to 525,600 blocks, which is approximately two years."
+    },
+    {
+      "question": "What is the 'fixedRate' value set to?",
+      "answer": "The 'fixedRate' is set to 75,000,000,000, which means 75 Ergo coins are issued every block during the 'fixedRatePeriod'."
+    },
+    {
+      "question": "When should the chain-specific settings be modified?",
+      "answer": "The chain-specific settings should typically be left untouched unless you are planning to launch a new blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Chain Configuration Settings",
+      "level": 1,
+      "content": "This section pertains to chain-specific settings, which should typically be left untouched unless you are planning to launch a new blockchain."
+    },
+    {
+      "heading": "protocolVersion",
+      "level": 3,
+      "content": "```\nprotocolVersion = 3\n```\nThe `protocolVersion` parameter represents the version of the blockchain protocol that the client supports. Please refrain from manually adjusting this value; it should be managed by client developers."
+    },
+    {
+      "heading": "addressPrefix",
+      "level": 3,
+      "content": "```\naddressPrefix = 16\n```\nThis parameter denotes the network address prefix. Currently, the reserved values are 0 for Ergo mainnet and 16 for Ergo testnet."
+    },
+    {
+      "heading": "fixedRatePeriod",
+      "level": 4,
+      "content": "```\nfixedRatePeriod = 525600\n```\nThis parameter specifies the number of blocks during which the reward amount does not change. In this case, it is set to remain constant for approximately two years."
+    },
+    {
+      "heading": "fixedRate",
+      "level": 4,
+      "content": "```\nfixedRate = 75000000000\n```\nThis sets the number of coins (75 Ergo) to be issued every block during the `fixedRatePeriod`."
+    },
+    {
+      "heading": "foundersInitialReward",
+      "level": 4,
+      "content": "```\nfoundersInitialReward = 7500000000\n```\nThis parameter denotes the fraction of coins issued, that goes to the foundation during `fixedRatePeriod` (7.5 Ergo)."
+    },
+    {
+      "heading": "epochLength",
+      "level": 4,
+      "content": "```\n epochLength = 64800\n```\nThis represents the number of blocks between each reward reduction, set to occur every 90 days."
+    },
+    {
+      "heading": "oneEpochReduction",
+      "level": 4,
+      "content": "```\noneEpochReduction = 3000000000\n```\nThis indicates the amount by which the reward decreases after each epoch (3 Ergo)."
+    },
+    {
+      "heading": "minerRewardDelay",
+      "level": 4,
+      "content": "```\nminerRewardDelay = 720\n```\nThis represents the delay (about 1 day) between the block being mined and the miner being able to spend the reward."
+    },
+    {
+      "heading": "Reemission Configuration",
+      "level": 3,
+      "content": "The parameters below are related to reemission settings of the protocol:\n\n```\ncheckReemissionRules = false\nemissionNftId = \"\"\nreemissionTokenId = \"\"\nreemissionNftId = \"\"\nactivationHeight = 777217\nreemissionStartHeight = 2080800\ninjectionBoxBytesEncoded = \"\"\n```\nThe exact roles and potential values of these parameters are not clarified in this document and would need further specification."
+    },
+    {
+      "heading": "noPremineProof",
+      "level": 3,
+      "content": "```\nnoPremineProof = [\n      \"'Chaos reigns': what the papers say about the no-deal Brexit vote\",\n      \"\u4e60\u8fd1\u5e73\u7684\u4e24\u4f1a\u65f6\u95f4|\u8fd9\u91cc\u6709\u4efd\u4e60\u8fd1\u5e73\u4e24\u4f1a\u65e5\u5386\uff0c\u8bf7\u67e5\u6536\uff01\",\n      \"\u0422\u0410\u0421\u0421 \u0441\u043e\u043e\u0431\u0449\u0438\u043b \u043e\u0431 \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u0438\u0438 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u043c\u0430\u0439\u043d\u0438\u043d\u0433\u043e\u0432\u044b\u0445 \u0444\u0435\u0440\u043c \u043d\u0430 \u0441\u0442\u043e\u043b\u0438\u0447\u043d\u044b\u0445 \u0440\u044b\u043d\u043a\u0430\u0445\",\n      \"000000000000000000139a3e61bd5721827b51a5309a8bfeca0b8c4b5c060931\",\n      \"0xef1d584d77e74e3c509de625dc17893b22b73d040b5d5302bbf832065f928d03\"\n    ]\n```\nThe `noPremineProof` parameter includes the latest news from media outlets (the Guardian, Xinhua, Vedomosti) and existing cryptocurrency block IDs (Bitcoin, Ethereum) as evidence of no premine."
+    },
+    {
+      "heading": "foundersPubkeys",
+      "level": 3,
+      "content": "```\n foundersPubkeys = [\n      \"039bb5fe52359a64c99a60fd944fc5e388cbdc4d37ff091cc841c3ee79060b8647\",\n      \"031fb52cf6e805f80d97cde\n\n289f4f757d49accf0c83fb864b27d2cf982c37f9a8b\",\n      \"0352ac2a471339b0d23b3d2c5ce0db0e81c969f77891b9edf0bda7fd39a78184e7\"\n    ]\n```\nThe `foundersPubkeys` parameter represents the public keys of the founders, expressed as group elements."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/conf/conf-chain.md",
+  "processed_at": "2025-05-11T19:54:00.840941",
+  "ai_processed": true
+}

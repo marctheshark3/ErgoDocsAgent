@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What did the security audit of Ergo's code cover?",
+    "answer": "The security audit covered the most critical parts of Ergo's code."
+  },
+  {
+    "question": "Who performed the security audit of Ergo?",
+    "answer": "The security audit was performed by Jean-Philipee Aumasson (aka veorq)."
+  },
+  {
+    "question": "What were the key findings and recommendations from the security audit?",
+    "answer": "The audit found no critical issues. Recommendations included providing a recommendation on wallet passwords and not needing extra checks for changing 'n' and 'k' parameters."
+  },
+  {
+    "question": "How does Ergo's wallet securely store user secrets?",
+    "answer": "Ergo's wallet generates random entropy, derives a BIP39 mnemonic, and encrypts the seed with AES-GCM using a password-derived key."
+  },
+  {
+    "question": "What potential security risks were noted regarding the Ergo wallet and nodes?",
+    "answer": "The report noted that Ergo's wallet and nodes do not protect against side-channel attacks like timing attacks or memory inspection by malware, so users should protect their machines."
+  }
+]

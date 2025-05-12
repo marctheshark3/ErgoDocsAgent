@@ -1,0 +1,93 @@
+{
+  "id": "docs_dev_protocol_scaling_scaling-roadmap_md",
+  "title": "Ergo Scaling Roadmap",
+  "summary": "The Ergo Scaling Roadmap document outlines the current focus, recent developments, and future roadmaps for scaling the Ergo blockchain. The key points are:\n\nCurrent Focus: Optimizing the implementation of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping, and exploring ways to increase block limits for miners.\n\nRecent Developments: Planning for Node V6 and scalability improvements, development of an SPV client, release of the pruned full node and Node V5, and the release of the Plasma Library and Plasma Tutorials.\n\nRoadmaps: The Ergo Design and Implementation Roadmap includes four phases - Foundations, Initial Experiments, Defining Adoption, and Scaling and Optimization. The scaling and optimization phase focuses on P2P level optimizations, sub-blocks, and increasing transactions per second while maintaining security.\n\nConstraints for Scaling: Limitations include requirements for a flat P2P network running on commodity hardware, and no use of centralized or \"bankster\" data centers for scalability.",
+  "qa_pairs": [
+    {
+      "question": "What is the current focus of the Ergo Scaling Roadmap?",
+      "answer": "The current focus is on optimizing the implementation of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping in the pruned full node, as well as exploring ways to further increase block limits for miners."
+    },
+    {
+      "question": "What are some of the recent developments mentioned in the roadmap?",
+      "answer": "Recent developments include planning for Node V6 and scalability improvements, development of an SPV Client, the release of the pruned full node, the release of Node V5, the release of the Plasma Library by GetBlok, and the publication of Plasma Tutorials."
+    },
+    {
+      "question": "Where can discussions on scaling for Ergo be found?",
+      "answer": "Discussions on scaling for Ergo can be found on the Telegram channel at https://t.me/ErgoLayer2 or the #layer2 channel on the Ergo Discord server at https://discord.gg/nr4JRnhAyV."
+    },
+    {
+      "question": "What is the purpose of the Ergo Design and Implementation Roadmap mentioned in the document?",
+      "answer": "The Ergo Design and Implementation Roadmap is not provided in the given content, so no further details can be extracted from the document."
+    },
+    {
+      "question": "What is the live status of the pruned full node mentioned in the roadmap?",
+      "answer": "The pruned full node is now live, as stated in the recent developments section of the roadmap."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Scaling Roadmap",
+      "level": 1,
+      "content": "Join our discussions on scaling on [Telegram](https://t.me/ErgoLayer2) or [#layer2 on discord](https://discord.gg/nr4JRnhAyV). We welcome all insights and contributions."
+    },
+    {
+      "heading": "Current Focus",
+      "level": 2,
+      "content": "With the successful integration of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping in the pruned full node, our focus has now shifted towards optimizing this implementation. We are also exploring ways to further increase block limits for miners, given the live status of the pruned full node."
+    },
+    {
+      "heading": "Recent Developments",
+      "level": 2,
+      "content": "- (TBA) Planning for Node V6 & scalability improvements\n- (WIP) Development of SPV Client\n- Pruned Full Node is [now live](pruned-full-node.md)\n- Release of [Node V5](jitc.md)\n- GetBlok released the [Plasma Library](plasma.md)\n- Plasma Tutorials have been published"
+    },
+    {
+      "heading": "Roadmaps",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Ergo Design and Implementation Roadmap",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Phase 1: Foundations",
+      "level": 4,
+      "content": "- Start with the basic design of Ergo as digital gold (commodity money).\n- Introduce programmability features including:\n  - Crypto contracts\n  - Stealth addresses\n  - Arbitrarily complex signatures\n  - Mixing schemes\n- Position Ergo as a basis for unstoppable, grassroots economies, serving as a decentralized central bank digital currency [(CBDC)](cbdc.md) for the people."
+    },
+    {
+      "heading": "Phase 2: Initial Experiments",
+      "level": 4,
+      "content": "- Conduct initial experiments to test functionality and user engagement.\n- Evaluate the outcomes considering the initial motivations."
+    },
+    {
+      "heading": "Phase 3: Defining Adoption",
+      "level": 4,
+      "content": "- Clarify the term \"adoption\" as it is often ambiguous in industry discussions.\n- Develop metrics or KPIs to measure adoption success."
+    },
+    {
+      "heading": "Phase 4: Scaling and Optimization",
+      "level": 4,
+      "content": "- Peer-to-peer (P2P) level optimizations and rework.\n- Consider pre-block commitments to transaction ordering (sub-blocks).\n- Aim to increase transactions per second (TPS) while maintaining security."
+    },
+    {
+      "heading": "Constraints for Scaling",
+      "level": 4,
+      "content": "- Limitations include requirements for a flat P2P network running on commodity hardware.\n- No use of centralized or \"bankster\" data centers for scalability."
+    },
+    {
+      "heading": "Phase 5: Offloading Solutions",
+      "level": 4,
+      "content": "- Propose options for offloading transactions to Layer 2 or sidechains, if not already implemented.\n- Introduce \"Know Your Algorithm\" [KYA](kya.md) as a way to explain security in offloading options in a concise and understandable manner."
+    },
+    {
+      "heading": "Phase 6: Convergence",
+      "level": 4,
+      "content": "- Multiple developments in scaling, optimization, and offloading are expected to converge, culminating in a comprehensive solution for widespread adoption.\n\nSummarised from [Kushti, 7 Aug, 2023](https://t.me/ergoplatform/419168)\n\n\n- (Nov 22) [A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/4?u=glasgowm)\n- (Dec 21) [Ergo protocol research and client development roadmap](https://www.reddit.com/r/ergonauts/comments/qfjhw4/ergo_protocol_research_and_client_development/)\n- (Sep 21) [Long-term vision for Ergo](https://www.ergoforum.org/t/long-term-vision-for-ergo/2629)\n- (Jul 21) [Network congestion on Jul 10th, 2021](https://www.ergoforum.org/t/network-congestion-on-jul-10th-2021/1945)\n- (May 20) [Protecting mempool from computationally heavy transactions](https://www.ergoforum.org/t/protecting-mempool-from-computationally-heavy-transactions/231)\n- (May 20) [A Scalability Plan for Ergo](https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/scaling/scaling-roadmap.md",
+  "processed_at": "2025-05-11T19:25:17.698360",
+  "ai_processed": true
+}

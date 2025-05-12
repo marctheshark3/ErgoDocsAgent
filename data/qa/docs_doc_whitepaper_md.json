@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main focus of the Ergo blockchain protocol?",
+    "answer": "The main focus of Ergo is to provide an efficient, secure and easy way to implement financial contracts."
+  },
+  {
+    "question": "What is the key technical innovation in Ergo?",
+    "answer": "Every coin in Ergo is protected by a program in ErgoScript, which is a powerful and protocol-friendly scripting language based on \u03a3-protocols."
+  },
+  {
+    "question": "How does Ergo aim to be usable in the long-term?",
+    "answer": "Ergo follows a survivability approach by using widely-researched solutions that don't result in security issues in the future, while also preventing performance degradation over time with a new economic model."
+  },
+  {
+    "question": "What is the key principle of Ergo's decentralization?",
+    "answer": "Ergo should be as decentralized as possible, and any parties whose absence or malicious behavior may affect the security of the network should be avoided."
+  },
+  {
+    "question": "Who is the target audience for the Ergo platform?",
+    "answer": "Ergo is a platform for ordinary people, and their interests should not be infringed upon in favor of big parties."
+  }
+]

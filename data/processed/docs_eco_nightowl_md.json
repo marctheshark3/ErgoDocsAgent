@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_nightowl_md",
+  "title": "NightOwl",
+  "summary": "NightOwl is the world's first fully decentralized casino. It features stablecoin-pegged bets, profit-sharing, full transparency, and an open-source platform. The project has a website, GitHub repository, and presentation slides available.",
+  "qa_pairs": [
+    {
+      "question": "What is NightOwl?",
+      "answer": "NightOwl is the world's first fully decentralized casino."
+    },
+    {
+      "question": "What are the key features of NightOwl?",
+      "answer": "NightOwl features stablecoin-pegged bets, profit-sharing, full transparency, and is open-source."
+    },
+    {
+      "question": "What type of blockchain technology is NightOwl built on?",
+      "answer": "NightOwl is a decentralized application (dApp) built on blockchain technology."
+    },
+    {
+      "question": "Where can I find more information about NightOwl?",
+      "answer": "More information about NightOwl can be found on their website, GitHub, and in their presentation slides."
+    },
+    {
+      "question": "What are the potential benefits of a decentralized casino like NightOwl?",
+      "answer": "A decentralized casino like NightOwl offers benefits such as stablecoin-pegged bets, profit-sharing, and full transparency."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - NightOwl\n  - Casino\n  - Gaming\n  - dApp\n  - dApp-InDev\n---"
+    },
+    {
+      "heading": "NightOwl",
+      "level": 1,
+      "content": "[Night Owl](https://www.nightowlcasino.io/) is the world's first fully decentralized casino \n\n- \ud83c\udfdb\ufe0f Stablecoin-pegged bets \n- \ud83d\udcb5 Profit-sharing \u2696\ufe0f Full transparency \n- \ud83d\udd2c Open-source \ud83d\udc40\n\n\n- [Website](https://nightowlcasino.io/)\n- [GitHub](https://github.com/nightowlcasino)\n- [Slides](../events/pdf/Night_Owl_-_Ergo_Hack_lll_Presentation_Final.pdf)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/nightowl.md",
+  "processed_at": "2025-05-11T19:45:49.415342",
+  "ai_processed": true
+}

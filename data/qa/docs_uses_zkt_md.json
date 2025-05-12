@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of Zero-Knowledge Treasury in the Ergo blockchain?",
+    "answer": "Zero-Knowledge Treasury enables users to create joint digital signatures with custom conditions for fund allocation while maintaining the anonymity of the signatories."
+  },
+  {
+    "question": "What is the core principle of Zero-Knowledge cryptography?",
+    "answer": "Zero-Knowledge cryptography allows individuals to prove the authenticity of information without revealing the actual data."
+  },
+  {
+    "question": "How does Zero-Knowledge proof work in the example of the smartphone at the park?",
+    "answer": "The individual unlocks the smartphone without revealing the unlock code, proving ownership without sharing the sensitive data."
+  },
+  {
+    "question": "How does Zero-Knowledge cryptography enhance transaction privacy in blockchain technology?",
+    "answer": "With zero-knowledge signatures, the identity of signatories remains concealed, only revealing that the necessary number of signatures has been acquired to authorize a transaction."
+  },
+  {
+    "question": "How does Zero-Knowledge Treasury differ from a conventional multi-signature address on the Bitcoin blockchain?",
+    "answer": "While a conventional multi-signature address reveals the signatories, Zero-Knowledge Treasury maintains the privacy of the signatories."
+  }
+]

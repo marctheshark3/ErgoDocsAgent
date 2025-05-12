@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_stack_explorer_md",
+  "title": "Explorers",
+  "summary": "The document provides an overview of Ergo explorers and related tools. It lists several public Ergo explorers, including explorer.ergoplatform.com, ergexplorer.com, and sigmaspace.io. It also mentions Ergo toolkits such as Ergo Nix Toolkit, Ergo Bootstrap, and ergo-setup. Additionally, it discusses the uExplorer, a lightweight Ergo explorer with a CassandraDB backend. Finally, the document highlights some popular mirrors for the Ergo explorer and GraphQL services, including api.ergo.aap.cornell.edu and sigmaexplorer.",
+  "qa_pairs": [
+    {
+      "question": "What is the Ergo Explorer?",
+      "answer": "The Ergo Explorer is a tool that serves as an interface with the Ergo blockchain, helping users explore and monitor the activities happening on the Ergo blockchain."
+    },
+    {
+      "question": "What are some public Ergo explorers?",
+      "answer": "Some public Ergo explorers include explorer.ergoplatform.com, ergexplorer.com, and sigmaspace.io."
+    },
+    {
+      "question": "What are some Ergo toolkits?",
+      "answer": "Some Ergo toolkits include Ergo Nix Toolkit, Ergo Bootstrap, and ergo-setup."
+    },
+    {
+      "question": "What is uExplorer?",
+      "answer": "uExplorer is a supplementary, lightweight Ergo explorer with a CassandraDB backend."
+    },
+    {
+      "question": "What are some popular mirrors for the Ergo explorer and GraphQL?",
+      "answer": "Some popular mirrors include api.ergo.aap.cornell.edu and sigmaexplorer."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Explorers",
+      "level": 1,
+      "content": "The Ergo Explorer is a tool that serves as an interface with the Ergo blockchain. It helps users explore and monitor the activities happening on the Ergo blockchain.\n\nThere are several public explorer available:\n\n- [explorer.ergoplatform.com](https://explorer.ergoplatform.com/)\n- [ergexplorer.com](https://ergexplorer.com/)\n- [sigmaspace.io](https://sigmaspace.io/)"
+    },
+    {
+      "heading": "Toolkits",
+      "level": 2,
+      "content": "- [Ergo Nix Toolkit](https://github.com/ergoplatform/ergo-nix) provides Nix derivations for packages and services on Ergo.\n- [Ergo Bootstrap](https://github.com/ergoplatform/ergo-bootstrap), built on top of ergo-nix, will help you to quickly deploy an Ergo blockchain cluster with a handful of useful tools you might need to start developing your dApps.\n- [ergo-setup](https://github.com/abchrisxyz/ergo-setup) is a Docker based Ergo setup (Node, Explorer & GraphQL). Somewhat similar to Ergo Bootstrap except it offers much less options and is not NixOS-based."
+    },
+    {
+      "heading": "uExplorer",
+      "level": 2,
+      "content": "- [uExplorer](https://github.com/pragmaxim/ergo-uexplorer/) is a supplementary, lightweight Ergo explorer with CassandraDB backend :"
+    },
+    {
+      "heading": "Mirrors",
+      "level": 2,
+      "content": "Some popular mirrors for the [explorer](explorer.md) and [graphql](graphql.md)\n\n- [api.ergo.aap.cornell.edu](https://api.ergo.aap.cornell.edu/) provides an Explorer API and Web UI for the Ergo blockchain. It also hosts a node at this [address](http://128.253.41.49:9053/).\n    - [api.ergo.aap.cornell.edu (1.0)](https://api.ergo.aap.cornell.edu/api/v0/docs/)\n    - [api.ergo.aap.cornell.edu v1 (1.0)](https://api.ergo.aap.cornell.edu/api/v1/docs/)\n    - [graphql.ergo.aap.cornell.edu](https://graphql.ergo.aap.cornell.edu/)\n- [sigmaexplorer](https://api.sigmaexplorer.org/swagger/index.html): sigmaexplorer hosts a copy of the explorer using a GraphQL backend."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/explorer.md",
+  "processed_at": "2025-05-11T19:34:23.781056",
+  "ai_processed": true
+}

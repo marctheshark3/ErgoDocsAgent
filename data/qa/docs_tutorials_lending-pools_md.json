@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are lending pools in the context of DeFi?",
+    "answer": "Lending pools are a fundamental component of DeFi, allowing users to lend out their cryptocurrencies in exchange for interest payments. These pools operate on smart contracts, eliminating the need for traditional financial intermediaries like banks."
+  },
+  {
+    "question": "How do lending pools work within the Ergo ecosystem?",
+    "answer": "1. Lenders deposit their cryptocurrency into a lending pool. 2. Borrowers can take out loans from the pool by providing collateral that exceeds the value of the loan. 3. Borrowers pay interest on their loans, which is then distributed to the lenders as a return on their investment. 4. All transactions are governed by smart contracts."
+  },
+  {
+    "question": "What are some best practices for participating in lending pools?",
+    "answer": "1. Understand the terms of the pool, including how interest is calculated, payment frequency, and any applicable fees. 2. Diversify your investments across different assets and platforms to reduce risk. 3. Stay informed about developments in the Ergo ecosystem and the broader crypto market, as they can affect interest rates and lending pool dynamics."
+  },
+  {
+    "question": "What is Duckpools and how can users get started with it?",
+    "answer": "Duckpools is one of the leading platforms for lending pools within the Ergo ecosystem. To get started, users need to: 1. Create a wallet and acquire ERG. 2. Deposit their ERG into one of the Duckpools lending pools, ensuring they understand the terms. 3. Start earning interest on their deposited ERG."
+  },
+  {
+    "question": "What are some resources provided in the document to help users understand lending pools and Duckpools?",
+    "answer": "The document provides the following resources: 1. A step-by-step guide on how to lend on Duckpools. 2. A step-by-step guide on how to borrow on Duckpools. 3. An interest arbitrage calculator. 4. A long/short calculator."
+  }
+]

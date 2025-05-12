@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Multi-Signature Wallet\n\n## Introduction\n\nMinotaur wallet is a multi-platform wallet developed by *minotaur-ergo* using TypeScript.\n\nIn this project, the wallet is extended to support multiple signat..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Multi-Signature Wallet"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "Minotaur wallet is a multi-platform wallet developed by *minotaur-ergo* using TypeScript.\n\nIn this p..."
+  },
+  {
+    "question": "What is the 'Explanation' section about?",
+    "answer": "In Ergo blockchain, a transaction is prepared in two steps before being submitted to the\ntransaction..."
+  }
+]

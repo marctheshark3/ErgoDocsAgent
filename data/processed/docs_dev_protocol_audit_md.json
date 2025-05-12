@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_protocol_audit_md",
+  "title": "Security Audit",
+  "summary": "The document is a security audit report for the Ergo platform, conducted by Jean-Philippe Aumasson. The audit focused on the Sigma protocol proofs, the wallet's secure storage of secrets, and the Proof-of-Work validation. The report summarizes the findings and provides recommendations:\n\n1. For the Sigma protocol proofs, the implementation challenges were to define a safe and efficient encoding of the proofs, and to implement the proving and verification functionalities correctly.\n\n2. For the wallet, the main risks identified were the absence of checks on the password's length, and the need to enforce a minimum password entropy.\n\n3. For the Proof-of-Work validation, the recommendations were to implement stricter validation of the 'k' and 'n' parameters, and to ensure that these parameters are positive values.\n\nOverall, the audit found no critical issues, but provided several recommendations to improve the security of the Ergo platform.",
+  "qa_pairs": [
+    {
+      "question": "What did the security audit of Ergo's code cover?",
+      "answer": "The security audit covered the most critical parts of Ergo's code."
+    },
+    {
+      "question": "Who performed the security audit of Ergo?",
+      "answer": "The security audit was performed by Jean-Philipee Aumasson (aka veorq)."
+    },
+    {
+      "question": "What were the key findings and recommendations from the security audit?",
+      "answer": "The audit found no critical issues. Recommendations included providing a recommendation on wallet passwords and not needing extra checks for changing 'n' and 'k' parameters."
+    },
+    {
+      "question": "How does Ergo's wallet securely store user secrets?",
+      "answer": "Ergo's wallet generates random entropy, derives a BIP39 mnemonic, and encrypts the seed with AES-GCM using a password-derived key."
+    },
+    {
+      "question": "What potential security risks were noted regarding the Ergo wallet and nodes?",
+      "answer": "The report noted that Ergo's wallet and nodes do not protect against side-channel attacks like timing attacks or memory inspection by malware, so users should protect their machines."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Security\n  - Audit\n---"
+    },
+    {
+      "heading": "Security Audit",
+      "level": 1,
+      "content": "Ergo has successfully passed a security audit of certain (most critical) parts of the code. The audit was performed by Jean-Philipee Aumasson (aka veorq, [aumasson.jp/](https://aumasson.jp/)).\n\nThe detailed report is below. Nothing critical is found. Comments on issues found:\n\n1. On wallet password, we'll provide a recommendation in subsequent versions of the protocol client. Not sure hard enforcement on passwords will take place, but we'll do more consultations on this.\n\n2. Changing \"n\" and \"k\" parameters makes sense only when launching a new network. Changing these parameters in the mining node will make blocks produced invalid for other nodes. Changing these parameters in the protocol client means going on another fork (blocks coming from the honest protocol participants will be rejected). So no need for extra checks, as people launching new networks will set \"n\" and \"k\" properly.\n\n3. Currently, the Ergo node (as well as other blockchain protocol clients and wallets we're aware of and the cryptographic libraries we're using) does not protect from side-channel attacks running locally (e.g. timing attacks or memory inspection by malware or viruses). So please protect the machines you're running wallets on!  \n\n\n> Ergo security assessment by Jean-Philippe Aumasson on 07/Dec/19"
+    },
+    {
+      "heading": "Summary",
+      "level": 2,
+      "content": "Ergo solicited us to perform a security assessment of several components of their Ergo Platform:\n\n* Sigma protocol proofs creation and verification\n* Wallet's secure storage of secrets\n* Proof-of-Work validation\n\n\u200bThis brief report summarises our assessment and describes our findings and mitigation recommendations."
+    },
+    {
+      "heading": "Sigma protocol proofs",
+      "level": 2,
+      "content": "\u200bThe Ergo protocol relies on ErgoScript, a scripting language supporting sigma-statements, which can be proven and verified through non-interactive proofs of knowledge.\n\nThese proofs are statements described as a tree of AND, OR, and threshold conditions, whose leaves are proofs of knowledge of a discrete logarithm problem.\n\nThe proof of the sigma-statement is then made non-interactive thanks to the Fiat-Shamir transform.\n\nThis logic is specified in the [ErgoScript paper](https://ergoplatform.org/docs/ErgoScript.pdf), and the specific\nproving and verification routines described in Appendix A.\n\n\u200bImplementation challenges are then to:\n\n* Define encoding of the proofs that are safe and efficient, and implement serialisation and deserialisation that always successfully processes valid input and gracefully fails to process invalid input.\n\n* Implement the proving and verification functionalities correctly, in compliance with the specification, and most importantly, no invalid statement can successfully pass verification.\n\nWe reviewed these two aspects, based on the code in the repository [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter), and the [ErgoScript paper](https://ergoplatform.org/docs/ErgoScript.pdf), carefully comparing the intended behaviour (in Appendix A) with the actual behaviour as implemented.\n\n\u200bWe notably reviewed code from the [SigSerializer](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/SigSerializer.scala), [Interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/interpreter/Interpreter.scala), and [ProverInterpreter](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/master/sigmastate/src/main/scala/sigmastate/interpreter/ProverInterpreter.scala) traits and objects.\n\n\u200bWe mainly sought bugs from the following classes:\n\n* \u200bUnsafe processing of malformed input\n* Unsafe processing of unusually long or short input\n* Behavior when large tree depth or recursion level\n* Unsafe use Scala types and structures\n* Inappropriate variable types\n* Integer overflows\n* Race conditions\n* Logic bugs \n\n\u200bDespite the extensive review, we did not identify any security issue.\n\nThe protocol's logic and internals are relatively complex, and we believe the highest risk is in parsing and verifying proofs. To exploit such issues, however, an attacker would have to create a semantically correct script that somehow benefits them yet that passes verification when it does not ought to.\n\nRegarding software security, Scala eliminates certain classes of bugs, but Scala code may still suffer from bugs due to Scala's specific behaviour or to unhandled errors."
+    },
+    {
+      "heading": "Wallet",
+      "level": 2,
+      "content": "Ergo's wallet functionality enables its users to store a secret on disk and recover it, initialising the wallet with a new seed when it's first used.\n\n\u200bThis logic is mainly defined in [ErgoWalletActor](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/wallet/ErgoWalletActor.scala), and a key component regarding secrets' storage is [JsonSecretStorage](https://github.com/ergoplatform/ergo/blob/master/ergo-wallet/src/main/scala/org/ergoplatform/wallet/secrets/JsonSecretStorage.scala).\n\n\u200bThe first time a wallet is created, the `InitWallet` command does the following:\n\n* Generate `settings.walletSettings.seedStrengthBits` random bits, as initial entropy. [By default](https://github.com/ergoplatform/ergo/blob/master/src/main/resources/application.conf), 160 bits are generated.\n\n* Generate a BIP39 from the random bits generated, which can be seen as encoding the entropy bits. The standard BIP39 logic is used with an optional password.\n* Derive a seed from the mnemonic using BIP39's PBKDF2-based derivation logic.\n\n* Encrypt this seed to disk with AES-GCM, using a random nonce, and a key derives from the password using PBKDF2-HMAC-SHA256 with [128000](https://github.com/ergoplatform/ergo/blob/master/src/test/resources/application.conf#L107) iterations, using a random salt.\n\nTo unlock a wallet already created, a user provides the password and the wallet attempts to decrypt the stored data.\n\n\u200bA similar process as initialisation is performed to restore an existing account from a BIP39 passphrase, except that the wallet will derive the seed from the mnemonic instead of picking a random mnemonic.\n\n\u200bThe two risks we identified here are:\n\n* The absence of checks on the password's length: since the password is sufficient to access the seed given the wallet's on-disk stored secret, the password should, in theory, have at least as much entropy as the mnemonic, and in practice, should be practically hard to crack. We thus recommend enforcing a minimal password length, for example of 16 characters.\n\n* Copies of secret values (password, seed, and derive private keys) are likely to remain in memory after wallet software execution, an intrinsic limitation of garbage-collected languages such as Scala.\n\nAnother process or user sharing the same memory address space could potentially recover the secrets, and they could also appear in crash dumps. To the best of our knowledge, there is no effective mitigation in pure Scala.\n\n\u200b"
+    },
+    {
+      "heading": "PoW validation",
+      "level": 1,
+      "content": "\u200bAfter previously reviewing the security of the Autolykos PoW, we performed another round of review focusing on its latest verification logic, and notably, the changes in the commit [eb0f85a](https://github.com/ergoplatform/ergo/commit/eb0f85ac48b0ee8194c12369faf4cc5f16954af9).\n\n\u200bThe main relevant file is [AutolykosPowScheme](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/mining/AutolykosPowScheme.scala), and other important operations are for example implemented in\n[HeadersProcessor](https://github.com/ergoplatform/ergo/blob/master/src/main/scala/org/ergoplatform/nodeView/history/storage/modifierprocessors/HeadersProcessor.scala) and [ModifierValidator](https://github.com/ScorexFoundation/Scorex/blob/master/src/main/scala/scorex/core/validation/ModifierValidator.scala).\n\n\u200bWe checked that the implemented verification logic is consistent with that specified in the Autolykos specifications and that it is appropriately integrated into the block header validation logic.\n\n\u200bWe believe the following points should be addressed:\n\n* Stricter validation of `k` and `n`: although the class enforces `k<=32` (number of elements in the solution) and `n<31` (log2 of the total number of elements), weak could still be created from the authorised parameters. The `validate()` function may therefore have additional validation that `n` and `k` are equal to the intended\nvalues.\n\n* Assert that `k` and `n` are positive values, since currently negative ones (as `Int's) would pass the `assert` statements."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/audit.md",
+  "processed_at": "2025-05-11T19:23:36.475550",
+  "ai_processed": true
+}

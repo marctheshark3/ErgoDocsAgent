@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the MiningCore setup tutorial?",
+    "answer": "The purpose of the MiningCore setup tutorial is to guide users on how to set up MiningCore, a mining pool software, on a Linux system."
+  },
+  {
+    "question": "What are the key requirements for setting up MiningCore on Linux?",
+    "answer": "The key requirements are: a working PostgreSQL database, meeting all dependencies mentioned in the README, and avoiding Docker unless confident in managing containers."
+  },
+  {
+    "question": "How should PostgreSQL be configured for a production environment when using MiningCore?",
+    "answer": "For production environments, it is recommended to monitor I/O, disk, CPU, and memory, as MiningCore's API can put a heavy load on the database, and to keep all PostgreSQL settings default for now."
+  },
+  {
+    "question": "What is the first step in setting up MiningCore on Linux?",
+    "answer": "The first step is to clone the MiningCore repository from GitHub."
+  },
+  {
+    "question": "Where can users find a reference setup guide for installing and configuring PostgreSQL?",
+    "answer": "Users can refer to the PostgreSQL tutorial website for a detailed setup guide."
+  }
+]

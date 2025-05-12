@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the minimum password length requirement for associated accounts?",
+    "answer": "Ensure all associated account passwords are at least 12 characters long."
+  },
+  {
+    "question": "What type of authentication is recommended for Telegram admins, GitHub, and email accounts?",
+    "answer": "Ensure all accounts such as Telegram admins, GitHub, and any associated Email accounts use appropriate multi-factor authentication."
+  },
+  {
+    "question": "What is the recommended approach for ensuring server configuration is hardened?",
+    "answer": "Ensure server configuration is hardened according to the recommendations of the application server and frameworks in use."
+  },
+  {
+    "question": "What tool is recommended for detecting outdated dependencies during the build or compile time?",
+    "answer": "Use Snyk or DependencyCheck to ensure all components are up to date."
+  },
+  {
+    "question": "What is the recommended approach for protecting Telegram and Discord groups from spam and scams?",
+    "answer": "Ensure Telegram groups and Discord groups have anti-spam/scam protection in place."
+  }
+]

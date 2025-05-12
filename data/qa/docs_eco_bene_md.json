@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Bene: Fundraising Platform?",
+    "answer": "Bene: Fundraising Platform is a decentralized application (DApp) that enables projects to receive funding in exchange for participation tokens."
+  },
+  {
+    "question": "How does the box creation process work in the Bene platform?",
+    "answer": "Project owners can create a box that holds an amount of tokens, setting a block limit as a deadline, and requiring a minimum amount of tokens to be sold before the project can withdraw funds."
+  },
+  {
+    "question": "What are the key parameters of a box created on the Bene platform?",
+    "answer": "The key parameters of a box include the amount of tokens, block limit, minimum tokens sold, token sold counter, ERGs per token, withdrawal address, and project content."
+  },
+  {
+    "question": "What is the purpose of the refund option in the Bene platform?",
+    "answer": "If the block limit is reached before the minimum amount of tokens are sold, users have the option to exchange their tokens back for the corresponding ERGs, provided the minimum has not been reached."
+  },
+  {
+    "question": "How does the self-replicating box feature work in the Bene platform?",
+    "answer": "The main box is self-replicating, meaning that anyone can spend the box as long as they re-create it with the same parameters and add ERGs in exchange for a specified amount of tokens."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is an atomic swap?",
+    "answer": "Atomic swaps are a technology that enables direct interaction between different blockchain systems, facilitating the transfer of digital assets across chains without the need for centralized exchanges."
+  },
+  {
+    "question": "How do atomic swaps work in a simplified step-by-step process?",
+    "answer": "1. Alice and Bob agree to trade their cryptocurrencies. 2. Alice creates a secret, generates its hash, and locks her cryptocurrency on the Bitcoin blockchain with a script containing the hash. 3. Bob sets up a similar transaction on the Ergo blockchain, locking his cryptocurrency with a script containing the same hash. 4. After confirming Bob's transaction, Alice reveals the secret, allowing both transactions to execute."
+  },
+  {
+    "question": "What is the Ergo advantage in atomic swaps?",
+    "answer": "Ergo enhances the existing atomic swaps concept by leveraging its eUTXO (Extended Unspent Transaction Output) model, which allows for partial order fulfillment and flexibility unheard of in traditional atomic swaps."
+  },
+  {
+    "question": "What is the purpose of the secp256k1 elliptic curve in the Python example?",
+    "answer": "The secp256k1 elliptic curve is used to generate the key pairs for Alice and Bob, as well as to compute additional values required for the atomic swap process."
+  },
+  {
+    "question": "What are the key steps in the Python example for Alice and Bob to perform an atomic swap?",
+    "answer": "1. Alice and Bob generate their own key pairs. 2. They each select secret random values. 3. They generate additional values using their secrets. 4. They perform the atomic swap by locking their respective cryptocurrencies on different blockchains and revealing the shared secret."
+  }
+]

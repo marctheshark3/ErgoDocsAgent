@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_tutorials_md",
+  "title": "tutorials.md",
+  "summary": "The document is titled \"tutorials.md\" and contains an introduction section with tags for \"Tutorials\" and \"Getting Started\". It also includes a link to the \"Getting Started\" document at \"get-started.md\".",
+  "qa_pairs": [
+    {
+      "question": "What is the title of the document?",
+      "answer": "tutorials.md"
+    },
+    {
+      "question": "What are the main tags associated with this document?",
+      "answer": "Tutorials, Getting Started"
+    },
+    {
+      "question": "Where can the reader find more information on getting started?",
+      "answer": "See [Getting Started](get-started.md)"
+    },
+    {
+      "question": "What is the main purpose of this document?",
+      "answer": "To provide an introduction to the tutorials"
+    },
+    {
+      "question": "What is the format of the content in this document?",
+      "answer": "The content is formatted using Markdown"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Tutorials\n  - Getting Started\n---\n\nSee [Getting Started](get-started.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tutorials.md",
+  "processed_at": "2025-05-11T19:38:43.377852",
+  "ai_processed": true
+}

@@ -1,0 +1,11 @@
+The document provides an overview of the Blockchain Context, which represents the data available to an ErgoScript contract during its execution. The key entities within the Blockchain Context include:
+
+HEIGHT: The current block height.
+SELF: The current eUTXO input box being validated.
+INPUTS: The eUTXO input boxes used in the transaction.
+CONTEXT.dataInputs: Additional data input boxes that are not spent.
+OUTPUTS: The output eUTXO boxes that will be created.
+CONTEXT.headers: The last 10 block headers preceding the current height.
+CONTEXT.preHeader: The pre-header information available to miners.
+
+The document also includes an example code snippet demonstrating how to access and use the data within the Blockchain Context to implement spending conditions for an ErgoScript contract.

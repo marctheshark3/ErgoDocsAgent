@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_crux_md",
+  "title": "Crux Finance",
+  "summary": "Crux Finance is an all-in-one platform for portfolio management and charting within the Ergo ecosystem. It will offer features such as portfolio tracking, charting, and other tools for decentralized finance (DeFi) users.",
+  "qa_pairs": [
+    {
+      "question": "What is Crux Finance?",
+      "answer": "Crux Finance is an all-in-one platform for portfolio management and charting within the Ergo ecosystem."
+    },
+    {
+      "question": "What key features does Crux Finance offer?",
+      "answer": "Crux Finance offers portfolio management and charting capabilities."
+    },
+    {
+      "question": "What is the website for Crux Finance?",
+      "answer": "The website for Crux Finance is cruxfinance.io."
+    },
+    {
+      "question": "What type of application is Crux Finance?",
+      "answer": "Crux Finance is a dApp (decentralized application)."
+    },
+    {
+      "question": "What is the current status of Crux Finance?",
+      "answer": "Crux Finance is currently in the dApp-MVP (Minimum Viable Product) stage."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Crux Finance\n  - Portfolio Management\n  - Charting\n  - dApp\n  - dApp-MVP\n---"
+    },
+    {
+      "heading": "Crux Finance",
+      "level": 1,
+      "content": "[cruxfinance.io](https://cruxfinance.io/) will offer an all-in-one platform for portfolio management and charting within the Ergo ecosystem."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/crux.md",
+  "processed_at": "2025-05-11T19:43:02.925019",
+  "ai_processed": true
+}

@@ -1,0 +1,133 @@
+{
+  "id": "docs_mining_setup_miningcore_md",
+  "title": "\ud83e\uddf1 MiningCore Setup Tutorial for Linux",
+  "summary": "MiningCore Setup Tutorial for Linux:\n- Introduction to MiningCore, a mining pool software for Linux\n- Requirements: PostgreSQL database, meet dependencies from README\n- Install and configure PostgreSQL for production use\n- Create database and user in PostgreSQL\n- Load schema SQL files into the database\n- Create a partition table for each pool\n- Configure the pool by creating a <coin>.json file in the build/ directory",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the MiningCore setup tutorial?",
+      "answer": "The purpose of the MiningCore setup tutorial is to guide users on how to set up MiningCore, a mining pool software, on a Linux system."
+    },
+    {
+      "question": "What are the key requirements for setting up MiningCore on Linux?",
+      "answer": "The key requirements are: a working PostgreSQL database, meeting all dependencies mentioned in the README, and avoiding Docker unless confident in managing containers."
+    },
+    {
+      "question": "How should PostgreSQL be configured for a production environment when using MiningCore?",
+      "answer": "For production environments, it is recommended to monitor I/O, disk, CPU, and memory, as MiningCore's API can put a heavy load on the database, and to keep all PostgreSQL settings default for now."
+    },
+    {
+      "question": "What is the first step in setting up MiningCore on Linux?",
+      "answer": "The first step is to clone the MiningCore repository from GitHub."
+    },
+    {
+      "question": "Where can users find a reference setup guide for installing and configuring PostgreSQL?",
+      "answer": "Users can refer to the PostgreSQL tutorial website for a detailed setup guide."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Mining Core\n  - miningcore\n  - Pool Setup\n  - Linux\n  - PostgreSQL\n  - Guide\n---"
+    },
+    {
+      "heading": "\ud83e\uddf1 MiningCore Setup Tutorial for Linux",
+      "level": 1,
+      "content": "> \ud83d\udca1 If you're using **Windows 10**, see the [Windows Tutorial](pool_win.md)\n\n---"
+    },
+    {
+      "heading": "Step 1: Download MiningCore",
+      "level": 2,
+      "content": "- Clone Mining Core from [GitHub](https://github.com/oliverw/miningcore)\n\nRequirements:\n\n- You must have a working [**PostgreSQL** database](https://www.postgresql.org/download/)\n- Ensure you meet all dependencies from the [README](https://github.com/oliverw/miningcore/blob/master/README.md)\n- Avoid Docker unless you are confident managing containers\n\n---"
+    },
+    {
+      "heading": "Step 2: Install and Configure PostgreSQL",
+      "level": 2,
+      "content": "- For production environments:\n      - Monitor I/O, disk, CPU, and memory \u2014 MiningCore's API can put heavy load on your DB\n      - Keep all PostgreSQL settings default for now\n- [Reference setup guide](https://www.postgresqltutorial.com/install-postgresql/)\n\n---"
+    },
+    {
+      "heading": "Step 3: Create the Database Schema",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Login to PostgreSQL",
+      "level": 3,
+      "content": "```bash\nsudo -u postgres psql\n```"
+    },
+    {
+      "heading": "Create Role and Database",
+      "level": 3,
+      "content": "Replace `'your-secure-password'` with a strong password:\n\n```sql\nCREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'your-secure-password';\nCREATE DATABASE miningcore OWNER miningcore;\n```\n\n---"
+    },
+    {
+      "heading": "Step 4: Load Schema SQL Files",
+      "level": 2,
+      "content": "> \u2705 Make sure you can connect using `psql` before proceeding.\n\n- As the `postgres` user, run:\n\n```bash\npsql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql\n```\n\n- Then apply the partitioning script:\n\n```bash\npsql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql\n```\n\n---"
+    },
+    {
+      "heading": "Step 5: Create a Pool Table",
+      "level": 2,
+      "content": "- Run the following command **once per pool** you set up:\n\n```sql\nCREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');\n```\n\n- Replace `mypool1` with your pool's unique identifier\n- This name is used in the configuration files as well\n\n---"
+    },
+    {
+      "heading": "Step 6: Configure the Pool",
+      "level": 2,
+      "content": "- Go to the `build/` directory inside your MiningCore folder\n- Create a `<coin>.json` configuration file (e.g. `ergo.json`)\n- Refer to: [MiningCore Config Example](https://github.com/oliverw/miningcore/wiki/Configuration) and the example given below. \n\n/// details | Example Ergo config.json:\n     {type: tip, open: false}"
+    },
+    {
+      "heading": "Required Fields in Config",
+      "level": 3,
+      "content": "- Replace placeholders:\n    - `YOURPOSTGRESQL_PASSWORD_GOES_HERE`\n    - `YOUR_REWARD_ADDR_GOES_HERE`\n- Adjust:\n    - `rewardRecipients` percentage to fit your payout model\n    - Enable `paymentProcessing` if you will use automatic share payouts\n\n\n```\n{\n    \"logging\": {\n        \"level\": \"info\",\n        \"enableConsoleLog\": true,\n        \"enableConsoleColors\": true,\n        // Log file name (full log) - can be null in which case log events are written to console (stdout)\n        \"logFile\": \"core.log\",\n        // Log file name for API-requests - can be null in which case log events are written to either main logFile or console (stdout)\n        \"apiLogFile\": \"api.log\",\n        // Folder to store log file(s)\n        \"logBaseDirectory\": \"/path/to/logs\", // or c:\\path\\to\\logs on Windows\n        // If enabled, separate log file will be stored for each pool as <pool id>.log\n        // in the above specific folder.\n        \"perPoolLogFile\": false\n    },\n    \"banning\": {\n        // \"integrated\" or \"iptables\" (linux only - not yet implemented)\n        \"manager\": \"Integrated\",\n        \"banOnJunkReceive\": true,\n        \"banOnInvalidShares\": false\n    },\n    \"notifications\": {\n        \"enabled\": true,\n        \"email\": {\n            \"host\": \"smtp.example.com\",\n            \"port\": 587,\n            \"user\": \"user\",\n            \"password\": \"password\",\n            \"fromAddress\": \"info@yourpool.org\",\n            \"fromName\": \"pool support\"\n        },\n        \"admin\": {\n            \"enabled\": false,\n            \"emailAddress\": \"user@example.com\",\n            \"notifyBlockFound\": true\n        }\n    },\n    // Where to persist shares and blocks to\n    \"persistence\": {\n        // Persist to postgresql database\n        \"postgres\": {\n            \"host\": \"127.0.0.1\",\n            \"port\": 5432,\n            \"user\": \"miningcore\",\n            \"password\": \"YOURPOSTGRESQL_PASSWORD_GOES_HERE\",\n            \"database\": \"miningcore\"\n        }\n    },\n    // Generate payouts for recorded shares and blocks\n    \"paymentProcessing\": {\n        \"enabled\": true,\n        // How often to process payouts, in milliseconds\n        \"interval\": 600,\n        // Path to a file used to backup shares under emergency conditions, such as\n        // database outage\n        \"shareRecoveryFile\": \"recovered-shares.txt\"\n    },\n    // API Settings\n    \"api\": {\n        \"enabled\": true,\n        // Binding address (Default: 127.0.0.1)\n        \"listenAddress\": \"127.0.0.1\",\n        // Binding port (Default: 4000)\n        \"port\": 4000,\n        // IP address whitelist for requests to Prometheus Metrics (default 127.0.0.1)\n        \"metricsIpWhitelist\": [],\n        // Limit rate of requests to API on a per-IP basis\n        \"rateLimiting\": {\n            \"disabled\": false, // disable rate-limiting all-together, be careful\n            // override default rate-limit rules, refer to https://github.com/stefanprodan/AspNetCoreRateLimit/wiki/IpRateLimitMiddleware#defining-rate-limit-rules\n            \"rules\": [\n                {\n                    \"Endpoint\": \"*\",\n                    \"Period\": \"1s\",\n                    \"Limit\": 5\n                }\n            ],\n            // List of IP addresses excempt from rate-limiting (default: none)\n            \"ipWhitelist\": []\n        }\n    },\n    \"pools\": [\n        // Repeat the following section for multiple coins\n        {\n            // DON'T change the id after a production pool has begun collecting shares!\n            \"id\": \"ergo1\",\n            \"enabled\": true,\n            \"coin\": \"ergo\",\n            // Address to where block rewards are given (pool wallet)\n            \"address\": \"YOUR_REWARD_ADDR_GOES_HERE\",\n            // Block rewards go to the configured pool wallet address to later be paid out\n            // to miners, except for a percentage that can go to, for examples,\n            // pool operator(s) as pool fees or or to donations address. Addresses or hashed\n            // public keys can be used. Here is an example of rewards going to the main pool\n            // \"op\"\n            \"rewardRecipients\": [\n                {\n                    // Pool wallet\n                    \"address\": \"YOUR_REWARD_ADDR_GOES_HERE\",\n                    \"percentage\": 100\n                }\n            ],\n            // How often to poll RPC daemons for new blocks, in milliseconds\n            \"blockRefreshInterval\": 400,\n            // Some miner apps will consider the pool dead/offline if it doesn't receive\n            // anything new jobs for around a minute, so every time we broadcast jobs,\n            // set a timeout to rebroadcast in this many seconds unless we find a new job.\n            // Set to zero to disable. (Default: 0)\n            \"jobRebroadcastTimeout\": 10,\n            // Remove workers that haven't been in contact for this many seconds.\n            // Some attackers will create thousands of workers that use up all available\n            // socket connections, usually the workers are zombies and don't submit shares\n            // after connecting. This features detects those and disconnects them.\n            \"clientConnectionTimeout\": 600,\n            // If a worker is submitting a high threshold of invalid shares, we can\n            // temporarily ban their IP to reduce system/network load.\n            \"banning\": {\n                \"enabled\": true,\n                // How many seconds to ban worker for\n                \"time\": 600,\n                // What percent of invalid shares triggers ban\n                \"invalidPercent\": 50,\n                // Check invalid percent when this many shares have been submitted\n                \"checkThreshold\": 50\n            },\n            // Each pool can have as many ports for your miners to connect to as you wish.\n            // Each port can be configured to use its own pool difficulty and variable\n            // difficulty settings. 'varDiff' is optional and will only be used for the ports\n            // you configure it for.\n            \"ports\": {\n                // Binding port for your miners to connect to\n                \"3052\": {\n                    // Binding address (Default: 127.0.0.1)\n                    \"listenAddress\": \"0.0.0.0\",\n                    // Pool difficulty\n                    \"difficulty\": 0.02,\n                    // TLS/SSL configuration\n                    \"tls\": false,\n                    \"tlsPfxFile\": \"/var/lib/certs/mycert.pfx\",\n                    // Variable difficulty is a feature that will automatically adjust difficulty\n                    // for individual miners based on their hash rate in order to lower\n                    // networking overhead\n                    \"varDiff\": {\n                        // Minimum difficulty\n                        \"minDiff\": 0.01,\n                        // Maximum difficulty. Network difficulty will be used if it is lower than\n                        // this. Set to null to disable.\n                        \"maxDiff\": null,\n                        // Try to get 1 share per this many seconds\n                        \"targetTime\": 15,\n                        // Check to see if we should retarget every this many seconds\n                        \"retargetTime\": 90,\n                        // Allow time to very this % from target without retargeting\n                        \"variancePercent\": 30,\n                        // Do not alter difficulty by more than this during a single retarget in\n                        // either direction\n                        \"maxDelta\": 500\n                    }\n                }\n            },\n            // Recommended to have at least two daemon instances running in case one drops\n            // out-of-sync or offline. For redundancy, all instances will be polled for\n            // block/transaction updates and be used for submitting blocks. Creating a backup\n            // daemon involves spawning a daemon using the \"-datadir=/backup\" argument which\n            // creates a new daemon instance with it's own RPC config. For more info on this,\n            // visit: https:// en.bitcoin.it/wiki/Data_directory and\n            // https:// en.bitcoin.it/wiki/Running_bitcoind\n            \"daemons\": [\n                {\n                    \"host\": \"127.0.0.1\",\n                    \"port\": 9052, //ERGO TESTNET DAEMON DEFAULT PORT // MAINNET IS 9053\n                    \"user\": \"\",\n                    \"password\": \"\",\n                    // Enable streaming Block Notifications via ZeroMQ messaging from Bitcoin\n                    // Family daemons. Using this is highly recommended. The value of this option\n                    // is a string that should match the value of the -zmqpubhashblock parameter\n                    // passed to the coin daemon. If you enable this, you should lower\n                    // 'blockRefreshInterval' to 1000 or 0 to disable polling entirely.\n                    \"zmqBlockNotifySocket\": \"tcp://127.0.0.1:15101\",\n                    // Enable streaming Block Notifications via WebSocket messaging from Ethereum\n                    // family Parity daemons. Using this is highly recommended. The value of this\n                    // option is a string that should  match the value of the --ws-port parameter\n                    // passed to the parity coin daemon. When using --ws-port, you should also\n                    // specify --ws-interface all and\n                    // --jsonrpc-apis \"eth,net,web3,personal,parity,parity_pubsub,rpc\"\n                    // If you enable this, you should lower 'blockRefreshInterval' to 1000 or 0\n                    // to disable polling entirely.\n                    \"portWs\": 18545,\n                }\n            ],\n            // Generate payouts for recorded shares\n            \"paymentProcessing\": {\n                \"enabled\": false, //ENABLE FOR SHARE PAYOUT FEATURE\n                // Minimum payment in pool-base-currency (ie. Bitcoin, NOT Satoshis)\n                \"minimumPayment\": 0.01,\n                \"payoutScheme\": \"PPLNS\",\n                \"payoutSchemeConfig\": {\n                    \"factor\": 2.0\n                }\n            }\n        }\n        // This section ends here. Add `,` after `}` if this is not the last coin section\n    ]\n}\n```\n///"
+    },
+    {
+      "heading": "Step 7: Start the Pool",
+      "level": 2,
+      "content": "You should configure your pool to auto-start using a startup script.\n\n```bash\ncd build\nMiningcore -c <your-config>.json\n```\n\n- The JSON config defines the **log files** you should monitor for:\n    - Startup errors\n    - Daemon issues\n    - Pool activity\n\n- You may need to adjust the config to fit your specific pool setup.\n\n---"
+    },
+    {
+      "heading": "\u2705 Expected Log Output (Success)",
+      "level": 3,
+      "content": "When everything is working properly, your logs should show the following messages:"
+    },
+    {
+      "heading": "\ud83d\udfe2 Node Online and Synced",
+      "level": 4,
+      "content": "```\n[2022-03-16 14:26:12.9080] [I] [ergo1] All daemons online\n[2022-03-16 14:26:12.9345] [I] [ergo1] Daemon is synced with blockchain\n```"
+    },
+    {
+      "heading": "\ud83d\udfe2 Pool Online",
+      "level": 4,
+      "content": "```\n[2022-03-16 14:26:14.4346] [I] [ergo1] Pool Online\n```"
+    },
+    {
+      "heading": "\ud83d\udcca Pool Info Summary",
+      "level": 4,
+      "content": "```\nMining Pool:            <YOUR POOL NAME>\nCoin Type:              ERG [ERG]\nNetwork Connected:      <testnet|mainnet>\nDetected Reward Type:   POW\nCurrent Block Height:   <BLOCKHEIGHT>\nCurrent Connect Peers:  5\nNetwork Difficulty:     <NETWORK DIFF>\nNetwork Hash Rate:      <NETWORK HASHRATE>\nStratum Port(s):        3056, 4056, 3156, 4156\nPool Fee:               <YOUR FEE>\n```\n\n> \u26a0\ufe0f If the **network difficulty** or other values look off, double-check your diff setting in the config.\n\n---"
+    },
+    {
+      "heading": "Step 8: Network Setup Notes",
+      "level": 2,
+      "content": "> If your **miner**, **pool**, or **node** are on different machines, you will need to **open ports** to allow communication between them."
+    },
+    {
+      "heading": "Initial Mining Traffic Flow",
+      "level": 3,
+      "content": "- **Miner**  \n  \u2192 connects to Stratum port (e.g. `3746`)  \n- **Pool Server**  \n  \u2192 connects to Node RPC (mainnet: `9053`, testnet: `9052`)  \n- **Node**\n\nOnce all components connect, traffic becomes **bi-directional**.\n\n---"
+    },
+    {
+      "heading": "Port Opening Guidelines",
+      "level": 3,
+      "content": "- If **all components are on the same machine**:\n    - \u2705 No need to open ports \u2014 uses `localhost`\n\n- If using **LAN or WAN**:\n    - \ud83d\udda5\ufe0f Open required ports on your OS firewall\n    - \ud83c\udf10 On WAN, configure **port forwarding** on your router\n\n---"
+    },
+    {
+      "heading": "You're Good to Go!",
+      "level": 2,
+      "content": "You now have a fully operational MiningCore pool on Linux.\n\n> Make sure everything is synced, ports are configured, and logs show green \u2014 then start mining! \u26cf\ufe0f"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/setup/miningcore.md",
+  "processed_at": "2025-05-11T19:52:10.271396",
+  "ai_processed": true
+}

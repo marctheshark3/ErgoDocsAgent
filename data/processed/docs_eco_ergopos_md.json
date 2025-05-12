@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_ergopos_md",
+  "title": "ErgoPOS",
+  "summary": "ErgoPOS is a point-of-sale (POS) system that is also referred to as TabbyPOS. The document provides an introduction to ErgoPOS and indicates that more information can be found in the TabbyPOS article.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoPOS?",
+      "answer": "ErgoPOS is a point of sale (POS) system, see TabbyPOS."
+    },
+    {
+      "question": "What is TabbyPOS?",
+      "answer": "TabbyPOS is the system that ErgoPOS refers to."
+    },
+    {
+      "question": "What are the key features of ErgoPOS/TabbyPOS?",
+      "answer": "The document does not provide details on the features of ErgoPOS or TabbyPOS."
+    },
+    {
+      "question": "What are the practical applications of ErgoPOS/TabbyPOS?",
+      "answer": "The document does not provide information on the practical applications of ErgoPOS or TabbyPOS."
+    },
+    {
+      "question": "What are the technical details of ErgoPOS/TabbyPOS?",
+      "answer": "The document does not provide technical details about ErgoPOS or TabbyPOS."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoPOS\n  - POS\n  - Point of Sale\n  - TabbyPOS\n---"
+    },
+    {
+      "heading": "ErgoPOS",
+      "level": 1,
+      "content": "See [TabbyPOS](tabbypos.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/ergopos.md",
+  "processed_at": "2025-05-11T19:44:24.709372",
+  "ai_processed": true
+}

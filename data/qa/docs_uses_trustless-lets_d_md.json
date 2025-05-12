@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a Local Exchange Trading System (LETS)?",
+    "answer": "A LETS is aimed at developing the local economy and is usually used by people of a locality in the vicinity of each other."
+  },
+  {
+    "question": "What is the key difference between a managed/permissioned LETS and a trustless LETS?",
+    "answer": "A managed/permissioned LETS depends on a committee of trusted members to enroll new members, while a trustless LETS has no management committee and uses a trusted pricing oracle instead."
+  },
+  {
+    "question": "How is the LETS defined in the trustless model described?",
+    "answer": "The LETS is uniquely defined by a global token box that contains LETS membership tokens, which defines the LETS parameters such as the location, currency unit, and pricing oracle."
+  },
+  {
+    "question": "What is the purpose of the minimum ergs requirement for joining a LETS in the basic variant (LETS-1)?",
+    "answer": "The minimum ergs requirement is to prevent spam and DDoS attacks, and the ergs are locked until a minimum withdrawal time has passed."
+  },
+  {
+    "question": "What is the key feature of the zero-sum property in the LETS-1 model?",
+    "answer": "The sum of the LETS balances of all member boxes is zero, and member boxes are allowed to have a negative balance as long as it is within a certain limit, which is covered by the collateral in ergs."
+  }
+]

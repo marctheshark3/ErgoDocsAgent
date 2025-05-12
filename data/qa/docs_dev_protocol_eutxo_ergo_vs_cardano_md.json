@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the eUTXO model and how do Ergo and Cardano leverage it?",
+    "answer": "Ergo and Cardano are two blockchain platforms that have successfully implemented the extended UTXO (eUTXO) model. The eUTXO model provides native asset support and distributed states for decentralized applications (dApps)."
+  },
+  {
+    "question": "What are the key differences between the programming languages used by Ergo and Cardano?",
+    "answer": "Ergo employs a language called ErgoScript, which is inspired by Scala, while Cardano uses a language named Plutus, which is inspired by Haskell. Ergo stores data in registers, while Cardano uses 'datum' for data storage."
+  },
+  {
+    "question": "How do Ergo and Cardano approach token minting and native asset support?",
+    "answer": "Both Ergo and Cardano offer native asset support through their respective eUTXO models, but their approach to minting and issuing tokens varies."
+  },
+  {
+    "question": "What is the history behind the creation of Ergo, and how is it related to Cardano?",
+    "answer": "Ergo was founded by Alex Chepurnoy and Dmitry Meshakov, who previously worked on projects with IOG (Input Output Global), the company behind Cardano. Alex Chepurnoy was a Research Fellow and Team Scorex Manager at IOG before leaving to create Ergo."
+  },
+  {
+    "question": "What are the key features and innovations that Ergo has integrated into its eUTXO model?",
+    "answer": "Ergo has positioned itself at the forefront of innovation by integrating eUTXO with Proof-of-Work (PoW) as well as several other novel innovations, enabling the development of secure, scalable, and efficient decentralized applications."
+  }
+]

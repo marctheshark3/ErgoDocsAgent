@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What tools can developers use to interact with the blockchain?",
+    "answer": "Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast."
+  },
+  {
+    "question": "What programming languages can developers use to build blockchain applications?",
+    "answer": "Each tool requires the developer to program in some language, such as JVM, Rust, Node.js, or Python."
+  },
+  {
+    "question": "What is Mosaik?",
+    "answer": "Mosaik is a UI system for dApps."
+  },
+  {
+    "question": "What is the JSON dApp Environment?",
+    "answer": "The JSON dApp Environment is a tool for building blockchain applications."
+  },
+  {
+    "question": "What are the key platforms mentioned for building blockchain applications?",
+    "answer": "The key platforms mentioned are JVM, Rust, Node.js, and Python."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the most crucial aspect of debugging ErgoScript smart contracts?",
+    "answer": "Thorough unit and integration testing is the most crucial aspect of debugging ErgoScript smart contracts."
+  },
+  {
+    "question": "What are the core principles and best practices for debugging ErgoScript contracts?",
+    "answer": "The core principles and best practices are: 1) Thorough unit and integration testing, 2) Careful logic design, 3) Code reviews, and 4) Formal verification (for highly critical contracts)."
+  },
+  {
+    "question": "What are the key debugging techniques for ErgoScript contracts?",
+    "answer": "The key debugging techniques are: 1) Scala-based debugging, 2) On-chain mechanisms (limited), and 3) External tools and simulators."
+  },
+  {
+    "question": "Why is rigorous off-chain testing the cornerstone of developing reliable ErgoScript contracts?",
+    "answer": "Rigorous off-chain testing is the cornerstone because the code executes within the constrained and deterministic environment of the blockchain, where standard interactive debuggers or extensive logging are often not available during on-chain execution."
+  },
+  {
+    "question": "What is the community's desire for future debugging tools for ErgoScript?",
+    "answer": "The community desires more advanced debugging tools, potentially including execution traces and enhanced simulators, as the ecosystem evolves."
+  }
+]

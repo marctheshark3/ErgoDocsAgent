@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Chain-Grabber module in the Ergo Blockchain Explorer?",
+    "answer": "The Chain-Grabber module is used to store the Ergo blockchain to a standardized database format on a Raspberry Pi device."
+  },
+  {
+    "question": "What are the minimum requirements for setting up the Chain-Grabber module on a Raspberry Pi?",
+    "answer": "The minimum requirements are: Raspberry Pi with official OS installed, minimum 60GB of disk space available, and SSH enabled with stable internet connection."
+  },
+  {
+    "question": "What are the first steps in preparing the Raspberry Pi for the Chain-Grabber module?",
+    "answer": "The first steps are to run the commands 'sudo apt update' and 'sudo apt full-upgrade' to update the system."
+  },
+  {
+    "question": "What is the Ergo Blockchain Explorer (backend) and where can it be found?",
+    "answer": "The Ergo Blockchain Explorer (backend) is the source of the Chain-Grabber module, and it can be found at the GitHub repository https://github.com/ergoplatform/explorer-backend."
+  },
+  {
+    "question": "Who is the target audience for this tutorial?",
+    "answer": "The target audience for this tutorial is developers and data scientists interested in storing the Ergo blockchain to a standardized database format using a Raspberry Pi."
+  }
+]

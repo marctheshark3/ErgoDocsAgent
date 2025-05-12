@@ -1,0 +1,138 @@
+{
+  "id": "docs_node_install_troubleshooting_md",
+  "title": "Node Troubleshooting Guide",
+  "summary": "This document is a Node Troubleshooting Guide for the Ergo reference client. It provides steps to troubleshoot common issues, such as synchronization problems, API performance issues, and how to obtain and search log files. The guide also suggests solutions like lowering the maximum number of connections, reverting without resyncing, and resyncing from scratch. It encourages users to create a new issue on GitHub if the problem is not covered, providing specific details to include.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "#  Node Troubleshooting Guide\n\nThis document aims to help you troubleshoot common issues with the Ergo reference client. If you encounter a problem not covered here, please create a [new issue on GitH..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Node Troubleshooting Guide"
+    },
+    {
+      "question": "What is the 'Node Troubleshooting Guide' section about?",
+      "answer": "This document aims to help you troubleshoot common issues with the Ergo reference client. If you enc..."
+    },
+    {
+      "question": "What is the 'Searching the Logs' section about?",
+      "answer": "The following commands can help you search your logs for specific entries:\n\n```bash\ntail -Fn+0 ergo...."
+    },
+    {
+      "question": "What is the 'Synchronization Issues' section about?",
+      "answer": "There are common problems that may occur during synchronization."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Node Troubleshooting Guide",
+      "level": 1,
+      "content": "This document aims to help you troubleshoot common issues with the Ergo reference client. If you encounter a problem not covered here, please create a [new issue on GitHub](https://github.com/ergoplatform/ergo/issues/new/choose) and provide the following details:\n\n- Node version\n- Java command used\n- RAM/CPU specification\n- Operating System\n- JVM version\n- Storage location (Cloud, SSD, etc)\n- output of ERROR/WARN\n\nYou can obtain the output of ERROR/WARN by executing the following command:\n\n```bash\ntail -Fn+0 ergo.log | grep 'ERROR\\|WARN' > output.log\n```"
+    },
+    {
+      "heading": "Searching the Logs",
+      "level": 2,
+      "content": "The following commands can help you search your logs for specific entries:\n\n```bash\ntail -Fn+0 ergo.log | grep 'ERROR\\|WARN'\ntail -Fn+0 ergo.log | grep 'ERROR'\ntail -Fn+0 ergo.log | grep \"not modified\"\ntail -Fn+0 ergo.log | grep ERR\ntail -Fn+0 ergo.log | grep xception\ntail -Fn+0 ergo.log | grep \"stuck\"\n```"
+    },
+    {
+      "heading": "Synchronization Issues",
+      "level": 2,
+      "content": "There are common problems that may occur during synchronization."
+    },
+    {
+      "heading": "Stuck on 'Active Synchronization'",
+      "level": 3,
+      "content": "If your node is stuck on Active Synchronization without a noticeable increase in height, try the following steps:\n\n1. Use the log commands from above to see if there is anything noticeably wrong.\n2. Shut down your instance, take a backup, and try to restart.\n3. Join the [#node](https://discord.gg/jjRP2uNAv5) channel on Discord for support or open an issue on GitHub."
+    },
+    {
+      "heading": "Node Appears 'Synchronised' Even When It Isn't",
+      "level": 3,
+      "content": "If your node appears synchronised even though the height doesn't match the latest one found on the [explorer](https://explorer.ergoplatform.com/), you can add this to your `.conf` file under `ergo { node {`:\n\n```conf"
+    },
+    {
+      "heading": "headerChainDiff = 80",
+      "level": 1,
+      "content": "```\n\nYou might also be experiencing a [header downloading problem during synchronization](https://github.com/ergoplatform/ergo/issues/1657)."
+    },
+    {
+      "heading": "Lowering `maxConnections`",
+      "level": 3,
+      "content": "To alleviate some performance issues on later blocks, you can lower the default `maxConnections` from 30 to 10 in your `ergo.conf`:\n\n```bash\nnetwork {\n    maxConnections = 10\n}\n```\n\nThis makes the sync process slower but it should run more smoothly."
+    },
+    {
+      "heading": "Reverting Without Resyncing",
+      "level": 3,
+      "content": "The latest versions of the node will attempt to fix any errors on their own, but if it fails, there is no way to manually roll back."
+    },
+    {
+      "heading": "Resyncing From Scratch",
+      "level": 3,
+      "content": "To resync, remove the following two directories and restart the node:\n\n```bash\nrm -rf .ergo/state\nrm -rf .ergo/history\n```"
+    },
+    {
+      "heading": "API Performance Issues",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Timeouts or Unresponsiveness Under Load",
+      "level": 3,
+      "content": "**Symptoms:**\n\n*   API requests (e.g., from your wallet, dApp backend, or scripts) take a very long time to respond or fail with timeout errors.\n*   The node's web panel (`/panel`) might become slow or unresponsive.\n*   This often occurs when the node is handling multiple concurrent API requests or processing large amounts of data.\n\n**Potential Causes & Solutions:**\n\n1.  **Insufficient JVM Memory:** The Java Virtual Machine (JVM) running the node might not have enough allocated memory (heap space) to handle the load efficiently, leading to excessive garbage collection pauses or out-of-memory situations.\n    *   **Check:** Monitor the node's memory usage using system tools (like `htop`, Task Manager) or JVM monitoring tools if available. Look for high memory usage approaching the allocated limit.\n    *   **Solution:** Increase the maximum heap size allocated to the JVM using the `-Xmx` flag in your node startup command. For example, if you are running with `-Xmx4G`, try increasing it to `-Xmx6G` or `-Xmx8G` (ensure your system has enough physical RAM).\n        ```bash\n        # Example startup command with increased memory:\n        java -jar -Xmx6G ergo-*.jar --mainnet -c ergo.conf\n        ```\n    *   Restart the node after changing the `-Xmx` value.\n\n2.  **High System Load:** The server running the node might be overloaded due to other processes consuming CPU, RAM, or disk I/O. Check overall system resource usage.\n\n3.  **Node Mode Limitations:** Certain node modes (like Digest mode) might have inherent limitations in handling specific API queries that require scanning the full UTXO set, potentially leading to slower responses for those queries. Refer to the [Node Modes](modes.md) documentation.\n\n4.  **Network Latency:** Slow network connections between your client application and the node can also contribute to perceived timeouts.\n\n5.  **Specific API Endpoint Issues:** Occasionally, a specific API endpoint might have a bug or inefficiency causing performance problems. Check the [Ergo Node GitHub Issues](https://github.com/ergoplatform/ergo/issues) for reports related to the endpoint you're using."
+    },
+    {
+      "heading": "Wallet Issues",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Correct Address/Balance Not Displayed",
+      "level": 3,
+      "content": "If your correct address or balance isn't displayed, follow these steps:\n\n1. Make sure the wallet is synchronised.\n2. Try to derive new addresses as per the [swagger](swagger.md) instructions.\n3. Ensure you derived additional addresses during the sync process.\n4. If the problem persists, restore the wallet on a different client."
+    },
+    {
+      "heading": "Common Error Messages",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "'Unable to Define External Address'",
+      "level": 3,
+      "content": "If you see this warning:\n\n```\nWARN [tor.default-dispatcher-11] s.c.n.NetworkController - \nUnable to define external address.\nSpecify it manually in `scorex.network.declaredAddress`\n```\n\nit means you aren't running a public node. You can ignore this warning."
+    },
+    {
+      "heading": "'Got GetReaders Request in State None'",
+      "level": 3,
+      "content": "This error message is normal in the first few minutes of starting the node:\n\n```\nWARN  [ergoref-api-dispatcher-9] \no.e.n.ErgoReadersHolder \nGot GetReaders request in state (None,None,None,None)\n```\n\nIf you continue to receive this message, it likely indicates database corruption, which can be caused by unexpected shutdowns. To resync, remove the directories `.ergo/state` and `.ergo/history`, then restart the node."
+    },
+    {
+      "heading": "'Invalid Z Bytes'",
+      "level": 3,
+      "content": "This error is related to parsing the `z` value for this constructor: `UncheckedSchnorr(dl, None, challenge, SecondDLogProverMessage(z))`.\n\nTo view the log entries surrounding this error, use the following command:\n\n```bash\ncat ergo.log | grep -A 30 -B 30 \"Invalid z bytes\"\n```"
+    },
+    {
+      "heading": "'Dead Letters'",
+      "level": 3,
+      "content": "In Akka, messages that cannot be delivered are routed to an actor with the path `/deadLetters`. Dead letters do not necessarily indicate a problem but are logged by default for caution.\n\nTo search for these messages, use the following command:\n\n```bash\ntail -Fn+0 ergo.log | grep \"akka.log-dead-letters\"\n```"
+    },
+    {
+      "heading": "'Failed to Connect to localhost Port 9053: Connection Refused'",
+      "level": 3,
+      "content": "You can use these commands to troubleshoot:\n\n```bash\nnetstat -ln | grep 9053\nsudo netstat -tulpn\n```"
+    },
+    {
+      "heading": "'Tree Root Should Be Real'",
+      "level": 3,
+      "content": "This error typically means you're trying to sign a box that you don't own (i.e., you don't have the private key needed to sign)."
+    },
+    {
+      "heading": "Issues with Public Nodes & Explorers",
+      "level": 2,
+      "content": "While running your own node provides the most control and trust, many users rely on public infrastructure (nodes and explorers) for convenience or when running a personal node isn't feasible.\n\n**Known Public Resources (Community-Run, Status May Vary):**\n\n*   **Node Lists:**\n    *   [ergonodes.net](https://ergonodes.net/list): Provides a list of public nodes with basic status monitoring.\n*   **Explorers (Often provide public API access):**\n    *   [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/) (Official)\n    *   [ergexplorer.com](https://ergexplorer.com/)\n    *   [sigmaspace.io](https://sigmaspace.io/)\n    *   [ergobackup.aap.cornell.edu](https://ergobackup.aap.cornell.edu/) (May primarily be a backup service, check API availability)\n*   *(Note: This list is not exhaustive and uptime/reliability are not guaranteed. Always verify the trustworthiness and status of a public service before relying on it for critical operations.)*\n\n**Troubleshooting Public Infrastructure Issues:**\n\nIf you encounter problems with a public node or explorer (e.g., incorrect data, API timeouts, connectivity problems, website errors):\n\n1.  **Try Alternatives:** The simplest first step is to switch your wallet or application to use a different public node/explorer from the lists above or other known community resources. The issue might be specific to the service you were initially using.\n2.  **Check Service Status:**\n    *   For nodes listed on [ergonodes.net](https://ergonodes.net/list), check their reported status (height, sync status).\n    *   Check the explorer website itself for any status banners or announcements.\n    *   Look in community channels (Discord, Telegram) for recent reports about the specific service.\n3.  **Identify the Operator (If Possible):** Some public services are run by known community projects or individuals. If you can identify the operator, check their specific project channels (Discord, Telegram, GitHub) for status updates or to report issues.\n4.  **Report in General Community Channels:** If the operator is unknown or the issue seems widespread, report the problem in general Ergo community support channels (like the [#node](https://discord.gg/jjRP2uNAv5) or relevant dApp/wallet channels on Discord). Provide clear details:\n    *   The IP address or URL of the public node/explorer.\n    *   The specific issue encountered (e.g., \"API endpoint X returning 500 error\", \"Explorer website not loading\", \"Node Y on ergonodes.net stuck at height Z\", \"Incorrect balance reported via API\").\n    *   The time the issue occurred.\n    *   Any relevant transaction IDs, addresses, or API queries if applicable.\n    *   Screenshots if helpful.\n5.  **Check GitHub Repositories:** If the public node is part of a known open-source project (e.g., an explorer), check that project's GitHub repository issues section to see if the problem has already been reported or to file a new issue.\n6.  **Understand Limitations:** Public infrastructure consists of shared resources. Operators may perform maintenance, experience downtime, have performance limits (e.g., unofficial API rate limits), or encounter occasional indexing issues (especially nodes using the `extraIndex` feature). For time-sensitive or critical applications, running your own node remains the most reliable option."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/troubleshooting.md",
+  "processed_at": "2025-05-11T19:55:52.796761",
+  "ai_processed": true
+}

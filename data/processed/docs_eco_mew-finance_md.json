@@ -1,0 +1,83 @@
+{
+  "id": "docs_eco_mew-finance_md",
+  "title": "Mew Finance",
+  "summary": "Mew Finance is a decentralized finance (DeFi) platform operating on the Ergo Blockchain, launched in October 2024. It offers a suite of financial applications, including a DEX, marketplace, investment platform, and utilities. Mew Finance utilizes a tiered system to reward user engagement, with higher tiers offering revenue sharing and fee benefits. As of Q4 2024, the MEW token was the 3rd most liquid asset on the Ergo Blockchain. Mew Finance collaborates with other Ergo ecosystem projects and plans to expand its offerings with a lending platform and offer functionality in the marketplace. In Q4 2024, the platform reported total revenue of 2,289.17 ERG, with DEX fees accounting for 76.3% of the total.",
+  "qa_pairs": [
+    {
+      "question": "What is the core focus of Mew Finance?",
+      "answer": "Mew Finance is a decentralized finance (DeFi) platform operating on the Ergo Blockchain, aiming to provide a suite of innovative, accessible, secure, and user-centric financial applications."
+    },
+    {
+      "question": "What are the six core products launched by Mew Finance in Q4 2024?",
+      "answer": "Mew Finance launched six core products in Q4 2024: Mew DEX, Mew Mart, Mew Store, Mew Fund, Mew Tools, and Mew Fun."
+    },
+    {
+      "question": "How does the Mew Finance tier system work?",
+      "answer": "Mew Finance utilizes a tiered system to reward user engagement and investment in the platform, with higher tiers offering greater benefits such as revenue sharing and zero DEX fees."
+    },
+    {
+      "question": "What are the MEW Kitty NFTs associated with the Mew Finance tier system?",
+      "answer": "The MEW Kitty NFTs are associated with the Mew Finance tier system and provide additional benefits or recognition, with 25 out of 50 having been claimed as of Q4 2024."
+    },
+    {
+      "question": "How much revenue share was distributed to eligible Tier 4/5/6 members in Q4 2024?",
+      "answer": "In Q4 2024, 93.48 ERG (equivalent to 8,113.08 MEW) was distributed to eligible Tier 4/5/6 members as revenue share."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Mew Finance\n  - DEX\n  - Asset Trading\n  - dApp\n---"
+    },
+    {
+      "heading": "Mew Finance",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "Mew Finance is a decentralized finance (DeFi) platform operating on the Ergo Blockchain. Launched in October 2024, it aims to provide a suite of innovative, accessible, secure, and user-centric financial applications. The platform is known for its distinctive visual theme and focus on community engagement.\n\n**Visit the official platform:** [https://mewfinance.com/](https://mewfinance.com/)"
+    },
+    {
+      "heading": "Products and Services",
+      "level": 2,
+      "content": "Mew Finance launched with six core products in Q4 2024:\n\n* **Mew DEX:** A decentralized exchange designed for simple and fast token trading on Ergo.\n* **Mew Mart:** A marketplace for trading various tokens and NFTs within the Ergo ecosystem.\n* **Mew Store:** A marketplace focused on physical assets, including collaborations like the Sigma Shop.\n* **Mew Fund:** A platform facilitating community-driven investments.\n* **Mew Tools:** A collection of utilities to assist users with blockchain transactions.\n* **Mew Fun:** A lottery service developed in collaboration with ErgOne, aimed at improving liquidity for both projects."
+    },
+    {
+      "heading": "MEW Tier System",
+      "level": 2,
+      "content": "Mew Finance utilizes a tiered system to reward user engagement and investment in the platform. Higher tiers offer greater benefits.\n\n* **Tiers:** The system consists of Tiers 1 through 6.\n* **Benefits:**\n    * **Revenue Sharing:** Tier 4, 5, and 6 members share 5% of the service fee revenue (from Mart, Store, Tools, Fund).\n    * **DEX Fee Revenue Sharing:** Tier 6 members exclusively share 5% of the DEX fee revenue.\n    * **Zero DEX Fees:** Tier 6 members enjoy zero fees on transactions made through Mew DEX.\n* **MEW Kitty NFTs:** Associated with the tier system, these NFTs provide additional benefits or recognition. As of Q4 2024, 25 out of 50 had been claimed.\n* **Q4 2024 Snapshot:**\n    * Tier 6: 20 members\n    * Tier 5: 3 members\n    * Tier 4: 0 members\n    * Tier 3: 1 member\n    * Tier 2: 3 members\n    * Tier 1: 4 members\n    * Revenue Share Distributed (Q4 2024): 93.48 ERG (equivalent to 8,113.08 MEW) was distributed to eligible Tier 4/5/6 members."
+    },
+    {
+      "heading": "Liquidity",
+      "level": 2,
+      "content": "* **MEW Token:** As of the end of Q4 2024, the MEW token was reported as the 3rd most liquid asset on the Ergo Blockchain (after RSN and SigUSD), with approximately $200,000 in DEX liquidity.\n* **Liquidity Boosting:** A \"Mew Christmas Sale\" in Q4 2024 successfully sold 20,000 ERG worth of MEW tokens. All ERG proceeds were used to increase the liquidity of the MEW token."
+    },
+    {
+      "heading": "Partnerships",
+      "level": 2,
+      "content": "Mew Finance actively collaborates with other projects and initiatives within the Ergo ecosystem:\n\n* **Sigmanauts:** Partnered to launch the \"Sigma Shop\" on the Mew Store, offering Ergo-based merchandise.\n* **ErgOne:** Collaborated to integrate the Mew Fun lottery, aiming to boost liquidity for both Mew Finance and ErgOne.\n* **Ergosanta:** Mew Finance supported the 2024 Ergosanta community initiative, helping to collect and distribute over $2,000 worth of prizes."
+    },
+    {
+      "heading": "Future Developments (As of early 2025)",
+      "level": 2,
+      "content": "Mew Finance plans to expand its ecosystem with:\n\n* **Mew Lend:** A decentralized platform for borrowing and lending assets securely on the Ergo blockchain.\n* **Offer Functionality in Mew Mart:** An upcoming feature allowing users to make offers on specific assets listed in the marketplace."
+    },
+    {
+      "heading": "Financial Highlights (Q4 2024)",
+      "level": 2,
+      "content": "* **Total Revenue:** 2,289.17 ERG ($3,662.67 USD)\n* **DEX Fees:** 1,633.17 ERG ($2,613.07 USD) - 76.3% of total revenue.\n* **Service Fees (Mart, Store, Tools, Fund):** 656 ERG ($1,049.60 USD, including $150 from token listing fees) - 23.7% of total revenue.\n* **Team Operating Costs:** Reported as 1000 ERG per month during this period.\n\n*Note: Financial figures and tier counts are specific to Q4 2024 as per the source document.*"
+    },
+    {
+      "heading": "Community Links",
+      "level": 2,
+      "content": "* **Website:** [https://mewfinance.com/](https://mewfinance.com/)\n* **Telegram:** [https://t.me/MewFinance](https://t.me/MewFinance)\n* **Discord:** [https://discord.gg/KQrCH5UE](https://discord.gg/KQrCH5UE) (Note: Discord invite links can expire)\n* **X (Twitter):** [https://x.com/Mew_finance](https://x.com/Mew_finance)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/mew-finance.md",
+  "processed_at": "2025-05-11T19:45:23.695501",
+  "ai_processed": true
+}

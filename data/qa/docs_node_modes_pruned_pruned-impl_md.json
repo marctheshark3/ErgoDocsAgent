@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What data structure does the UTXO set authentication use?",
+    "answer": "The UTXO set authentication uses an AVL+ tree."
+  },
+  {
+    "question": "How often are UTXO set snapshots taken?",
+    "answer": "Snapshots are taken every 51,200 blocks (~72 days), specifically after a block where h % 51200 == 51199."
+  },
+  {
+    "question": "What research paper indicates that the snapshot method can be as secure as processing all blocks?",
+    "answer": "The research paper at https://eprint.iacr.org/2018/129 indicates that this method can be as secure as processing all blocks under certain statistical assumptions."
+  },
+  {
+    "question": "What is the format of the chunk data in the UTXO set snapshots?",
+    "answer": "The chunk format is to be provided."
+  },
+  {
+    "question": "What is the format of the manifest data in the UTXO set snapshots?",
+    "answer": "The manifest format is to be provided."
+  }
+]

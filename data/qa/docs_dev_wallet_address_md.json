@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Ergo addresses?",
+    "answer": "Ergo addresses are short strings that correspond to specific scripts and serve as a means to protect a box."
+  },
+  {
+    "question": "How do Ergo addresses differ from Bitcoin addresses?",
+    "answer": "Unlike Bitcoin, where addresses store a single amount, in Ergo's eUTxO model, a box contains registers that can store various values, including its native tokens."
+  },
+  {
+    "question": "What is the difference between Ergo's native tokens and smart contracts?",
+    "answer": "In Ergo, tokens are native and are not smart contracts, unlike the account-based model in Ethereum."
+  },
+  {
+    "question": "Where can I learn about the different types of Ergo addresses?",
+    "answer": "Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the Address Types page."
+  },
+  {
+    "question": "How can I validate Ergo addresses?",
+    "answer": "Learn how to validate Ergo addresses by visiting the Address Validation page, which provides essential insights and methods for verifying P2S, P2SH, and P2PK addresses."
+  }
+]

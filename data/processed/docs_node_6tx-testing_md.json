@@ -1,0 +1,133 @@
+{
+  "id": "docs_node_6tx-testing_md",
+  "title": "Testing 6.0 Specific Transactions Against 5.x and 6.0 Nodes",
+  "summary": "The document provides instructions on how to test Ergo 6.0-specific transactions against both 5.x and 6.0 nodes. It introduces the new features in Ergo 6.0, including enhanced cryptographic operations, improved serialization mechanisms, expanded opcodes and script constructs, and new script validation rules. The document then guides the reader through setting up a development network with 6.0 activation, as well as setting up 5.x nodes for testing backward compatibility. Finally, it provides instructions on writing and submitting 6.0-specific transactions using the new features.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the guide described in the document?",
+      "answer": "The guide provides instructions on how to test 6.0-specific transactions against both 5.x and 6.0 nodes, ensuring compatibility and smooth network upgrades."
+    },
+    {
+      "question": "What are the new features introduced in Ergo 6.0?",
+      "answer": "Ergo 6.0 introduces enhanced cryptographic operations, improved serialization mechanisms, expanded opcodes and script constructs, and new script validation rules."
+    },
+    {
+      "question": "What is the purpose of the BLS signature verification example?",
+      "answer": "The BLS signature verification example demonstrates how to verify a BLS signature, a new cryptographic primitive introduced in Ergo 6.0."
+    },
+    {
+      "question": "What is the purpose of the AVL tree handling example?",
+      "answer": "The AVL tree handling example demonstrates how to verify a proof against an AVL tree, which can be used to maintain authenticated data structures directly in Ergo smart contracts."
+    },
+    {
+      "question": "What are the key benefits of the new features introduced in Ergo 6.0?",
+      "answer": "The new features in Ergo 6.0 enable more advanced cryptographic operations, more efficient serialization, and the ability to handle complex data structures within smart contracts."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Testing 6.0 Specific Transactions Against 5.x and 6.0 Nodes",
+      "level": 1,
+      "content": "With the release of Ergo 6.0.0-alpha0, developers have the opportunity to explore and test new protocol features before they are widely deployed. This guide provides comprehensive instructions on how to test 6.0-specific transactions against both 5.x and 6.0 nodes, ensuring compatibility and smooth network upgrades."
+    },
+    {
+      "heading": "New Features Introduced in Ergo 6.0",
+      "level": 2,
+      "content": "Ergo 6.0 introduces several new features and enhancements to the ErgoScript language and the broader protocol. Below is a summary of these new features:\n\n1. **Enhanced Cryptographic Operations**:\n\n   - New opcodes for advanced cryptographic functions, such as multi-signatures and hash-based operations.\n   - Example: A new opcode for verifying BLS signatures.\n\n2. **Improved Serialization Mechanisms**:\n\n   - More efficient serialization formats for ErgoTree, reducing the size and improving the speed of transactions.\n\n3. **Expanded Opcodes and Script Constructs**:\n\n   - Introduction of new opcodes to support complex smart contract logic.\n   - Example: New operations for handling complex data structures like AVL trees.\n\n4. **New Script Validation Rules**:\n\n   - Enhanced validation rules to support the new features while maintaining backward compatibility with 5.x scripts."
+    },
+    {
+      "heading": "ErgoScript Code Examples",
+      "level": 3,
+      "content": "Here are some examples of ErgoScript code utilizing the new features introduced in Ergo 6.0:"
+    },
+    {
+      "heading": "Example 1: Using BLS Signature Verification",
+      "level": 4,
+      "content": "```scala\n{\n  val pubKey = decodePoint(\"04308e09...\") // BLS public key\n  val sig = decodeByteArray(\"30450221...\") // BLS signature\n  val msg = decodeByteArray(\"48656c6c...\") // Message in bytes\n\n  // Verify BLS signature\n  pubKey.isValidBLS(sig, msg)\n}\n```\n\nThis script verifies a BLS signature, a feature introduced in Ergo 6.0, making it possible to work with new cryptographic primitives within contracts."
+    },
+    {
+      "heading": "Example 2: Handling AVL Trees",
+      "level": 4,
+      "content": "```scala\n{\n  val tree = AVLTree.load(\"e8a32...\") // Load an AVL tree\n  val proof = decodeByteArray(\"123abc...\") // Proof of a certain operation\n\n  // Verify a proof against the AVL tree\n  tree.verifyProof(proof)\n}\n```\n\nThis script demonstrates how to handle AVL trees, which can be used to maintain authenticated data structures directly in Ergo smart contracts."
+    },
+    {
+      "heading": "Setting Up the Testing Environment",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Step 1: Establish a Development Network (DevNet)",
+      "level": 3,
+      "content": "To perform comprehensive tests, you should set up a private DevNet where 6.0 features are pre-activated.\n\n1. **Download the 6.0.0-alpha0 JAR** from the [official release page](https://github.com/ergoplatform/ergo/releases/tag/v6.0.0-alpha0).\n\n2. **Create a DevNet Configuration**: Use the provided sample configuration as a template to create your own `devnet.conf` file. Refer to the Gist [DevNet Config Example](https://gist.github.com/kushti/4f9c6b706ab16fcf2151cf1f3b531f7d).\n\n3. **Launch the Node with 6.0 Activation**: Start the Ergo node with the following command:\n   ```bash\n   java -jar -Xmx4G ergo-6.0.0-alpha0.jar --devnet -c devnet.conf\n   ```"
+    },
+    {
+      "heading": "Step 2: Set Up 5.x Nodes",
+      "level": 3,
+      "content": "To test backward compatibility, you will also need to run a node using the 5.x protocol version. Download and set up a 5.x node following similar steps as above, ensuring you have a configuration tailored for your test network."
+    },
+    {
+      "heading": "Writing and Submitting 6.0 Specific Transactions",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Step 1: Create ErgoScript with 6.0 Features",
+      "level": 3,
+      "content": "Use the new features in ErgoScript 6.0 to write scripts that incorporate enhanced cryptographic operations, improved serialization, and new opcodes."
+    },
+    {
+      "heading": "Step 2: Compile and Submit Transactions",
+      "level": 3,
+      "content": "1. **Compile with 6.0 Features**: Use the `/script/p2sAddress` API method on your 6.0 node to compile ErgoScript code that utilizes 6.0 features.\n\n2. **Submit to 6.0 Node (Pre-Activation on Public Network)**: On a public testnet that hasn\u2019t yet activated 6.0 features, expect transactions with 6.0-specific features to be rejected.\n\n3. **Submit to 6.0 Node (Post-Activation on DevNet)**: On your private DevNet, where 6.0 is already activated, submit the transaction and verify its acceptance.\n\n4. **Submit to 5.x Node**: Submit the transaction to a 5.x node and confirm that it is rejected, ensuring backward compatibility is maintained."
+    },
+    {
+      "heading": "Testing Compatibility Across Versions",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Scenario 1: Testing Transactions with 6.0 Features on 5.x Nodes",
+      "level": 3,
+      "content": "Ensure that transactions containing 6.0 features are **not** accepted by 5.x nodes. This is crucial for maintaining backward compatibility and preventing issues before the soft fork activates on public networks."
+    },
+    {
+      "heading": "Scenario 2: Testing Pre-6.0 Transactions on 6.0 Nodes",
+      "level": 3,
+      "content": "Submit transactions that use only pre-6.0 features to your DevNet where 6.0 is active. Verify that these transactions are accepted and processed correctly, ensuring that the introduction of 6.0 features does not break existing functionality."
+    },
+    {
+      "heading": "Scenario 3: Comprehensive Post-Activation Testing on DevNet",
+      "level": 3,
+      "content": "Once 6.0 features are activated on your DevNet, test a variety of transactions (both pre-6.0 and 6.0-specific). Verify that all transactions behave as expected according to the protocol rules."
+    },
+    {
+      "heading": "Example Test Cases",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Test Case 1: 6.0 Feature Transaction on DevNet",
+      "level": 3,
+      "content": "- **Step 1**: Create an ErgoScript using a new opcode introduced in 6.0.\n- **Step 2**: Compile the script and create a transaction using it.\n- **Step 3**: Submit the transaction to your DevNet (6.0 activated) and verify acceptance.\n- **Step 4**: Submit the same transaction to a 5.x node and verify rejection."
+    },
+    {
+      "heading": "Test Case 2: Mixed Transaction",
+      "level": 3,
+      "content": "- **Step 1**: Create a transaction containing both pre-6.0 and 6.0 features.\n- **Step 2**: Test the transaction on a 6.0 DevNet and ensure it is processed correctly.\n- **Step 3**: Submit the transaction to a 5.x node and confirm it is rejected."
+    },
+    {
+      "heading": "Test Case 3: Legacy Transaction on 6.0 Node",
+      "level": 3,
+      "content": "- **Step 1**: Create a transaction using only features available in 5.x.\n- **Step 2**: Submit the transaction to both 5.x and 6.0 nodes (pre- and post-activation) to ensure it is accepted in all scenarios."
+    },
+    {
+      "heading": "Conclusion",
+      "level": 2,
+      "content": "Testing 6.0 specific transactions against both 5.x and 6.0 nodes is crucial for ensuring a smooth protocol upgrade and maintaining compatibility across versions. By following the steps outlined in this guide and utilizing the new features in ErgoScript 6.0, you can prepare for the transition to Ergo 6.0, ensuring that applications and smart contracts continue to function as expected.\n\nFor further details on each feature, refer to the pull requests mentioned in the [6.0.0-alpha0 release notes](https://github.com/ergoplatform/ergo/releases/tag/v6.0.0-alpha0)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/6tx-testing.md",
+  "processed_at": "2025-05-11T19:53:28.788375",
+  "ai_processed": true
+}

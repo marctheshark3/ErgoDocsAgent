@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a LETS (Local Exchange Trading System)?",
+    "answer": "A LETS involves participants who agree to use a form of 'local currency', typically pegged to the national currency at a 1:1 ratio, to facilitate exchanges between members."
+  },
+  {
+    "question": "How are LETS balances managed?",
+    "answer": "In LETS, each participant has an account holding their LETS balance (in Local Euros), and the sum of all users' LETS balances is always zero at any given moment."
+  },
+  {
+    "question": "What is the role of the trusted pricing oracle in a decentralized LETS?",
+    "answer": "The trusted pricing oracle provides the current conversion rate of euros to ergs, identified by a global id (`rateTokenID'), through a singleton box that holds the rate of ergs to euros for any given period."
+  },
+  {
+    "question": "How are LETS members and transactions represented in the system?",
+    "answer": "The LETS at any given moment is defined by a global token box that houses membership tokens with id `letsTokenID`. Users can spend this box and create their individual LETS boxes as transaction outputs, where each output contains exactly one membership token."
+  },
+  {
+    "question": "What are the restrictions on LETS transactions?",
+    "answer": "For simplicity, this document restricts all LETS transactions to involve only two members - one sender and one receiver. In such transactions, the sender transfers a positive amount of the LETS currency (local euros) to the receiver, consuming the members' boxes and recreating them as outputs with updated balances."
+  }
+]

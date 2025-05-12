@@ -1,0 +1,10 @@
+The document presents the Mining Rights Protocol (MRP), a blockchain-based system for managing mining rights and token distribution. The protocol aims to address the issues of traditional token launches, such as pump-and-dump schemes, by creating an intrinsic value mechanism tied to actual mining activity and rights ownership.
+
+The key features of the MRP include:
+1. Rights-based value creation, where tokens represent mining rights rather than speculative assets.
+2. Controlled distribution mechanics with various distribution patterns to prevent sudden supply shocks.
+3. Economic stability mechanisms, such as time-locked rights periods and gradual token emission based on mining activity.
+4. Sophisticated smart contract architecture utilizing Ergo's register system for complex state management.
+5. Flexibility and customization options, allowing for configurable token properties, customizable NFT emission rules, and the ability to implement new distribution patterns.
+
+The document also provides details on the development and prototypes of the MRP, as well as the economic innovation it brings to the blockchain ecosystem.

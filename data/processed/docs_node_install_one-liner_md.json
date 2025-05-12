@@ -1,0 +1,43 @@
+{
+  "id": "docs_node_install_one-liner_md",
+  "title": "one-liner.md",
+  "summary": "Introduction: \n\nThis document provides an installation script for a software or service. The script can be run using a single command, which downloads and executes the installation process. The document also includes links to platform-specific installation guides for Mac, Linux, Raspberry Pi, and Windows.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the installation script mentioned in the content?",
+      "answer": "The installation script is used to install a certain software or application."
+    },
+    {
+      "question": "What warning is given about the installation script?",
+      "answer": "The installation script is experimental, as indicated by the warning."
+    },
+    {
+      "question": "What command is provided to run the installation script?",
+      "answer": "The command to run the installation script is: bash -c \"$(curl -s https://node.phenotype.dev)\""
+    },
+    {
+      "question": "What platforms are supported for the installation?",
+      "answer": "The supported platforms are Mac, Linux, Pi, and Windows."
+    },
+    {
+      "question": "Where can the user find more information about the installation for each platform?",
+      "answer": "The user can find more information about the installation for each platform in the corresponding .md files: mac.md, linux.md, pi.md, and windows.md."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Install Script",
+      "level": 2,
+      "content": "> Warning: Experimental\n\nSimply run the following command\n\n```\nbash -c \"$(curl -s https://node.phenotype.dev)\"\n```\n\n- [Mac](mac.md)\n- [Linux](linux.md)\n- [Pi](pi.md)\n- [Windows](windows.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/one-liner.md",
+  "processed_at": "2025-05-11T19:55:39.249788",
+  "ai_processed": true
+}

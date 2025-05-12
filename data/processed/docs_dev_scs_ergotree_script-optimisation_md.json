@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_scs_ergotree_script-optimisation_md",
+  "title": "Potential Script Processing Optimization",
+  "summary": "The document discusses potential optimizations for processing ErgoScript contracts on the Ergo blockchain. It explains that before a contract can be stored, it must be compiled from source code into ErgoTree and then serialized into a byte array. The ErgoTree compiler can perform optimizations to reduce the size of the tree, resulting in normalization/unification where different scripts may compile into identical ErgoTrees. The obstacle to this optimization is the constants embedded in contracts. A solution is to avoid embedding constants and instead use indexed placeholder nodes, where the serialized ErgoTree contains the bytes of a constants collection and the bytes of the script expression with placeholders. This feature is the basis for EIP5.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the ErgoTree compiler?",
+      "answer": "The ErgoTree compiler compiles ErgoScript contracts from source code into ErgoTree and then serializes them into byte arrays for storage on the blockchain."
+    },
+    {
+      "question": "How does the ErgoTree compiler perform optimizations?",
+      "answer": "The ErgoTree compiler can perform optimizations to reduce the size of the ErgoTree by normalizing and unifying different scripts that compile into identical ErgoTrees and serialized bytes."
+    },
+    {
+      "question": "What is the obstacle to the ErgoTree optimization process?",
+      "answer": "The obstacle to the optimization process is the constants embedded in contracts."
+    },
+    {
+      "question": "How can the problem of embedded constants be solved?",
+      "answer": "The problem of embedded constants can be solved by replacing each constant in the body of ErgoTree with an indexed placeholder node, and storing the constants in a separate collection."
+    },
+    {
+      "question": "What is the format of the serialized ErgoTree?",
+      "answer": "The format of the serialized ErgoTree contains the bytes of a collection with segregated constants and the bytes of the script expression with placeholders."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Potential Script Processing Optimization",
+      "level": 1,
+      "content": "Before an ErgoScript contract can be stored in a blockchain, it must be compiled from its source code into ErgoTree and then serialized into a byte array. The ErgoTree compiler, due to its purely functional graph-based IR, can perform various optimizations to reduce the tree's size. This results in normalization/unification, where different original scripts may compile into identical ErgoTrees and, consequently, identical serialized bytes. \n\nThe obstacle to this optimization is the constants embedded in contracts. A\n\n simple solution to this problem is to avoid embedding constants. Each constant in the body of ErgoTree can be replaced with an indexed placeholder node. Each placeholder has an index of the constant in the constants collection of ErgoTree.\n\nThe format of serialized ErgoTree thus contains the bytes of a collection with segregated constants and the bytes of script expression with placeholders. \n\n[EIP5 is based on this ErgoTree feature](https://github.com/ergoplatform/eips/blob/master/eip-0005.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergotree/script-optimisation.md",
+  "processed_at": "2025-05-11T19:29:47.706733",
+  "ai_processed": true
+}

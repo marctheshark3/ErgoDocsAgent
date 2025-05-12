@@ -1,0 +1,113 @@
+{
+  "id": "docs_uses_arbit_md",
+  "title": "Arbit Documentation",
+  "summary": "Arbit is a simple and intuitive arbitrage platform designed for decentralized trading on the Ergo and Cardano blockchains. It aims to simplify the arbitrage process, enabling users to identify and execute profitable swaps with minimal setup.\n\nArbit supports ERG, ADA, and RSN tokens, and integrates with the Ergo Dex and Splash exchanges. It provides predefined arbitrage strategies called \"Arbits\" that focus on simplicity and usability. The platform calculates profitability based on fixed token values ($50 and $100) to avoid complexity.\n\nThe document covers Arbit's key features, how it works, and deployment instructions for a local setup. It also describes the implemented arbitrage strategies, including the ERG \u2194 ADA arbitrage that leverages both direct and reverse swap paths.",
+  "qa_pairs": [
+    {
+      "question": "What is Arbit?",
+      "answer": "Arbit is a simple and intuitive arbitrage platform designed for decentralized trading on the Ergo and Cardano blockchains."
+    },
+    {
+      "question": "What tokens and exchanges are supported by Arbit?",
+      "answer": "Arbit supports ERG, ADA, and RSN tokens, and the Ergo Dex and Splash exchanges."
+    },
+    {
+      "question": "What are the core features of Arbit?",
+      "answer": "Arbit's core features include predefined arbitrage strategies (called \"Arbits\"), focus on simplicity and usability, and execution of swaps with just a few clicks."
+    },
+    {
+      "question": "What is an Arbit?",
+      "answer": "An Arbit is a series of swaps that generate profit, such as selling 100 X tokens on Exchange A for $100 and buying 105 Y tokens on Exchange B for the same $100."
+    },
+    {
+      "question": "What are the key features of Arbit's simplicity and usability?",
+      "answer": "Arbit is designed for users with basic blockchain knowledge, has a clear interface with no distractions or unnecessary complexity, and prominently displays the profitability of swaps."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Arbit Documentation",
+      "level": 1,
+      "content": "[Arbit](https://github.com/ConnecMent/arbit) is a simple and intuitive arbitrage platform designed for decentralized trading on the Ergo and Cardano blockchains. It aims to simplify the arbitrage process, enabling users to identify and execute profitable swaps with minimal setup.\n\n/// details | WIP\n    {type: warning, open: true}\nThis project is a work in progress and is not yet ready for production use.\n///\n\n\n---"
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "**What is Arbit?**\n\nArbit streamlines the process of arbitrage trading by providing a clean and simple interface. The platform identifies opportunities where a user can buy and sell tokens across different decentralized exchanges to make a profit.\n\n- **Supported Tokens:** ERG, ADA, and RSN.\n- **Supported Exchanges:** Ergo Dex and Splash.\n- **Core Features:**\n\n    - Predefined arbitrage strategies (called \"Arbits\").\n    - Focus on simplicity and usability.\n    - Execution of swaps with just a few clicks.\n\n**What is an Arbit?**\n\nAn Arbit is a series of swaps that generate profit. For example:\n\n1. Sell 100 X tokens on Exchange A for $100.\n2. Buy 105 Y tokens on Exchange B for the same $100.\n3. Profit from the additional 5 Y tokens.\n\n---"
+    },
+    {
+      "heading": "Key Features",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Simplicity and Usability",
+      "level": 3,
+      "content": "- Designed for users with basic blockchain knowledge.\n- Clear interface with no distractions or unnecessary complexity.\n- Profitability of swaps displayed prominently."
+    },
+    {
+      "heading": "Fixed Arbitrage Strategies",
+      "level": 3,
+      "content": "- Supports predefined arbitrage paths, such as:\n\n    - ERG \u2194 ADA\n    - RSN \u2194 ADA\n\n- Profit calculations are based on fixed USD values ($50 and $100).\n\n---"
+    },
+    {
+      "heading": "How It Works",
+      "level": 2,
+      "content": "1. **Arbitrage Strategy Execution:**\n\n    - Predefined paths calculate profitability based on current market conditions.\n    - Fixed token values ($50 and $100) are used for calculations to avoid complexity.\n\n2. **Supported Providers:**\n\n    - **Ergo Dex:** Facilitates ERG and ADA swaps.\n    - **Splash:** Enables swapping of RSN and ADA tokens.\n\n3. **Profit Calculation:**\n\n    - Example for a $50 swap:\n        - Sell $50 worth of rsADA on Ergo Dex for ERG.\n        - Swap ERG for ADA on Splash.\n        - Compare the ADA received with the initial $50 equivalent.\n\n---"
+    },
+    {
+      "heading": "Deployment",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Local Setup",
+      "level": 3,
+      "content": "1. **Clone the Repository:**\n\n    ```bash\n    git clone https://github.com/ConnecMent/arbit.git\n    cd arbit\n    ```\n\n2. **Set Up Environment Variables:**\n\n    Create a `.env` file in the root directory with the following variables:\n\n    - `SPLASH_API_URL`: API URL for Splash exchange.\n    - `ERGO_EXPLORER_API_URL`: API URL for Ergo Explorer.\n\n    Example:\n\n    ```env\n    SPLASH_API_URL=https://api.splash.exchange\n    ERGO_EXPLORER_API_URL=https://api.ergoplatform.com\n    ```\n\n3. **Run the Development Server:**\n\n    Install dependencies and start the development server:\n\n    ```bash\n    pnpm install\n    pnpm run dev\n    ```\n\n    The application will be available at `http://localhost:3000`.\n\n---"
+    },
+    {
+      "heading": "Arbitrage Strategies",
+      "level": 2,
+      "content": "The following strategies are implemented in Arbit:"
+    },
+    {
+      "heading": "ERG \u2194 ADA Arbitrage",
+      "level": 3,
+      "content": "- Leverages Ergo Dex and Splash to identify profitable swaps between ERG and ADA.\n- Calculations consider both direct and reverse swap paths for maximum opportunities."
+    },
+    {
+      "heading": "RSN \u2194 ADA Arbitrage",
+      "level": 3,
+      "content": "- Utilizes Ergo Dex and Splash for swaps between RSN and ADA tokens.\n- Similar profit calculation methods as the ERG \u2194 ADA strategy.\n\n---"
+    },
+    {
+      "heading": "Technical Details",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Core Arbitrage Logic",
+      "level": 3,
+      "content": "The core logic for arbitrage is implemented in `src/arbitrategy.ts`. It defines a set of predefined strategies for swapping between supported tokens and providers."
+    },
+    {
+      "heading": "Provider Integrations",
+      "level": 3,
+      "content": "- **Ergo Dex (`src/providers/ergodex.ts`):**\n\n    - Interacts with the Ergo Dex SDK for swapping tokens.\n    - Supports `x2y` and `y2x` operations.\n\n- **Splash (`src/providers/splash.ts`):**\n\n  - Uses the Splash API to fetch order book data.\n  - Supports bid/ask matching for liquidity and price calculations.\n\n---"
+    },
+    {
+      "heading": "Usage Guide",
+      "level": 2,
+      "content": "1. **Prepare Tokens:**\n\n    - Ensure you have supported tokens (ERG, ADA, RSN) on Ergo and Cardano chains.\n    - Use [Rosen Bridge](https://app.rosen.tech) to bridge assets if necessary.\n\n2. **Visit the App:**\n\n    - Open the application and review the displayed arbitrage opportunities.\n\n3. **Execute a Swap:**\n\n    - If a profitable Arbit is available, execute the swap by following the on-screen instructions.\n\n---"
+    },
+    {
+      "heading": "Contributing",
+      "level": 2,
+      "content": "The project is maintained by [ConnecMent](https://github.com/ConnecMent). Contributions are welcome via pull requests.\n\n**Team:**\n\n- Mentors: [@mkermani144](https://github.com/mkermani144), [@fatemeh-ra](https://github.com/fatemeh-ra)\n- Mentee: [@SeyedMojtaba1](https://github.com/SeyedMojtaba1)\n\nSpecial thanks to [@zargarzadehm](https://github.com/zargarzadehm) for Ergo Dex SDK insights."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/arbit.md",
+  "processed_at": "2025-05-11T20:01:00.261352",
+  "ai_processed": true
+}

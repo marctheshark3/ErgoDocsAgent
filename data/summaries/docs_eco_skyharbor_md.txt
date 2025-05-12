@@ -1,0 +1,1 @@
+SkyHarbor is a live NFT marketplace built on the Ergo blockchain. Its goal is to enhance the ENFT (Ergo-based Non-Fungible Token) space by providing features like verified collections, NFT trading histories, and set-price trading. The roadmap includes plans for expanded Ergo token support, NFT mass minting, NFT drops, and publicly available API data.

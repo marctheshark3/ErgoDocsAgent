@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of handshaking in a P2P protocol?",
+    "answer": "Handshaking is essential for establishing a connection with another peer in a P2P protocol."
+  },
+  {
+    "question": "What are peer features and how are they represented in a handshake message?",
+    "answer": "Peer features are properties that describe a peer, and they are embedded in a handshake message. The format of the feature is arbitrary, and any number can be added to the handshake, subject to the handshake message size limit of 8 KB."
+  },
+  {
+    "question": "What is the format of a handshake message in a P2P protocol?",
+    "answer": "The handshake message format includes fields for time, agent name length, agent name, network protocol version, and peer name length."
+  },
+  {
+    "question": "What are the client capabilities (mode feature) included in a handshake message?",
+    "answer": "The client capabilities (mode feature) include fields for state type, whether the peer is verifying transactions, whether the node bootstrapped via NiPoPoW, NiPoPoW suffix length, and how many blocks are kept."
+  },
+  {
+    "question": "Where can you find example implementations of the handshake process in P2P protocols?",
+    "answer": "The Ergonnection Java library and the Ergo Handshake repository provide practical implementations of the handshake process in the Ergo protocol."
+  }
+]

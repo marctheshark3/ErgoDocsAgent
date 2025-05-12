@@ -1,0 +1,48 @@
+{
+  "id": "docs_node_jitc_md",
+  "title": "Just-In-Time Costing",
+  "summary": "Just-In-Time Costing discusses transaction efficiency, scalability, and costing in the cryptocurrency space. Scalability refers to a blockchain's capacity to handle an increasing number of transactions, while costing refers to the computational expense associated with validating transactions and smart contracts. Ergo's Protocol Reference Client 5.0.0 introduced a hybrid costing model that combines Ahead-of-Time (AOT) and Just-In-Time (JIT) costing. The hybrid model operates in two stages: a Reduction Stage using JIT costing to calculate the cost of script reduction, and a Cryptographic Verification Stage using AOT costing for the more resource-intensive cryptographic operations. This enhances the network's user experience by allowing more efficient transaction processing within blocks, benefiting miners, developers, and users.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the hybrid costing model introduced in Ergo Protocol Reference Client 5.0.0?",
+      "answer": "The hybrid costing model enhances the network's user experience by allowing more efficient transaction processing within blocks, benefiting miners, developers, and users."
+    },
+    {
+      "question": "What are the two stages of the hybrid costing model?",
+      "answer": "The hybrid costing model operates in two stages: 1) Reduction Stage (JIT Costing) and 2) Cryptographic Verification Stage (AOT Costing)."
+    },
+    {
+      "question": "What is the purpose of the Reduction Stage (JIT Costing)?",
+      "answer": "In the Reduction Stage, the cost of reducing each input's guarding script to its final sigma proposition is calculated using Just-In-Time (JIT) costing, meaning the cost is determined based on the actual operations performed during reduction."
+    },
+    {
+      "question": "What is the purpose of the Cryptographic Verification Stage (AOT Costing)?",
+      "answer": "In the Cryptographic Verification Stage, the cost of verifying the required cryptographic proofs (e.g., signature checks) is calculated using Ahead-of-Time (AOT) costing, which is simple, fast, and predictable."
+    },
+    {
+      "question": "What is the significance of scalability and costing in the cryptocurrency space?",
+      "answer": "For a blockchain technology to achieve long-term viability and widespread adoption, adaptability and scalability are crucial. Costing refers to the computational expense associated with validating transactions and smart contracts, which is an important factor in the network's performance and scalability."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - JITC\n  - Just-In-Time Costing\n  - AOTC\n  - Node\n  - Performance\n  - Scalability\n  - EIP-39\n---"
+    },
+    {
+      "heading": "Just-In-Time Costing",
+      "level": 1,
+      "content": "Discussions about transaction efficiency, scalability, and costing are common in the cryptocurrency space. For a blockchain technology to achieve long-term viability and widespread adoption, adaptability and scalability are crucial. Ergo's Protocol Reference Client 5.0.0 introduced significant advancements, offering substantial benefits to miners, developers, and users across the ecosystem, particularly regarding script execution costing.\n\nIf you are new to blockchain, terms like scalability and costing might seem complex. **Scalability** refers to a blockchain's capacity to handle an increasing number of transactions. As a platform grows, transaction volume typically increases. Without effective scaling mechanisms, the network can become congested, leading to longer confirmation times. **Costing** refers to the computational expense associated with validating transactions and smart contracts. In Proof-of-Work blockchains like Ergo, every transaction incurs a fee, partly determined by its computational cost. Historically, this cost has been estimated using either Ahead-of-Time (AOT) or Just-In-Time (JIT) methods. Until version 5.0.0, Ergo primarily used AOT costing, which estimates costs *before* script execution to prevent excessively resource-intensive scripts from overwhelming the network."
+    },
+    {
+      "heading": "Ergo Protocol Reference Client 5.0.0 and Hybrid Costing",
+      "level": 2,
+      "content": "The release of Reference Client 5.0.0 introduced several network improvements, including a more efficient hybrid costing model ([EIP-39](https://github.com/ergoplatform/eips/pull/79)). This enhances the network's user experience (UX) by allowing more efficient transaction processing within blocks, benefiting miners, developers, and users.\n\nAs mentioned, Ergo previously relied mainly on AOT costing. Reference Client 5.0.0 introduced a hybrid model combining AOT and JIT costing. For a detailed explanation, refer to the blog post: \"[Ergo's Hybrid Method for Counting Costs](https://ergoplatform.org/en/blog/2022-02-09-ergos-hybrid-method-for-counting-costs/)\".\n\nThe hybrid costing model operates in two stages during transaction validation:\n\n1.  **Reduction Stage (JIT Costing)**: Each input's guarding script (ErgoTree) is reduced to its final sigma proposition (a cryptographic condition like `proveDlog(pk)` or `atLeast(2, Coll(pk1, pk2, pk3))`). The cost of this reduction phase is calculated using **Just-In-Time (JIT)** costing, meaning the cost is determined based on the actual operations performed during reduction.\n2.  **Cryptographic Verification Stage (AOT Costing)**: Once all input scripts are reduced to sigma propositions, the cost of verifying the required cryptographic proofs (e.g., signature checks) is calculated using **Ahead-of-Time (AOT)** costing. AOT costing for crypto operations is simple, fast, and predictable.\n\nThe costs from both stages are aggregated to determine the final cost of the transaction. This transaction cost is then added to the cumulative cost of the block being validated. A block is only valid if its total accumulated cost remains within the maximum allowed block budget.\n\nCryptographic operations are significantly more resource-intensive than reduction operations, typically consuming around 80% of the verification time. Using AOT costing for the cryptographic stage ensures that denial-of-service attacks based on expensive crypto operations remain infeasible. The JIT costing applied during the reduction stage provides a more accurate measure of the actual computational work performed during script execution.\n\nThis two-part costing method enables more efficient and accurate cost estimation compared to relying solely on AOT costing.\n\nAs a result of these improvements in Reference Client 5.0.0, users and developers benefit from potentially faster script execution times (as costs more accurately reflect actual work) and more efficient utilization of block space. This allows blocks to potentially accommodate more transactions, thereby increasing network throughput.\n\nFor further details on Reference Client 5.0.0, please visit the [GitHub release page](https://github.com/ergoplatform/ergo/releases/tag/v5.0.0). You will find comprehensive information about Sigma Interpreter 5.0.0, testnet settings, and the EIP-39 implementation."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/jitc.md",
+  "processed_at": "2025-05-11T19:56:07.206721",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Design Choices: V1 vs V2\n\n[EIP-0024](eip24.md) offers two design versions for artwork issuance: V1 and V2. Both designs involve two important boxes in the issuance process: the issuance box and the ..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Design Choices: V1 vs V2"
+  },
+  {
+    "question": "What is the 'Design Choices: V1 vs V2' section about?",
+    "answer": "[EIP-0024](eip24.md) offers two design versions for artwork issuance: V1 and V2. Both designs involv..."
+  },
+  {
+    "question": "What is the 'V1 Design' section about?",
+    "answer": "In V1, the issuer box has the following attributes:\n\n- `R4` is an `Int` representing 1000 times the ..."
+  },
+  {
+    "question": "What is the 'V2 Design' section about?",
+    "answer": "V2 addresses some of the shortcomings in V1 and extends the proposal to include collections. The V2 ..."
+  }
+]

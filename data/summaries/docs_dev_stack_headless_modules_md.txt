@@ -1,0 +1,15 @@
+The document "modules.md" provides an overview of the key modules in the Ergo Headless dApp Framework. It covers the following:
+
+Box Spec: Explains the BoxSpec struct for defining UTXO specifications used in smart contract protocols.
+
+Box Traits: Describes the WrappedBox, SpecifiedBox, and ExplorerFindable traits for interacting with ErgoBoxes.
+
+Specified Boxes: Outlines the currently implemented specified boxes like ErgsBox, ErgUsdOraclePoolBox, and AdaUsdOraclePoolBox.
+
+Output Builders: Introduces output builder structs like ChangeBox, TokensChangeBox, and TxFeeBox for creating common output UTXOs.
+
+Tx Creation: Mentions functions for building UnsignedTransactions.
+
+Encoding: Explains utility functions for converting between different data formats.
+
+Procedural Macros: Describes the WrapBox, SpecBox, and WASMBox macros for simplifying box-related code.

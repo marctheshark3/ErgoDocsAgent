@@ -1,0 +1,114 @@
+{
+  "id": "docs_node_indexed-node_md",
+  "title": "Indexed Node API",
+  "summary": "The document describes the Indexed Node API, which provides enhanced API endpoints for querying blockchain data efficiently in an Ergo node. It covers the available methods, including retrieving information about transactions, boxes, tokens, and balances based on various criteria like address, ErgoTree, or global index. The document also includes example requests and responses for each method, and a disclaimer about using the public instance for exploration and testing purposes.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Indexed Node\n  - Node\n  - API\n  - Blockchain\n  - Explorer\n---\n\n# Indexed Node API\n\nAn indexed Ergo node provides an enhanced set of API endpoints (beyond the standard [Node API](swagger...."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Indexed Node API"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Indexed Node\n  - Node\n  - API\n  - Blockchain\n  - Explorer\n---"
+    },
+    {
+      "question": "What is the 'Indexed Node API' section about?",
+      "answer": "An indexed Ergo node provides an enhanced set of API endpoints (beyond the standard [Node API](swagg..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Indexed Node\n  - Node\n  - API\n  - Blockchain\n  - Explorer\n---"
+    },
+    {
+      "heading": "Indexed Node API",
+      "level": 1,
+      "content": "An indexed Ergo node provides an enhanced set of API endpoints (beyond the standard [Node API](swagger.md)) for querying blockchain data efficiently. These endpoints allow retrieving information about transactions, boxes, tokens, and balances based on various criteria like address, ErgoTree, or global index. This documentation guides you through the usage of these indexed API methods, including example requests and responses.\n\nA public instance of an indexed node's API explorer (Swagger UI) is available [here](http://128.253.41.49:9053/swagger). The base path for all indexed API endpoints described below is `/blockchain`.\n\n\n/// admonition | Disclaimer\nPlease note that this is a public instance intended for exploration and testing. For production use or heavy querying, you should host your own instance of an [Ergo node](install.md) and enable indexing by setting `ergo.node.extraIndex = true` in the node's configuration file.\n///"
+    },
+    {
+      "heading": "Methods",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "GET /blockchain/indexedHeight",
+      "level": 3,
+      "content": "Retrieves the current block height up to which the node's indexer has processed the blockchain.\n\n\n**Request:**\n\n```\nGET /indexedHeight\n```\n\n**Response:**\n\n```json\n{\n  \"indexedHeight\": 123456\n}\n```"
+    },
+    {
+      "heading": "GET /blockchain/transaction/byId/{txId}",
+      "level": 3,
+      "content": "Retrieves details of a specific transaction by its ID.\n\n\n**Request:**\n\n```\nGET /transaction/byId/123abc\n```\n\n**Response:**\n\n```json\n{\n  \"transactionId\": \"123abc\",\n  \"blockHeight\": 1234,\n  \"inputs\": [\n    {\n      \"boxId\": \"abc123\",\n      \"value\": 1000000\n    }\n  ],\n  \"outputs\": [\n    {\n      \"boxId\": \"def456\",\n      \"value\": 500000\n    },\n    {\n      \"boxId\": \"ghi789\",\n      \"value\": 500000\n    }\n  ]\n}\n```"
+    },
+    {
+      "heading": "GET /blockchain/transaction/byIndex/{txIndex}",
+      "level": 3,
+      "content": "Retrieves details of a specific transaction by its global index number (sequential order in the blockchain).\n\n\n\n**Request:**\n\n```\nGET /transaction/byIndex/1234\n```\n\n**Response:**\n\n```json\n{\n  \"transactionId\": \"123abc\",\n  \"blockHeight\": 1234,\n  \"inputs\": [\n    {\n      \"boxId\": \"abc123\",\n      \"value\": 1000000\n    }\n  ],\n  \"outputs\": [\n    {\n      \"boxId\": \"def456\",\n      \"value\": 500000\n    },\n    {\n      \"boxId\": \"ghi789\",\n      \"value\": 500000\n    }\n  ]\n}\n```"
+    },
+    {
+      "heading": "POST /blockchain/transaction/byAddress",
+      "level": 3,
+      "content": "Retrieves a list of transactions associated with a given address (either as input or output). Requires the address in the request body.\n\n\n\n**Request:**\n\n```\nPOST /transaction/byAddress\nContent-Type: application/json\n\n{\n  \"address\": \"your_address\"\n}\n```\n\n**Response:**\n\n```json\n{\n  \"transactions\": [\n    {\n      \"transactionId\": \"123abc\",\n      \"blockHeight\": 1234,\n      \"inputs\": [\n        {\n          \"boxId\": \"abc123\",\n          \"value\": 1000000\n        }\n      ],\n      \"outputs\": [\n        {\n          \"boxId\": \"def456\",\n          \"value\": 500000\n        },\n        {\n          \"boxId\": \"ghi789\",\n          \"value\": 500000\n        }\n      ]\n    },\n    {\n      \"transactionId\": \"456def\",\n      \"blockHeight\": 5678,\n      \"inputs\": [\n        {\n          \"boxId\": \"jkl012\",\n          \"value\": 2000000\n        }\n      ],\n      \"outputs\": [\n        {\n          \"boxId\": \"mno345\",\n          \"value\": 1000000\n        },\n        {\n          \"boxId\": \"pqr678\",\n          \"value\": 1000000\n        }\n      ]\n    }\n  ]\n}\n```"
+    },
+    {
+      "heading": "GET /blockchain/transaction/range",
+      "level": 3,
+      "content": "Retrieves a list of transaction IDs within a specified global index range (`start` and `end` query parameters).\n\n\n\n**Request:**\n\n```\nGET /transaction/range?start=0&end=100\n```\n\n**Response:**\n\n\n\n```json\n{\n  \"transactionIds\": [\"123abc\", \"456def\", \"789ghi\", ...]\n}\n```"
+    },
+    {
+      "heading": "GET /blockchain/box/byId/{boxId}",
+      "level": 3,
+      "content": "Retrieves details of a specific box by its ID.\n\n\n\n**Request:**\n\n```\nGET /box/byId/abc123\n```\n\n**Response:**\n\n```json\n{\n  \"boxId\": \"abc123\",\n  \"value\": 1000000,\n  \"ergoTree\": \"your_ergo_tree\",\n  \"address\": \"your_address\"\n}\n```"
+    },
+    {
+      "heading": "GET /blockchain/box/byIndex/{boxIndex}",
+      "level": 3,
+      "content": "Retrieves details of a specific box by its global index number.\n\n\n\n**Request:**\n\n```\nGET /box/byIndex/1234\n```\n\n**Response:**\n\n```json\n{\n  \"boxId\": \"abc123\",\n  \"value\": 1000000,\n  \"ergoTree\": \"your_ergo_tree\",\n  \"address\": \"your_address\"\n}\n```"
+    },
+    {
+      "heading": "POST /blockchain/box/byAddress",
+      "level": 3,
+      "content": "Retrieves a list of boxes associated with a given address. Requires the address in the request body.\n\n\n\n**Request:**\n\n```\nPOST /box/byAddress\nContent-Type: application/json\n\n{\n  \"address\": \"your_address\"\n}\n```\n\n**Response:**\n\n```json\n{\n  \"boxes\": [\n    {\n      \"boxId\": \"abc123\",\n      \"value\": 1000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    },\n    {\n      \"boxId\": \"def456\",\n      \"value\": 2000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    }\n  ]\n}\n```"
+    },
+    {
+      "heading": "POST /blockchain/box/unspent/byAddress",
+      "level": 3,
+      "content": "Retrieves a list of *unspent* boxes associated with a given address. Requires the address in the request body.\n\n\n\n**Request:**\n\n```\nPOST /box/unspent/byAddress\nContent-Type: application/json\n\n{\n  \"address\": \"your_address\"\n}\n```\n\n**Response:**\n\n```json\n{\n  \"boxes\": [\n    {\n      \"boxId\": \"abc123\",\n      \"value\": 1000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    },\n    {\n      \"boxId\": \"def456\",\n      \"value\": 2000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    }\n  ]\n}\n```"
+    },
+    {
+      "heading": "GET /blockchain/box/range",
+      "level": 3,
+      "content": "Retrieves a list of box IDs within a specified global index range (`start` and `end` query parameters).\n\n\n\n**Request:**\n\n```\nGET /box/range?start=0&end=100\n```\n\n**Response:**\n\n```json\n{\n  \"boxIds\": [\"abc123\", \"def456\", \"ghi789\", ...]\n}\n```"
+    },
+    {
+      "heading": "POST /blockchain/box/byErgoTree",
+      "level": 3,
+      "content": "Retrieves a list of boxes protected by a specific ErgoTree script (provided in hex format in the request body).\n\n\n\n**Request:**\n\n```\nPOST /box/byErgoTree\nContent-Type: application/json\n\n{\n  \"ergoTree\": \"your_ergo_tree\"\n}\n```\n\n**Response:**\n\n```json\n{\n  \"boxes\": [\n    {\n      \"boxId\": \"abc123\",\n      \"value\": 1000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    },\n    {\n      \"boxId\": \"def456\",\n      \"value\": 2000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    }\n\n\n  ]\n}\n```"
+    },
+    {
+      "heading": "POST /blockchain/box/unspent/byErgoTree",
+      "level": 3,
+      "content": "Retrieves a list of *unspent* boxes protected by a specific ErgoTree script (provided in hex format in the request body).\n\n\n\n**Request:**\n\n```\nPOST /box/unspent/byErgoTree\nContent-Type: application/json\n\n{\n  \"ergoTree\": \"your_ergo_tree\"\n}\n```\n\n**Response:**\n\n```json\n{\n  \"boxes\": [\n    {\n      \"boxId\": \"abc123\",\n      \"value\": 1000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    },\n    {\n      \"boxId\": \"def456\",\n      \"value\": 2000000,\n      \"ergoTree\": \"your_ergo_tree\",\n      \"address\": \"your_address\"\n    }\n  ]\n}\n```"
+    },
+    {
+      "heading": "GET /blockchain/token/byId/{tokenId}",
+      "level": 3,
+      "content": "Retrieves information about a specific token (name, description, decimals, etc.) by its ID. Note that the token ID is the ID of the first input box in the token issuance transaction.\n\n\n\n**Request:**\n\n```\nGET /token/byId/123abc\n```\n\n**Response:**\n\n```json\n{\n  \"tokenId\": \"123abc\",\n  \"name\": \"Your Token\",\n  \"description\": \"Description of your token\",\n  \"totalSupply\": 1000000,\n  \"decimals\": 8,\n  \"issuer\": \"your_address\"\n}\n```"
+    },
+    {
+      "heading": "POST /blockchain/balance",
+      "level": 3,
+      "content": "Retrieves the confirmed and unconfirmed ERG and token balances for a given address (provided in the request body).\n\n\n\n**Request:**\n\n```\nPOST /balance\nContent-Type: application/json\n\n{\n  \"address\": \"your_address\"\n}\n```\n\n**Response:**\n\n```json\n{\n  \"confirmedBalance\": 1000000,\n  \"unconfirmedBalance\": 500000\n}\n```\n\nThis documentation covers the indexed API methods provided by an Ergo node with `extraIndex = true`. You can use these endpoints to efficiently query blockchain data and build applications on top of Ergo.\n\n\nAn example explorer utilizing these indexed endpoints can be found here: https://github.com/Luivatra/indexed-node-explorer"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/indexed-node.md",
+  "processed_at": "2025-05-11T19:54:43.630826",
+  "ai_processed": true
+}

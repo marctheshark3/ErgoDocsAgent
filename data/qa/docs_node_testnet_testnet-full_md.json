@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the command to launch the Ergo protocol reference client on the testnet?",
+    "answer": "java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf"
+  },
+  {
+    "question": "What is the minimum configuration required for the testnet.conf file?",
+    "answer": "ergo { networkType = \"testnet\" } scorex { restApi { apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\" } }"
+  },
+  {
+    "question": "Where can the user interface for Swagger be accessed once the node is synchronized?",
+    "answer": "localhost:9052/swagger"
+  },
+  {
+    "question": "How can users help mine the testnet?",
+    "answer": "By following the steps outlined on CPU Mining"
+  },
+  {
+    "question": "Where can the synchronized node be accessed?",
+    "answer": "localhost:9052/panel"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntitle: Proxy Contracts\ndescription: Learn about proxy contracts, a smart contract pattern used on Ergo for secure dApp interactions.\ntags:\n  - dApp Development\n  - EIP\n  - Smart Contracts\n---\n\n# P..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Proxy Contracts"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntitle: Proxy Contracts\ndescription: Learn about proxy contracts, a smart contract pattern used o..."
+  },
+  {
+    "question": "What is the 'Proxy Contracts' section about?",
+    "answer": "Proxy contracts are a specific [smart contract pattern](smart-contracts-overview.md) used on Ergo. T..."
+  },
+  {
+    "question": "What is the 'Origins and Purpose' section about?",
+    "answer": "The concept gained prominence with tools like the [Ergo Assembler](https://github.com/anon-real/ergo..."
+  }
+]

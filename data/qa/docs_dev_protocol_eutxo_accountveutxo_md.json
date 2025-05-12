@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main difference between the UTXO model and the Account model in blockchain transactions?",
+    "answer": "In the UTXO model, a user's balance is represented as a collection of unspent outputs, while in the Account model, the balance is a simple numerical value."
+  },
+  {
+    "question": "How does the UTXO model enhance the security and immutability of transactions compared to the Account model?",
+    "answer": "In the UTXO model, each UTXO is immutable and cannot be modified during a transaction, which enhances security and simplifies transaction verification. In the Account model, account balances can be modified during a transaction, introducing potential vulnerabilities."
+  },
+  {
+    "question": "How does the UTXO model simplify development and reduce the likelihood of mistakes compared to the Account model?",
+    "answer": "The UTXO model uses a declarative programming paradigm in ErgoScript contracts, which simplifies development and reduces the likelihood of mistakes. The Account model uses an imperative programming paradigm, which can be more challenging for developers and increase the risk of errors."
+  },
+  {
+    "question": "How does the UTXO model provide better support for off-chain protocols like sidechains and the Lightning Network compared to the Account model?",
+    "answer": "Ergo's UTXO model provides better support for off-chain protocols, as off-chain transaction creation reduces on-chain operations, improving scalability and network efficiency. The Account model has limited support for off-chain protocols, making it more challenging to scale and utilize layer-2 solutions."
+  },
+  {
+    "question": "What are the key advantages of the UTXO model over the Account model in terms of scalability and optimization?",
+    "answer": "The UTXO model offers better scalability and optimization compared to the Account model, as it allows for more efficient transaction processing and the utilization of off-chain protocols like sidechains and the Lightning Network."
+  }
+]

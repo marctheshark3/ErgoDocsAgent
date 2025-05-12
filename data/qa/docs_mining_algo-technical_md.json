@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Autolykos proof-of-work algorithm?",
+    "answer": "Autolykos is a proof-of-work (PoW) algorithm utilized in blockchain mining, based on the principles outlined in the Equihash paper."
+  },
+  {
+    "question": "What is the core mechanism of the Autolykos algorithm?",
+    "answer": "Miners are tasked with finding k (=32) elements from a set of N elements, where the chosen elements should yield a sum that, when hashed, has a hash value lower than a target value."
+  },
+  {
+    "question": "What are the pre-requisites for the Autolykos algorithm?",
+    "answer": "Autolykos requires a very large cyclic group G of prime order q with a fixed generator g and identity element e."
+  },
+  {
+    "question": "How does the Autolykos algorithm work in the block mining process?",
+    "answer": "The Autolykos block mining pseudocode outlines the step-by-step process for miners to solve the puzzle and add the next block to the blockchain."
+  },
+  {
+    "question": "What is the significance of the cyclic group in the Autolykos algorithm?",
+    "answer": "The cyclic group plays a minor role in the overall PoW scheme of the Autolykos algorithm, as it returns integers in Z/qZ during the Blake2b256-based hashing function."
+  }
+]

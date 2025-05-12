@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_scs_ergotree_functions_md",
+  "title": "ErgoTree Functions",
+  "summary": "This document provides an overview of ErgoTree functions, which are used in the Ergo blockchain platform. It includes a table that lists various ErgoTree functions, their codes, mnemonics, and descriptions. The functions cover a range of operations, such as creating constant placeholders, converting data types, performing arithmetic and logical operations, and conditional branching. The document notes that this is a work-in-progress and refers readers to the ErgoTree.pdf document for full details.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the ConstantPlaceholder function in ErgoTree?",
+      "answer": "ConstantPlaceholder creates a special ErgoTree node which can be replaced by a constant with a given id."
+    },
+    {
+      "question": "What is the purpose of the SubstConstants function in ErgoTree?",
+      "answer": "SubstConstants replaces constants in a given collection of bytes, integers, or generic types."
+    },
+    {
+      "question": "How does the ByteArrayToBigInt function work in ErgoTree?",
+      "answer": "ByteArrayToBigInt converts a big-endian bytes representation (Coll[Byte]) to a BigInt value."
+    },
+    {
+      "question": "What is the purpose of the Downcast and Upcast functions in ErgoTree?",
+      "answer": "Downcast casts a numeric value to a smaller type, throwing an exception on overflow, while Upcast casts a numeric value to a bigger type."
+    },
+    {
+      "question": "What do the LT, LE, GT, and GE functions do in ErgoTree?",
+      "answer": "These functions compare two values and return a boolean indicating if the left operand is less than, less than or equal to, greater than, or greater than or equal to the right operand, respectively."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "ErgoTree Functions",
+      "level": 1,
+      "content": "> This page is a WIP. Please see [ErgoTree.pdf](https://storage.googleapis.com/ergo-cms-media/docs/ErgoTree.pdf) for full details.\n\n\n| Code | Mnemonic | Description | Description |\n|---|---|---|---|\n115 | ConstantPlaceholder |  Int    => T | Create special ErgoTree node which can be replaced by constant with given id. \n116 | SubstConstants | Coll[Byte], Coll[Int], Coll[T]    => Coll[Byte] | ... \n122 | LongToByteArray | Long    => Coll[Byte] | Converts Long value to big-endian bytes representation. \n123 | ByteArrayToBigInt | Coll[Byte]    => BigInt | Convert big-endian bytes representation (Coll[Byte]) to BigInt value. \n124 | ByteArrayToLong | Coll[Byte]    => Long | Convert big-endian bytes representation (Coll[Byte]) to Long value. \n125 | Downcast |   (T    => R) | Cast this numeric value to a smaller type (e.g. Long to Int). Throws exception if overflow. \n126 | Upcast |  (T    => R) | Cast this numeric value to a bigger type (e.g. Int to Long) \n140 | SelectField | (T, Byte    => R) | Select tuple field by its 1-based index. E.g. input._1 is transformed to SelectField(input, 1 \n143 | LT | T, T    => Boolean | Returns true is the left operand is less then the right operand, false otherwise. \n144 | LE | T, T    => Boolean | Returns true is the left operand is less then or equal to the right operand, false otherwise. \n145 | GT | T, T    => Boolean | Returns true is the left operand is greater then the right operand, false otherwise. \n146 | GE | T, T    => Boolean | Returns true is the left operand is greater then or equal to the right operand, false otherwise. \n147 | EQ | T, T    => Boolean | Compare equality of left and right arguments \n148 | NEQ | T, T    => Boolean | Compare inequality of left and right arguments \n149 | If | Boolean, T, T    => T | Compute condition, if true then compute trueBranch else compute falseBranch \n150 | AND | Coll[Boolean]    => Boolean | Returns true if \\emph{all the elements in collection are true. \n151 | OR | Coll[Boolean]    => Boolean | Returns true if \\emph{any the elements in collection are true. \n152 | AtLeast | Int, Coll[SigmaProp]    => SigmaProp | ... \n153 | Minus | T, T    => T | Returns a result of subtracting second numeric operand from the first. \n154 | Plus | T, T    => T | Returns a sum of two numeric operands \n155 | Xor | Coll[Byte], Coll[Byte]    => Coll[Byte] | Byte-wise XOR of two collections of bytes \n156 | Multiply | T, T    => T | Returns a multiplication of two numeric operands \n157 | Division | T, T    => T | Integer division of the first operand by the second operand. \n158 | Modulo | T, T    => T | Reminder from division of the first operand by the second operand. \n161 | Min | T, T    => T | Minimum value of two operands. \n162 | Max | T, T    => T | Maximum value of two operands. \n182 | CreateAvlTree |   (Byte, Coll[Byte], Int, Option[Int]    => AvlTree | Construct a new authenticated dictionary with given parameters and tree root digest. \n183 | TreeLookup |   (AvlTree, Coll[Byte], Coll[Byte]    => Option[Coll[Byte]] |  \n203 | CalcBlake2b256 |   (Coll[Byte]    => Coll[Byte] | Calculate Blake2b hash from input bytes. \n204 | CalcSha256 |   (Coll[Byte]    => Coll[Byte] | Calculate Sha256 hash from input bytes. \n205 | CreateProveDlog | GroupElement    => SigmaProp | ErgoTree operation to create a new SigmaProp value representing public key of discrete logarithm signature protocol.\n206 | CreateProveDHTuple | GroupElement, GroupElement, GroupElement, GroupElement => SigmaProp |  ErgoTree operation to create a new SigmaProp value representing public key of Diffie Hellman signature protocol. Common input: (g,h,u,v)\n209 | BoolToSigmaProp |  (Boolean    => SigmaProp) | ... \n212 | DeserializeContext |   (Byte    => T) | ... \n213 | DeserializeRegister |   (Byte, Option[T]    => T | ... \n218 | Apply |(T) => R, T    => R | Apply the function to the arguments.  \n227 | GetVar |   (Byte    => Option[T]) | Get context variable with given varId and type. \n234 | SigmaAnd |   (Coll[SigmaProp]    => SigmaProp) | Returns sigma proposition which is proven when \\emph{all the elements in collection are proven. \n235 | SigmaOr |   (Coll[SigmaProp]    => SigmaProp) | Returns sigma proposition which is proven when \\emph{any of the elements in collection is proven. \n236 | BinOr |   (Boolean, Boolean)    => Boolean | Logical OR of two operands \n237 | BinAnd |   (Boolean, Boolean)    => Boolean | Logical AND of two operands \n238 | DecodePoint| Coll[Byte]    => GroupElement | Convert Coll[Byte] to GroupElement using GroupElementSerializer\n239 | LogicalNot | Boolean    => Boolean | Logical NOT operation. Returns true if input is falseand falseif input is true. \n240 | Negation |   (T    => T) | Negates numeric value x by returning -x. \n241 | BitInversion |   (T    => T) | Invert every bit of the numeric value. \n242 | BitOr |   (T, T)    => T | Bitwise OR of two numeric operands. \n243 | BitAnd |   (T, T)    => T | Bitwise AND of two numeric operands. \n244 | BinXor |   (Boolean, Boolean    => Boolean) | Logical XOR of two operands \n245 | BitXor |   (T, T)    => T | Bitwise XOR of two numeric operands. \n246 | BitShiftRight |   (T, T)    => T | Right shift of bits. \n247 | BitShiftLeft |   (T, T)    => T | Left shift of bits. \n248 | BitShiftRightZeroed |  (T, T)    => T | Right shift of bits. \n255 | XorOf |   (Coll[Boolean]    => Boolean) | Similar to allOf, but performing logical XOR operation between all conditions instead of ||"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergotree/functions.md",
+  "processed_at": "2025-05-11T19:29:43.929343",
+  "ai_processed": true
+}

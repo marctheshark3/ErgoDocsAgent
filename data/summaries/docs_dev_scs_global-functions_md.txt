@@ -1,0 +1,9 @@
+The document provides an overview of global functions available for use in ErgoScript, a programming language for the Ergo blockchain. It covers three main categories of functions:
+
+Logical Functions: These include `allOf`, `anyOf`, and `xorOf`, which perform logical operations on collections of boolean values.
+
+Zero-Knowledge Functions: These include `atLeast` and `ZKProof`, which allow evaluating SigmaProps (Sigma Propositions) while preserving zero-knowledge properties.
+
+Cryptographic Functions: These are functions related to cryptography, such as hashing and calculations over `GroupElement` values.
+
+The document also provides a reference to the complete list of global functions and types in the ErgoScript LangSpec.

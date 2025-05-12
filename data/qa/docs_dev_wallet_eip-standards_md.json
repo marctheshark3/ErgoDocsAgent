@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Wallets\n  - EIPs\n  - Standards\n  - dApp Connector\n  - EIP-0012\n  - EIP-0001\n  - EIP-0003\n  - get_used_addresses\n  - dApp Development\n  - Security\n  - Testing\n---\n\n# Wallet Interaction St..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Wallet Interaction Standards (EIPs) for dApp Developers"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Wallets\n  - EIPs\n  - Standards\n  - dApp Connector\n  - EIP-0012\n  - EIP-0001\n  - EIP-00..."
+  },
+  {
+    "question": "What is the 'Wallet Interaction Standards (EIPs) for dApp Developers' section about?",
+    "answer": "Ergo Improvement Proposals (EIPs) define standards for interaction between dApps and wallets, ensuri..."
+  },
+  {
+    "question": "What is the 'Supported Wallets (EIP-0012)' section about?",
+    "answer": "Currently, the primary wallets implementing the EIP-0012 dApp Connector standard are:\n\n*   **[Nautil..."
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "id": "docs_eco_token-jay_md",
+  "title": "Token Jay",
+  "summary": "Token Jay is a decentralized application (dApp) that provides various tools and services for managing tokens on the Ergo blockchain. The key features include:\n\nP2P Escrow: A trustless and decentralized platform for buying and selling tokens, including non-fungible tokens (NFTs), SigmaUSD, and other Ergo tokens.\n\nSigmaUSD and SigmaRSV: Allows users to directly convert ERG into SigmaUSD and SigmaRSV in a single transaction.\n\nToken Burner: Provides a utility to burn unwanted NFTs and tokens.\n\nThe document outlines the step-by-step process for using the P2P Escrow service, including verifying the authenticity of the tokens being traded.",
+  "qa_pairs": [
+    {
+      "question": "What is Token Jay?",
+      "answer": "Token Jay is a one-stop solution for dealing with tokens on Ergo, offering open and fully documented applications."
+    },
+    {
+      "question": "What is the P2P Escrow service on Token Jay?",
+      "answer": "The open P2P Escrow service is a smart contract that facilitates trustless, private sales on the Ergo blockchain for a nominal fee."
+    },
+    {
+      "question": "What tokens can be used in the P2P Escrow service?",
+      "answer": "The P2P Escrow service accepts Ergo tokens, such as a non-fungible token (NFT), 100 SigUSD, or other token(s) from the seller."
+    },
+    {
+      "question": "How does the P2P Escrow service work?",
+      "answer": "Once the tokens are in the contract, only a defined buyer sending a defined amount of ERG can access them. If the exchange is successful, the contract sends the tokens to the buyer and the ERG to the seller. The seller can cancel the contract at any time before the exchange is made."
+    },
+    {
+      "question": "What wallet application is required to use Token Jay?",
+      "answer": "You will need an ErgoPay compatible Wallet Application to use Token Jay."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Token Jay\n  - P2P Trading\n  - Escrow\n  - SigmaUSD\n  - SigmaRSV\n  - Token Burner\n  - dApp\n---"
+    },
+    {
+      "heading": "Token Jay",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "Token Jay is your one-stop solution for dealing with tokens on Ergo. It offers open, fully documented applications that are accessible to everyone.\n\nYou can trade tokens in a trustless and decentralized manner using TokenJay's open P2P Escrow service. Visit [tokenjay.app](https://tokenjay.app/) to get started. Please note that you will need an ErgoPay compatible Wallet Application."
+    },
+    {
+      "heading": "Tools Available on TokenJay:",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "P2P Escrow",
+      "level": 4,
+      "content": "The open P2P Escrow service is a smart contract that facilitates trustless, private sales on the Ergo blockchain for a nominal fee. The contract accepts Ergo tokens, such as a non-fungible token (NFT), 100 SigUSD, or other token(s) from the seller. Once the tokens are in the contract, only a defined buyer sending a defined amount of ERG can access them. If the exchange is successful, the contract sends the tokens to the buyer and the ERG to the seller. The seller can cancel the contract at any time before the exchange is made."
+    },
+    {
+      "heading": "How to use P2P Escrow:",
+      "level": 5,
+      "content": "1. Visit [TokenJay](http://tokenjay.app)\n2. Connect your wallet by scanning the QR code\n3. Navigate to 'Your Token Sales'\n4. Click 'Start New Sale'\n5. Select the vesting key from your wallet\n6. Enter the buyer's address\n7. Set the price the buyer should pay (in $ per SPF token, converted into Erg)\n8. Click 'Sell Token'\n9. Sign the transaction\n\nOnce the transaction is confirmed, the buyer can make the purchase via TokenJay. The offer will appear under 'P2P Escrow offers'. The buyer should verify the token and minting transaction to ensure its authenticity. If it's an Ergopad vesting key, they can verify the tokenid in the verifier API:\n\n[https://api.ergopad.io/vesting/vestedWithKey/tokenid](https://api.ergopad.io/vesting/vestedWithKey/tokenid)\n\nThis will return whether it is a real key, the token type, and the number of tokens. If everything checks out, they can click 'Buy' and sign the transaction.\n\nOnce the transaction is processed, the Erg is sent to the seller, the key is sent to the buyer, and the contract takes a small fee.\n\nFor more information, visit [https://tokenjay.app/escrow.html](https://tokenjay.app/escrow.html)"
+    },
+    {
+      "heading": "SigUSD and SigRSV",
+      "level": 4,
+      "content": "With TokenJay, you can convert ERG into SigUSD and SigRSV directly with the bank in a single transaction. Visit [https://tokenjay.app/ageusd.html](https://tokenjay.app/ageusd.html) for more details."
+    },
+    {
+      "heading": "Utilities",
+      "level": 4,
+      "content": "TokenJay also offers a Token Burner utility that allows you to burn unwanted NFTs and tokens. Visit [https://tokenjay.app/app/#burntoken](https://tokenjay.app/app/#burntoken) to use this utility."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/token-jay.md",
+  "processed_at": "2025-05-11T19:48:47.533807",
+  "ai_processed": true
+}

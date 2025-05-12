@@ -1,0 +1,98 @@
+{
+  "id": "docs_dev_stack_rpi-blockchain-explorer_md",
+  "title": "Tutorial: Blockchain Explorer with Raspberry Pi",
+  "summary": "This tutorial provides a step-by-step guide on how to set up the Chain-Grabber module from the Ergo Blockchain Explorer on a Raspberry Pi device. It covers the prerequisites, preparing the Raspberry Pi, installing Java, sbt, and PostgreSQL, and setting up the database schema. The goal is to enable developers and data scientists to store the Ergo blockchain data in a standardized database format using a Raspberry Pi.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Chain-Grabber module in the Ergo Blockchain Explorer?",
+      "answer": "The Chain-Grabber module is used to store the Ergo blockchain to a standardized database format on a Raspberry Pi device."
+    },
+    {
+      "question": "What are the minimum requirements for setting up the Chain-Grabber module on a Raspberry Pi?",
+      "answer": "The minimum requirements are: Raspberry Pi with official OS installed, minimum 60GB of disk space available, and SSH enabled with stable internet connection."
+    },
+    {
+      "question": "What are the first steps in preparing the Raspberry Pi for the Chain-Grabber module?",
+      "answer": "The first steps are to run the commands 'sudo apt update' and 'sudo apt full-upgrade' to update the system."
+    },
+    {
+      "question": "What is the Ergo Blockchain Explorer (backend) and where can it be found?",
+      "answer": "The Ergo Blockchain Explorer (backend) is the source of the Chain-Grabber module, and it can be found at the GitHub repository https://github.com/ergoplatform/explorer-backend."
+    },
+    {
+      "question": "Who is the target audience for this tutorial?",
+      "answer": "The target audience for this tutorial is developers and data scientists interested in storing the Ergo blockchain to a standardized database format using a Raspberry Pi."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Tutorial: Blockchain Explorer with Raspberry Pi",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "How to setup the Chain-Grabber module on a Raspberry Pi device",
+      "level": 2,
+      "content": "This is a guide for developers and data scientists interested in storing the Ergo blockchain to a standardized database format using a Raspberry Pi.\n\nWe will focus specifically on the Chain Grabber module from the [Ergo Blockchain Explorer (backend)](https://github.com/ergoplatform/explorer-backend)."
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 3,
+      "content": "* Raspberry Pi with official OS installed\n* Minimum 60GB of disk space available\n* SSH enabled with stable internet connection\n\n<br>"
+    },
+    {
+      "heading": "Preparing the RPi",
+      "level": 3,
+      "content": "```bash\nsudo apt update\nsudo apt full-upgrade\n```"
+    },
+    {
+      "heading": "Download latest Java version",
+      "level": 3,
+      "content": "```bash\nsudo apt install default-JDK\n```"
+    },
+    {
+      "heading": "Download sbt",
+      "level": 3,
+      "content": "```bash\necho \"deb https://repo.scala-sbt.org/scalasbt/debian /\" | sudo tee -a /etc/apt/sources.list.d/sbt.list\ncurl -sL \"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823\" | sudo apt-key add\nsudo apt update\nsudo apt install sbt\n```"
+    },
+    {
+      "heading": "Download and unzip precompiled JAR",
+      "level": 3,
+      "content": "If you are reading this in the future, please visit the [code release repo](https://github.com/ergoplatform/explorer-backend/releases) and replace it with the appropriate version.\n\n```bash\nwget https://github.com/ergoplatform/explorer-backend/archive/refs/tags/<version>.zip\n\nunzip explorer-backend-<version>\n```"
+    },
+    {
+      "heading": "Install PostgreSQL",
+      "level": 3,
+      "content": "In the code snippet below, we created \"ergo\" as the username.\n\n```bash\nsudo apt install postgresql\nsudo su postgres\ncreateuser ergo -P --interactive\n```"
+    },
+    {
+      "heading": "Setup and load database schema",
+      "level": 3,
+      "content": "```bash\npsql\ncreate database explorer;\n\\c explorer;\n\\i /explorer-backend-9.4.3/modules/explorer-core/src/main/resources/db/V9__Schema.sql\n```\nThe final line of code above executes a SQL script that creates a bunch of tables and indices to be populated later by the Chain Grabber."
+    },
+    {
+      "heading": "Update app config",
+      "level": 3,
+      "content": "This is where you need to edit the database username and password you set up earlier. \n\n```bash\nsudo nano explorer-backend-9.4.3/modules/chain-grabber/src/main/resources/application.conf\n```"
+    },
+    {
+      "heading": "Launch chain-grabber",
+      "level": 3,
+      "content": "Run the following command from within the `explorer-backend` directory. \n```bash\nsbt chain-grabber/run\n```"
+    },
+    {
+      "heading": "Validate",
+      "level": 3,
+      "content": "If all goes well, the code below returns the latest block height that was stored in the database.\n\n```bash\nselect max(height) from node_headers;\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/rpi-blockchain-explorer.md",
+  "processed_at": "2025-05-11T19:36:23.144943",
+  "ai_processed": true
+}

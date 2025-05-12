@@ -1,0 +1,9 @@
+The document provides a step-by-step guide for beginners on how to use Ergo's APIs. It covers the following key points:
+
+1. Choosing an API that suits your needs.
+2. Reading the API documentation to understand the available endpoints, parameters, and response formats.
+3. Authenticating with the API if required.
+4. Testing the API endpoints using tools like Postman or cURL.
+5. Exploring data retrieval from the API endpoints.
+6. Integrating the API calls into your application or project.
+7. Handling potential errors when using the API.

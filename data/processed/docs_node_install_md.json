@@ -1,0 +1,43 @@
+{
+  "id": "docs_node_install_md",
+  "title": "The Ergo Reference Client (Node)",
+  "summary": "The Ergo Reference Client (Node) is the core software that connects to the Ergo P2P network, validates transactions and blocks, and maintains a copy of the entire blockchain. Running a node is crucial for the network's decentralization and security. The document outlines the installation options and resources for the Ergo reference client, including minimum requirements, pre-requisites, and different modes of operation such as Pruned Full Node and Full Archival Node. It also provides information on alternative options like integrated wallets that offer a built-in node installation.",
+  "qa_pairs": [
+    {
+      "question": "What is the Ergo Reference Client (Node)?",
+      "answer": "The Ergo Node is the core software that connects to the Ergo P2P network, validates transactions and blocks, and maintains a copy of the entire blockchain."
+    },
+    {
+      "question": "What are the minimum hardware requirements for running an Ergo node?",
+      "answer": "The minimum hardware requirements are approximately ~20GB of storage for the blockchain and ~8GB of RAM for handling the initial sync. We recommend having at least 4-6GB of RAM available for the node process and using a fast SSD."
+    },
+    {
+      "question": "What version of Java is required to run an Ergo node?",
+      "answer": "An Ergo node requires a JDK/JRE version >= 9 installed on your system. We recommend using Oracle Java SE or SDKMAN for Unix-based systems."
+    },
+    {
+      "question": "What are the alternatives to running a full Ergo node?",
+      "answer": "If you're simply looking for a secure place to store your ERG, see the wallets page. Some wallets like Satergo offer an integrated option to install and run a full node."
+    },
+    {
+      "question": "What command can be used to install Java 11 using SDKMAN on Unix-based systems?",
+      "answer": "curl -s \"https://get.sdkman.io\" | bash\nsdk install java 11.0.13.8.1-amzn"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Node\n  - Reference Client\n  - Installation\n  - Setup\n  - Guide\n---"
+    },
+    {
+      "heading": "The Ergo Reference Client (Node)",
+      "level": 1,
+      "content": "The Ergo Node is the core software that connects to the Ergo [P2P network](p2p-protocol-overview.md), validates [transactions](transactions.md) and [blocks](block.md), and maintains a copy of the entire [blockchain](protocol.md). Running a node is crucial for the network's decentralization and security. This page outlines the installation options and resources for the Ergo reference client.\n\n\n/// details | Alternatives\n    {type: info, open: true}\nIf you're simply looking for a secure place to store your ERG, see the [wallets](wallets.md) page. Some wallets like [Satergo](satergo.md) offer an integrated option to install and run a full node.\n///\n\n///// details | Installing the Ergo Reference Client\n    {type: tip, open: true}\n//// details | Minimum Requirements & Pre-requisites\n    {type: warning, open: false}\n**Java**\n\nAn Ergo node requires a **JDK/JRE version >= 9** installed on your system. We recommend using [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/overview/index.html) or SDKMAN for Unix-based systems:\n\n```bash\ncurl -s \"https://get.sdkman.io\" | bash\nsdk install java 11.0.13.8.1-amzn\n```\n\n**Hardware**\n\nThe minimum hardware requirements are approximately ~20GB of storage for the blockchain and ~8GB of RAM for handling the initial sync. Due to potentially intensive disk I/O during sync, we recommend having at least 4-6GB of RAM available for the node process and using a fast SSD. Running with the `-Xmx4G` flag on the JVM is advised.\n////\n//// details | Modes of operation\n    {type: notes, open: true}\nErgo node offers various [Modes of Operation](modes.md) for user flexibility. For quick sync and full node security, consider setting up a Pruned Full Node.\n/// details | Full Archival Node\n    {type: tip, open: false}\nThis mode stores the entire blockchain history. To install from scratch, refer to the [manual install](manual.md) page for detailed instructions.\n///\n/// details | Pruned Full Node\n    {type: tip, open: false}\nBootstrap a [pruned full node](pruned-full-node.md) using a verified [UTXO set snapshot](eutxo.md) and [NiPoPoWs](nipopows.md). This feature allows you to achieve full node security on standard hardware within minutes, eliminating the need to download and validate most of the historical blockchain data.\n///\n/// details | Light Full Node\n    {type: tip, open: false}\n[This mode](light-full-node.md) only holds the root digest of the state dictionary and checks full blocks or a suffix of the blockchain, depending on the `blocksToKeep` setting ([History Pruning](history-pruning.md)).\n///\n////\n\n//// details | Per device\n    {type: notes, open: true}\n/// details | Android\n    {type: tip, open: false}\nSync the entire Ergo blockchain on your [mobile device](node-android.md)!\n///\n/// details | Raspberri Pi\n    {type: tip, open: false}\nRun a node on a [Raspberry Pi](pi.md)!\n///\n////\n\n\n//// details | Developer Resources\n    {type: notes, open: false}\n\n/// details | DeepWiki Documentation\n    {type: info, open: true}\nFor an alternative and potentially more detailed documentation source generated from the repository, explore the [Ergo Node on DeepWiki](https://deepwiki.com/ergoplatform/ergo/1-ergo-node-overview)\n///\n\n\n/// details | Get setup on Testnet\n    {type: tip, open: false}\nAlternatively, if you want to get started on the [testnet](testnet.md), there is a dedicated [testnet setup guide](testnet.md) available.\n///\n/// details | Use Docker\n    {type: tip, open: false}\nFor more convenience, Docker provides a streamlined way to install and run the Ergo Node. Refer to the [Docker guide](docker.md) for instructions on setting up the node using Docker.\n///\n/// details | Toolkits\n    {type: notes, open: false}\n- [Explorer & Node Bundles](explorer.md#toolkits): Access pre-packaged bundles that include an Ergo Node and an [explorer](explorer.md) for easy setup.\n- [Ergosphere](https://ergosphere.cloud/): Ergosphere is an Umbrel-like solution that simplifies the setup of self-hosted Ergo services. Please note that it is currently in the BETA stage.\n- [Ergode](https://github.com/ross-weir/ergode) (ergo-node) is an Ergo node implementation in TypeScript, targeting web and native runtimes.\n///\n/// details | Resources\n    {type: notes, open: false}\n- To get an overview of live nodes on the Ergo network, you can visit [ergonodes.net](http://ergonodes.net).\n- [Node Frequently Asked Questions](node-faq.md): Find answers to common questions about the Ergo Node.\n- [Modes of Operation](modes.md): Learn about the different modes of operation available for the Ergo Node.\n- [Node APIs](api.md): Explore the APIs provided by the Ergo Node for interacting with the blockchain.\n- [Node Configuration](conf.md): Details on configuring the node via the `application.conf` file.\n- [Node Protocol Details](protocol.md): Information on the underlying network protocol.\n///\n////"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install.md",
+  "processed_at": "2025-05-11T19:54:47.784452",
+  "ai_processed": true
+}

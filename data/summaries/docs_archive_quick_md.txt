@@ -1,0 +1,1 @@
+Quick Install: Run the provided command to get started. Prerequisites include Java, Python, and Windows Subsystem if running Windows. Instructions are provided for installing Java and Python. For Windows, the document recommends enabling the Linux Subsystem. A Docker Compose configuration is provided to run an Ergo blockchain node, with instructions to start and monitor the node.

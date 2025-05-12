@@ -1,0 +1,38 @@
+{
+  "id": "docs_node_install_linux_md",
+  "title": "linux.md",
+  "summary": "This document provides instructions for setting up and configuring a full Ergo node on Linux systems. It offers two options: using the ergo-installer.sh script to install the latest Ergo node, or following a step-by-step manual setup process detailed in a separate tutorial document. The document does not cover mining, and focuses solely on the installation and configuration of the Ergo node.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the ergo-installer.sh script?",
+      "answer": "The ergo-installer.sh script is used to install and run a full Ergo node on Linux systems."
+    },
+    {
+      "question": "How can you run the ergo-installer.sh script?",
+      "answer": "You can run the ergo-installer.sh script by executing the following command: curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>"
+    },
+    {
+      "question": "What is the alternative to using the ergo-installer.sh script?",
+      "answer": "The alternative to using the ergo-installer.sh script is to follow a step-by-step manual setup process, which is described in the tutorial.md file."
+    },
+    {
+      "question": "Does the ergo-installer.sh script cover the setup for mining?",
+      "answer": "No, the ergo-installer.sh script does not cover the setup for mining. It only explains how to install and run a full Ergo node."
+    },
+    {
+      "question": "What is the main purpose of setting up a full Ergo node?",
+      "answer": "The main purpose of setting up a full Ergo node is to participate in the Ergo network and have a local copy of the blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "How to set up and configure a full Ergo node",
+      "level": 2,
+      "content": "This page explains how to install and run a full Ergo node. It does not cover mining. \n\nLinux Systems can run [ergo-installer.sh](https://github.com/ergoplatform/ergo/blob/master/ergo-installer.sh)\n\n```bash\ncurl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>\n```\n\nWith this script you'll have the latest Ergo node installed without any hassle.\n\nIf you'd prefer to get set up manually, here's a [step-by-step.](tutorial.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/linux.md",
+  "processed_at": "2025-05-11T19:55:10.864852",
+  "ai_processed": true
+}

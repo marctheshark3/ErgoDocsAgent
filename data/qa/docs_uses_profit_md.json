@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ErgoProfitSharingDapp?",
+    "answer": "The ErgoProfitSharingDapp will provide a way for dapps to distribute gains among dapps' token holders."
+  },
+  {
+    "question": "Who is the first user of the ErgoProfitSharingDapp?",
+    "answer": "The first user of this service will be the ErgoMixer."
+  },
+  {
+    "question": "How does the ErgoMixer currently receive its income?",
+    "answer": "The ErgoMixer's income (in ERG and other tokens) is currently received by its creator, aka 'anon2020s', since it has only one stakeholder at the moment."
+  },
+  {
+    "question": "What does the creator of the ErgoMixer plan to do to obtain more stakeholders?",
+    "answer": "The creator of the ErgoMixer has announced that he is willing to create and sell some tokens in the near future to obtain more stakeholders, which will be called MIX."
+  },
+  {
+    "question": "How can anyone having the MIX tokens benefit from the ErgoMixer's income?",
+    "answer": "Anyone having the MIX tokens can stake these tokens in the Profit Sharing contract and obtain the mixer's incomes proportional to their staked tokens."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is SigmaFi?",
+    "answer": "SigmaFi is a P2P DeFi bond market that is currently live and open-source."
+  },
+  {
+    "question": "How does SigmaFi enable loans?",
+    "answer": "SigmaFi enables any Ergo wallet holder to request a loan, specifying the loan amount, term, and interest, with the loans guaranteed by collateral."
+  },
+  {
+    "question": "What is the role of smart contracts in SigmaFi?",
+    "answer": "Each new loan request generates a smart contract that outlines the loan terms, holds the collateral, and offers the loan on the SigmaFi website."
+  },
+  {
+    "question": "What model does SigmaFi utilize?",
+    "answer": "SigmaFi utilizes the extended unspent transaction output (eUTXO) model to create these loans."
+  },
+  {
+    "question": "What is the purpose of SigmaFi?",
+    "answer": "SigmaFi exemplifies decentralized finance (DeFi), facilitating the creation and funding of loan requests directly between individuals, without the need for banks or other intermediaries."
+  }
+]

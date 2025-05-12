@@ -1,0 +1,53 @@
+{
+  "id": "docs_node_install_mac_md",
+  "title": "Mac",
+  "summary": "The document provides instructions for setting up an Ergo node on a Mac. It covers the prerequisites, which include having Java version 9 or 11 installed. It then provides a script to download the node and set up the API password. The document also mentions how to track the sync status and provides a link to the troubleshooting page for more information. Finally, it explains how to add the node as a startup item on the Mac.",
+  "qa_pairs": [
+    {
+      "question": "What Java version is recommended for running an Ergo node?",
+      "answer": "Version 9 or 11 is recommended."
+    },
+    {
+      "question": "How do you install Java 11 using SDKMAN?",
+      "answer": "sdk install java 11.0.13.8.1-amzn"
+    },
+    {
+      "question": "How do you download the Ergo node and set up the API password?",
+      "answer": "bash -c \"$(curl -s https://node.phenotype.dev)\""
+    },
+    {
+      "question": "How can you track the status of the Ergo node sync?",
+      "answer": "Compare the heights found in [127.0.0.1:9053/info](http://127.0.0.1:9053/info) to the ones on the [explorer](https://explorer.ergoplatform.com/en/)."
+    },
+    {
+      "question": "How do you add the Ergo node jar as a startup item?",
+      "answer": "Create a wrapper shell script, set the permissions to allow execute, and then add it by pressing + and selecting the script."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Mac",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 3,
+      "content": "**Java**\n\nTo run an Ergo node you need Java installed on your system. Version 9 or 11 is recommended.\n\n```\ncurl -s \"https://get.sdkman.io\" | bash\nsdk install java 11.0.13.8.1-amzn\n```\n\nThen run the following script to download the node and setup your `API` password\n\n```\nbash -c \"$(curl -s https://node.phenotype.dev)\"\n```\n\nYou can track the status of the sync by comparing the heights found in [127.0.0.1:9053/info](http://127.0.0.1:9053/info) to the ones on the [explorer](https://explorer.ergoplatform.com/en/).\n\n\nPlease see the [troubleshooting page](troubleshooting.md) for more information."
+    },
+    {
+      "heading": "Run each startup",
+      "level": 2,
+      "content": "- Open System Preferences > Users & Groups > User ID (your nickname on the right)\n- Now select the Login items tab .\n\nTo add the jar as a startup item, you'll need to create a wrapper shell script, set the permissions to allow execute, and then add it by pressing + and selecting the script."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/mac.md",
+  "processed_at": "2025-05-11T19:55:14.229875",
+  "ai_processed": true
+}

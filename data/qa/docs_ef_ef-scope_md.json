@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary focus of the Ergo Foundation?",
+    "answer": "The Ergo Foundation's primary focus is to support the Ergo Platform in providing an efficient and secure way to implement financial contracts, the most widely used application of blockchain technology."
+  },
+  {
+    "question": "What are the key principles that guide the Ergo Foundation?",
+    "answer": "The Ergo Foundation is committed to the principles of organic and non-breaking development, open-source and permissive licensing, privacy and trustless environments, and being community-driven."
+  },
+  {
+    "question": "How does the Ergo Foundation ensure a gradual and non-disruptive evolution of the Ergo Platform?",
+    "answer": "The Ergo Foundation ensures that protocol changes are approved not only by miners, who express their will directly on the blockchain, but also by users and projects building on top of Ergo."
+  },
+  {
+    "question": "What is the Ergo Foundation's approach to the Ergo Treasury?",
+    "answer": "The Ergo Foundation believes that the Treasury should be distributed mainly to the community, including freelancers, hackers, experts, and enthusiasts, to recognize the vital role of the community in driving innovation and growth."
+  },
+  {
+    "question": "What are the key areas of focus for the Ergo Foundation?",
+    "answer": "The Ergo Foundation's efforts are focused on supporting protocol research, development of the reference client, alternative clients, libraries, and developer tooling, as well as improving market access for Ergo."
+  }
+]

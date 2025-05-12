@@ -1,0 +1,53 @@
+{
+  "id": "docs_node_modes_light-spv-node_md",
+  "title": "Light-SPV Mode",
+  "summary": "The document introduces the concept of Light-SPV Mode, which allows for simplified payment verification (SPV) on the Ergo blockchain. Ergo implements Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) to enhance the efficiency of SPV wallets, enabling them to download a small sample of block headers (around 250) rather than the entire blockchain. This makes it possible for users with limited resources to participate in the network and make transactions without needing a full node. The document also mentions that Ergo is currently developing a highly efficient Ergo wallet with SPV security.",
+  "qa_pairs": [
+    {
+      "question": "What is SPV?",
+      "answer": "Simplified Payment Verification (SPV) allows for a simplified way of verifying transactions by only downloading and verifying the block headers, rather than the entire blockchain."
+    },
+    {
+      "question": "How does Ergo's NIPoPoWs enhance the efficiency of SPV wallets?",
+      "answer": "Ergo implements Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) to enable the creation of lightweight SPV wallets that only need to download a small sample of block headers, around 250, compared to other SPV clients that may need to download around half a million block headers."
+    },
+    {
+      "question": "What is the advantage of the small sample size of block headers for Ergo's SPV wallets?",
+      "answer": "The sample size remains relatively small even as the blockchain grows larger over time."
+    },
+    {
+      "question": "What is Ergo currently developing?",
+      "answer": "Ergo is currently developing a highly efficient Ergo wallet with SPV security."
+    },
+    {
+      "question": "Where can one stay updated on the progress of the Ergo wallet development?",
+      "answer": "One can stay updated on the progress of the Ergo wallet development at the provided GitHub link: https://github.com/ergoplatform/sigma-rust/milestone/17."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - NIPoPoWs\n---"
+    },
+    {
+      "heading": "Light-SPV Mode",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "What is SPV?",
+      "level": 2,
+      "content": "[Simplified Payment Verification (SPV)](spv.md) allows for a simplified way of verifying transactions by only downloading and verifying the block headers, rather than the entire blockchain. This makes it possible for users with limited resources to participate in the network and make transactions without needing a full node."
+    },
+    {
+      "heading": "Ergo's NIPoPoWs",
+      "level": 2,
+      "content": "Ergo implements Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) to enhance the efficiency of SPV wallets. NIPoPoWs are short stand-alone strings that allow a computer program to verify events on a proof-of-work-based blockchain without connecting to the blockchain network or downloading all block headers. This enables the creation of lightweight SPV wallets that only need to download a small sample of block headers, around 250, compared to other SPV clients that may need to download around half a million block headers. The sample size remains relatively small even as the blockchain grows larger over time.\n\nWe are currently developing a highly efficient Ergo wallet with SPV security. Stay updated on the progress of this development [here](https://github.com/ergoplatform/sigma-rust/milestone/17)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes/light-spv-node.md",
+  "processed_at": "2025-05-11T19:56:36.503763",
+  "ai_processed": true
+}

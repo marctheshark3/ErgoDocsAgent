@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Extension Block Merkle Tree in Ergo?",
+    "answer": "The Extension Block Merkle Tree in Ergo ensures the integrity and authenticity of additional key-value data stored within the extension section of each block."
+  },
+  {
+    "question": "What types of data are stored in the Extension Block of Ergo?",
+    "answer": "The Extension Block in Ergo can contain key-value pairs representing miner votes, protocol parameters, and non-interactive proofs."
+  },
+  {
+    "question": "How does the Merkle Tree structure ensure the integrity of the Extension Block data?",
+    "answer": "Each key-value pair in the Extension Block is encoded as a leaf node in the Merkle Tree, so any changes to the data will result in a different Merkle Root, making tampering detectable."
+  },
+  {
+    "question": "What are the key components of the Extension Block Merkle Tree in Ergo?",
+    "answer": "The key components are the key-value data structure, where each pair is encoded as a leaf node in the Merkle Tree."
+  },
+  {
+    "question": "What are the practical applications of the Extension Block Merkle Tree in Ergo?",
+    "answer": "The Extension Block Merkle Tree ensures the integrity and authenticity of auxiliary data, such as miner votes, protocol parameters, and non-interactive proofs, which extend the functionality of the Ergo protocol."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a Schnorr signature?",
+    "answer": "In the simplest case, a signature in an Ergo transaction is a Schnorr signature. In more complex cases, it corresponds to a subset of Generalized Schnorr Proofs, which are used in privacy-preserving applications and advanced cryptographic protocols."
+  },
+  {
+    "question": "What elliptic curve does Ergo use for its Schnorr signatures?",
+    "answer": "Ergo uses the SecP256K1 elliptic curve, the same curve used in Bitcoin."
+  },
+  {
+    "question": "What are the key properties of Ergo's Schnorr signatures?",
+    "answer": "Key properties include: using the SecP256K1 elliptic curve, supporting Generalized Schnorr Proofs for privacy-preserving applications, and following established cryptographic standards (RFCs) for interoperability with protocols like MuSig."
+  },
+  {
+    "question": "What are the main steps in the Schnorr signature process?",
+    "answer": "The Schnorr signature process consists of key generation, signing, and verification."
+  },
+  {
+    "question": "How does key generation work for Schnorr signatures?",
+    "answer": "A user generates a private key x and computes the corresponding public key P = xG, where G is the generator point on the elliptic curve."
+  }
+]

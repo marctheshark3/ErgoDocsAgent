@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_stack_android_md",
+  "title": "Android",
+  "summary": "The document provides an overview of Android development, highlighting the JVM suite (Java/Kotlin/Scala) as the primary tools for developing Android applications. It introduces several platforms and tools related to Android development, including AppKit, Mosaik, sigma-rust, Gradle, and a DeCo Intro Lessons video. The document also includes a link to a simple Ergo Android application that demonstrates the use of the Ergo Appkit for developing Ergo applications on Android.",
+  "qa_pairs": [
+    {
+      "question": "What programming languages can be used to develop Android applications?",
+      "answer": "Java, Kotlin, and Scala can be used to develop Android applications."
+    },
+    {
+      "question": "What is AppKit?",
+      "answer": "AppKit is a library for polyglot development of Ergo Applications."
+    },
+    {
+      "question": "What is Mosaik?",
+      "answer": "Mosaik is a UI system for dApps."
+    },
+    {
+      "question": "Where are the Android bindings for Ergo implemented?",
+      "answer": "The Android bindings for Ergo are implemented in sigma-rust."
+    },
+    {
+      "question": "What tool is recommended for getting started with building on Android?",
+      "answer": "Gradle is recommended for getting started with building on Android."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Android",
+      "level": 1,
+      "content": "To develop an android application you can develop with the JVM suite (Java/Kotlin/Scala)."
+    },
+    {
+      "heading": "Platforms",
+      "level": 2,
+      "content": "::cards::\n\n[\n\n  {\n    \"title\": \"AppKit\",\n    \"content\": \"A library for polyglot development of Ergo Applications\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"appkit.md\"\n  },\n  {\n    \"title\": \"Mosaik\",\n    \"content\": \"UI system for dApps\",\n    \"image\": \"../../assets/img/dev-grid/mosaik.png\",\n    \"url\": \"mosaik/intro.md\"\n  },\n  {\n    \"title\": \"sigma-rust\",\n    \"content\": \"Android bindings are implemented in sigma-rust\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"sigma-rust.md\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "::cards::\n\n[\n\n\n  {\n    \"title\": \"Gradle\",\n    \"content\": \"Getting started with Gradle to build on Android.\",\n    \"image\": \"../../assets/img/dev-grid/gradle.png\",\n    \"url\": \"appkit/gradle.md\"\n  },\n  {\n    \"title\": \"\ud83d\udcd5 DeCo Intro Lessons: Build a mobile app on Android or iOS\",\n    \"url\": \"https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Tools",
+      "level": 2,
+      "content": "::cards::\n\n[\n\n  {\n    \"title\": \"\ud83d\udd17 Ergo Android\",\n    \"content\": \"Simple application that demonstrates how Ergo Appkit can be used to develop Ergo applications running on Android.\",\n    \"url\": \"https://github.com/aslesarenko/ergo-android\"\n\n  }\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/android.md",
+  "processed_at": "2025-05-11T19:32:34.875407",
+  "ai_processed": true
+}

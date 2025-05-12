@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the BoxSpec struct?",
+    "answer": "The BoxSpec struct allows you to create a specification of a UTXO, which is used for defining the boxes required for the actions of your protocol."
+  },
+  {
+    "question": "What are the key features of the WrappedBox, SpecifiedBox, and ExplorerFindable traits?",
+    "answer": "WrappedBox provides a simplified interface for interacting with ErgoBoxes, SpecifiedBox specifies that a WrappedBox also implements a BoxSpec, and ExplorerFindable provides an interface for finding boxes that match the BoxSpec from an Ergo Explorer API instance."
+  },
+  {
+    "question": "What are the currently implemented Specified Boxes?",
+    "answer": "The currently implemented Specified Boxes are ErgsBox, ErgUsdOraclePoolBox, and AdaUsdOraclePoolBox."
+  },
+  {
+    "question": "How can you read the current Erg-USD oracle pool rate using the ErgUsdOraclePoolBox?",
+    "answer": "You can read the current Erg-USD oracle pool rate in 4 lines of code by using the ErgUsdOraclePoolBox and interacting with the Ergo Explorer API."
+  },
+  {
+    "question": "What are the example Output Builders provided in the module?",
+    "answer": "The example Output Builders provided are ChangeBox, TokensChangeBox, and TxFeeBox."
+  }
+]

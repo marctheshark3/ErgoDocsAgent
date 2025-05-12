@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the critical-dispatcher?",
+    "answer": "The critical-dispatcher is a dedicated actor dispatcher, utilized exclusively by the block candidate generator and NodeViewHolder actors within the system, to maintain critical tasks which require isolation from other non-critical activities."
+  },
+  {
+    "question": "What type of executor is configured for the critical-dispatcher?",
+    "answer": "The critical-dispatcher is configured to use the \"thread-pool-executor\" as the executor."
+  },
+  {
+    "question": "How many threads are in the thread pool for the critical-dispatcher?",
+    "answer": "The fixed-pool-size for the critical-dispatcher is set to 2 threads."
+  },
+  {
+    "question": "What is the throughput setting for the critical-dispatcher?",
+    "answer": "The throughput for the critical-dispatcher is set to 1, which means the maximum number of messages to be processed per actor before the thread is made available to other actors is 1."
+  },
+  {
+    "question": "What are the key configuration settings for the critical-dispatcher?",
+    "answer": "The key configuration settings for the critical-dispatcher are: type = Dispatcher, executor = \"thread-pool-executor\", fixed-pool-size = 2, and throughput = 1."
+  }
+]

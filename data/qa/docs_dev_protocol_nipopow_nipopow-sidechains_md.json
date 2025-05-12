@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are NiPoPoWs?",
+    "answer": "Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) are a novel technology that enables trustless sidechains."
+  },
+  {
+    "question": "How do NiPoPoW sidechains work?",
+    "answer": "NiPoPoW sidechains utilize a method where proofs are both succinct and can be quickly verified, achieved through the use of superblocks."
+  },
+  {
+    "question": "What are the key technical insights from academic research on NiPoPoW sidechains?",
+    "answer": "The 'Proof of Work Sidechains' paper discusses a first-of-its-kind construction for sidechains that allows communication between proof-of-work blockchains without trusted intermediaries."
+  },
+  {
+    "question": "What are the applications of NiPoPoW sidechains?",
+    "answer": "NiPoPoW sidechains have applications in cross-chain transactions, decentralized finance (DeFi), and scalability solutions."
+  },
+  {
+    "question": "How do NiPoPoW sidechains enable efficient cross-chain transactions?",
+    "answer": "Sidechains equipped with NiPoPoW verifiers can validate proofs without having access to the full blockchain data of another chain, enabling efficient cross-chain transactions."
+  }
+]

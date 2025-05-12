@@ -1,0 +1,263 @@
+{
+  "id": "docs_dev_get-started_md",
+  "title": "Developer's Guide",
+  "summary": "The Developer's Guide provides an in-depth overview of the Ergo platform, highlighting its key features such as ErgoScript, the extended UTXO model (eUTXO), Autolykos mining, NiPoPoWs, and Turing-complete smart contracts. It covers the transactional model, boxes and their components, and various tutorials and guides for developers, including creating and sending transactions, issuing and burning tokens, minting NFTs, and understanding ErgoScript. The guide aims to help both seasoned blockchain developers and newcomers gain a comprehensive understanding of the Ergo platform and the resources available for development.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoScript?",
+      "answer": "ErgoScript is a simple high-level language that enables clear descriptions of contractual logic. It supports the creation of flexible crypto-contracts based on \u03a3-protocols, allowing for privacy-preserving transactions and complex smart contract functionality."
+    },
+    {
+      "question": "What is the eUTXO model in Ergo?",
+      "answer": "The eUTXO model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate or spending condition. This flexibility enables the representation of various assets, tokens, and smart contract states within the Ergo blockchain."
+    },
+    {
+      "question": "What is the Autolykos algorithm used for in Ergo?",
+      "answer": "Ergo utilizes the Autolykos, an efficient, ASIC-resistant Proof-of-Work algorithm designed for a fair launch."
+    },
+    {
+      "question": "What are NiPoPoWs in Ergo?",
+      "answer": "NiPoPoWs, or Non-Interactive Proofs of Proof-of-Work, are compact data structures that validate blockchain events without needing full network connectivity or downloading all block headers. They enable efficient light clients, log-space mining, and trustless sidechains."
+    },
+    {
+      "question": "What is the purpose of the storage rent (demurrage) mechanism in Ergo?",
+      "answer": "The storage rent, or demurrage, mechanism in Ergo mitigates blockchain bloat and turns it into a profitable venture by charging for on-chain storage."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Developer Guide\n  - Getting Started\n  - Overview\n---"
+    },
+    {
+      "heading": "Developer's Guide",
+      "level": 1,
+      "content": "/// admonition | Welcome to the Ergo Developer's Guide\n\nWelcome to the comprehensive **Ergo Developer's Guide**! Whether you're a seasoned blockchain developer or just starting out, this guide is designed to provide you with an in-depth understanding of the Ergo platform and the resources available to you. Explore the unique features of Ergo, learn how to develop on our platform, and connect with our vibrant community.\n\n///"
+    },
+    {
+      "heading": "Ergo Platform Overview",
+      "level": 2,
+      "content": "Ergo is a next-generation **Proof-of-Work (PoW)** blockchain platform designed for secure, efficient, and decentralized smart contract execution. It lays the foundation for a new wave of blockchain-based applications, focusing on scalability, security, and privacy. Ergo leverages advanced technologies like the powerful scripting language **ErgoScript**, flexible **Zero-Knowledge Proofs**, and the **eUTXO model**, an evolution of Bitcoin's UTXO model.\n\n- Get a concise overview of Ergo, its standout features, and the technology and decisions that power it on the **[*Why Ergo?*](why.md)** page.\n- Find answers to the most common questions about Ergo in our **[FAQ](faq.md)**."
+    },
+    {
+      "heading": "Key Features",
+      "level": 3,
+      "content": "- **ErgoScript**: A simple high-level language that enables clear descriptions of contractual logic. ErgoScript supports the creation of flexible crypto-contracts based on \u03a3-protocols (a class of Zero-Knowledge Proofs), allowing for privacy-preserving transactions and complex smart contract functionality.\n\n- **Extended UTXO Model (eUTXO)**: The [eUTXO](eutxo.md) model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate or spending condition. This flexibility enables the representation of various assets, tokens, and smart contract states within the blockchain.\n\n- **Mining with Autolykos**: Ergo utilizes [Autolykos](autolykos.md), an efficient, ASIC-resistant Proof-of-Work algorithm designed for a fair launch.\n    - Learn about Ergo's [Emission](emission.md) schedule.\n\n- **[NiPoPoWs](nipopows.md)**: Short for Non-Interactive Proofs of Proof-of-Work, these are compact data structures that validate blockchain events without needing full network connectivity or downloading all block headers. They enable efficient light clients, log-space mining, and trustless sidechains.\n\n- **Storage Rent**: Also known as [demurrage](rent.md), this mechanism mitigates blockchain bloat and turns it into a profitable venture by charging for on-chain storage.\n\n- **Turing-Complete Smart Contracts**: Ergo supports [Turing-complete smart contracts](#multi-stage-protocols), enabling complex on-chain computations.\n\n::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udcda DeCo EU Layman Class - Basics of eUTxO\",\n    \"content\": \"A great introductory course aimed at the layman from Decentralised Collaboration.\",\n    \"url\": \"https://www.youtube.com/watch?v=SAWeW6wajEw\"\n  },\n  {\n    \"title\": \"\ud83e\uddfe Learning Ergo 101: eUTXO Explained for Human Beings\",\n    \"url\": \"https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e\"\n  },\n  {\n    \"title\": \"\ud83d\udcf9 Learning Blockchains like Cardano and Ergo\",\n    \"content\": \"Discusses the process of learning blockchain concepts, emphasizing the importance of understanding theoretical aspects and practical interaction through playgrounds and nodes.\",\n    \"url\": \"https://www.youtube.com/watch?v=HDn49bToTMI\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Transactional Model",
+      "level": 3,
+      "content": "Ergo adopts a transactional approach similar to Bitcoin's UTXO model. In this model, transactions utilize and produce single-use entities known as ['boxes'](box.md). Every [transaction](transactions.md) in Ergo represents an atomic state transition, consuming boxes from the state and creating new ones in their place. The eUTXO model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate (or [spending condition](types.md#sigmaprop)). The data can represent various tokens or smart contract states.\n\n[![Ergo Model](../assets/ergo-model.png)](../assets/ergo-model.png)\n\n*This image illustrates the structure and process flow of a blockchain transaction on the Ergo platform using its **extended UTXO model** (eUTXO).*"
+    },
+    {
+      "heading": "Boxes & Their Components",
+      "level": 4,
+      "content": "- **[Registers within Boxes](registers.md)**: Boxes come equipped with multiple registers capable of holding various assets and complex [ErgoScript](#ergoscript) types.\n\n- **[Assets in Ergo](tokens.md)**: Dive deeper into the different assets that can be held within these boxes.\n\nErgo also supports advanced [data structures](data-structures.md) like [AVL+ Trees](data-structures.md) which can be used to store and authenticate large amounts of data on-chain."
+    },
+    {
+      "heading": "Transactional Basics",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Tutorials & Guides",
+      "level": 4,
+      "content": "- **[Ergo Platform Basic Starter Tutorial](basics.md)**\n\n- **[Create & Send a Transaction](https://www.youtube.com/watch?v=Md5s-XV6-Hs)**: A video tutorial on creating and sending a transaction using AppKit.\n\n- **[Sign a Transaction](sign-tx.md)**: Learn how to sign a transaction with Sigma Rust.\n\n- **[Sending a Chained Transaction](chained-tx.md)**: A guide on sending a chained transaction using Ergpy.\n\n- **[Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)**: A beginner's guide to the Fleet SDK."
+    },
+    {
+      "heading": "Tokens & NFTs",
+      "level": 4,
+      "content": "- **[Issuing a Token](tokens.md)**: A step-by-step guide on how to issue a token on Ergo.\n\n- **[Burning a Token](burn.md)**: Learn how to burn a token, effectively removing it from circulation.\n\n- **[Minting an NFT](create.md)**: A comprehensive guide on creating a Non-Fungible Token (NFT) on Ergo.\n\n- **[Minting an On-Chain NFT](on-chain.md)**: Don't want to rely on third-party storage? You can squeeze an NFT directly into the registers!"
+    },
+    {
+      "heading": "ErgoScript",
+      "level": 2,
+      "content": "ErgoScript is a super-simple subset of Scala, enabling clear descriptions of contractual logic that can be Turing-complete. It is flexible enough to allow for ring signatures, multi-signatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation.\n\nThe Account model of Ethereum is imperative, meaning that sending coins from Alice to Bob requires changing balances in storage through a series of operations. In contrast, Ergo's UTXO-based programming model is declarative. ErgoScript contracts specify conditions for a transaction to be accepted by the blockchain, not changes to be made in the storage state as a result of the contract execution."
+    },
+    {
+      "heading": "Introduction",
+      "level": 3,
+      "content": "- [Quick Primer](ergoscript-primer.md)\n- [Core Concepts of ErgoScript](ergoscript-key-concepts.md)\n- [Sigma Language](sigma-lang.md)\n- [Creating a Simple Pay-to-Script App](p2s.md)"
+    },
+    {
+      "heading": "Experimenting",
+      "level": 3,
+      "content": "- **[escript.online](https://escript.online/)**\n\n- **[PlutoMonkey](plutomonkey.md)**: Compile any ErgoScript contract into a P2S. Check out these [simple examples](p2s.md).\n\n- **[Scastie](scastie.md)**: An online compiler tailored for Scala, perfect for developers eager to experiment, share, or learn Scala.\n\n- **[Kiosk](stack/kiosk.md)**: A web-based UI to explore ErgoScript. *(Corrected path)*\n\n- **[Ergo-Puppet](puppet.md)**: An advanced tool built on the Ergo Playground, designed for off-chain experimentation and unit testing of Ergo contracts."
+    },
+    {
+      "heading": "Tooling",
+      "level": 3,
+      "content": "- **[Ergo Development Generics Elements](https://github.com/Ergo-Lend/edge)**\n\n- **[VSCode ErgoScript Language Support](https://github.com/GuapSwap/vscode-ergoscript-language-support)**\n\n- **[ErgoScala](ergoscala.md)**: A compiler for Ergo smart contracts written in ErgoScala (a subset of Scala).\n\n- **[CLI Compiler](compiler.md)**: A Command Line Interface tool to compile ErgoScript code into an Ergo address.\n\n- **[FlowCards](flowcards.md)**: A declarative framework for developing Ergo dApps.\n\n- **[ergo-playgrounds](https://github.com/ergoplatform/ergo-playgrounds)**: Run contracts and off-chain code in the browser.\n\n- **[ergo-script-re](https://github.com/ross-weir/ergo-script-re/tree/main)**: Libraries for Ergo Script reverse engineering and analysis."
+    },
+    {
+      "heading": "Courses",
+      "level": 3,
+      "content": "If you're interested in deepening your understanding of ErgoScript and the Ergo ecosystem, consider taking one of the following courses:\n\n- [DeCo Education: Into the Woods](https://deco-education.github.io/deco-docs/docs/category/into-the-woods): This course provides a comprehensive introduction to the Ergo ecosystem.\n\n- [ErgoScript 101 Crash Course](https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p) (Slides): A crash course covering the basics of ErgoScript, perfect for beginners.\n\n- [Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)](https://www.youtube.com/watch?v=8l2v1asHgyA): This video tutorial offers practical examples of how to use ErgoScript in the Ergo Playground.\n\n- [DeCo-Education/ErgoScript-Developer-Course](https://github.com/DeCo-Education/ErgoScript-Developer-Course): A more advanced course for developers looking to build on their ErgoScript knowledge."
+    },
+    {
+      "heading": "Tutorials",
+      "level": 3,
+      "content": "- [ErgoScript by Example Repository](https://github.com/ergoplatform/ergoscript-by-example)\n\n- [Testing Ergo Contracts Off-chain](https://github.com/anon-real/contract-testing)\n\n- [Debugging ErgoScript](debugging.md)\n\n- [ergo-playground](https://github.com/jaysee260/ergo-playground): A collection of miscellaneous scenarios implemented on the Ergo blockchain."
+    },
+    {
+      "heading": "Boilerplate",
+      "level": 3,
+      "content": "- [scala-play-next-ergo](https://github.com/kii-dot/scala-play-next-ergo)\n\n- [ergo-scala-skeleton-app](https://github.com/dav009/ergo-scala-skeleton-app)\n\n- [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template): An introductory guide for individuals new to Ergo, offering a hands-on experience with essential Ergo functionalities.\n- **[ergo-play-boilerplate](https://github.com/kii-dot/ergo-play-boilerplate)**: Barebone code to jump into Ergo development quickly."
+    },
+    {
+      "heading": "Advanced Tutorials",
+      "level": 3,
+      "content": "- [ErgoScript Tutorial](https://ergoplatform.org/docs/ErgoScript.pdf)\n\n- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)"
+    },
+    {
+      "heading": "Interpreters",
+      "level": 3,
+      "content": "ErgoScript has two compiler and ErgoTree interpreter implementations for the [*Sigma Language*](sigma-lang.md):\n\n- **[Sigmastate-interpreter](sigmastate-interpreter.md)**: For JVM languages, utilized by [AppKit](appkit.md).\n\n- **[Sigma-Rust](sigma-rust.md)**: A simpler alternative for the ErgoTree interpreter and transaction tools."
+    },
+    {
+      "heading": "Cryptography",
+      "level": 2,
+      "content": "Ergo has generic support for ring and threshold signatures, as well as a variety of cryptographic protocols via composable [sigma-protocols](crypto.md) built into the core.\n\nSigma Protocols (\u03a3-Protocols) are the foundation of Ergo\u2019s smart contracts. Their advantage is that they are composable using simple AND/OR logic. When combined with a blockchain, these composable proofs enable very powerful use cases, allowing for the implementation of sophisticated tasks that would otherwise be impossible, risky, or expensive on other platforms."
+    },
+    {
+      "heading": "Crypto Primitives",
+      "level": 3,
+      "content": "- **Hash Functions**:\n    - `Sha256`: Secure Hash Algorithm 256-bit.\n    - `Blake2b256`: A cryptographic hash function faster than MD5 and SHA-256, providing security similar to the strongest hash functions available.\n\n- **Encoding**:\n    - `Base58`: A binary-to-text encoding scheme used for encoding Bitcoin addresses and other text-based data.\n\n- **Signing Algorithms**:\n    - `ECDSA (secp256k1)`: Elliptic Curve Digital Signature Algorithm over the secp256k1 curve, widely used in Bitcoin and other cryptocurrencies.\n    - `Schnorr`: A digital signature scheme that is simple, provably secure in the random oracle model, and allows for the aggregation of multiple signatures into a single signature, enhancing efficiency and privacy.\n\n- **Primitive Secrets**:\n    - **[Schnorr Signature](schnorr.md)**: A proof of knowledge of a discrete logarithm with respect to a fixed group generator.\n    - **[Diffie-Hellman Tuple](diffie.md)**: A proof of equality of discrete logarithms, enabling secure exchange of cryptographic keys over a public channel.\n\n- **Non-Interactive Proofs**:\n    - The proofs of sigma-statements are made non-interactive with the [**Fiat-Shamir transformation**](diffie.md#fiat-shamir-transformation), which converts an interactive proof of knowledge into a non-interactive one by using a cryptographic hash function.\n\n- **Additional Cryptographic Standards**:\n    - **[EIP-0003: Deterministic Wallet Standard](eip3.md)**: A standard defining the structure and operation of deterministic wallets in the Ergo platform.\n\nSee [this page](scs/global-functions.md#cryptographic-functions) for a description of the global cryptographic functions available in ErgoScript. *(Corrected path and anchor)*"
+    },
+    {
+      "heading": "Tutorials",
+      "level": 3,
+      "content": "- [Creating a 3-out-of-5 Threshold Signature](sig.md)\n\n- [Message Signing and User Authentication](message-signing.md)\n\n- [Verifying Schnorr Signatures in ErgoScript](https://www.ergoforum.org/t/verifying-schnorr-signatures-in-ergoscript/3407)\n\n- [Updateable Multisig Pattern](https://www.ergoforum.org/t/updateable-multisig-pattern/3356)\n\n- [Making and Implementing a Signature, Elliptic Curves, and Extended Keys: Ergo with C#](https://www.youtube.com/watch?v=aUuki-fAxwc&list=PLUWruihtE-HtL-JZk8Vb4Yn_H18aE3rb6)"
+    },
+    {
+      "heading": "Tools",
+      "level": 3,
+      "content": "- **[Scrypto](scrypto.md)**: A comprehensive open-source cryptographic toolkit, specifically engineered to simplify and safeguard the process of integrating cryptography into your applications. Supports AVL+ Trees and Batch Merkle Proof Serialization and Deserialization."
+    },
+    {
+      "heading": "Advanced Concepts",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Merkle Trees",
+      "level": 3,
+      "content": "**[Merkle Trees](merkle-tree.md)** are a fundamental data structure in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block. Ergo extends the concept of Merkle Trees by combining transactions and their corresponding spending proofs into a single Merkle Tree.\n\nDevelopers should familiarize themselves with Merkle Trees and their associated code implementations to effectively leverage them in their Ergo projects."
+    },
+    {
+      "heading": "AVL Trees (Plasma)",
+      "level": 3,
+      "content": "**[AVL trees](avl.md)** are highly efficient authenticated data structures natively supported in Ergo. These trees offer several benefits, including the ability to authenticate data properties without accessing the entire dataset. Developers can seamlessly integrate AVL trees into their Ergo applications using one of the **[Plasma](plasma.md)** libraries."
+    },
+    {
+      "heading": "Multi-Stage Protocols",
+      "level": 3,
+      "content": "[Multi-Stage Contracts](multi.md) is a technique where, using transaction trees, we can emulate persistent storage in UTXO-based systems by linking several UTXOs containing small pieces of code to form a large multi-stage protocol. This enables *on-chain computations*, making it possible to process parallelized actions on top of smart contracts and construct **Turing-complete** applications."
+    },
+    {
+      "heading": "App Development",
+      "level": 2,
+      "content": "Developers have a plethora of tools, libraries, SDKs, frameworks, and utilities at their disposal to seamlessly interact with the blockchain, craft applications, and present them to users. Navigate through the [Developer Section](start.md) to use grid buttons that help refine your technical stack requirements and pinpoint the ideal tooling.\n\nIf you're aiming to develop a comprehensive decentralized application on Ergo, consider the following SDKs and frameworks tailored to your specific needs:\n\n/// admonition | As a spreadsheet!\n    type: info\n\nMost repositories are also categories on [Grist](https://ergo.getgrist.com/jf9KPR1HUDJH/Project-Management). This is a great place to start if you're looking for a specific repository or want to see what's currently being worked on.\n\n///"
+    },
+    {
+      "heading": "Primary SDKs",
+      "level": 3,
+      "content": "- **[AppKit](appkit.md)**: The go-to SDK for JVM developers, supporting Java, Scala, Kotlin, and Mobile platforms.\n    - [General Example](tutorial.md)\n    - [Using AppKit with Python](https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python)\n    - [AppKit by Example](https://www.youtube.com/watch?v=Md5s-XV6-Hs)\n\n- **[Fleet SDK](fleet.md)**: A pure JS library designed for effortless Ergo transaction creation.\n    - [Getting Started with Fleet SDK](https://fleet-sdk.github.io/docs/getting-started)\n    - [The Ergo Web Template](https://github.com/SavonarolaLabs/ergo-web-template): An introductory guide for individuals new to Ergo, offering a hands-on experience with essential Ergo functionalities.\n\n- **[SigmaRust](sigma-rust.md)**: An ErgoTree interpreter with transaction tools and bindings for JS/TS/Swift/Java/C/Ruby.\n    - [Address Generation Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/address-generation-demo)\n    - [Create Transaction Demo](https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-wasm/examples/create-transaction-demo)"
+    },
+    {
+      "heading": "Alternative SDKs",
+      "level": 3,
+      "content": "- **[Ergpy](ergpy.md)**: A Python-JVM wrapper facilitating interactions with the Ergo blockchain.\n\n- **[Mosaik](mosaik.md)**: A dedicated UI system crafted for Ergo dApps.\n\n- **[JSON dApp Environment](jde.md)**\n\n- **[Headless dApp Framework](headless.md)**: A Rust-based framework for creating Ergo Headless dApps, marking the debut of a portable UTXO-centric headless dApp development framework on any blockchain.\n\n- **[RustKit (In Development)](rustkit.md)**: An upcoming toolkit aiming to align the Rust development experience with the JVM."
+    },
+    {
+      "heading": "Payments",
+      "level": 3,
+      "content": "- **[ErgoPay](ergo-pay.md)**: Ergo's dApp connector for non-web wallets.\n\n- **[dApp Connector](dApp.md)**: For connecting dApps to web-based wallets like Nautilus and SAFEW.\n\n- **[Proxy Contracts](proxy.md)**: A smart contract design used in blockchain ecosystems to enable secure and controlled interaction between users and decentralized applications."
+    },
+    {
+      "heading": "Libraries",
+      "level": 3,
+      "content": "- [ergo-lib-go](https://github.com/ergoplatform/ergo-lib-go): Go wrapper around C bindings for ErgoLib from sigma-rust.\n\n- [ergo-lib-wasm](https://github.com/ergoplatform/ergo-lib-wasm): Ergo-lib bindings for JS/TS.\n\n- [ergo_client](https://github.com/ross-weir/ergo_client): Rust library containing HTTP clients for various Ergo applications.\n\n- [sigma-builders](https://github.com/GuapSwap/sigma-builders): Easy-to-use library for creating protocol abstractions interacting with the Ergo blockchain."
+    },
+    {
+      "heading": "Templates",
+      "level": 3,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udcd5 Side Tooling for Building dApps on Ergo\",\n    \"url\": \"https://dav009.medium.com/ergo-101-side-tooling-for-building-dapps-on-ergo-c71889d60826\",\n    \"content\": \"Building functional dApps on Ergo requires more than just smart contracts and transactions.\"\n  },\n  {\n    \"title\": \"\ud83d\udcd5 DeCo Education: DApp Components - Backend\",\n    \"url\": \"https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components\"\n  },\n  {\n    \"title\": \"\ud83d\udcd5 DeCo Intro Lessons: Build a Mobile App on Android or iOS\",\n    \"url\": \"https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Ergo Infrastructure",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Ergo Node & Network",
+      "level": 3,
+      "content": "- **[Ergo Node](install.md)**: The Ergo Node forms the core of Ergo's P2P network, maintaining and synchronizing the entire blockchain.\n   - **[Bootstrap from UTXO Snapshot](pruned-full-node.md)**: Expedite the setup of a pruned full node on the [testnet](testnet.md) by bootstrapping from a UTXO snapshot.\n   - **[Fork Your Own Chain](mine-your-own-chain.md)**: Learn how to customize and create your own chain with specific parameters."
+    },
+    {
+      "heading": "API & Programmatic Access",
+      "level": 3,
+      "content": "- **[Node API](swagger.md)**: Gain a comprehensive overview of the Ergo node API functionalities.\n  - **[Public APIs](api.md)**: If you prefer not to run your own node, you can utilize these public APIs for a variety of functionalities."
+    },
+    {
+      "heading": "Explorers",
+      "level": 3,
+      "content": "- **Public Explorers** can be accessed at [explorer.ergoplatform.com](https://explorer.ergoplatform.com/) and [testnet.ergoplatform.com](https://testnet.ergoplatform.com/).\n\n- Delve deeper into blockchain data with **[GraphQL](graphql.md)**.\n\n- **[Explorer & Node Bundles](explorer.md#toolkits)**: Install both locally for a comprehensive blockchain experience.\n    - **[uExplorer](explorer.md)**: A lightweight Ergo explorer backed by CassandraDB.\n    - **[Blockchain Explorer with Raspberry Pi](rpi-blockchain-explorer.md)**: Learn how to set up an explorer using Raspberry Pi."
+    },
+    {
+      "heading": "Toolkits",
+      "level": 3,
+      "content": "- **[danaides](https://github.com/ergopad/danaides)**: A high-performance blockchain toolkit."
+    },
+    {
+      "heading": "Off-chain",
+      "level": 3,
+      "content": "- [Bootstrap an Oracle Pool on Testnet](oracle-bootstrap.md)\n\n- [Running Off-chain Bots](dex_bots.md)"
+    },
+    {
+      "heading": "Documentation & Reports",
+      "level": 2,
+      "content": "- **[Foundational Papers](documents.md)**: Explore the academic and technical papers that laid the groundwork for Ergo.\n\n- **[EF Transparency Report](ergo-foundation.md)**: Gain insights into the Ergo Foundation's operations and transparency initiatives.\n\n- **[Ergo's Social Contract](social_contract.md)**: Delve into the principles and commitments that guide Ergo's community and development.\n- **[Howey Test Analysis](security.md)**: Understand how Ergo measures up against the Howey Test for securities."
+    },
+    {
+      "heading": "Further Resources",
+      "level": 3,
+      "content": "- **[Completeness of Ergo | Kushti | Ergoversary Summit 2023](https://www.youtube.com/watch?v=49UmOkx6pj0&list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY&index=2)**: Video discussing the completeness aspects of the Ergo platform."
+    },
+    {
+      "heading": "Introductory Resources",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udcda DeCo Intro Lessons\",\n    \"content\": \"Programming basics for the layman from Decentralised Collaboration (DeCo).\",\n    \"url\": \"https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6\"\n  },\n  {\n    \"title\": \"\ud83d\udcda DeCo Education Docs\",\n    \"content\": \"DeCo steps you through eUTXO & NFTs, dApp Development, and Multi-Stage Transactions & Smart Contracts.\",\n    \"url\": \"https://deco-education.github.io/deco-docs/docs/category/into-the-woods\"\n  },\n  {\n    \"title\": \"\ud83d\udcf9 Ergo Blockchain Crash Course\",\n    \"content\": \"Ergo crash course presented by developer Luca (lgd), covering the eUTXO model, anatomy of Ergo, and more.\",\n    \"url\": \"https://www.youtube.com/playlist?list=PL8-KVrs6vXLTVXGwmYXjOBRx3VymB4Vm2\"\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Connect with Our Community",
+      "level": 2,
+      "content": "If you encounter any issues or have questions, feel free to connect with us on any of the following platforms. All our chat platforms are bridged, ensuring seamless communication:\n\n::cards::\n\n[\n  {\n    \"title\": \"Come Chat!\",\n    \"content\": \"Join the action on Discord\",\n    \"image\": \"../assets/img/dev-grid/discord.png\", # Corrected image path\n    \"url\": \"https://discord.gg/ergo-platform-668903786361651200\"\n  },\n  {\n    \"title\": \"ERGOHACK\",\n    \"content\": \"We host regular hackathons which are a great opportunity to get involved.\",\n    \"image\": \"../assets/img/grid/05.png\", # Corrected image path\n    \"url\": \"../events/ergohack.md\" # Corrected link path\n  },\n  {\n    \"title\": \"Contribute\",\n    \"content\": \"See the Contributing Guidelines for information on bounties and grants.\",\n    \"image\": \"../assets/img/grid/05.png\", # Corrected image path\n    \"url\": \"../contribute/standards/guidelines.md\" # Corrected link path to likely target\n  }\n]\n\n::/cards::\n\n/// admonition | Chatbots!\n    type: info\n\nTo further explore and understand Ergo's concepts, you can interact with the following chatbots:\n\n- [General Chatbot](https://www.chatbase.co/chatbot-iframe/zxB2uzZfYoHIpA98eTzgM)\n\n- [ErgoScript Chatbot](https://www.chatbase.co/chatbot-iframe/INAIfQ2ts4E6ykf4rseVu)\n\n///"
+    },
+    {
+      "heading": "Ergo Community Resources",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Analytics & Insights",
+      "level": 3,
+      "content": "- **[Ergo Watch](https://ergo.watch/)**: Dive into on-chain analytics and data."
+    },
+    {
+      "heading": "Community Knowledge Base",
+      "level": 3,
+      "content": "- **[Ergonaut Space](https://ergonaut.space/)**: Discover Ergo's community-driven wiki, filled with insights and information."
+    },
+    {
+      "heading": "Explore the Ecosystem!",
+      "level": 3,
+      "content": "- **[Sigmaverse.io](https://sigmaverse.io/)**: Explore a diverse range of dApps built on Ergo.\n\n- **[ErgCube](https://ergcube.com/)**: Another platform to discover and interact with Ergo dApps.\n\n- The [**Ecosystem**](../uses/use-cases-overview.md) section on this site acts as a directory for projects building on Ergo and potential future ideas."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/get-started.md",
+  "processed_at": "2025-05-11T19:21:12.395355",
+  "ai_processed": true
+}

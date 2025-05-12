@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the most important component of a mining rig for Ergo?",
+    "answer": "The GPU is the most important component of a mining rig for Ergo."
+  },
+  {
+    "question": "What is the role of the motherboard in a mining rig?",
+    "answer": "The motherboard is the main circuit board of the mining rig where all other components are connected."
+  },
+  {
+    "question": "What is the purpose of the power supply (PSU) in a mining rig?",
+    "answer": "The power supply provides electricity to the mining rig and must have enough capacity to support all the components."
+  },
+  {
+    "question": "What is the role of the CPU in a mining rig?",
+    "answer": "While not as important as the GPU for mining, the CPU handles the rest of the rig's operations."
+  },
+  {
+    "question": "Where can you check the potential hashrate of a GPU for Ergo mining?",
+    "answer": "You can check the potential hashrate of a GPU for Ergo mining on the Google Sheets document provided in the content."
+  }
+]

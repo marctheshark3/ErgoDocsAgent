@@ -1,0 +1,43 @@
+{
+  "id": "docs_node_install_node-android_proot-rocksdb_md",
+  "title": "Android Node: Arch Linux via proot (RocksDB/UTXO Mode)",
+  "summary": "This guide details the process of running an Ergo node on an Android device using an Arch Linux environment within Termux via proot. This method is necessary if you need to run the node with stateType=\"utxo\" (which uses RocksDB for state storage) or if you encounter database issues with the direct Termux setup. The guide covers the prerequisites, installation of proot-distro and Arch Linux, and the steps to log into the Arch environment and run the Ergo node.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of this guide?",
+      "answer": "This guide details the method for running an Ergo node on Android using an Arch Linux environment within Termux via proot."
+    },
+    {
+      "question": "Why is the proot-distro method necessary for running the Ergo node?",
+      "answer": "The proot-distro method is necessary if you need to run the node with stateType=\"utxo\" (which uses RocksDB for state storage) or if you encounter database issues (e.g., LevelDB failures) with the direct Termux setup."
+    },
+    {
+      "question": "What are the prerequisites for following this guide?",
+      "answer": "The prerequisites are: an Android device meeting the requirements, and Termux installed from F-Droid."
+    },
+    {
+      "question": "What are the key differences between the proot-distro method and the direct Termux setup?",
+      "answer": "The proot-distro method adds overhead compared to the direct Termux setup, but it is primarily required for specific use cases needing RocksDB/UTXO mode. For most mobile users, the direct Termux setup with stateType=\"digest\" is recommended."
+    },
+    {
+      "question": "What are the database engines used by the Ergo node, and why is the proot-distro method necessary for RocksDB?",
+      "answer": "The Ergo node uses database engines like LevelDB by default and RocksDB as an option, especially for stateType=\"utxo\". The proot-distro method is necessary because the Java bindings for RocksDB often rely on the standard GNU C Library (glibc), while Android/Termux typically use a different C library (musl libc via Bionic), leading to incompatibility issues."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Android\n  - Node\n  - Mobile\n  - Termux\n  - Installation\n  - Guide\n  - RocksDB\n  - UTXO Mode\n  - proot\n  - Arch Linux\n  - glibc\n---"
+    },
+    {
+      "heading": "Android Node: Arch Linux via proot (RocksDB/UTXO Mode)",
+      "level": 1,
+      "content": "This guide details the more advanced method for running an Ergo node on Android using an Arch Linux environment within Termux via `proot`. This method is necessary if you need to run the node with `stateType=\"utxo\"` (which uses RocksDB for state storage) or if you encounter database issues (e.g., LevelDB failures) with the direct Termux setup.\n\n**Why is this needed?**\n\n*   The Ergo node uses database engines (LevelDB by default, RocksDB as an option, especially for `stateType=\"utxo\"`) to store blockchain state.\n*   The Java bindings for RocksDB often rely on the standard GNU C Library (`glibc`).\n*   Android/Termux typically use a different C library (`musl libc` via Bionic).\n*   Running the RocksDB-enabled node JAR directly in Termux can lead to incompatibility errors.\n*   `proot-distro` allows running a Linux distribution (like Arch Linux, which uses `glibc`) within Termux, providing the necessary environment for RocksDB.\n\n**Disclaimer:** This is a more complex setup than the [direct Termux method](termux-digest.md) and adds overhead. It's primarily required for specific use cases needing RocksDB/UTXO mode. For most mobile users, the direct Termux setup with `stateType=\"digest\"` is recommended.\n\n**Prerequisites:**\n\n*   Android device meeting the [requirements](node-android.md#device-requirements) (Note: UTXO mode requires significantly more storage than digest mode).\n*   Termux installed from F-Droid.\n\n**Steps:**\n\n1.  **Install `proot-distro` in Termux:**\n    *   Open Termux and run:\n        ```bash\n        pkg update && pkg upgrade -y\n        pkg install proot-distro -y\n        ```\n2.  **Install Arch Linux via `proot-distro`:**\n    ```bash\n    proot-distro install archlinux\n    ```\n    *   This will download the Arch Linux root filesystem.\n3.  **Login to Arch Linux Environment:**\n    *   Each time you want to run the node using this method, you first need to log into the Arch environment:\n        ```bash\n        proot-distro login archlinux\n        ```\n    *   Your terminal prompt should change, indicating you are now inside Arch Linux within Termux.\n4.  **Inside Arch Linux: Install Dependencies (First Time Only):**\n    *   Update package lists:\n        ```bash\n        pacman -Syu --noconfirm\n        ```\n    *   Install Java (OpenJDK 17 recommended), `wget`, and `nano`:\n        ```bash\n        pacman -S jdk-openjdk wget nano --noconfirm\n        ```\n5.  **Inside Arch Linux: Download RocksDB Ergo Node JAR:**\n    *   You **must** download the JAR variant specifically built with RocksDB support. Find the correct `.jar` file (often named `ergo-<version>-rocksdb.jar`) on the [Ergo Releases](https://github.com/ergoplatform/ergo/releases) page.\n    *   Get the download URL for the specific RocksDB JAR you need.\n    *   Use `wget` to download it *within the Arch environment*:\n        ```bash\n        # Example (replace URL with the actual RocksDB JAR URL):\n        ROCKSDB_JAR_URL=\"https://github.com/ergoplatform/ergo/releases/download/vX.Y.Z/ergo-X.Y.Z-rocksdb.jar\"\n        echo \"Downloading RocksDB Ergo node JAR from: $ROCKSDB_JAR_URL\"\n        wget -q --show-progress \"$ROCKSDB_JAR_URL\" -O ergo-rocksdb.jar\n        ```\n6.  **Inside Arch Linux: Create Configuration File (`ergo.conf`):**\n    *   Create the file using `nano`:\n        ```bash\n        nano ergo.conf\n        ```\n    *   Paste a configuration suitable for `stateType=\"utxo\"` with pruning (adjust `blocksToKeep` based on your storage capacity):\n        ```conf\n        ergo {\n          node {\n            stateType = \"utxo\" // Use UTXO state with RocksDB\n            // Keep ~1 week of blocks (~3-5GB?), adjust based on storage\n            // WARNING: -1 (archival) is likely impractical on mobile storage\n            blocksToKeep = 10080 \n            mining = false\n\n            # Enable faster bootstrapping (both recommended)\n            nipopow.nipopowBootstrap = true\n            utxoBootstrap = true\n          }\n        }\n\n        scorex {\n          restApi {\n            apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\" // Example, change this\n          }\n          network {\n            # Optional: Add known reliable peers\n            # knownPeers = [\"ip:port\", \"ip:port\"]\n          }\n        }\n        ```\n    *   Save (`CTRL+O`, `Enter`) and Exit (`CTRL+X`).\n7.  **Inside Arch Linux: Launch the Node:**\n    *   Run the RocksDB JAR, allocating sufficient memory (UTXO mode generally needs more than digest mode):\n        ```bash\n        java -Xmx2G -jar ergo-rocksdb.jar --mainnet -c ergo.conf\n        ```\n    *   *(Adjust `-Xmx2G` based on your device's available RAM. You might need more or less).*\n8.  **Monitor Synchronization:**\n    *   Open a web browser on your Android device and go to `http://127.0.0.1:9053/panel`.\n    *   Synchronization, especially the initial UTXO snapshot download, will take time and consume significant storage.\n\n**Exiting:** To stop the node, press `CTRL + C` in the Arch Linux terminal. To exit the Arch Linux environment back to the main Termux shell, type `exit`.\n\nRefer back to the [main Android guide](node-android.md) for general tips, disk space clarification, and troubleshooting. Remember this method adds complexity and resource overhead compared to the direct Termux approach."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/node-android/proot-rocksdb.md",
+  "processed_at": "2025-05-11T19:55:27.988395",
+  "ai_processed": true
+}

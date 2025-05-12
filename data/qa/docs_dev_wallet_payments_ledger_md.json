@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the current status of the Ledger application?",
+    "answer": "The Ledger team is currently reviewing the application, and the complete version is expected to be available soon via the Ledger Manager."
+  },
+  {
+    "question": "How can developers experiment with the pre-release version of the Ledger application?",
+    "answer": "Developers can enable developer mode on their Ledger device to experiment with the pre-release version."
+  },
+  {
+    "question": "What resources are available for wallet developers working with Ledger?",
+    "answer": "There is a Binding Library available, as well as documentation for implementing a binding API. Additional resources include ledger4j, tesseract-one/ledger-app-ergo, and lib-ledger-core."
+  },
+  {
+    "question": "Where can developers find the documentation for the Ledger binding API?",
+    "answer": "The documentation for the Ledger binding API can be found at https://docs.google.com/document/d/1z8nIlRmPhwcKzyZ2jZYYkaFDtLt8pgvnRWrT5zJJ_Tw/edit?pli=1#heading=h.hag83gqtujji"
+  },
+  {
+    "question": "What is the purpose of the ledger4j library?",
+    "answer": "ledger4j is a Ledger HID Communications Library."
+  }
+]

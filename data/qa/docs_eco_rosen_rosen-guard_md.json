@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main responsibilities of the Rosen Guards?",
+    "answer": "Guards are dedicated to security maintenance and executing responses, while Watchers are focused on the ongoing monitoring of activities and transparent reporting."
+  },
+  {
+    "question": "How is the authority of the Rosen Guards restricted?",
+    "answer": "The authority of the Rosen Guards over Rosen is restricted through multisignature contracts and wallets."
+  },
+  {
+    "question": "What happens if a Rosen Guard behaves maliciously?",
+    "answer": "Each Guard has a reasonable amount of funds locked as collateral and will lose all their funds at once in case of malicious behaviour."
+  },
+  {
+    "question": "How are transactions submitted to the target blockchain in the Rosen Bridge Guard Service?",
+    "answer": "The Rosen Bridge Guard Service facilitates transaction submissions across different blockchains through event processing, transaction agreement, and execution."
+  },
+  {
+    "question": "What is the role of the multi-guard consensus mechanism in the Rosen Bridge Guard Service?",
+    "answer": "For actions that require consensus or agreement, the Guard Service utilizes a multi-guard consensus mechanism where each guard node independently verifies the transaction details and signals agreement."
+  }
+]

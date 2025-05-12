@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_stack_compiler_md",
+  "title": "ErgoScript Compiler",
+  "summary": "The ErgoScript Compiler is a Command Line Interface (CLI) tool designed to compile ErgoScript code into an Ergo address. It provides a step-by-step guide for setting up and compiling ErgoScript code, including instructions for compiling from source or using a precompiled JAR file. The tool also supports integrating the ErgoScript Compiler into your project by adding a dependency to your build.sbt file. Additionally, the tool can generate payment requests by replacing register values from human-understandable forms to serialized-hex needed by the Ergo client's REST API.",
+  "qa_pairs": [
+    {
+      "question": "What is the ErgoScript Compiler?",
+      "answer": "The ErgoScript Compiler is a Command Line Interface (CLI) tool designed to compile ErgoScript code into an Ergo address."
+    },
+    {
+      "question": "How do you compile ErgoScript code using the compiler?",
+      "answer": "To compile ErgoScript code, you save your code in a text file, optionally save any referenced symbols in a separate JSON file, and then use the command 'java -cp <jarFile> Compile <ergoScriptFile> <optionalSymbolsFile>' to compile the file."
+    },
+    {
+      "question": "How do you integrate the ErgoScript Compiler into your project?",
+      "answer": "To use the ErgoScript Compiler in your project, you add the following to your build.sbt: 'libraryDependencies += \"io.github.ergoplatform\" %% \"ergoscriptcompiler\" % \"1.0\"', and then call 'util.Compiler.compile(ergoScriptFile: String, symbolsFile: Option[String])'."
+    },
+    {
+      "question": "What information does the compiler output after successfully compiling ErgoScript code?",
+      "answer": "The compiler output includes the ErgoTree corresponding to the script, serialized and hex-encoded, the Blake2b256 hash of the ErgoTree, hex-encoded, and the address corresponding to the ErgoTree."
+    },
+    {
+      "question": "Where can you find sample ErgoScript and symbol files for the compiler?",
+      "answer": "The 'src/test/resources' directory contains sample ErgoScript and symbol files for the compiler."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "ErgoScript Compiler",
+      "level": 1,
+      "content": "The [ErgoScript Compiler](https://github.com/ergoplatform/ergoscript-compiler) is a Command Line Interface (CLI) tool designed to compile ErgoScript code into an Ergo address."
+    },
+    {
+      "heading": "User Guide",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Setup and Compilation",
+      "level": 3,
+      "content": "1. If you're starting from source, compile the ErgoScript compiler using these steps:\n    - Clone the repository by executing `git clone https://github.com/scalahub/ErgoScriptCompiler.git`.\n    - Make sure SBT is installed and correctly set up in your path.\n    - Use the command `sbt assembly` in the project root folder to compile the JAR file.\n\n       Upon successful compilation, a JAR file is generated in the following path: `target/scala-2.12/ErgoScriptCompiler-assembly-0.1.jar`. In the steps below, `<jarFile>` refers to this JAR.\n\n       If you're using the precompiled JAR, proceed directly to the next step.\n\n2. Compiling ErgoScript code involves the following steps:\n    - Save your ErgoScript code in a text file, for example, `myScript.es`. You can choose any file extension.\n    - If your code references any symbols (constants), save them in a separate file, for instance, `mySymbols.json`. Refer to the section below on how to write this file. \n    - This symbols file is optional and is only required if your code references any symbols.\n    - Use the command `java -cp <jarFile> Compile <ergoScriptFile> <optionalSymbolsFile>` to compile the file. For example:\n        - `java -cp ErgoScriptCompiler.jar Compile myScript.es mySymbols.json`\n        - `java -cp ErgoScriptCompiler.jar Compile myScript.es`\n\nRefer to the example below for a sample output."
+    },
+    {
+      "heading": "Integration in Your Project",
+      "level": 3,
+      "content": "To use ErgoScript Compiler in your project, add the following to your build.sbt:\n\n```\nlibraryDependencies += \"io.github.ergoplatform\" %% \"ergoscriptcompiler\" % \"1.0\"\n```\n\nThen call: `util.Compiler.compile(ergoScriptFile: String,  symbolsFile: Option[String])`"
+    },
+    {
+      "heading": "Examples and Outputs",
+      "level": 2,
+      "content": "The `src/test/resources` directory contains sample ErgoScript and symbol files. Here's an example execution:\n\n```bash\njava -cp \\\n      target/scala-2.12/ErgoScriptCompiler-assembly-0.1.jar \\\n      Compile \\\n      src/test/resources/AgeUSD.es \\\n      src/test/resources/AgeUSD_symbols.json \n```\n\nThe output includes:\n1. The ErgoTree corresponding to the Script, serialized and hex-encoded.\n2. The Blake2b256 hash of the ErgoTree, hex-encoded.\n3. The address corresponding to the ErgoTree."
+    },
+    {
+      "heading": "Symbol File Format",
+      "level": 2,
+      "content": "If your ErgoScript code references token IDs or script hashes, encode such values in a \"symbols\" file as follows (any file extension is permissible):\n\n```json\n{\n  \"symbols\":[\n    {\n      \"name\":\"poolTokenId\",\n      \"type\":\"CollByte\",\n      \"value\":\"0fb1eca4646950743bc5a8c341c16871a0ad9b4077e3b276bf93855d51a042d1\"\n    },\n    {\n      \"name\":\"epochPrepScriptHash\",\n      \"type\":\"CollByte\",\n      \"value\":\"d998e06e0c093b0990fa3da4f3bea4364546803551ea9cac02623e9675ba4522\"\n    },\n    {\n      \"name\":\"buffer\",\n      \"type\":\"Int\",\n      \"value\":\"4\"\n    }\n  ]\n\n\n}\n```"
+    },
+    {
+      "heading": "Generating Payment Requests",
+      "level": 2,
+      "content": "Apart from compiling ErgoScript, this tool can generate a \"payment request\". It replaces register values from human-understandable forms to serialized-hex needed by the Ergo client's REST API. For instance, to store the integer 1, you would provide the register value as `0402`. \n\nThe command to generate payment requests is: `java -cp <jarFile> Payment <humanRequest.json> <symbolsFile.json>`"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/compiler.md",
+  "processed_at": "2025-05-11T19:33:55.859267",
+  "ai_processed": true
+}

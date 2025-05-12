@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the key revenue streams for Ergo miners beyond emissions?",
+    "answer": "Key revenue streams for Ergo miners beyond emissions include transaction fees, storage rent/demurrage, and revenue from operating Layer 2 infrastructure."
+  },
+  {
+    "question": "How does the Storage Rent/Demurrage mechanism provide revenue for Ergo miners?",
+    "answer": "The Storage Rent/Demurrage mechanism imposes a fee on unspent transaction outputs (UTXOs) that remain idle for an extended period, incentivizing efficient use of blockchain storage. Miners earn rewards for validating transactions and managing the storage of UTXOs."
+  },
+  {
+    "question": "How can Ergo miners generate revenue from Layer 2 infrastructure?",
+    "answer": "Ergo miners can maintain and operate Layer 2 solutions, such as state channels and sidechains, to ensure the smooth functioning of these off-chain solutions and earn fees for their services. By supporting Layer 2 infrastructure, miners contribute to the scalability and efficiency of the Ergo network."
+  },
+  {
+    "question": "What is the role of Sigma Chains in supporting Layer 2 solutions on Ergo?",
+    "answer": "Sigma Chains, with their support for various sidechain constructions, can serve as a robust foundation for Layer 2 solutions on Ergo. Miners can leverage their expertise in securing Sigma Chains to provide and maintain Layer 2 infrastructure."
+  },
+  {
+    "question": "How can Ergo miners adjust transaction fees to align with network demands and market conditions?",
+    "answer": "Ergo miners can adjust transaction fees through on-chain voting, allowing for dynamic adjustments to align with network demands and market conditions."
+  }
+]

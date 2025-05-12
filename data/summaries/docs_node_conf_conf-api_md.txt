@@ -1,0 +1,7 @@
+The document describes the configuration settings for the "api-dispatcher" in an actor-based system. The key points include:
+
+- The dispatcher type is set to "Dispatcher", which is an event-based dispatcher.
+- The executor type is set to "fork-join-executor", which allows for concurrent execution of tasks.
+- The minimum parallelism is set to 1, the parallelism factor is set to 2.0, and the maximum parallelism is set to 2.
+- The throughput is set to 4, which determines the maximum number of messages processed per actor before the thread switches to the next actor.
+- The configuration plays a crucial role in controlling the efficiency and fairness of processing messages for API-related actors in the application.

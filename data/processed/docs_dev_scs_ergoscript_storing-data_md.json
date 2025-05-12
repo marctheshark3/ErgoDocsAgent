@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_scs_ergoscript_storing-data_md",
+  "title": "Data Storage in ErgoScript",
+  "summary": "Data Storage in ErgoScript provides two primary methods: registers during box creation and context variables when a box is spent. Registers R4 through R9 are available for data storage, with the first four registers reserved by the protocol. An example demonstrates checking if a value is stored in register R4 and handling the cases where it is defined or undefined.",
+  "qa_pairs": [
+    {
+      "question": "What are the two primary methods for data storage in ErgoScript?",
+      "answer": "The two primary methods for data storage in ErgoScript are: 1) the use of registers during the creation of a box, and 2) the use of context variables when a box is being spent."
+    },
+    {
+      "question": "How many registers are available in an Ergo box?",
+      "answer": "An Ergo box is equipped with ten registers, labeled from R0 to R9. The protocol reserves the first four registers (R0 through R3), and the remaining six registers (R4 through R9) are available for data storage."
+    },
+    {
+      "question": "Can you have an empty register between two filled registers in an Ergo box?",
+      "answer": "No, you cannot have an empty register between two filled registers in an Ergo box."
+    },
+    {
+      "question": "How can you access the data stored in a register in ErgoScript?",
+      "answer": "You can access the data stored in a register using the syntax `SELF.R4[GroupElement]`, which returns an `Option[GroupElement]` type."
+    },
+    {
+      "question": "What happens if the register you're trying to access is undefined?",
+      "answer": "If the register you're trying to access is undefined, the `Option` type will be undefined, and the second branch of the if statement will be executed."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Data Storage in ErgoScript",
+      "level": 1,
+      "content": "ErgoScript, the language used in the Ergo blockchain, provides two primary methods for data storage. The first method involves the use of [*registers*](registers.md) during the creation of a [box](box.md). The second method utilizes [_context variables_](context-variables.md) when a box is being spent. For the purpose of this discussion, we will concentrate on the use of registers.\n\nAn Ergo box is equipped with ten registers, labeled from `R0` to `R9`. The protocol reserves the first four registers (`R0` through `R3`). The remaining six registers (`R4` through `R9`) are available for data storage and are initially empty. It's important to note that you cannot have an empty register between two filled registers.\n\nBelow is an example demonstrating how registers can be used in ErgoScript:\n\n```scala\n{\n   val r4 = SELF.R4[GroupElement]\n   if (r4.isDefined) {\n      val x = r4.get\n      proveDlog(x) \n   } else {\n      proveDlog(decodePoint(fromBase64(\"AlCGOtZKh66KL+g8GvGoQDy1P1PkhthRHa2KBIh+WyNS\")))\n   } \n}\n```\n   \nIn this code snippet, the line `SELF.R4[GroupElement]` returns an `Option[GroupElement]` type. The `Option` type semantics in ErgoScript are identical to [those in Scala](https://alvinalexander.com/scala/using-scala-option-some-none-idiom-function-java-null/). If the `Option` is defined\u2014meaning `SELF.R4` does contain a `GroupElement` type\u2014then the first branch of the if statement is executed. Otherwise, if `Option` is undefined, the second branch is executed."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscript/storing-data.md",
+  "processed_at": "2025-05-11T19:29:04.415693",
+  "ai_processed": true
+}

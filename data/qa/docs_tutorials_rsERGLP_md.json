@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the ERGO Token Contract Address?",
+    "answer": "0x6C060Ba738af39A09F3b45ac6487dFC9Ebb885f6"
+  },
+  {
+    "question": "What are the key benefits of providing liquidity in LPs?",
+    "answer": "Earn swap fees and hedge risk by pooling multiple assets."
+  },
+  {
+    "question": "What is the importance of verifying token contract addresses?",
+    "answer": "To avoid scams, especially on EVM chains."
+  },
+  {
+    "question": "What is the Rosen asset list and where can it be found?",
+    "answer": "The Rosen asset list can be found at https://app.rosen.tech/assets."
+  },
+  {
+    "question": "What is the key advice given regarding the risks involved in LPs?",
+    "answer": "It's essential to do your own research (DYOR) to understand the risks involved."
+  }
+]

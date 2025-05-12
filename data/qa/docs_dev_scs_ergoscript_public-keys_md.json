@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of public key scripts in ErgoScript?",
+    "answer": "Public key scripts in ErgoScript allow for the creation of scripts that can be spent by specific individuals, increasing the practical utility of Ergo."
+  },
+  {
+    "question": "What is the most commonly used method for creating public key scripts in ErgoScript?",
+    "answer": "The most commonly used method involves the predicate `proveDlog(ecPoint)`, which returns true if the spender can provide a valid proof of knowledge of the discrete logarithm corresponding to `ecPoint`."
+  },
+  {
+    "question": "What curve does Ergo use for representing public key points?",
+    "answer": "Ergo uses the Secp256k1 curve, the same as Bitcoin, for representing public key points."
+  },
+  {
+    "question": "How does Ergo differ from Bitcoin in constructing proofs for public key scripts?",
+    "answer": "Ergo uses Schnorr signatures, not ECDSA, to construct the proofs for public key scripts."
+  },
+  {
+    "question": "What is the first step in creating an address that encodes the `proveDlog` script?",
+    "answer": "The first step is to obtain the Elliptic Curve (EC) point that corresponds to the public key."
+  }
+]

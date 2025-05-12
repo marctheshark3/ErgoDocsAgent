@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the 'Tags' section in this document?",
+    "answer": "The 'Tags' section contains a list of relevant tags."
+  },
+  {
+    "question": "Where can the list of tags be found in the document?",
+    "answer": "The list of tags is enclosed in the [TAGS] section."
+  },
+  {
+    "question": "What type of content is this document intended to provide?",
+    "answer": "This document is intended to provide educational content."
+  },
+  {
+    "question": "How can an LLM utilize the information in this document?",
+    "answer": "The LLM can learn from the question-answer pairs generated based on the content of this document."
+  },
+  {
+    "question": "What is the focus of the question-answer pairs generated from this document?",
+    "answer": "The question-answer pairs focus on the key concepts, technical details, and practical applications of the content."
+  }
+]

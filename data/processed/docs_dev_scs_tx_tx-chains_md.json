@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_scs_tx_tx-chains_md",
+  "title": "Transaction Chains",
+  "summary": "Transaction Chains: A transaction chain is a sequence of transactions executed in a specific order to achieve a particular outcome or goal. Each transaction in the chain depends on the successful execution of the previous one, and the overall success of the protocol relies on the successful execution of the entire chain.\n\nTransaction chains are a fundamental concept in Ergo's multi-stage protocols, offering a structured way to achieve specific goals by ensuring transactions execute in the correct order with the necessary dependencies between stages.\n\nThe process of creating a transaction chain involves representing stages as nodes, enforcing transitions between stages, and chaining the stages together. This is often done by checking the script and data of the output boxes to ensure the protocol progresses correctly.",
+  "qa_pairs": [
+    {
+      "question": "What is a transaction chain in a multi-stage protocol?",
+      "answer": "A transaction chain is a sequence of transactions executed in a specific order to achieve a particular outcome or goal, where each transaction in the chain depends on the successful execution of the previous one."
+    },
+    {
+      "question": "How does a transaction chain work in a decentralized exchange (DEX) protocol?",
+      "answer": "In a DEX protocol, a transaction chain might involve steps such as approving the DEX contract, depositing tokens, placing an order, matching the order, executing the trade, and withdrawing the traded tokens and payment."
+    },
+    {
+      "question": "How are the stages of a transaction chain represented?",
+      "answer": "The stages of a transaction chain are represented as a sequence of states (S0, S1, ..., Sn), where each state corresponds to a UTXO protected by a specific script and containing relevant data, and a transaction (Txi) acts as the transition between state Si-1 and state Si."
+    },
+    {
+      "question": "How does the script for a state Si-1 enforce the transition to the next state Si?",
+      "answer": "The script for state Si-1 must enforce conditions on the transaction (Txi) that spends it, specifically requiring that Txi creates an output box representing state Si with the correct script and data."
+    },
+    {
+      "question": "What optimization is commonly used to reduce script size in transaction chains?",
+      "answer": "Instead of checking the full script code, it's common practice to work with hashes. The script checks blake2b256(out.propositionBytes) == state_n_code_hash, where state_n_code_hash is a known constant hash of the expected script for the next stage."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Transaction Chains",
+      "level": 1,
+      "content": "In a multi-stage protocol, a **transaction chain** is a sequence of transactions executed in a specific order to achieve a particular outcome or goal. Each transaction in the chain depends on the successful execution of the previous one, and the overall success of the protocol relies on the successful execution of the entire chain.\n\nFor example, a transaction chain in a decentralized exchange (DEX) protocol might involve several steps to execute a trade between two parties. This chain could include steps such as:\n\n- Approving the DEX contract to spend the required tokens from the user's wallet.\n- Depositing the tokens to be traded into the DEX's smart contract box.\n- Placing an order to buy or sell tokens at a specific price.\n- Matching the order with a corresponding buy or sell order from another party.\n- Executing the trade by creating a transaction that transfers the tokens and corresponding payment between the parties' boxes.\n- Withdrawing the traded tokens and payment from the DEX's smart contract box back to the respective parties' wallets.\n\nIn this example, each transaction depends on the successful completion of the previous one. The overall success of the trade hinges on the successful execution of the entire transaction chain. If any transaction fails or encounters an error, the entire chain might fail, preventing the trade from being executed.\n\nTransaction chains are a fundamental concept in Ergo's multi-stage protocols. They offer a structured way to achieve specific goals by ensuring transactions execute in the correct order with the necessary dependencies between stages."
+    },
+    {
+      "heading": "Process",
+      "level": 2,
+      "content": "A **transaction chain** is used to create multi-stage protocols where the logic progresses sequentially through different states, represented by UTXOs (boxes). Each stage's script enforces the rules for transitioning to the next stage.\n\nA transaction chain representing a multi-stage protocol can be conceptualized as follows:"
+    },
+    {
+      "heading": "1: Represent Stages as Nodes",
+      "level": 3,
+      "content": "Represent the execution flow as a sequence of `n` states (S<sub>0</sub>, S<sub>1</sub>, ..., S<sub>n</sub>). Each state corresponds to a UTXO protected by a specific script and containing relevant data. A transaction (Tx<sub>i</sub>) acts as the transition between state S<sub>i-1</sub> and state S<sub>i</sub>, consuming the box representing S<sub>i-1</sub> and creating the box representing S<sub>i</sub>. This forms a directed graph where states are nodes and transactions are edges. For example, a 3-stage contract (like the ICO example) can be visualized as:\n\n![](../../../assets/img/scs/tx-chain.png)\n\nEach state (box) contains data (in registers) and is protected by script code (propositionBytes)."
+    },
+    {
+      "heading": "2: Enforce Transitions",
+      "level": 3,
+      "content": "To ensure the protocol progresses correctly, the script guarding state S<sub>n-1</sub> must enforce conditions on the transaction (Tx<sub>n</sub>) that spends it. Specifically, it must require that Tx<sub>n</sub> creates an output box representing state S<sub>n</sub> with the correct script and data. This is often done by checking the `propositionBytes` and relevant registers of the output box. An example is shown in the following pseudocode within the script for state S<sub>n-1</sub>:\n\n```scala\n// Ensure the output box has the same ErgoScript code as the state box and the same R4 data\n// This is used to propagate data from the state box to the output box\nout.propositionBytes == state_n_code &&\nout.R4[Int].get == SELF.R4[Int].get\n```\n\nThe code above uses the `propositionBytes` field of a box, which contains the serialized binary representation of its guarding script (ErgoTree)."
+    },
+    {
+      "heading": "3: Chain the Stages",
+      "level": 3,
+      "content": "Repeat Step 2 for all transitions in the chain: the script for S<sub>n-2</sub> enforces the creation of S<sub>n-1</sub>, the script for S<sub>n-3</sub> enforces the creation of S<sub>n-2</sub>, and so on, back to the initial state S<sub>0</sub>.\n\n\nTo avoid embedding potentially large script code within the previous stage's script, it's common practice to work with hashes. Instead of checking `out.propositionBytes == state_n_code`, the script checks `blake2b256(out.propositionBytes) == state_n_code_hash`, where `state_n_code_hash` is a known constant hash of the expected script for the next stage. This optimization significantly reduces script size.\n\nNext, we will look at [Transaction Trees](tx-tree.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/tx/tx-chains.md",
+  "processed_at": "2025-05-11T19:32:15.074069",
+  "ai_processed": true
+}

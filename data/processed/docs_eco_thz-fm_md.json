@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_thz-fm_md",
+  "title": "THz.FM",
+  "summary": "THz.FM is an open-source framework developed by Swamp Audio to replace existing legacy media monetization and management platforms. The goals are to improve the lives of artists and musicians, and to bring diverse ideas and people together to create something greater than the sum of their parts. The framework aims to harness the power of blockchain and the Ergo platform.",
+  "qa_pairs": [
+    {
+      "question": "What is THz.FM?",
+      "answer": "THz.FM is an open-source framework to replace existing legacy media monetisation & management platforms."
+    },
+    {
+      "question": "What are the goals of THz.FM?",
+      "answer": "The goals of THz.FM are to make life better for artists/musicians and to bring diverse ideas & people together to be something greater than the sum of their parts."
+    },
+    {
+      "question": "What technology is THz.FM harnessing?",
+      "answer": "THz.FM is harnessing the power of blockchain & Ergo."
+    },
+    {
+      "question": "What was THz.FM previously called?",
+      "answer": "THz.FM was previously called 'swamp-audio'."
+    },
+    {
+      "question": "What type of platform is THz.FM developing?",
+      "answer": "THz.FM is developing an open-source framework to replace existing legacy media monetisation & management platforms."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - THz.FM\n  - Swamp Audio\n  - Music\n  - NFT\n  - Framework\n  - dApp\n  - dApp-Beta\n---"
+    },
+    {
+      "heading": "THz.FM",
+      "level": 1,
+      "content": "[THz.FM](https://thz.fm/) is an open-source framework to replace existing legacy media monetisation & management platforms. (Previously 'swamp-audio'). \n\nThe goals are simple; to make life better for the artists/musicians, and to bring diverse ideas & people together to be something greater than the sum of their parts. Swamp is currently developing an open-source framework to replace existing legacy media monetisation & management platforms, harnessing the power of blockchain & Ergo."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/thz-fm.md",
+  "processed_at": "2025-05-11T19:48:43.193793",
+  "ai_processed": true
+}

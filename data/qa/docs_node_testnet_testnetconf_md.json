@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Testnet Configuration\n\nThis document describes the main sections and fields of the [Ergo node configuration file for the Test Network](https://github.com/ergoplatform/ergo/blob/master/src/main/resou..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Testnet Configuration"
+  },
+  {
+    "question": "What is the 'Testnet Configuration' section about?",
+    "answer": "This document describes the main sections and fields of the [Ergo node configuration file for the Te..."
+  },
+  {
+    "question": "What is the 'Network Type' section about?",
+    "answer": "`ergo.networkType = \"testnet\"`\nThis setting defines the network type. For testing purposes, it's set..."
+  }
+]

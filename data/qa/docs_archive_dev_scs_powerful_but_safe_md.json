@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key difference between Ethereum and Ergo smart contracts?",
+    "answer": "Ergo takes a declarative model for programming whereby it's always known in advance how much code will cost to run and whether it will run precisely as intended, unlike Ethereum's Turing-complete smart contracts which can be powerful but dangerous."
+  },
+  {
+    "question": "How do Sigma protocols enable new DeFi applications on Ergo?",
+    "answer": "Sigma protocols allow Ergo to implement powerful DeFi use cases like 'ring contracts' that would be complex and expensive on other platforms."
+  },
+  {
+    "question": "What are the two main trust issues with a gold-backed token on Ergo?",
+    "answer": "The two trust issues are: 1) the issuer may refuse to swap the gold tokens back at the correct price, and 2) the issuer may default on their obligations and operate a fractional reserve."
+  },
+  {
+    "question": "How can an Oracle and decentralized insurance contract address the trust issues with a gold-backed token?",
+    "answer": "An Oracle can provide a decentralized price feed to automatically enforce the right price when redeeming the gold tokens. A decentralized insurance contract can act as a buyer of last resort if the issuer defaults."
+  },
+  {
+    "question": "What are the key benefits of Ergo's approach to smart contracts compared to Ethereum?",
+    "answer": "Ergo's smart contracts are predictable in cost and execution, do not have the dangers of unrestricted functionality, and enable versatile DeFi applications using Sigma protocols."
+  }
+]

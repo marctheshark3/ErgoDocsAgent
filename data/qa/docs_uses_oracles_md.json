@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of oracles in a decentralized financial system?",
+    "answer": "Oracles form the critical infrastructure in a decentralized financial system, connecting off-chain data with on-chain transactions. They provide essential data feeds for various operations, from atomic swaps to more complex interactions like lending/borrowing and dynamic market-making."
+  },
+  {
+    "question": "How do Oracle Pools on Ergo help sustain a resilient DeFi ecosystem?",
+    "answer": "Ergo has pioneered Oracle Pools to sustain a resilient DeFi ecosystem. Utilizing the Extended UTXO (eUTXO) model and the powerful ErgoScript programming language, Ergo facilitates highly decentralized oracle networks. Oracle Pools serve as an abstraction layer over the Oracle data, allowing scalable benefits while managing trade-offs between cost and speed."
+  },
+  {
+    "question": "What are the key features and improvements introduced in Oracle Pools V2?",
+    "answer": "Oracle Pools V2 offers a range of new features and improvements including a single pool address, an epoch counter, a compact pool box, a refresh box, token-based rewards, no separate funding process, reward accumulation, and transferability of oracle and ballot tokens."
+  },
+  {
+    "question": "Where can I find detailed steps to bootstrap an ERG/XAU pool on Ergo testnet using Oracle Pools V2?",
+    "answer": "For detailed steps on how to bootstrap an ERG/XAU pool on testnet with this new version, follow the guide at https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md."
+  },
+  {
+    "question": "Where can I find comprehensive information about the changes and advancements in Oracle Pools V2 compared to V1.0?",
+    "answer": "For a comprehensive comparison between versions v1.0 and v2.0, highlighting the significant advancements in the latter, refer to the EIP-0023 Oracle pool 2.0 document at https://github.com/ergoplatform/eips/pull/41."
+  }
+]

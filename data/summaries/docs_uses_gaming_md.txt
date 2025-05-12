@@ -1,0 +1,7 @@
+The document discusses gaming on the Ergo blockchain. It highlights various metaverse projects, NFT-based games, and monetary-based games. The key points include:
+
+- ErgoGames.io is a platform showcasing games developed for the Ergo blockchain.
+- Metaverse projects like Cyberverse and SigmaValley (inactive) aim to integrate blockchain technology for unique player experiences.
+- NFT-based games like BlitzTCG, Digigoats, and Project Tesseract are being developed.
+- Monetary-based games like Grand Gambit are also mentioned.
+- The document also provides developer resources such as ergflip, ObolFlip, and Hypo10use.

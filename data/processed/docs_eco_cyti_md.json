@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_cyti_md",
+  "title": "CYTI",
+  "summary": "CYTI is a smart contract that allows entities to mint tokens with a specific character sequence at the beginning of the token ID. A token minter creates a CYTI request, and miners use the CYTI miner software to generate the proper token ID. When a miner succeeds, they receive the fee from the CYTI contract, and the token with the right ID is sent to the token minter.",
+  "qa_pairs": [
+    {
+      "question": "What is the full form of CYTI?",
+      "answer": "CYTI stands for Choose Your Token ID."
+    },
+    {
+      "question": "What is the purpose of the CYTI smart contract?",
+      "answer": "The CYTI smart contract allows an entity to mint tokens with a given character sequence at the beginning of the token ID."
+    },
+    {
+      "question": "How does the CYTI minting process work?",
+      "answer": "A token minter creates a CYTI request, and miners generate the proper token ID using the CYTI miner software. When a miner succeeds, they receive the fee from the CYTI contract, and the token with the right token ID is sent to the token minter."
+    },
+    {
+      "question": "What are the key components of the CYTI system?",
+      "answer": "The key components of the CYTI system are the CYTI smart contract, the CYTI miner software, and the token minter."
+    },
+    {
+      "question": "What are the potential applications of the CYTI system?",
+      "answer": "The CYTI system can be used by entities to mint tokens with a specific character sequence at the beginning of the token ID."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - CYTI\n  - Token Minting\n  - Mining\n  - Smart Contract\n  - dApp\n---"
+    },
+    {
+      "heading": "CYTI",
+      "level": 1,
+      "content": "[CYTI](https://github.com/ThierryM1212/cyti) is the acronym for Choose Your Token ID. The team built a \u2018minable\u2019 smart contract that will allow an entity \u201cto mint tokens with a given character sequence at the beginning of the token ID. A token minter creates a CYTI request, and miners generate the proper token ID using the CYTI miner software. When one of the miners succeeds, [they receive] the fee from the CYTI contract and the token with the right token ID is sent to the token minter.\u201d"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/cyti.md",
+  "processed_at": "2025-05-11T19:43:18.119254",
+  "ai_processed": true
+}

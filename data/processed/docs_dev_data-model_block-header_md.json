@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_data-model_block-header_md",
+  "title": "Block Header",
+  "summary": "The block header in Ergo serves as a concise summary of a block's critical information, playing a vital role in maintaining the integrity and security of the blockchain. It enables efficient synchronization between nodes, validates the miner's Proof-of-Work solution, and ensures the integrity of the entire block. The header contains key components such as the version, parent ID, ADProofs root, state root, transactions root, timestamp, difficulty target, height, extension root, Proof-of-Work solution, and votes. These elements work together to uphold the blockchain's security and facilitate its operation.",
+  "qa_pairs": [
+    {
+      "question": "What is the main function of the block header in the Ergo blockchain?",
+      "answer": "The block header serves three main functions: chain synchronization, Proof-of-Work validation, and block integrity."
+    },
+    {
+      "question": "What are the key components of the block header in Ergo?",
+      "answer": "The key components of the block header include version, parentId, ADProofsRoot, stateRoot, transactionsRoot, timestamp, nBits, height, extensionRoot, and powSolution."
+    },
+    {
+      "question": "How does the Merkle tree data structure relate to the block header in Ergo?",
+      "answer": "The Merkle tree is used extensively in the block header to efficiently verify the integrity of the data, including the ADProofs, transactions, and extension section."
+    },
+    {
+      "question": "What is the purpose of the UTXO (Unspent Transaction Output) set in the context of the Ergo blockchain?",
+      "answer": "The UTXO set represents the current distribution of the cryptocurrency on the Ergo blockchain, and the stateRoot in the block header is a digest of this set."
+    },
+    {
+      "question": "How does the Proof-of-Work (PoW) mechanism relate to the block header in Ergo?",
+      "answer": "The block header contains the necessary information to verify the miner's PoW solution, ensuring that the block meets the network's difficulty requirements."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Block Header\n  - Data Model\n---"
+    },
+    {
+      "heading": "Block Header",
+      "level": 1,
+      "content": "*(Back to: [Block Overview](block.md))*\n\nThe **block header** in Ergo serves as a concise summary of a [block's](block.md) critical information. It plays a vital role in maintaining the integrity and security of the blockchain."
+    },
+    {
+      "heading": "Functions",
+      "level": 2,
+      "content": "* **Chain Synchronization:** Headers enable efficient synchronization between [nodes](install.md) on the network. By exchanging and validating headers, nodes can quickly agree on the current state of the blockchain without downloading every full block.\n* **[Proof-of-Work](autolykos.md) Validation:** The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's [difficulty](difficulty.md) requirements.\n* **Block Integrity:** Headers include hashes that link to other sections of the block ([transactions](block-transactions.md), [proofs](block-adproofs.md), [extension](extension-section.md)), guaranteeing the integrity of the entire block. Any tampering with the block's content would result in a mismatch of these hashes."
+    },
+    {
+      "heading": "Components",
+      "level": 2,
+      "content": "The `Header` class in [Header.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/header/Header.scala) defines the structure of the block header. Here's an overview of the key fields:\n\n* **version:** Indicates the protocol version used to create the block. This allows for future upgrades and changes to the blockchain while maintaining backward compatibility.\n* **parentId:** The ID of the previous block in the blockchain. This links blocks together, forming a chain.\n* **ADProofsRoot:** A cryptographic digest of the [ADProofs](block-adproofs.md) that validate changes to the [UTXO set](eutxo.md).\n* **stateRoot:** A digest representing the root of the [Merkle tree](structures/merkle/merkle-tree.md) that captures the state of the UTXO set after this block is applied.\n* **transactionsRoot:** A digest of the Merkle root of all [transactions](block-transactions.md) included in the block.\n* **timestamp:** The time when the block was created, as reported by the miner.\n* **nBits:** Represents the [difficulty](difficulty.md) target for the block, determining how hard it was to mine.\n* **height:** The block's height in the blockchain ([genesis block](emission.md) has height 0 or 1 depending on convention, Ergo starts at 1).\n* **extensionRoot:** A digest of the Merkle root of the [extension section](extension-section.md), which can contain arbitrary data.\n* **powSolution:** The solution to the Proof-of-Work puzzle, demonstrating that the miner expended the necessary computational effort.\n* **votes:** Votes cast by miners to signal preferences for changes to [consensus parameters](governance.md).\n* **unparsedBytes:** A field to accommodate future protocol upgrades, allowing for the inclusion of data not yet parsed by current versions.\n* **sizeOpt:** An optional field storing the size of the header to optimize performance."
+    },
+    {
+      "heading": "Key Concepts",
+      "level": 2,
+      "content": "* **[Merkle Tree](structures/merkle/merkle-tree.md):** A data structure used extensively in blockchains to efficiently verify data integrity. It allows for quick verification that a particular piece of data is included in a larger set.\n* **[UTXO (Unspent Transaction Output) Set](eutxo.md):** The record of all unspent transaction outputs on the blockchain, representing the current distribution of the cryptocurrency.\n* **[Proof-of-Work (PoW)](autolykos.md):** A consensus mechanism that requires miners to solve a computationally intensive puzzle to add blocks to the blockchain. This ensures the security and immutability of the chain."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/block-header.md",
+  "processed_at": "2025-05-11T19:18:54.049199",
+  "ai_processed": true
+}

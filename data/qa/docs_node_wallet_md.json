@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two main options for initializing a wallet?",
+    "answer": "1. Initialize a new wallet by generating a new mnemonic sentence. 2. Restore an existing wallet by providing a previously saved mnemonic sentence."
+  },
+  {
+    "question": "What information is required to restore an existing wallet?",
+    "answer": "To restore an existing wallet, you need to provide the previously saved mnemonic sentence and optionally the BIP-39 passphrase."
+  },
+  {
+    "question": "How can you verify that a wallet has been initialized or restored correctly?",
+    "answer": "You can retrieve the wallet's addresses using the `/wallet/addresses` endpoint to verify the wallet setup was successful."
+  },
+  {
+    "question": "What are the two fields required when initializing a new wallet?",
+    "answer": "When initializing a new wallet, you need to enter a secure password to encrypt the wallet file and optionally a BIP-39 passphrase."
+  },
+  {
+    "question": "What is the purpose of the BIP-39 passphrase when initializing or restoring a wallet?",
+    "answer": "The BIP-39 passphrase adds extra security to the wallet by requiring the passphrase in addition to the mnemonic sentence to access the wallet."
+  }
+]

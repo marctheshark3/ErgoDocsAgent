@@ -1,0 +1,30 @@
+{
+  "id": "docs_uses_dex-buyback_md",
+  "title": "Buy Back Guarantees",
+  "summary": "The document discusses a decentralized token sale scenario where the seller provides buyback guarantees. The buyback contract has an expiration condition and allows the original seller to request the tokens back. The sell contract is defined to handle the buyback process, including checking the buyback script hash, the buyback amount, and the seller's proposition bytes. The document also mentions the concept of \"smart orders\" where DEX orders can be enhanced with complex logic such as token-sale and liquidity providing.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# Buy Back Guarantees\n\nIn this example, we will explore a decentralized token sale scenario where the seller provides buyback guarantees.\n\nThe guarantee works as follows: the seller requires the buyer..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Buy Back Guarantees"
+    },
+    {
+      "question": "What is the 'Buy Back Guarantees' section about?",
+      "answer": "In this example, we will explore a decentralized token sale scenario where the seller provides buyba..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Buy Back Guarantees",
+      "level": 1,
+      "content": "In this example, we will explore a decentralized token sale scenario where the seller provides buyback guarantees.\n\nThe guarantee works as follows: the seller requires the buyer to create a buy order at a specific price for a certain amount of tokens. The remaining amount goes to the seller.\n\nEach order can have unique buyback properties, such as forming a bonding curve.\n\nWe begin with a buyback contract. It has an expiration condition (`buyerPk && sigmaProp(HEIGHT > 100)`); otherwise, the box has been spent if the original seller requests the number of tokens sent back.\n\n```scala\n    {\n        val defined = OUTPUTS(0).R2[Coll[(Coll[Byte], Long)]].isDefined &&  OUTPUTS(0).R4[Coll[Byte]].isDefined\n        (buyerPk && sigmaProp(HEIGHT > 100)) || sigmaProp (if (defined) {\n          allOf(Coll(\n              OUTPUTS(0).tokens(0)._1 == tokenId, \n              OUTPUTS(0).tokens(0)._2 >= tokenAmount,\n              OUTPUTS(0).propositionBytes == sellerPk.propBytes,\n              OUTPUTS(0).R4[Coll[Byte]].get == SELF.id)\n             )\n        } else { false } )\n    }\n```\n\nThe sell contract is then defined as follows:\n\n```scala\n      {\n        sigmaProp(allOf(Coll(\n                    blake2b256(OUTPUTS(0).propositionBytes) == bbh,\n                    OUTPUTS(0).value == buyBackAmount,\n                    OUTPUTS(1).value >= toWithdraw,\n                    OUTPUTS(1).propositionBytes == sellerPk.propBytes,\n                    OUTPUTS(1).R4[Coll[Byte]].get == SELF.id\n                  ))\n                 )\n      }\n```\nIn this case, `bbh` represents the buyback script hash.\n\nYou can experiment with a playground version of this code [on scastie](https://scastie.scala-lang.org/oVlOW1GpTkWGLPLzDmJTxA)\n\n\nJust like the buyback, we can enhance orders with various conditions, thereby achieving DEX functionality. This makes simple DEX orders composable with complex logic such as token-sale, liquidity providing, etc. This concept is referred to as *smart orders*. However, the challenge lies in developing front-end apps and user interfaces for smart order-based DEXes."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/dex-buyback.md",
+  "processed_at": "2025-05-11T20:02:02.299674",
+  "ai_processed": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_wallet_safew_md",
+  "title": "SafeW",
+  "summary": "SafeW is a Simple And Fast Ergo Wallet that integrates a dApp connector compatible with EIP-12. It is compatible with Chrome-based browsers and Firefox, and was recognized in ErgoHack 3. SafeW provides access to the ErgoMixer, a transaction builder in Expert mode, and additional advanced features. It supports multiple wallet types, including mnemonic-based, Ergopay/Read-only, and Ledger hardware wallet. SafeW offers features like account management, address discovery, transaction history, unconfirmed balance display, and direct interaction with ErgoMixer. It also provides tutorials on minting, burning, and sending assets. The wallet is stored in the local storage of the browser extension, with the mnemonic encrypted using AES-256. ErgoPay wallets allow for remote transaction signing, enhancing privacy. The transaction balance displayed is computed from the unsigned transaction, ensuring reliability.",
+  "qa_pairs": [
+    {
+      "question": "What type of wallet is SAFEW?",
+      "answer": "SAFEW is a Simple And Fast Ergo Wallet that integrates a dApp connector compatible with EIP-12."
+    },
+    {
+      "question": "What platforms is SAFEW compatible with?",
+      "answer": "SAFEW is compatible with Chrome-based browsers (Opera, Brave, Edge, Kiwi, etc.) and Firefox."
+    },
+    {
+      "question": "What advanced features does SAFEW provide?",
+      "answer": "SAFEW provides access to the ErgoMixer, a transaction builder in Expert mode, and additional advanced features."
+    },
+    {
+      "question": "How are wallets stored in SAFEW?",
+      "answer": "Wallets are stored in the local storage of the SAFEW browser extension, with the mnemonic encrypted with AES-256 using the spending password."
+    },
+    {
+      "question": "What types of wallets does SAFEW support?",
+      "answer": "SAFEW supports mnemonic-based wallets, Ergopay/Read-only wallets, and Ledger hardware wallet support."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "SafeW",
+      "level": 1,
+      "content": "/// details | Disclaimer\n    {type: warning, open: true}\nThe wallet is not actively maintaned, but still usable for those who desire the extra features offered.\n///\n\n\n\n[SafeW](https://github.com/ThierryM1212/SAFEW) is a Simple And Fast Ergo Wallet that integrates a dApp connector compatible with EIP-12. It is compatible with Chrome-based browsers (Opera, Brave, Edge, Kiwi, etc.) and Firefox. SAFEW was recognized in [ErgoHack](ergohack.md) 3.\n\nIt is ideal for developers because it provides access to the ErgoMixer, a transaction builder in Expert mode, and additional advanced features."
+    },
+    {
+      "heading": "Storing Ergo with SAFEW",
+      "level": 2,
+      "content": "Learn more about storing Ergo with SAFEW in this [blog post](https://ergoplatform.org/en/blog/2022-03-25-storing-ergo-safew/).\n/// details | Comprehensive Video Guide\n    {type: info, open: true}\nFor a visual and detailed guide on how to use SAFEW, watch the comprehensive video tutorial available [here](https://www.youtube.com/watch?v=DFf-dDlCpzM).\n///"
+    },
+    {
+      "heading": "Releases",
+      "level": 2,
+      "content": "- Chrome, Edge, Brave, etc: [Chrome Web Store](https://chrome.google.com/webstore/detail/simple-and-fast-ergo-wall/fmpbldieijjehhalgjblbpgjmijencll/)\n- Firefox: [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/safew/)"
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "content": "- Multiple wallet types:\n    - Mnemonic-based wallet for signing within the SAFEW extension.\n    - Ergopay/Read-only wallet for signing with an Android/iOS wallet.\n    - Ledger hardware wallet support.\n- Account management in expert mode, including viewing addresses and their balance in ERG and tokens.\n- Address discovery following BIP-44 to find used addresses and generate new ones.\n- Transaction history for both confirmed and unconfirmed transactions.\n- Unconfirmed balance display for each wallet, account, and address.\n- Configuration options for Explorer, Node, and Explorer UI addresses.\n- Direct interaction with ErgoMixer from the wallet.\n- Transaction builder for advanced users to manipulate JSON of Ergo transactions.\n    - Tutorials:\n                - [How to mint tokens](https://youtu.be/YR0jkbMLaAY)\n                - [How to burn tokens](https://youtu.be/OcyziMIXTtk)\n                - [How to send assets to several addresses](https://youtu.be/3N7Qn2BgH0U)\n- Export transaction history as CSV.\n- Display and mint NFTs including pictures, audio, and videos.\n- Burn tokens.\n- Chained transactions: send another transaction as soon as the previous one is visible in the Explorer in an unconfirmed state."
+    },
+    {
+      "heading": "Security",
+      "level": 2,
+      "content": "Wallets are stored in the local storage of the SAFEW browser extension. The mnemonic is encrypted with AES-256 using the spending password, which is not stored in the application. The password is required for spending funds or managing addresses. ErgoPay wallets allow for remote transaction signing using iOS or Android wallet v1.6+, avoiding the need to store the encrypted mnemonic in the browser extension's local storage."
+    },
+    {
+      "heading": "Privacy",
+      "level": 2,
+      "content": "Address discovery can be initiated at any time to generate unused addresses. Non-connected sites cannot access wallet information, while connected sites can read the wallet content. The explorer and node used for interacting with the Ergo blockchain are configurable. ErgoPay/ReadOnly wallets enhance privacy by keeping wallet contents hidden. ErgoMixer integration facilitates the use of privacy tools."
+    },
+    {
+      "heading": "Reliability",
+      "level": 2,
+      "content": "The transaction balance displayed when sending funds with SAFEW is computed from the unsigned transaction, not from the UI inputs."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/safew.md",
+  "processed_at": "2025-05-11T19:41:21.125817",
+  "ai_processed": true
+}

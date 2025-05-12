@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_tokens_nfts_v1v2_md",
+  "title": "Design Choices: V1 vs V2",
+  "summary": "The document discusses the design choices between Version 1 (V1) and Version 2 (V2) of the artwork issuance process defined in EIP-0024. The main difference lies in the issuer box:\n\nV1 focuses on handling royalties for the artist or proxy contract, with the royalty percentage and recipient contract specified in the issuer box.\n\nV2 offers more flexibility, including handling multiple royalty recipients, detailed artwork traits, and additional information in the issuer box.\n\nThe document also explains that the artist's identity is established by the first P2PK input in the transaction chain leading to the artwork issuance, rather than solely by the issuance box, to prevent NFT scams and unauthorized copies.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# Design Choices: V1 vs V2\n\n[EIP-0024](eip24.md) offers two design versions for artwork issuance: V1 and V2. Both designs involve two important boxes in the issuance process: the issuance box and the ..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Design Choices: V1 vs V2"
+    },
+    {
+      "question": "What is the 'Design Choices: V1 vs V2' section about?",
+      "answer": "[EIP-0024](eip24.md) offers two design versions for artwork issuance: V1 and V2. Both designs involv..."
+    },
+    {
+      "question": "What is the 'V1 Design' section about?",
+      "answer": "In V1, the issuer box has the following attributes:\n\n- `R4` is an `Int` representing 1000 times the ..."
+    },
+    {
+      "question": "What is the 'V2 Design' section about?",
+      "answer": "V2 addresses some of the shortcomings in V1 and extends the proposal to include collections. The V2 ..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Design Choices: V1 vs V2",
+      "level": 1,
+      "content": "[EIP-0024](eip24.md) offers two design versions for artwork issuance: V1 and V2. Both designs involve two important boxes in the issuance process: the issuance box and the issuer box. The main difference between V1 and V2 lies in the issuer box."
+    },
+    {
+      "heading": "V1 Design",
+      "level": 2,
+      "content": "In V1, the issuer box has the following attributes:\n\n- `R4` is an `Int` representing 1000 times the royalty percentage of the artwork. For example, if the royalty percentage is 2%, the value in `R4` would be 20.\n- The proposition bytes of the issuer box represent the contract to which the royalty percentage will be sent. This design choice was made with the assumption of AOT (Ahead-of-Time) costing, which was replaced with JIT (Just-in-Time) costing in 2022. \n\nV1 mainly focuses on handling royalties for the artist or proxy contract."
+    },
+    {
+      "heading": "V2 Design",
+      "level": 2,
+      "content": "V2 addresses some of the shortcomings in V1 and extends the proposal to include collections. The V2 issuer box has the following attributes:\n\n- `R4` contains the artwork standard version.\n- `R5` holds royalty recipients and their respective percentages.\n- `R6` contains three types of traits: Properties, Levels, and Stats.\n- `R7` contains the token ID of the collection.\n- `R8` specifies additional information about the artwork, such as explicit content.\n\nV2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information."
+    },
+    {
+      "heading": "Artist Identity",
+      "level": 2,
+      "content": "Establishing the artist's identity is crucial for auction houses to prevent NFT scams and unauthorized copies. The artist's identity cannot be solely determined by the issuance box, as it may be impersonated. Instead, the artist's identity and address are established by the first P2PK input in the transaction chain leading to the artwork issuance. This means that if a proxy contract is used, the first input of the transaction that sends funds to the proxy contract will determine the artist's identity."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tokens/nfts/v1v2.md",
+  "processed_at": "2025-05-11T19:37:56.834687",
+  "ai_processed": true
+}

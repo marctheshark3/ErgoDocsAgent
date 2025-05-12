@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_the-field_md",
+  "title": "The Field",
+  "summary": "The Field is a peer-to-pool pledging protocol where individuals can pledge assets to support participants in competitions. It is designed to be DAO-driven and open-source. The Minimum Viable Product (MVP) smart contracts are complete, and the dApp front-end UI is currently functional with minor tweaks and improvements expected soon. Private testing of pools and pledges is underway, and there is an ambitious goal to have an Olympic event next week for Live Beta testing from the community using small amounts. The project has a Discord server where people can learn more and volunteer to help move the project and DAO forward.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of 'The Field' project?",
+      "answer": "The Field is a peer-to-pool pledging protocol where individuals can pledge assets (coins or tokens) to support participants in competitions."
+    },
+    {
+      "question": "What is the current status of the project's development?",
+      "answer": "The Minimum Viable Product (MVP) Smart Contracts are complete, the dApp front-end UI is ongoing, and private testing of pools and pledges is currently underway."
+    },
+    {
+      "question": "What are the upcoming plans for the project?",
+      "answer": "There is an ambitious goal to have an Olympic event next week for Live Beta testing from the community using small amounts."
+    },
+    {
+      "question": "How can users get involved with the project?",
+      "answer": "Users can join the project's Discord server to learn more and/or volunteer to help move the project and DAO forward."
+    },
+    {
+      "question": "What are the key technical details of the project?",
+      "answer": "The project is designed to be DAO-driven and open-source, with the MVP Smart Contracts complete and the dApp front-end UI ongoing."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - The Field\n  - Pledging\n  - DAO\n  - dApp\n---"
+    },
+    {
+      "heading": "The Field",
+      "level": 1,
+      "content": "\"The Field\" is a peer-to-pool pledging protocol where individuals can pledge assets (coins or tokens) to support participants in competitions. The project is designed to be DAO-driven and open-source.\n\n- The Minimum Viable Product (MVP) Smart Contracts are complete, with no adjustments required this week. No further adjustments are needed for the guard bots.\n- Integration of the dApp front-end UI for the MVP is ongoing - it is currently functional, but minor tweaks and improvements are expected soon.\n- Private testing of pools and pledges is currently underway.\n  - The guard group has successfully posted a test Market to receive pledges.\n  - Pledging to the market has been successful (see below).\n  - Once the Market closes and the guards post the results, testing of \"pledge winnings and calculations\" will occur.\n- There is an ambitious goal to have an Olympic event next week for Live Beta testing from the community using small amounts (see below).\n- Join the project's Discord server at https://discord.gg/wa38bX57tY to learn more and/or volunteer to help move the project and DAO forward."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/the-field.md",
+  "processed_at": "2025-05-11T19:48:39.411398",
+  "ai_processed": true
+}

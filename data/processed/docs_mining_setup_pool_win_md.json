@@ -1,0 +1,78 @@
+{
+  "id": "docs_mining_setup_pool_win_md",
+  "title": "MiningCore Setup Tutorial on Windows 10",
+  "summary": "This document provides a step-by-step tutorial for setting up MiningCore on a Windows 10 machine. The key steps include:\n\n1. Install PostgreSQL 10 or the latest version.\n2. Launch the pSQL Shell and log in using the credentials set during PostgreSQL installation.\n3. Create a database role and schema for MiningCore.\n4. Run the necessary database setup scripts.\n5. Create a partition of the shares table for each coin you set up.\n6. Configure the pool by creating a coin-specific JSON config file.\n7. Create a startup batch file to launch the MiningCore pool.\n\nThe tutorial ensures the pool is set up and ready to go, with a note to ensure the coin's node is fully synced before launching the pool.",
+  "qa_pairs": [
+    {
+      "question": "What is the first step in setting up MiningCore on Windows 10?",
+      "answer": "Install PostgreSQL 10 or the latest version."
+    },
+    {
+      "question": "What command is used to launch the pSQL Shell?",
+      "answer": "Open the Windows search bar and type `psql`."
+    },
+    {
+      "question": "What are the default credentials to login to the pSQL Shell?",
+      "answer": "Username: `postgres`, Password: (the one set during install)."
+    },
+    {
+      "question": "What commands are used to create the database role and schema?",
+      "answer": "CREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'myPassword'; CREATE DATABASE miningcore OWNER miningcore;"
+    },
+    {
+      "question": "What scripts need to be run to complete the database setup?",
+      "answer": "createdb.sql and createdb_postgresql_11_appendix.sql"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "MiningCore Setup Tutorial on Windows 10",
+      "level": 1,
+      "content": "This guide walks you through setting up MiningCore on a Windows 10 machine step-by-step.\n\n---"
+    },
+    {
+      "heading": "\ud83d\udce6 Step 1: Install PostgreSQL",
+      "level": 2,
+      "content": "- Download and install PostgreSQL 10 or the latest version:  \n  \ud83d\udc49 [https://www.postgresql.org/download/](https://www.postgresql.org/download/)\n\n> \u26a0\ufe0f During installation, **you do not need to install StackBuilder**.\n\n---"
+    },
+    {
+      "heading": "\ud83d\udc18 Step 2: Launch pSQL Shell",
+      "level": 2,
+      "content": "- Open the Windows search bar and type **`psql`**.\n- Launch the **pSQL Shell**.\n- Login using the credentials you set during PostgreSQL installation.\n  - Username: `postgres` (default)\n  - Password: (the one you set during install)\n\n---"
+    },
+    {
+      "heading": "\ud83d\udd10 Step 3: Create Database Role and Schema",
+      "level": 2,
+      "content": "In the pSQL Shell, run the following commands (replace `myPassword` with your actual password):\n\n```sql\nCREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'myPassword';\nCREATE DATABASE miningcore OWNER miningcore;\n```\n\n---"
+    },
+    {
+      "heading": "\ud83d\udcc2 Step 4: Run Database Setup Scripts",
+      "level": 2,
+      "content": "Locate the following files on your PC:\n\n- `createdb.sql`\n- `createdb_postgresql_11_appendix.sql`\n\nThen, in the pSQL Shell, run these commands (replace with actual paths):\n\n```sql\n\\i c:/Users/YourUser/Desktop/miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql\n\\i c:/Users/YourUser/Desktop/miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql\n```\n\n---"
+    },
+    {
+      "heading": "\ud83e\uddf1 Step 5: Create Pool Table",
+      "level": 2,
+      "content": "For **each coin you setup**, create a partition of the shares table:\n\n```sql\nCREATE TABLE shares_coinName PARTITION OF shares FOR VALUES IN ('coinName');\n```\n\n> \ud83d\udd01 Replace **`coinName`** with your desired coin identifier (e.g., `btc`, `eth`).\n\n---"
+    },
+    {
+      "heading": "\u2699\ufe0f Step 6: Configure the Pool",
+      "level": 2,
+      "content": "1. Go to your MiningCore `build` directory.\n2. Create a `coinName.json` config file for your coin.\n3. Inside the config file:\n   - Ensure `\"logFile\"` and `\"apiLogFile\"` under `\"logging\"` are filled in (e.g., `coinName_core.log`, `coinName_api.log`).\n\n\ud83d\udcdd Example config:  \n[MiningCore Configuration Example](https://github.com/oliverw/miningcore/wiki/Configuration)\n\n---"
+    },
+    {
+      "heading": "\ud83d\udee0\ufe0f Step 7: Create a Startup Batch File",
+      "level": 2,
+      "content": "In your MiningCore root directory, create a `.bat` file with the following content (adjust for your coin name):\n\n```bat\ncd build\n./Miningcore -c coinName.json\n```\n\n---"
+    },
+    {
+      "heading": "\u2705 Step 8: All Done!",
+      "level": 2,
+      "content": "MiningCore is now set up and ready to go!\n\n> \u26a0\ufe0f Ensure your coin's **node is fully synced** before launching the pool.\n\nHappy mining! \u26cf\ufe0f"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/setup/pool_win.md",
+  "processed_at": "2025-05-11T19:52:18.005735",
+  "ai_processed": true
+}

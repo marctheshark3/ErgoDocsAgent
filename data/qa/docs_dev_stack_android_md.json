@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What programming languages can be used to develop Android applications?",
+    "answer": "Java, Kotlin, and Scala can be used to develop Android applications."
+  },
+  {
+    "question": "What is AppKit?",
+    "answer": "AppKit is a library for polyglot development of Ergo Applications."
+  },
+  {
+    "question": "What is Mosaik?",
+    "answer": "Mosaik is a UI system for dApps."
+  },
+  {
+    "question": "Where are the Android bindings for Ergo implemented?",
+    "answer": "The Android bindings for Ergo are implemented in sigma-rust."
+  },
+  {
+    "question": "What tool is recommended for getting started with building on Android?",
+    "answer": "Gradle is recommended for getting started with building on Android."
+  }
+]

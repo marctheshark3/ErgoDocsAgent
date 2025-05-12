@@ -1,0 +1,7 @@
+The document describes the different types of addresses used in the Ergo blockchain network. The main address types are:
+
+- Mainnet (0x00) and Testnet (0x10) network types
+- Pay-to-PublicKey (P2PK), Pay-to-Script-Hash (P2SH), and Pay-to-Script (P2S) address types
+- The format and content of each address type, including the prefix byte, content bytes, and checksum
+- Comparison of P2S and P2SH addresses, with P2S being easier to use but P2SH being cheaper for on-chain storage
+- Suggestion that P2SH could be a good candidate for a pre-defined contract template using EIP-5

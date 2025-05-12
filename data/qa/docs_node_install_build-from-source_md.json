@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - Node\n  - Installation\n  - Build\n  - Source Code\n  - SBT\n  - Development\n  - Release Candidate\n---\n\n# Building the Ergo Node from Source\n\nWhile downloading the pre-compiled JAR from the [..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Building the Ergo Node from Source"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - Node\n  - Installation\n  - Build\n  - Source Code\n  - SBT\n  - Development\n  - Release Ca..."
+  },
+  {
+    "question": "What is the 'Building the Ergo Node from Source' section about?",
+    "answer": "While downloading the pre-compiled JAR from the [Ergo GitHub releases page](https://github.com/ergop..."
+  },
+  {
+    "question": "What is the 'Prerequisites' section about?",
+    "answer": "*   **Git:** [Install Git](https://git-scm.com/downloads) if you don't have it.\n*   **Java Developme..."
+  }
+]

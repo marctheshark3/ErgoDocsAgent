@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Hodlcoin?",
+    "answer": "Hodlcoin is a high-risk, high-reward game that encourages players to 'HODL' their ERGs."
+  },
+  {
+    "question": "How does the Hodlcoin game work?",
+    "answer": "Players can deposit their ERGs into a common reserve (HODLing) or withdraw ERGs from the reserve by burning their HODL ERGs (un-HODLing). Un-HODLing incurs a penalty fee that is added to the common reserve."
+  },
+  {
+    "question": "What was the security incident that occurred with Hodlcoin?",
+    "answer": "A vulnerability was introduced during the development process that allowed the bank box to be drained. Krasavice Blasen identified the error and drained the funds to prevent a malicious actor from doing so."
+  },
+  {
+    "question": "How was Hodlcoin relaunched after the security incident?",
+    "answer": "A second version of Hodlcoin has been developed and launched by PhoenixErgo. The new version is being worked on by community developers MGpai and lgd, who are revising the contract and using a proxy contract to enhance security."
+  },
+  {
+    "question": "Where can users access the relaunched Hodlcoin?",
+    "answer": "The relaunched Hodlcoin now operates with two frontends using the same bank, one is available at Hodlcoin (https://app.hodlcoin.co.in/) and the other at PhoenixFi (https://phoenixfi.app/)."
+  }
+]

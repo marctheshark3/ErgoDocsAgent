@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is P2P trading?",
+    "answer": "P2P trading, or peer-to-peer trading, is a method of exchanging cryptocurrencies directly between individuals without needing a centralised exchange or intermediary."
+  },
+  {
+    "question": "What are the options for P2P trading on Ergo?",
+    "answer": "The options for P2P trading on Ergo include Token Jay, single-tx-swap.com, and Analog Ergo."
+  },
+  {
+    "question": "What is Token Jay?",
+    "answer": "Token Jay lets you trade tokens person to person, trustless and decentralised with TokenJay's open P2P Escrow service."
+  },
+  {
+    "question": "What is single-tx-swap.com?",
+    "answer": "single-tx-swap.com is a multi-sig trustless escrow service compatible with Nautilus."
+  },
+  {
+    "question": "What is Analog Ergo?",
+    "answer": "Analog Ergo is a cross-chain peer-to-peer marketplace in development."
+  }
+]

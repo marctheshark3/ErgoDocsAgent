@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the mission of the Ergo Foundation?",
+    "answer": "The Ergo Foundation's mission is to encourage the non-breaking development of the Ergo Platform protocol, advocate for the widespread adoption and use of the Ergo Platform and its native token (ERG), foster the growth of the ecosystem around the Ergo Platform, promote the use of the Ergo Platform and blockchain technology for societal benefit, support truly decentralized infrastructure, and uphold privacy as a fundamental human right."
+  },
+  {
+    "question": "What is the structure of the Ergo Foundation?",
+    "answer": "The Ergo Foundation is composed of dedicated members who primarily function as multi-signature custodians. They vote on proposals to allocate treasury funds in alignment with the Foundation's mission. The Foundation also directly employs several Officers and Advisors."
+  },
+  {
+    "question": "What are the key responsibilities of the Ergo Foundation members?",
+    "answer": "The day-to-day responsibilities of Foundation members include contracting and compensating developers, allocating 'bounties' on core repositories, guiding core protocol development, overseeing wallet development, coordinating exchange listings, managing payments to third parties, facilitating partnership-related expenses, organizing and funding hackathons and summits, and directing marketing and promotional initiatives."
+  },
+  {
+    "question": "Who are some of the key members of the Ergo Foundation?",
+    "answer": "The Ergo Foundation members include Justin Simpson, who has over 13 years of experience in Investment Banking and has been involved with crypto and Bitcoin since 2013, and Mark Glasgow, a Computing Science graduate who is passionate about improving inclusive systems and serves as the Technical Director for Disabled Students UK CIC."
+  },
+  {
+    "question": "What is the role of Alexander Slesarenko (morphic) in the Ergo Foundation?",
+    "answer": "Alexander Slesarenko (morphic) is a graduate of Applied Mathematics from Udmurt State University with over 25 years of experience in software development. He manages the sigmastate-interpreter repository, which is a key component of the Ergo Platform."
+  }
+]

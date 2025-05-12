@@ -1,0 +1,8 @@
+The document provides FAQs about the Rosen Bridge, which is a cross-chain bridge. Key points include:
+
+- The bridge fee structure is the greater of $10 or 0.5% of the transaction value, plus network fees, adjustable by the guard set.
+- There is no fixed maximum for a single transaction, but large transfers may take longer due to manual guard intervention.
+- ADA is managed by sending network fees in the transaction token on Ergo to a dedicated address to cover fees on Cardano.
+- Projects can add new token options by paying a listing fee to the Rosen Fund, which involves minting wrapped tokens and updating the token map.
+- The roadmap includes adding support for BTC, BSC, and Dogecoin in the midterm.
+- The team consists of 8 developers, with some frontend and UI tasks outsourced, and 2-3 additional part-time developers over the past year, supported by several advisors.

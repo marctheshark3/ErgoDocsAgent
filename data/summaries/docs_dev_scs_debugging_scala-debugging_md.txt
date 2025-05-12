@@ -1,0 +1,6 @@
+The document discusses a Scala-based approach to debugging ErgoScript contracts. The key points are:
+
+- ErgoScript is a subset of Scala, so standard Scala debugging tools and techniques can be used to test and debug contract logic off-chain.
+- The process involves representing the contract logic as Scala code, setting up a testing environment, simulating the blockchain context, setting breakpoints, and running the code in debug mode to inspect and step through the logic.
+- The document provides an example reference using the AssetsAtomicExchange.scala tests within the sigmastate-interpreter repository, demonstrating how to set breakpoints and debug the contract logic.
+- This technique allows for thorough verification of contract logic before deployment, catching potential errors in a controlled off-chain environment.

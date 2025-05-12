@@ -1,0 +1,68 @@
+{
+  "id": "docs_contribute_standards_analytics_md",
+  "title": "Analytics",
+  "summary": "The document provides an overview of analytics and metrics related to the Ergo blockchain ecosystem. It covers on-chain analytics, integration with DeFiLlama, recognition of developer contributions, and statistics on the developer community and dApps/projects. Key points include:\n\n- On-chain metrics can be found on ergo.watch\n- To be included on DeFiLlama, an adaptor needs to be created\n- Developer contributions can be recognized through developerreport.com and Artemis\n- The Ergo developer community has around 350 total developers, 100 active contributors, and 58+ monthly active developers\n- The Ergo ecosystem has around 40+ sub-ecosystems, tradable tokens listed on Sigmaverse, and a dozen dApps in development",
+  "qa_pairs": [
+    {
+      "question": "What on-chain metrics can be found on ergo.watch?",
+      "answer": "P2PK count."
+    },
+    {
+      "question": "What is required to be included on defillama.com/chain/Ergo?",
+      "answer": "Create an adaptor."
+    },
+    {
+      "question": "How can developers have their contributions recognized in the yearly report by developerreport.com and the weekly-updated Artemis dashboard?",
+      "answer": "Add your GitHub organization or repositories to this repository: https://github.com/electric-capital/crypto-ecosystems/blob/master/data/ecosystems/e/ergo.toml."
+    },
+    {
+      "question": "What is the purpose of the Artemis dashboard?",
+      "answer": "It provides weekly-updated developer activity for the Ergo ecosystem."
+    },
+    {
+      "question": "What is the purpose of the developerreport.com yearly report?",
+      "answer": "It recognizes developer contributions to the Ergo ecosystem."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Analytics",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "On-chain Analytics",
+      "level": 2,
+      "content": "For on-chain metrics such as P2PK count, you can refer to [ergo.watch](https://ergo.watch/)."
+    },
+    {
+      "heading": "DeFiLlama Integration",
+      "level": 3,
+      "content": "If you wish to be included on [defillama.com/chain/Ergo](https://defillama.com/chain/Ergo), it is necessary to create an adaptor."
+    },
+    {
+      "heading": "Developer Contributions",
+      "level": 3,
+      "content": "To have your contributions recognized in the yearly report by [developerreport.com](https://www.developerreport.com/ecosystems/ergo/) and the weekly-updated [Artemis](https://app.artemis.xyz/developer-activity?ecosystemValue=Ergo) dashboard, please add your GitHub organization or repositories to [this repository](https://github.com/electric-capital/crypto-ecosystems/blob/master/data/ecosystems/e/ergo.toml)."
+    },
+    {
+      "heading": "Developer Statistics",
+      "level": 3,
+      "content": "- Total community developers: 350\n- Active contributors: 100\n- Monthly Active Developers: 58+"
+    },
+    {
+      "heading": "dApps/Projects Statistics",
+      "level": 3,
+      "content": "- Sub-ecosystems: ~40+\n- Tradable tokens: Information can be found [here](https://sigmaverse.io/all-projects)\n- dApps in development: A dozen. A community roadmap is available [here](https://docs.google.com/spreadsheets/d/1d8bzPkZ__Ta5aFc388C7xkLiEaI-95IQcbgSRg8_wkw/edit?usp=sharing)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/contribute/standards/analytics.md",
+  "processed_at": "2025-05-11T19:17:41.557558",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a sidechain?",
+    "answer": "A sidechain is a separate blockchain that is connected to a main chain via a two-way peg, allowing for the transfer of assets between the main and side chains under different rules or functionalities."
+  },
+  {
+    "question": "What is the purpose of Sigma Chains on Ergo?",
+    "answer": "Sigma Chains are a specialized implementation framework for sidechains on Ergo, designed to provide enhanced programmability, cross-chain compatibility, and economic sustainability."
+  },
+  {
+    "question": "What are the key benefits of Sigma Chains?",
+    "answer": "The key benefits of Sigma Chains include programmability, cross-chain compatibility, and economic sustainability through mechanisms such as storage rent and demurrage."
+  },
+  {
+    "question": "How do Sigma Chains enable cross-chain compatibility?",
+    "answer": "Sigma Chains facilitate seamless interactions between Ergo and other blockchain networks, enhancing liquidity and interoperability."
+  },
+  {
+    "question": "What is the role of NiPoPoWs in the Ergo sidechain ecosystem?",
+    "answer": "NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) facilitate robust sidechain functionality by ensuring efficient and secure cross-chain interaction."
+  }
+]

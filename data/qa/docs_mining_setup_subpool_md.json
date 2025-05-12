@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Subpooling?",
+    "answer": "Subpooling is a decentralized mining solution that allows groups of miners to combine their hash rates for quicker mining rewards."
+  },
+  {
+    "question": "What is the goal of Subpooling and SmartPools?",
+    "answer": "The goal of Subpooling and SmartPools is to promote decentralization in mining pools and support small-scale miners who may struggle to earn block rewards quickly on traditional mining pools."
+  },
+  {
+    "question": "How do SmartPools help reduce the risk of 51% attacks and other issues associated with centralization?",
+    "answer": "By replacing centralized mining pools with autonomous on-chain smart contracts, SmartPools can help reduce the risk of 51% attacks and other issues associated with centralization."
+  },
+  {
+    "question": "What is the latest development in the area of Subpooling and SmartPools?",
+    "answer": "The latest development in this area is the Lithos Protocol, which represents the next generation of SmartPools and further enhances the benefits of Subpooling."
+  },
+  {
+    "question": "Where was this project developed?",
+    "answer": "This project was developed for ERGOHACK II."
+  }
+]

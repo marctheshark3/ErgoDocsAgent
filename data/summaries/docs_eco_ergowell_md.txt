@@ -1,0 +1,1 @@
+ErgoWell is a project designed for crowdfunding investments. Investors can search for and invest in attractive projects, earning interest and rewards. Venture owners can also use ErgoWell to raise funds through crowdfunding.

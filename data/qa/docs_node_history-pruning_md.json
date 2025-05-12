@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is History Pruning in Ergo's blockchain?",
+    "answer": "History Pruning is a feature in Ergo's blockchain that allows nodes to reduce the amount of stored historical block data, which can lead to a significant decrease in storage requirements."
+  },
+  {
+    "question": "How does History Pruning work in Ergo's blockchain?",
+    "answer": "History Pruning is achieved using the `ergo.node.blocksToKeep` parameter, which dictates the number of full blocks that the node should store. Once this limit is reached, the node will start pruning older blocks, removing the full transactions but retaining the block headers."
+  },
+  {
+    "question": "Why are block headers important in a blockchain?",
+    "answer": "A block header in a blockchain contains metadata about the block, including the reference to the previous block, the difficulty target, and a nonce value. The block header is crucial for the operation of the blockchain, as it helps maintain the integrity and continuity of the blockchain."
+  },
+  {
+    "question": "What is the purpose of pruning in blockchain technology?",
+    "answer": "The purpose of pruning in blockchain technology is to remove some of the less relevant data on a node while keeping the information necessary for maintaining the network's security and functionality."
+  },
+  {
+    "question": "Who is the target audience for the feature of History Pruning in Ergo's blockchain?",
+    "answer": "History Pruning in Ergo's blockchain is particularly useful for nodes running on devices with limited storage capacity."
+  }
+]

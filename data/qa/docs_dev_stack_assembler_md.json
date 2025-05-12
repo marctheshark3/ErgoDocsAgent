@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main problem that the transaction assembler service aims to address?",
+    "answer": "The main problem is that current wallets don't support some key features needed by dApps, such as specifying input boxes, p2s protected boxes in inputs, specifying output registers, and supporting dApp requests. This prevents users from using their assets to participate in dApps."
+  },
+  {
+    "question": "How does the transaction assembler service work to bypass the node requirements for dApps?",
+    "answer": "The off-chain service allows dApps to register requests by providing an address (which the user will deposit assets to) and other specifications. The service then assembles the transaction for the dApp, without the user needing to run their own node."
+  },
+  {
+    "question": "What are the potential solutions for addressing the trust issues between dApps, users, and the transaction assembler service?",
+    "answer": "The potential solutions include: 1) the service being open-sourced and provided by a trusted party, 2) dApps running the service for themselves, and 3) using well-designed p2s addresses to prevent the service from stealing the user's assets."
+  },
+  {
+    "question": "What are the potential incentives for the transaction assembler service provider?",
+    "answer": "The service provider can offer free transaction assembly for a limited time, and then charge dApps to continue following the request if the conditions are not met. This can provide a revenue model for the service provider."
+  },
+  {
+    "question": "How can the transaction assembler service benefit users even after wallets provide APIs for dApps?",
+    "answer": "Even after some wallets provide APIs for dApps, users can still benefit from the transaction assembler service by using any wallet they wish, without being limited to the features and support provided by the wallet."
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "id": "docs_uses_lets_basic-imp_md",
+  "title": "Basic Implementation of a Local Exchange Trading System (LETS)",
+  "summary": "The document outlines the basic implementation of a Local Exchange Trading System (LETS) on the Ergo blockchain. It consists of two main contracts: an administrative contract and a trade contract. The administrative contract manages the LETS system, including adding new members and maintaining a directory of members. Each member is associated with a singleton token and a box that records their initial balance of zero. The administrative contract's logic can be updated over time by a committee, with changes to the committee's composition reflected in the R5 register of the contract. The trade contract safeguards the member's box. The document provides the ErgoScript code for the administrative contract, along with detailed explanations of its functionality.",
+  "qa_pairs": [
+    {
+      "question": "What is a singleton token in Ergo?",
+      "answer": "In Ergo, a token minted with a value of one is termed a singleton token."
+    },
+    {
+      "question": "What is the purpose of the administrative contract in the LETS system?",
+      "answer": "The administrative contract oversees a singleton box that encompasses the members of the LETS system and facilitates the addition of new members."
+    },
+    {
+      "question": "How does the administrative contract store member information?",
+      "answer": "Instead of storing members, the box merely holds a succinct digest of an authenticated data structure based on the members' directory."
+    },
+    {
+      "question": "How are new members added to the LETS system?",
+      "answer": "Each member is linked with a singleton token minted during a transaction that adds the member to the directory, and a new member's box is generated to record the initial balance."
+    },
+    {
+      "question": "What is the role of the trade contract in the LETS system?",
+      "answer": "The trade contract safeguards the member's box."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Basic Implementation of a Local Exchange Trading System (LETS)",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "The basic blueprint of our system encompasses two contracts: an administrative contract and a trade contract. Before delving into the details, we recommend acquainting yourself with the foundational aspects of Ergo by reviewing [this ICO article](ico.md) as well as [ErgoScript](ergoscript.md) tutorials.\n\nDespite the aforementioned recommendations, we will elucidate a few novel terms in the upcoming sections."
+    },
+    {
+      "heading": "Singleton Tokens and Boxes",
+      "level": 3,
+      "content": "In Ergo, when a token is minted with a value of one, it is termed a **singleton token**. Similarly, a box containing a singleton token is known as a **singleton box**."
+    },
+    {
+      "heading": "Administrative Contract",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Purpose",
+      "level": 3,
+      "content": "- The administrative contract oversees a singleton box that encompasses the members of the LETS system. \n- This contract facilitates the addition of new members, at a rate of one member per transaction. \n- Instead of storing members, the box merely holds a succinct digest of an authenticated data structure based on the members' directory. \n- Each member is linked with a singleton token minted during a transaction that adds the member to the directory. \n- This transaction generates a new member's box, housing the member's singleton token. \n- The trade contract safeguards the member's box. \n- Moreover, the freshly generated member's box records the initial balance in the R4 register, which in this case is zero.\n- The transaction that adds a new member is obligated to validate the correctness of the directory transformation."
+    },
+    {
+      "heading": "Committee Management",
+      "level": 3,
+      "content": "A committee generally manages the administrative contract box, and the composition of this committee may change over time. To accommodate this, we allow the committee's logic to reside in the R5 register. For instance, if a new member is added to both the committee and the LETS system, the incoming administrative contract box would require signatures from two out of three members, while the outgoing box would require three out of four signatures. Consequently, the data within the R5 register of the input and output boxes would vary.\n\nBelow, we provide the administrative contract's code written in ErgoScript, complete with comments. Note that `userContractHash` corresponds to the hash of the trade contract. \n\n```scala\n    val selfOut = OUTPUTS(0)\n \n    // Administrative script\n    val adminScript = selfOut.R5[SigmaProp].get\n \n    // Confirming that the script replicates itself and the administrative script is satisfied\n    val scriptIsCorrect = (selfOut.propositionBytes == SELF.propositionBytes) && adminScript\n \n    // A spending transaction creates boxes for the directory, user, and fee\n    val isOutputSizeCorrect = OUTPUTS.size == 3\n \n    // Verifies the replication of the administrative label token \n    val isTokenOutputCorrect = (selfOut.tokens.size == 1) && (selfOut.tokens(0)._1 == letsToken)\n \n    // Validates the issuance of a new token and its amount\n    // OUTPUTS(0) tokens are already checked via isTokenOutputCorrect\n    val issuedTokenId = INPUTS(0).id\n    val userOut = OUTPUTS(1)\n    val areTokenAmountsCorrect =\n      (userOut.tokens.size == 1 &&\n        userOut.tokens(0)._1 == issuedTokenId &&\n        userOut.tokens(0)._2 == 1 &&\n        OUTPUTS(2).tokens.size == 0 &&\n        isTokenOutputCorrect)\n \n    // Verifies that the new user is created with a zero balance\n    val isUserBalanceZero  = userOut.R4[Long\n\n].get == 0\n \n    val isUserScriptProper = blake2b256(userOut.propositionBytes) == userContractHash\n \n    // Validates the addition of the new token identifier to the directory\n    val selfTree = SELF.R4[AvlTree].get\n    val toAdd: Coll[(Coll[Byte], Coll[Byte])] = Coll((issuedTokenId, Coll[Byte]()))\n    val proof = getVar[Coll[Byte]](1).get\n    val updatedTree = selfTree.insert(toAdd, proof).get\n    val expectedTree = selfOut.R4[AvlTree].get\n    val isTreeCorrect = updatedTree == expectedTree\n \n    areTokenAmountsCorrect && scriptIsCorrect && isTreeCorrect && isUserBalanceZero && isUserScriptProper      \n```\n\nThe trade contract script, presented below with explanatory comments, is fairly straightforward. The contract requires that a transaction spending an exchange contract box should have at least two inputs. The first two inputs must be protected by the exchange contract script and contain LETS member tokens. To validate the legitimacy of singleton member tokens in the inputs, the transaction provides the administrative contract box as the first read-only data input and also supplies proof that the member tokens indeed belong to the directory authenticated via the R4 register of the administrative contract box. The \"letsToken\" in the script refers to the singleton token of the administrative box. \n\n```scala\n  // Minimum balance allowed for a LETS trader\n  val minBalance = -20000\n\n  val lookupProof = getVar[Coll[Byte]](1).get\n\n  // Read-only box containing the directory of LETS members\n  val treeHolderBox = CONTEXT.dataInputs(0)\n  val isLetsTokenProper = treeHolderBox.tokens(0)._1 == letsToken\n  val membersTree = treeHolderBox.R4[AvlTree].get\n\n  // A spending transaction takes two LETS members' boxes willing to make a trade, \n  // and returns boxes with updated balances.\n  val participant0 = INPUTS(0)\n  val participant1 = INPUTS(1)\n  val participantOut0 = OUTPUTS(0)\n  val participantOut1 = OUTPUTS(1)\n\n  // Check that members do indeed belong to the LETS\n  val token0 = participant0.tokens(0)._1\n  val token1 = participant1.tokens(0)._1\n  val memberTokens = Coll(token0, token1)\n  val doMembersExist = membersTree.getMany(memberTokens, lookupProof).forall({ (o: Option[Coll[Byte]]) => o.isDefined })\n\n  // Verify that changes in LETS member balances during the transaction are correct\n  val initialBalance0 = participant0.R4[Long].get\n  val initialBalance1 = participant1.R4[Long].get\n  val finalBalance0  = participantOut0.R4[Long].get\n  val finalBalance1  = participantOut1.R4[Long].get\n  val balanceDifference0 = finalBalance0 - initialBalance0\n  val balanceDifference1 = finalBalance1 - initialBalance1\n  val areBalanceDifferencesCorrect = balanceDifference0 == -balanceDifference1\n  val areBalancesCorrect = (finalBalance0 > minBalance) && (finalBalance1 > minBalance) && areBalanceDifferencesCorrect\n\n  // Check that member boxes retain their scripts.\n  val isScript0Preserved = participantOut0.propositionBytes == participant0.propositionBytes\n  val isScript1Preserved = participantOut1.propositionBytes == participant1.propositionBytes\n  val areScriptsPreserved = isScript0Preserved && isScript1Pres\n\nerved\n\n  // Protection specific to member boxes\n  val selfPubKey = SELF.R5[SigmaProp].get\n\n  selfPubKey && isLetsTokenProper && doMembersExist && areBalanceDifferencesCorrect && areScriptsPreserved\n```\n\nPlease note that both the administrative and trade contracts can be modified in various ways to create new systems with different characteristics."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/lets/basic-imp.md",
+  "processed_at": "2025-05-11T20:02:51.408771",
+  "ai_processed": true
+}

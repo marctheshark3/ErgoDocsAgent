@@ -1,0 +1,5 @@
+The document describes the Ergo Modifiers Processing, which is a universal mechanism that operates consistently across all security modes in the Ergo blockchain system. It introduces two categories of modifiers: In-memory Modifiers and Persistent Modifiers. In-memory Modifiers are temporary and do not persist across sessions, while Persistent Modifiers are data elements that are stored and persist across sessions.
+
+The document also discusses the processing of modifiers, which involves updating the headers chain to the best in the network, downloading and updating full blocks as needed, and processing transactions. The bootstrapping process is also explained, which includes downloading headers and downloading the initial state.
+
+The summary covers the key points of the document, including the types of modifiers, the processing of modifiers, and the bootstrapping process.

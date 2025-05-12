@@ -1,0 +1,588 @@
+{
+  "id": "docs_node_conf_applicationconf_md",
+  "title": "application.conf",
+  "summary": "This document contains the configuration settings for the Ergo project, covering various aspects such as node, wallet, network, and caching. The node settings include options for state type, transaction verification, block storage, mining, and mempool management. The wallet settings cover secret storage, seed strength, mnemonic phrase language, and transaction fee management. The network settings handle connection management, peer discovery, and synchronization. The cache settings optimize memory usage for different components. These configurations allow the Ergo project to be fine-tuned for different use cases and environments, ensuring optimal performance and resource usage.",
+  "qa_pairs": [
+    {
+      "question": "What are the possible options for the stateType setting in the application.conf file?",
+      "answer": "The possible options for stateType are \"utxo\" and \"digest\"."
+    },
+    {
+      "question": "What is the purpose of the verifyTransactions setting in the application.conf file?",
+      "answer": "The verifyTransactions setting determines whether the node will download block transactions and verify them."
+    },
+    {
+      "question": "What is the relationship between the verifyTransactions setting and the BlocksToKeep setting?",
+      "answer": "If verifyTransactions is disabled, then BlocksToKeep must be 0."
+    },
+    {
+      "question": "What does the stateType setting \"utxo\" mean?",
+      "answer": "The \"utxo\" stateType means the node will keep the full UTXO set, which allows validating arbitrary blocks and generating ADProofs."
+    },
+    {
+      "question": "What does the stateType setting \"digest\" mean?",
+      "answer": "The \"digest\" stateType means the node will keep only the state root hash and validate transactions via ADProofs."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "application.conf",
+      "level": 1,
+      "content": "Please refer to [conf](conf.md)\n\n<!--[View code on GitHub](https://raw.githubusercontent.com/ergoplatform/ergo/master/src/main/resources/application.conf)\n\nThe code in this file is responsible for configuring various settings for the Ergo project. It covers settings related to the node, wallet, network, and caching. The node settings include options for state type, transaction verification, block storage, mining, and mempool management. The wallet settings cover secret storage, seed strength, mnemonic phrase language, and transaction fee management. The network settings handle connection management, peer discovery, and synchronization. The cache settings optimize memory usage for various components.\n\nFor example, in the node settings, `stateType` can be set to \"utxo\" or \"digest\" to determine how the node maintains its state. The `verifyTransactions` setting enables or disables transaction verification. The `blocksToKeep` setting determines how many blocks with transactions and ADproofs are stored.\n\nIn the wallet settings, `seedStrengthBits` determines the strength of the generated seed, and `mnemonicPhraseLanguage` sets the language for the mnemonic seed. The `defaultTransactionFee` sets the fee used when it's not specified in a transaction.\n\nIn the network settings, `knownPeers` is a list of well-known nodes to connect to, and `maxConnections` sets the maximum number of network connections. The `syncInterval` and `syncTimeout` settings control the synchronization process.\n\nIn the cache settings, various cache sizes are defined for different components, such as `blockSectionsCacheSize` for block sections and `headersCacheSize` for headers.\n\nThese configurations allow the Ergo project to be fine-tuned for different use cases and environments, ensuring optimal performance and resource usage."
+    },
+    {
+      "heading": "ergo",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "node",
+      "level": 3,
+      "content": "Settings for node view holder regime. See papers.yellow.ModifiersProcessing.md"
+    },
+    {
+      "heading": "stateType",
+      "level": 4,
+      "content": "```conf\nstateType = \"utxo\"\n```\n\nState type.  Possible options are:\n\n- \"utxo\" - keep full utxo set, that allows to validate arbitrary block and generate ADProofs\n- \"digest\" - keep state root hash only and validate transactions via ADProofs"
+    },
+    {
+      "heading": "verifyTransactions",
+      "level": 4,
+      "content": "```conf\nverifyTransactions = true\n```\n\nDownload block transactions and verify them (requires BlocksToKeep == 0 if disabled)"
+    },
+    {
+      "heading": "blocksToKeep",
+      "level": 4,
+      "content": "```conf\nblocksToKeep = -1\n```\n\nNumber of last blocks to keep with transactions and ADproofs, for all other blocks only the header will be stored.\n\nKeep all blocks from genesis if negative\nPlease do not set it more than 114,688 (default adProofsSuffixLength), otherwise, it could be hard to find proofs around the peers"
+    },
+    {
+      "heading": "utxoBootstrap",
+      "level": 3,
+      "content": "```conf"
+    },
+    {
+      "heading": "Download and apply UTXO set snapshot and full-blocks after that",
+      "level": 1,
+      "content": "utxoBootstrap = false\n```"
+    },
+    {
+      "heading": "PoPoWBootstrap",
+      "level": 4,
+      "content": "```conf\nPoPoWBootstrap = false\n```\n\nDownload PoPoW proof on node bootstrap"
+    },
+    {
+      "heading": "minimalSuffix",
+      "level": 4,
+      "content": "```conf\nminimalSuffix = 10\n```\n\nMinimal suffix size for PoPoW proof (may be pre-defined constant or settings parameter)"
+    },
+    {
+      "heading": "mining",
+      "level": 4,
+      "content": "```conf\nmining = false\n```\n\nIs the node is doing mining"
+    },
+    {
+      "heading": "maxTransactionCost",
+      "level": 4,
+      "content": "```conf\nmaxTransactionCost = 1000000\n```\n\nmaximum cost of transaction for it to be propagated"
+    },
+    {
+      "heading": "maxTransactionSize",
+      "level": 4,
+      "content": "```conf\nmaxTransactionSize = 98304 // 96 kb\n```\n\nMaximum size of transaction to be accepted into mempool"
+    },
+    {
+      "heading": "useExternalMiner",
+      "level": 4,
+      "content": "```conf\nuseExternalMiner = true\n```\n\nUse external miner, native miner is used if set to `false`"
+    },
+    {
+      "heading": "internalMinersCount",
+      "level": 4,
+      "content": "```conf\ninternalMinersCount = 1\n```\nHow many internal miner threads to spawn (used mainly for testing)"
+    },
+    {
+      "heading": "internalMinerPollingInterval",
+      "level": 4,
+      "content": "```conf\ninternalMinerPollingInterval = 500ms\n```\n\nHow frequently to ask for new block candidate"
+    },
+    {
+      "heading": "miningPubKeyHex",
+      "level": 4,
+      "content": "```conf\nminingPubKeyHex = null\n```\n\nPublic key mining rewards will be dedicated to (P2PK address is also accepted)"
+    },
+    {
+      "heading": "offlineGeneration",
+      "level": 4,
+      "content": "```conf\nofflineGeneration = false\n```\n\nIf true, a node generates blocks being offline. The only really useful case for it probably is to start a new blockchain"
+    },
+    {
+      "heading": "keepVersions",
+      "level": 4,
+      "content": "```conf\nkeepVersions = 200\n```\n\nNumber of state snapshot diffs to keep. Defines maximum rollback depth"
+    },
+    {
+      "heading": "acceptableChainUpdateDelay",
+      "level": 4,
+      "content": "```conf\nacceptableChainUpdateDelay = 30m\n```\nAcceptable difference between NOW and timestamp of the latest chain update or best block. This helps to discover syncing issues."
+    },
+    {
+      "heading": "mempoolCapacity",
+      "level": 4,
+      "content": "Maximum number of unconfirmed transactions node can accept\n\n```conf\nmempoolCapacity = 1000\n```"
+    },
+    {
+      "heading": "mempoolCleanupDuration",
+      "level": 4,
+      "content": "```conf\nmempoolCleanupDuration = 30m\n```\n\nInterval for mempool transaction re-check. We check transaction when it is entering the mempool, and then re-check it every interval valie"
+    },
+    {
+      "heading": "mempoolSorting",
+      "level": 4,
+      "content": "```conf\nmempoolSorting = \"random\"\n```\n\nMempool transaction sorting scheme (\"random\", \"bySize\", or \"byExecutionCost\")"
+    },
+    {
+      "heading": "rebroadcastCount",
+      "level": 4,
+      "content": "```conf\nrebroadcastCount = 3\n```\n\nNumber of transactions from mempool to be re-broadcasted at each epoch"
+    },
+    {
+      "heading": "minimalFeeAmount",
+      "level": 4,
+      "content": "```conf\nminimalFeeAmount = 1000000\n```\n\nMinimal fee amount of transactions mempool accepts"
+    },
+    {
+      "heading": "blacklistedTransactions",
+      "level": 4,
+      "content": "```conf\nblacklistedTransactions = []\n```\n\nList with hex-encoded identifiers of transactions banned from getting into memory pool"
+    },
+    {
+      "heading": "headerChainDiff",
+      "level": 4,
+      "content": "```conf"
+    },
+    {
+      "heading": "default value is 100 blocks ~= 200 minutes",
+      "level": 1,
+      "content": "headerChainDiff = 100\n```\nThe node is downloading headers first and only then full blocks. Depending on settings, the node is downloading whether a suffix of the blockchain (if stateType = \"digest\" and \"blocksToKeep\" >= 0) or all the full blocks (otherwise).\n\nThe node is considering that the headers-chain is synced if it sees a header of a block generated closely to the current moment. The node considers that a header is close if its timestamp is no more than \"headerChainDiff\" blocks on average than node's clocks."
+    },
+    {
+      "heading": "checkpoint",
+      "level": 4,
+      "content": "```conf\ncheckpoint = null\n```\n\nOptional and individual checkpoint. If you going to provide it , set height and corresponding block header id like\n\n```\ncheckpoint = {\n    height = 703848\n    blockId = \"ed64513030a0396f492385410ba643bb24ca69f0a72b83c9bae8f04d1fa9c5cd\"\n}\n```\n   \n- Before the height given (including it) validation of scripts is missed.\n- This improving perfomance and memory usage during initial bootstrapping.\n- The node still applying transactions to UTXO set and so checks UTXO set digests for each block.\n- Block at checkpoint height is to be checked against expected one."
+    },
+    {
+      "heading": "adProofsSuffixLength",
+      "level": 4,
+      "content": "Dump `ADProofs` only for the suffix given during bootstrapping\n\n\n```conf\nadProofsSuffixLength = 114688 // 112k\n```"
+    },
+    {
+      "heading": "cache",
+      "level": 3,
+      "content": "What to keep in memory"
+    },
+    {
+      "heading": "blockSectionsCacheSize",
+      "level": 5,
+      "content": "```conf\nblockSectionsCacheSize = 12\n```\nNumber of recently used block sections that will be kept in memory"
+    },
+    {
+      "heading": "headersCacheSize",
+      "level": 5,
+      "content": "```conf\nheadersCacheSize = 1000\n```\nNumber of recently used headers that will be kept in memory"
+    },
+    {
+      "heading": "indexesCacheSize",
+      "level": 5,
+      "content": "```conf\nindexesCacheSize = 10000\n```\nNumber of recently used indexes that will be kept in memory"
+    },
+    {
+      "heading": "invalidModifiersBloomFilterCapacity",
+      "level": 5,
+      "content": "```conf\ninvalidModifiersBloomFilterCapacity = 10000000\n```\nMaximum number of invalid modifiers to keep in DeliveryTracker"
+    },
+    {
+      "heading": "invalidModifiersBloomFilterExpirationRate",
+      "level": 5,
+      "content": "```\ninvalidModifiersBloomFilterExpirationRate = 0.1\n```\nNon-zero fraction of 1 as a rate of element expiration when capacity is full, the lower the more gradual expiration.\nexample : 0.1 is represented as 10 bloom filters expiring one by one"
+    },
+    {
+      "heading": "invalidModifiersCacheSize",
+      "level": 5,
+      "content": "```\ninvalidModifiersCacheSize = 10000\n```\nMaximum number of invalid modifiers to keep in cache, following modifiers are kept in bloom filters"
+    },
+    {
+      "heading": "invalidModifiersCacheExpiration",
+      "level": 5,
+      "content": "```\ninvalidModifiersCacheExpiration = 6h\n```\n\nFor how long to keep invalid modifiers in cache"
+    },
+    {
+      "heading": "invalidModifiersBloomFilterCapacity",
+      "level": 5,
+      "content": "```\ninvalidModifiersBloomFilterCapacity = 10000000\n```\nMaximum number of invalid modifiers to keep in DeliveryTracker"
+    },
+    {
+      "heading": "invalidModifiersBloomFilterExpirationRate",
+      "level": 5,
+      "content": "```\ninvalidModifiersBloomFilterExpirationRate = 0.1\n```\nNon-zero fraction of 1 as a rate of element expiration when capacity is full, the lower the more gradual expiration.\nexample : 0.1 is represented as 10 bloom filters expiring one by one"
+    },
+    {
+      "heading": "invalidModifiersCacheSize",
+      "level": 5,
+      "content": "```\ninvalidModifiersCacheSize = 10000\n```\nMaximum number of invalid modifiers to keep in cache, following modifiers are kept in bloom filters"
+    },
+    {
+      "heading": "invalidModifiersCacheExpiration",
+      "level": 5,
+      "content": "```\ninvalidModifiersCacheExpiration = 6h\n```\n\nFor how long to keep invalid modifiers in cache"
+    },
+    {
+      "heading": "chain",
+      "level": 3,
+      "content": "Chain-specific settings. Change only if you are going to launch a new chain"
+    },
+    {
+      "heading": "protocolVersion",
+      "level": 4,
+      "content": "```\nprotocolVersion = 3\n```\n\nBlockchain protocol version supported by the client.\n\nPlease do not increase this value manually, this should be done by client developers."
+    },
+    {
+      "heading": "addressPrefix",
+      "level": 4,
+      "content": "```\naddressPrefix = 16\n```\nNetwork address prefix, currently reserved values are 0 (Ergo mainnet) and 16 (Ergo testnet)"
+    },
+    {
+      "heading": "fixedRatePeriod",
+      "level": 5,
+      "content": "```\nfixedRatePeriod = 525600\n```\nThe number of blocks reward won't change (2 years)"
+    },
+    {
+      "heading": "fixedRate",
+      "level": 5,
+      "content": "```\nfixedRate = 75000000000\n```\nnumber of coins issued every block during fixedRatePeriod (75 Ergo)"
+    },
+    {
+      "heading": "foundersInitialReward",
+      "level": 5,
+      "content": "```\nfoundersInitialReward = 7500000000\n```\n\nPart of coins issued, that is going to the foundation during fixedRatePeriod (7.5 Ergo)"
+    },
+    {
+      "heading": "epochLength",
+      "level": 5,
+      "content": "```\nepochLength = 64800\n```\nnumber of blocks between reward reduction (90 days)"
+    },
+    {
+      "heading": "oneEpochReduction",
+      "level": 5,
+      "content": "```\noneEpochReduction = 3000000000\n```\n\nThe number of coins reward decreases every epochs (3 Ergo)"
+    },
+    {
+      "heading": "minerRewardDelay",
+      "level": 5,
+      "content": "```\nminerRewardDelay = 720\n```\nThe delay between when a block is mined and when the reward can be spent. (720 blocks == ~1 day)."
+    },
+    {
+      "heading": "reemission",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "checkReemissionRules",
+      "level": 5,
+      "content": "```\ncheckReemissionRules = false\n```"
+    },
+    {
+      "heading": "emissionNftId",
+      "level": 5,
+      "content": "```\nemissionNftId = \"\"\n```"
+    },
+    {
+      "heading": "reemissionTokenId",
+      "level": 5,
+      "content": "```\nreemissionTokenId = \"\"\n```"
+    },
+    {
+      "heading": "reemissionNftId",
+      "level": 5,
+      "content": "```\nreemissionNftId = \"\"\n```"
+    },
+    {
+      "heading": "activationHeight",
+      "level": 5,
+      "content": "```\nactivationHeight = 777217\n```"
+    },
+    {
+      "heading": "reemissionStartHeight",
+      "level": 5,
+      "content": "```\nreemissionStartHeight = 2080800\n```"
+    },
+    {
+      "heading": "injectionBoxBytesEncoded",
+      "level": 5,
+      "content": "```\ninjectionBoxBytesEncoded = \"\"\n```"
+    },
+    {
+      "heading": "noPremineProof",
+      "level": 4,
+      "content": "```\nnoPremineProof = [\n      \"'Chaos reigns': what the papers say about the no-deal Brexit vote\", # https://www.theguardian.com/politics/2019/mar/14/chaos-reigns-what-the-papers-say-about-the-no-deal-brexit-vote\n      \"\u4e60\u8fd1\u5e73\u7684\u4e24\u4f1a\u65f6\u95f4|\u8fd9\u91cc\u6709\u4efd\u4e60\u8fd1\u5e73\u4e24\u4f1a\u65e5\u5386\uff0c\u8bf7\u67e5\u6536\uff01\", # http://www.xinhuanet.com/politics/2019lh/2019-03/13/c_1124232018.htm\n      \"\u0422\u0410\u0421\u0421 \u0441\u043e\u043e\u0431\u0449\u0438\u043b \u043e\u0431 \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u0438\u0438 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u0438\u0445 \u043c\u0430\u0439\u043d\u0438\u043d\u0433\u043e\u0432\u044b\u0445 \u0444\u0435\u0440\u043c \u043d\u0430 \u0441\u0442\u043e\u043b\u0438\u0447\u043d\u044b\u0445 \u0440\u044b\u043d\u043a\u0430\u0445\", # https://www.vedomosti.ru/politics/news/2019/03/14/796376-mainingovih-ferm\n      \"000000000000000000139a3e61bd5721827b51a5309a8bfeca0b8c4b5c060931\", # https://www.blockchain.com/btc/block/000000000000000000139a3e61bd5721827b51a5309a8bfeca0b8c4b5c060931\n      \"0xef1d584d77e74e3c509de625dc17893b22b73d040b5d5302bbf832065f928d03\" # https://etherscan.io/block/0xef1d584d77e74e3c509de625dc17893b22b73d040b5d5302bbf832065f928d03\n    ]\n```\n\nLatest news from media (the Guardian, Xinhua, Vedomosti), existing cryptocurrency block ids (Bitcoin, Ethereum)"
+    },
+    {
+      "heading": "foundersPubkeys",
+      "level": 4,
+      "content": "```\n foundersPubkeys = [\n      \"039bb5fe52359a64c99a60fd944fc5e388cbdc4d37ff091cc841c3ee79060b8647\",\n      \"031fb52cf6e805f80d97cde289f4f757d49accf0c83fb864b27d2cf982c37f9a8b\",\n      \"0352ac2a471339b0d23b3d2c5ce0db0e81c969f77891b9edf0bda7fd39a78184e7\"\n    ]\n```\n\nPublic keys of founders, represented as just group elements"
+    },
+    {
+      "heading": "secretDir",
+      "level": 5,
+      "content": "```\nsecretDir = ${ergo.directory}\"/wallet/keystore\"\n```"
+    },
+    {
+      "heading": "prf",
+      "level": 6,
+      "content": "```\nprf = \"HmacSHA256\"\n```\n\nPseudo-random function with output of length `dkLen` (PBKDF2 param)"
+    },
+    {
+      "heading": "c",
+      "level": 6,
+      "content": "```\nc = 128000\n```\nNumber of PBKDF2 iterations (PBKDF2 param)"
+    },
+    {
+      "heading": "dkLen",
+      "level": 6,
+      "content": "```\ndkLen = 256\n```\n\nDesired bit-length of the derived key (PBKDF2 param)"
+    },
+    {
+      "heading": "seedStrengthBits",
+      "level": 4,
+      "content": "```\nseedStrengthBits = 160\n```\n\nGenerating seed length in bits\nOptions: 128, 160, 192, 224, 256"
+    },
+    {
+      "heading": "mnemonicPhraseLanguage",
+      "level": 4,
+      "content": "```\nmnemonicPhraseLanguage = \"english\"\n```\n\nLanguage to be used in mnemonic seed\n\nOptions: \"chinese_simplified\", \"chinese_traditional\", \"english\", \"french\", \"italian\", \"japanese\", \"korean\", \"spanish\""
+    },
+    {
+      "heading": "keepSpentBoxes",
+      "level": 4,
+      "content": "```\nkeepSpentBoxes = false\n```\nSave used boxes (may consume additional disk space) or delete them immediately"
+    },
+    {
+      "heading": "defaultTransactionFee",
+      "level": 4,
+      "content": "```\ndefaultTransactionFee = 1000000\n```\n\nDefault fee wallet is using when the fee is not specified"
+    },
+    {
+      "heading": "usePreEip3Derivation",
+      "level": 4,
+      "content": "```\nusePreEip3Derivation = false\n```\n\nUse pre-EIP3 key derivation scheme"
+    },
+    {
+      "heading": "dustLimit",
+      "level": 4,
+      "content": "```\ndustLimit = null\n```"
+    },
+    {
+      "heading": "maxInputs",
+      "level": 4,
+      "content": "```\nmaxInputs = 100\n```"
+    },
+    {
+      "heading": "optimalInputs",
+      "level": 4,
+      "content": "```\noptimalInputs = 3\n```"
+    },
+    {
+      "heading": "testMnemonic",
+      "level": 4,
+      "content": "```"
+    },
+    {
+      "heading": "testMnemonic = \"ozone drill grab fiber curtain grace pudding thank cruise elder eight picnic\"",
+      "level": 1,
+      "content": "```\nMnemonic seed used in wallet for tests. If set the wallet operates in test mode."
+    },
+    {
+      "heading": "testKeysQty",
+      "level": 4,
+      "content": "```"
+    },
+    {
+      "heading": "testKeysQty = 5",
+      "level": 1,
+      "content": "```\nNumber of keys to be generated for tests"
+    },
+    {
+      "heading": "tokensWhitelist",
+      "level": 4,
+      "content": "```\ntokensWhitelist = null\n```\n\nWhitelisted tokens, if non-null, the wallet will automatically burn non-whitelisted tokens from inputs when doing transactions.\n\nIf tokensWhitelist = [], all the tokens will be burnt, tokensWhitelist = [\"example\"] means that all the tokens except of \"example\" will be burnt\n\ntokensWhitelist = null means no tokens burnt automatically"
+    },
+    {
+      "heading": "checkEIP27",
+      "level": 4,
+      "content": "```\ncheckEIP27 = false\n```\nEnable this setting to handle re-emission tokens in the wallet properly,\ne.g. doing transfers correctly in the presence of re-emission tokens"
+    },
+    {
+      "heading": "profile",
+      "level": 4,
+      "content": "```\nprofile = \"user\"\n```\n\nWallet profile allows to say wallet what kind of load it should expect, and so spend memory on caches and Bloom filters accordingly.\n\nThere are three options: user, exchange, appServer\n\nUser profile is about ordinary planned usage.\n\nExchange consumes ~20 MB of RAM for high-load ready Bloom filters\n\nAppServer is in between"
+    },
+    {
+      "heading": "voting",
+      "level": 3,
+      "content": "```\n\"rulesToDisable\" = []\n```\n\nExample: storage fee factor id = 1, target value = 1000000\n`1 = 1000000`\n\n\nA vote for soft-fork. [protocolVersion](#protocolversion) must be one announced in a block header increased by one also, and then the node will automatically propose a soft-fork (in the beginning of an epoch),  or vote for it.\n\nPut any non-zero value here to vote for soft-fork, or zero to vote against.\n\n`120 = 0`\n\nPut an array of rules to deactivate with the soft-fork"
+    },
+    {
+      "heading": "bounded-mailbox",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "mailbox-type",
+      "level": 3,
+      "content": "```\nmailbox-type = \"akka.dispatch.NonBlockingBoundedMailbox\"\n```"
+    },
+    {
+      "heading": "mailbox-capacity",
+      "level": 3,
+      "content": "```\nmailbox-capacity = 5000\n```"
+    },
+    {
+      "heading": "http",
+      "level": 3,
+      "content": "```\nhttp {\n    server {\n      request-timeout = 1 minute\n      max-connections = 128\n    }\n    parsing {\n      max-uri-length = 8192\n    }\n  }\n```"
+    },
+    {
+      "heading": "request-timeout",
+      "level": 5,
+      "content": "```\nrequest-timeout = 1 minute\n```"
+    },
+    {
+      "heading": "max-connections",
+      "level": 5,
+      "content": "```\nmax-connections = 128\n```"
+    },
+    {
+      "heading": "max-uri-length",
+      "level": 5,
+      "content": "```\nmax-uri-length = 8192\n```"
+    },
+    {
+      "heading": "dataDir & logDir",
+      "level": 2,
+      "content": "```\n  # Node data directory\n  dataDir = ${user.home}\"/scorex\"\n  # Node logs directory\n  logDir = ${scorex.dataDir}\"/log\"\n\n  logging {\n    level = \"INFO\"\n  }\n```"
+    },
+    {
+      "heading": "scorex",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "executionContext",
+      "level": 3,
+      "content": "Execution context used in tests\n\n```conf\nexecutionContext {\n    type = Dispatcher\n    executor = \"thread-pool-executor\"\n    thread-pool-executor {\n      fixed-pool-size = 16\n    }\n    throughput = 1\n  }\n```"
+    },
+    {
+      "heading": "restApi",
+      "level": 3,
+      "content": "Node's REST API settings"
+    },
+    {
+      "heading": "publicUrl",
+      "level": 4,
+      "content": "```"
+    },
+    {
+      "heading": "Node's REST API settings",
+      "level": 1,
+      "content": "restApi {\n    # Network address to bind to\n    bindAddress = \"0.0.0.0:9052\"\n\n    # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.\n    # Below is the hash of \"hello\" string.\n    # Change it!\n    apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n\n    # Enable/disable CORS support.\n    # This is an optional param. It would allow cors in case if this setting is set.\n    # If this setting will be omitted cors will be prohibited.\n    corsAllowedOrigin = \"*\"\n\n    # request processing timeout\n    timeout = 5s\n\n    # node which exposes restApi in firewall should define publicly accessible URL of it\n    # publicUrl = \"https://example.com:80\"\n  }\n```"
+    },
+    {
+      "heading": "network",
+      "level": 3,
+      "content": "P2P Network settings"
+    },
+    {
+      "heading": "localOnly",
+      "level": 5,
+      "content": ""
+    },
+    {
+      "heading": "upnp-gateway-timeout",
+      "level": 5,
+      "content": "```\nupnp-gateway-timeout = 7s\n```"
+    },
+    {
+      "heading": "upnp-discover-timeout",
+      "level": 5,
+      "content": "```\nupnp-discover-timeout = 3s\n```\nAdd delay for sending message"
+    },
+    {
+      "heading": "addedMaxDelay",
+      "level": 5,
+      "content": "```\naddedMaxDelay = 0ms\n```"
+    },
+    {
+      "heading": "peerEvictionInterval",
+      "level": 6,
+      "content": ""
+    },
+    {
+      "heading": "Delivery Settings Limits",
+      "level": 5,
+      "content": ""
+    },
+    {
+      "heading": "maxDeliveryChecks",
+      "level": 6,
+      "content": ""
+    },
+    {
+      "heading": "Timeouts",
+      "level": 5,
+      "content": ""
+    },
+    {
+      "heading": "syncIntervalStable",
+      "level": 6,
+      "content": ""
+    },
+    {
+      "heading": "syncTimeout",
+      "level": 6,
+      "content": ""
+    },
+    {
+      "heading": "syncStatusRefresh",
+      "level": 6,
+      "content": ""
+    },
+    {
+      "heading": "syncIntervalStable",
+      "level": 6,
+      "content": ""
+    },
+    {
+      "heading": "controllerTimeout",
+      "level": 6,
+      "content": "Network controller timeout"
+    },
+    {
+      "heading": "Size limits",
+      "level": 5,
+      "content": ""
+    },
+    {
+      "heading": "desiredInvObjects = 400",
+      "level": 6,
+      "content": "# Desired number of inv objects. Our requests will have this size.\n\n    # How many persistent modifiers to store in the cache.\n    # The cache stores modifiers that are waiting to be applied.\n    maxModifiersCacheSize = 1024\n\n    # Maximum number of PeerSpec objects in one Peers message\n    maxPeerSpecObjects = 64\n\n    # Default ban duration, unless permanent penalty is applied\n    temporalBanDuration = 60m\n\n    # Misbehaving peer penalty score will not be increased withing this time interval,\n    # unless permanent penalty is applied\n    penaltySafeInterval = 2m\n\n    # Max penalty score peer can accumulate before being banned\n    penaltyScoreThreshold = 500\n\n    # If set (and it is set by default), the node will try to discover peers in the network.\n    # If set to false, the node will use only peers from database\n    # (with fallback to knownPeers config section if no peers there)\n    peerDiscovery = true\n\n```\nnetwork {\n\n    #####################################################\n    # Node information to be declared during handshake  #\n    #####################################################\n\n    # Node name to send during handshake\n    nodeName = \"ergo-node\"\n\n    # Network protocol version to be sent in handshakes\n    appVersion = 5.0.1\n\n    # Network agent name. May contain information about client code\n    # stack, starting from core code-base up to the end graphical interface.\n    # Basic format is `/Name:Version(comments)/Name:Version/.../`,\n    # e.g. `/Ergo-Scala-client:2.0.0(iPad; U; CPU OS 3_2_1)/AndroidBuild:0.8/`\n    agentName = \"ergoref\"\n\n    # Network address\n    bindAddress = \"0.0.0.0:9022\"\n\n    ########################\n    # Connection settings  #\n    ########################\n\n    # Magic bytes, that will be added to every p2p message to allow\n    # distinguish different networks (e.g. testnet/mainnet).\n    magicBytes = [2, 2, 2, 2]\n\n    # String with IP address and port to send as external address during handshake.\n    # Could be set automatically if UPnP is enabled.\n    #\n    # If `declared-address` is set, which is the common scenario for nodes running in the cloud,\n    # the node will just listen to incoming connections on `bindAddress:port` and\n    # broadcast its `declaredAddress` to its peers.\n    # UPnP is supposed to be disabled in this scenario.\n    #\n    # If declared address is not set and UPnP is not enabled, the node will not listen to incoming connections at all.\n    #\n    # If declared address is not set and UPnP is enabled, the node will attempt to connect to an IGD, retrieve its\n    # external IP address and configure the gateway to allow traffic through. If the node succeeds, the IGD's external\n    # IP address becomes the node's declared address.\n    #\n    # In some cases, you may both set `decalredAddress` and enable UPnP (e.g. when IGD can't reliably determine its\n    # external IP address). In such cases the node will attempt to configure an IGD to pass traffic from external port\n    # to `bind-address:port`. Please note, however, that this setup is not recommended.\n    # declaredAddress = \"\"\n\n    # Enable UPnP tunnel creation only if you router/gateway supports it. Useful if your node is running in home\n    # network. Completely useless if you node is in cloud.\n    upnpEnabled = no\n\n    # Accept only local connections\n    localOnly = false\n\n    # UPnP timeouts\n    # upnp-gateway-timeout = 7s\n    # upnp-discover-timeout = 3s\n\n    # Add delay for sending message\n    # addedMaxDelay = 0ms\n\n    ##################\n    # Peers settings #\n    ##################\n\n    # Network handshake timeout\n    handshakeTimeout = 30s\n\n    # A list of `IP:port` pairs of well known nodes.\n    knownPeers = []\n\n    # Interval between GetPeers messages to be send by our node to a random one\n    getPeersInterval = 2m\n\n    # Number of network connections\n    maxConnections = 30\n\n    # Network connection timeout\n    connectionTimeout = 1s\n\n    # interval of evicting random peer to avoid eclipsing\n    peerEvictionInterval = 1h\n\n    ############################\n    # Delivery settings limits #\n    ############################\n\n    # Network delivery timeout\n    deliveryTimeout = 10s\n\n    # Max number of delivery checks. Stop expecting modifier if it was not delivered after that\n    # number of delivery attempts. The node tries to ask different peers on different attempts, and\n    # not increasing the delivery counter if global loss of connectivity is possible\n    maxDeliveryChecks = 100\n\n    ############\n    # Timeouts #\n    ############\n\n    # Timeout for dropping dead connections\n    inactiveConnectionDeadline = 10m\n\n    # Interval between `SyncInfo` messages when our node is not synchronized yet\n    syncInterval = 5s\n\n    # Interval between `SyncInfo` messages when our node is already synchronized\n    syncIntervalStable = 15s\n\n    # Synchronization timeout\n    syncTimeout = 10s\n\n    # Synchronization status update interval\n    syncStatusRefresh = 60s\n\n    syncStatusRefreshStable = 90s\n\n    # Synchronization status update interval for stable regime\n    syncIntervalStable = 30s\n\n    # Network controller timeout\n    controllerTimeout = 5s\n\n    ###############\n    # Size limits #\n    ###############\n\n    # Desired number of inv objects. Our requests will have this size.\n    desiredInvObjects = 400\n\n    # How many persistent modifiers to store in the cache.\n    # The cache stores modifiers that are waiting to be applied.\n    maxModifiersCacheSize = 1024\n\n    # Maximum number of PeerSpec objects in one Peers message\n    maxPeerSpecObjects = 64\n\n    # Default ban duration, unless permanent penalty is applied\n    temporalBanDuration = 60m\n\n    # Misbehaving peer penalty score will not be increased withing this time interval,\n    # unless permanent penalty is applied\n    penaltySafeInterval = 2m\n\n    # Max penalty score peer can accumulate before being banned\n    penaltyScoreThreshold = 500\n\n    # If set (and it is set by default), the node will try to discover peers in the network.\n    # If set to false, the node will use only peers from database\n    # (with fallback to knownPeers config section if no peers there)\n    peerDiscovery = true\n  }\n```"
+    },
+    {
+      "heading": "critical-dispatcher",
+      "level": 2,
+      "content": "```\ncritical-dispatcher {\n  type = Dispatcher\n  executor = \"thread-pool-executor\"\n  thread-pool-executor {\n    fixed-pool-size = 2\n  }\n  throughput = 1\n}\n```\nThe dispatcher which is used for block candidate generator and `NodeViewHolder` actors only\n\n\n\n-->"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/conf/applicationconf.md",
+  "processed_at": "2025-05-11T19:53:39.837609",
+  "ai_processed": true
+}

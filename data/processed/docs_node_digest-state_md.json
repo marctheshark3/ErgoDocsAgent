@@ -1,0 +1,58 @@
+{
+  "id": "docs_node_digest-state_md",
+  "title": "Digest State",
+  "summary": "The Digest State feature in the Ergo protocol allows nodes to optimize the storage of blockchain data by pruning or reducing the size of the UTXO set, blocks, and headers, resulting in more efficient storage utilization. This feature enables nodes to selectively retain only the essential data, reducing the storage requirements and improving performance, while still maintaining full-node security guarantees. However, it is important to note that a healthy network requires a sufficient number of full (non-pruning) nodes to maintain the complete history and state of the blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Digest State\n  - Node\n  - Pruning\n  - UTXO\n  - Storage\n---\n\n# Digest State\n\nThe \"Digest State\" feature in the Ergo protocol allows nodes to optimize the storage of blockchain data withou..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Digest State"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Digest State\n  - Node\n  - Pruning\n  - UTXO\n  - Storage\n---"
+    },
+    {
+      "question": "What is the 'Digest State' section about?",
+      "answer": "The \"Digest State\" feature in the Ergo protocol allows nodes to optimize the storage of blockchain d..."
+    },
+    {
+      "question": "What is the 'How does it work?' section about?",
+      "answer": "In a traditional blockchain, each node stores the complete history of transactions, blocks, and head..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Digest State\n  - Node\n  - Pruning\n  - UTXO\n  - Storage\n---"
+    },
+    {
+      "heading": "Digest State",
+      "level": 1,
+      "content": "The \"Digest State\" feature in the Ergo protocol allows nodes to optimize the storage of blockchain data without compromising security and performance. By enabling the Digest State feature, nodes can prune or reduce the size of the UTXO (Unspent Transaction Output) set, blocks, and headers, resulting in more efficient storage utilization."
+    },
+    {
+      "heading": "How does it work?",
+      "level": 2,
+      "content": "In a traditional blockchain, each node stores the complete history of transactions, blocks, and headers, which can lead to significant storage requirements as the blockchain grows. However, with the Digest State feature, Ergo nodes can selectively retain only the essential data.\n\nTo enable the Digest State feature, set the [`ergo.node.stateType = \"digest\"`](conf-node.md#state-type) configuration parameter to \"digest\". Once enabled, the node supports UTXO set pruning, allowing it to reduce the storage footprint while still maintaining full-node security guarantees."
+    },
+    {
+      "heading": "Benefits of Digest State",
+      "level": 2,
+      "content": "- Efficient Storage: By pruning unnecessary data, Digest State reduces the storage requirements for nodes, making it feasible to run Ergo nodes on devices with limited storage capacity.\n\n- Performance Optimization: With a smaller UTXO set, blocks, and headers, nodes can process transactions and blocks more efficiently, potentially improving overall network performance.\n\n- Full-Node Security: Despite not storing the entire UTXO set, nodes with Digest State enabled can still validate transactions and blocks, ensuring compliance with the consensus rules of the network."
+    },
+    {
+      "heading": "Considerations",
+      "level": 2,
+      "content": "While Digest State provides storage and performance benefits, it's important to note that a healthy network requires a sufficient number of full (non-pruning) nodes. Full nodes maintain the complete history and state of the blockchain, serving as a reference for new nodes and ensuring the integrity of the entire blockchain's history."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/digest-state.md",
+  "processed_at": "2025-05-11T19:54:24.522132",
+  "ai_processed": true
+}

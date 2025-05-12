@@ -1,0 +1,1 @@
+Data Storage in ErgoScript provides two primary methods: registers during box creation and context variables when a box is spent. Registers R4 through R9 are available for data storage, with the first four registers reserved by the protocol. An example demonstrates checking if a value is stored in register R4 and handling the cases where it is defined or undefined.

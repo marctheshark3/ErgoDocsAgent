@@ -1,0 +1,3 @@
+The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains. It allows users to convert various native tokens into their wrapped versions on different blockchains, such as ADA to rsADA, ERG to rsERG, BTC to rsBTC, ETH to rsETH, and BNB to rsBNB. This functionality opens up new possibilities for token holders across these ecosystems.
+
+The document outlines various opportunities within the Ergo and Cardano ecosystems, including token swaps, decentralized marketplaces, DeFi applications, and privacy-enhancing tools that can utilize the bridged tokens. It also mentions upcoming support for the Binance Smart Chain network.

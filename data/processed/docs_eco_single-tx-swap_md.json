@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_single-tx-swap_md",
+  "title": "Single Transaction Swap",
+  "summary": "Single Transaction Swap is a multisig trustless escrow service operating on the Ergo blockchain. It provides a secure platform for users to swap NFTs and tokens with others. Users can initiate a trading session and share a link to their private trading room with their trading partner. The platform has recently incorporated features such as asset verification and transaction summary, and future enhancements are planned to improve user experience and functionality.",
+  "qa_pairs": [
+    {
+      "question": "What is Single Transaction Swap?",
+      "answer": "Single Transaction Swap is a multisig trustless escrow service operating on the Ergo blockchain that provides a secure platform for users to swap NFTs and tokens with others."
+    },
+    {
+      "question": "What features does Single Transaction Swap have?",
+      "answer": "Single Transaction Swap has recently incorporated features such as asset verification and transaction summary, with future enhancements in the pipeline to improve user experience and functionality."
+    },
+    {
+      "question": "How can users initiate a trading session on Single Transaction Swap?",
+      "answer": "If you've found a trading partner, for instance, on Discord, you can initiate a trading session on Single Transaction Swap and share a link to your private trading room with them."
+    },
+    {
+      "question": "What type of blockchain does Single Transaction Swap operate on?",
+      "answer": "Single Transaction Swap operates on the Ergo blockchain."
+    },
+    {
+      "question": "What are the key concepts and applications of Single Transaction Swap?",
+      "answer": "Single Transaction Swap is a platform for secure, trustless peer-to-peer trading of NFTs and tokens, utilizing a multisig escrow service on the Ergo blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Single Transaction Swap\n  - Escrow\n  - P2P Trading\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "Single Transaction Swap",
+      "level": 1,
+      "content": "[Single Transaction Swap](https://www.single-tx-swap.com/) is a multisig trustless escrow service operating on the Ergo blockchain. It provides a secure platform for users to swap NFTs and tokens with others. If you've found a trading partner, for instance, on Discord, you can initiate a trading session on Single Transaction Swap and share a link to your private trading room with them.\n\nThe platform has recently incorporated features such as asset verification and transaction summary. Future enhancements are in the pipeline to improve user experience and functionality."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/single-tx-swap.md",
+  "processed_at": "2025-05-11T19:48:07.283522",
+  "ai_processed": true
+}

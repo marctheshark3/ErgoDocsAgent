@@ -1,0 +1,7 @@
+This document discusses the external tools and simulators available for debugging ErgoScript, the scripting language used in the Ergo blockchain. It highlights the importance of these off-chain tools in testing and understanding ErgoScript contract behavior, given the limitations of direct on-chain debugging. The document covers three main categories of tools:
+
+1. Simulators, such as the Spectrum Finance ErgoScript Simulator, which allow for off-chain execution of ErgoScript code.
+2. SDK Playgrounds and REPLs, like the ones provided by the Fleet SDK, which offer interactive environments for experimenting with script snippets and context building.
+3. Online editors and compilers, such as escript.online, which help with writing scripts and catching syntax errors.
+
+The document also mentions the community's desire for more sophisticated debugging tools, including enhanced simulators with features like breakpoints, step-through execution tracing, and detailed state inspection capabilities. It emphasizes that using these external tools effectively complements the core practices of thorough testing and careful design.

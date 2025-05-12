@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary difference between the UTXO model and the account-based model used by Ethereum?",
+    "answer": "In the UTXO model, transactions use and generate unspent transaction outputs (UTXOs), while the account-based model like Ethereum uses an account-based framework."
+  },
+  {
+    "question": "What are some of the key utilities of flash loans beyond just arbitrage?",
+    "answer": "Flash loans can be used for leverage, liquidity provision, self-refinancing, and portfolio rebalancing."
+  },
+  {
+    "question": "How does the deterministic nature of the UTXO model present challenges for the implementation of dynamic flash loans?",
+    "answer": "Predicting the final state of all affected UTXOs in real-time DeFi markets can be challenging, as the UTXO model operates on a deterministic framework."
+  },
+  {
+    "question": "What is the Ergo community's perspective on the absence of Atomic Chained Transactions (ACTs) in their blockchain model?",
+    "answer": "The Ergo community has discussed the absence of ACTs, which would support only static outcomes and limit the dynamic nature of flash loans, but also offer the advantage of mitigating some of the associated risks."
+  },
+  {
+    "question": "Is the challenge of implementing flash loans in the UTXO model an insurmountable obstacle?",
+    "answer": "The deterministic nature of UTXO blockchains presents intriguing challenges for inherently dynamic flash loans, but it is not necessarily an insurmountable obstacle."
+  }
+]

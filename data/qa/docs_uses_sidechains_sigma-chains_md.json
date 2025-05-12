@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Sigma Chains?",
+    "answer": "Sigma Chains are a series of blockchains that share the same contractual base layer, while allowing for different chain-specific features and customization."
+  },
+  {
+    "question": "What are the key features of Sigma Chains?",
+    "answer": "The key features of Sigma Chains are programmability, cross-chain compatibility, sustainability, security, and decentralization."
+  },
+  {
+    "question": "How do Sigma Chains enable cross-chain compatibility?",
+    "answer": "Sigma Chains facilitate seamless interactions between Ergo and other blockchain networks, enabling trustless value pegging between chains."
+  },
+  {
+    "question": "How do Sigma Chains ensure long-term economic sustainability?",
+    "answer": "Sigma Chains introduce storage rent and demurrage to ensure long-term economic sustainability, with storage fees serving as additional rewards for miners while stimulating coin circulation."
+  },
+  {
+    "question": "How does Ergo benefit from the growth of Sigma Chains?",
+    "answer": "The growth of Sigma Chains will accelerate development and increase Ergo's mindshare in the blockchain space, attracting more talent, resources, and innovation to the Ergo ecosystem."
+  }
+]

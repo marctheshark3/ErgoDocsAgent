@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What does DAO stand for?",
+    "answer": "DAO stands for Decentralized Autonomous Organizations."
+  },
+  {
+    "question": "How are decisions made in a DAO?",
+    "answer": "Decisions in a DAO are made by pseudo-anonymous individuals of DeFi platforms to prohibit the centralization of power."
+  },
+  {
+    "question": "What is the purpose of Paideia.im?",
+    "answer": "Paideia.im is a Web3 DAO Management Software Suite that aims to create a functional, secure, and well-documented DAO software suite to support DAOs as they form and develop."
+  },
+  {
+    "question": "What is the plan for ErgoTeam?",
+    "answer": "The developer plans for ErgoTeam to be more general, where any already issued token would work, to help dApps build an ecosystem around their product easily."
+  },
+  {
+    "question": "What is one aspect of improving the procedures for ErgoTeam?",
+    "answer": "One aspect of improving the procedures for ErgoTeam is to have a more efficient UTXO voting system."
+  }
+]

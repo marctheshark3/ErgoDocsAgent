@@ -1,0 +1,5 @@
+The Ergo Data Model document provides an in-depth exploration of Ergo's unique data model, which is based on the UTXO (Unspent Transaction Output) model and enhanced with smart contract capabilities (eUTXO). The document covers the theoretical foundations and core concepts, including the evolution of computational models, the advantages of Ergo's eUTXO model over the account-based model, and the fundamental design principles of computational completeness, cryptographic composability, and scalable state management.
+
+The document then delves into the blockchain structure, describing the components and functions of Ergo blocks, including the block header, transactions, AD Proofs, and the extension section. It then focuses on the foundational state units called "Boxes," which are Ergo's implementation of the UTXO concept, enhanced with features like immutable state, typed registers, and programmable spending conditions.
+
+Finally, the document explores transactions, which are the engines of state change in Ergo, defining how boxes are created, transformed, and consumed.

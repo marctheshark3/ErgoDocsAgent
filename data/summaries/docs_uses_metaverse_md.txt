@@ -1,0 +1,5 @@
+The document provides an overview of two metaverse projects:
+
+Cyberverse is an open-world, pixel-based game with blockchain integration on the Ergo blockchain, allowing for unique player experiences. 
+
+SigmaValley, the first metaverse on the Ergo blockchain, aims to be a caricaturesque and up-to-date visualization of the Ergo ecosystem, inspired by the Silicon Valley TV series.

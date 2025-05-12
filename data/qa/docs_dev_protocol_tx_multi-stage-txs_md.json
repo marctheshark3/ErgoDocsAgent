@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a multi-stage transaction?",
+    "answer": "A multi-stage transaction involves multiple steps, where each step is a separate transaction that must be successfully executed to complete a larger objective."
+  },
+  {
+    "question": "What is the key feature of multi-stage transactions?",
+    "answer": "The key feature of multi-stage transactions is the chaining of multiple transactions to complete a scenario."
+  },
+  {
+    "question": "What are the stages of a lending process in a blockchain-based multi-stage transaction?",
+    "answer": "The stages are: 1. Loan Request, 2. Loan Approval and Funding, 3. Loan Utilization, 4. Repayment, and 5. Completion."
+  },
+  {
+    "question": "Why is the lending process on the blockchain a multi-stage transaction?",
+    "answer": "The lending process on the blockchain is a multi-stage transaction because each step is linked to the success of the previous one, and the entire process involves multiple transactions."
+  },
+  {
+    "question": "What is a classic illustration of a multi-stage transaction?",
+    "answer": "A classic illustration of a multi-stage transaction is the pin-lock contract, where multiple layers of validation or condition checks must be met before the final transaction can occur."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the importance of interoperability in the blockchain world?",
+    "answer": "Interoperability will be critical as most users won't care about the underlying blockchain they're using, they will just want its functionality."
+  },
+  {
+    "question": "Why have crypto projects tended to have an 'us-and-them' mentality?",
+    "answer": "The assumption is that for one platform to succeed, it must be at the expense of all the others."
+  },
+  {
+    "question": "How does composability play a role in the growth of DeFi projects?",
+    "answer": "Composability allows dApps to provide reciprocal benefits and build mutual network effect."
+  },
+  {
+    "question": "What would be the game-changer if true cross-blockchain composability was possible?",
+    "answer": "It would no longer matter which platform developers launched their dApps on."
+  },
+  {
+    "question": "Why do the majority of developers currently choose Ethereum?",
+    "answer": "Ethereum is where the users and volume are."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Rosen Token (RSN)?",
+    "answer": "The Rosen Token serves as a sybil resistance mechanism for the Rosen framework, a fee distribution mechanism, and a means to access services of the Rosen Bridge."
+  },
+  {
+    "question": "What are the requirements for Watchers and Guards in the Rosen Bridge system?",
+    "answer": "Watchers are required to put collateral in RSN and ERG by staking, which allows them to acquire reporting permits. Guards need to lock RSN as collateral."
+  },
+  {
+    "question": "How is the Rosen Token (RSN) distributed?",
+    "answer": "The Rosen Token has the following distribution: 10% for Initial Liquidity Bootstrapping, 38.5% for Future Liquidity Bootstrapping, 25% for Event-Based Emission (Rewards), 2.5% for Passive Staking, 10.5% for Team Budget, 10.5% for Treasury, and 3% for Ergo Foundation."
+  },
+  {
+    "question": "How is the Rosen Bridge project funded?",
+    "answer": "The Rosen Bridge is entirely self-funded, with no private sales, venture capital, or SAFT agreements involved. The core team consists of 6 main developers, and they have successfully completed and received funds from milestone 3 and have submitted milestone 4 for F10 funding."
+  },
+  {
+    "question": "Why is the RSN token needed?",
+    "answer": "The RSN token is needed for capital formation to cover development costs and to form liquidity on the market, as well as to create incentives through event-based emission."
+  }
+]

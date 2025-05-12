@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the recommended hardware requirements for running a Rosen Watcher?",
+    "answer": "- CPU: 2 cores, RAM: 2 GB, Storage: 20 GB"
+  },
+  {
+    "question": "What setting needs to be enabled on the Ergo node to store all transactions, boxes, and addresses in an index?",
+    "answer": "extraIndex = true"
+  },
+  {
+    "question": "What setting controls the number of recently used extra indexes kept in memory on the Ergo node?",
+    "answer": "extraCacheSize = 500"
+  },
+  {
+    "question": "What is the recommended method for installing Docker Compose?",
+    "answer": "Install Docker Desktop, which includes Docker Compose, Docker Engine, and Docker CLI."
+  },
+  {
+    "question": "What is the purpose of Docker Compose?",
+    "answer": "Docker Compose is a tool used for defining and running multi-container Docker applications."
+  }
+]

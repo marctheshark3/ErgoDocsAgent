@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_wallet_satergo-vault_md",
+  "title": "Satergo Offline Vault",
+  "summary": "Satergo Offline Vault is an Android application that securely stores encrypted wallet seed phrases and allows users to perform transactions by connecting to a desktop application (Satergo) via Bluetooth. The app uses Bluetooth Low Energy (BLE) to establish a connection and requires user confirmation and password entry to access the seed phrase and sign transactions, ensuring the seed phrase never leaves the mobile device. The application is designed to be more secure than storing the wallet file on the computer, as it eliminates the risk of malware stealing the seed phrase. The app is not intended to be distributed on the Google Play Store, and other wallet programs are welcome to implement support for Satergo Offline Vault. Improvements include automating the APK download process and adding support for multiple wallets and other desktop operating systems.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Satergo Offline Vault Android application?",
+      "answer": "The Satergo Offline Vault Android application starts a Bluetooth Low Energy (BLE) service which accepts connections from other devices, and securely stores the user's encrypted seed phrase."
+    },
+    {
+      "question": "How does the Satergo Offline Vault improve security compared to storing the wallet file on a computer?",
+      "answer": "The Satergo Offline Vault keeps the seed phrase securely contained in the private directory of the application, which cannot be accessed by the user or other applications on the Android device, even if the connected computer is infected with malware."
+    },
+    {
+      "question": "How does the Satergo Offline Vault use Bluetooth to interact with the Satergo desktop application?",
+      "answer": "The Satergo desktop application requests the public key from the Satergo Offline Vault, and sends unsigned transactions to the phone, which the user must then accept and sign using their password to decrypt the seed phrase."
+    },
+    {
+      "question": "What are the key tasks completed in this ErgoHack project?",
+      "answer": "The key tasks completed were programming an entire Android application that securely stores wallet details, starts a Bluetooth LE service, and performs actions (signing transactions) with the confirmation of the user, as well as programming a Linux implementation for the BLE service."
+    },
+    {
+      "question": "Why will the Satergo Offline Vault application not be available on the Google Play Store?",
+      "answer": "The Satergo Offline Vault application will not be on the Google Play Store as that would need an internet connection to be downloaded, which would go against the application's design of being completely offline."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Satergo Offline Vault",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "About",
+      "level": 2,
+      "content": "An Android application that starts a Bluetooth Low Energy (BLE) service which accepts connections from other devices. The application stores your encrypted seed phrase and when the device connected to it (for example, a desktop computer with Satergo) requests things the user needs to accept them on the mobile device. This is more secure compared to keeping the wallet file on the computer where it is decrypted on that same computer when the password is entered, so malware could steal the seed phrase/private key and take all the funds if the computer is infected.\n\nWith Satergo Offline Vault, even if the computer is infected with malware, it will not matter because the Android mobile device never needs to connect to the internet and as such has a very low risk of getting infected with malware. The application will keep the seed phrase securely contained in the private directory of itself. Not the user nor other applications on an Android device can access another app's private folder (the one located at /data/data/ in the filesystem). The only way that could be accessed is with a full system root exploit which are rare nowadays and also would unlikely be possible to be performed remotely over Bluetooth. Official methods of rooting involve wiping the entire device which means that there is no way to even access the encrypted seed phrase without a very serious exploit.\n\nThe seed phrase is encrypted using AES and cannot be decrypted without the password that was originally used when creating/restoring the wallet."
+    },
+    {
+      "heading": "Example of how one might use it",
+      "level": 2,
+      "content": "- A user installs Satergo on his computer\n- He chooses to create a new wallet using the Satergo Offline Vault feature\n- He transfers the APK file of Satergo Offline Vault to his Android device without using internet (for example, over Bluetooth)\n- He installs it on his Android device and creates a new wallet. This seed phrase is random and will never leave the device unless the user himself decrypts it using the \"View seed\" feature and enters it somewhere. As usual the seed phrase should be noted down on something that is not digital.\n- The user pairs Satergo on his computer with Satergo Offline Vault on his phone\n- Satergo now needs the public key of the wallet, so it requests it. Satergo on the computer cannot do anything until the user accepts the request that has now appeared on his Android device. The public key is not encrypted, so just accepting the request is enough.\n- The user makes a transaction using Satergo (desktop), which then sends the unsigned transaction to the phone. As the seed phrase is encrypted, the user needs to enter his password on the phone to decrypt it and use it for signing the transaction. The seed phrase is never sent anywhere.\n- The signatures are sent back to the Satergo wallet on the desktop, provided the user accepted the request on his phone after viewing what it would spend from the wallet."
+    },
+    {
+      "heading": "Tasks done in this ErgoHack",
+      "level": 2,
+      "content": "- Programmed an entire Android application that securely stores wallet details, starts a Bluetooth LE service and performs actions (signing transactions) with the confirmation of the user.\n- Programmed (in a new branch of the Satergo git repository) a Linux implementation for the BLE service.\n\nThe application is working."
+    },
+    {
+      "heading": "More information",
+      "level": 2,
+      "content": "- The application will not be on the Google Play Store as that would need an internet connection to be downloaded.\n- Other wallet programs are welcome to implement support for Satergo Offline Vault."
+    },
+    {
+      "heading": "Improvements that can be made",
+      "level": 2,
+      "content": "- Satergo should download the APK so that all the user needs to do is to transfer it and not have to download it as well.\n- Satergo Offline Vault's implementation supports having multiple wallets, however this needs to be made available in the user interface as well.\n- Support for other desktop operating systems. Since Bluetooth is differently implemented on each platform, the current implementation is only for Linux (bluez)."
+    },
+    {
+      "heading": "Threat model",
+      "level": 2,
+      "content": "There is no code in app that sends your seed phrase anywhere. Whatever the device or application connected to your mobile device sends to it, it will not respond with anything except for:\n\n- The application version (Sent without confirmation)\n- The extended public key (Confirmation needed) which is used to derive the public addresses of the wallet\n- Signatures for transactions (Confirmation & password needed)\n\nIn the case of Bluetooth vulnerabilities, even if an attacker would be able to establish a connection using one, they cannot access the private key because only the app can access it unless the device is rooted. This means that the Bluetooth vulnerability would need to have an exploit chain that also has a root exploit.\n\nRoot exploits are rare and are very serious as they give full control of the device to the attacker. Even if there was such an exploit it would not be able to access the contents of the file as it is encrypted with your password. A very sophisticated virus could however monitor everything on the phone and find the password when entered. Summary of what it would take:\n\n- A full Android Bluetooth exploit\n- A full Android root exploit that can be performed over Bluetooth, to install purpose-built malware on the device\n- The user entering the password while still being near the attacker or connected to the internet\n\nThis is in my opinion very far-fetched."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/satergo-vault.md",
+  "processed_at": "2025-05-11T19:41:26.180631",
+  "ai_processed": true
+}

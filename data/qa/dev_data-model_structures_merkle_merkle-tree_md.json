@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the data structure used for Merkle Trees in the Ergo blockchain?",
+    "answer": "Ergo employs a binary structure for its Merkle Trees, where each node has two children."
+  },
+  {
+    "question": "What is the purpose of the cryptographic hashes in Ergo's Merkle Trees?",
+    "answer": "The cryptographic hashes ensure that any alteration in the underlying data is reflected in the Merkle Root, making the tree tamper-evident."
+  },
+  {
+    "question": "What is the benefit of Ergo's deterministic byte representation of transactions?",
+    "answer": "The deterministic byte representation of transactions in Ergo allows consistent restoration and verification of Merkle Tree roots, even if transactions are serialized in different formats, such as JSON."
+  },
+  {
+    "question": "How does Ergo's deterministic pregenesis state facilitate state transitions?",
+    "answer": "Ergo's deterministic pregenesis state, configured at the blockchain's inception, facilitates seamless restoration and verification of state transitions by comparing them with the hashes stored in the block header."
+  },
+  {
+    "question": "What are the core applications of Merkle Trees in the Ergo blockchain?",
+    "answer": "Merkle Trees in Ergo are used for verifying transactions within blocks and securing additional metadata in the Extension Block."
+  }
+]

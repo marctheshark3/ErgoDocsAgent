@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary purpose of the ErgoMixer protocol?",
+    "answer": "The ErgoMixer protocol is a non-interactive, decentralized mixing protocol that enhances privacy by obfuscating the trail of transactions."
+  },
+  {
+    "question": "What is the recommended withdrawal strategy when using the ErgoMixer?",
+    "answer": "Avoid withdrawing all mixed funds to a single address. Instead, withdraw to multiple addresses over time intervals to maintain privacy."
+  },
+  {
+    "question": "How does the mixing process work in the ErgoMixer?",
+    "answer": "The mixer operates as a series of 'mini-mixes' or rounds, where your funds are mixed with another user's available box (UTXO) from the pool. There is no direct interaction between users."
+  },
+  {
+    "question": "How does the anonymity set and security work in the ErgoMixer?",
+    "answer": "Theoretically, each round's distinguishability for an external observer is 2^-1, while it's 100% for the participants. The final distinguishability is 2^(-rounds) in theory, but in practice, it can be 100% if there are only two parties mixing."
+  },
+  {
+    "question": "How can a larger pool size with more honest participants increase the indistinguishability in the ErgoMixer?",
+    "answer": "A larger pool size with more honest participants increases indistinguishability, as some boxes will be mixed with parties other than the attacker. The mixer cannot differentiate between boxes in the pool and only knows your boxes and the mapping of the last mixed boxes."
+  }
+]

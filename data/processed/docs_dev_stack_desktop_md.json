@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_stack_desktop_md",
+  "title": "Desktop",
+  "summary": "The document provides an overview of desktop application development platforms, including the JVM, JavaFX, Rust, JavaScript/TypeScript with Electron, and Python. It also lists several example desktop applications built using these platforms, such as the Ergo Wallet, ErgoMixer, and Satergo.",
+  "qa_pairs": [
+    {
+      "question": "What are the different platform options mentioned for desktop development?",
+      "answer": "[\"JVM\",\"JavaFX\",\"Rust\",\"JS/TS + Electron\",\"Python\"]"
+    },
+    {
+      "question": "What are some example desktop applications built using these platforms?",
+      "answer": "[\"Ergo Wallet\",\"ErgoMixer\",\"Satergo\"]"
+    },
+    {
+      "question": "Which programming language is used for building desktop applications with Electron?",
+      "answer": "JS/TS (JavaScript and TypeScript)"
+    },
+    {
+      "question": "What is the primary use case of the Ergo Wallet desktop application?",
+      "answer": "Wallet for the Ergo blockchain platform"
+    },
+    {
+      "question": "Which desktop platform is known for its performance and safety guarantees?",
+      "answer": "Rust"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Desktop",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Platforms",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"JVM\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"JavaFX\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/jvm.png\",\n    \"url\": \"../lang/jvm.md\"\n  },\n  {\n    \"title\": \"Rust\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"../lang/rust.md\"\n\n  },\n  {\n    \"title\": \"JS/TS + Electron\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lang/js.md\"\n  },\n  {\n    \"title\": \"Python\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/python.png\",\n    \"url\": \"../lang/python.md\"\n  }\n\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Examples",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udd17 Ergo Wallet\",\n    \"content\": \"\",\n    \"url\": \"https://github.com/ergoplatform/ergo-wallet-app\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 ErgoMixer\",\n    \"content\": \"\",\n    \"url\": \"https://github.com/ergoMixer\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Satergo\",\n    \"content\": \"\",\n    \"url\": \"https://satergo.com/\"\n  },\n\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/desktop.md",
+  "processed_at": "2025-05-11T19:33:59.030495",
+  "ai_processed": true
+}

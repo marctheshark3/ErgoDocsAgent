@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_scs_ergotree_encoding_md",
+  "title": "Understanding ErgoTree Encoding",
+  "summary": "ErgoTree encoding is a binary formatting system designed for the storage, transfer, and cross-platform operation of ErgoTree contracts. It uses Variable Length Quantity (VLQ) encoding for integer representation, which is an effective scheme that accommodates integer representation using a variable number of bytes. ErgoTree also employs ZigZag encoding to efficiently encode signed 64-bit integers using variable-length encoding. The document provides detailed explanations and code examples for these encoding techniques.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of ErgoTree encoding?",
+      "answer": "ErgoTree encoding is a binary formatting system designed for the storage, transfer, and cross-platform operation of ErgoTree contracts."
+    },
+    {
+      "question": "What is Variable Length Quantity (VLQ) encoding and how is it used in ErgoTree encoding?",
+      "answer": "VLQ encoding is an effective scheme that accommodates integer representation using a variable number of bytes. ErgoTree encoding applies VLQ encoding for integer representation."
+    },
+    {
+      "question": "How does the `putULong` method in the Scala code encode a long value using VLQ encoding?",
+      "answer": "The `putULong` method encodes a long value by iteratively analyzing the input value and writing the encoded bytes to a buffer array using VLQ encoding."
+    },
+    {
+      "question": "What is ZigZag encoding and how does it help in encoding signed 64-bit integers in ErgoTree?",
+      "answer": "ZigZag encoding converts signed integers into unsigned integers suitable for efficient VLQ/varint encoding, allowing for more efficient encoding of signed 64-bit integers."
+    },
+    {
+      "question": "How does the `encodeZigZag64` method in the Java code demonstrate ZigZag encoding?",
+      "answer": "The `encodeZigZag64` method shifts the long integer 'n' one bit to the left and performs a bitwise XOR operation with 'n' shifted arithmetically 63 bits to the right, effectively converting the signed integer to an unsigned integer."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Understanding ErgoTree Encoding",
+      "level": 1,
+      "content": "ErgoTree encoding is a binary formatting system designed for the storage, transfer, and cross-platform operation of ErgoTree contracts. This format is advantageous due to its proficiency in the serialization and deserialization of ErgoTree contracts."
+    },
+    {
+      "heading": "Variable Length Quantity (VLQ) Encoding",
+      "level": 2,
+      "content": "The ErgoTree encoding applies Variable Length Quantity (VLQ) encoding for integer representation. VLQ encoding is an effective scheme that accommodates integer representation using a variable number of bytes.\n\nIn the following Scala code, we define a method `putULong`, which accepts a single long value and encodes it using VLQ encoding. The encoding process entails iteratively analyzing the input value and writing the encoded bytes to a buffer array.\n\nDuring the encoding procedure, the method first verifies if the value can be represented using a single byte by applying a bitwise AND operation with `~0x7FL` (bitwise NOT 0x7F) and checking if the result equals zero. If so, the value is cast to a byte and stored in the buffer array. If not, the value undergoes a bitwise AND operation with `0x7F`, is then cast to a byte, and finally bitwise ORed with `0x80`. The resulting byte is stored in the buffer array, and the value is right-shifted by 7 bits (unsigned shift). This procedure repeats until the entire value is encoded.\n\n```scala\n// Defining a public method putULong that accepts a single long value as input\npublic final void putULong(long value) {\n    // An infinite loop will continue until a return statement is executed\n    while (true) {\n        // If the bitwise AND operation between the value and 0x7FL (bitwise NOT operation) equals zero\n        if ((value & ~0x7FL) == 0) {\n            // When the above condition is satisfied, cast the value to a byte and store it in \n            // the buffer array at the current position\n            buffer[position++] = (byte) value;\n            // Terminate the method\n            return;\n        } else {\n            // If the above condition is not satisfied, perform a bitwise AND operation on the value with 0x7F,\n            // cast the resultant integer to a byte, and perform a bitwise OR operation with 0x80.\n            // Store the resulting byte value in the buffer array at the current position\n            buffer[position++] = (byte) (((int) value & 0x7F) | 0x80);\n            // Shift the value 7 bits to the right\n            value >>>= 7;\n        }\n    }\n}\n```"
+    },
+    {
+      "heading": "ZigZag Encoding",
+      "level": 2,
+      "content": "To efficiently encode signed 64-bit integers using variable-length encoding, ErgoTree employs ZigZag encoding. This method converts signed integers into unsigned integers suitable for efficient VLQ/varint encoding. Without ZigZag encoding, negative values would require sign-extension to 64 bits for standard varint encoding, invariably consuming 10 bytes in the buffer.\n\nParameter **n** is a signed 64-bit integer. The following Java method demonstrates ZigZag encoding. Note that while the result represents an unsigned value conceptually, Java returns it as a standard signed `long`.\n\n```scala\npublic static long encodeZigZag64(final long n) {\n    // This code shifts the long integer 'n' one bit to the left and performs a bitwise XOR operation \n    // with 'n' shifted arithmetically 63 bits to the right. This arithmetic shift ensures the sign bit \n    // is extended to the leftmost position.\n    return (n << 1) ^ (n >> 63);\n}\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergotree/encoding.md",
+  "processed_at": "2025-05-11T19:29:18.398142",
+  "ai_processed": true
+}

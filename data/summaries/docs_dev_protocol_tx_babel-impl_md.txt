@@ -1,0 +1,1 @@
+This guide provides detailed instructions for implementing Babel fees in Ergo applications, allowing users to pay transaction fees using tokens instead of ERG. The implementation steps include minting a token, creating a Babel fee box using TokenJay.app, and setting up a server with Node.js and the necessary dependencies.

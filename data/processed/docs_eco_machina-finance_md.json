@@ -1,0 +1,68 @@
+{
+  "id": "docs_eco_machina-finance_md",
+  "title": "Machina Finance",
+  "summary": "Machina Finance is a decentralized exchange (DEX) under development on the Ergo blockchain. Its unique feature is the use of grid order contracts, which have the potential to replace traditional liquidity pools and offer a more decentralized and peer-to-peer trading experience. The primary objective of Machina Finance is to promote decentralization and facilitate peer-to-peer trade, leveraging blockchain technology and smart contracts to create a secure, transparent, and user-friendly DEX. The grid order contracts are currently under development and are expected to bring significant changes to the way DEXs operate.",
+  "qa_pairs": [
+    {
+      "question": "What is Machina Finance?",
+      "answer": "Machina Finance is a revolutionary decentralized exchange (DEX) under development on Ergo."
+    },
+    {
+      "question": "What is the unique aspect of Machina Finance?",
+      "answer": "The unique aspect of Machina Finance is its use of grid order contracts."
+    },
+    {
+      "question": "What is the primary objective of Machina Finance?",
+      "answer": "The primary objective of Machina Finance is to promote decentralization and facilitate peer-to-peer (P2P) trade."
+    },
+    {
+      "question": "What is the potential of grid order contracts in Machina Finance?",
+      "answer": "Grid order contracts have the potential to replace traditional liquidity pools, offering a more decentralized and peer-to-peer (P2P) trading experience."
+    },
+    {
+      "question": "What are the key features of Machina Finance?",
+      "answer": "Machina Finance aims to create a DEX that is secure, transparent, and user-friendly by leveraging the power of blockchain technology and smart contracts."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Machina Finance\n  - DEX\n  - Grid Trading\n  - dApp\n  - dApp-InDev\n---"
+    },
+    {
+      "heading": "Machina Finance",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "Machina Finance is a revolutionary decentralized exchange (DEX) under development on Ergo. The unique aspect of Machina Finance is its use of **[grid order contracts](grid_trading.md)**. These contracts have the potential to replace traditional liquidity pools, offering a more decentralized and peer-to-peer (P2P) trading experience."
+    },
+    {
+      "heading": "Goal",
+      "level": 2,
+      "content": "The primary objective of Machina Finance is to promote decentralization and facilitate P2P trade. By leveraging the power of blockchain technology and smart contracts, Machina Finance aims to create a DEX that is secure, transparent, and user-friendly."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Grid Order Contracts",
+      "level": 3,
+      "content": "Grid order contracts are a novel feature in the world of DEXs. They allow for a more efficient and effective trading experience by replacing the need for liquidity pools. This feature is currently under development and is expected to bring significant changes to the way DEXs operate."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Twitter](https://twitter.com/MachinaFinance)\n- [GitHub](https://github.com/nautls/machina-finance)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/machina-finance.md",
+  "processed_at": "2025-05-11T19:45:18.448368",
+  "ai_processed": true
+}

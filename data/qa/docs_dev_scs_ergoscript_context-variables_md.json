@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of context variables in ErgoScript?",
+    "answer": "Context variables in ErgoScript allow for the creation of intricate programs with predicates that are context-dependent."
+  },
+  {
+    "question": "What is the context variable 'HEIGHT' used for in the example script?",
+    "answer": "The 'HEIGHT' context variable represents the height of the block in which the transaction is mined. The example script uses 'HEIGHT < 4000000' to determine if the associated box becomes 'anyone-can-spend' or 'no-one-can-spend'."
+  },
+  {
+    "question": "What other context variables does ErgoScript support besides 'HEIGHT'?",
+    "answer": "ErgoScript supports other context variables such as 'OUTPUTS', 'INPUTS', and 'minerPubKey' which offer additional tools for writing more specific and flexible scripts."
+  },
+  {
+    "question": "How can the use of context variables in ErgoScript make scripts more flexible and adaptable?",
+    "answer": "Context variables allow scripts to be dependent on the specific conditions of the blockchain, transaction, or mining process, making them more flexible and adaptable to different scenarios."
+  },
+  {
+    "question": "Where can I find more details on the usage and specification of context variables in ErgoScript?",
+    "answer": "For more details on context variables and their usage, you can refer to the ErgoScript language specification."
+  }
+]

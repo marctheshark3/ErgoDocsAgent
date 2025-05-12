@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two primary approaches for running an Ergo node on Android?",
+    "answer": "1. Direct Termux Setup (Digest Mode) and 2. Arch Linux via proot (RocksDB/UTXO Mode)"
+  },
+  {
+    "question": "What are the device requirements for running an Ergo node on Android?",
+    "answer": "OS: Android version 7.0 or higher, Storage: ~5-10GB free space for Digest Mode, 30GB+ for UTXO Mode, RAM: Minimum 1-2GB available specifically for Termux/Java"
+  },
+  {
+    "question": "What is the recommended approach for most users?",
+    "answer": "The Direct Termux Setup (Digest Mode) is recommended for most users."
+  },
+  {
+    "question": "What is the purpose of the ErgoNodeAndroid project?",
+    "answer": "ErgoNodeAndroid is a community project attempting a one-click Ergo node app for Android, based on Termux scripts."
+  },
+  {
+    "question": "What are some general tips and tricks for running an Ergo node on Android?",
+    "answer": "Use a different keyboard app, run the node in a background session using tmux, configure port forwarding for TCP port 9030, and connect the Ergo Wallet App to the local node."
+  }
+]

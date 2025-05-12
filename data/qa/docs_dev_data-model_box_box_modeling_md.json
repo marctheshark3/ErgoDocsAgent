@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the backbone of many blockchain networks?",
+    "answer": "The UTXO (Unspent Transaction Output) system is the backbone of many blockchain networks."
+  },
+  {
+    "question": "What are the key components of a box on the Ergo blockchain?",
+    "answer": "Boxes on the Ergo blockchain are equipped with registers that are protected by a contract, enhancing their functionality."
+  },
+  {
+    "question": "What is the purpose of a guard script or smart contract in the context of blockchain boxes?",
+    "answer": "A guard script or smart contract sets restrictions on the box, adding a level of control and functionality to the boxes."
+  },
+  {
+    "question": "What are the three pillars of box design on the Ergo blockchain?",
+    "answer": "The three pillars of box design are security, scalability, and efficiency."
+  },
+  {
+    "question": "What is the purpose of box modeling in the context of blockchain development?",
+    "answer": "Box modeling is a framework that aids developers or box designers in creating a box to perform specific tasks, promoting a clear and systematic understanding of a box's roles and operational mechanics."
+  }
+]

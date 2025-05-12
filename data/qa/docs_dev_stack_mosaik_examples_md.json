@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Ergo Mosaik?",
+    "answer": "Ergo Mosaik is a UI system for Ergo dApps."
+  },
+  {
+    "question": "What are some example Mosaik apps mentioned in the content?",
+    "answer": "The example Mosaik apps mentioned include Mosaik tutorial example app, Age USD demo, Mosaik view elements and actions, Burn tokens demo, NFT marketplace, and Obol Flip."
+  },
+  {
+    "question": "What programming languages and frameworks are used in the example Mosaik apps?",
+    "answer": "The example Mosaik apps use Spring and Kotlin DSL, Spring and Java, and Spring, Java and Freemarker."
+  },
+  {
+    "question": "What are the key features or capabilities demonstrated by the example Mosaik apps?",
+    "answer": "The example Mosaik apps demonstrate building UI, processing data using JSON templates and Freemarker, and integrating with ErgoPay for burning tokens."
+  },
+  {
+    "question": "What is the purpose of the Mosaik system in the context of Ergo dApps?",
+    "answer": "The Mosaik system provides a UI system for building Ergo dApps."
+  }
+]

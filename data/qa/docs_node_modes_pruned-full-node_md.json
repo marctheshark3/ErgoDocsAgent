@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Pruned Full-Node Mode?",
+    "answer": "Pruned Full-Node Mode is a new feature introduced in the Ergo Protocol Reference Client 5.0.13 that allows you to achieve full node security on a standard laptop within minutes, eliminating the need to check approximately 95% of the blockchain."
+  },
+  {
+    "question": "How does Pruned Full-Node Mode work?",
+    "answer": "Pruned Full-Node Mode uses a verified UTXO set snapshot and NiPoPoWS to bootstrap the node, allowing for faster synchronization compared to checking the entire blockchain."
+  },
+  {
+    "question": "What are the key differences between Pruned Full-Node Mode and other fast-sync options like Geth's fast-sync or Parity's warp-mode?",
+    "answer": "Pruned Full-Node Mode has more aggressive optimizations compared to the fast-sync in Geth or warp-mode in Parity used by Ethereum protocol clients."
+  },
+  {
+    "question": "What are the technical details behind the UTXO set authentication in Pruned Full-Node Mode?",
+    "answer": "The UTXO set authentication uses an AVL+ tree, as outlined in research papers, and can be as secure as processing all blocks under certain statistical assumptions."
+  },
+  {
+    "question": "What is the recommended approach for users with an old wallet when using Pruned Full-Node Mode?",
+    "answer": "The recommended approach is to create a new wallet and transfer funds to it, as you cannot restore an old wallet with a pruned node."
+  }
+]

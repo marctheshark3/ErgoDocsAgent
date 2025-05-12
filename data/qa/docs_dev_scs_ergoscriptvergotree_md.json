@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the relationship between ErgoScript and ErgoTree?",
+    "answer": "ErgoScript is a high-level, developer-friendly language for writing smart contracts, which are then compiled to the low-level ErgoTree language that the Ergo node understands."
+  },
+  {
+    "question": "What is the structure of an ErgoTree program?",
+    "answer": "An ErgoTree program is a deterministic sequence of boolean predicates joined using AND and OR."
+  },
+  {
+    "question": "How does the Ergo node validate a transaction?",
+    "answer": "The Ergo node executes the ErgoTree program contained in a transaction and considers it valid if the program evaluates to true."
+  },
+  {
+    "question": "What is an example of an ErgoTree program?",
+    "answer": "An example ErgoTree program is `AND(OR(condition_1, condition_2), condition_3)`, which implies that the transaction is valid if `condition_3` holds and at least one of `condition_1` or `condition_2` holds."
+  },
+  {
+    "question": "What is the equivalent of the example ErgoTree program in ErgoScript?",
+    "answer": "The equivalent of the example ErgoTree program in ErgoScript would be `(condition_1 || condition_2) && condition_3`."
+  }
+]

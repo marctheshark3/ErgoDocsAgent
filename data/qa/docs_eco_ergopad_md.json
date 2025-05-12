@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Ergopad?",
+    "answer": "Ergopad is a platform within the Ergo ecosystem that facilitates the incubation and launch of new projects, providing a mechanism for token IDOs (Initial Dex Offerings)."
+  },
+  {
+    "question": "What is the purpose of the Ergopad native token?",
+    "answer": "The Ergopad native token can be staked by users via on-chain smart contracts, enabling them to achieve various staking tiers and contribute to the DAOs (Decentralized Autonomous Organizations) of projects initiated on the Ergopad platform."
+  },
+  {
+    "question": "How do early contributors in the seed round of Ergopad projects receive governance tokens?",
+    "answer": "Early contributors in the seed round receive governance tokens at a value lower than their launch price on the dex, allowing them to participate in the governance of the DAOs of different projects."
+  },
+  {
+    "question": "What are the key services provided by the Ergopad team?",
+    "answer": "The Ergopad team provides funding, marketing, and blockchain development services, which are crucial for the success of any new project."
+  },
+  {
+    "question": "Where can users find information about Ergopad?",
+    "answer": "The Ergopad website provides a variety of information including announcements, upcoming projects, and a dashboard."
+  }
+]

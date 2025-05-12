@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Chat Bridge?",
+    "answer": "Chat Bridge is a way to establish a channel that is bridged between a server/telegram using matterbridge."
+  },
+  {
+    "question": "What are the steps to set up a bridge?",
+    "answer": "1. Invite @BridgeBot#9505 to your server. 2. Invite ErgoBridgeBot to your Telegram. 3. Notify @Glasgow about the channel/server you want to bridge."
+  },
+  {
+    "question": "What are the known limitations of the bridge?",
+    "answer": "1. Discord does not allow bots to reply to messages when spoofing someone. 2. The Telegram API does not report deleted messages."
+  },
+  {
+    "question": "How can spam on Telegram be prevented?",
+    "answer": "Restrict new Telegram users from speaking until they verify their identity using a tool like OrgRobot."
+  },
+  {
+    "question": "What features does the bridge have?",
+    "answer": "Names and profile photos can be spoofed if they are similar on both platforms. Responses will reply to the message on Telegram and quote the message on Discord."
+  }
+]

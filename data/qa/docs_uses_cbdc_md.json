@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary goal of Ergo as a blockchain platform?",
+    "answer": "Ergo aims to be the CBDC (Central Bank Digital Currency) that everyone can use, privately and programmably."
+  },
+  {
+    "question": "How does Ergo differentiate itself from other blockchain platforms like Ethereum in terms of scalability and transaction costs?",
+    "answer": "Unlike Ethereum, which struggles with scalability and high fees, Ergo is designed for efficiency and low-cost transactions, making it ideal for micro-transactions, complex financial products, and democratizing access to financial systems."
+  },
+  {
+    "question": "What are the key privacy features of Ergo that distinguish it from state-sponsored digital currencies?",
+    "answer": "Ergo offers secure, private avenues for financial interactions, ensuring that your money remains a medium of exchange and not a subject of scrutiny, granting you the freedom and security often missing from traditional financial systems. Ergo also provides optional privacy features, allowing you to choose to make transactions public or private."
+  },
+  {
+    "question": "How does Ergo aim to serve as a bridge between traditional and blockchain economies?",
+    "answer": "Ergo is developing the financial infrastructure to accommodate the evolving demands of users, such as tokenization, stablecoins, and digital identity, enabling seamless financial interactions between traditional and blockchain-based systems."
+  },
+  {
+    "question": "What is the significance of tokenization in Ergo's vision for the future of asset management?",
+    "answer": "Ergo understands that in the future, almost everything will be tokenized, and it aims to enable frictionless trade, borrowing, and leverage of these tokenized assets, underpinned by decentralized protocols."
+  }
+]

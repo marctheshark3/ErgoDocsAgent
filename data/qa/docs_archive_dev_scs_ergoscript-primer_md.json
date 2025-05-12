@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoScript?",
+    "answer": "ErgoScript is a powerful, developer-friendly programming language designed specifically for writing smart contracts on the Ergo blockchain."
+  },
+  {
+    "question": "What is the key characteristic of ErgoScript's UTXO-based model?",
+    "answer": "In the UTXO model, contracts define conditions for spending coins, transactions are immutable and more secure, and there is improved scalability and parallel processing."
+  },
+  {
+    "question": "How does the UTXO model differ from account-based blockchains?",
+    "answer": "Unlike account-based blockchains, the UTXO model uses unspent transaction outputs, where contracts define conditions for spending coins."
+  },
+  {
+    "question": "What are the benefits of the UTXO model in ErgoScript?",
+    "answer": "The UTXO model in ErgoScript leads to immutable and more secure transactions, as well as improved scalability and parallel processing."
+  },
+  {
+    "question": "What type of applications can be built with ErgoScript?",
+    "answer": "ErgoScript allows for the creation of complex financial contracts and applications with unprecedented flexibility and security."
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_stack_browser_md",
+  "title": "Browser",
+  "summary": "The document discusses the options available to developers for building browser-based dApps on the Ergo platform. It covers the choice between using JavaScript/TypeScript or Rust for frontend development, as well as the integration of either the ErgoPay or dApp Connector for handling payments. The document provides links to additional resources for each of the discussed options.",
+  "qa_pairs": [
+    {
+      "question": "What are the two main options for frontend development in browsers?",
+      "answer": "JavaScript/TypeScript and Rust."
+    },
+    {
+      "question": "What is the purpose of the dApp Connector?",
+      "answer": "It is for web-based wallets like Nautilus and SAFEW."
+    },
+    {
+      "question": "What is the purpose of ErgoPay?",
+      "answer": "It is Ergo's dApp connector for non-web wallet applications."
+    },
+    {
+      "question": "What are the two payment integration options mentioned?",
+      "answer": "ErgoPay and dApp Connector."
+    },
+    {
+      "question": "What are the two main languages/frameworks discussed for browser development?",
+      "answer": "JavaScript/TypeScript and Rust."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Browser",
+      "level": 1,
+      "content": "There are a couple of options developers can pick from to interact with the user in browser. You will first need to decide if you want to develop using JavaScript or Rust. You'll also have to decide whether you want to integrate the dApp connector or ErgoPay."
+    },
+    {
+      "heading": "Platform",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"JS/TS\",\n    \"content\": \"Frontend development with JavaScript, TypeScript\",\n    \"image\": \"../../assets/img/dev-grid/js.png\",\n    \"url\": \"../lang/js.md\"\n  },\n  {\n    \"title\": \"Rust\",\n    \"content\": \"Sigma Rust can be used in front-end development\",\n    \"image\": \"../../assets/img/dev-grid/rust.png\",\n    \"url\": \"../lang/rust.md\"\n\n  }\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Payments",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"ErgoPay\",\n    \"content\": \"Ergo's dApp connector for non-web wallet applications\",\n    \"url\": \"../wallet/payments/ergopay/ergo-pay.md\"\n  },\n  {\n    \"title\": \"dApp Connector\",\n    \"content\": \"For web-based wallets (Nautilus/SAFEW)\",\n    \"url\": \"../wallet/payments/dApp.md\"\n\n  }\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/browser.md",
+  "processed_at": "2025-05-11T19:33:34.743461",
+  "ai_processed": true
+}

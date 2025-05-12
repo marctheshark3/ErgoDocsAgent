@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Log-Space Mining?",
+    "answer": "Log-Space Mining is an innovative concept that introduces a new approach to storing and accessing blockchain data, potentially revolutionizing the way miners and nodes operate within the blockchain ecosystem."
+  },
+  {
+    "question": "What are Non-Interactive Proofs of Proof-of-Work (NIPoPoWs)?",
+    "answer": "NIPoPoWs are a way of creating super light clients that can verify the validity of a proof-of-work without downloading the entire blockchain, by preserving the blockchain's historical data through smart contracts."
+  },
+  {
+    "question": "How do NIPoPoWs work compared to traditional blockchains and SPV nodes?",
+    "answer": "1. Traditional Blockchains: Nodes download and validate the entire blockchain. 2. SPV Nodes: These nodes only download block headers but still validate the proof-of-work. 3. NIPoPoWs: Super light clients can be convinced of the validity of a proof-of-work without downloading the entire blockchain."
+  },
+  {
+    "question": "What are the potential benefits of Log-Space Mining and NIPoPoWs?",
+    "answer": "Log-Space Mining and NIPoPoWs aim to reduce the storage requirements for miners, enhance interoperability between different blockchain networks, and pave the way for more efficient and scalable blockchain operations."
+  },
+  {
+    "question": "How do NIPoPoWs enable remote chains and smart contracts to consume and interact with blockchain data?",
+    "answer": "NIPoPoWs preserve the blockchain's historical data through smart contracts, enabling remote chains and smart contracts to consume and interact with this data."
+  }
+]

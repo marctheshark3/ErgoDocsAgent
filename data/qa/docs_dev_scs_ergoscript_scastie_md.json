@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Scastie?",
+    "answer": "Scastie is an online compiler for the Scala programming language."
+  },
+  {
+    "question": "What packages need to be imported to interact with the Ergo Blockchain environment in Scastie?",
+    "answer": "The necessary packages to import are: `import org.ergoplatform.compiler.ErgoScalaCompiler._` and `import org.ergoplatform.playground._`."
+  },
+  {
+    "question": "How do you create a blockchain simulation in Scastie?",
+    "answer": "To create a blockchain simulation, use the `newBlockChainSimulation` method to create a `blockchainSim` instance."
+  },
+  {
+    "question": "How do you create a transaction builder in Scastie?",
+    "answer": "To create a transaction builder, use the `newTransactionBuilder(blockchainSim.ctx)` method to create a `txBuilder` instance."
+  },
+  {
+    "question": "What is the purpose of the Ergo Scala Playground in Scastie?",
+    "answer": "The Ergo Scala Playground in Scastie is a powerful tool for developing and testing Ergo smart contracts in a simulated environment."
+  }
+]

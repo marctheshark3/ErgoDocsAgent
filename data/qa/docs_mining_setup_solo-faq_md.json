@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Why are my mining rewards not visible in my wallet initially?",
+    "answer": "When you mine, the rewards are initially linked to a time-and-pubkey lock script, not your standard P2PK address. To make these funds visible in your wallet, you need to transfer all the funds to your own address in the node wallet."
+  },
+  {
+    "question": "Why do my mining rewards go to a different address?",
+    "answer": "Mining rewards are initially directed to UTXOs (Unspent Transaction Outputs) associated with specific scripts. These scripts lock the rewards to the miner's public keys for 720 blocks. After 720 confirmations, the wallet will display the mined rewards."
+  },
+  {
+    "question": "How can I verify if a block is mined by me?",
+    "answer": "You can obtain your mining rewards address with the /mining/rewardAddress API call, and then verify your rewards on the Ergo Explorer. You can also obtain your raw public key via the /mining/rewardPublicKey endpoint and check block headers for this public key."
+  },
+  {
+    "question": "What information is provided by the /mining/solution API endpoint?",
+    "answer": "The /mining/solution API endpoint provides information about the mining solution, including the public key (pk) in binary format, the nonce (n), and the constant values w and d."
+  },
+  {
+    "question": "How can I locate my mining rewards that are not yet visible in my wallet?",
+    "answer": "The mining rewards are stored in a special node application with id = 9 (wallet application id = 10). You can locate them via the /scan/unspentBoxes/9 API endpoint."
+  }
+]

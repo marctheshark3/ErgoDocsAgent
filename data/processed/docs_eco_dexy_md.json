@@ -1,0 +1,68 @@
+{
+  "id": "docs_eco_dexy_md",
+  "title": "Dexy: A Seigniorage-Based Stablecoin",
+  "summary": "Dexy is a seigniorage-based stablecoin design that leverages oracle price feeds and a liquidity pool to maintain a peg. The key components include an emission contract for minting new Dexy tokens, a liquidity pool for buying and selling Dexy, an arbitrage mechanism, and top-up swaps to stabilize the price. The design incorporates anti-draining measures to prevent cyclic draining of the emission contract. Potential vulnerabilities include draining attacks, oracle manipulation, and demand shifts. Thorough modeling, simulation, and monitoring are crucial for the system's stability and resilience. Dexy differs from Terra's model by using overcollateralization, and the collateral levels may vary over time. The project is currently under development, with the first implementation being DexyGold, which aims to maintain a peg to the USD/XAU (gold) price.",
+  "qa_pairs": [
+    {
+      "question": "What is the key design component of Dexy that allows one-way minting of new tokens?",
+      "answer": "The Emission (Minting) Contract allows one-way minting of new Dexy tokens by selling ERG at the oracle pool rate."
+    },
+    {
+      "question": "How does the Liquidity Pool (LP) in Dexy's design prevent token redemptions when the oracle rate is significantly below the LP rate?",
+      "answer": "The LP prevents LP token redemptions when the oracle rate is significantly below (e.g., 90%) the LP rate."
+    },
+    {
+      "question": "What is the purpose of the Arbitrage Mechanism in Dexy's design?",
+      "answer": "When the oracle rate is higher than the LP rate, the Arbitrage Mechanism allows arbitrageurs to mint Dexy from the emission contract and sell to the LP for a profit, helping push the Dexy price towards the peg."
+    },
+    {
+      "question": "How do the Top-up Swaps in Dexy's design help maintain the peg when the oracle rate is lower than the LP rate?",
+      "answer": "When the oracle rate is lower than the LP rate, the Top-up Swaps use ERG from the emission contract to buy Dexy from the LP, pushing the price back up."
+    },
+    {
+      "question": "What are some potential vulnerabilities and considerations mentioned in the document for the Dexy design?",
+      "answer": "Potential vulnerabilities and considerations include draining attacks, oracle manipulation, demand shifts, the need for thorough modeling and simulation, and the importance of iterative refinement and close monitoring."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Dexy\n  - Seigniorage\n  - Stablecoin\n  - dApp\n  - dApp-InDev\n---"
+    },
+    {
+      "heading": "Dexy: A Seigniorage-Based Stablecoin",
+      "level": 1,
+      "content": "Dexy is an innovative stablecoin design that leverages seigniorage and oracle price feeds to maintain a peg. It is currently under development.\n\nRead the [draft whitepaper](../assets/pdf/dexy.pdf) for more details."
+    },
+    {
+      "heading": "DexyGold",
+      "level": 2,
+      "content": "The first implementation of Dexy will be **DexyGold**, which aims to maintain a peg to the USD/XAU (gold) price using a [XAU / ERG](https://explorer.ergoplatform.com/en/oracle-pool-state/xauerg) v2 [oracle pool](oracles.md).\n\n/// details | Beta\n    {type: info, open: true}\n- [LP UI](https://dexy.interface-ggd.pages.dev/ergo/swap?base=0000000000000000000000000000000000000000000000000000000000000000&quote=0d69a552b30df9be519099ec07682039b0610267aaee48d2a1d3dad398287ef5&initialPoolId=0fa04f3851b18085f160d90bc3dba1c63f2fdc73f884c9fd94395dbfc9c293b6)\n- [Bank UI](https://dexy-test.dexygold.com/)\n- [Testnet Nautilus (required):](https://github.com/nautls/nautilus-wallet/releases/tag/v0.9.2)\n- Testnet ERG is available via [the faucet](https://testnet.ergofaucet.org/)\n///"
+    },
+    {
+      "heading": "Design Overview",
+      "level": 2,
+      "content": "The Dexy design incorporates the following key components and mechanisms:\n\n1. **Emission (Minting) Contract**: \n    - Allows one-way minting of new Dexy tokens by selling ERG at the oracle pool rate.\n    - Reverse swaps (selling Dexy for ERG) are not possible through this contract.\n\n2. **Liquidity Pool (LP)**:\n    - Facilitates buying and selling of Dexy tokens using ERG.\n    - Utilizes Uniswap V2 logic with modifications based on the oracle pool rate.\n    - Prevents LP token redemptions when the oracle rate is significantly below (e.g., 90%) the LP rate.\n\n3. **Arbitrage Mechanism**:\n    - When the oracle rate is higher than the LP rate, arbitrageurs can mint Dexy from the emission contract and sell to the LP for a profit.\n    - This helps push the Dexy price towards the peg.\n\n4. **Top-up Swaps**:\n    - When the oracle rate is lower than the LP rate, ERG from the emission contract can be used to buy Dexy from the LP, pushing the price back up.\n    - Controlled by a swapping contract that monitors the oracle and LP rates.\n    - Uses a \"cross-tracker\" in the LP to record when the oracle rate falls below the LP rate.\n    - Swaps are only allowed if the oracle rate remains below the LP rate for a minimum number of blocks (e.g., 50).\n\n5. **Anti-Draining Measures**:\n    - To prevent cyclic draining of the emission contract through alternating arbitrage and top-up swaps, one or more of the following can be implemented:\n      - Locking minted Dexy tokens for a certain period.\n      - Locking ERG in the emission contract for a certain period.\n      - Disabling minting when it is profitable based on the current rates."
+    },
+    {
+      "heading": "Potential Vulnerabilities and Considerations",
+      "level": 2,
+      "content": "- **Draining Attack**: Alternating between profitable minting/selling and topping up the LP could potentially drain the emission contract's ERG. The anti-draining measures help mitigate this risk.\n\n- **Oracle Manipulation**: The design relies on accurate oracle price feeds. Safeguards against oracle attacks and manipulations should be considered.\n\n- **Demand Shifts**: Significant drops in demand for Dexy could lead to persistent selling pressure. The stabilizing mechanisms may need to be robust enough to handle such scenarios.\n\n- **Modeling and Simulation**: Thorough modeling of the economic incentives, game theory, and attack scenarios would provide valuable insights into the system's stability and resilience.\n\n- **Iteration and Monitoring**: Starting with DexyGold allows for iterative refinement before potentially moving to a USD-pegged version. Close monitoring of the system's performance under various market conditions is crucial."
+    },
+    {
+      "heading": "Terra Comparison and Collateralization",
+      "level": 2,
+      "content": "There have been some discussions comparing Dexy to the original Terra MM (Market Module) algorithm. However, it's important to note that Dexy incorporates overcollateralization, which helps prevent the \"death spiral\" scenario that affected Terra.\n\nIn Terra's system, the base currency (Luna) could experience infinite inflation in an attempt to maintain the peg of the stablecoin. In contrast, Dexy and other Djed-like stablecoins use overcollateralization to avoid this death spiral.\n\nIt's worth noting that the collateralization mechanism in Dexy differs from that of SigmaUSD-like stablecoins:\n\n- In Dexy, the ERG used as collateral is explicitly visible in the protocol-owned liquidity in the bank and LP contracts.\n- The collateral is not an illusion based on dynamic supply, as was the case with Luna.\n- The draft whitepaper discusses the worst-case scenario in Chapter 4.\n- Collateral levels in Dexy may vary over time:\n  - If the system performs well and mint/LP fees accumulate, the collateral ratio could exceed 400% in the long run.\n  - At launch, the collateral ratio is expected to be slightly above 100%.\n  - In the worst-case scenario, if the gold price significantly outperforms ERG, the protocol could become undercollateralized.\n\nWhile there may be some superficial similarities between Dexy and Terra's original MM algorithm, the incorporation of explicit overcollateralization and the transparent nature of the collateral distinguish Dexy from Terra's model.\n\nAs with any new stablecoin design, thorough testing, analysis, and monitoring will be crucial to ensure the robustness and stability of the Dexy system under various market conditions."
+    },
+    {
+      "heading": "Resources and Community",
+      "level": 2,
+      "content": "- [DexySpec](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)\n- [Dexy Stablecoin Design](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md)\n- [Dexy: USD Simplest Stablecoin](https://www.ergoforum.org/t/dexy-usd-simplest-stablecoin-design/1430)\n- [Dexy Enhancements and Attack Mitigation](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy)\n- Join the DexyGold community on [Telegram](https://t.me/dexygold) or [Discord](https://discord.gg/ergo-platform-668903786361651200)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/dexy.md",
+  "processed_at": "2025-05-11T19:43:23.601474",
+  "ai_processed": true
+}

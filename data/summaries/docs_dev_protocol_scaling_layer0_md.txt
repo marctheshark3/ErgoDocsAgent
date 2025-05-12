@@ -1,0 +1,7 @@
+Layer 0, the Network or Peer-to-Peer (P2P) layer, forms the foundation of decentralized communication in a blockchain network. It facilitates the exchange of data and information across the network, allowing nodes to distribute and validate transactions, blocks, and other data without a centralized authority.
+
+Ergo supports multiple client types, each offering different levels of security and resource requirements, to cater to various use cases and network conditions, contributing to the overall scalability of the Ergo network. These client types include Full 'Archive' Node Mode, Pruned-Fullnode Mode, Light-Fullnode Mode, and Light-SPV Mode.
+
+Ergo also introduces "subblocks," which are block candidates with lower proof-of-work difficulty, to enable faster transaction confirmations and optimize network bandwidth. To address state bloat, Ergo employs persistent updatable storage and a Storage Rent Fee.
+
+Ergo provides miners with the flexibility to adjust parameters such as block size and transaction size to balance the network's capacity and computational load, contributing to its scalability.

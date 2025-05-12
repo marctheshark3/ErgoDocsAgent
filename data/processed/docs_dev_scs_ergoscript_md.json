@@ -1,0 +1,118 @@
+{
+  "id": "docs_dev_scs_ergoscript_md",
+  "title": "ErgoScript",
+  "summary": "ErgoScript is a powerful, developer-friendly programming language designed for writing smart contracts on the Ergo blockchain. It is a specialized language that allows developers to define complex conditions for spending funds, leveraging Ergo's support for Sigma Protocols and eUTXO-based programming model. ErgoScript is translated into a lower-level representation called ErgoTree before being stored on the blockchain, and is interpreted using cryptographic protocols during transaction validation. ErgoScript builds upon the security principles of Bitcoin while enabling more advanced financial contracts. It offers features like the ability to reference blockchain state and implement complex logic through multi-stage contract interactions. ErgoScript aims for simplicity and security, but debugging complex contracts can still be challenging. The document covers various tools and resources for experimenting and developing with ErgoScript, as well as advanced patterns and common use cases such as multi-signature wallets, time-locked contracts, conditional spending, atomic swaps, crowdfunding, and complex financial derivatives.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoScript?",
+      "answer": "ErgoScript is a powerful, developer-friendly programming language designed specifically for writing smart contracts on the Ergo blockchain."
+    },
+    {
+      "question": "How does ErgoScript differ from the account model used by Ethereum?",
+      "answer": "ErgoScript uses a declarative eUTXO-based programming model, where contracts specify conditions under which funds can be spent, rather than dictating state changes like the imperative account model."
+    },
+    {
+      "question": "What is the role of Sigma Protocols in Ergo's scripting language?",
+      "answer": "Ergo's support for Sigma Protocols (generalized Schnorr proofs) provides efficient and composable building blocks for zero-knowledge proofs, enabling advanced cryptographic functionalities like ring signatures and threshold signatures."
+    },
+    {
+      "question": "How does Ergo's architecture improve scalability compared to the account model?",
+      "answer": "In Ergo, transactions are typically created off-chain, and only the validation checks occur on-chain, significantly reducing the computational load on validating nodes. The immutable nature of the transaction graph also allows for various optimizations to improve throughput."
+    },
+    {
+      "question": "What is the purpose of light verifying nodes (NIPoPoWs) in Ergo's network?",
+      "answer": "Ergo's design facilitates light verifying nodes (via NIPoPoWs), enhancing network scalability and accessibility by allowing for efficient verification of the blockchain without requiring full node synchronization."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoScript\n  - Smart Contracts\n  - Sigma Protocols\n---"
+    },
+    {
+      "heading": "ErgoScript",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "**ErgoScript** is a powerful, developer-friendly programming language designed specifically for writing [smart contracts](contracts.md) on the [Ergo blockchain](protocol-overview.md). Think of it as a specialized language that allows you to create complex [financial contracts](contracts.md) and applications with unprecedented flexibility and [security](security.md). Designed as a subset of Scala, it allows developers to define complex conditions for spending funds.\n\nErgoScript code is translated into a lower-level representation called [**ErgoTree**](ergotree.md) before being stored on the [blockchain](protocol-overview.md). During [transaction validation](validation.md), ErgoTree is interpreted using cryptographic protocols based on [Sigma Protocols](sigma.md). This unique architecture enables Ergo to support advanced cryptographic functionalities like [ring signatures](ring.md) and [threshold signatures](threshold.md) directly within the scripting language, without requiring special core protocol changes.\n\n/// admonition | Sigma Protocols\n    type: tip\n\nErgo's support for [**Sigma Protocols**](sigma.md) (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for [zero-knowledge proofs](zkp.md). [Schnorr proofs](schnorr.md) and [proofs of Diffie-Hellman tuples](diffie.md) are supported by default, with the potential for the community to add more through [soft forks](soft-fork.md).\n///\n\nErgoScript builds upon the security principles of Bitcoin while enabling much more complex financial contracts. Unlike Bitcoin Script, ErgoScript supports features necessary for advanced applications, including the ability to reference blockchain state and implement complex logic, effectively enabling Turing-Complete computations through [multi-stage contract interactions](multi.md).\n\n//// details | Background Reading\n    {type: info, open: false}\n/// details | Contract Model Comparison: Ergo (eUTXO) vs. Ethereum (Account)\n    {type: info, open: false}"
+    },
+    {
+      "heading": "Paradigm",
+      "level": 3,
+      "content": "The account model (used by Ethereum) is imperative: sending coins involves changing balances in a global storage state. Ergo's [eUTXO-based](eutxo.md) programming model is declarative: ErgoScript contracts specify *conditions* under which funds ([UTXOs](eutxo.md)) can be spent, rather than dictating state changes."
+    },
+    {
+      "heading": "Scalability",
+      "level": 3,
+      "content": "In the account model, both storage changes and validity checks happen **on-chain** during contract execution. In Ergo, [transactions](transactions.md) are typically created **off-chain**, and only the validation checks occur on-chain. This significantly reduces the computational load on validating [nodes](modes.md). The immutable nature of the transaction graph also allows for various optimizations to improve throughput. Furthermore, Ergo's design facilitates [**light verifying nodes**](nipopow_nodes.md) (via [NIPoPoWs](nipopows.md)), enhancing network [scalability](scaling.md) and accessibility."
+    },
+    {
+      "heading": "Shared State",
+      "level": 3,
+      "content": "The account-based model relies on a shared mutable state, which can lead to complex interactions and subtle bugs in concurrent systems. Ergo's model, based on Bitcoin's UTXO concept, uses an immutable [graph of transactions](transactions.md), which is inherently more suitable for distributed environments and simplifies the development of [light clients](light-spv-node.md)."
+    },
+    {
+      "heading": "Expressive Power",
+      "level": 3,
+      "content": "While Ethereum's Turing-complete language offers theoretical flexibility, it has practical limitations like blockchain bloat, complex bugs, unpredictable gas costs, and limits on contract complexity. Ergo achieves similar expressive power through its [eUTXO model](eutxo.md) and [multi-stage contracts](multi-stage-txs.md), but intentionally keeps the core ErgoScript language itself non-Turing-complete to enhance security and predictability.\n\n///\n/// admonition | Simple Example\n    type: info\n\n```scala\n// This script locks funds in a box.\n// It allows Alice to spend the funds before block 100,000,\n// OR Bob to spend them at or after block 100,000.\n{\n  (HEIGHT < 100000 && alicePubKey) ||\n  (HEIGHT >= 100000 && bobPubKey)\n}\n```\n*(`HEIGHT` is a context variable representing the current [block height](block-header.md). `alicePubKey` and `bobPubKey` represent proof of knowledge of their respective secret keys, typically via a [signature check](signing.md)).*\n\n///\n/// admonition | Key Concepts\n    type: info\n\nExplore the [Core Concepts of ErgoScript](ergoscript-key-concepts.md).\n///\n\n/// admonition | Data Inputs\n    type: note\n\nErgo offers a unique approach to smart contracts by allowing them to access data from other [boxes](box.md) on the blockchain without spending them, using **[data inputs](read-only-inputs.md)**. This enables efficient access to shared information like [oracle price feeds](oracles.md) or [DAO](dao.md) parameters.\n\n///\n/// admonition | ErgoScript vs ErgoTree\n    type: note\n\nErgoScript is the high-level, developer-friendly language. It gets compiled into **[ErgoTree](ergotree.md)**, a lower-level, serialized representation stored on the blockchain and interpreted by nodes. Explore the distinction [here](ergotree.md).\n///\n////"
+    },
+    {
+      "heading": "Experimenting & Tooling",
+      "level": 2,
+      "content": "While ErgoScript aims for simplicity and security, debugging complex contracts can still be challenging. Currently, developers often rely on manual inspection and testing using the tools below. Tools are emerging to improve this process:\n\n*   **[Debugging Guide](debugging.md):** Covers current best practices, tools, and techniques for debugging ErgoScript.\n*   **[Ergoscript Simulator](https://github.com/spectrum-finance/ergoscript-simulator):** A community-developed tool that allows simulating ErgoScript execution.\n*   **[ErgoScript P2S Playground](https://wallet.plutomonkey.com/p2s/):** Experiment and generate [Ergo addresses](address.md).\n*   **[escript.online](https://escript.online/):** Online editor and compiler.\n*   **[Scastie](scastie.md):** Online Scala compiler suitable for ErgoScript snippets.\n*   **[Kiosk](stack/kiosk.md):** Web-based UI to explore ErgoScript.\n*   **[Ergo-Puppet](puppet.md):** Advanced tool for off-chain experimentation and testing."
+    },
+    {
+      "heading": "Advanced Patterns & Tutorials",
+      "level": 2,
+      "content": "ErgoScript's features enable the implementation of complex contract patterns:\n\n*   **[Finite State Machines (FSMs)](fsm-example.md):** Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.\n*   **[Merkleized Abstract Syntax Trees (MAST)](mast-example.md):** Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch."
+    },
+    {
+      "heading": "Common Use Cases",
+      "level": 2,
+      "content": "ErgoScript's flexibility enables various applications:\n\n*   **[Multi-Signature Wallets](threshold.md):** Create wallets requiring multiple parties to approve [transactions](transactions.md).\n*   **Time-Locked Contracts:** Define contracts that can only be executed after a specific time or [block height](block-header.md).\n*   **Conditional Spending:** Set complex conditions for spending funds based on various parameters (e.g., oracle data, specific inputs).\n*   **Atomic Swaps:** Facilitate trustless peer-to-peer exchange of different assets across blockchains or within Ergo.\n*   **Crowdfunding:** Implement secure and transparent crowdfunding campaigns.\n*   **Complex Financial Derivatives:** Build sophisticated financial instruments on the blockchain."
+    },
+    {
+      "heading": "Best Practices",
+      "level": 2,
+      "content": "1.  Keep contracts simple and readable.\n2.  Use built-in [cryptographic primitives](crypto.md) where possible.\n3.  Always consider [transaction validation](validation.md) overhead and potential costs.\n4.  Test contracts thoroughly using playgrounds and SDK testing frameworks.\n5.  Reason carefully about all possible execution paths and potential economic exploits.\n6.  Leverage [data inputs](read-only-inputs.md) for accessing shared state efficiently."
+    },
+    {
+      "heading": "Common Pitfalls to Avoid",
+      "level": 2,
+      "content": "*   Overcomplicating contract logic unnecessarily.\n*   Ignoring performance implications and transaction costs.\n*   Neglecting comprehensive error handling and edge cases in off-chain code interacting with contracts.\n*   Not fully understanding the nuances of the [eUTXO model](eutxo.md) (e.g., box lifecycle, state transitions).\n*   Insecure handling of secrets or assumptions about context in off-chain components."
+    },
+    {
+      "heading": "Learning Paths & Next Steps",
+      "level": 2,
+      "content": "1.  **Beginner:**\n    *   Understand the [Core Concepts](ergoscript-key-concepts.md).\n    *   Experiment with the [P2S Playground](https://wallet.plutomonkey.com/p2s/).\n    *   Study simple [example contracts](contracts.md).\n2.  **Intermediate:**\n    *   Learn about [Sigma Protocols](sigma.md).\n    *   Explore [Multi-Stage Contract patterns](multi.md).\n    *   Work through SDK tutorials ([AppKit](appkit.md), [Fleet](fleet.md), [SigmaRust](sigma-rust.md)).\n3.  **Advanced:**\n    *   Understand [ErgoTree Compilation & Serialization](ergotree.md).\n    *   Explore advanced [cryptographic protocols](crypto.md).\n    *   Contribute to open-source projects or build your own dApp.\n\nJoin community discussions on [Discord](https://discord.gg/ergo-platform-668903786361651200) (`#ergoscript`, `#sigma-rust`, `#appkit`, `#fleet`), [Telegram](https://t.me/ergo_dev), or the [Ergo Forum](https://www.ergoforum.org/) to ask questions and collaborate."
+    },
+    {
+      "heading": "Advanced Cryptography & Structures",
+      "level": 2,
+      "content": "ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic primitives. However, some advanced structures have specific considerations:\n\n*   **Merkle Trees:** While [Merkle Trees](../data-model/structures/merkle/merkle-tree.md) are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of arbitrary Merkle proofs *within* an ErgoScript contract is not natively supported by a single built-in function. Verification typically happens off-chain or relies on specific protocol designs where roots are checked. The [MAST pattern](tx/mast-example.md) leverages Merkle trees conceptually, often using `executeFromVar` for on-chain execution of proven branches rather than full proof verification within the script. Developers interested in the general concept and off-chain usage should consult the main [Merkle Tree documentation](../data-model/structures/merkle/merkle-tree.md)."
+    },
+    {
+      "heading": "Related Technical Resources",
+      "level": 2,
+      "content": "- [ErgoTree Documentation](ergotree.md)\n- [Sigma Protocols Overview](sigma.md)\n- [Schnorr Signatures](schnorr.md)\n- [Light Verifying Nodes](nipopow_nodes.md)\n- [eUTXO Model Explanation](eutxo.md)\n- [Ergo Whitepaper](https://ergoplatform.org/en/whitepaper/)\n- [ErgoScript Language Specification](lang-spec.md) (Detailed reference)\n- [Advanced ErgoScript Tutorial](https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf)"
+    },
+    {
+      "heading": "Comparative Analysis",
+      "level": 2,
+      "content": "ErgoScript stands out by:\n\n- Enabling complex logic via the [eUTXO model](eutxo.md) without full on-chain Turing-completeness risks.\n- Natively supporting advanced cryptographic protocols ([Sigma Protocols](sigma.md)).\n- Allowing complex [financial contracts](contracts.md) with predictable [execution costs](min-fee.md).\n- Maintaining a declarative, secure programming model based on [UTXOs](eutxo.md)."
+    },
+    {
+      "heading": "Performance Considerations",
+      "level": 2,
+      "content": "- Off-chain [transaction creation](transactions.md) minimizes [on-chain computation](ergoscript.md).\n- [On-chain validation](validation.md) focuses only on script conditions.\n- Immutable [transaction graph](transactions.md) allows for optimizations.\n- Native support for [light verifying nodes](light-spv-node.md) enhances accessibility.\n- [Non-Turing complete](multi-stage-txs.md) base language prevents infinite loops and simplifies cost analysis.\n- See the [Interpreter Performance Style Guide](https://github.com/ergoplatform/sigmastate-interpreter/blob/develop/docs/perf-style-guide.md) for tips on writing efficient scripts."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscript.md",
+  "processed_at": "2025-05-11T19:27:58.938326",
+  "ai_processed": true
+}

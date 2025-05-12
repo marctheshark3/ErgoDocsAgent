@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is TabbyPOS?",
+    "answer": "TabbyPOS is a comprehensive point-of-sale (POS) solution designed for merchants."
+  },
+  {
+    "question": "What features does TabbyPOS offer?",
+    "answer": "TabbyPOS offers a merchant dashboard, a customer-facing interface, and a mobile app for remote management."
+  },
+  {
+    "question": "What hardware devices can TabbyPOS support?",
+    "answer": "TabbyPOS can support various hardware devices, including cash registers, barcode scanners, and printers."
+  },
+  {
+    "question": "What security features does TabbyPOS provide?",
+    "answer": "TabbyPOS provides end-to-end encryption, multi-factor authentication, and a built-in fraud detection system."
+  },
+  {
+    "question": "Where can I find more information about TabbyPOS?",
+    "answer": "You can visit the GitHub repository and the whitepaper to learn more about TabbyPOS."
+  }
+]

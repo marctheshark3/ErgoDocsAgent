@@ -1,0 +1,6 @@
+This document provides a step-by-step guide on how to host a pool on the Ergo blockchain. It covers the following key points:
+
+1. Set up a local instance of the Ergo node, following the instructions in the "solo-node.md" guide and including the EIP27 rules.
+2. Choose the pool software to use, either Miningcore or Ergo Stratum Server.
+3. Configure the miner to point to the chosen pool software, using either the NV or AMD miner depending on the hardware.
+The document also provides a link to the Ergo Discord community for support.

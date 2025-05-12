@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Archival Node Mode in Ergo?",
+    "answer": "The Archival Node Mode is the complete full node in Ergo. It is designed to store all blocks from the genesis block onwards."
+  },
+  {
+    "question": "What are the key features and functionalities of the Archival Node Mode?",
+    "answer": "The Archival Node Mode offers comprehensive blockchain storage, proof-of-work verification, linking structure verification, and UTXO set storage."
+  },
+  {
+    "question": "How does the Archival Node Mode store the blockchain data?",
+    "answer": "The archival node mode ensures the storage of every block since the genesis block, guaranteeing the availability of the complete history of the blockchain."
+  },
+  {
+    "question": "What is the purpose of the proof-of-work verification in the Archival Node Mode?",
+    "answer": "The proof-of-work verification allows the node to check the proofs of work for each block, which is crucial for maintaining the integrity and validity of the blockchain's consensus mechanism."
+  },
+  {
+    "question": "How does the Archival Node Mode handle transaction validation?",
+    "answer": "The archival node mode maintains a copy of the entire UTXO set, enabling it to validate any transaction, regardless of its complexity or origin."
+  }
+]

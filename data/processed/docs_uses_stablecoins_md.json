@@ -1,0 +1,48 @@
+{
+  "id": "docs_uses_stablecoins_md",
+  "title": "Stablecoins",
+  "summary": "The document discusses stablecoins, which are blockchain assets pegged to national currencies to provide stability. It introduces SigmaUSD, the world's first UTxO-based stablecoin based on the AgeUSD protocol, designed by IOHK, Ergo, and Emurgo. SigmaUSD maintains conservative collateral reserves and avoids the need for liquidations, with a fully decentralized stablecoin emission setup. The document also mentions Dexy, another stablecoin project on the Ergo platform that uses seigniorage. The document provides links to various resources with more information on the technical details and design of these stablecoin projects.",
+  "qa_pairs": [
+    {
+      "question": "What is a stablecoin?",
+      "answer": "A stablecoin is a digital asset that is pegged to a national currency, providing stability compared to the volatility of other cryptocurrencies."
+    },
+    {
+      "question": "What is the first example of a stablecoin?",
+      "answer": "The first example of a stablecoin is USDT, which is backed by actual dollars held in banks."
+    },
+    {
+      "question": "What is SigmaUSD?",
+      "answer": "SigmaUSD is the world's first UTxO-based stablecoin, an instantiation of the AgeUSD protocol, designed to maintain conservative collateral reserves and avoid the need for liquidations."
+    },
+    {
+      "question": "What is Dexy?",
+      "answer": "Dexy is a stablecoin that uses seigniorage, with design enhancements to counter various attacks."
+    },
+    {
+      "question": "Where can I find more information about the technical details and design of SigmaUSD and Dexy?",
+      "answer": "Additional information and resources about SigmaUSD and Dexy can be found in the links provided in the document, including videos, blog posts, and GitHub repositories."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Stablecoins",
+      "level": 1,
+      "content": "Blockchain assets can be extremely volatile. That\u2019s why investors often seek digital assets which are pegged to national currencies. A Stablecoin is the most primitive integration of cryptocurrencies with the off-chain world. Until DAI, fiat custody services were provided by centralized services. The first example of a stable coin, USDT, is backed by [actual dollars](https://cryptobriefing.com/external-auditor-first-confirm-tethers-usdt-backing/) held in banks. However, for a decentralized financial system, we need other means of fiat-pegged currencies."
+    },
+    {
+      "heading": "SigmaUSD",
+      "level": 2,
+      "content": "> [sigmausd.io](https://sigmausd.io), The worlds first UTxO-based stable coin - an instantiation of the [AgeUSD protocol](https://github.com/Emurgo/age-usd). Its economic model designed in partnership between IOHK, Ergo, and Emurgo maintains the conservative settings for collateral reserves and avoids the need for liquidations. Along with that, it supports a fully decentralised stablecoin emission setup.\n\nThe UI for the front-end is available at [anon-real/sigma-usd](https://github.com/anon-real/sigma-usd). For more information and a more general overview please see [ergonaut.space](https://ergonaut.space)\n\n- [Ergo Summit 2021 - The IOHK Perspective - Designing the AgeUSD StableCoin](https://youtu.be/zG-rxMCDIa0?t=9247)\n- [Overview Video (with diagrams)](https://www.youtube.com/watch?v=O3hPEp3tzoU)\n- [Building Ergo: How the AgeUSD stablecoin works](https://ergoplatform.org/en/blog/2021-02-05-building-ergo-how-the-ageusd-stablecoin-works/)\n- [Lessons for sigmausd from the DJED paper](https://www.ergoforum.org/t/lessons-for-sigmausd-from-the-djed-paper/2345)"
+    },
+    {
+      "heading": "Dexy",
+      "level": 2,
+      "content": "Dexy uses seigniorage\n\n- [DexySpec](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)\n- [Dexy Stablecoin Design](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/Dexy.md)\n- [Dexy: USD Simplest Stablecoin](https://www.ergoforum.org/t/dexy-usd-simplest-stablecoin-design/1430)\n- [Dexy enhancements to counter various attacks in vanilla proposal](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/stablecoins.md",
+  "processed_at": "2025-05-11T20:04:54.537974",
+  "ai_processed": true
+}

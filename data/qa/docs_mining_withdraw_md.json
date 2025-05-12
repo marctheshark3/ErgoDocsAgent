@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the different key formats that miners may encounter?",
+    "answer": "1. Base16-encoded raw public key, 2. Pay-To-Public-Key (P2PK) addresses, 3. Mining/rewardAddress API method."
+  },
+  {
+    "question": "Why may miners not see the mined coins in their wallet after initializing it?",
+    "answer": "The node does not scan blocks retrospectively and only scans new blocks after initialization, so miners need to perform a full blockchain rescan to find the mined coins."
+  },
+  {
+    "question": "What should miners do if they intend to stop their node?",
+    "answer": "Miners must clear the node's state by stopping the node and removing all contents of the `.ergo` directory."
+  },
+  {
+    "question": "What is the purpose of the `pubkeyHex` value from the miner's configuration?",
+    "answer": "The `pubkeyHex` value is embedded in the node's configuration, allowing the node to identify the coins that have been mined."
+  },
+  {
+    "question": "What is the recommended version of the node to use for easier configuration?",
+    "answer": "Version 3.0.1 is recommended for easier configuration."
+  }
+]

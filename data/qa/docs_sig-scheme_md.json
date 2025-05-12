@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main cryptographic protocols used in the Ergo blockchain for signature schemes?",
+    "answer": "Ergo uses Schnorr signatures and Sigma protocols for its signature schemes."
+  },
+  {
+    "question": "How does the key generation process work for Schnorr signatures in Ergo?",
+    "answer": "A user generates a private key x (a random number) and computes the corresponding public key P = xG, where G is a generator point on the elliptic curve used by Ergo."
+  },
+  {
+    "question": "Explain the signing process for Schnorr signatures in Ergo.",
+    "answer": "To sign a message m, the user generates a random nonce k and computes R = kG. The signature (s, e) is then computed as e = H(R || P || m) and s = k + ex."
+  },
+  {
+    "question": "How does the verification process work for Schnorr signatures in Ergo?",
+    "answer": "To verify the signature (s, e), the verifier computes R' = sG - eP and checks if e = H(R' || P || m)."
+  },
+  {
+    "question": "Where are the implementations of the Schnorr signature scheme and Sigma protocols in the Ergo ecosystem?",
+    "answer": "The Schnorr signing and verification processes are implemented in the sigma-rust repository, while the Scala-based DLogProtocol is in the sigmastate-interpreter repository."
+  }
+]

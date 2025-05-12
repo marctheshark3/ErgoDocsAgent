@@ -1,0 +1,5 @@
+The Ergo Foundation's initial role was to bootstrap the Ergo ecosystem and build the necessary infrastructure. This has led to a vibrant ecosystem with over 300 community developers, 100 active contributors, and over 140 projects developing on Ergo. 
+
+As the ecosystem matures, the Ergo Foundation's importance should diminish, and responsibility should transition towards the community. The Foundation may continue to exist as a legal entity to mitigate counterparty risk, but its focus will be on promoting blockchain technology for societal benefit, advocating for decentralized infrastructure, and upholding privacy. 
+
+The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of Ergo and shape its future, enabling the community to contribute to Ergo's development.

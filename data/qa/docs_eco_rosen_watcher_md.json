@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the role and rewards of Watchers in the Rosen Bridge?",
+    "answer": "Watchers are essential for accurate reporting and receive 70% of transaction fees as rewards for successful and accurate reporting, while 30% goes to the guard set. 25% of the emission is also reserved for 'Event-Based Emission (Rewards)'"
+  },
+  {
+    "question": "Who can become a Watcher?",
+    "answer": "Anyone can become a Watcher by configuring and running the Watcher app for their desired network, topping it off with enough RSN and ERG, putting in collateral, and receiving reporting permits to enjoy reporting and getting rewards."
+  },
+  {
+    "question": "Is there a limit on the number of Watchers?",
+    "answer": "77 is the one repo's capacity and cannot be changed, but more repos will be opened. A minimum of 60%+1 of the total number of Watchers is required to trigger an event, adjustable by the guard set."
+  },
+  {
+    "question": "Can I run multiple Watchers?",
+    "answer": "Yes, but it incurs financial considerations to prevent abuse. Each instance needs a unique folder and WATCHER_PORT."
+  },
+  {
+    "question": "What are the pre-requisites for setting up a Watcher?",
+    "answer": "See the pre-requisites page for information on setting up a local node, as well as minimal hardware and software requirements (Docker)."
+  }
+]

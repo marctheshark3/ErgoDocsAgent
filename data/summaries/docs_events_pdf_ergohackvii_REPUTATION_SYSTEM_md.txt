@@ -1,0 +1,15 @@
+The document discusses the development of a reputation system for the Ergo blockchain ecosystem. The key points are:
+
+Introduction: The reputation system aims to address the trust gap in the blockchain ecosystem by providing a decentralized, user-driven mechanism for assigning and transferring reputation.
+
+Trust and Reputation: Trust is essential in any ecosystem, including the digital world of blockchain. A reputation system can help establish and maintain this trust.
+
+Necessity: A reputation system is necessary in blockchain ecosystems to provide users with confidence in the entities they interact with, such as smart contracts, addresses, and URLs. It allows users to share reviews, feedback, and opinions about these tools.
+
+Alignment with Ergo Manifesto: The proposed reputation system aligns with Ergo's principles of decentralization, openness, cost-competitiveness, and long-term focus.
+
+System Design: The reputation system uses tokens to represent the amount of reputation that can be assigned. Users can delegate reputation from their own proofs to new proofs they generate, and any user can assign reputation to any reputation proof.
+
+Challenges: The team has faced some challenges, such as issues with the transaction builder and the on-chain representation of the reputation object. They are working to resolve these problems and continue developing the system.
+
+Future Approaches: The team recognizes the need for adaptability in reputation management and suggests potential future developments, such as allowing for more complex token/monetary policies and customizable reputation trees for different communities and contexts.

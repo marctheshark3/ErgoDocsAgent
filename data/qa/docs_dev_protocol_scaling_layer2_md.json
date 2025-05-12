@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of Layer 2 solutions?",
+    "answer": "The purpose of Layer 2 solutions is to enhance the efficiency, scalability, and capabilities of the underlying blockchain by facilitating off-chain transactions or computations."
+  },
+  {
+    "question": "What are some examples of Layer 2 solutions compatible with Ergo?",
+    "answer": "Ergo is compatible with a broad range of Layer 2 solutions like Hydra and sidechains."
+  },
+  {
+    "question": "How does ErgoScript enable Layer 2 protocols?",
+    "answer": "ErgoScript's flexible design allows large parts of transactions to be executed on Layer 2, which are then settled on the Ergo blockchain in a single transaction."
+  },
+  {
+    "question": "What are the advantages of using sub-blocks for Layer 2 protocols?",
+    "answer": "Sub-blocks enable faster confirmation times, enhanced support for payment channels, more efficient state channel operations, and improved settlement layer for off-chain transactions."
+  },
+  {
+    "question": "How can Layer 2 protocols utilize sub-blocks?",
+    "answer": "Layer 2 protocols can utilize sub-blocks to group off-chain transactions more efficiently, reduce settlement times, increase throughput, and enable more responsive user experiences."
+  }
+]

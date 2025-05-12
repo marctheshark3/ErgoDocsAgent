@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ErgoScala compiler?",
+    "answer": "The ErgoScala compiler is used to compile Ergo smart contracts written in ErgoScala (a subset of Scala)."
+  },
+  {
+    "question": "What are the key outputs of the ErgoScala compiler?",
+    "answer": "The ErgoScala compiler produces an ErgoContract that provides an ErgoTree instance and a Scala anonymous function to evaluate the contract code."
+  },
+  {
+    "question": "How can Ergo contract code be compiled using the ErgoScalaCompiler?",
+    "answer": "Ergo contract code can be compiled using the `ErgoScalaCompiler.contract` call."
+  },
+  {
+    "question": "How are verified Ergo contracts compiled differently?",
+    "answer": "Verified Ergo contracts are compiled by providing the method call where the contract code resides, using the `ErgoContractCompiler.compile` function."
+  },
+  {
+    "question": "What is the purpose of the `buyer` method in the verified Ergo contracts?",
+    "answer": "The `buyer` method holds the verified smart contract that returns a SigmaProp indicating whether a buyer can spend the funds locked in a box."
+  }
+]

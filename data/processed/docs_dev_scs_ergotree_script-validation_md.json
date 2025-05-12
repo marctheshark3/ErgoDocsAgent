@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_scs_ergotree_script-validation_md",
+  "title": "Efficient Script Validation",
+  "summary": "Efficient Script Validation: For a transaction with multiple input boxes, each input box has a script that needs to be executed within the context of the current transaction. To maintain steady block validation of 1000 transactions per second, a simple transaction with a single input box requires validation of 1000 scripts per second.\n\nTo minimize block validation time and increase the probability of successful mining, the following steps are performed:\n1. Create a Context object with the input box.\n2. Traverse the ErgoTree to build a cost graph for cost estimation.\n3. Compute the cost estimation by evaluating the cost graph with the current context.\n4. If the cost is within the limit, evaluate the ErgoTree using the context to obtain a sigma proposition.\n5. Execute the Sigma protocol verification procedure.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of script validation in Ergo transactions?",
+      "answer": "To protect the input boxes by executing the script within the context of the current transaction."
+    },
+    {
+      "question": "What is the target block validation time for Ergo to maintain steady block validation of 1000 transactions per second?",
+      "answer": "The block validation time should be minimized to increase the probability of successful mining."
+    },
+    {
+      "question": "What are the steps involved in validating every script of an input box?",
+      "answer": "1. Create a Context object with SELF = box, 2. Traverse the ErgoTree to build a cost graph, 3. Compute the cost estimation by evaluating the cost graph, 4. If the cost is within the limit, evaluate the ErgoTree using the context to obtain a sigma proposition, 5. Execute the Sigma protocol verification procedure."
+    },
+    {
+      "question": "What is the purpose of the cost estimation step in script validation?",
+      "answer": "To ensure that the cost of evaluating the script is within the limit."
+    },
+    {
+      "question": "What is the final step in the script validation process?",
+      "answer": "Execute the Sigma protocol verification procedure."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Efficient Script Validation",
+      "level": 1,
+      "content": "For a transaction that has an `INPUTS` collection of boxes to spend, each input box can have a script (termed as the `propositionBytes` property) that protects it. This script needs to be executed within the context of the current transaction. To maintain steady block validation of `1000` transactions per second, a simple transaction with a single input box requires validation of 1000 scripts per second.\n\nTo increase the probability of successful mining, the block validation time should be minimized. This allows a miner to start solving the PoW puzzle as soon as possible. \n\nTo validate every script (of an input box), the following steps are performed:\n\n1. A Context object is created with `SELF = box`.\n2. ErgoTree is traversed to build a cost graph for cost estimation.\n3. The cost estimation is computed by evaluating the cost graph with the current context.\n4. If the cost is within the limit, the ErgoTree is evaluated using the context to obtain a sigma proposition (see `SigmaProp`).\n5. The Sigma protocol verification procedure is executed."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergotree/script-validation.md",
+  "processed_at": "2025-05-11T19:29:51.918856",
+  "ai_processed": true
+}

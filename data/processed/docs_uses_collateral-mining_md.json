@@ -1,0 +1,73 @@
+{
+  "id": "docs_uses_collateral-mining_md",
+  "title": "Collateral Mining",
+  "summary": "Collateral Mining is a unique feature of the Ergo Blockchain that provides an innovative approach to mining and incentivizes participation in the network. It allows miners to utilize their collateral as a stake to participate in the mining process. The architecture consists of a collateral box script that defines three main cases for receiving mining rewards: block mined by the miner, collateral top-up by anyone, and collateral withdrawal by the miner. The primary limitation is that only one unspent collateral box can exist at a time for a given miner public key. The pool reward can be adjusted to provide additional incentives, and miners also receive all transaction fees associated with the blocks they mine. The document provides additional resources for further understanding and engagement with Collateral Mining on the Ergo Blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What is Collateral Mining?",
+      "answer": "Collateral Mining is a unique feature of the Ergo Blockchain that provides an innovative approach to mining and incentivizes participation in the network."
+    },
+    {
+      "question": "What are the three main cases that determine the eligibility for receiving rewards in Collateral Mining?",
+      "answer": "The three main cases are: 1) Block Mined by Alice, 2) Collateral Top-Up, and 3) Block Mined by Others."
+    },
+    {
+      "question": "What are the conditions for a successful Collateral Top-Up?",
+      "answer": "The conditions are: 1) The first output of the block should have the same proposition bytes as SELF, 2) The creation height of the first output should be greater than or equal to the creation height of the current box, and 3) The value of the first output should be greater than the value of SELF."
+    },
+    {
+      "question": "How does the Collateral Mining architecture work?",
+      "answer": "The Collateral Mining architecture consists of a collateral box script, which governs the rules and conditions for mining rewards."
+    },
+    {
+      "question": "What are the key features of Collateral Mining?",
+      "answer": "Collateral Mining offers an alternative to traditional mining pools and provides a secure and efficient method for miners to contribute their computational power to the Ergo Blockchain network."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Collateral Mining",
+      "level": 1,
+      "content": "We are pleased to introduce Collateral Mining, a unique feature of Ergo Blockchain that provides an innovative approach to mining and incentivizes participation in the network. This documentation will explain the intricacies of Collateral Mining, including its architecture, consensus mechanism, transaction validation, smart contracts, APIs, and various features, catering to both developers and end users."
+    },
+    {
+      "heading": "Introduction",
+      "level": 2,
+      "content": "Collateral Mining is a mechanism that allows miners to participate in the mining process by utilizing their collateral as a stake. It offers an alternative to traditional mining pools and provides a secure and efficient method for miners to contribute their computational power to the network."
+    },
+    {
+      "heading": "Architecture",
+      "level": 2,
+      "content": "The Collateral Mining architecture consists of a collateral box script, which governs the rules and conditions for mining rewards. The script defines three main cases that determine the eligibility for receiving rewards:"
+    },
+    {
+      "heading": "Case 1: Block Mined by Alice",
+      "level": 3,
+      "content": "In this case, if the block is mined by Alice, the following conditions must be met to receive the pool reward:\n\n- The block contains either one output of value `poolReward` or two outputs, where the first output is of value `poolReward` and the second output goes to Alice.\n- The miner's public key decoded from the transaction context should match Alice's public key.\n- The block height should be greater than the creation height of the current box (`SELF`).\n- The number of outputs should be either 1 or 2, and if there are two outputs, the second output should have the same proposition bytes as `SELF` and the same creation height as the current block."
+    },
+    {
+      "heading": "Case 2: Collateral Top-Up",
+      "level": 3,
+      "content": "In this case, anyone can contribute additional collateral funds to an existing collateral box. The conditions for a successful top-up are as follows:\n\n- The first output of the block should have the same proposition bytes as `SELF`.\n- The creation height of the first output should be greater than or equal to the creation height of the current box.\n- The value of the first output should be greater than the value of `SELF`."
+    },
+    {
+      "heading": "Case 3: Collateral Withdrawal by Alice",
+      "level": 3,
+      "content": "This case allows Alice to withdraw her collateral at any time. To initiate a withdrawal, Alice needs to prove ownership of her collateral through a discrete logarithm proof."
+    },
+    {
+      "heading": "Limitations and Considerations",
+      "level": 2,
+      "content": "The primary limitation of Collateral Mining is that only one unspent collateral box can exist at a time for a given miner public key. This restriction prevents a pool from spending multiple boxes in the same block and claiming a multiple of the reward. Although this limitation exists, we believe it is reasonable and avoids the complexity associated with miners creating special signatures to address this issue. To mitigate any potential concerns, the top-up mechanism (case 2) enables anyone to contribute additional collateral to a specific box.\n\nFurthermore, it is worth noting that the pool reward, initially set at 67.5 ERG, can be adjusted to provide additional incentives. However, it is important to mention that miners already receive all transaction fees associated with the blocks they mine."
+    },
+    {
+      "heading": "Additional Resources",
+      "level": 2,
+      "content": "For further understanding and engagement with Collateral Mining on Ergo Blockchain, we recommend exploring the following resources:\n\n- Proposal of the Collateral Mechanism by [@scalahub](https://www.ergoforum.org/t/creating-an-ergo-mining-pool/42) in July 2019.\n- Research paper authored by [@kushti](https://eprint.iacr.org/2020/044) and [@scalahub](https://eprint.iacr.org/2020/044) detailing the Collateral Mining concept.\n- In-depth discussion and community insights on the [Ergo Forum](https://www.ergoforum.org/t/collateral-script-for-pool-mining/200) regarding the Collateral Script for Pool Mining."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/collateral-mining.md",
+  "processed_at": "2025-05-11T20:01:35.475753",
+  "ai_processed": true
+}

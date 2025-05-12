@@ -1,0 +1,11 @@
+The document provides a tutorial on building a simple UI for Ergo dApps using the Ergo Mosaik UI system. It covers the following key points:
+
+1. Ergo Mosaik is a UI layer for Ergo dApps that aims to streamline the development process by allowing developers to implement both off-chain code and UI code on the same tech stack.
+
+2. The tutorial demonstrates how to set up a Spring Boot project and add the Ergo Mosaik library to the project.
+
+3. It shows how to create a simple Mosaik app with a card containing a label and a button that displays a dialog when clicked.
+
+4. The tutorial emphasizes the use of the Mosaik Kotlin DSL to define the UI elements and layout.
+
+5. It highlights the integration of Mosaik with Spring Boot to serve the Mosaik app to its executors.

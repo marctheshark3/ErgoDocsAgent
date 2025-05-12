@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the first step in the light-SPV mode bootstrap process?",
+    "answer": "Send `GetPoPoWProof` for all connections."
+  },
+  {
+    "question": "What happens after receiving `PoPoWProof`?",
+    "answer": "Apply it to History and determine if it is better than the current best header chain."
+  },
+  {
+    "question": "What is the first step in the regular regime?",
+    "answer": "Send ErgoSyncInfo message to connected peers."
+  },
+  {
+    "question": "What does the node do when it receives a header?",
+    "answer": "If History.apply(header).isSuccess, apply the header to the state. If not in initial bootstrapping, broadcast an INV for this header. Otherwise, blacklist the peer."
+  },
+  {
+    "question": "What is the purpose of the light-SPV mode in Ergo?",
+    "answer": "The light-SPV mode allows nodes to efficiently synchronize the blockchain without downloading the full node."
+  }
+]

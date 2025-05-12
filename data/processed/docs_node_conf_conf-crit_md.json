@@ -1,0 +1,63 @@
+{
+  "id": "docs_node_conf_conf-crit_md",
+  "title": "Critical-Dispatcher Configuration Settings",
+  "summary": "The document describes the configuration settings for the \"critical-dispatcher\", a dedicated actor dispatcher used exclusively by the block candidate generator and NodeViewHolder actors in the system. The key points are:\n\n- The dispatcher is of type \"Dispatcher\" and uses a \"thread-pool-executor\" mechanism to run tasks.\n- The thread pool has a fixed size of 2 threads.\n- The throughput is set to 1, meaning only 1 message is processed per actor before the thread is made available to other actors.\n- This configuration ensures critical tasks are allocated dedicated threads for efficient execution, isolated from non-critical activities.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the critical-dispatcher?",
+      "answer": "The critical-dispatcher is a dedicated actor dispatcher, utilized exclusively by the block candidate generator and NodeViewHolder actors within the system, to maintain critical tasks which require isolation from other non-critical activities."
+    },
+    {
+      "question": "What type of executor is configured for the critical-dispatcher?",
+      "answer": "The critical-dispatcher is configured to use the \"thread-pool-executor\" as the executor."
+    },
+    {
+      "question": "How many threads are in the thread pool for the critical-dispatcher?",
+      "answer": "The fixed-pool-size for the critical-dispatcher is set to 2 threads."
+    },
+    {
+      "question": "What is the throughput setting for the critical-dispatcher?",
+      "answer": "The throughput for the critical-dispatcher is set to 1, which means the maximum number of messages to be processed per actor before the thread is made available to other actors is 1."
+    },
+    {
+      "question": "What are the key configuration settings for the critical-dispatcher?",
+      "answer": "The key configuration settings for the critical-dispatcher are: type = Dispatcher, executor = \"thread-pool-executor\", fixed-pool-size = 2, and throughput = 1."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Critical-Dispatcher Configuration Settings",
+      "level": 1,
+      "content": "The `critical-dispatcher` is a dedicated actor dispatcher, utilized exclusively by the block candidate generator and `NodeViewHolder` actors within the system. This dispatcher is integral to maintaining critical tasks which require isolation from other non-critical activities."
+    },
+    {
+      "heading": "Dispatcher Type",
+      "level": 2,
+      "content": "```conf\ntype = Dispatcher\n```\nThis configuration sets the type of the dispatcher. In this case, it is set as `Dispatcher`."
+    },
+    {
+      "heading": "Executor",
+      "level": 2,
+      "content": "```conf\nexecutor = \"thread-pool-executor\"\n```\nThe `executor` is the mechanism responsible for running tasks given to it by the dispatcher. Here, it is configured to use the `\"thread-pool-executor\"`, which creates a pool of worker threads for executing tasks."
+    },
+    {
+      "heading": "fixed-pool-size",
+      "level": 3,
+      "content": "```conf\nfixed-pool-size = 2\n```\nThis configuration specifies the number of threads in the thread pool for the `thread-pool-executor`. It is set to a fixed size of 2 in this configuration."
+    },
+    {
+      "heading": "Throughput",
+      "level": 2,
+      "content": "```conf\nthroughput = 1\n```\n`throughput` is the maximum number of messages to be processed per actor before the thread is made available to other actors. This setting helps control how long a thread can be occupied by an actor. In this case, it is set to 1."
+    },
+    {
+      "heading": "Complete Configuration Code",
+      "level": 2,
+      "content": "```conf\ncritical-dispatcher {\n  type = Dispatcher\n  executor = \"thread-pool-executor\"\n  thread-pool-executor {\n    fixed-pool-size = 2\n  }\n  throughput = 1\n}\n```\nThis configuration ensures that critical tasks handled by the block candidate generator and `NodeViewHolder` actors are allocated dedicated threads, thereby promoting efficient execution."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/conf/conf-crit.md",
+  "processed_at": "2025-05-11T19:54:04.972833",
+  "ai_processed": true
+}

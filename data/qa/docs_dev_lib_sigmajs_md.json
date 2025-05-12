@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Sigma JS?",
+    "answer": "Sigma JS is a JavaScript library that aims to offer a user experience for JavaScript developers that is comparable to what AppKit provides for JVM developers."
+  },
+  {
+    "question": "What is the current status of Sigma JS?",
+    "answer": "Sigma JS is currently under development and not yet ready for production use."
+  },
+  {
+    "question": "What is the relationship between Sigma JS and Fleet?",
+    "answer": "Sigma JS, in conjunction with Fleet, aims to offer a user experience for Javascript developers that is comparable to what AppKit provides for JVM developers."
+  },
+  {
+    "question": "Where can I find the Sigma JS module on npmjs?",
+    "answer": "The Sigma JS module is available on npmjs at https://www.npmjs.com/package/sigmastate-js."
+  },
+  {
+    "question": "What project aims to replace BouncyCastle's elliptic curve dependencies in the Sigma.JS compilation process?",
+    "answer": "The project sigmajs-crypto-facade aims to replace BouncyCastle's elliptic curve dependencies in the Sigma.JS compilation process."
+  }
+]

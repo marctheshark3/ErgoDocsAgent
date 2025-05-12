@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_protocol_autolykos-protocol_md",
+  "title": "Autolykos",
+  "summary": "The document provides an introduction to Autolykos, the Proof of Work algorithm used for Ergo mining. It describes Autolykos as a fairly launched, efficient, and ASIC-resistant algorithm. The document also includes links to related topics such as mining setup, the Autolykos algorithm, governance, storage rent, difficulty adjustment, and the Ergo emission schedule.",
+  "qa_pairs": [
+    {
+      "question": "What is Autolykos?",
+      "answer": "Autolykos is a fairly launched efficient ASIC-resistant Proof of Work algorithm used for Ergo mining."
+    },
+    {
+      "question": "What are the key features of the Autolykos algorithm?",
+      "answer": "Autolykos is ASIC-resistant and uses a Proof of Work consensus mechanism."
+    },
+    {
+      "question": "How does the Ergo mining process work?",
+      "answer": "Ergo mining is based on the Autolykos algorithm, which is a Proof of Work consensus mechanism."
+    },
+    {
+      "question": "What is the purpose of the Ergo Storage Rent feature?",
+      "answer": "The Ergo Storage Rent feature reduces the problem of blockchain bloat through on-chain garbage collection."
+    },
+    {
+      "question": "How is the mining difficulty adjusted on the Ergo blockchain?",
+      "answer": "The mining difficulty on the Ergo blockchain is adjusted to maintain a consistent block time."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Autolykos\n  - Proof of Work\n  - Mining\n---"
+    },
+    {
+      "heading": "Autolykos",
+      "level": 1,
+      "content": "*(Back to: [Protocol Overview](protocol-overview.md))*\n\nErgo [mining](mining-overview.md) is based on **[Autolykos](autolykos.md)**, a fairly launched efficient [ASIC-resistant](asic.md) Proof of Work algorithm.\n\n::cards::\n\n[\n  {\n    \"title\": \"Start Mining\",\n    \"url\": \"../../mining/setup/join.md\",\n    \"content\": \"Getting setup with a mining pool.\"\n  },\n  {\n    \"title\": \"Algorithm\",\n    \"url\": \"../../mining/autolykos.md\",\n    \"content\": \"Dive into the Autolykos Algorithm.\"\n  },\n  {\n    \"title\": \"Governance\",\n    \"url\": \"../../mining/governance.md\",\n    \"content\": \"PoW To The People\"\n  },\n  {\n    \"title\": \"Storage Rent\",\n    \"url\": \"../../mining/rent.md\",\n    \"content\": \"On-chain garbage collection that reduces the problem of blockchain bloat\"\n  },\n  {\n    \"title\": \"Difficulty Adjustment\",\n    \"url\": \"../../mining/difficulty.md\",\n    \"content\": \"See how the mining difficulty is calculated.\"\n\n  },\n  {\n    \"title\": \"Emission\",\n    \"url\": \"../../mining/emission.md\",\n    \"content\": \"The Ergo emission schedule\"\n  },\n\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/autolykos-protocol.md",
+  "processed_at": "2025-05-11T19:23:39.831304",
+  "ai_processed": true
+}

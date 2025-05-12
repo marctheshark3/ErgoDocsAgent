@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of 'The Field' project?",
+    "answer": "The Field is a peer-to-pool pledging protocol where individuals can pledge assets (coins or tokens) to support participants in competitions."
+  },
+  {
+    "question": "What is the current status of the project's development?",
+    "answer": "The Minimum Viable Product (MVP) Smart Contracts are complete, the dApp front-end UI is ongoing, and private testing of pools and pledges is currently underway."
+  },
+  {
+    "question": "What are the upcoming plans for the project?",
+    "answer": "There is an ambitious goal to have an Olympic event next week for Live Beta testing from the community using small amounts."
+  },
+  {
+    "question": "How can users get involved with the project?",
+    "answer": "Users can join the project's Discord server to learn more and/or volunteer to help move the project and DAO forward."
+  },
+  {
+    "question": "What are the key technical details of the project?",
+    "answer": "The project is designed to be DAO-driven and open-source, with the MVP Smart Contracts complete and the dApp front-end UI ongoing."
+  }
+]

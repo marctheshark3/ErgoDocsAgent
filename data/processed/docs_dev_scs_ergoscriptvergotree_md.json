@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_scs_ergoscriptvergotree_md",
+  "title": "ergoscriptvergotree.md",
+  "summary": "ErgoScript is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the Ergo blockchain. ErgoTree is a low-level, tree-based language that the Ergo node understands, but is difficult to write directly. ErgoTree programs are deterministic and consist of a sequence of boolean predicates joined using AND and OR. The Ergo node executes the ErgoTree program contained in a transaction and considers it valid if it evaluates to true. An example ErgoTree program can be expressed more concisely in ErgoScript.",
+  "qa_pairs": [
+    {
+      "question": "What is the relationship between ErgoScript and ErgoTree?",
+      "answer": "ErgoScript is a high-level, developer-friendly language for writing smart contracts, which are then compiled to the low-level ErgoTree language that the Ergo node understands."
+    },
+    {
+      "question": "What is the structure of an ErgoTree program?",
+      "answer": "An ErgoTree program is a deterministic sequence of boolean predicates joined using AND and OR."
+    },
+    {
+      "question": "How does the Ergo node validate a transaction?",
+      "answer": "The Ergo node executes the ErgoTree program contained in a transaction and considers it valid if the program evaluates to true."
+    },
+    {
+      "question": "What is an example of an ErgoTree program?",
+      "answer": "An example ErgoTree program is `AND(OR(condition_1, condition_2), condition_3)`, which implies that the transaction is valid if `condition_3` holds and at least one of `condition_1` or `condition_2` holds."
+    },
+    {
+      "question": "What is the equivalent of the example ErgoTree program in ErgoScript?",
+      "answer": "The equivalent of the example ErgoTree program in ErgoScript would be `(condition_1 || condition_2) && condition_3`."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoScript\n  - ErgoTree\n---"
+    },
+    {
+      "heading": "ErgoScript vs ErgoTree",
+      "level": 2,
+      "content": "[ErgoScript](ergoscript.md) is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.\n\nThe [Ergo node](install.md) does not understand ErgoScript. Instead, it uses a low-level language called [**ErgoTree**](https://ergoplatform.org/docs/ErgoTree.pdf), which is a \"tree-based\" language (somewhat like XML).\n\nHowever, writing code in ErgoTree is *difficult*.\n\n- ErgoTree is similar to Bitcoin's Script in some aspects. \n- An ErgoTree program is deterministic and consists of a sequence of boolean predicates joined using `AND` and `OR`.\n- Ergo nodes execute the ErgoTree program contained in a transaction and consider it valid if it evaluates to `true`.\n\nAn example of such an ErgoTree program would be \n\n```scala\nAND(OR(condition_1, condition_2), condition_3)\n```\n\nwhich implies that the transaction is valid if `condition_3` holds and at least one of `condition_1` or `condition_2` holds.\n\n\nThe equivalent of the above program in ErgoScript would be\n\n```scala\n(condition_1 || condition_2) && condition_3\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscriptvergotree.md",
+  "processed_at": "2025-05-11T19:29:08.690055",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - ErgoTree\n  - Reference Manual\n---\n\n# ErgoTree: Reference Manual\n\nErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract syntax of the ErgoTree la..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "ErgoTree: Reference Manual"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - ErgoTree\n  - Reference Manual\n---"
+  },
+  {
+    "question": "What is the 'ErgoTree: Reference Manual' section about?",
+    "answer": "ErgoTree forms the backbone of Ergo's [smart contracts](contracts.md). It is the typed abstract synt..."
+  },
+  {
+    "question": "What is the 'Understanding ErgoTree' section about?",
+    "answer": "ErgoTree serves as a specialized language, encapsulating the [*universal language*](https://www.mart..."
+  }
+]

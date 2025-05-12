@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the advantages of using Multi-Stage Contracts?",
+    "answer": "Multi-Stage Contracts utilize transaction trees to mimic persistent storage in UTXO-based systems, enabling on-chain computations and parallel actions within smart contracts, while offering functionality akin to Ethereum's accounts without the associated overhead."
+  },
+  {
+    "question": "What is the key concept behind Multi-Stage Protocols?",
+    "answer": "Multi-Stage Protocols involve interlinking multiple UTXOs, each containing snippets of code, to create extensive multi-stage protocols and enable the execution of parallel actions within smart contracts."
+  },
+  {
+    "question": "What are some example applications of Multi-Stage Protocols?",
+    "answer": "Example applications of Multi-Stage Protocols include a Rock Paper Scissors game with provable fairness, a Reversible Address with anti-theft features, and a comprehensive ICO."
+  },
+  {
+    "question": "What resources are available for learning more about Multi-Stage Protocols?",
+    "answer": "Resources for learning more about Multi-Stage Protocols include the 'Multi-Stage Contracts in the UTXO Model' paper and video presentation, as well as tutorials on ensuring secure user entry and bootstrap funneling, and the workflow for multi-stage protocol development."
+  },
+  {
+    "question": "How do Multi-Stage Protocols compare to Ethereum's account model?",
+    "answer": "Multi-Stage Protocols offer the advantages of persistent storage and a shared global context like Ethereum's account model, but without the associated overhead, by utilizing a technique involving transaction trees."
+  }
+]

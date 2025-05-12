@@ -1,0 +1,73 @@
+{
+  "id": "docs_dev_data-model_box_tokens_md",
+  "title": "Tokens on Ergo",
+  "summary": "Ergo's native tokens are versatile and can represent a wide range of assets. Tokens are deeply integrated into the Ergo protocol as first-class citizens, with unique characteristics like the inability to be burned and the requirement to pay storage rent in ERG. Minting tokens can be done through web tools or programmatically using the Fleet SDK. Tokens are stored in a special register R2 of a box, with a limit of 255 secondary tokens per box. The Ergo reference wallet uses specific registers for token metadata. There are limitations on box size and transaction costs due to the presence of tokens. New tokens can be created in a transaction if the asset identifier matches the identifier of the first input box, with a limit of one new asset per transaction.",
+  "qa_pairs": [
+    {
+      "question": "What are the two unique characteristics of the ERG token?",
+      "answer": "1. ERGs cannot be burned; the total input and output amounts in any transaction must be equal. 2. Storage rent can only be paid in ERGs."
+    },
+    {
+      "question": "How many secondary tokens can a single box hold?",
+      "answer": "A single box can hold up to 255 secondary tokens."
+    },
+    {
+      "question": "What registers are used by the Ergo reference implementation wallet to store token information?",
+      "answer": "The Ergo reference implementation wallet uses the following registers: R4 for the verbose name, R5 for the description, R6 for the number of decimal places, and R7, R8, R9 for asset-specific information."
+    },
+    {
+      "question": "What are the limitations on the size of a box?",
+      "answer": "The size of a box should not exceed 4 kilobytes, and the presence of tokens increases the computational cost of the transaction."
+    },
+    {
+      "question": "How can tokens be minted on Ergo?",
+      "answer": "Tokens can be minted using the ergoutils web interface or by following the guide for minting a token with the Fleet SDK."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Data Model\n  - Storage Rent\n  - Registers\n---"
+    },
+    {
+      "heading": "Tokens on Ergo",
+      "level": 1,
+      "content": "Ergo's native tokens are incredibly versatile and can represent a wide range of assets, including shares, complementary currency units, and various tangible or intangible items. The infrastructure of Ergo is designed to seamlessly handle the representation and transfer of these diverse assets, integrating them into the blockchain as *first-class citizens*.\n\n//// details | What are  **first-class citizens**? \n    {type: info, open: false}\nThis means that tokens in Ergo are not just metadata attached to transactions, but they are deeply integrated into the Ergo protocol. They can be manipulated and managed with the same level of support and functionality as the native Ergo token (see [EIP-0004](eip4.md)).\n/// details | It is crucial to understand that ERG, the native token of Ergo, possesses two unique characteristics:\n    {type: warning, open: false}\n- ERGs **cannot be burned**; the total input and output amounts in any transaction must be equal.\n- [Storage rent](rent.md) can only be paid in ERGs.\n///\n////\n\n/// details | How do I mint a token?\n    {type: info, open: false}\n- Use [ergoutils](https://ergoutils.org/#/token) to mint a token directly from your web browser. ([Video Tutorial](https://www.youtube.com/watch?v=I3R6_PceM1k)\n))\n- For programmatic token minting, refer to this guide: [Minting a Token with Fleet SDK](https://fleet-sdk.github.io/docs/transaction-building#step-4-2-mint-a-token)\n///\n\n\nThere is no central database where tokens are registered currently, your best bet is to use community resources like [supported tokens in the ergotipper bot](https://github.com/Luivatra/ergotipper-tokens) and [spectrum-finance/ergo-token-list](https://github.com/spectrum-finance/ergo-token-list)."
+    },
+    {
+      "heading": "Token Storage",
+      "level": 2,
+      "content": "- Tokens are stored in a special [register](registers.md) `R2` of a [box](box.md) in the form of (tokenId -> amount) pairs.\n- A single box can hold **up to 255 secondary tokens**."
+    },
+    {
+      "heading": "Register Usage",
+      "level": 2,
+      "content": "The Ergo reference implementation wallet uses specific [registers](registers.md) in a unique way, although the protocol doesn't enforce this:\n\n* `R4` - verbose name\n* `R5` - description\n* `R6` - number of decimal places\n* Additional registers (`R7`, `R8`, `R9`) can store asset-specific information"
+    },
+    {
+      "heading": "Limitations",
+      "level": 2,
+      "content": "There are certain indirect limitations to consider:\n\n- The size of a box should not exceed 4 kilobytes.\n- The presence of tokens increases the computational cost of the transaction."
+    },
+    {
+      "heading": "Asset Creation",
+      "level": 2,
+      "content": "An exception to the rule of weak preservation *(the total amount in inputs should be no less than the total amount in outputs)* is that a transaction can generate tokens from thin air in its outputs if the asset identifier matches the identifier of the transaction's first input box. Given that the box identifier is cryptographically unique, it's impossible to have a second asset with the same identifier, assuming the hash function used is collision-resistant (which it indeed is). This rule also implies that **only one new asset can be created per transaction.**"
+    },
+    {
+      "heading": "Examples",
+      "level": 2,
+      "content": "- [How to mint a token with Fleet SDK](https://fleet-sdk.github.io/docs/transaction-building#step-4-2-mint-a-token)\n- Creating a [perpetual token](perpetual.md) (designed to exist indefinitely, unless it is removed by garbage collection.)"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Token category on sigmaverse.io](https://sigmaverse.io/all-projects/?category=Tokens)\n- [Ergo Token Minter](https://thierrym1212.github.io/tokenminter/index.html) or [CYTI](https://thierrym1212.github.io/cyti/index.html) which uses a Use CYTI minable smart contract to choose your token ID.\n- [ergoutils.org](https://ergoutils.org/#/token)\n- [Video Tutorial](https://www.youtube.com/watch?v=I3R6_PceM1k)\n- [Why does the limitation of 1 new token per transaction exist?](https://github.com/ergoplatform/ergo/issues/2013)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/box/tokens.md",
+  "processed_at": "2025-05-11T19:19:34.195907",
+  "ai_processed": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_data-model_block-adproofs_md",
+  "title": "ADProofs (Authenticated Data Proofs)",
+  "summary": "ADProofs (Authenticated Data Proofs) are a crucial component of Ergo's block structure that allows for efficient and secure validation of transactions without requiring full blockchain download, particularly beneficial for light clients. They enable light clients to verify the validity of transactions within a block by proving they are included in the Merkle tree of the UTXO set, and to calculate the new state root after applying the transactions, allowing them to stay synchronized with the blockchain without storing the complete state. ADProofs are cryptographically secure, ensuring that any tampering with the transactions or the UTXO set will be detected during validation. The ADProofs structure includes the block header ID and the serialized cryptographic proof that allows for verification of the state changes. The verification process involves the client using the ADProofs to construct a BatchAVLVerifier, which utilizes the proof bytes to verify the transactions and state changes.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of ADProofs?",
+      "answer": "ADProofs enable efficient and secure validation of transactions for light clients without requiring full blockchain download."
+    },
+    {
+      "question": "How do ADProofs allow for state verification?",
+      "answer": "Light clients can use ADProofs to calculate the new state root (a cryptographic summary of the UTXO set) after applying the transactions in a block, allowing them to stay synchronized with the blockchain without storing the complete state."
+    },
+    {
+      "question": "What is the security benefit of ADProofs?",
+      "answer": "ADProofs are cryptographically secure, ensuring that any tampering with the transactions or the UTXO set will be detected during validation."
+    },
+    {
+      "question": "What is the structure of ADProofs as defined in the ADProofs.scala class?",
+      "answer": "The ADProofs class defines the structure of ADProofs, which contains the following components."
+    },
+    {
+      "question": "Where can the ADProofs.scala file be found?",
+      "answer": "The ADProofs.scala file is located at https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ADProofs\n  - Authenticated Data Proofs\n  - Block\n  - Data Model\n---"
+    },
+    {
+      "heading": "ADProofs (Authenticated Data Proofs)",
+      "level": 1,
+      "content": "*(Back to: [Block Overview](block.md))*\n\n**ADProofs**, short for Authenticated Data Proofs, are a crucial component of Ergo's [block structure](block.md) that allows for efficient and secure [validation](validation.md) of [transactions](transactions.md) without requiring full blockchain download. They are particularly beneficial for \"[light clients](modes.md)\" \u2013 [wallets](wallets.md) or [nodes](install.md) that don't store the entire blockchain.\n\n**Function:**\n\n* **Efficient Transaction Validation:** ADProofs enable light clients to verify the validity of transactions within a block by proving they are included in the [Merkle tree](merkle-tree.md) of the [UTXO set](eutxo.md). This eliminates the need to download and process the entire UTXO set or the full block.\n* **State Verification:** Light clients can use ADProofs to calculate the new [state root](block-header.md) (a cryptographic summary of the UTXO set) after applying the transactions in a block. This allows them to stay synchronized with the blockchain without storing the complete state.\n* **Security:** ADProofs are cryptographically secure, ensuring that any tampering with the transactions or the UTXO set will be detected during validation.\n\n**Structure:**\n\nThe `ADProofs` class in [ADProofs.scala](https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/ADProofs.scala) defines the structure of ADProofs. It contains the following key elements:\n\n* **headerId:** The ID of the [block header](block-header.md) to which these proofs correspond.\n* **proofBytes:** The serialized cryptographic proof that allows for verification of the state changes.\n\n**Verification Process:**\n\n1. **Initialization:** A light client receives the block header, the ADProofs, and the list of [transactions](block-transactions.md).\n2. **Proof Application:** The client uses the `ADProofs` to construct a `BatchAVLVerifier`. This verifier utilizes the provided proof to validate the changes made to the UTXO set by the transactions.\n3. **State Root Calculation:** The verifier calculates the new state root after applying the transactions. This calculated root is then compared against the state root declared in the block header.\n4. **Verification Result:** If the calculated state root matches the one in the header, the transactions and the state transition are considered valid.\n\n**Key Concepts:**\n\n* **[Merkle Tree](merkle-tree.md):** A tree-like data structure where each leaf node represents a piece of data (in this case, a transaction or a [box](box.md)) and each non-leaf node is a hash of its child nodes. This structure allows for efficient verification of data inclusion.\n* **[AVL+ Tree](avl.md):** A self-balancing binary search tree used in Ergo to represent the UTXO set. It enables efficient lookups and updates while maintaining a verifiable structure.\n* **Batch Verification:** The process of verifying multiple operations (transaction additions or removals) within the UTXO set simultaneously, optimizing efficiency.\n\n**Benefits:**\n\n* **Reduced Bandwidth:** Light clients can avoid downloading full blocks and the entire UTXO set, saving significant bandwidth.\n* **Increased Efficiency:** ADProofs streamline the validation process, making it faster and less resource-intensive for light clients.\n* **Enhanced Scalability:** By enabling lightweight participation, ADProofs contribute to the overall scalability of the Ergo blockchain."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/block-adproofs.md",
+  "processed_at": "2025-05-11T19:18:49.715584",
+  "ai_processed": true
+}

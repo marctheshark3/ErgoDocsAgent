@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the `debug()` function in ErgoScript?",
+    "answer": "The `debug()` function is an experimental feature that allows script writers to output specific information during script evaluation."
+  },
+  {
+    "question": "Where is the output from the `debug()` function typically displayed?",
+    "answer": "The output from `debug()` is typically expected to appear in the logs of the validating node that processes the transaction containing the script."
+  },
+  {
+    "question": "What are some common errors that may be reported in the node logs when a transaction fails validation?",
+    "answer": "Common errors reported in the logs include 'Script evaluation failed', 'Assertion failed', 'Cost limit exceeded', and type mismatches or other interpreter errors."
+  },
+  {
+    "question": "What are the limitations of the on-chain debugging mechanisms described in the document?",
+    "answer": "The on-chain debugging mechanisms offer limited visibility compared to traditional debugging, and they usually don't pinpoint the exact line number within the ErgoScript source where the failure occurred."
+  },
+  {
+    "question": "How should the on-chain debugging mechanisms be used in the context of ErgoScript development?",
+    "answer": "The on-chain debugging mechanisms should be used in conjunction with robust off-chain testing and simulation, as they provide valuable clues when troubleshooting transaction failures."
+  }
+]

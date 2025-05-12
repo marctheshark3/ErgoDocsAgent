@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key feature of DeFi that must be a built-in feature, not a bolt-on extra?",
+    "answer": "Privacy must be a built-in feature of DeFi, not a bolt on extra or a desirable feature. It must be integral."
+  },
+  {
+    "question": "What is the importance of scalability for the DeFi sector?",
+    "answer": "The ability to process thousands of transactions per second is a non-negotiable feature for a thriving DeFi sector."
+  },
+  {
+    "question": "What is the key limitation of current composability in DeFi?",
+    "answer": "Cross-platform composability currently isn't possible. Even atomic swaps are in their infancy."
+  },
+  {
+    "question": "What is the importance of decentralization in the context of scalability and interoperability for DeFi?",
+    "answer": "Interoperability decentralizes the decentralized infrastructure for DeFi, adding layers of redundancy and security, and strengthening every blockchain that is a part of that ecosystem."
+  },
+  {
+    "question": "What is the Ergo platform's approach to providing both privacy and transparency in DeFi?",
+    "answer": "Ergo's Sigma Protocols offer robust, customizable cryptography, and the ability to selectively reveal information where necessary."
+  }
+]

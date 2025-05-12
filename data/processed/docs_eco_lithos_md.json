@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_lithos_md",
+  "title": "Lithos",
+  "summary": "Lithos is a project that aims to create a decentralized mining pool infrastructure by providing a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools. The project plans to enable miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner, bringing significant benefits to miners outside of just decentralization. Lithos proposes a new solution to the challenges faced by traditional attempts to create decentralized mining pools, using a new protocol that verifies miners' work and pays them out accordingly while utilizing Stratum as the \"networking layer\" for the protocol. The protocol is blockchain-agnostic, meaning that Lithos may support mining pools for any Proof of Work (PoW) blockchain. Lithos has recently completed collateral contracts, and the ability of miners to directly insert necessary transactions into blocks has been successfully demonstrated. The goal of Lithos is to usher in a new era for PoW mining, where mining pools are fully decentralized, efficient, and trustless.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary goal of the Lithos project?",
+      "answer": "The primary goal of the Lithos project is to create a decentralized mining pool infrastructure by providing a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools while promoting increasingly decentralized block production."
+    },
+    {
+      "question": "How does Lithos aim to address the challenges faced by previous attempts to create decentralized mining pools?",
+      "answer": "Lithos proposes a new solution to the challenges faced by previous attempts to create decentralized mining pools by using a new protocol that verifies miners' work and pays them out accordingly while utilizing Stratum as the 'networking layer' for the protocol."
+    },
+    {
+      "question": "What key feature of the Lithos protocol allows miners to directly insert necessary transactions into blocks?",
+      "answer": "The Lithos protocol allows miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner."
+    },
+    {
+      "question": "Is the Lithos protocol blockchain-agnostic?",
+      "answer": "Yes, the Lithos protocol is blockchain-agnostic, meaning that it may support mining pools for any Proof of Work (PoW) blockchain."
+    },
+    {
+      "question": "What recent milestone has the Lithos project achieved?",
+      "answer": "Lithos has recently completed collateral contracts, and the ability of miners to directly insert necessary transactions into blocks has been successfully demonstrated during the ERGOHACK VI event."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Lithos\n  - Mining Pool\n  - Decentralized\n  - Infrastructure\n  - dApp\n  - dApp-InDev\n---"
+    },
+    {
+      "heading": "Lithos",
+      "level": 1,
+      "content": "Lithos is a project that aims to create a decentralized mining pool infrastructure by providing a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools while promoting increasingly decentralized block production. This means that the project plans to enable miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner, bringing significant benefits to miners outside of just decentralization.\n\nTraditionally, attempts to create decentralized mining pools have faced challenges such as security concerns, lack of miner usage, and failures to achieve both efficiency and full decentralization. However, Lithos proposes a new solution to these challenges by using a new protocol that verifies miners' work and pays them out accordingly while utilizing Stratum as the \"networking layer\" for the protocol. The protocol is blockchain-agnostic, meaning that Lithos may support mining pools for any Proof of Work (PoW) blockchain.\nRecently, Lithos has completed collateral contracts, and the ability of miners to directly insert necessary transactions into blocks has been successfully demonstrated during the ERGOHACK VI event. Overall, the goal of Lithos is to usher in a new era for PoW mining, where mining pools are fully decentralized, efficient, and trustless.\n\n- [Telegram](https://t.me/LITHOS_Protocol)\n- [GitHub](https://github.com/Lithos-Protocol)\n- [Litepaper](https://github.com/Lithos-Protocol/LitePaper)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/lithos.md",
+  "processed_at": "2025-05-11T19:45:14.965589",
+  "ai_processed": true
+}

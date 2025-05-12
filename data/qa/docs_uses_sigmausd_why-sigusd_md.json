@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a stablecoin?",
+    "answer": "It is a derivative product that intends to create a way to stabilise volatility."
+  },
+  {
+    "question": "Why is price stability critical in finance?",
+    "answer": "Without price stability, it becomes difficult to create long-term financial product modellings and investment becomes riskier."
+  },
+  {
+    "question": "What is the cost of creating SigmaUSD?",
+    "answer": "The cost of SigmaUSD is the current USD value of ERG plus a 2.5% fee."
+  },
+  {
+    "question": "How can users generate yield using SigmaUSD?",
+    "answer": "Users can use SigmaUSD to generate yield through DeFi applications on Ergo, such as decentralized exchanges or liquidity pools."
+  },
+  {
+    "question": "What is the benefit of overcoming the 2.5% threshold for using SigmaUSD?",
+    "answer": "Once the 2.5% cost of stability is overcome, users have an incentive to continually mint/redeem SigmaUSD, as they can net a gain even if the price of ERG appreciates."
+  }
+]

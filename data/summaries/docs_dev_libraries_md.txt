@@ -1,0 +1,1 @@
+This document provides an introduction to a collection of libraries, including GetBlok Plasma, Scrypto, EIP12-Types, and SigmaJS. It presents these libraries in a structured format, with each library having a title and a URL link to its corresponding documentation.

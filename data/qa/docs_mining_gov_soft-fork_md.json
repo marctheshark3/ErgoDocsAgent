@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a soft fork?",
+    "answer": "A soft fork is a backward-compatible protocol update that introduces new rules or deactivates existing ones without requiring a hard fork."
+  },
+  {
+    "question": "How is the soft-fork process governed in the Ergo network?",
+    "answer": "The soft-fork process in the Ergo network is governed by a strict voting mechanism that involves miners and unfolds over a series of epochs."
+  },
+  {
+    "question": "What are the key stages of the soft-fork process in Ergo?",
+    "answer": "The key stages of the soft-fork process in Ergo are: 1) Proposal, 2) Voting, 3) Activation, and 4) Implementation."
+  },
+  {
+    "question": "What are the preconditions for a soft fork in Ergo?",
+    "answer": "The preconditions for a soft fork in Ergo are: 1) Software Update and 2) Proposal."
+  },
+  {
+    "question": "How does a miner signal the start of the soft-fork voting process in Ergo?",
+    "answer": "A miner signals the start of the soft-fork voting process in Ergo by including a specific identifier (e.g., 120) in the first block of a new epoch."
+  }
+]

@@ -1,0 +1,7 @@
+The document outlines the cache configuration settings for a system, including the size of the cache for block sections, headers, and indexes, as well as the settings for the invalid modifiers bloom filter and cache. The key points are:
+
+- The block sections cache size is set to 12, meaning the last 12 block sections are stored in memory.
+- The headers cache size is set to 1000, storing the last 1000 headers in memory.
+- The indexes cache size is set to 10000, storing the last 10000 indexes in memory.
+- The invalid modifiers bloom filter capacity is set to 10000000, with an expiration rate of 0.1.
+- The invalid modifiers cache size is set to 10000, with an expiration time of 6 hours.

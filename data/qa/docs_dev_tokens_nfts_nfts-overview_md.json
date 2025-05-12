@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Non-Fungible Tokens (NFTs)?",
+    "answer": "Non-Fungible Tokens (NFTs) are unique and indivisible blockchain tokens that can be used to represent and prove ownership of digital products such as works of art, in-game items or characters, virtual trading cards, and more."
+  },
+  {
+    "question": "How can NFTs be used to represent unforgeable identity?",
+    "answer": "NFTs can be used to represent unforgeable identity, such as the ownership of a successful exchange dApp that pays a percentage of trading fees to the owner designated by the NFT. The NFT can be transferred, sold, and managed by a secondary smart contract to divide revenues among shareholders or update/shut down the dApp."
+  },
+  {
+    "question": "How can NFTs be minted on Ergo?",
+    "answer": "Minting a NFT on Ergo is a straightforward process that can be done programmatically or using resources listed in the guide."
+  },
+  {
+    "question": "How do royalties work with NFTs on Ergo?",
+    "answer": "Royalties in Ergo are integrated into the minting metadata and can be accessed via smart contracts, allowing marketplaces to include royalties in their sale contracts."
+  },
+  {
+    "question": "What are some key use cases for NFTs on Ergo?",
+    "answer": "Key use cases for NFTs on Ergo include representing unforgeable identity, managing ownership and revenue of dApps, and proving ownership of digital assets like art, in-game items, and virtual trading cards."
+  }
+]

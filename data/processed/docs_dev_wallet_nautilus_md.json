@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_wallet_nautilus_md",
+  "title": "Nautilus Wallet",
+  "summary": "Nautilus Wallet is a privacy-focused, web-based wallet for managing digital assets within the Ergo ecosystem. It offers an intuitive user interface and supports Ledger hardware wallets. Nautilus can be installed as a browser extension for Chrome or Firefox. A comprehensive video guide is available to help users get started. The Nautilus community is interested in providing translations for different languages to improve accessibility, and users can connect with the community on Telegram or Discord for support, updates, and discussions.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Nautilus Wallet?",
+      "answer": "Nautilus Wallet is a privacy-focused, web-based wallet designed for the secure management of digital assets within the Ergo ecosystem."
+    },
+    {
+      "question": "What security features does Nautilus Wallet offer?",
+      "answer": "Nautilus Wallet prioritizes user privacy and employs advanced security measures to protect digital assets."
+    },
+    {
+      "question": "How can users install Nautilus Wallet?",
+      "answer": "Nautilus Wallet can be easily installed as a browser extension, with versions available for Google Chrome and Mozilla Firefox."
+    },
+    {
+      "question": "What hardware wallet integration does Nautilus Wallet support?",
+      "answer": "Nautilus Wallet supports Ledger hardware wallets, currently available in developer mode for advanced users and developers."
+    },
+    {
+      "question": "How can users learn to set up and use Nautilus Wallet?",
+      "answer": "Users can watch a comprehensive video tutorial to get a step-by-step guide on setting up and using Nautilus Wallet."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Nautilus Wallet",
+      "level": 1,
+      "content": "[Nautilus Wallet](https://twitter.com/NautilusWallet) is a privacy-focused, web-based wallet designed for the secure management of digital assets within the Ergo ecosystem. It offers an intuitive user interface that caters to both novice and experienced users."
+    },
+    {
+      "heading": "Features",
+      "level": 2,
+      "content": "- **Privacy Enhanced:** Nautilus prioritizes user privacy, employing advanced security measures to protect your digital assets.\n- **Ledger Integration:** For those seeking an extra layer of security, Nautilus supports Ledger hardware wallets, currently available in developer mode for advanced users and developers."
+    },
+    {
+      "heading": "Installation",
+      "level": 2,
+      "content": "Nautilus can be easily installed as a browser extension. Select the version compatible with your browser:\n\n- [Chrome Web Store](https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai) - Install Nautilus for Google Chrome.\n- [Firefox Add-ons](https://addons.mozilla.org/bs/firefox/addon/nautilus/) - Get Nautilus for Mozilla Firefox."
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "/// details | Comprehensive Video Guide\n    {type: info, open: true}\nFor a step-by-step guide on setting up and using Nautilus, watch the [comprehensive video tutorial](https://www.youtube.com/watch?v=hMwtwlUpnRQ).\n///"
+    },
+    {
+      "heading": "Internationalization (i18n)",
+      "level": 2,
+      "content": "There is community interest in providing Nautilus Wallet translations for different languages to improve accessibility. While multi-language support may be planned, the specific process for contributing translations might vary. If you are interested in contributing translations, please inquire in the Nautilus community channels linked below for the current status and contribution guidelines."
+    },
+    {
+      "heading": "Community Support",
+      "level": 2,
+      "content": "Connect with the Nautilus community for support, updates, and discussions:\n\nJoin the Nautilus community on [Telegram](http://t.me/@NautilusWallet) or [Discord](https://discord.gg/ergo-platform-668903786361651200), where the chats are bridged between each other for a cohesive conversation experience."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/nautilus.md",
+  "processed_at": "2025-05-11T19:40:17.903021",
+  "ai_processed": true
+}

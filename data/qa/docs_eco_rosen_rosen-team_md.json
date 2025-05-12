@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How many full-time and part-time developers are on the Rosen team?",
+    "answer": "The Rosen team is comprised of 8 full-time developers and 2-3 part-time developers."
+  },
+  {
+    "question": "How is the Rosen Bridge project funded?",
+    "answer": "Rosen Bridge operates entirely on self-funding, with no involvement of private sales, venture capital, or SAFT agreements. All contracts are financed out of pocket as there is no emission yet."
+  },
+  {
+    "question": "What is the initial liquidity for Ergo on the Spectrum LP?",
+    "answer": "Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP."
+  },
+  {
+    "question": "What is the role of the Ergo Foundation in the Rosen Bridge project?",
+    "answer": "Rosen Bridge, although initiated by members of the Ergo Foundation, operates independently. The Ergo Foundation does not exercise any managerial or controlling influence over Rosen Bridge, but has provided support in the form of grants."
+  },
+  {
+    "question": "What are some of the previous contributions of the Rosen Bridge team members?",
+    "answer": "The Rosen Bridge team members have previously contributed to projects like ErgoRaffle, minotaur-wallet, ergo-faucet, FleetSDK, and GraphQL."
+  }
+]

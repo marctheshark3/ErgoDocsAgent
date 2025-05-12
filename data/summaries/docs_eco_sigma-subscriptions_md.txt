@@ -1,0 +1,1 @@
+Sigma Subscriptions is a framework for easily running a subscription service on the Ergo blockchain. It provides a set of tools and templates for developers to create decentralized subscription-based applications (dApps) on the Ergo platform.

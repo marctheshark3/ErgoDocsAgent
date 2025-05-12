@@ -1,0 +1,9 @@
+This document provides a step-by-step guide on how to bootstrap an Oracle Pool on the Ergo blockchain. It covers the following key points:
+
+1. Planning the pool parameters, such as the number of oracles, minimum data points, and voting requirements.
+2. Generating a bootstrap config template and setting the required parameters.
+3. Editing the bootstrap config template with the planned pool parameters and other details.
+4. Running the bootstrap command to mint the tokens and create the pool.
+5. Inviting other operators by sending them the necessary tokens.
+6. Starting the oracle and monitoring the pool's operation.
+7. Sending the pool config file to the other operators so they can start their oracles.

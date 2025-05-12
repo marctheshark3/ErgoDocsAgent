@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the issuer box in the Artwork Contract?",
+    "answer": "The issuer box is important because it has the same ID as the artwork's token ID and can be included in transactions to prove/verify certain features that the artwork may have."
+  },
+  {
+    "question": "What information is stored in the registers of the issuer box?",
+    "answer": "R4 stores the royalty percentage of the artwork, R5 stores information about royalty recipients and their respective percentages, and R6 stores properties, levels, and rarity traits of the artwork."
+  },
+  {
+    "question": "How is the royalty amount distributed according to the Artwork Contract?",
+    "answer": "The royalty amount must be sent to the royalty recipients based on the share of percentages stored in R5 of the issuer box."
+  },
+  {
+    "question": "What is the difference between Design V1 and Design V2 of the Artwork Contract?",
+    "answer": "Design V2 extends the proposal to include collections and fixes some design choices caused by the AOT costing issues in Design V1."
+  },
+  {
+    "question": "What is the purpose of the Artwork Contract in the Ergo platform?",
+    "answer": "The Artwork Contract is an extension of the Asset standard and aims to standardize the issuance of artworks on the Ergo platform."
+  }
+]

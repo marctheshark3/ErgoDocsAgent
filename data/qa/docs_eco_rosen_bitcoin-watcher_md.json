@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Rosen Bridge Watcher?",
+    "answer": "The Rosen Bridge Watcher is responsible for observing and reporting users' actions on the supported networks."
+  },
+  {
+    "question": "What are the steps to set up the Rosen Bridge Watcher using Docker?",
+    "answer": "The steps include cloning the Operation repository, creating the .env file, configuring the required environment variables, setting permissions, and creating the local.yaml file."
+  },
+  {
+    "question": "How can you check the logs for the Rosen Bridge Watcher?",
+    "answer": "You can check the logs using the command `docker compose logs`."
+  },
+  {
+    "question": "How do you update the Rosen Bridge Watcher?",
+    "answer": "To update the Rosen Bridge Watcher, you can use the commands `docker compose pull`, `docker compose down`, and `docker compose up -d`."
+  },
+  {
+    "question": "How do you restart the Rosen Bridge Watcher instance?",
+    "answer": "To restart the Rosen Bridge Watcher instance, you can use the command `docker compose up -d`."
+  }
+]

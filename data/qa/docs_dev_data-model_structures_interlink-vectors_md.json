@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of interlink vectors in the Ergo blockchain?",
+    "answer": "Interlink vectors allow lightweight clients to verify the correctness of the blockchain without needing to download and validate the entire chain."
+  },
+  {
+    "question": "How do interlink vectors work in conjunction with Merkle trees and PoPow proofs?",
+    "answer": "Interlink vectors, Merkle trees, and PoPow proofs ensure that the blockchain follows the longest chain rule, which is critical for maintaining the security and integrity of the network."
+  },
+  {
+    "question": "What is the structure of an interlink vector?",
+    "answer": "An interlink vector is an array of block headers, where each element points to a previous block header at a certain level of the chain, determined by the number of leading zeros in the block's hash."
+  },
+  {
+    "question": "What are the key properties of interlink vectors?",
+    "answer": "Interlink vectors provide efficiency, scalability, and security by allowing clients to verify the longest chain without needing to download the entire blockchain, supporting the participation of lightweight clients, and adhering to the longest chain rule."
+  },
+  {
+    "question": "How do interlink vectors enable efficient and secure blockchain validation for devices with limited computing power?",
+    "answer": "Interlink vectors allow clients to verify the chain's integrity by checking only a subset of blocks, drastically reducing the amount of data they need to process, making the process more efficient and enabling the participation of lightweight clients."
+  }
+]

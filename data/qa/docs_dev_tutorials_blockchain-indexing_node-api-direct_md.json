@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main approaches to accessing blockchain data?",
+    "answer": "The two main approaches are: 1) Relying on a third-party explorer, or 2) Querying the node API directly."
+  },
+  {
+    "question": "What are the key benefits of querying the node API directly?",
+    "answer": "The key benefits are: 1) Control and trust over the data source, 2) No rate limits, 3) Direct access to raw, unfiltered block and transaction data, and 4) Near real-time access to data."
+  },
+  {
+    "question": "What are the steps involved in querying the node API directly?",
+    "answer": "The steps are: 1) Run an Ergo node, 2) Configure the API, 3) Make API requests, and 4) Process the response."
+  },
+  {
+    "question": "What are the different node modes that can be used?",
+    "answer": "The node can be run in Archival Full mode or Pruned Full mode, depending on whether you need full historical data or just recent state."
+  },
+  {
+    "question": "How is the node's API configured for security?",
+    "answer": "The node's API can be configured with `scorex.restApi.bindAddress` and `apiKeyHash` in the `ergo.conf` file."
+  }
+]

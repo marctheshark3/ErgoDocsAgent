@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the different states a modifier can progress through during the synchronization process in Ergo?",
+    "answer": "The different states a modifier can progress through are: Unknown, Requested, Received, Held, and Invalid."
+  },
+  {
+    "question": "What is the primary goal of the synchronization process in Ergo?",
+    "answer": "The primary goal of the synchronization process is to transition necessary modifiers from the Unknown state to the Held state, thereby bringing the node's view of the blockchain up-to-date with the network."
+  },
+  {
+    "question": "What are the two main scenarios in which a node broadcasts Inv messages during the synchronization process?",
+    "answer": "A node broadcasts Inv messages when it successfully applies a new modifier to its History or Mempool, and in response to receiving an ErgoSyncInfo message from a peer."
+  },
+  {
+    "question": "What are the steps involved in the Headers Synchronization process?",
+    "answer": "The Headers Synchronization process involves: 1) Sending ErgoSyncInfo, 2) Triggering ErgoSyncInfo, 3) Receiving ErgoSyncInfo, and 4) Responding with Inv."
+  },
+  {
+    "question": "What is the purpose of the Inv (inventory) protocol used during the synchronization process?",
+    "answer": "The Inv protocol is a communication protocol used to signal that a node possesses certain modifiers and is prepared to send them upon request from a peer."
+  }
+]

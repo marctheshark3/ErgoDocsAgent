@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# JSON dApp Environment (JDE) \n\nErgo enables sophisticated dApps via smart contracts written in [ErgoScript](ergoscript.md).\n\nInteracting with such smart contracts requires a developer to write code i..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "JSON dApp Environment (JDE)"
+  },
+  {
+    "question": "What is the 'JSON dApp Environment (JDE)' section about?",
+    "answer": "Ergo enables sophisticated dApps via smart contracts written in [ErgoScript](ergoscript.md).\n\nIntera..."
+  },
+  {
+    "question": "What is the 'Goals' section about?",
+    "answer": "This JDE is designed with the following goals in mind:\n\n1. Enable tech-savvy users and developers to..."
+  },
+  {
+    "question": "What is the 'Capabilities' section about?",
+    "answer": "Let us take the use-case of purchasing, say, 10 Sigma-USD reserve coins as an example, which involve..."
+  }
+]

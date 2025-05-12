@@ -1,0 +1,88 @@
+{
+  "id": "docs_dev_data-model_ring_md",
+  "title": "Ring Signatures in Ergo",
+  "summary": "The document provides an overview of ring signatures in the Ergo blockchain. Ring signatures are a privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing the specific signer. Key features include anonymity, privacy, and flexible composition through Ergo's Sigma protocols. Use cases include anonymous transactions, decentralized mixers, and confidential voting. The technical implementation in Ergo leverages Sigma protocols to prove knowledge of one secret from a set of secrets, obfuscating the true signer. The document also discusses related cryptographic concepts, privacy mechanisms, and advanced applications of ring signatures in the Ergo ecosystem.",
+  "qa_pairs": [
+    {
+      "question": "What are ring signatures?",
+      "answer": "Ring signatures are an advanced privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing which specific group member signed it."
+    },
+    {
+      "question": "What are the key features of ring signatures?",
+      "answer": "Key features of ring signatures include anonymity, privacy, and flexible composition through Ergo's Sigma protocols."
+    },
+    {
+      "question": "What are some use cases of ring signatures in Ergo?",
+      "answer": "Use cases of ring signatures in Ergo include anonymous transactions, decentralized mixers, and confidential voting."
+    },
+    {
+      "question": "What is the ErgoMixer privacy protocol?",
+      "answer": "The ErgoMixer privacy protocol is a decentralized mixer that utilizes ring signatures to provide privacy in blockchain transactions."
+    },
+    {
+      "question": "What is the ZeroJoin privacy mechanism?",
+      "answer": "The ZeroJoin privacy mechanism is another decentralized mixer that uses ring signatures to enable privacy in blockchain transactions."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Ring Signatures\n  - Cryptography\n  - Privacy\n---"
+    },
+    {
+      "heading": "Ring Signatures in Ergo",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "Ring signatures are an advanced privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing which specific group member signed it."
+    },
+    {
+      "heading": "Key Features",
+      "level": 2,
+      "content": "- **Anonymity**: Provides plausible deniability by obscuring the actual signer\n- **Privacy**: Prevents tracing the origin of a signature to a specific participant\n- **Flexible Composition**: Implemented through Ergo's Sigma protocols"
+    },
+    {
+      "heading": "Use Cases",
+      "level": 2,
+      "content": "1. **Anonymous Transactions**: Enabling privacy in blockchain transactions\n2. **Decentralized Mixers**: \n  \n      - [ErgoMixer Privacy Protocol](mixer.md)\n      - [ZeroJoin Privacy Mechanism](zerojoin.md)\n\n3. **Confidential Voting**: Where the voter's identity must remain secret"
+    },
+    {
+      "heading": "Technical Implementation",
+      "level": 2,
+      "content": "In Ergo, ring signatures are implemented using Sigma protocols, allowing for:\n\n- Proving knowledge of one secret from a set of secrets\n- Creating cryptographic proofs that obfuscate the true signer"
+    },
+    {
+      "heading": "Example Scenario",
+      "level": 3,
+      "content": "```scala\n// Simplified conceptual representation\nval ringSignature = prove {\n  atLeastOneOf(\n    List(\n      proveDlog(pubKey1),\n      proveDlog(pubKey2),\n      proveDlog(pubKey3)\n    )\n  )\n}\n```"
+    },
+    {
+      "heading": "Related Cryptographic Concepts",
+      "level": 2,
+      "content": "- [Discrete Logarithm Proofs](dlog.md)\n- [Threshold Signatures](threshold.md)\n- [Sigma Protocols Overview](sigma.md)"
+    },
+    {
+      "heading": "Privacy Mechanisms",
+      "level": 2,
+      "content": "- **ZeroJoin**: A privacy protocol leveraging ring signatures to restore fungibility\n- **ErgoMixer**: A non-custodial mixing service using ring signature techniques"
+    },
+    {
+      "heading": "Advanced Applications",
+      "level": 2,
+      "content": "- [Cryptographic Foundations in Ergo](crypto.md)\n- [Schnorr Signatures and Privacy](schnorr.md)\n- [Sidechains and Interoperability](sigma-chains.md)"
+    },
+    {
+      "heading": "Security Considerations",
+      "level": 2,
+      "content": "- Computational complexity makes tracing the original signer computationally infeasible\n- Relies on the hardness of the discrete logarithm problem\n- Provides strong privacy guarantees without compromising blockchain security"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/ring.md",
+  "processed_at": "2025-05-11T19:20:02.297246",
+  "ai_processed": true
+}

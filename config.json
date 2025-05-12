@@ -5,12 +5,6 @@
       "url": "https://github.com/ergoplatform/ergodocs",
       "branch": "main",
       "description": "Ergo Platform Documentation Repository"
-    },
-    {
-      "type": "website",
-      "url": "https://docs.ergoplatform.com/",
-      "max_depth": 2,
-      "description": "Ergo Platform Documentation Website"
     }
   ],
   "output": {
@@ -28,7 +22,13 @@
     "day_of_week": "monday",
     "time": "00:00"
   },
-  "openai": {
-    "model": "gpt-4"
+  "ai": {
+    "default_provider": "anthropic",
+    "openai": {
+      "model": "o1-mini"
+    },
+    "anthropic": {
+      "model": "claude-3-haiku-20240307"
+    }
   }
 } 

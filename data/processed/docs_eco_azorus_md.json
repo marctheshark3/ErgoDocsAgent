@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_azorus_md",
+  "title": "Azorus",
+  "summary": "Azorus is an intelligence platform for UTXO blockchains, providing analytics and dApp capabilities. It is currently in a dormant state as the developers have shifted their focus to other priorities, but will be resumed when there is sufficient demand. The project includes a demo, whitepaper, IDO on ergopad, and use cases for DeFi trader analytics with no code.",
+  "qa_pairs": [
+    {
+      "question": "What is Azorus?",
+      "answer": "Azorus is an intelligence platform for UTXO Blockchains."
+    },
+    {
+      "question": "What are the key features of Azorus?",
+      "answer": "Azorus provides analytics and DeFi trader analytics with no code."
+    },
+    {
+      "question": "What is the current status of the Azorus project?",
+      "answer": "The Azorus project is currently in a dormant state as the developers have shifted their focus to other priorities."
+    },
+    {
+      "question": "Where can I find more information about Azorus?",
+      "answer": "More information about Azorus can be found in the project demo, whitepaper, and IDO on ergopad."
+    },
+    {
+      "question": "What are some potential use cases for Azorus?",
+      "answer": "Azorus can be used for DeFi (degen?) trader analytics with no code."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Azorus\n  - Intelligence Platform\n  - Analytics\n  - dApp\n  - dApp-InDev\n---"
+    },
+    {
+      "heading": "Azorus",
+      "level": 1,
+      "content": "An intelligence platform for UTXO Blockchains\n\n- [Project Demo](https://www.youtube.com/watch?v=SD8bDf-nxTQ)\n- [Whitepaper](https://github.com/gsblabsio/azorus)\n- [IDO on ergopad](https://ergopad.io/projects/azorus)\n- [Azorus Use cases & applications: DeFi (degen?) trader analytics with no code](https://www.youtube.com/watch?v=RbCGaXrqaRQ)\n\n/// admonition | Status\n    type: warning\n\nThis project is currently in a dormant state as the developers have shifted their focus to other priorities. It will be resumed when there is sufficient demand. \n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/azorus.md",
+  "processed_at": "2025-05-11T19:42:41.642553",
+  "ai_processed": true
+}

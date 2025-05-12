@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two use cases discussed in the tutorial?",
+    "answer": "{\"1\":\"You only want your Mosaik app to be used from within wallet apps. But you want web browsers visiting your app URL to show a nice site explaining the users to open the app URL from within a wallet app\",\"2\":\"You want your Mosaik app to run within a web browser\"}"
+  },
+  {
+    "question": "How does the tutorial handle the case where the Mosaik app should only be used from within wallet apps?",
+    "answer": "The tutorial moves the Mosaik app away from the URL and instead serves HTML content, while leaving a hint for Mosaik executors where to find the actual Mosaik app."
+  },
+  {
+    "question": "What is the purpose of the Mosaik web executor?",
+    "answer": "The Mosaik web executor is an interactive website consisting of a single HTML page, a single JS file, and a configuration file that allows running Mosaik apps from within a web browser."
+  },
+  {
+    "question": "What are the limitations of the Mosaik web executor?",
+    "answer": "The Mosaik web executor does not support pixel-perfect element positioning or coloring elements in all available colors, as it is designed to behave the same as Mosaik executed in wallet applications."
+  },
+  {
+    "question": "What are the two new API endpoints required for connecting a wallet with ErgoPay in the Mosaik web executor?",
+    "answer": "Endpoint A is called continuously by the web executor's connect wallet screen to check if the user already connected, and Endpoint B is an ErgoPay endpoint connected from the wallet app when the user connects, which saves the user's wallet address in a temporary map for Endpoint A to pick up."
+  }
+]

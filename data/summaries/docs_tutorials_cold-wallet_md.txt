@@ -1,0 +1,1 @@
+Introduction: A cold wallet is a type of cryptocurrency wallet that is not connected to the internet, providing a high level of security for storing digital assets. Cold wallets are typically hardware devices or paper wallets that store private keys offline, protecting them from online threats such as hacking or theft.

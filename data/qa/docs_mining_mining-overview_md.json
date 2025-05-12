@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Autolykos algorithm?",
+    "answer": "Autolykos is an ASIC-resistant Proof of Work algorithm written in Scala that is used for Ergo mining."
+  },
+  {
+    "question": "What are the recommended mining options for Ergo?",
+    "answer": "The recommended mining options are joining a mining pool or solo mining if you have 1%+ of the network hash rate."
+  },
+  {
+    "question": "What are the key resources for getting started with Ergo mining?",
+    "answer": "Key resources include setting up a wallet, learning about Autolykos, and understanding SmartPools and subpooling."
+  },
+  {
+    "question": "What are the main community spaces for Ergo mining?",
+    "answer": "The main community spaces are Discord, Telegram, Reddit, and the Ergo Mining Guide."
+  },
+  {
+    "question": "What is the purpose of the Autolykos algorithm?",
+    "answer": "The Autolykos algorithm is designed to be ASIC-resistant, making Ergo mining accessible to a wide range of participants."
+  }
+]

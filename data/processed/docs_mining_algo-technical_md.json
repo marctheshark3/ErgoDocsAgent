@@ -1,0 +1,113 @@
+{
+  "id": "docs_mining_algo-technical_md",
+  "title": "Autolykos Line-by-line",
+  "summary": "Autolykos is a proof-of-work (PoW) algorithm used in blockchain mining. It is based on the Equihash paper and the generalized birthday problem. The algorithm requires a large cyclic group G of prime order q with a fixed generator g and identity element e. Miners must find k (=32) elements from a set of N elements that yield a hash value lower than a target value. The block mining procedure involves inputting the block height h and upcoming block header hash m, then generating a list R of numeric hashes r using the Blake2b256 hash function. The algorithm then computes a list A from R and checks if the sum of k elements from A has a hash value lower than the target. The first miner to solve this puzzle can add the next block to the blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What is the Autolykos proof-of-work algorithm?",
+      "answer": "Autolykos is a proof-of-work (PoW) algorithm utilized in blockchain mining, based on the principles outlined in the Equihash paper."
+    },
+    {
+      "question": "What is the core mechanism of the Autolykos algorithm?",
+      "answer": "Miners are tasked with finding k (=32) elements from a set of N elements, where the chosen elements should yield a sum that, when hashed, has a hash value lower than a target value."
+    },
+    {
+      "question": "What are the pre-requisites for the Autolykos algorithm?",
+      "answer": "Autolykos requires a very large cyclic group G of prime order q with a fixed generator g and identity element e."
+    },
+    {
+      "question": "How does the Autolykos algorithm work in the block mining process?",
+      "answer": "The Autolykos block mining pseudocode outlines the step-by-step process for miners to solve the puzzle and add the next block to the blockchain."
+    },
+    {
+      "question": "What is the significance of the cyclic group in the Autolykos algorithm?",
+      "answer": "The cyclic group plays a minor role in the overall PoW scheme of the Autolykos algorithm, as it returns integers in Z/qZ during the Blake2b256-based hashing function."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Autolykos\n  - Mining\n  - Algorithm\n  - Technical\n---"
+    },
+    {
+      "heading": "Autolykos Line-by-line",
+      "level": 1,
+      "content": "Autolykos is a proof-of-work (PoW) algorithm utilized in blockchain mining. It's based on the principles outlined in the Equihash paper, which itself is an exploration of the [generalized birthday problem](https://www.researchgate.net/publication/316904748_Equihash_Asymmetric_Proof-of-Work_Based_on_the_Generalized_Birthday_Problem). This guide provides an in-depth explanation of the Autolykos algorithm by breaking down its pseudocode and underlying mechanics."
+    },
+    {
+      "heading": "The Core Mechanism: An Overview",
+      "level": 2,
+      "content": "In essence, miners are tasked with finding **k (=32)** elements from a set of **N** elements. The chosen elements should yield a sum that, when hashed, has a hash value lower than a target value. The first miner to solve this puzzle can add the next block to the blockchain."
+    },
+    {
+      "heading": "Autolykos Block Mining Pseudocode",
+      "level": 2,
+      "content": "![Screenshot 2022-06-01 at 23.41.49.png](https://storage.googleapis.com/ergo-cms-media/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a.png)"
+    },
+    {
+      "heading": "Pre-Requisites: The Cyclic Group",
+      "level": 2,
+      "content": "Before diving into the block mining procedure, it's important to understand that Autolykos requires:\n\n- a very large cyclic group **G** \n- of prime order **q** \n- with fixed generator **g** \n- And identity element **e**.\n\nThis prime group returns integers in **Z/qZ** during the *Blake2b256*-based hashing function.\n\n_Example cyclic group with generator z, identity element 1, order 6_\n![unnamed (1).png](https://storage.googleapis.com/ergo-cms-media/unnamed_1_44d138eaaf/unnamed_1_44d138eaaf.png)\n\nHowever, we won't dwell on the cyclic group as it plays a minor role in the overall PoW scheme."
+    },
+    {
+      "heading": "Line 1: Input h and m",
+      "level": 2,
+      "content": "> Input: upcoming block header hash m, block height h\n\n\nThe Autolykos Proof-of-Work (PoW) algorithm utilizes two key inputs to initiate its functioning:\n\n\n- **Block Height (h)**: Represents the height of the blockchain, or simply, the number of blocks.\n- **Upcoming Block Header Hash (m)**: This is a cryptographic hash of the components of the upcoming block header, which includes elements such as the previous block header hash, the Merkle root, a nonce, and other relevant data.\n\nThe block header hash is a **hash of the block header components**, (i,e previous block header hash, Merkle root, nonce, etc.)"
+    },
+    {
+      "heading": "Algorithm 3: Hash Function",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Preliminaries",
+      "level": 3,
+      "content": "Before delving into the subsequent lines of the algorithm, it's crucial to understand the hash function denoted by **H()** in Autolykos. This function is called Algorithm 3 and is based on the *Blake2b256* hash function."
+    },
+    {
+      "heading": "Functionality",
+      "level": 4,
+      "content": "The Algorithm 3 evaluates if the Blake2b256 hash of the given inputs is lower than \\(2^{256}\\). If so, it returns the hash after a modulo operation with \\(q\\), where \\(q\\) is the prime order of group \\(G\\). Should the hash exceed this value, the function iterates until a suitable hash is obtained. It should be noted that the outputs of Algorithm 3 are numeric hashes in the range **Z/qZ**."
+    },
+    {
+      "heading": "Line 2: Computation of List R",
+      "level": 3,
+      "content": "In this line, the algorithm focuses on generating a list called **\\(R\\)**. This list is populated with numeric hashes called **\\(r\\)** values. Each **\\(r\\)** value is produced by the function **\\(\\text{takeRight}(31, H(j \\parallel h \\parallel M))\\)**."
+    },
+    {
+      "heading": "Variables Explained",
+      "level": 4,
+      "content": "- **\\(j\\)**: An integer within the range \\([0, N)\\).\n- **\\(h\\)**: Block height, as described earlier.\n- **\\(M\\)**: A constant 8kb data segment used to slow down the hash calculation.\n\nHere, **\\(\\text{takeRight}(31, H(...))\\)** essentially selects the 31 least significant bytes from the 32-byte output of the **H(...)** function, discarding the most significant byte. \n\nFor example, if \\(j = 1\\), then \\(r_1 = \\text{takeRight}(31, H(1 \\parallel h \\parallel M))\\).\n\nThis operation is performed \\(N-1\\) times to populate the list \\(R\\) with \\(N\\) elements, using an incrementing \\(j\\)."
+    },
+    {
+      "heading": "Lines 3/4: begin while loop and guessing",
+      "level": 2,
+      "content": "Once the list \\(R\\) is calculated, the algorithm enters a loop where it makes a nonce guess. The loop continues until a nonce is found that produces a hash less than a given target value.\n\n```bash\nCalculate r\nwhile true do\n```"
+    },
+    {
+      "heading": "Lines 5/6: seed for generating indexes",
+      "level": 2,
+      "content": "Line 5, **i = takeRight(8, H(m||nonce)) mod N**, produces an integer in [0,N). Algorithm 3 is utilised but with **m** and the **nonce** as inputs. Once the hash **H(m||nonce)** is returned, the eight least significant bytes are kept and passed through **mod N**. As a side note, the highest possible integer value with 8 bytes is 2<sup>64</sup> \u2013 1, and assuming **N** = 2<sup>26</sup>_, an 8-byte hash **mod N** will result in the first few digits being zero. The number of zeros in **i** decreases as **N** grows.\n \nLine 6 produces **e**, a seed for index generating. Algorithm 3 is called with inputs **i** (generated in line 5), **h**, and **M**. Then, the most significant byte of the numeric hash is dropped, and the remaining 31 bytes are kept as value **e**. It should also be noted that value **e** can be retrieved from **list R** instead of being computed since **e** is an **r** value."
+    },
+    {
+      "heading": "Line 7: index generator",
+      "level": 2,
+      "content": "Element index **J** is created using Algorithm 6 with inputs **e**, **m**,_ and **nonce**. Function **genIndexes** is a pseudorandom one-way that returns a list of **k** (=32) numbers in [0,N).\n \n**genIndexes function**\n\n![unnamed (6).png](https://storage.googleapis.com/ergo-cms-media/unnamed_6_987fcaba80/unnamed_6_987fcaba80.png)\n \nA couple of extra steps are not shown in the pseudocode, such as a byteswap. The creation and application of genIndexes can be explained via the following example:\n\n\n**GenIndexes(_e||m||nonce_)...**\n\n- **hash** = *Blake2b256*(e||m||nonce) = [0xF963BAA1C0E8BF86, 0x317C0AFBA91C1F23, 0x56EC115FD3E46D89, 0x9817644ECA58EBFB]_\n- **hash64to32** = [0xC0E8BF86, 0xF963BAA1, 0xA91C1F23, 0x317C0AFB, 0xD3E46D89 0x56EC115F, 0xCA58EBFB, 0x9817644E]_\n- **extendedhash** (i.e., byteswap and concatenate 4 bytes by repeating first 4 bytes) = [0x86BFE8C0, 0xA1BA63F9, 0x231F1CA9, 0xFB0A7C31, 0x896DE4D3, 0x5F11EC56, 0xFBEB58CA, 0x4E641798, 0x86BFE8C0]_\n\n\nThe following python code shows slicing the extended hash, returning k indexes. In this example we are assuming _h_ < 614,400, thus N = 2<sup>26</sup> (67,108,864).\n \n**Slicing and mod N[1]**\n\n```python\nfor i in range(8):\n\tidxs[i << 2] = r[i] % np.uint32(ItemCount)\n\tidxs[(i << 2) + 1] = ((r[i] << np.uint32(8)) | (r[i + 1] >> np.uint32(24))) % np.uint32(ItemCount)\n\tidxs[(i << 2) + 2] = ((r[i] << np.uint32(16)) | (r[i + 1] >> np.uint32(16))) % np.uint32(ItemCount)\n\tidxs[(i << 2) + 3] = ((r[i] << np.uint32(24)) | (r[i + 1] >> np.uint32(8))) % np.uint32(ItemCount)\n```\n\nThe main takeaway is that slicing returns **k** indexes which are pseudorandom values derived from the seed, i.e., **e**, **m**, and **nonce**.\n \nreturn [0x2BFE8C0, 0x3E8C0A1, 0xC0A1BA, 0xA1BA63, 0x1BA63F9, 0x263F923, 0x3F9231F, 0x1231F1C, 0x31F1CA9, 0x31CA9FB, 0xA9FB0A, 0x1FB0A7C, 0x30A7C31, 0x27C3189, 0x31896D, 0x1896DE4, 0x16DE4D3, 0x1E4D35F, 0xD35F11, 0x35F11EC, 0x311EC56, 0x1EC56FB,  0x56FBEB, 0x2FBEB58, 0x3EB58CA, 0x358CA4E, 0xCA4E64, 0x24E6417, 0x2641798, 0x179886, 0x39886BF,  0x86BFE8]\n \nThis index can be translated to values in base ten as it refers to numbers in [0, N). For instance, 0x2BFE8C0 = 46131392, 0x3E8C0A1 = 65585313, 0xC0A1BA = 12624314, and so on. The miner uses these indexes to retrieve **k r** values.\n \nThe genIndexes function prevents optimisations as it is extremely difficult, basically impossible, to find a seed such that genIndexes(seed) returns desired indexes."
+    },
+    {
+      "heading": "Line 8: sum of r elements given k",
+      "level": 2,
+      "content": "Using the index generated in _line 7_, the miner retrieves the corresponding **k (=32) r** values from **list R** and sums these values. This might sound confusing but let\u2019s break it down.\n \nContinuing the example above, the miner stores the following indexes:\n\n```json\n{0 | 46,131,392},\n{1 | 65,585,313},\n{2 | 12,624,314},\n{3 | 10,599,011},\n\u2026\n{31 | 8,830,952}\n```\n\nGiven the indexes above, the miner retrieves the following r values from **list R** stored in memory.\n```json\n{0 | 46,131,392} \u2192 _dropMsb(H(46,131,392||h||M))_\n{1 | 65,585,313} \u2192 _dropMsb(H(65,585,313||h||M))_\n{2 | 12,624,314} \u2192 _dropMsb(H(12,624,314||h||M))_\n{3 | 10,599,011} \u2192 _dropMsb(H(10,599,011||h||M))_\n\u2026\n{31 | 8,830,952} \u2192 _dropMsb(H(8,830,952||h||M))_\n```\n\nNote that **Takeright(31)** operated on a 32-byte hash can also be written as **dropMsb** (drop most significant byte).\n \nSince the miner already stores **list R** in RAM, the miner does not need to compute **k (= 32)** *Blake2b256* functions and instead looks up the values. \n\nThis is a key feature of *ASIC resistance*. An ASIC with limited memory needs to compute 32 *Blake2b256* iterations to get the values that could have been looked up in memory, and fetching from memory takes much less time. \n\nAn ASIC with limited memory would require 32 *Blake2b256* instances physically on the die to achieve one hash per cycle, which would require more area and higher costs. It's simple to prove that storing **list R** in memory is well worth the trade-off. \n\nAssume the following, a GPU has a hash rate of **G** = 100MH/s, **N** = 2<sup>26</sup>, **k** = 32, block interval **t** = 120 seconds, and elements are looked up every four hashes. We can assume that elements are looked up every four hashes because, for each nonce guess, multiple elements such as **i**, **J**, and **H(f)** require Algorithm 3, i.e. blake2b hash, instances. \n\nWe can estimate that each **r** value will be used, on average, **(G * k * t)/(N*4)** = 1430.51 times.\n \nOnce the 32 **r** values are looked up, they are summed."
+    },
+    {
+      "heading": "Line 9 - 12: check if the hash of sum is below target",
+      "level": 2,
+      "content": "The sum of the 32 **r** values is hashed using Algorithm 3, and if the output is below target **b**, the PoW is successful, **m** and **nonce** are returned to network nodes, and the miner is rewarded in ERG. If the sum hash is above the target, _Lines 4 \u2013 11_ are repeated with a new nonce.\n \nIf you have made it this far, congratulations! After reading all of this information, you should have a good understanding of Autolykos v2! If you want a visual demonstration of Autolykos, please see the graphic at the end of this document. If you would like a video explanation, you can find it [here](https://youtu.be/pPYcfLQGIHg)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/algo-technical.md",
+  "processed_at": "2025-05-11T19:50:13.979544",
+  "ai_processed": true
+}

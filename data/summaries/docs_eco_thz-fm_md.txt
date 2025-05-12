@@ -1,0 +1,1 @@
+THz.FM is an open-source framework developed by Swamp Audio to replace existing legacy media monetization and management platforms. The goals are to improve the lives of artists and musicians, and to bring diverse ideas and people together to create something greater than the sum of their parts. The framework aims to harness the power of blockchain and the Ergo platform.

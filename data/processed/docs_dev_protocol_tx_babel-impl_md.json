@@ -1,0 +1,154 @@
+{
+  "id": "docs_dev_protocol_tx_babel-impl_md",
+  "title": "Babel Fees Implementation Guide",
+  "summary": "This guide provides detailed instructions for implementing Babel fees in Ergo applications, allowing users to pay transaction fees using tokens instead of ERG. The implementation steps include minting a token, creating a Babel fee box using TokenJay.app, and setting up a server with Node.js and the necessary dependencies.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# Babel Fees Implementation Guide\n\n## Overview\n\nThis guide provides detailed instructions for implementing Babel fees in your Ergo applications. The implementation example demonstrates how to enable u..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Babel Fees Implementation Guide"
+    },
+    {
+      "question": "What is the 'Overview' section about?",
+      "answer": "This guide provides detailed instructions for implementing Babel fees in your Ergo applications. The..."
+    },
+    {
+      "question": "What is the 'Prerequisites' section about?",
+      "answer": "1. Node.js and npm (tested with Node v20.10.0)\n2. Fleet SDK core and babel-fees plugin\n3. Webpack fo..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Babel Fees Implementation Guide",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "This guide provides detailed instructions for implementing Babel fees in your Ergo applications. The implementation example demonstrates how to enable users to pay transaction fees using tokens instead of ERG, which is particularly useful for new users who may not have ERG in their wallets."
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 2,
+      "content": "1. Node.js and npm (tested with Node v20.10.0)\n2. Fleet SDK core and babel-fees plugin\n3. Webpack for building\n4. A minted token to use for Babel fees\n5. A Nautilus wallet\n6. Ubuntu 22.04 LTS (for server setup)"
+    },
+    {
+      "heading": "Implementation Steps",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "1. Token Preparation",
+      "level": 3,
+      "content": "First, mint the token you wish to use for Babel Fees:\n1. Create your token (e.g., \"lightning tokens\" with 1,000,000 supply)\n2. Note the Asset ID (e.g., `272a4aeba6d1596ee0405b13fa223074077fd31f2d519fcd2f7b1656596db029`)\n3. Note the bank wallet address (e.g., `9hqbqkUfC4nmi1fVNcj8B3iEYh9HUnsLazcsRHwjoZJpZbmrCiq`)"
+    },
+    {
+      "heading": "2. Create Babel Fee Box",
+      "level": 3,
+      "content": "Use TokenJay.app to create a Babel Box providing liquidity:\n1. Visit [Tokenjay](https://tokenjay.app/)\n2. Click \"Open App\"\n3. Navigate to \"Purchase Tokens\" \u2192 \"Babel Fee Liquidity\"\n4. Connect your ErgoPay wallet\n5. Create new babel fee box\n6. Set your exchange rate (e.g., 0.0001 ERG per 1 token)\n7. Set liquidity amount (e.g., 10,000 tokens & 100 ERG)"
+    },
+    {
+      "heading": "3. Server Setup",
+      "level": 3,
+      "content": "```bash"
+    },
+    {
+      "heading": "Update system",
+      "level": 1,
+      "content": "sudo apt-get update\nsudo apt-get upgrade"
+    },
+    {
+      "heading": "Install NVM",
+      "level": 1,
+      "content": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash"
+    },
+    {
+      "heading": "Restart terminal or reboot",
+      "level": 1,
+      "content": "nvm install v20.10.0\nnvm install-latest-npm"
+    },
+    {
+      "heading": "Install nginx",
+      "level": 1,
+      "content": "sudo apt-get install nginx"
+    },
+    {
+      "heading": "Create project directory",
+      "level": 1,
+      "content": "cd /var/www/html\nmkdir fleetsdk\ncd fleetsdk/"
+    },
+    {
+      "heading": "Install dependencies",
+      "level": 1,
+      "content": "npm install @fleet-sdk/core\nnpm install --save-dev webpack webpack-cli ts-loader html-webpack-plugin typescript\nnpm install @fleet-sdk/babel-fees-plugin\n```"
+    },
+    {
+      "heading": "4. Configuration Files",
+      "level": 3,
+      "content": "Create webpack configuration (`webpack.config.js`):\n```javascript\nconst path = require('path');\nconst HtmlWebpackPlugin = require('html-webpack-plugin');\n\nmodule.exports = {\n    mode: 'development',\n    entry: './src/index.ts',\n    devtool: 'inline-source-map',\n    module: {\n        rules: [\n        {\n            test: /\\.tsx?$/,\n            use: 'ts-loader',\n            exclude: /node_modules/,\n        },\n        ],\n    },\n    resolve: {\n        extensions: ['.tsx', '.ts', '.js'],\n    },\n    output: {\n        filename: 'bundle.js',\n        path: path.resolve(__dirname, 'dist'),\n    },\n    plugins: [\n        new HtmlWebpackPlugin({\n            template: 'index.html'\n        })\n    ]\n};\n```\n\nCreate TypeScript configuration (`tsconfig.json`):\n```json\n{\n    \"compilerOptions\": {\n        \"outDir\": \"./dist/\",\n        \"sourceMap\": true,\n        \"noImplicitAny\": true,\n        \"module\": \"es6\",\n        \"target\": \"es5\",\n        \"jsx\": \"react\",\n        \"allowJs\": true\n    },\n    \"include\": [\n        \"./src/**/*\"\n    ]\n}\n```"
+    },
+    {
+      "heading": "5. Implementation Code",
+      "level": 3,
+      "content": "Create the main implementation file (`src/index.ts`):\n\n```typescript\nimport { OutputBuilder, TransactionBuilder } from '@fleet-sdk/core';\nimport { BabelSwapPlugin } from '@fleet-sdk/babel-fees-plugin'; \n\n// Configuration - Replace with your values\nconst AssetID = \"272a4aeba6d1596ee0405b13fa223074077fd31f2d519fcd2f7b1656596db029\";\nconst BabelBoxBankAddr = \"9hqbqkUfC4nmi1fVNcj8B3iEYh9HUnsLazcsRHwjoZJpZbmrCiq\";\nconst ergoTree = `100604000e20${AssetID}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`;\n\n// Fetch Babel Box from API\nconst fetchBabelBox = async () => {\n    try {\n        const response = await fetch(`https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/${ergoTree}`);\n        const json = await response.json();\n        const babelBox = json.items[0];\n\n        const additionalRegisters = { \n            R4: babelBox.additionalRegisters.R4?.serializedValue,\n            R5: babelBox.additionalRegisters.R5?.serializedValue,\n            R6: babelBox.additionalRegisters.R6?.serializedValue,\n            R7: babelBox.additionalRegisters.R7?.serializedValue,\n            R8: babelBox.additionalRegisters.R8?.serializedValue,\n            R9: babelBox.additionalRegisters.R9?.serializedValue \n        }; \n        \n        return { ...babelBox, additionalRegisters };\n    } catch (error) {\n        console.error('Failed to fetch Babel Box:', error);\n        return null;\n    }\n}\n\n// Main Babel Fees transaction function\nconst BabelFees = async () => {\n    try {\n        const connected = await ergoConnector.nautilus.connect();\n        if (connected) {\n            const defaultAddress = await ergo.get_change_address();\n            const height = await ergo.get_current_height();\n            const babelBox = await fetchBabelBox();\n\n            if (!babelBox) {\n                console.log(\"No suitable Babel Box found.\");\n                return;\n            }\n\n            const unsignedTx = new TransactionBuilder(height)\n                .from(await ergo.get_utxos())\n                .extend(BabelSwapPlugin(babelBox, {\n                    tokenId: AssetID,\n                    amount: \"50\"\n                }))\n                .to(\n                    new OutputBuilder(\n                        '1000000',\n                        defaultAddress\n                    ).addTokens({\n                        tokenId: AssetID,\n                        amount: \"50\"\n                    })\n                )\n                .sendChangeTo(BabelBoxBankAddr)\n                .payMinFee()\n                .build()\n                .toEIP12Object();\n\n            const signedTx = await ergo.sign_tx(unsignedTx);\n            const txId = await ergo.submit_tx(signedTx);\n\n            if (txId) {\n                console.log(\"Transaction ID:\", txId);\n            }\n        }\n    } catch (error) {\n        console.error(\"Transaction Error:\", error);\n    }\n};\n\n// Event listeners\ndocument.addEventListener('DOMContentLoaded', () => {\n    const PayWithBabelFees = document.getElementById('BabelFees');\n    if (PayWithBabelFees) {\n        PayWithBabelFees.addEventListener('click', BabelFees);\n    }\n});\n```"
+    },
+    {
+      "heading": "6. Create HTML Interface",
+      "level": 3,
+      "content": "Create `babelfees.html`:\n```html\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Ergo BabelFees</title>\n    <script defer src=\"http://YOUR-DOMAIN-OR-IP/fleetsdk/dist/bundle.js\"></script>\n</head>\n<body>\n    <div style=\"padding: 15px;\">\n        <div>\n            <button id=\"BabelFees\">Self Sign with Babel Fees</button>\n        </div>\n    </div>\n</body>\n</html>\n```"
+    },
+    {
+      "heading": "7. Build and Deploy",
+      "level": 3,
+      "content": "Compile the TypeScript code:\n```bash\ncd /var/www/html/fleetsdk\nnpx webpack\n```"
+    },
+    {
+      "heading": "Testing",
+      "level": 2,
+      "content": "To test your implementation:\n\n1. Create a new Nautilus wallet (0 assets initially)\n2. Transfer appropriate amount of tokens to the new wallet\n3. Wait for transaction settlement\n4. Connect to your test page using the wallet\n5. Attempt self-signing with Babel fees"
+    },
+    {
+      "heading": "Important Security Notes",
+      "level": 2,
+      "content": "1. Change Address Handling:\n   - Current implementation sends change to `BabelBoxBankAddr`\n   - Using `defaultAddress` is cleaner but requires security evaluation\n   - Consider potential liquidity draining attacks\n\n2. Transaction Monitoring:\n   - Implement proper error handling\n   - Monitor transaction status\n   - Handle concurrent spending attempts"
+    },
+    {
+      "heading": "Reference Implementations",
+      "level": 2,
+      "content": "* [Nautilus Wallet implementation](https://github.com/capt-nemo429/nautilus-wallet/pull/82)\n* [AppKit implementation](https://github.com/ergoplatform/ergo-appkit/pull/204)\n* [Fleet SDK Babel fees plugin](https://fleet-sdk.github.io/docs/plugins/babel-fees)"
+    },
+    {
+      "heading": "Additional Resources",
+      "level": 2,
+      "content": "- [EIP-0031 Specification](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)\n- [Fleet SDK Documentation](https://fleet-sdk.github.io/docs/plugins/babel-fees)\n- [Ergo Platform API Documentation](https://api.ergoplatform.com/api/v1/docs/)"
+    },
+    {
+      "heading": "Wallet Implementation Considerations",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Box Discovery and Identification",
+      "level": 3,
+      "content": "The hexadecimal representation of the Babel Fees contract is:\n```\n100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202\n```\nReplace `{tokenId}` with the specific token ID and use this as a parameter in the API endpoint: `https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/{ErgoTree}`"
+    },
+    {
+      "heading": "Implementation Requirements",
+      "level": 3,
+      "content": "1. **Fee Calculation and Display**\n\n      - Calculate required Babel fee amount\n      - Show clear exchange rates\n      - Provide fee comparisons\n      - Display transaction status updates\n\n2. **Transaction Management**\n\n      - Monitor mempool for concurrent spending\n      - Implement chained transaction support\n      - Handle transaction failures gracefully\n      - Support multiple users spending same box\n\n3. **Security Considerations**\n\n      - Validate all Babel fee box parameters\n      - Implement proper change address handling\n      - Consider potential liquidity draining attacks"
+    },
+    {
+      "heading": "Development Tools",
+      "level": 3,
+      "content": "- Fleet SDK plugin: `@fleet-sdk/babel-fees-plugin`\n- API integration endpoints\n- Smart contract templates"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/tx/babel-impl.md",
+  "processed_at": "2025-05-11T19:25:50.362796",
+  "ai_processed": true
+}

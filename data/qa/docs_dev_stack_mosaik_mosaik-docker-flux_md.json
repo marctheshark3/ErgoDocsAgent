@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How can the Mosaik app be built and packaged as a JAR file?",
+    "answer": "The Mosaik app can be built and packaged as a JAR file using the `gradlew bootJar` command. The compiled JAR file will be located in the `build/libs` subdirectory."
+  },
+  {
+    "question": "What is the purpose of dockerizing the Mosaik app?",
+    "answer": "Dockerizing the Mosaik app allows it to be packaged with a predefined Java runtime environment and run in a containerized environment, which is useful for deployment on servers and hosting platforms like Flux."
+  },
+  {
+    "question": "What is the content of the Dockerfile used to dockerize the Mosaik app?",
+    "answer": "The Dockerfile uses the `eclipse-temurin:17-jdk-jammy` base image, copies the compiled JAR file into the container, exposes port 8080, and sets the entry point to run the JAR file."
+  },
+  {
+    "question": "What is the process for deploying the Mosaik app on the Flux platform?",
+    "answer": "To deploy the Mosaik app on Flux, you need a Zel ID and some Flux cryptocurrency (around $1 USD). The Flux platform provides a step-by-step guide to register and deploy the app, which can be done using the Docker image created earlier."
+  },
+  {
+    "question": "What are the key benefits of using Docker to package and deploy the Mosaik app?",
+    "answer": "Dockerizing the Mosaik app simplifies deployment by providing a pre-configured runtime environment, making it easier to run the app on servers and hosting platforms like Flux, which is a good fit for dApps built on the Ergo blockchain."
+  }
+]

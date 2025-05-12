@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is dApp Connector?",
+    "answer": "dApp Connector is a way to easily create Ergo transactions with a pure JS library, such as Fleet."
+  },
+  {
+    "question": "What is the NightOwl dApp Connector?",
+    "answer": "NightOwl dApp Connector is a React package and accompanying video tutorial for creating dApps on the Ergo platform."
+  },
+  {
+    "question": "How can you avoid conflicts with the Nautilus wallet?",
+    "answer": "To avoid conflicts with Nautilus, you can call `ergoConnector.nautilus.connect()` instead of `window.ergo_request_read_access()` and `ergoConnector.nautilus.isConnected()` instead of `window.ergo_check_read_access()`."
+  },
+  {
+    "question": "What resources are provided for message signing and user authentication with Nautilus wallet and sigma-rust?",
+    "answer": "The resource provided is a tutorial on message signing and user authentication with Nautilus wallet and sigma-rust: https://www.dappstep.com/docs/tutorial-dapp-connector/message-signing-authentication"
+  },
+  {
+    "question": "What example code is provided for Yoroi's dapp connector?",
+    "answer": "The example code for Yoroi's dapp connector is available at: https://github.com/Emurgo/yoroi-frontend/tree/develop/packages/yoroi-connector/example-ergo"
+  }
+]

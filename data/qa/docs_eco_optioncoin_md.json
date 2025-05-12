@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is OptionCoin?",
+    "answer": "OptionCoin is a novel concept that combines decentralized options trading with token emission on the Ergo blockchain."
+  },
+  {
+    "question": "How does the OptionCoin token issuance work?",
+    "answer": "The OptionCoin smart contract periodically issues new tokens, similar to the Ergo emission contract, and sells them via call options on a decentralized exchange."
+  },
+  {
+    "question": "What are the benefits of OptionCoin?",
+    "answer": "OptionCoin provides a decentralized and transparent method for token emission, offers options trading opportunities, and creates a self-sustaining token economy."
+  },
+  {
+    "question": "What are the potential use cases of OptionCoin?",
+    "answer": "Potential use cases include decentralized fundraising, speculation, risk management, and liquidity provision."
+  },
+  {
+    "question": "How is the exercise price of OptionCoin options determined?",
+    "answer": "The exercise price of the OptionCoin call options is determined by the current market price of OptionCoin on a decentralized exchange."
+  }
+]

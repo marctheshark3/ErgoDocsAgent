@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What language is used for on-chain contracts on the Ergo blockchain?",
+    "answer": "On-chain contracts are developed in ErgoScript, a simple language designed for writing smart contracts on the Ergo blockchain."
+  },
+  {
+    "question": "What are the key characteristics of ErgoScript?",
+    "answer": "ErgoScript is a Turing-complete language that prioritizes security and is well-suited for the UTXO transactional model used by Ergo."
+  },
+  {
+    "question": "What language is used for off-chain components on the Ergo blockchain?",
+    "answer": "For off-chain components, such as interacting with the blockchain, creating transactions, and building applications, developers can use Rust along with frameworks like sigma-rust."
+  },
+  {
+    "question": "What is the purpose of the sigma-rust framework?",
+    "answer": "sigma-rust provides a Rust port of the sigmastate-interpreter, allowing developers to interact with the Ergo blockchain from their Rust applications."
+  },
+  {
+    "question": "What is an example of using Rust for off-chain components on the Ergo blockchain?",
+    "answer": "The Oracle Pools project, a federated protocol for delivering external data to the Ergo blockchain, is implemented in Rust using the oracle-core repository."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the OrgRobot moderation bot used in Ergo Telegram groups?",
+    "answer": "OrgRobot helps enforce community rules and prevent spam by restricting new users from posting until they have verified their identity."
+  },
+  {
+    "question": "How does the verification process work with OrgRobot?",
+    "answer": "The verification process typically involves answering a set of custom entry questions, which serves as a deterrent against most bots and spammers."
+  },
+  {
+    "question": "What are some of the key features of the GrepRobot moderation tool used in Telegram groups?",
+    "answer": "GrepRobot allows moderators to filter and block specific words, phrases, or links, automatically delete messages containing prohibited content, warn or kick/ban users for violating group rules, set up whitelists and blacklists, and customize responses and actions for different rule violations."
+  },
+  {
+    "question": "What is the purpose of the moderation practices and tools employed across various platforms?",
+    "answer": "The moderation practices and tools are employed to ensure a positive environment for all participants by maintaining a healthy and welcoming community and fostering productive discussions and collaboration."
+  },
+  {
+    "question": "What is the overall focus of the Moderation Guide document?",
+    "answer": "The Moderation Guide outlines the moderation practices and tools employed across various platforms to ensure a positive environment for all participants."
+  }
+]

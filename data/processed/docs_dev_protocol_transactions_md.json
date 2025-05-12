@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_protocol_transactions_md",
+  "title": "Transactions",
+  "summary": "Transactions in Ergo are atomic state transition operations that destroy existing boxes and create new ones. Each transaction consists of input boxes, output boxes, and optional data-input boxes. Input boxes must have a valid guard script, and transactions can include proof of spending correctness. Transactions are publicly viewable and can be manipulated using the Ergo Transaction Builder tool.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of a transaction in Ergo?",
+      "answer": "Each Ergo transaction is an atomic state transition operation, which means that it destroys a box from the state and creates new ones."
+    },
+    {
+      "question": "What are the three main components of an Ergo transaction?",
+      "answer": "Each transaction executed on Ergo consists of one or more input boxes, one or more output boxes, and zero or more data-input boxes."
+    },
+    {
+      "question": "What is the purpose of input boxes in an Ergo transaction?",
+      "answer": "Input boxes are the source of funds for the transaction, and the guard script in each box must return true for the transaction to be considered valid."
+    },
+    {
+      "question": "What is the purpose of output boxes in an Ergo transaction?",
+      "answer": "Output boxes are the destination of funds, and they will be created by the transaction."
+    },
+    {
+      "question": "What is the purpose of data-input boxes in an Ergo transaction?",
+      "answer": "Data-input boxes are additional boxes whose data can be referenced and used by smart contracts of the inputs, but their guard script will not be evaluated."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Data Model\n  - Transactions\n---"
+    },
+    {
+      "heading": "Transactions",
+      "level": 1,
+      "content": "Each Ergo transaction is an **atomic state transition operation**, which means that it *destroys* a [box](box.md) from the state and creates new ones."
+    },
+    {
+      "heading": "Anatomy",
+      "level": 2,
+      "content": "Each transaction executed on Ergo consists of **these three things**. \n\n- `One or more` **Input boxes** \n    -  This is the source of your funds for the transaction. \n    -  These boxes must already exist and will be destroyed by the transaction.  \n    -  The guard script in each box will be evaluated and must return `true` for the transaction to be considered valid.\n- `One or more` **Output boxes**  \n    -  This is your destination of funds. \n    -  These boxes will be created.\n-  `Zero or more` **Data-Input boxes**  \n    -  These are additional boxes whose data can be referenced and used by smart contracts of the inputs. \n    -  The guard script in these boxes will not be evaluated."
+    },
+    {
+      "heading": "Data Inputs",
+      "level": 3,
+      "content": "- [**Data inputs**](read-only-inputs.md) are a unique concept created by Ergo, which were added to Cardano with the *Vasil* Hardfork. These allow multiple transactions to share a data-input box, storing only a single reference to the box in the block."
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "- If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain *proof of spending correctness* - context extension (user-defined key-value map) and data inputs (links to existing boxes in the state) that you may use during script reduction to crypto, signatures that satisfies the remaining cryptographic protection of the script. \n- Transactions are not encrypted, meaning you can publicly view transactions included in blocks."
+    },
+    {
+      "heading": "Tools",
+      "level": 2,
+      "content": "- [Transaction builder](https://thierrym1212.github.io/txbuilder/) |  The application allows you to manipulate Ergo JSON transactions with a UI and to sign them with a wallet or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction to edit it.  | [GitHub](https://github.com/ThierryM1212/transaction-builder/)  | [Video](https://youtu.be/0VhfY7osT2k)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/transactions.md",
+  "processed_at": "2025-05-11T19:25:25.711466",
+  "ai_processed": true
+}

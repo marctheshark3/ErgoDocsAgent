@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the different platform options mentioned for desktop development?",
+    "answer": "[\"JVM\",\"JavaFX\",\"Rust\",\"JS/TS + Electron\",\"Python\"]"
+  },
+  {
+    "question": "What are some example desktop applications built using these platforms?",
+    "answer": "[\"Ergo Wallet\",\"ErgoMixer\",\"Satergo\"]"
+  },
+  {
+    "question": "Which programming language is used for building desktop applications with Electron?",
+    "answer": "JS/TS (JavaScript and TypeScript)"
+  },
+  {
+    "question": "What is the primary use case of the Ergo Wallet desktop application?",
+    "answer": "Wallet for the Ergo blockchain platform"
+  },
+  {
+    "question": "Which desktop platform is known for its performance and safety guarantees?",
+    "answer": "Rust"
+  }
+]

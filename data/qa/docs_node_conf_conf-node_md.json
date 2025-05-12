@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the possible options for the `stateType` setting?",
+    "answer": "The possible options for `stateType` are `utxo` and `digest`."
+  },
+  {
+    "question": "What is the purpose of the `extraIndex` setting?",
+    "answer": "The `extraIndex` setting allows the node to store all transactions, boxes, and addresses in an index."
+  },
+  {
+    "question": "What is the purpose of the `verifyTransactions` setting?",
+    "answer": "If `verifyTransactions` is set to true, the node will download block transactions and verify them."
+  },
+  {
+    "question": "What is the purpose of the `blocksToKeep` setting?",
+    "answer": "The `blocksToKeep` setting defines the number of last blocks to keep with transactions and ADproofs, while only storing the header for other blocks."
+  },
+  {
+    "question": "What is the purpose of the `extraCacheSize` setting?",
+    "answer": "The `extraCacheSize` setting sets the number of recently used extra indexes kept in memory."
+  }
+]

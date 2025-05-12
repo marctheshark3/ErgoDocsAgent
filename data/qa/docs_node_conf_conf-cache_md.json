@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What does the `blockSectionsCacheSize` setting determine?",
+    "answer": "The `blockSectionsCacheSize` setting determines the number of recently used block sections that will be kept in memory."
+  },
+  {
+    "question": "How many recently used block sections are stored in the example configuration?",
+    "answer": "In the example configuration, the last 12 block sections are stored."
+  },
+  {
+    "question": "What does the `headersCacheSize` setting specify?",
+    "answer": "The `headersCacheSize` setting specifies the number of recently used headers that will be kept in memory."
+  },
+  {
+    "question": "How many recently used headers are stored in the example configuration?",
+    "answer": "In the example configuration, the last 1000 headers are stored."
+  },
+  {
+    "question": "What does the `indexesCacheSize` setting determine?",
+    "answer": "The `indexesCacheSize` setting determines the number of recently used indexes that will be kept in memory."
+  }
+]

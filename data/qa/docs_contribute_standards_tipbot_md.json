@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ErgoTipperBot?",
+    "answer": "The ErgoTipperBot allows you to tip other members erg or any of the supported native tokens."
+  },
+  {
+    "question": "What are the supported platforms for the ErgoTipperBot?",
+    "answer": "The ErgoTipperBot is supported on Reddit, Discord, Telegram, and Twitter."
+  },
+  {
+    "question": "How do you add a new token to the ErgoTipperBot?",
+    "answer": "To add a new token, create a pull request on Github that adds the token to the supported token list."
+  },
+  {
+    "question": "What is the process for getting started with the ErgoTipperBot on Reddit?",
+    "answer": "On Reddit, you send a private message to u/ErgoTipperBot with '!start', then use '!address' to get your tip wallet address, and finally transfer erg or tokens to that address."
+  },
+  {
+    "question": "What are the requirements for a token tip transaction on the ErgoTipperBot?",
+    "answer": "Each token tip transaction requires at least 0.00115 erg to cover the transaction fees and box storage."
+  }
+]

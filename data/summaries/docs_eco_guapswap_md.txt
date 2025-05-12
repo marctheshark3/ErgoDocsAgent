@@ -1,0 +1,1 @@
+GuapSwap is a fully decentralized smart contract profit swapping service on the Ergo Blockchain. It provides a decentralized exchange (DEX) platform for swapping digital assets. The project is hosted on GitHub, and a project report is available in the provided PDF file.

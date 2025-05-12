@@ -1,0 +1,68 @@
+{
+  "id": "docs_node_install_manual_md",
+  "title": "Ergo Full Node Installation Guide",
+  "summary": "This guide covers the manual setup process for running an Ergo full node. It includes instructions for preparing the environment, obtaining the Ergo client JAR, creating a configuration file, launching the node, and verifying the synchronization status. The guide also provides links to additional resources such as troubleshooting, configuration files, node modes, API documentation, testnet guide, and node FAQ.",
+  "qa_pairs": [
+    {
+      "question": "What are the main options for obtaining the Ergo client JAR?",
+      "answer": "The two main options are: 1) Download the latest stable ergo-<version>.jar file from the Ergo GitHub releases page, or 2) Build the JAR from source by following the detailed guide for Building the Ergo Node from Source."
+    },
+    {
+      "question": "What should be included in the ergo.conf configuration file?",
+      "answer": "The ergo.conf file should include settings to override the default node configuration, such as disabling mining and setting a secure API key hash for API access."
+    },
+    {
+      "question": "How do you launch the Ergo node?",
+      "answer": "To launch the Ergo node, run the command 'java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf', adjusting the memory allocation (-Xmx4G) based on your system's available RAM."
+    },
+    {
+      "question": "What is the purpose of the 'ergo' folder mentioned in the guide?",
+      "answer": "The 'ergo' folder is a dedicated folder for storing the Ergo node files, including the downloaded or built JAR file and the ergo.conf configuration file."
+    },
+    {
+      "question": "What are the alternative methods for running an Ergo full node mentioned in the guide?",
+      "answer": "The guide mentions two alternative methods for running an Ergo full node: Docker Setup and Running on Android."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Node\n  - Installation\n  - Manual Setup\n  - Full Node\n  - Guide\n---"
+    },
+    {
+      "heading": "Ergo Full Node Installation Guide",
+      "level": 1,
+      "content": "This guide covers the manual setup process for running an Ergo full node. For alternative methods, see [Docker Setup](docker.md) or [Running on Android](node-android.md)."
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Preparing Your Environment",
+      "level": 3,
+      "content": "1.  **Create a Folder**: Start by creating a dedicated folder for your Ergo node files (e.g., `ergo` in your home directory).\n2.  **Obtain the Ergo Client JAR:** You have two main options:\n    *   **Download (Recommended):** Visit the [Ergo GitHub releases page](https://github.com/ergoplatform/ergo/releases/) and download the latest stable `ergo-<version>.jar` file. This is the simplest method for most users. Place the downloaded JAR file in your `ergo` folder.\n    *   **Build from Source:** If you need a specific version (like a Release Candidate) or want to contribute to development, you can compile the JAR yourself. This requires Git, JDK, and SBT.\n        *   **See the detailed guide: [Building the Ergo Node from Source](build-from-source.md)**\n        *   *Note:* Building development versions might require handling SNAPSHOT dependencies. Refer to the build guide and the specific [SNAPSHOT Dependencies guide](snapshot-dependencies.md) if you encounter issues."
+    },
+    {
+      "heading": "Setting Up Your Node",
+      "level": 3,
+      "content": "1.  **Create a Configuration File (`ergo.conf`):**\n    *   In your `ergo` folder, create a text file named `ergo.conf`.\n    *   This file overrides default node settings. Only add settings you need to change.\n    *   Start with a basic configuration (adjust `apiKeyHash` later if needed):\n        ```conf\n        ergo {\n            node {\n                mining = false // Disable mining unless intended\n            }\n        }\n        scorex {\n            restApi {\n                // Set a secure API key hash for API access\n                // Example hash for password \"hello\":\n                apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\" \n            }\n        }\n        ```\n    *   For more configuration options, see the [Configuration Files documentation](conf.md).\n\n2.  **Launch Your Node:**\n    *   Open a terminal or command prompt in your `ergo` folder.\n    *   Run the node using the `java -jar` command, specifying the JAR file, network (`--mainnet` or `--testnet`), and configuration file (`-c`). Allocate sufficient memory using `-Xmx`.\n        ```bash\n        # Example for mainnet with 4GB RAM allocated\n        java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf \n        ```\n    *   Adjust `-Xmx4G` based on your system's available RAM (e.g., `-Xmx2G`, `-Xmx8G`). More RAM generally improves performance, especially during sync.\n    *   Replace `ergo-<version>.jar` with the actual name of your downloaded or built JAR file.\n\n3.  **Wait for Initialization & Synchronization:**\n    *   The node will start up and begin synchronizing with the Ergo network. This process downloads and validates the blockchain history.\n    *   **Synchronization can take a significant amount of time** (hours to days) depending on your hardware, network speed, and the chosen [Node Mode](modes.md). Be patient."
+    },
+    {
+      "heading": "Verifying Node Synchronization",
+      "level": 2,
+      "content": "1.  **Monitor via Web Panel:** Open `http://127.0.0.1:9053/panel` (or port 9052 for testnet) in your web browser. During sync, it should show \"Active synchronization\" and increasing block height.\n2.  **Check Sync Status:** Once synchronization is complete, the panel will indicate \"Node is synced.\" You can also check the `/info` endpoint (`http://127.0.0.1:9053/info`) and compare the reported `fullHeight` with a reliable public explorer like [explorer.ergoplatform.com](https://explorer.ergoplatform.com/en/)."
+    },
+    {
+      "heading": "Additional Resources",
+      "level": 2,
+      "content": "*   [Troubleshooting Guide](troubleshooting.md)\n*   [Node Configuration Files](conf.md)\n*   [Node Modes](modes.md)\n*   [Node API (Swagger)](swagger.md)\n*   [Testnet Guide](testnet.md)\n*   [Node FAQ](node-faq.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/manual.md",
+  "processed_at": "2025-05-11T19:55:18.843962",
+  "ai_processed": true
+}

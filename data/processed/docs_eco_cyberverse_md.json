@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_cyberverse_md",
+  "title": "Cyberverse",
+  "summary": "Cyberverse is an open-world, pixel-based game that integrates blockchain technology, specifically the Ergo Blockchain, to provide unique player experiences. The game aims to offer opportunities for players to socialize and earn while playing. Key features include NFT integrations, custom tokens, and an in-game marketplace integrated with the Ergo blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What is Cyberverse?",
+      "answer": "Cyberverse is an open-world, pixel-based game filled with various opportunities to socialize with others and earn while doing so."
+    },
+    {
+      "question": "What is the vision of Cyberverse?",
+      "answer": "The vision of Cyberverse is to have an open world pixel game, fit with blockchain integration to allow for unique player experiences using Ergo Blockchain (by having NFT integrations, custom tokens, in-game marketplace integrated with Ergo blockchain, etc)."
+    },
+    {
+      "question": "What blockchain is Cyberverse built on?",
+      "answer": "Cyberverse is built on the Ergo Blockchain."
+    },
+    {
+      "question": "What are some of the blockchain-based features of Cyberverse?",
+      "answer": "Cyberverse features NFT integrations, custom tokens, and an in-game marketplace integrated with the Ergo blockchain."
+    },
+    {
+      "question": "What are the key tags associated with Cyberverse?",
+      "answer": "The key tags associated with Cyberverse are Cyberverse, Gaming, Metaverse, dApp, and dApp-Live."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Cyberverse\n  - Gaming\n  - Metaverse\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "Cyberverse",
+      "level": 1,
+      "content": "[CyberVerse](https://docs.cyberversegame.io/cyberverse-whitepaper/) is an open-world, pixel-based game filled with various opportunities to socialize with others and earn while doing so. Their vision is to have an open world pixel game, fit with blockchain integration to allow for unique player experiences using Ergo Blockchain(by having NFT integrations, custom tokens, in-game marketplace integrated with Ergo blockchain, etc)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/cyberverse.md",
+  "processed_at": "2025-05-11T19:43:14.585500",
+  "ai_processed": true
+}

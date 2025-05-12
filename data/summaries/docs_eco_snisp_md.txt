@@ -1,0 +1,5 @@
+SNISP (Succinct Non-Interactive Share Proofs) is a technology that enables accurate and efficient calculations of performed work on the blockchain. It uses a combination of traditional shared calculation methods and concepts from NEPA Palace to compress the amount of work and the total set of shares that each miner creates, enabling the creation of efficient and decentralised mining pools. 
+
+SNISPs incentivise miners to mine near their ideal top values, which they can commit to beforehand based on their hash rate and a stable value. This results in more secure and scalable mining pools with greater efficiency and decentralisation than traditional centralised mining pools.
+
+These proofs are applicable to any Proof of Work blockchain and enable trustless calculation of work, which can be put on the blockchain. SNISPs can be used for other applications that involve measuring performed work, such as direct work-based governance or work-backed assets, potentially revolutionising how we approach work measurement and incentivisation in the blockchain space.

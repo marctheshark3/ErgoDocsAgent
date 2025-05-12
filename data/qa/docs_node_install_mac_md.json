@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What Java version is recommended for running an Ergo node?",
+    "answer": "Version 9 or 11 is recommended."
+  },
+  {
+    "question": "How do you install Java 11 using SDKMAN?",
+    "answer": "sdk install java 11.0.13.8.1-amzn"
+  },
+  {
+    "question": "How do you download the Ergo node and set up the API password?",
+    "answer": "bash -c \"$(curl -s https://node.phenotype.dev)\""
+  },
+  {
+    "question": "How can you track the status of the Ergo node sync?",
+    "answer": "Compare the heights found in [127.0.0.1:9053/info](http://127.0.0.1:9053/info) to the ones on the [explorer](https://explorer.ergoplatform.com/en/)."
+  },
+  {
+    "question": "How do you add the Ergo node jar as a startup item?",
+    "answer": "Create a wrapper shell script, set the permissions to allow execute, and then add it by pressing + and selecting the script."
+  }
+]

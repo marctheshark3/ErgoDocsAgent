@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key requirement for issuing a token in Ergo?",
+    "answer": "The token id must match the id of the box of the first input."
+  },
+  {
+    "question": "How are token ids computed in Ergo?",
+    "answer": "Token ids are computed through hashing."
+  },
+  {
+    "question": "How can a token with specific id properties be created in Ergo?",
+    "answer": "By iterating over a register (e.g., R4) used as a nonce, a token with certain id properties can be created, such as ids starting with a certain number of zeroes."
+  },
+  {
+    "question": "What is the concept of Proof-of-Work backed Non-Fungible Tokens (NFTs) in Ergo?",
+    "answer": "Some contracts may only accept Proof-of-Work backed NFTs, where computational work may be required to generate the token with specific id properties."
+  },
+  {
+    "question": "What is a potential application of Proof-of-Work backed tokens in Ergo?",
+    "answer": "Potential applications could include spam filtering."
+  }
+]

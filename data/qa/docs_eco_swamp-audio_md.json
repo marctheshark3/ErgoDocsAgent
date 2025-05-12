@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Swamp Audio?",
+    "answer": "Swamp Audio is a music-related entity described in the content."
+  },
+  {
+    "question": "Where can Swamp Audio be found?",
+    "answer": "Swamp Audio can be found at thz.fm."
+  },
+  {
+    "question": "What are the main topics associated with Swamp Audio?",
+    "answer": "The main topics associated with Swamp Audio are music and NFT."
+  },
+  {
+    "question": "What is the format of the content provided?",
+    "answer": "The content is formatted as YAML front matter with tags."
+  },
+  {
+    "question": "What is the purpose of the content?",
+    "answer": "The purpose of the content is to provide an introduction to Swamp Audio."
+  }
+]

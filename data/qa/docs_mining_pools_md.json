@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are mining pools?",
+    "answer": "Mining pools are groups of miners who combine their computational resources to increase their chances of finding a block. The reward is then split among the pool members, proportional to the amount of work they contributed."
+  },
+  {
+    "question": "How do earnings and pool size relate?",
+    "answer": "While larger pools win blocks more frequently and can provide more consistent payouts, your long-term earnings should be roughly the same regardless of the pool size. In smaller pools, you might not receive a payout until the pool wins a block."
+  },
+  {
+    "question": "What is dual mining?",
+    "answer": "Dual mining allows you to mine Ergo alongside other coins such as KAS and ALPH."
+  },
+  {
+    "question": "What is solo mining?",
+    "answer": "Solo mining is an option for those who wish to operate independently of mining pools. This requires setting up a node and stratum server, which can be done by following the instructions provided in our guide."
+  },
+  {
+    "question": "Where can I find a list of mining pools that offer a solo port?",
+    "answer": "A comprehensive list of pools offering a solo port can be found on Mining Pool Stats."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is BlockP2P?",
+    "answer": "BlockP2P is a peer-to-peer communication protocol specifically designed for the Ergo blockchain that facilitates the exchange of data between nodes in a decentralized manner."
+  },
+  {
+    "question": "What are the core functions of BlockP2P?",
+    "answer": "The core functions of BlockP2P are: 1) Block Propagation, 2) Transaction Propagation, and 3) Network Synchronization."
+  },
+  {
+    "question": "How does BlockP2P handle block announcements?",
+    "answer": "When a node mines a new block, it sends a block announcement message to its peers, which includes the block header containing important metadata about the block."
+  },
+  {
+    "question": "How does BlockP2P handle transaction broadcasts?",
+    "answer": "When a node receives a new transaction, it broadcasts a transaction message to its peers, which contains the raw transaction data including inputs, outputs, and signatures."
+  },
+  {
+    "question": "What security measures are incorporated into BlockP2P?",
+    "answer": "BlockP2P incorporates security measures such as message authentication, data validation, and spam protection to ensure the integrity of the data being exchanged."
+  }
+]

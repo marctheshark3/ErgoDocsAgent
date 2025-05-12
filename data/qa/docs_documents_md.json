@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the general approach that Ergo follows in its development?",
+    "answer": "Ergo follows a fundamental approach and uses stable well-tested solutions, even if that leads to slower short-term innovations."
+  },
+  {
+    "question": "Where are most of Ergo's solutions formalized?",
+    "answer": "Most of Ergo's solutions are formalized in papers presented at peer-reviewed conferences and have been widely discussed in the community."
+  },
+  {
+    "question": "What are some of the key foundational papers underlying the Ergo protocol?",
+    "answer": "Key foundational papers include 'On Contractual Money', 'Improving authenticated dynamic dictionaries, with applications to cryptocurrencies', 'Self-reproducing Coins as Universal Turing Machine', and others."
+  },
+  {
+    "question": "What is the Lithos Protocol, and where can I find more information about it?",
+    "answer": "The Lithos Protocol is described in the paper 'Succinct, Non-Interactive Share Proofs', which can be found in the 'Post-Mainnet' section of the document."
+  },
+  {
+    "question": "What is the Dexy project, and where can I find more information about it?",
+    "answer": "The Dexy project is described in the document 'Dexy', which can be found in the 'Post-Mainnet' section."
+  }
+]

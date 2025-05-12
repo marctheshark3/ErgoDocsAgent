@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the EIP-0004 standard?",
+    "answer": "The EIP-0004 standard provides a uniform way to issue Ergo tokens."
+  },
+  {
+    "question": "What are the key features of Ergo tokens?",
+    "answer": "Ergo supports custom tokens as first-class citizens, with a special register (R2) containing (tokenId -> amount) pairs, and a box can contain at most 255 secondary tokens."
+  },
+  {
+    "question": "How are new tokens created in Ergo?",
+    "answer": "A transaction can create out-of-thin-air tokens in its outputs if the token identifier is equal to the identifier of the first input box of the transaction."
+  },
+  {
+    "question": "What is the purpose of the storage rent component in Ergo?",
+    "answer": "The storage rent component allows a miner to collect (or burn) all the tokens inside a box if it is expired, and there are not enough Ergs in the box to pay the storage rent fee."
+  },
+  {
+    "question": "What are the additional registers (R4-R6) used in the Ergo token standard?",
+    "answer": "R4 is for the token verbose name, R5 is for the token description, and R6 is for the number of decimals."
+  }
+]

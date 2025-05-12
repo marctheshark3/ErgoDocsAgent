@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Blockchain Context?",
+    "answer": "The Blockchain Context represents data taken from the transaction and the state of the blockchain. The data for the blockchain context is stored in the global object `CONTEXT`."
+  },
+  {
+    "question": "What is the purpose of the `HEIGHT` property in the Blockchain Context?",
+    "answer": "The `HEIGHT` property is an integer representing the height of the block currently being validated by miners."
+  },
+  {
+    "question": "What information can be accessed through the `SELF` box in the Blockchain Context?",
+    "answer": "The `SELF` box contains information relevant to the specified eUTXO, such as the value in nanoERGs, the box ID, the proposition bytes of the guarding script, the tokens stored in the box, and the box registers."
+  },
+  {
+    "question": "What is the purpose of the `INPUTS` object in the Blockchain Context?",
+    "answer": "The `INPUTS` object contains the eUTXOs used as input boxes to be spent in the transaction. The `SELF` box is part of this input box collection."
+  },
+  {
+    "question": "How can the data in the Blockchain Context be used to manipulate a contract's spending conditions?",
+    "answer": "The Blockchain Context provides the main entities that you will interact with to manipulate your contract's spending conditions."
+  }
+]

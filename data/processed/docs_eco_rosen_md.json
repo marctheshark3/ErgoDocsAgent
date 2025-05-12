@@ -1,0 +1,53 @@
+{
+  "id": "docs_eco_rosen_md",
+  "title": "Rosen Bridge: The Future of Cross-Chain Asset Transfers",
+  "summary": "Rosen Bridge is an open-source protocol that enables secure and efficient cross-chain asset transfers, primarily focused on Ergo. It eliminates the need for smart contracts on the bridged chains by using a system of Watchers and Guards to achieve consensus on the Ergo platform. The bridge has several key features, including scalability, user safety, and the use of the RSN token for sybil resistance, fee distribution, and service access. The bridge is expected to launch imminently and has plans to add support for additional blockchains like BTC, BSC, and Dogecoin in the future. The team includes 8 developers with some frontend and UI tasks outsourced.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary focus of Rosen Bridge?",
+      "answer": "Rosen Bridge is primarily focused on Ergo and allows users to seamlessly transfer coins and tokens between Ergo and any other compatible blockchain."
+    },
+    {
+      "question": "How does Rosen Bridge reduce the need for smart contracts on other chains?",
+      "answer": "Rosen Bridge eliminates the need for deploying and using smart contracts on the other chains by achieving consensus on any action on the Ergo platform through a group of entities known as Guards."
+    },
+    {
+      "question": "What are the key components of Rosen Bridge's architecture?",
+      "answer": "The architecture of Rosen Bridge comprises Watchers and Guards. Watchers are responsible for monitoring blockchain activities and reporting them to Guards, who then process these events and execute actions."
+    },
+    {
+      "question": "What is the role of the Rosen Token (RSN) in the Rosen Bridge ecosystem?",
+      "answer": "The Rosen Token (RSN) serves as a mechanism for sybil resistance, a system for fee distribution, and a means to access the services of the Rosen Bridge."
+    },
+    {
+      "question": "How can a project add new token options to the Rosen Bridge?",
+      "answer": "Projects can add new token options to the Rosen Bridge by paying a listing fee to the Rosen Fund, which involves minting wrapped tokens and updating the token map. Potential discounts are available for open-source projects."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Rosen Bridge\n  - Bridge\n  - Cross-Chain\n  - Interoperability\n  - dApp\n  - dApp-Beta\n---"
+    },
+    {
+      "heading": "Rosen Bridge: The Future of Cross-Chain Asset Transfers",
+      "level": 1,
+      "content": "[Rosen Bridge](https://rosen.tech), an open-source protocol, is pioneering the future of cross-chain asset transfers. It's currently in beta, testing its first bridge to Cardano. Rosen Bridge leverages Ergo's capabilities to facilitate secure and efficient coin and token transfers between Ergo and other blockchains.\n/// details | Latest Developments\n     {type: tip, open: true}\nRosen Bridge is expected to launch imminently, join the [Rosen Telegram chat](https://t.me/rosenbridge_erg) to keep up to date.\n///"
+    },
+    {
+      "heading": "Key Features",
+      "level": 2,
+      "content": "Rosen Bridge is an [open-source](https://github.com/rosen-bridge) protocol, primarily focused on Ergo, that allows users to seamlessly transfer coins and tokens between Ergo and any other compatible blockchain. The compatibility of the other blockchain, referred to as chainX, is determined by its support for multi-signature transactions or threshold signatures.\n\nOne of the unique aspects of this bridge is that it eliminates the need for deploying and using smart contracts on the other chains. This is because consensus on any action is achieved on the Ergo platform by a group of entities known as [Guards](rosen-guard.md). These Guards generate a signed transaction (either for Ergo or chainX) which can then be broadcasted to the other chain by any party, including the Guards themselves.\n\n- **Architecture**: The architecture of the bridge comprises of Watchers and Guards. [Watchers](watcher.md) are responsible for monitoring blockchain activities and reporting them to Guards. The Guards process these events and execute actions, thereby ensuring a high level of security and functionality.\n- **Smart Contract Reduction**: The Ergo-centric logic of Rosen Bridge significantly reduces the need for smart contracts on the chains it bridges.\n- **RSN Token**: The Rosen Token (RSN) plays a crucial role in the operation of the bridge. It serves as a mechanism for sybil resistance, a system for fee distribution, and a means to access the services of the bridge. (See the [Tokenomics](rosen-tokenomics.md) section)\n- **Scalability and User Safety**: The design of Rosen Bridge allows for the addition of new chains through independent modules. It also prioritizes the success of user transactions by waiting for a sufficient number of confirmations."
+    },
+    {
+      "heading": "Rosen Bridge Operations and Features",
+      "level": 2,
+      "content": "/// details | What is the bridge fee structure?\n     {type: info, open: false}\nInitially, it's the greater of $10 or 0.5% of the transaction value, plus network fees, adjustable by the guard set. The fee is collected in the transferred token on Ergo. Network fees vary: static for Ergo and Cardano, dynamic for EVM-based networks.\n///\n\n/// details | Why is the fee so high?\n     {type: info, open: false}\nEach event has to be reported on by 60%+1 of Watchers, and they need to be incentivised to do so. It also prevents all their permits being exhausted by low-value transactions. \n///\n\n/// details | Is there a maximum amount for a single transaction on Rosen Bridge?\n     {type: info, open: false}\nNo fixed maximum, but large transfers may take longer, from hours to 1-2 days, due to manual guard intervention for fund transfers from cold to hot wallets.\n///\n\n/// details | How is ADA managed within the system for transactions to Cardano?\n     {type: info, open: false}\nNetwork fees in the transaction token on Ergo are sent to a dedicated address for covering network fees on different chains. Currently, the Rosen team manually manages this, with plans for future automation.\n\n///\n\n/// details | How can a project add new token options to the bridge?\n     {type: info, open: false}\nProjects pay a listing fee to the Rosen Fund, with potential discounts for open-source projects. This involves minting wrapped tokens and updating the token map. Fees are distributed to watchers and guards.\n///\n\n/// details | What are the next chains to be added following ADA?\n     {type: info, open: false}\nThe roadmap includes BTC, BSC (EVM-chains), and Dogecoin in the midterm. Code refactoring aims to facilitate adding new chains, with initial chains being the most challenging.\n///\n\n/// details | What is the size and composition of the team?\n     {type: info, open: false}\n\nThe team includes 8 developers, with some frontend and UI tasks outsourced. Additionally, 2-3 developers have worked part-time over the past year, supported by several advisors.\n\nFor more information, please see the [Team](rosen-team.md) section.\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/rosen.md",
+  "processed_at": "2025-05-11T19:46:56.804175",
+  "ai_processed": true
+}

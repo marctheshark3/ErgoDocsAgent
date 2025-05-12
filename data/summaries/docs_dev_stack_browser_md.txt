@@ -1,0 +1,1 @@
+The document discusses the options available to developers for building browser-based dApps on the Ergo platform. It covers the choice between using JavaScript/TypeScript or Rust for frontend development, as well as the integration of either the ErgoPay or dApp Connector for handling payments. The document provides links to additional resources for each of the discussed options.

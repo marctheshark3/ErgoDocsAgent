@@ -1,0 +1,7 @@
+The document discusses the integration of the Ergo blockchain with the Go programming language. It highlights two key projects:
+
+1. Ergo-Golang: A promising tool for interacting with the Ergo blockchain, currently in its initial stages of development. It offers basic functionalities and provides an opportunity for Go developers to contribute to its enhancement.
+
+2. Ergo-lib-go: A Go wrapper around C bindings for ErgoLib from sigma-rust, allowing Go developers to interact with the Ergo blockchain using the robust functionalities of ErgoLib.
+
+The document also encourages developers to connect with the Ergo community, particularly the #development Discord channel, for support and guidance.

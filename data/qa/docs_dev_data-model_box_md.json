@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a 'box' in the context of the Ergo blockchain?",
+    "answer": "A box is an immutable unit in the Ergo blockchain that can be created or removed, but never altered. It houses data, code, and registers, with all of its contents exclusively stored in the registers."
+  },
+  {
+    "question": "What are the four pre-defined registers in an Ergo box?",
+    "answer": "The four pre-defined registers in an Ergo box contain the box's monetary value, its protection script (the ErgoTree), and the ID of the transaction that created the box."
+  },
+  {
+    "question": "How are Ergo box IDs generated?",
+    "answer": "Each box has a unique ID, derived from the unique contents of the box, including the data of the transaction that created it. The box ID is computed by applying the blake2b256 hash function to the box's content, expressed as a Coll[Byte]."
+  },
+  {
+    "question": "What is the purpose of the 'bytesWithoutRef' function in Ergo?",
+    "answer": "The 'bytesWithoutRef' function can be used to retrieve a Coll[Byte] that excludes the 'creationInfo' (R3 register) from the box's content, which includes the transaction id and associated output index."
+  },
+  {
+    "question": "What is the 'proof-of-no-premine' box in the Ergo genesis state?",
+    "answer": "The 'proof-of-no-premine' box in the Ergo genesis state contains the last block IDs from Bitcoin and Ethereum at the launch time, as well as the latest news headlines, stored in the additional registers (R4-R8)."
+  }
+]

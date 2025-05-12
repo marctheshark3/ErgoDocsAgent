@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_stack_rustkit_md",
+  "title": "Rustkit",
+  "summary": "Rustkit is an SDK for building applications on the Ergo blockchain. The goal is to create a library that provides a simple and easy-to-use interface for developers to build applications. The library is currently in the early stages of development and is not recommended for production use.",
+  "qa_pairs": [
+    {
+      "question": "What is Rustkit?",
+      "answer": "Rustkit is a SDK for building applications on the Ergo blockchain."
+    },
+    {
+      "question": "What is the goal of Rustkit?",
+      "answer": "The goal of Rustkit is to create a library that provides a simple and easy to use interface for developers to build applications on the Ergo blockchain."
+    },
+    {
+      "question": "What is the current stage of Rustkit development?",
+      "answer": "Rustkit is currently in the early stages of development and is not recommended for production use."
+    },
+    {
+      "question": "Where can Rustkit be found?",
+      "answer": "Rustkit can be found on the crates.io platform at the URL https://crates.io/crates/ergo-rustkit."
+    },
+    {
+      "question": "What is the Ergo blockchain?",
+      "answer": "The Ergo blockchain is the blockchain platform that Rustkit is built to support."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rustkit",
+      "level": 1,
+      "content": "> A SDK for building applications on the Ergo blockchain. Our goal is to create a library that creates a simple and easy to use interface for developers to build applications. Currently, the library is in the early stages of development and is not recommended for production use.\n\n[crates.io/crates/ergo-rustkit](https://crates.io/crates/ergo-rustkit)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/rustkit.md",
+  "processed_at": "2025-05-11T19:36:26.152731",
+  "ai_processed": true
+}

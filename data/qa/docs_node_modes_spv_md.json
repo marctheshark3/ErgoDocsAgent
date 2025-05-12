@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Simplified Payment Verification (SPV)?",
+    "answer": "SPV allows users to verify payments without running a full network node. Users only need to keep a copy of the block headers of the longest proof-of-work chain and can obtain the Merkle branch linking their transaction to the block it's timestamped in."
+  },
+  {
+    "question": "Why is SPV necessary for resource-limited devices?",
+    "answer": "Running a full Bitcoin node requires significant bandwidth, storage, and processing power, making it unsuitable for resource-limited devices like mobile devices, especially as the Bitcoin blockchain size has exceeded 270 GB."
+  },
+  {
+    "question": "What is the limitation of SPV?",
+    "answer": "SPV is vulnerable to attacks where an attacker overpowers the network and deceives SPV users."
+  },
+  {
+    "question": "How does Ergo enhance the efficiency of SPV wallets?",
+    "answer": "Ergo implements Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) to enable the creation of highly efficient 'Light SPV' mobile wallets, which only need to download a small sample of block headers instead of the entire blockchain."
+  },
+  {
+    "question": "What is the challenge for Ethereum mobile clients in validating chain validity?",
+    "answer": "Ethereum's headers alone total around 5 GB to download, making it challenging for Ethereum mobile clients to validate chain validity."
+  }
+]

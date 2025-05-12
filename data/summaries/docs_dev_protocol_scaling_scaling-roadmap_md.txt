@@ -1,0 +1,9 @@
+The Ergo Scaling Roadmap document outlines the current focus, recent developments, and future roadmaps for scaling the Ergo blockchain. The key points are:
+
+Current Focus: Optimizing the implementation of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping, and exploring ways to increase block limits for miners.
+
+Recent Developments: Planning for Node V6 and scalability improvements, development of an SPV client, release of the pruned full node and Node V5, and the release of the Plasma Library and Plasma Tutorials.
+
+Roadmaps: The Ergo Design and Implementation Roadmap includes four phases - Foundations, Initial Experiments, Defining Adoption, and Scaling and Optimization. The scaling and optimization phase focuses on P2P level optimizations, sub-blocks, and increasing transactions per second while maintaining security.
+
+Constraints for Scaling: Limitations include requirements for a flat P2P network running on commodity hardware, and no use of centralized or "bankster" data centers for scalability.

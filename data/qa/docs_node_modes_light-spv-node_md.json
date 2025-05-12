@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is SPV?",
+    "answer": "Simplified Payment Verification (SPV) allows for a simplified way of verifying transactions by only downloading and verifying the block headers, rather than the entire blockchain."
+  },
+  {
+    "question": "How does Ergo's NIPoPoWs enhance the efficiency of SPV wallets?",
+    "answer": "Ergo implements Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) to enable the creation of lightweight SPV wallets that only need to download a small sample of block headers, around 250, compared to other SPV clients that may need to download around half a million block headers."
+  },
+  {
+    "question": "What is the advantage of the small sample size of block headers for Ergo's SPV wallets?",
+    "answer": "The sample size remains relatively small even as the blockchain grows larger over time."
+  },
+  {
+    "question": "What is Ergo currently developing?",
+    "answer": "Ergo is currently developing a highly efficient Ergo wallet with SPV security."
+  },
+  {
+    "question": "Where can one stay updated on the progress of the Ergo wallet development?",
+    "answer": "One can stay updated on the progress of the Ergo wallet development at the provided GitHub link: https://github.com/ergoplatform/sigma-rust/milestone/17."
+  }
+]

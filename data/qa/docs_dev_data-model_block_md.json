@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of blocks in blockchain technology?",
+    "answer": "Blocks group together a set of transactions and are linked chronologically to form a secure and transparent record of all transactions on the blockchain."
+  },
+  {
+    "question": "How does Ergo's block structure differ from other Proof-of-Work blockchains?",
+    "answer": "Ergo's block structure is more sophisticated, with distinct sections for the header, transactions, ADProofs, and an extension section for additional data."
+  },
+  {
+    "question": "What is the purpose of the ADProofs section in Ergo's block structure?",
+    "answer": "The ADProofs section allows light clients (nodes with limited storage) to verify transactions without downloading the entire block or the full UTXO set."
+  },
+  {
+    "question": "What is the emission schedule for Ergo's block rewards?",
+    "answer": "Initially, each block rewarded miners with 75 ERG, which were distributed among them and the Ergo Foundation Treasury. This emission schedule applied for the first two years of the network's operation."
+  },
+  {
+    "question": "What are Ergo Modifiers, and how are they used in the peer-to-peer network protocol?",
+    "answer": "In Ergo's peer-to-peer network protocol, blocks and transactions are referred to as 'modifiers,' which are exchanged between nodes to keep the network synchronized."
+  }
+]

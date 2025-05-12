@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary bottleneck for increasing transactions per second (TPS) in blockchains?",
+    "answer": "The primary bottleneck for increasing transactions per second (TPS) is the peer-to-peer (p2p) network layer."
+  },
+  {
+    "question": "How do proof-of-work (PoW) and alternative consensus mechanisms compare in terms of efficiency?",
+    "answer": "Proof-of-Work (PoW) is an efficient timestamping protocol for the base layer (Layer 0) because it operates asynchronously, without the need for additional network messages. Many alternative consensus mechanisms require extra bandwidth, making them less efficient."
+  },
+  {
+    "question": "What are the potential drawbacks of introducing measures like supernodes or eliminating mempools to boost TPS?",
+    "answer": "Introducing measures like supernodes or eliminating mempools to boost TPS can compromise the decentralization and integrity of the network, and should be avoided if the goal is to maintain a truly decentralized cryptocurrency."
+  },
+  {
+    "question": "What are the estimated TPS values for some leading blockchains?",
+    "answer": "Bitcoin (BTC) has roughly 7 TPS, Ethereum (ETH) has roughly 15 TPS, Ripple (XRP) has roughly 1500 TPS, Cardano (ADA) has roughly 7 TPS (can reach up to 250 in controlled tests), and Polkadot (DOT) has roughly 1500 TPS."
+  },
+  {
+    "question": "How does Ergo's transaction management system, based on the Extended Unspent Transaction Output (eUTXO) model, compare to the traditional UTXO model?",
+    "answer": "Ergo's eUTXO model outperforms the traditional UTXO model in terms of efficiency and flexibility, allowing for multiple outputs in a single transaction, each potentially carrying different tokens, and enabling the simultaneous execution of complex transactions within a block, thereby boosting its blockchain's performance and scalability."
+  }
+]

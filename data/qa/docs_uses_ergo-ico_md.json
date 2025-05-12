@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two main approaches to specifying what a spending transaction spends in a cryptocurrency protocol?",
+    "answer": "The two main approaches are: the UTXO-based model, as in Bitcoin, where a transaction spends one-time asset containers (called 'coins' or UTXOs); and the account-based model, as in Nxt, Ethereum or Waves, where a transaction transfers some amount of asset from an existing long-living account to another, possibly new, long-living account."
+  },
+  {
+    "question": "How does Ergo's UTXO-based approach differ from Bitcoin's in terms of creating an ICO?",
+    "answer": "In contrast to Bitcoin's UTXO-based model, Ergo brings a spending transaction into the execution context of a script, making it possible to express dependencies between transaction outputs and inputs, and enabling the execution of arbitrarily complex Turing-complete programs on top of the blockchain."
+  },
+  {
+    "question": "What are the main stages of the ICO contract described in the article?",
+    "answer": "The main stages are: 1) the funding epoch, where investors can put Ergs into the project's box, and their withdrawal scripts and input values are added to a dictionary; 2) the funding period ends, and the dictionary becomes read-only; 3) the withdraw phase, where investors can withdraw ICO tokens based on the amount they had invested during the funding period."
+  },
+  {
+    "question": "How does the funding stage of the ICO contract work?",
+    "answer": "In the funding stage, the project creates a box committing to an empty dictionary, and the spending transaction must add the investor's withdrawal script hash and monetary value to the dictionary. The spending transaction must also pay a fee, and the contract checks that the fee is within a certain limit."
+  },
+  {
+    "question": "What is the purpose of the investor's withdrawal script hash stored in the dictionary during the funding stage?",
+    "answer": "The investor's withdrawal script hash stored in the dictionary during the funding stage will be used later in the withdraw phase, where investors can withdraw ICO tokens based on the amount they had invested during the funding period."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Sigma Rust?",
+    "answer": "Sigma Rust is a Rust implementation of the ErgoScript cryptocurrency scripting language."
+  },
+  {
+    "question": "What are the main crates in the Sigma Rust project?",
+    "answer": "The main crates are ergo-lib, ergotree-interpreter, ergotree-ir, and ergoscript-compiler."
+  },
+  {
+    "question": "What language bindings are available for Sigma Rust?",
+    "answer": "Language bindings are available for Wasm, JavaScript/TypeScript, Swift (iOS), and Java/JVM."
+  },
+  {
+    "question": "Where can I find examples of Sigma Rust usage?",
+    "answer": "Examples of Sigma Rust usage can be found in projects like Oracle Core, Ergo Headless dApp Framework, Ergo Node Interface Library, and more."
+  },
+  {
+    "question": "What are some specific examples of Sigma Rust usage?",
+    "answer": "Examples include a create transaction demo and an address generation demo, both in TypeScript."
+  }
+]

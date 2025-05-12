@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoPay?",
+    "answer": "ErgoPay is Ergo's dedicated dApp connector for non-web wallet applications."
+  },
+  {
+    "question": "How does ErgoPay differ from a web dApp connector?",
+    "answer": "ErgoPay can connect any wallet with any dApp, while a web dApp connector is limited to web extension wallets and website dApps."
+  },
+  {
+    "question": "What are the steps to try out the ErgoPay demonstration app?",
+    "answer": "1. Install Ergo Wallet App 1.6, 2. Visit the demonstration app at https://golfgl.de/ergopayshowcase/, 3. Use the menu on the left side to mint or burn a token."
+  },
+  {
+    "question": "How does implementing a dApp using ErgoPay differ from a web dApp connector?",
+    "answer": "With ErgoPay, some of your dApp logic must run on a server that can be accessed by user's wallet applications, while a web dApp connector is limited to website dApps."
+  },
+  {
+    "question": "What resources are provided for implementing a dApp using ErgoPay?",
+    "answer": "The GitHub repository 'ergopay-payment-portal' is provided as a resource."
+  }
+]

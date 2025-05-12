@@ -1,0 +1,38 @@
+{
+  "id": "docs_eco_ergomixer_identifiability_md",
+  "title": "Identifiability",
+  "summary": "ErgoUtils now supports obfuscating entry points for ErgoMixer to improve privacy. When withdrawing from the mixer to a wallet, it is obvious that the person has received funds from the mixer. This tool allows creating obfuscating addresses that randomly route the funds through multiple addresses before reaching the user's wallet, making it harder to identify the mixer usage. The document provides an example transaction demonstrating the effectiveness of this feature, which is freely available in the ErgoUtils open-source project.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the obfuscating address feature in ErgoMixer?",
+      "answer": "The obfuscating address feature is designed to make it harder to tell that someone is using the ErgoMixer when they interact with their wallets."
+    },
+    {
+      "question": "How does the obfuscating address feature work?",
+      "answer": "When withdrawing from the mixer, the funds are sent to an obfuscating address that automatically goes through random addresses before being received in the user's wallet."
+    },
+    {
+      "question": "What is an example of a transaction that is harder to identify as coming from the mixer?",
+      "answer": "The transaction with the ID 9cf412c71fc49a53f7f6ae498f22730be474127436334e5a38da92ce0d40530b is an example of a transaction that is harder to identify as coming from the mixer."
+    },
+    {
+      "question": "Where can users create an obfuscating address for ErgoMixer?",
+      "answer": "Users can create an obfuscating address with their desired hop number at https://ergoutils.org/#/others."
+    },
+    {
+      "question": "Is the ErgoUtils suite of tools completely free to use?",
+      "answer": "Yes, the utilities in ErgoUtils are completely free to use."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Identifiability",
+      "level": 1,
+      "content": "ErgoUtils now support obfuscating entry points for ErgoMixer.\n\nWhen you withdraw from the mixer to a wallet, it is obvious that that person has received some funds from the mixer, and when he spends those boxes, it is also obvious that those boxes are from the mixer.\n\nThose who care about privacy and use ErgoMixer, also probably care about not anyone being able to tell that they are using the mixer easily when they interact with their wallets. This tool is designed to address this issue.\n\nJust create an (or more if you wish) obfuscating address with your desired hop number [here](https://ergoutils.org/#/others) and use it permanently. To use it, withdraw from the mixer to the address that is created for you; your received funds in that address will automatically go through some random addresses (randomly created outputs, both number of outputs and output amounts) and finally be received in your wallet.\n\nAs an example, try to figure out if this [transaction](https://explorer.ergoplatform.com/en/transactions/9cf412c71fc49a53f7f6ae498f22730be474127436334e5a38da92ce0d40530b) is from the mixer or not - a lot harder to figure out.\n\nAs always, utilities in ErgoUtils are completely free to use!\n\n- [ergoutils GitHub](https://github.com/anon-real/ergoutils)\n- [mixerHop.js](https://github.com/anon-real/ErgoUtils/blob/master/src/utils/mixerHop.js)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/ergomixer/identifiability.md",
+  "processed_at": "2025-05-11T19:43:48.441397",
+  "ai_processed": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_lib_sigmajs_md",
+  "title": "Sigma JS",
+  "summary": "Sigma JS is a JavaScript library currently under development and not yet ready for production use. It aims to offer a user experience for JavaScript developers comparable to what AppKit provides for JVM developers, in conjunction with Fleet. The document provides resources to help understand and follow the development of Sigma JS, including a JavaScript module on npmjs and a project called sigmajs-crypto-facade that aims to replace BouncyCastle's elliptic curve dependencies in the Sigma.JS compilation process.",
+  "qa_pairs": [
+    {
+      "question": "What is Sigma JS?",
+      "answer": "Sigma JS is a JavaScript library that aims to offer a user experience for JavaScript developers that is comparable to what AppKit provides for JVM developers."
+    },
+    {
+      "question": "What is the current status of Sigma JS?",
+      "answer": "Sigma JS is currently under development and not yet ready for production use."
+    },
+    {
+      "question": "What is the relationship between Sigma JS and Fleet?",
+      "answer": "Sigma JS, in conjunction with Fleet, aims to offer a user experience for Javascript developers that is comparable to what AppKit provides for JVM developers."
+    },
+    {
+      "question": "Where can I find the Sigma JS module on npmjs?",
+      "answer": "The Sigma JS module is available on npmjs at https://www.npmjs.com/package/sigmastate-js."
+    },
+    {
+      "question": "What project aims to replace BouncyCastle's elliptic curve dependencies in the Sigma.JS compilation process?",
+      "answer": "The project sigmajs-crypto-facade aims to replace BouncyCastle's elliptic curve dependencies in the Sigma.JS compilation process."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Sigma JS\n  - JavaScript\n  - Library\n---"
+    },
+    {
+      "heading": "Sigma JS",
+      "level": 1,
+      "content": "> **Sigma JS is currently under development and not yet ready for production use.**"
+    },
+    {
+      "heading": "Introduction",
+      "level": 2,
+      "content": "Sigma JS, in conjunction with [Fleet](fleet.md), aims to offer a user experience for Javascript developers that is comparable to what [AppKit](appkit.md) provides for JVM developers."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "Here are some resources to help you understand and follow the development of Sigma JS:\n\n- [JS module on npmjs](https://www.npmjs.com/package/sigmastate-js)\n    - This module is the result of the Scala.js compiler working on [this branch](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/833)\n    - [sigmajs-crypto-facade](https://github.com/anon-br/sigmajs-crypto-facade) is a project that aims to replace BouncyCastle's elliptic curve dependencies in the Sigma.JS compilation process."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/lib/sigmajs.md",
+  "processed_at": "2025-05-11T19:22:17.005832",
+  "ai_processed": true
+}

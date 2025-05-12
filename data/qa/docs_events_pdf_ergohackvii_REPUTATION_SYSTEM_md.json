@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the reputation system described in the document?",
+    "answer": "The purpose of the reputation system is to address the fundamental need for trust in the blockchain ecosystem by providing a decentralized, user-driven mechanism for assigning and transferring reputation."
+  },
+  {
+    "question": "How does the reputation system align with the principles of the Ergo Manifesto?",
+    "answer": "The reputation system is aligned with the Ergo Manifesto principles, as it is completely decentralized, open and auditable, created for regular people, focused on remaining cost-competitive, and has a long-term focus."
+  },
+  {
+    "question": "What are the key components of the reputation system's design?",
+    "answer": "The key components are: each reputation proof has a token to reflect the amount of reputation, users can generate new reputation proofs or extract them from existing ones, and users can assign reputation to any proof without transferring the token."
+  },
+  {
+    "question": "What are the main challenges the team faced in implementing the reputation system?",
+    "answer": "The main challenges include issues with the transaction builder using Fleet SDK, limitations in representing the reputation object in ErgoScript, and the need to develop scripts for computing reputation and extracting unexpended reputation proofs."
+  },
+  {
+    "question": "How does the reputation system aim to establish and maintain trust in the blockchain ecosystem?",
+    "answer": "The reputation system aims to establish and maintain trust by providing a decentralized, user-driven mechanism for assigning and transferring reputation, which is essential for building confidence in the entities users interact with in the blockchain space."
+  }
+]

@@ -1,0 +1,7 @@
+Ergo's transaction fee system is designed to be flexible and explicit. While the protocol does not enforce a minimum transaction fee, transactions without a fee are less likely to be included in a block by miners. Each box in a transaction must adhere to a minimum value determined by a parameter voted on by miners and the size of the box, which helps prevent the creation of dust in Ergo.
+
+The fee is calculated based on the serialized size of the boxes being created, with a minimum threshold of 360 nanoerg per byte. Miners prioritize transactions based on either the fee per byte or the validation cost unit, which are adjustable via a voting mechanism.
+
+Transaction fees are secured in a contract that can only be spent through a miner's script. The appropriate transaction fee must meet the protocol's minimum requirements, and the recommended confirmation levels vary depending on the network hashrate.
+
+Ergo also supports Babel Fees, which enable users to pay transaction fees using tokens like SigmaUSD instead of ERG.

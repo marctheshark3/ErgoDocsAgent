@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the key features of the Ergo blockchain?",
+    "answer": "The key features of Ergo include its anatomy (boxes, registers, and more), the Sigmaverse (the Ergo dApp universe), and the Ergo testnet for experimentation."
+  },
+  {
+    "question": "Where can developers find resources to learn about building on the Ergo blockchain?",
+    "answer": "Developers can find resources to learn about building on Ergo through the Ergo documentation, including articles on introductory blockchain concepts, development tutorials, and online courses."
+  },
+  {
+    "question": "What is the Sigmaverse and how can developers interact with it?",
+    "answer": "The Sigmaverse is the portal to the Ergo dApp universe, where developers can access and build applications on the Ergo blockchain."
+  },
+  {
+    "question": "How can developers get support and participate in the Ergo community?",
+    "answer": "Developers can join the Ergo Discord server for dev-support and participate in regular Hackathons, or search the chats without logging in via the Linen platform."
+  },
+  {
+    "question": "What is the purpose of the Ergo testnet?",
+    "answer": "The Ergo testnet is an alternative blockchain that developers can use for experimentation and testing before deploying their applications on the main Ergo network."
+  }
+]

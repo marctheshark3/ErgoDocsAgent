@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_stack_api_md",
+  "title": "APIs",
+  "summary": "The document provides an overview of the various APIs available for the Ergo blockchain. It covers the Node API, Explorer API, Ergo.Watch API, TokenJay API, Spectrum API, SkyHarbor API, and Ergopad API. These APIs offer different functionalities, such as accessing blockchain data, submitting transactions, managing wallets, interacting with tokens and assets, and utilizing AMM and liquidity mining features. The APIs allow developers and users to integrate Ergo into their applications and leverage the capabilities of the Ergo blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What are the main APIs provided by Ergo?",
+      "answer": "[\"Node API\", \"Explorer API v1\", \"Ergo.Watch API\", \"TokenJay API\", \"Spectrum API\", \"SkyHarbor API\"]"
+    },
+    {
+      "question": "What functionalities does the Node API provide?",
+      "answer": "The Node API provides comprehensive access to Ergo node functionalities, including blockchain data retrieval, transaction submission, wallet management, and more."
+    },
+    {
+      "question": "What information can be accessed through the Explorer API?",
+      "answer": "The Explorer API allows users to explore the Ergo blockchain and retrieve information about blocks, transactions, addresses, and other relevant data."
+    },
+    {
+      "question": "What does the Ergo.Watch API provide access to?",
+      "answer": "The Ergo.Watch API provides access to various data and metrics related to the Ergo blockchain."
+    },
+    {
+      "question": "What functionalities are provided by the Spectrum API?",
+      "answer": "The Spectrum API provides several endpoints for different functionalities related to Automated Market Makers (AMM), price tracking, liquidity mining (LM), history, and more."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "APIs",
+      "level": 1,
+      "content": "Ergo provides several APIs that offer different functionalities and services for developers and users. These APIs allow interaction with the Ergo blockchain, access to network data, and integration of Ergo into various applications. \n\nHere are some of the APIs available:\n\n- [Node API](https://git.io/fjqwb): The Node API provides comprehensive access to Ergo node functionalities, including blockchain data retrieval, transaction submission, wallet management, and more. It offers a wide range of endpoints to interact with the Ergo network programmatically.\n- [Explorer API v1](https://api.ergoplatform.com/api/v1/docs/): The Explorer API allows users to explore the Ergo blockchain and retrieve information about blocks, transactions, addresses, and other relevant data. It provides a user-friendly interface to access blockchain data and monitor network activity.\nversions but may have updated features or improvements.\n- [Ergo.Watch API](https://api.ergo.watch/docs): The Ergo.Watch API provides access to various data and metrics related to the Ergo blockchain.\n- [TokenJay API](https://api.tokenjay.app): The TokenJay API enables developers to interact with Ergo tokens and assets.\n- [Spectrum API](https://api.spectrum.fi/v1/docs/): The Spectrum API provides several endpoints for different functionalities related to Automated Market Makers (AMM), price tracking, liquidity mining (LM), history, and more.\n- [SkyHarbor API](https://docs.skyharbor.io): The SkyHarbor API provides various routes for interacting with the SkyHarbor marketplace, including accessing collection information, retrieving sales data, obtaining metrics, and utilizing the headless dApp functionality. \n- [Ergopad](https://api.ergopad.io/staking/ergopad/status/): Ergopad provides an API for staking on the Ergopad platform. \n\nThese APIs provide various functionalities and data access points, allowing developers and users to leverage the power of Ergo blockchain in their applications, explore the blockchain network, interact with assets and tokens, and access decentralized exchange services."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/api.md",
+  "processed_at": "2025-05-11T19:32:47.092317",
+  "ai_processed": true
+}

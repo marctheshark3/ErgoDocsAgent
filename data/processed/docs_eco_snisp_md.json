@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_snisp_md",
+  "title": "SNISP",
+  "summary": "SNISP (Succinct Non-Interactive Share Proofs) is a technology that enables accurate and efficient calculations of performed work on the blockchain. It uses a combination of traditional shared calculation methods and concepts from NEPA Palace to compress the amount of work and the total set of shares that each miner creates, enabling the creation of efficient and decentralised mining pools. \n\nSNISPs incentivise miners to mine near their ideal top values, which they can commit to beforehand based on their hash rate and a stable value. This results in more secure and scalable mining pools with greater efficiency and decentralisation than traditional centralised mining pools.\n\nThese proofs are applicable to any Proof of Work blockchain and enable trustless calculation of work, which can be put on the blockchain. SNISPs can be used for other applications that involve measuring performed work, such as direct work-based governance or work-backed assets, potentially revolutionising how we approach work measurement and incentivisation in the blockchain space.",
+  "qa_pairs": [
+    {
+      "question": "What is SNISP?",
+      "answer": "Succinct Non-Interactive Share Proofs (SNISPs) that allow for accurate and efficient calculations of performed work on the blockchain."
+    },
+    {
+      "question": "How do SNISPs work?",
+      "answer": "SNISPs use a combination of traditional shared calculation methods and concepts from NEPA Palace to compress the amount of work and the total set of shares that each miner creates, enabling the creation of efficient and decentralised mining pools."
+    },
+    {
+      "question": "What are the benefits of SNISPs?",
+      "answer": "SNISPs incentivise miners to mine near their ideal top values, resulting in more secure and scalable mining pools with greater efficiency and decentralisation than traditional centralised mining pools."
+    },
+    {
+      "question": "What are the applications of SNISPs?",
+      "answer": "SNISPs are applicable to any Proof of Work blockchain and can be used for other applications that involve measuring performed work, such as direct work-based governance or work-backed assets."
+    },
+    {
+      "question": "How do SNISPs compare to centralized mining pools?",
+      "answer": "Centralized mining pools require users to trust the pool operator to distribute rewards fairly, while SNISPs provide a trustless solution for calculating and distributing work."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - SNISP\n  - Mining\n  - Mining Pool\n  - Proof of Work\n  - Decentralized\n---"
+    },
+    {
+      "heading": "SNISP",
+      "level": 1,
+      "content": "Succinct Non-Interactive Share Proofs (SNISPs) that will allow for **accurate and efficient calculations of performed work on the blockchain**. They use a combination of traditional shared calculation methods and concepts from NEPA Palace to compress the amount of work and the total set of shares that each miner creates, enabling the creation of efficient and decentralised mining pools. SNISPs incentivise miners to mine near their ideal top values, which they can commit to beforehand based on their hash rate and a stable value. This results in more secure and scalable mining pools with greater efficiency and decentralisation than traditional centralised mining pools.\n\nThese proofs are applicable to any Proof of Work blockchain and enable trustless calculation of work, which can be put on the blockchain. With SNISPs, decentralised mining pools can be created that have better security than P2Pool and scalability than ETH-based SmartPools. Furthermore, these proofs can be used for other applications that involve measuring performed work, such as direct work-based governance or work-backed assets. This means that SNISPs can potentially revolutionise how we approach work measurement and incentivisation in the blockchain space, providing a more efficient and trustworthy solution for various use cases.\n\n| Feature | Centralized Mining Pools | SNIPS |\n|---------|------------------------|-------|\n| Trust | Users must trust the pool operator to distribute rewards fairly. | Trustless - users do not need to trust any third-party operator. |\n| Efficiency | Less efficient due to centralized processing of share sets. | More efficient due to decentralized processing of share sets. |\n| Security | Less secure due to concentration of hash power. | More secure due to decentralized processing of share sets. |\n| Scalability | Limited scalability due to centralized processing. | More scalable due to decentralized processing of share sets. |\n| Decentralization | Centralized processing of share sets. | Decentralized processing of share sets. |\n| Reward Distribution | Rewards are distributed based on the amount of work contributed by each miner. | Rewards are distributed based on the goodness of each miner's share set. |\n\nPlease see the [LITHOS Protocol](lithos.md) for a continuation of this work. \n\n\n\n- [SNISP (Succint Non-Interactive Share Proofs) | Ergo Summit - Mining & Minting](https://www.youtube.com/watch?v=x-9x_PveRog)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/snisp.md",
+  "processed_at": "2025-05-11T19:48:15.522912",
+  "ai_processed": true
+}

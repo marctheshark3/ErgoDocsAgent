@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ErgoPay protocol?",
+    "answer": "ErgoPay is a standard for cross-platform interaction between an online dApp and a wallet app to facilitate the creation, signing, and sending of Ergo transactions."
+  },
+  {
+    "question": "What are the two options for how a dApp can provide information to a wallet app using ErgoPay?",
+    "answer": "Option 1: dApp provides a URL request for ErgoPaySigningRequest information. Option 2: dApp provides a URI scheme containing a ReducedTransaction."
+  },
+  {
+    "question": "What are the benefits of ErgoPay for dApps?",
+    "answer": "ErgoPay allows dApps to have full control over creating transactions and spending their own application-specific contract boxes."
+  },
+  {
+    "question": "What are the benefits of ErgoPay for wallets?",
+    "answer": "ErgoPay enables wallets to support more complex transactions beyond simple transfers between Pay-To-Public-Key addresses."
+  },
+  {
+    "question": "What is the eUTXO model in Ergo, and how does it relate to the need for ErgoPay?",
+    "answer": "In Ergo's eUTXO model, a box can be protected by an arbitrarily complex contract, and a universal wallet application cannot know all the specific details of all possible contracts, hence the need for ErgoPay."
+  }
+]

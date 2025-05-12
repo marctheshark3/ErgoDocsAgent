@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the three main platforms covered in the 'bundled.md' document?",
+    "answer": "{\"title\":\"Android\",\"content\":\"\",\"image\":\"../../assets/img/dev-grid/android.png\",\"url\":\"android.md\"},{\"title\":\"iOS\",\"content\":\"\",\"image\":\"../../assets/img/dev-grid/ios.png\",\"url\":\"iOS.md\"},{\"title\":\"Desktop\",\"content\":\"\",\"image\":\"../../assets/img/dev-grid/bundled.png\",\"url\":\"mobile.md\"}"
+  },
+  {
+    "question": "What is the image asset associated with the 'Android' platform?",
+    "answer": "../../assets/img/dev-grid/android.png"
+  },
+  {
+    "question": "What is the URL for the 'iOS' platform content?",
+    "answer": "iOS.md"
+  },
+  {
+    "question": "What is the title of the 'Desktop' platform?",
+    "answer": "Desktop"
+  },
+  {
+    "question": "How many platforms are included in the 'bundled.md' document?",
+    "answer": "3"
+  }
+]

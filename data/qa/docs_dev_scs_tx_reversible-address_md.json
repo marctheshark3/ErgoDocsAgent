@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a reversible address?",
+    "answer": "A reversible address is an example of a multi-stage contract designed with anti-theft features. Funds sent to this address can initially only be spent in a way that allows the payment to be reversed by a trusted party for a specific period, after which only the intended recipient can spend the funds."
+  },
+  {
+    "question": "How does a reversible address function?",
+    "answer": "The reversible address uses a two-stage protocol. The first stage ensures that withdrawals from the hot wallet adhere to specific rules, creating outputs protected by a second-stage script. The second stage allows either the intended recipient (after a delay) or the trusted party (before the delay) to spend the funds."
+  },
+  {
+    "question": "What is the purpose of a reversible address?",
+    "answer": "Reversible addresses are particularly useful for managing hot wallets (e.g., for exchanges or mining pools handling customer withdrawals) to recover funds in case of a private key compromise. They can also be used for automated-release escrow payments in online shopping."
+  },
+  {
+    "question": "Who are the parties involved in a reversible address?",
+    "answer": "In the example, `alice` represents the `SigmaProp` (public key) of the hot wallet, and `carol` represents the trusted party with a private key stored securely offline."
+  },
+  {
+    "question": "What happens if an unauthorized transaction is detected from the hot wallet?",
+    "answer": "If an unauthorized transaction is detected originating from the hot wallet (first stage), the trusted party can use their private key to trigger an abort procedure on the second-stage boxes, diverting the funds to a secure address."
+  }
+]

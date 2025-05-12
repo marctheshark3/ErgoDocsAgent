@@ -1,0 +1,63 @@
+{
+  "id": "docs_mining_setup_stratum_md",
+  "title": "stratum.md",
+  "summary": "ErgoStratum is a Stratum mining server for the Ergo blockchain. The document provides a step-by-step guide to set up an Ergo node for solo mining, the ErgoStratumServer pool server, and optionally the ergo-nomp node open mining portal. It also mentions the ErgoStratumProxy tool for mining with open-source miners. The document covers configuration details for the Stratum server, including setting up variable difficulty. It also provides troubleshooting tips and references to relevant resources such as YouTube tutorials and the Ergo Forum.",
+  "qa_pairs": [
+    {
+      "question": "What is the first step to set up Ergo solo mining?",
+      "answer": "Setup a [Ergo Node for solo mining](solo-node.md), making sure to include the EIP27 rules."
+    },
+    {
+      "question": "What is the purpose of ErgoStratumServer?",
+      "answer": "Setup [ErgoStratumServer](https://github.com/mhssamadani/ErgoStratumServer) (the pool server)."
+    },
+    {
+      "question": "What is the purpose of ErgoStratumProxy?",
+      "answer": "ErgoStratumProxy is used when you want to mine with open source miner (client side app)."
+    },
+    {
+      "question": "What is the purpose of the 'varDiff' parameter in the start.js configuration?",
+      "answer": "Variable difficulty is a feature that will automatically adjust difficulty for individual miners based on their hashrate in order to lower networking overhead."
+    },
+    {
+      "question": "What should you do if you get the 'fatal:unable to connect to github.com' error?",
+      "answer": "Run `git config --global url.https://github.com/.insteadOf git://github.com/`."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "ErgoStratum",
+      "level": 2,
+      "content": "Stratum mining server for Ergo.\n\n1. Setup a [Ergo Node for solo mining](solo-node.md), making sure to include the EIP27 rules. \n2. Setup [ErgoStratumServer](https://github.com/mhssamadani/ErgoStratumServer) (the pool server)\n3. (Optional) Point [ergo-nomp](https://github.com/btclinux/ergo-nomp), a node open mining portal configured for ergo to both. \n\nFor the  Miner Connection and Work Management, [ErgoStratumProxy](https://github.com/mhssamadani/ErgoStratumProxy) is also available and is used when you want to mine with open source miner (client side app)."
+    },
+    {
+      "heading": "start.js",
+      "level": 2,
+      "content": "```json\n\"daemons\": [\n        {   //Main daemon instance\n            \"host\": \"NODE IP ADDRESS\",\n            \"port\": 9053,\n            \"user\": \"\",\n            \"password\": \"\"\n        }\n    ],\n```\n\n- Make sure to update `varDiff` depending on your hardware.\n\n```json\n/* Each pool can have as many ports for your miners to connect to as you wish. Each port can\n       be configured to use its own pool difficulty and variable difficulty settings. varDiff is\n       optional and will only be used for the ports you configure it for. /\n\"ports\": {\n        \"3032\": { //A port for your miners to connect to\n            \"diff\": 240000,//the pool difficulty for this port\n            /*\n            * use this parameter to multiply difficulty to b for each request.\n            * some miner like NBMiner does not support difficulty method of stratum.\n            * if you want your pool work with these miners set this parameters.\n            *\n            * /\n            \"multiplyDifficulty\": true,\n            / Variable difficulty is a feature that will automatically adjust difficulty for\n               individual miners based on their hashrate in order to lower networking overhead */\n            \"varDiff\": {\n                \"minDiff\": 240000,//Minimum difficulty\n                \"maxDiff\":  16431986528747520,//Network difficulty will be used if it is lower than this\n                \"targetTime\": 15, //Try to get 1 share per this many seconds\n                \"retargetTime\": 10, //Check to see if we should retarget every this many seconds\n                \"variancePercent\": 30, //Allow time to very this % from target without retargeting\n            }\n        },\n        \"3256\": { //Another port for your miners to connect to, this port does not use varDiff\n            \"diff\":  240000,//The pool difficulty\n```"
+    },
+    {
+      "heading": "Troubleshooting",
+      "level": 2,
+      "content": "- Have you tried turning it off and on again?\n- Is your [ergo.conf](solo-node.md) configured correctly? \n- You can rescan from [swagger](swagger.md)\n- Join the [\ud83c\udccf\u2502solo-mining](https://discord.gg/ergo-platform-668903786361651200) channel on our Discord for community support. \n- The Node needs to be fully syncronised. Make sure your wallet is also unlocked. \n- Try adjusting difficulty in start.js if you're getting *No new blocks* debug errors. \n- If you get `fatal:unable to connect to github.com`, you need to run `git config --global url.https://github.com/.insteadOf git://github.com/`"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Youtube",
+      "level": 3,
+      "content": "- [Ergo Node + Stratum Server mining tutorial](https://www.youtube.com/watch?v=_1M8dGpfKjU)\n- [Youtube: Mine Ergo from your own Node](https://www.youtube.com/watch?v=ubov4oweA20)"
+    },
+    {
+      "heading": "Misc",
+      "level": 3,
+      "content": "- [stratum4ergo](https://github.com/Satergo/stratum4ergo) is a Java library for creating Stratum mining pool servers for Ergo.\n- [ErgoForum: Q&A on mining (for pool operators and solo miner)](https://www.ergoforum.org/t/q-a-on-mining-for-pool-operators-and-solo-miners/587)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/setup/stratum.md",
+  "processed_at": "2025-05-11T19:52:37.627928",
+  "ai_processed": true
+}

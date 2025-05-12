@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Where are the wallet's secret information stored?",
+    "answer": "${ergo.directory}/wallet/keystore"
+  },
+  {
+    "question": "What pseudo-random function is used for encryption?",
+    "answer": "HmacSHA256"
+  },
+  {
+    "question": "What is the purpose of the wallet's encryption settings?",
+    "answer": "To configure how the wallet's secret information, such as private keys, is encrypted."
+  },
+  {
+    "question": "What is the significance of the 'secretDir' configuration?",
+    "answer": "It specifies the directory where the wallet's secret information is stored."
+  },
+  {
+    "question": "What is the role of the 'prf' configuration?",
+    "answer": "It sets the pseudo-random function used for encryption of the wallet's secret information."
+  }
+]

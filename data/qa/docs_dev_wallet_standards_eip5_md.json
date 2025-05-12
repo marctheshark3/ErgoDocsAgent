@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of EIP-0005?",
+    "answer": "EIP-0005 outlines a standard for serializing contract templates and including metadata to make them reusable across multiple platforms."
+  },
+  {
+    "question": "What are the key components of the contract template serialization format defined in EIP-0005?",
+    "answer": "EIP-0005 defines the JSON format, parameter serialization format, and conversion to ErgoTree for contract template serialization."
+  },
+  {
+    "question": "What is the motivation behind EIP-0005?",
+    "answer": "EIP-0005 aims to provide a way for developers to easily move contract templates between different protocol implementations, applications, and tools."
+  },
+  {
+    "question": "Who is the author of EIP-0005?",
+    "answer": "The author of EIP-0005 is aslesarenko."
+  },
+  {
+    "question": "What is the current status of EIP-0005?",
+    "answer": "EIP-0005 is currently in the Proposed status."
+  }
+]

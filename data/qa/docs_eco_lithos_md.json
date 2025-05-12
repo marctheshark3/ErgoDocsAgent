@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary goal of the Lithos project?",
+    "answer": "The primary goal of the Lithos project is to create a decentralized mining pool infrastructure by providing a low-risk opportunity for lenders to earn yield on their ERG by providing collateral to mining pools while promoting increasingly decentralized block production."
+  },
+  {
+    "question": "How does Lithos aim to address the challenges faced by previous attempts to create decentralized mining pools?",
+    "answer": "Lithos proposes a new solution to the challenges faced by previous attempts to create decentralized mining pools by using a new protocol that verifies miners' work and pays them out accordingly while utilizing Stratum as the 'networking layer' for the protocol."
+  },
+  {
+    "question": "What key feature of the Lithos protocol allows miners to directly insert necessary transactions into blocks?",
+    "answer": "The Lithos protocol allows miners to directly insert necessary transactions into blocks in a fully decentralized and trustless manner."
+  },
+  {
+    "question": "Is the Lithos protocol blockchain-agnostic?",
+    "answer": "Yes, the Lithos protocol is blockchain-agnostic, meaning that it may support mining pools for any Proof of Work (PoW) blockchain."
+  },
+  {
+    "question": "What recent milestone has the Lithos project achieved?",
+    "answer": "Lithos has recently completed collateral contracts, and the ability of miners to directly insert necessary transactions into blocks has been successfully demonstrated during the ERGOHACK VI event."
+  }
+]

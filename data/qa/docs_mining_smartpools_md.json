@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key concept behind SmartPools?",
+    "answer": "The key concept behind SmartPools is to replace centralized mining pools with autonomous on-chain smart contracts."
+  },
+  {
+    "question": "What are the advantages of SmartPools compared to traditional mining pools?",
+    "answer": "SmartPools can help reduce the risk of 51% attacks and other issues associated with centralization, and they aim to create transparency in mining pool fees."
+  },
+  {
+    "question": "What is the latest development in the SmartPools space?",
+    "answer": "The latest development in the SmartPools space is the Lithos Protocol, which represents the next generation of SmartPools."
+  },
+  {
+    "question": "What are the typical fees for using SmartPools?",
+    "answer": "The fees for using SmartPools may initially be around 1%, but are expected to be reduced to approximately 0.1% in the future to cover upkeep costs."
+  },
+  {
+    "question": "Where was the concept of SmartPools first introduced?",
+    "answer": "The concept of SmartPools was first introduced at the ErgoHacks event."
+  }
+]

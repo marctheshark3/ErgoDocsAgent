@@ -1,0 +1,3 @@
+This document provides an overview of the Ergo platform, including links to its whitepapers, foundational research papers, and video presentations. The key points are:
+
+Ergo follows a fundamental approach using stable, well-tested solutions, with most of its solutions formalized in peer-reviewed papers. The document includes links to whitepapers covering the Ergo platform, ErgoScript language, and advanced ErgoScript tutorials. It also links to foundational research papers on topics like contractual money, authenticated dictionaries, multi-mode cryptocurrency systems, and storage rent. The document also includes links to post-mainnet research papers and presentations on Ergo-related topics.

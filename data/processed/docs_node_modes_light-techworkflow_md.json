@@ -1,0 +1,44 @@
+{
+  "id": "docs_node_modes_light-techworkflow_md",
+  "title": "Light Full Node Technical Workflow",
+  "summary": "The document describes the technical workflow of a light full node in a blockchain system. The light full node operates by checking all the full blocks or a specified suffix of the full blockchain, starting from a trusted pre-genesis digest or a digest within the blockchain. It utilizes AD-transformations (authenticated dictionary transformations) to obtain a new digest from an old one, but it only stores a single digest and does not retain any transaction data. The light full node supports additional settings such as depth, additional-checks, and additional-depth. The workflow involves sending ErgoSyncInfo messages, requesting headers, performing validity checks, and requesting BlockTransactions and ADProofs. The node then applies the received modifiers and updates its state accordingly, with the option to drop older BlockTransactions and ADProofs in pruned-full mode.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "\n# Light Full Node Technical Workflow\n\nThe light full node operates by checking all the full blocks or a specified suffix of the full blockchain, depending on the settings. It starts from a trusted pr..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Light Full Node Technical Workflow"
+    },
+    {
+      "question": "What is the 'Light Full Node Technical Workflow' section about?",
+      "answer": "The light full node operates by checking all the full blocks or a specified suffix of the full block..."
+    },
+    {
+      "question": "What is the 'Workflow Steps' section about?",
+      "answer": "1.  Send **ErgoSyncInfo** message to connected peers.\n2.  Get a response with an **INV** message con..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Light Full Node Technical Workflow",
+      "level": 1,
+      "content": "The light full node operates by checking all the full blocks or a specified suffix of the full blockchain, depending on the settings. It starts from a trusted pre-genesis digest or a digest within the blockchain.\n\nTo obtain a new digest from an old one, the light full node utilizes AD-transformations (authenticated dictionary transformations) block sections that contain batch-proof for UTXO transformations. However, it only stores a single digest and does not retain any transaction data.\n\nFor more detailed information, refer to [this paper](https://eprint.iacr.org/2016/994).\n\n**Additional settings:** \n\nThe light full node supports the following additional settings:\n\n- **depth** - from which block in the past to checktransactions (if 0, then go from genesis).\n- **additional-checks** - light-full node trusts the previous digest and checks current digest validity by using the previous one as well as AD-transformations.\n- **additional-depth** - depth to start additional checks from."
+    },
+    {
+      "heading": "Workflow Steps",
+      "level": 2,
+      "content": "1.  Send **ErgoSyncInfo** message to connected peers.\n2.  Get a response with an **INV** message containing the IDs of blocks that are better than the current best block.\n3.  Request headers for all the IDs received in step 2.\n4.  Upon receiving a header, perform the following checks:\n\n```java\nif (History.apply(header).isSuccess) {\n    if (localScore != networkScore) {\n        GOTO 1\n    } else {\n        GOTO 5\n    }\n} else {\n    blacklist peer\n}\n```\n\n5.  Request BlockTransactions and ADProofs starting from the specified BlocksToKeep value in the history. This is done after the node bootstrapping process and involves requesting the last header:\n\n```java\nHistory.lastBestHeaders(BlocksToKeep).foreach { header =>\n    send message(GetBlockTransactionsForHeader(header)) to Random full node\n    send message(GetAdProofsHeader(header)) to Random full node\n}\n```\n\n6.  Upon receiving a modifier (BlockTransactions or ADProofs), perform the following checks:\n\n```java\nif (History.apply(modifier) == Success(ProgressInfo)) {\n    /* TODO if history now contains both ADProofs and BlockTransactions,\n    it should return ProgressInfo with both of them. Otherwise,\n    it should return an empty ProgressInfo */\n    if (State().apply(ProgressInfo) == Success((newState, ADProofs))) {\n        if (\"mode\" == \"pruned-full\") {\n            drop BlockTransactions and ADProofs older than BlocksToKeep\n        }\n    } else {\n        /*Drop Header from history because its transaction sequence is not valid*/\n        History.drop(BlockTransactions.headerId)\n    }\n}\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes/light-techworkflow.md",
+  "processed_at": "2025-05-11T19:56:41.004363",
+  "ai_processed": true
+}

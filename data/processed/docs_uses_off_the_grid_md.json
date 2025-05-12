@@ -1,0 +1,43 @@
+{
+  "id": "docs_uses_off_the_grid_md",
+  "title": "off_the_grid.md",
+  "summary": "Off the Grid is a decentralized application (dApp) that builds on the grid trading contract proposed by kushti. It includes an execution bot/batcher for automating order matching without user interaction. The project utilizes a contract that permits spending only if orders are correctly filled or with the order owner's signature, and it employs off-chain bots/batchers to monitor grid orders and match them against other liquidity sources, currently Spectrum Automated Market Makers (AMMs). Off the Grid supports trading of ERG against any token, with profits accumulated in ERGs, and enables grid orders to profit from repeated execution of the same orders, while bot operators benefit from arbitraging the price difference between the liquidity source and grid orders.",
+  "qa_pairs": [
+    {
+      "question": "What is Off the Grid?",
+      "answer": "Off the Grid is a decentralized application (dApp) that builds on the grid trading contract proposed by kushti. It includes an execution bot/batcher for automating order matching without user interaction."
+    },
+    {
+      "question": "What are the key features of Off the Grid?",
+      "answer": "Off the Grid provides the following features: 1) Utilizes a contract that permits spending only if orders are correctly filled or with the order owner's signature, 2) Employs off-chain bots/batchers to monitor grid orders and match them against other liquidity sources, 3) Currently matches orders against Spectrum Automated Market Makers (AMMs), 4) Supports trading of ERG against any token, with profits accumulated in ERGs, and 5) Enables grid orders to profit from repeated execution of the same orders, while bot operators benefit from arbitraging the price difference between the liquidity source and grid orders."
+    },
+    {
+      "question": "What is the origin of the grid trading concept used in Off the Grid?",
+      "answer": "The grid trading concept was introduced by @kushti on the Ergoforum."
+    },
+    {
+      "question": "What is the purpose of the grid trading contract used in Off the Grid?",
+      "answer": "The grid trading contract used in Off the Grid permits spending only if orders are correctly filled or with the order owner's signature, and can manage multiple orders simultaneously."
+    },
+    {
+      "question": "Where can users find more information about Off the Grid?",
+      "answer": "Users can explore the Off the Grid project on GitHub and check out the Getting Started Guide."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Off the Grid",
+      "level": 2,
+      "content": "Off the Grid is a decentralized application (dApp) that builds on the grid trading contract proposed by kushti. It includes an execution bot/batcher for automating order matching without user interaction.\n\nExplore the project [here](https://github.com/Telefragged/off-the-grid/) and check out our [Getting Started Guide](off_the_grid_tut.md)."
+    },
+    {
+      "heading": "Features",
+      "level": 3,
+      "content": "Off the Grid provides the following features:\n\n- Utilizes a contract that permits spending only if orders are correctly filled or with the order owner's signature. This contract can manage multiple orders simultaneously.\n- Employs off-chain bots/batchers to monitor grid orders and match them against other liquidity sources.\n- Currently, it matches orders against Spectrum Automated Market Makers (AMMs). However, it can be extended to other sources like the SigUSD bank.\n- Supports trading of ERG against any token, with profits accumulated in ERGs.\n- Enables grid orders to profit from repeated execution of the same orders, while bot operators benefit from arbitraging the price difference between the liquidity source and grid orders.\n\nThis concept was introduced by `@kushti` on [ergoforum](https://www.ergoforum.org/t/decentralized-grid-trading-on-ergo/).\n\n> \"We can do decentralized grid trading on Ergo (which is automatically compatible with existing DEXes, such as Spectrum LP pools and babel fees). Grid trading is a good way to make profits from volatility, and many CEXes offer it.\"\n\nCheck out the [first decentralized grid order transaction on Ergo](https://twitter.com/chepurnoy/status/1582657292834861057)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/off_the_grid.md",
+  "processed_at": "2025-05-11T20:03:27.947292",
+  "ai_processed": true
+}

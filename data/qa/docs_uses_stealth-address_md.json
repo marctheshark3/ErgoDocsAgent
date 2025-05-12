@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of Stealth Addresses?",
+    "answer": "Stealth Addresses are crafted to ensure recipient privacy during transactions."
+  },
+  {
+    "question": "How do Stealth Addresses enhance privacy?",
+    "answer": "Stealth Addresses facilitate the creation of distinct one-time addresses for every transaction, concealing the linkage between the transactions and the original public address."
+  },
+  {
+    "question": "What is the difference between Covert Addresses and Stealth Addresses in Ergo?",
+    "answer": "Covert Addresses obscure the transaction trail by receiving funds at a public address not directly tied to the wallet, while Stealth Addresses generate unique, one-time addresses for every transaction, further enhancing privacy."
+  },
+  {
+    "question": "How does the Stealth Address generation process work?",
+    "answer": "The seller creates a Stealth Address and shares it, the buyer uses this address to generate a unique Stealth Payment Address for the transaction, and the payment is stored in a specialized box on the blockchain that is only accessible by the seller."
+  },
+  {
+    "question": "How can a recipient discover payments made to their Stealth Address?",
+    "answer": "The recipient's wallet autonomously scans the blockchain for new payments directed to their Stealth Address."
+  }
+]

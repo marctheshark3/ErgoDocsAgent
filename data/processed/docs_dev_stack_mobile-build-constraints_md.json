@@ -1,0 +1,78 @@
+{
+  "id": "docs_dev_stack_mobile-build-constraints_md",
+  "title": "Mobile Build Constraints for Scala/JVM Components",
+  "summary": "This document outlines the key build constraints and compatibility issues that developers should be aware of when building mobile applications (Android/iOS) that incorporate Scala or other JVM-based libraries. It covers areas such as Scala version compatibility, JDK version requirements, Android SDK levels and API compatibility, code shrinking and obfuscation (R8/ProGuard), and limitations for running JVM code on iOS. The document provides recommendations and resources to help navigate these complexities, emphasizing the importance of starting with a minimal setup, carefully reviewing dependency requirements, and seeking community support when encountering build-related issues.",
+  "qa_pairs": [
+    {
+      "question": "What are the key constraint areas when developing mobile applications with Scala or other JVM-based libraries?",
+      "answer": "The key constraint areas include: 1) Scala version compatibility, ensuring compatibility with the Scala version used by the Ergo libraries, and 2) JDK version requirements, ensuring the JDK version used for compilation and Android compatibility."
+    },
+    {
+      "question": "What are the considerations around Scala version compatibility when using Ergo's core libraries?",
+      "answer": "Ergo's core libraries have migrated to Scala 3, so developers need to ensure their build tools (SBT, Gradle) and dependencies are compatible with the Scala 3 version. They also need to be mindful of potential binary incompatibilities between different Scala minor versions, especially across major releases (2.x vs. 3.x)."
+    },
+    {
+      "question": "What are the JDK version requirements for compiling Scala code and dependencies?",
+      "answer": "The JDK version used to compile Scala code and dependencies often requires JDK 11 or higher. Developers also need to ensure the JDK used by their Android build process is compatible with both Android and the required JDK level for their Scala dependencies."
+    },
+    {
+      "question": "What is the importance of ensuring the correct JDK version is used for Android projects?",
+      "answer": "Android projects have specific JDK compatibility requirements that might differ from the developer's desktop development environment. Ensuring the JDK used by the Android build process is compatible with both Android and the required JDK level for the Scala dependencies is crucial."
+    },
+    {
+      "question": "What are the potential issues that can arise from binary incompatibilities between different Scala minor versions?",
+      "answer": "Developers need to be mindful of potential binary incompatibilities between different Scala minor versions, especially across major releases (2.x vs. 3.x), which can cause compatibility issues when using Ergo's core libraries."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - mobile\n  - android\n  - ios\n  - build\n  - scala\n  - jvm\n  - jdk\n  - sdk\n  - r8\n  - desugaring\n  - constraints\n  - troubleshooting\n---"
+    },
+    {
+      "heading": "Mobile Build Constraints for Scala/JVM Components",
+      "level": 1,
+      "content": "Developing mobile applications (Android/iOS) that incorporate Scala or other JVM-based libraries (like AppKit or core Ergo components) involves navigating a complex set of build constraints and potential compatibility issues. This page outlines some key areas developers should be aware of, based on community discussions."
+    },
+    {
+      "heading": "Key Constraint Areas",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "1. Scala Version Compatibility",
+      "level": 3,
+      "content": "*   **Scala 2 vs. Scala 3:** Ergo's core libraries have migrated to Scala 3. Ensure your build tools (SBT, Gradle) and dependencies are compatible with the Scala version used by the Ergo libraries you depend on.\n*   **Binary Compatibility:** Be mindful of potential binary incompatibilities between different Scala minor versions, especially across major releases (2.x vs. 3.x)."
+    },
+    {
+      "heading": "2. JDK Version Requirements",
+      "level": 3,
+      "content": "*   **Compilation:** The JDK version used to compile your Scala code and dependencies matters. Ergo components often require JDK 11 or higher.\n*   **Android Compatibility:** Android projects have specific JDK compatibility requirements that might differ from your desktop development environment. Ensure the JDK used by your Android build process (e.g., via Android Studio's settings or Gradle configuration) is compatible with both Android and the required JDK level for your Scala dependencies."
+    },
+    {
+      "heading": "3. Android SDK Levels & API Compatibility",
+      "level": 3,
+      "content": "*   **`minSdkVersion`:** The minimum Android API level your app targets can restrict which Java APIs and language features are available directly.\n*   **Desugaring:** To use newer Java language features (from JDK 8+) on older Android versions, Android's build process uses \"desugaring\". This transforms bytecode to be compatible with older Android runtimes. Desugaring needs to be enabled and configured correctly in your `build.gradle` file.\n    *   **Reference:** [Android Java 8+ API Desugaring](https://developer.android.com/studio/write/java8-support#library-desugaring)\n*   **Scala Standard Library:** The Scala standard library itself might use Java APIs that require desugaring for compatibility with your `minSdkVersion`."
+    },
+    {
+      "heading": "4. Code Shrinking & Obfuscation (R8/ProGuard)",
+      "level": 3,
+      "content": "*   **R8:** Android's default code shrinker and obfuscator (replacing ProGuard). R8 removes unused code and renames classes/methods to reduce app size.\n*   **Configuration (`proguard-rules.pro`):** R8 requires careful configuration, especially when dealing with reflection, serialization, or JNI (Java Native Interface) used by Scala or dependent libraries. You often need to add `-keep` rules in `proguard-rules.pro` to prevent R8 from removing or renaming essential classes or methods that are accessed indirectly (e.g., via reflection). Incorrect configuration can lead to runtime crashes (`ClassNotFoundException`, `NoSuchMethodError`).\n*   **Scala Reflection:** Scala's reflection capabilities can be particularly sensitive to R8 optimization. Extensive `-keep` rules might be necessary if your code or dependencies rely heavily on reflection."
+    },
+    {
+      "heading": "5. iOS Build Limitations (JVM on iOS)",
+      "level": 3,
+      "content": "*   **No Native JVM:** iOS does not have a native Java Virtual Machine. Running Scala/JVM code directly on iOS typically requires cross-compilation or specific frameworks:\n    *   **Scala Native:** Compiles Scala code to native binaries using LLVM. Compatibility with all JVM libraries is not guaranteed.\n    *   **Multi-OS Engine (Deprecated):** Previously allowed running JVM bytecode on iOS, but is no longer actively maintained.\n    *   **Gluon SubstrateVM (GraalVM):** Can compile Java/Scala applications into native iOS binaries.\n    *   **Kotlin Multiplatform Mobile (KMM):** While focused on Kotlin, it provides mechanisms for sharing code (potentially including Scala via JVM interop) between Android and iOS, often compiling to native code for iOS.\n*   **Sigma-Rust Bindings:** For core Ergo cryptographic operations, using the [iOS bindings provided by `sigma-rust`](sigma-rust.md) is often the most practical approach for iOS development, avoiding the complexities of running a full JVM environment."
+    },
+    {
+      "heading": "General Recommendations & Resources",
+      "level": 2,
+      "content": "*   **Start Simple:** Begin with a minimal setup and gradually add dependencies to isolate compatibility issues.\n*   **Check Dependency Requirements:** Carefully review the documentation for the specific Ergo libraries (AppKit, sigma-rust bindings, etc.) regarding their required Scala, JDK, and Android SDK versions.\n*   **Consult Build Logs:** Pay close attention to warnings and errors during the Gradle build process, especially those related to desugaring, R8, or dependency conflicts.\n*   **Scala on Android Tutorial:** While potentially slightly dated depending on the specific library versions you use, the official Scala documentation provides background: [Scala on Android Tutorial](https://docs.scala-lang.org/tutorials/scala-on-android.html)\n*   **Community Support:** Mobile development with Scala/JVM can be complex. Seek help in Ergo developer community channels, providing details about your build configuration (Gradle files, SBT versions, library versions) and any error messages encountered.\n\nNavigating these constraints requires careful configuration and testing. Understanding the interplay between Scala versions, JDK features, Android build tools (Gradle, R8, Desugaring), and platform limitations (especially for iOS) is key to successfully building mobile Ergo applications using JVM-based components."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/mobile-build-constraints.md",
+  "processed_at": "2025-05-11T19:35:38.525004",
+  "ai_processed": true
+}

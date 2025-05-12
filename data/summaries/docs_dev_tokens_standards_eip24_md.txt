@@ -1,0 +1,7 @@
+EIP-0024 proposes a standard for artwork contracts on the Ergo blockchain. The key points are:
+
+1. The issuance box follows the Asset standard and the issuer box has the same ID as the artwork's token ID, which can be used to verify artwork features.
+2. The issuer box has an R4 register that specifies the royalty percentage (up to 100%) for the artwork.
+3. Version 2 of the standard introduces an R5 register to specify a list of royalty recipients and their respective percentages.
+4. The R6 register contains properties, levels, and stats about the artwork.
+5. The artist's identity is determined by the first P2PK input in the chain of transactions leading to the artwork issuance.

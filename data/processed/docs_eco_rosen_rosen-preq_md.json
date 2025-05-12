@@ -1,0 +1,53 @@
+{
+  "id": "docs_eco_rosen_rosen-preq_md",
+  "title": "Rosen Watcher Prerequisites",
+  "summary": "Rosen Watcher Prerequisites:\n\nRecommended hardware requirements: 2 cores CPU, 2 GB RAM, 20 GB storage.\n\nErgo Node configuration:\n- Set `extraIndex = true` and `extraCacheSize = 500` to store all transactions, boxes, and addresses in an index.\n- Configure the Scorex REST API with a unique password.\n\nDocker Compose:\n- Docker Compose is a tool for defining and running multi-container Docker applications.\n- The recommended method is to install Docker Desktop, which includes Docker Compose, Docker Engine, and Docker CLI.",
+  "qa_pairs": [
+    {
+      "question": "What are the recommended hardware requirements for running a Rosen Watcher?",
+      "answer": "- CPU: 2 cores, RAM: 2 GB, Storage: 20 GB"
+    },
+    {
+      "question": "What setting needs to be enabled on the Ergo node to store all transactions, boxes, and addresses in an index?",
+      "answer": "extraIndex = true"
+    },
+    {
+      "question": "What setting controls the number of recently used extra indexes kept in memory on the Ergo node?",
+      "answer": "extraCacheSize = 500"
+    },
+    {
+      "question": "What is the recommended method for installing Docker Compose?",
+      "answer": "Install Docker Desktop, which includes Docker Compose, Docker Engine, and Docker CLI."
+    },
+    {
+      "question": "What is the purpose of Docker Compose?",
+      "answer": "Docker Compose is a tool used for defining and running multi-container Docker applications."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rosen Watcher Prerequisites",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Recommended Hardware Requirements",
+      "level": 2,
+      "content": "- **CPU**: 2 cores\n- **RAM**: 2 GB\n- **Storage**: 20 GB"
+    },
+    {
+      "heading": "Ergo Node",
+      "level": 2,
+      "content": "If you aren't running an explorer, you will need to run a node with `ExtraIndex` enabled. This setting, if set to true, allows the node to store all transactions, boxes, and addresses in an index. `extraCacheSize` sets the number of recently used extra indexes kept in memory.\n\n```conf\nextraIndex = false\nextraCacheSize = 500\n```\n\nWith your complete config looking something like this\n\n```conf\nergo {\n        node {\n            mining = false\n            extraIndex = true\n            extraCacheSize = 500\n        }\n\n    }\n        \n    scorex {\n        restApi {\n            # Note: you must set a unique password for your API!\n            apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n        }\n    }\n```"
+    },
+    {
+      "heading": "Docker Compose",
+      "level": 2,
+      "content": "Docker Compose is a tool used for defining and running multi-container Docker applications. It uses YAML files to configure the application's services and performs the creation and start-up process of all the containers with a single command. Docker Compose is particularly useful for development, testing, and staging environments, as well as CI workflows.\n\nThe recommended method for installing Docker Compose is to install Docker Desktop, which includes Docker Compose, Docker Engine, and Docker CLI. These are all necessary components for running multi-container Docker applications.\n\nYou can download Docker Desktop for your specific Operating System from the following link: [Docker Desktop](https://docs.docker.com/desktop/)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/rosen/rosen-preq.md",
+  "processed_at": "2025-05-11T19:47:16.572699",
+  "ai_processed": true
+}

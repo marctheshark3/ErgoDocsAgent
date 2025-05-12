@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_stack_bundled_md",
+  "title": "bundled.md",
+  "summary": "This document is titled \"bundled.md\" and contains an introduction section with a cards component. The cards component includes information about three different development platforms: Android, iOS, and Desktop. Each card has a title, content, image, and URL. The Android card has a title of \"Android\" and a URL of \"android.md\". The iOS card has a title of \"iOS\" and a URL of \"iOS.md\". The Desktop card has a title of \"Desktop\" and a URL of \"mobile.md\".",
+  "qa_pairs": [
+    {
+      "question": "What are the three main platforms covered in the 'bundled.md' document?",
+      "answer": "{\"title\":\"Android\",\"content\":\"\",\"image\":\"../../assets/img/dev-grid/android.png\",\"url\":\"android.md\"},{\"title\":\"iOS\",\"content\":\"\",\"image\":\"../../assets/img/dev-grid/ios.png\",\"url\":\"iOS.md\"},{\"title\":\"Desktop\",\"content\":\"\",\"image\":\"../../assets/img/dev-grid/bundled.png\",\"url\":\"mobile.md\"}"
+    },
+    {
+      "question": "What is the image asset associated with the 'Android' platform?",
+      "answer": "../../assets/img/dev-grid/android.png"
+    },
+    {
+      "question": "What is the URL for the 'iOS' platform content?",
+      "answer": "iOS.md"
+    },
+    {
+      "question": "What is the title of the 'Desktop' platform?",
+      "answer": "Desktop"
+    },
+    {
+      "question": "How many platforms are included in the 'bundled.md' document?",
+      "answer": "3"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"Android\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/android.png\",\n    \"url\": \"android.md\"\n  },\n  {\n    \"title\": \"iOS\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/ios.png\",\n    \"url\": \"iOS.md\"\n\n  },\n  {\n    \"title\": \"Desktop\",\n    \"content\": \"\",\n    \"image\": \"../../assets/img/dev-grid/bundled.png\",\n    \"url\": \"mobile.md\"\n  },\n\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/bundled.md",
+  "processed_at": "2025-05-11T19:33:38.803373",
+  "ai_processed": true
+}

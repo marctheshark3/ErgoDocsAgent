@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the base URL for the Ergo Node API v5.0.15?",
+    "answer": "http://213.239.193.208:9053"
+  },
+  {
+    "question": "What type of authentication is required for the Ergo Node API?",
+    "answer": "API Key (ApiKeyAuth) - Parameter Name: api_key, in: header."
+  },
+  {
+    "question": "What is the purpose of the getSnapshotsInfo endpoint?",
+    "answer": "The getSnapshotsInfo endpoint is used to retrieve information about the UTXO snapshots."
+  },
+  {
+    "question": "What programming languages are provided for the code samples?",
+    "answer": "The code samples are provided for shell, HTTP, JavaScript, Ruby, Python, and PHP."
+  },
+  {
+    "question": "What other endpoint is mentioned in the content besides getSnapshotsInfo?",
+    "answer": "The content also mentions the blocks endpoint."
+  }
+]

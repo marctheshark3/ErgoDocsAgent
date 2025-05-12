@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the obfuscating address feature in ErgoMixer?",
+    "answer": "The obfuscating address feature is designed to make it harder to tell that someone is using the ErgoMixer when they interact with their wallets."
+  },
+  {
+    "question": "How does the obfuscating address feature work?",
+    "answer": "When withdrawing from the mixer, the funds are sent to an obfuscating address that automatically goes through random addresses before being received in the user's wallet."
+  },
+  {
+    "question": "What is an example of a transaction that is harder to identify as coming from the mixer?",
+    "answer": "The transaction with the ID 9cf412c71fc49a53f7f6ae498f22730be474127436334e5a38da92ce0d40530b is an example of a transaction that is harder to identify as coming from the mixer."
+  },
+  {
+    "question": "Where can users create an obfuscating address for ErgoMixer?",
+    "answer": "Users can create an obfuscating address with their desired hop number at https://ergoutils.org/#/others."
+  },
+  {
+    "question": "Is the ErgoUtils suite of tools completely free to use?",
+    "answer": "Yes, the utilities in ErgoUtils are completely free to use."
+  }
+]

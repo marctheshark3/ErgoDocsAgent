@@ -1,0 +1,93 @@
+{
+  "id": "docs_eco_rosen_bitcoin-watcher_md",
+  "title": "Bitcoin Rosen Bridge Watcher Setup",
+  "summary": "The document provides instructions for setting up a Bitcoin Rosen Bridge Watcher. It covers the Docker setup, including cloning the repository, configuring environment variables, and managing the watcher using Docker commands. It also provides details on configuring the watcher, such as specifying the target network, setting up the API key hash, and configuring the Bitcoin and Ergo network connections. The document emphasizes the importance of running a fully synced Bitcoin node for optimal watcher performance and decentralization.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Rosen Bridge Watcher?",
+      "answer": "The Rosen Bridge Watcher is responsible for observing and reporting users' actions on the supported networks."
+    },
+    {
+      "question": "What are the steps to set up the Rosen Bridge Watcher using Docker?",
+      "answer": "The steps include cloning the Operation repository, creating the .env file, configuring the required environment variables, setting permissions, and creating the local.yaml file."
+    },
+    {
+      "question": "How can you check the logs for the Rosen Bridge Watcher?",
+      "answer": "You can check the logs using the command `docker compose logs`."
+    },
+    {
+      "question": "How do you update the Rosen Bridge Watcher?",
+      "answer": "To update the Rosen Bridge Watcher, you can use the commands `docker compose pull`, `docker compose down`, and `docker compose up -d`."
+    },
+    {
+      "question": "How do you restart the Rosen Bridge Watcher instance?",
+      "answer": "To restart the Rosen Bridge Watcher instance, you can use the command `docker compose up -d`."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Bitcoin Rosen Bridge Watcher Setup",
+      "level": 1,
+      "content": "To participate as a watcher in the Rosen Bridge, you need to deploy a watcher app that observes one of the supported networks. Each supported network has its own set of watchers responsible for reporting users' actions on that specific network."
+    },
+    {
+      "heading": "Docker Setup",
+      "level": 2,
+      "content": "/// admonition | This section is adapted from the [deploy-docker.md](https://github.com/rosen-bridge/operation/blob/dev/docs/watcher/deploy-docker.md) section on the Rosen Bridge documentation.\n    type: info\n///\n\n\n\n\nClone the [Operation repository](https://github.com/rosen-bridge/operation.git) and navigate to the `operation/watcher` directory:\n\n```shell\ngit clone https://github.com/rosen-bridge/operation.git\ncd operation/watcher/\n```\n\nCreate your environment file `.env` based on the `env.template` file in the `watcher` directory:\n\n```shell\ncp env.template .env\n```\n\nTo view hidden `.env` files later, use `ls -a`."
+    },
+    {
+      "heading": "Environment Variable Configurations",
+      "level": 3,
+      "content": "Configure the required environment variables in the `.env` file (ensure no spaces after the '=' sign):\n\n```shell"
+    },
+    {
+      "heading": "Required Environments",
+      "level": 1,
+      "content": "POSTGRES_PASSWORD=your_random_password\nPOSTGRES_USER=your_random_username\nPOSTGRES_DB=your_random_db_name\nPOSTGRES_PORT=5432\n```\n\nSet the required permissions and create the `local.yaml` file in the `config` directory:\n\n```shell\nsudo chown -R 3000:3000 logs\ntouch config/local.yaml\n```\n\nFor MacOS users, set `707` permission for the `logs` directory:\n\n```shell\nsudo chmod -R 707 logs\n```\n\n//// details | Working with Docker\n\n/// details | Checking logs\n{type: info, open: false}\nTo check logs, use:\n\n```bash\ndocker compose logs\n```\n\n///\n\n/// details | Updating your watcher\n{type: info, open: false}\nTo update your watcher, use:\n\n```bash\ndocker compose pull\ndocker compose down\ndocker compose up -d\n```\n\n///\n\n/// details | Restarting your watcher\n{type: info, open: false}\nTo restart your watcher instance, run:\n\n```bash\ndocker compose up -d\n```\n\n///\n\n/// details | no configuration files provided: not found\n{type: danger, open: false}\nEnsure you're in the correct directory. You should execute `docker compose` commands from within the `operation/watcher` folder.\n///\n\n/// details | Dumping databases\n{type: info, open: false}\nTo dump databases, use:\n\n```bash\ndocker compose down\ndocker volume remove watcher_postgres-data\n\n\n#---edit block height in YAML after this step\ndocker compose up -d\n```\n\n///\n\n/// details | Clearing Volumes\n{type: info, open: false}\nTo clear Docker volumes, use:\n\n```bash\ndocker compose down --volumes\n```\n\nRe-initiate the watcher with:\n\n```bash\ndocker compose up -d\n```\n\n///\n\n/// details | Clean Slate\n{type: info, open: false}\nTo remove everything and start from scratch:\n\n```bash\ndocker ps -a\ndocker compose down\ndocker rm CONTAINERID1 CONTAINERID2 CONTAINERID3\n```\n\nThen delete the folder and start fresh.\n///\n////\n\n/// details | Note for Raspberry Pi ARM Users\n{type: info, open: false}\n\n\nTo run the watcher on an ARM-based Raspberry Pi, use an ARM-based DB image. Update the `docker-compose.yml` as follows:\n\nChange the DB image according to your architecture (e.g., `arm64v8`):\n\n```diff\nservices:\n  db:\n-   image: rapidfort/postgresql:16.0.0\n+   image: arm64v8/postgres:16.0\n```\n\nUpdate the volume of the DB:\n\n```diff\n    volumes:\n-     - postgres-data:/bitnami/postgresql\n+     - postgres-data:/var/lib/postgresql/data/\n```\n///"
+    },
+    {
+      "heading": "Pull Docker Images and Run Service",
+      "level": 3,
+      "content": "Pull the Docker image:\n\n```shell\ndocker compose pull\n```\n\nSet up your `local.yaml` using the instructions in the next section (Local Config). After saving the changes, run the container:\n\n```shell\ndocker compose up -d\n```"
+    },
+    {
+      "heading": "Local Config",
+      "level": 2,
+      "content": "To start your watcher, configure the `local.yaml` file."
+    },
+    {
+      "heading": "Specify the Target Network",
+      "level": 3,
+      "content": "Set the target network you're watching. Currently supported networks are `ergo`, `cardano`, and `bitcoin`:\n\n```yaml\nnetwork: bitcoin\n```"
+    },
+    {
+      "heading": "API Configuration",
+      "level": 3,
+      "content": "```yaml\napi:\n  apiKeyHash: \"YOUR_API_KEY_HASH\"\n```\n\nTo secure the action-based APIs (e.g., lock, unlock), set a unique and robust API key hash using the Blake2b algorithm. You can generate the hash using the [rosen command line](https://github.com/rosen-bridge/utils/tree/dev/packages/cli):\n\n```shell\nnpx @rosen-bridge/cli blake2b-hash YOUR_API_KEY\n```\n\nAlternatively, use Docker:\n\n```shell\ndocker run -it --rm node:18.16 npx --yes @rosen-bridge/cli blake2b-hash YOUR_API_KEY\n```"
+    },
+    {
+      "heading": "Bitcoin Configuration",
+      "level": 3,
+      "content": "Choose your information source for the Bitcoin network and specify its connection information. \n\nYou can use either `rpc`\n\n```yaml\nbitcoin:\n  type: rpc\n  rpc:\n    url: \"YOUR_RPC_URL\"\n    username: \"YOUR_RPC_USERNAME\"\n    password: \"YOUR_RPC_PASSWORD\"\n```\n\n//// details | Setting Up a Bitcoin Node (RPC)\n{type: info, open: false}\nFor optimal watcher performance and decentralization, running your own fully synced Bitcoin node is recommended. However, this consumes significant disk space, so you can use a public node as detailed in the next section.\n\n1. Install Bitcoin Core following the [official instructions](https://bitcoin.org/en/download) for your OS.\n\n2. Configure Bitcoin Core:\n\n   - Locate the `bitcoin.conf` file in the Bitcoin data directory:\n     - Linux: `~/.bitcoin/`\n     - macOS: `~/Library/Application Support/Bitcoin/`\n     - Windows: `%APPDATA%\\Bitcoin\\`\n   - Open `bitcoin.conf` with a text editor or create it if it doesn't exist.\n\n3. Generate an RPC username and password:\n\n   - Visit [this RPC auth generator](https://jlopp.github.io/bitcoin-core-rpc-auth-generator)\n   - Enter a username and click \"Generate\"\n   - Copy the generated line starting with `rpcauth=`\n\n4. Edit `bitcoin.conf` to enable the RPC server and allow the watcher to connect:\n\n   - Paste the `rpcauth` line you copied\n   - Add the following lines to enable the RPC server:\n     ```bash\n     server=1\n     rpcbind=0.0.0.0\n     rpcallowip=0.0.0.0/0\n     txindex=1\n     rest=1\n     ```\n   - To limit RPC access to only the watcher container, set `rpcallowip` to the Docker network range:\n\n     ```bash\n     rpcallowip=172.16.0.0/12\n     ```\n\n   - Save the file\n\n5. If `bitcoind` was already running, stop and restart it:\n\n   ```bash\n   bitcoin-cli stop\n   bitcoind -daemon\n   ```\n\n6. Verify the node is running and wait for it to sync:\n   ```bash\n   bitcoin-cli getblockchaininfo\n   ```\n   Look for `\"initialblockdownload\": false` to confirm the node is synced.\n\n/// details | Running a Pruned Bitcoin Node\n{type: info, open: false}\nA pruned Bitcoin node is not compatible with the Rosen Bitcoin bridge watcher. The watcher requires the `txindex=1` setting, which is not supported by pruned nodes. If you initially synced a pruned node, you'll need to restart the sync with a full node.\n///\n/// details | Increasing Bitcoin Node DbCache\n{type: info, open: false}\nTo speed up the initial sync of your Bitcoin node, increase the dbcache setting if you have sufficient RAM. For example, to allocate 4GB of cache, add the following line to your bitcoin.conf:\n\n```conf\ndbcache=4096\n```\n\nAdjust the value based on your available memory.\n///\n/// details | Current Bitcoin Blockchain Size\n{type: info, open: false}\nAs of June 2024, the Bitcoin blockchain size is approximately 657GB. Keep this in mind when provisioning storage for your Bitcoin node.\n///\n/// details | Bitcoin Blockchain Snapshots\n{type: info, open: false}\nSome services provide Bitcoin blockchain snapshots to speed up the initial sync process. However, be cautious when using these snapshots, as they may not be compatible with the txindex=1 requirement for the Rosen Bitcoin watcher. Ensure that the snapshot is from a full node with transaction indexing enabled.\n///\n/// details | Monitoring Bitcoin Node Sync Progress\n{type: info, open: false}\nYou can monitor the sync progress of your Bitcoin node using the `bitcoin-cli` command:\n\n```bash\nbitcoin-cli getblockchaininfo\n```\n\nLook for the `\"verificationprogress\"` field in the output. A value of `1.000000` indicates that the node is fully synced.\n///\n/// details | Using a Separate Machine for the Bitcoin Node\n{type: info, open: false}\nIf you have limited resources on your watcher machine, consider running the Bitcoin node on a separate machine. This way, the resource-intensive block syncing process won't affect the performance of your watcher.\n\nUpdate the `rpc.url` in your watcher's `local.yaml` to point to the remote Bitcoin node's IP address and RPC port:\n\n```yaml\nbitcoin:\n  type: rpc\n  rpc:\n    url: \"http://<user>:<password>@<remote-ip>:8332\"\n```\n\nMake sure to configure the Bitcoin node's `rpcallowip` setting to allow connections from the watcher machine's IP.\n///\n/// details | Enabling Transaction Broadcasting\n{type: info, open: false}\nIf you want your Bitcoin node to be able to broadcast transactions (not required for the watcher but useful for debugging), add the following line to your `bitcoin.conf`:\n\n```conf\nzmqpubrawtx=tcp://0.0.0.0:28332\n```\n\nThis enables the ZeroMQ raw transaction broadcasting feature.\n///\n////\n\nor `esplora`:\n\n```yaml\nbitcoin:\n  type: esplora\n  esplora:\n    url: https://mempool.space\n```\n\nSet your watcher's initial height:\n\n```yaml\ninitial:\n  height: LATEST_BITCOIN_HEIGHT\n```\n\nCustomize observation confirmation and validity threshold:\n\n```yaml\nobservation:\n  confirmation: 2\n  validThreshold: 72\n```"
+    },
+    {
+      "heading": "Ergo Configuration",
+      "level": 3,
+      "content": "/// admonition | **Even if you are running a Bitcoin Watcher, you must configure the Ergo section**\n    type: warning\n///\n\n\nCreate a new wallet and set the wallet mnemonic, you can also load this through an environmental variable so it's only stored in-memory.\n\n```yaml\nergo:\n  mnemonic: \"YOUR_WALLET_MNEMONIC\"\n```\n\nSelect your primary data source:\n\n```yaml\nergo:\n  type: node\n  node:\n    url: https://example.node.com\n  explorer:\n    url: https://api.ergoplatform.com\n```\n\nSet the initial height of your watcher:\n\n```yaml\ninitialHeight: LATEST_HEIGHT\n```\n\nCustomize observation confirmation and validity threshold:\n\n```yaml\nobservation:\n  confirmation: 10\n  validThreshold: 720\n```"
+    },
+    {
+      "heading": "Example Configuration for Bitcoin Watcher",
+      "level": 3,
+      "content": "```yaml\nnetwork: bitcoin\napi:\n  apiKeyHash: \"YOUR_API_KEY_HASH\"\nergo:\n  type: explorer\n  initialHeight: LATEST_ERGO_HEIGHT\n  mnemonic: \"YOUR_WALLET_MNEMONIC\"\n  node:\n    url: https://example.node.com\nbitcoin:\n  type: rpc\n  rpc:\n    url: \"YOUR_BITCOIN_RPC_URL\"\n    username: \"YOUR_RPC_USERNAME\"\n    password: \"YOUR_RPC_PASSWORD\"\n  initial:\n    height: LATEST_BITCOIN_HEIGHT\nobservation:\n  confirmation: 2\n  validThreshold: 72\n```"
+    },
+    {
+      "heading": "Get Your Watcher Permit",
+      "level": 2,
+      "content": "After setting up and running your watcher instance, access the watcher UI by visiting [localhost:3030](http://localhost:3030). From your dashboard, you can view network information, assets, and health status alongside action buttons. To activate your watcher, proceed to the 'LOCK' action, where you can utilize assets from the watcher wallet for registration and obtain reporting permits. Top up your wallet with the specified amounts of ERG and RSN to receive these permits.\n\nAs a watcher, your primary responsibility is to monitor your network and report actions related to the bridge. To report a bridge event, you must have report permits. Acquiring these permits involves two types of payments:\n\n1. **Collateral:** Provide one-time collateral in the form of ERG and RSN tokens to obtain initial report permits. This collateral serves as a security measure to mitigate Sybil attacks. When you return all your report permits, the collateral is refunded, and your watcher is unregistered.\n\n2. **RSN for Permits:** Lock RSN tokens to receive permit tokens. Use these tokens to create report permits for reporting events. The number of report permits determines how many concurrent reports you can create. In the event of a valid report, the permit is refunded along with your reward. If the report is invalid, the permit is seized as a penalty.\n\n\n\n/// admonition | For tips, troubleshooting, FAQs, and other information, please refer to the main [watcher documentation](watcher.md).\n    type: info\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/rosen/bitcoin-watcher.md",
+  "processed_at": "2025-05-11T19:47:01.013106",
+  "ai_processed": true
+}

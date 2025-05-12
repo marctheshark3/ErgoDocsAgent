@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a stablecoin?",
+    "answer": "A stablecoin is a digital asset that is pegged to a national currency, providing stability compared to the volatility of other cryptocurrencies."
+  },
+  {
+    "question": "What is the first example of a stablecoin?",
+    "answer": "The first example of a stablecoin is USDT, which is backed by actual dollars held in banks."
+  },
+  {
+    "question": "What is SigmaUSD?",
+    "answer": "SigmaUSD is the world's first UTxO-based stablecoin, an instantiation of the AgeUSD protocol, designed to maintain conservative collateral reserves and avoid the need for liquidations."
+  },
+  {
+    "question": "What is Dexy?",
+    "answer": "Dexy is a stablecoin that uses seigniorage, with design enhancements to counter various attacks."
+  },
+  {
+    "question": "Where can I find more information about the technical details and design of SigmaUSD and Dexy?",
+    "answer": "Additional information and resources about SigmaUSD and Dexy can be found in the links provided in the document, including videos, blog posts, and GitHub repositories."
+  }
+]

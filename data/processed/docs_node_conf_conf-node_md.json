@@ -1,0 +1,118 @@
+{
+  "id": "docs_node_conf_conf-node_md",
+  "title": "Node Configuration",
+  "summary": "The document describes the configuration options for a node in a blockchain network. It covers settings for the state type, extra index, transaction verification, block management, mining, offline generation, state snapshots, and chain update delay. The key points include the ability to choose between a UTXO or digest state type, optional extra indexing of transactions and addresses, verification of transactions, control over the number of blocks to keep, mining configuration options, and settings related to state management and chain synchronization.",
+  "qa_pairs": [
+    {
+      "question": "What are the possible options for the `stateType` setting?",
+      "answer": "The possible options for `stateType` are `utxo` and `digest`."
+    },
+    {
+      "question": "What is the purpose of the `extraIndex` setting?",
+      "answer": "The `extraIndex` setting allows the node to store all transactions, boxes, and addresses in an index."
+    },
+    {
+      "question": "What is the purpose of the `verifyTransactions` setting?",
+      "answer": "If `verifyTransactions` is set to true, the node will download block transactions and verify them."
+    },
+    {
+      "question": "What is the purpose of the `blocksToKeep` setting?",
+      "answer": "The `blocksToKeep` setting defines the number of last blocks to keep with transactions and ADproofs, while only storing the header for other blocks."
+    },
+    {
+      "question": "What is the purpose of the `extraCacheSize` setting?",
+      "answer": "The `extraCacheSize` setting sets the number of recently used extra indexes kept in memory."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Node Configuration",
+      "level": 1,
+      "content": "The `node{}` configuration section specifies general settings for the node view holder regime. It includes parameters for state type, extra index, block and transaction verification, mining configuration, memory pool management, and more."
+    },
+    {
+      "heading": "State Type",
+      "level": 2,
+      "content": "```conf\nstateType = \"utxo\"\n```\nThe `stateType` setting sets the type of state the node maintains. Possible options are `utxo`, where the node keeps a full utxo set allowing it to validate arbitrary blocks and generate ADProofs, and `digest`, where the node only keeps the state root hash and validates transactions via ADProofs."
+    },
+    {
+      "heading": "Extra Index",
+      "level": 2,
+      "content": "```conf\nextraIndex = false\nextraCacheSize = 500\n```\nThe `extraIndex` setting, if set to true, allows the node to store all transactions, boxes, and addresses in an index. `extraCacheSize` sets the number of recently used extra indexes kept in memory."
+    },
+    {
+      "heading": "Verify Transactions",
+      "level": 2,
+      "content": "```conf\nverifyTransactions = true\n```\nIf `verifyTransactions` is set to true, the node will download block transactions and verify them."
+    },
+    {
+      "heading": "Blocks to Keep",
+      "level": 2,
+      "content": "```conf\nblocksToKeep = -1\n```\nThe `blocksToKeep` setting defines the number of last blocks to keep with transactions and ADproofs. Only the header will be stored for other blocks."
+    },
+    {
+      "heading": "PoPoW Bootstrap",
+      "level": 2,
+      "content": "```conf\nPoPoWBootstrap = false\n```\nIf `PoPoWBootstrap` is set to true, the node will download the Proof of Proof of Work (PoPoW) on node bootstrap."
+    },
+    {
+      "heading": "Mining",
+      "level": 2,
+      "content": "```conf\nmining = false\nmaxTransactionCost = 1000000\nmaxTransactionSize = 98304 // 96 kb\nuseExternalMiner = true\ninternalMinersCount = 1\ninternalMinerPollingInterval = 500ms\nminingPubKeyHex = null\n```\nThese settings determine if you are mining through the node, the maximum transaction cost and size to propagate, whether to use an external miner, the number of internal miner threads to spawn, how frequently to ask for new block candidates, and a dedicated public key for mining rewards."
+    },
+    {
+      "heading": "Offline Generation",
+      "level": 2,
+      "content": "```conf\nofflineGeneration = false\n```\nIf `offlineGeneration` is set to true, the node will generate blocks while disconnected from the mainnet."
+    },
+    {
+      "heading": "Keep Versions",
+      "level": 2,
+      "content": "```conf\nkeepVersions = 200\n```\nThe `keepVersions` setting specifies the number of state snapshots diffs to keep, which defines the maximum rollback depth."
+    },
+    {
+      "heading": "Acceptable Chain Update Delay",
+      "level": 2,
+      "content": "```conf\nacceptableChainUpdateDelay = 30m\n```\nThe `acceptableChainUpdateDelay` setting is the acceptable difference between the current time and the timestamp of the latest chain update or best block. It helps to discover syncing issues."
+    },
+    {
+      "heading": "Memory Pool Configuration",
+      "level": 2,
+      "content": "The mempool settings define the maximum number of unconfirmed transactions the node will accept, the interval for re-checking a transaction in the memory pool, the mempool transaction sorting scheme, the number of transactions to rebroadcast at each epoch, and the minimum fee amount for transactions."
+    },
+    {
+      "heading": "Blacklisted Transactions",
+      "level": 2,
+      "content": "```conf\nblacklistedTransactions = []\n```\nThe `blacklistedTransactions` setting is a list of hex-encoded identifiers of transactions banned from the memory pool."
+    },
+    {
+      "heading": "Header Chain Diff",
+      "level": 2,
+      "content": "```conf\nheaderChainDiff = 100\n```\nThe `headerChainDiff` setting defines the number of blocks the node considers to be \"close\" in time when syncing the header chain."
+    },
+    {
+      "heading": "Checkpoint",
+      "level": 2,
+      "content": "```conf\ncheckpoint = null\n```\nThe `checkpoint` setting allows you to specify an optional individual checkpoint to skip script validation for performance and memory usage improvements during initial bootstrapping."
+    },
+    {
+      "heading": "ADProofs",
+      "level": 2,
+      "content": "Suffix Length\n```conf\nadProofsSuffixLength = 114688 // 112k\n```\nThe `adProofsSuffixLength` setting specifies the length of the `ADProofs` suffix dumped during bootstrapping."
+    },
+    {
+      "heading": "UTXO Bootstrap",
+      "level": 2,
+      "content": "```conf\nutxoBootstrap = false\nstoringUtxoSnapshots = 2\np2pUtxoSnapshots = 2\n```\nThe `utxoBootstrap` setting, if set to true, allows the node to download and apply UTXO set snapshot and full-blocks after that. `storingUtxoSnapshots` sets the number of UTXO set snapshots to store, 0 means that they are not stored at all. `p2pUtxoSnapshots` sets the number of UTXO set snapshots for a height with the same id we need to find in the p2p network in order to start downloading it."
+    },
+    {
+      "heading": "NiPoPoW Bootstrap",
+      "level": 2,
+      "content": "```conf\nnipopowBootstrap = false\np2pNipopows = 2\nnipopowSuffix = 10\n```\nThe `nipopowBootstrap` setting, if set to true, allows the node to download the Proof of Proof of Work (NiPoPoW) on node bootstrap. `p2pNipopows` sets the number of different proofs we are downloading from other peers and comparing with each other, before choosing the best one. `nipopowSuffix` sets the minimal suffix size for NiPoPoW proof."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/conf/conf-node.md",
+  "processed_at": "2025-05-11T19:54:08.336220",
+  "ai_processed": true
+}

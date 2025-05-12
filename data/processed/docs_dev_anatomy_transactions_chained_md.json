@@ -1,0 +1,138 @@
+{
+  "id": "docs_dev_anatomy_transactions_chained_md",
+  "title": "Executing a Chained Transaction",
+  "summary": "This document provides a guide on executing a chained transaction on the Ergo blockchain. It covers the steps to establish a connection to the Ergo blockchain, set up a wallet mnemonic, and define the receiver addresses, transaction amounts, and the number of consecutive transactions. The guide also mentions the use of a sleep time between the submission of transactions. Additionally, it references the Transaction Group framework provided by GetBlok for managing extensive interlinked transactions.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# Executing a Chained Transaction\n\nChained transactions allow for the sequential use of outputs from off-chain transactions. This guide will walk you through the process of submitting a chained transa..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Executing a Chained Transaction"
+    },
+    {
+      "question": "What is the 'Executing a Chained Transaction' section about?",
+      "answer": "Chained transactions allow for the sequential use of outputs from off-chain transactions. This guide..."
+    },
+    {
+      "question": "What is the 'Establish a Blockchain Connection' section about?",
+      "answer": "Start by defining the URL of the node to connect to the Ergo blockchain. This could be either a Main..."
+    },
+    {
+      "question": "What is the 'Assign the node URL' section about?",
+      "answer": "node_url: str = \"http://213.239.193.208:9052/\""
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Executing a Chained Transaction",
+      "level": 1,
+      "content": "Chained transactions allow for the sequential use of outputs from off-chain transactions. This guide will walk you through the process of submitting a chained transaction on Ergo. The basic method demonstrated here is based on the [ergpy examples](https://github.com/mgpai22/ergpy/tree/main/examples). For managing extensive interlinked transactions, you can refer to the [Transaction Group framework](https://github.com/GetBlok-io/Subpooling#frameworks--abstractions) provided by GetBlok."
+    },
+    {
+      "heading": "Establish a Blockchain Connection",
+      "level": 2,
+      "content": "Start by defining the URL of the node to connect to the Ergo blockchain. This could be either a MainNet or TestNet node URL. The connection is then established using the `ErgoAppKit`.\n\n```python"
+    },
+    {
+      "heading": "Assign the node URL",
+      "level": 1,
+      "content": "node_url: str = \"http://213.239.193.208:9052/\""
+    },
+    {
+      "heading": "Establish the connection",
+      "level": 1,
+      "content": "ergo = appkit.ErgoAppKit(node_url=node_url)\n```"
+    },
+    {
+      "heading": "Set Up Wallet Mnemonic",
+      "level": 2,
+      "content": "Next, prepare your wallet mnemonic. This is a sentence-like password that will be used to access your wallet. This example includes receiver addresses and the amount to be sent in each transaction. Furthermore, it sets a sleep time, which is the delay between transaction submissions. The required amount for the genesis outbox, which is the first transaction in the chain, is also calculated.\n\n```python"
+    },
+    {
+      "heading": "Define the wallet mnemonic",
+      "level": 1,
+      "content": "wallet_mnemonic = \"decline reward asthma enter three clean borrow repeat identify wisdom horn pull entire adapt neglect.\""
+    },
+    {
+      "heading": "Specify receiver addresses",
+      "level": 1,
+      "content": "receiver_addresses = [\n    \"3WwdXmYP39DLmDWJ6grH9ArXbWuCt2uGAh46VTfeGPrHKJJY6cSJ\",\n    \"3WwuG9amNVDwkJdgT5Ce7aJCfeoafVmd9tag9AEiAZwgPi7pYX3w\",\n    \"3Wxk5oofZ3Laq2CpFW4Fi9YQiaep9bZr6QFg4s4xpzz4bi9tZq2U\"\n]"
+    },
+    {
+      "heading": "Define the amount for each transaction",
+      "level": 1,
+      "content": "amount = [0.22, 0.33, 0.11]"
+    },
+    {
+      "heading": "Set the number of consecutive transactions",
+      "level": 1,
+      "content": "consecutive_transactions = 3"
+    },
+    {
+      "heading": "Define the time gap between submissions of transactions",
+      "level": 1,
+      "content": "sleep_time = 0.5"
+    },
+    {
+      "heading": "Calculate the total amount for the genesis outbox",
+      "level": 1,
+      "content": "genesis_amount = [consecutive_transactions * (0.22 + 0.33 + 0.11) + (consecutive_transactions + 1) * 0.001]"
+    },
+    {
+      "heading": "Wallet of the sender",
+      "level": 1,
+      "content": "genesis_receiver = [\"\"]  \n```"
+    },
+    {
+      "heading": "Generate an Output Box",
+      "level": 2,
+      "content": "To create an output box from the signed transaction, we use the `simple_send` method from the `helper_functions` module. The function returns a signed transaction, which we then use to obtain the genesis outbox.\n\n```python"
+    },
+    {
+      "heading": "Generate a signed transaction",
+      "level": 1,
+      "content": "genesis_tx = helper_functions.simple_send(ergo=ergo, amount=genesis_amount, wallet_mnemonic=wallet_mnemonic,\n                                          receiver_addresses=genesis_receiver, return_signed=True)"
+    },
+    {
+      "heading": "Get the genesis outbox",
+      "level": 1,
+      "content": "genesis_outbox = appkit.get_outputs_to_spend(genesis_tx, 0)      \n```"
+    },
+    {
+      "heading": "Submit the Transactions",
+      "level": 2,
+      "content": "Finally, we submit the transactions to the node. For each transaction in the chain, we use the output box from the previous transaction as the input box for the current transaction. The first transaction retrieves the input box from the genesis outbox. The last transaction is not chained, i.e., its output box\n\n will not be used as an input box in any subsequent transaction. The ID of the genesis transaction and the last transaction are printed to the console. After the final transaction is submitted, the process ends.\n\n```python"
+    },
+    {
+      "heading": "Print the transaction ID of the genesis transaction",
+      "level": 1,
+      "content": "print(ergo.txId(genesis_tx))  \n\noutBox_list = []"
+    },
+    {
+      "heading": "Process all the transactions in the chain",
+      "level": 1,
+      "content": "for x in range(consecutive_transactions):\n    # If it's the first transaction\n    if x == 0: \n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=genesis_outbox,\n                                            return_signed=True, chained=True)\n    # If it's the last transaction\n    elif x == consecutive_transactions - 1: \n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=outBox_list[x - 1],\n                                            return_signed=True)\n    # If it's neither the first nor the last transaction\n    else: \n        tx_1 = helper_functions.simple_send(ergo=ergo, amount=amount, wallet_mnemonic=wallet_mnemonic,\n                                            receiver_addresses=receiver_addresses, input_box=outBox_list[x - 1],\n                                            return_signed=True, chained=True)\n    # Get the outbox from the current transaction\n    tx_1_outbox = appkit.get_outputs_to_spend(tx_1, 0)\n    outBox_list.append(tx_1_outbox)\n    \n    # Pause before processing the next transaction\n    time.sleep(sleep_time)"
+    },
+    {
+      "heading": "Print the transaction ID of the last transaction",
+      "level": 1,
+      "content": "print(ergo.txId(tx_1))"
+    },
+    {
+      "heading": "Pause before ending the program",
+      "level": 1,
+      "content": "time.sleep(sleep_time)"
+    },
+    {
+      "heading": "End the program",
+      "level": 1,
+      "content": "helper_functions.exit()\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/anatomy/transactions/chained.md",
+  "processed_at": "2025-05-11T19:18:35.563581",
+  "ai_processed": true
+}

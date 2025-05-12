@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_stack_interpreters_md",
+  "title": "Interpreters",
+  "summary": "The document discusses the two implementations of the ErgoScript compiler and ErgoTree interpreter for the Sigma Language:\n\n1. The sigmastate-interpreter for JVM languages, which is used by AppKit.\n2. sigma-rust, an alternative and simple implementation of ErgoTree interpreter and transaction-building tools.",
+  "qa_pairs": [
+    {
+      "question": "What are the two implementations of the ErgoScript compiler and ErgoTree interpreter for the Sigma Language?",
+      "answer": "The two implementations are: 1) The sigmastate-interpreter for JVM languages used by AppKit, and 2) sigma-rust, an alternative and simple implementation of ErgoTree interpreter and transaction-building tools."
+    },
+    {
+      "question": "What is the sigmastate-interpreter used for?",
+      "answer": "The sigmastate-interpreter is used for JVM languages and is used by AppKit."
+    },
+    {
+      "question": "What is sigma-rust?",
+      "answer": "sigma-rust is an alternative and simple implementation of ErgoTree interpreter and transaction-building tools."
+    },
+    {
+      "question": "What is the Sigma Language?",
+      "answer": "The Sigma Language is a language referenced in the document."
+    },
+    {
+      "question": "What is AppKit?",
+      "answer": "AppKit is a system that uses the sigmastate-interpreter."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Interpreters",
+      "level": 1,
+      "content": "There are two implementations of the ErgoScript compiler and ErgoTree interpreter for the [*'Sigma Language'*](sigma-lang.md).\n\n- The [sigmastate-interpreter](sigmastate-interpreter.md) for JVM languages which is used by [AppKit](appkit.md)\n- [sigma-rust](sigma-rust.md) is an alternative and simple implementation of ErgoTree interpreter and transaction-building tools."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/interpreters.md",
+  "processed_at": "2025-05-11T19:35:19.480256",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key design component of Dexy that allows one-way minting of new tokens?",
+    "answer": "The Emission (Minting) Contract allows one-way minting of new Dexy tokens by selling ERG at the oracle pool rate."
+  },
+  {
+    "question": "How does the Liquidity Pool (LP) in Dexy's design prevent token redemptions when the oracle rate is significantly below the LP rate?",
+    "answer": "The LP prevents LP token redemptions when the oracle rate is significantly below (e.g., 90%) the LP rate."
+  },
+  {
+    "question": "What is the purpose of the Arbitrage Mechanism in Dexy's design?",
+    "answer": "When the oracle rate is higher than the LP rate, the Arbitrage Mechanism allows arbitrageurs to mint Dexy from the emission contract and sell to the LP for a profit, helping push the Dexy price towards the peg."
+  },
+  {
+    "question": "How do the Top-up Swaps in Dexy's design help maintain the peg when the oracle rate is lower than the LP rate?",
+    "answer": "When the oracle rate is lower than the LP rate, the Top-up Swaps use ERG from the emission contract to buy Dexy from the LP, pushing the price back up."
+  },
+  {
+    "question": "What are some potential vulnerabilities and considerations mentioned in the document for the Dexy design?",
+    "answer": "Potential vulnerabilities and considerations include draining attacks, oracle manipulation, demand shifts, the need for thorough modeling and simulation, and the importance of iterative refinement and close monitoring."
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "id": "docs_eco_spectrum_md",
+  "title": "Spectrum Finance",
+  "summary": "Spectrum Finance is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks. Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early DEXes. Key features include addressing early DEX limitations, decentralization and openness, eUTxO model, innovative DEX protocol, liquidity pooling and execution, universal order composition, and autonomous account (AA). The document also provides resources such as tutorials, papers, and developer resources related to Spectrum Finance and Spectrum Bloom.",
+  "qa_pairs": [
+    {
+      "question": "What is Spectrum Finance?",
+      "answer": "Spectrum Finance is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks."
+    },
+    {
+      "question": "What are the current features of Spectrum Finance?",
+      "answer": "The current features of Spectrum Finance include Liquidity Provision & Yield Farming, and Babel Fees which allow transaction fees to be paid with various tokens."
+    },
+    {
+      "question": "What is Spectrum Bloom?",
+      "answer": "Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes)."
+    },
+    {
+      "question": "What are the key highlights of the Spectrum Bloom white paper?",
+      "answer": "The key highlights include addressing early DEX limitations, focusing on decentralization and openness, utilizing the eUTxO blockchain model, introducing a novel DEX protocol, unique approaches to liquidity pooling and order execution, universal order composition, and the Autonomous Account (AA) feature."
+    },
+    {
+      "question": "What are the potential future extensions and applications of the Autonomous Account (AA) concept beyond DEXes?",
+      "answer": "The white paper discusses potential extensions and applications of the Autonomous Account concept beyond DEXes."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Spectrum Finance\n  - DEX\n  - Cross-Chain\n  - Yield Farming\n  - Babel Fees\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "Spectrum Finance",
+      "level": 1,
+      "content": "[Spectrum](https://spectrum.fi) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks."
+    },
+    {
+      "heading": "Current Features of Spectrum Finance",
+      "level": 2,
+      "content": "- **Liquidity Provision & Yield Farming**: Users can engage in liquidity provision and yield farming.\n- **Babel Fees**: Babel fees allow transaction fees to be paid with various tokens."
+    },
+    {
+      "heading": "Spectrum Bloom: Next-Generation DeFi Framework",
+      "level": 2,
+      "content": "Spectrum Bloom is an upcoming eUTxO-native framework for decentralized finance (DeFi), designed to address and improve upon the limitations of early decentralized exchanges (DEXes)."
+    },
+    {
+      "heading": "Highlights from the Spectrum Bloom White Paper",
+      "level": 3,
+      "content": "- **Addressing Early DEX Limitations**: Spectrum Bloom aims to overcome issues such as lack of transparency, composability, and poor performance in early DEX implementations.\n- **Decentralization and Openness**: The framework focuses on principles of decentralization, openness, transparency, and sustainability.\n- **eUTxO Model**: Utilizes the eUTxO blockchain model, as seen in Ergo and Cardano, supporting multi-stage contracts and multi-token functionality.\n- **Innovative DEX Protocol**: Includes a novel protocol for DEX that consists of both on-chain (UTxO and validators) and off-chain (event handlers for state transitions) elements.\n- **Liquidity Pooling and Execution**: Spectrum Bloom proposes unique approaches to liquidity pooling and order execution, aiming to streamline processes and reduce overhead.\n- **Universal Order Composition**: Introduces universally composable orders, which can be fulfilled from any liquidity source, enhancing flexibility and efficiency.\n- **Autonomous Account (AA)**: A key feature where an on-chain entity can validate execution and release user funds for trading, facilitating a dynamic set of applications on eUTxO blockchains.\n- **Future Extensions and Applications**: The white paper also discusses potential extensions and applications of the Autonomous Account concept beyond DEXes."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Tutorials",
+      "level": 3,
+      "content": "- [Running an off-chain matching bot](https://github.com/ergolabs/ergo-dex-backend#building--running-the-off-chain-services)"
+    },
+    {
+      "heading": "Papers",
+      "level": 3,
+      "content": "- [Extended UTxO in production: Techniques, trade-offs, and finding a better balance](https://spectrum.fi/eutxo_in_production.pdf)\n- [Spectrum Bloom White Paper](https://spectrum.fi/spectrum_bloom_wp.pdf)"
+    },
+    {
+      "heading": "Dev-Resources",
+      "level": 3,
+      "content": "- [EIP-0014: Decentralized Exchange Contracts](https://github.com/ergoplatform/eips/pull/27)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/spectrum.md",
+  "processed_at": "2025-05-11T19:48:23.771660",
+  "ai_processed": true
+}

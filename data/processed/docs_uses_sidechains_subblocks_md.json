@@ -1,0 +1,53 @@
+{
+  "id": "docs_uses_sidechains_subblocks_md",
+  "title": "Subblocks in Ergo",
+  "summary": "Ergo has introduced sub-blocks (input blocks) and ordering blocks, reducing typical onchain confirmation times from 2 minutes to 2 seconds, a 17x improvement. Sub-blocks are block candidates generated with lower difficulty, allowing faster transaction propagation and confirmation. Ordering blocks maintain the overall consensus and security of the blockchain. These changes provide users with near-instant confirmations and faster failure detection, transforming the mempool into a more cooperative environment and offering a smoother, more efficient experience on the Ergo network.",
+  "qa_pairs": [
+    {
+      "question": "What are sub-blocks (input blocks) in Ergo?",
+      "answer": "Sub-blocks (input blocks) are block candidates generated with a lower difficulty threshold than full blocks. They are produced approximately once per second and carry most transaction data, allowing transactions to propagate and confirm much faster."
+    },
+    {
+      "question": "What are ordering blocks in Ergo?",
+      "answer": "Ordering blocks are the traditional full blocks of Ergo's proof-of-work system. They are generated roughly every 2 minutes and maintain the overall consensus and security of the blockchain."
+    },
+    {
+      "question": "How do sub-blocks (input blocks) and ordering blocks improve the user experience on the Ergo network?",
+      "answer": "The introduction of sub-blocks (input blocks) and ordering blocks significantly improves transaction processing speed and reliability, providing users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network."
+    },
+    {
+      "question": "How does the new sub-block (input block) and ordering block design transform the Ergo mempool?",
+      "answer": "The new design transforms the mempool from a competitive (PvP) environment into a cooperative, multiplayer-like system, enhancing overall network responsiveness."
+    },
+    {
+      "question": "Where can I find more technical details about the sub-blocks (input blocks) and ordering blocks in Ergo?",
+      "answer": "For a deep dive into the technical details behind these changes, see the [technical details](input-blocks.md)."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Subblocks in Ergo",
+      "level": 1,
+      "content": "/// details |TLDR\n    {type: info, open: true}\n\nWith the renaming and introduction of sub-blocks, Ergo now distinguishes between sub-blocks (also called input blocks) and full blocks (now called ordering blocks). This change reduces typical onchain confirmation times from about 2 minutes to roughly 2 seconds, achieving a 17\u00d7 improvement in detecting transaction failures and transforming the current competitive mempool into a more cooperative environment.\n///"
+    },
+    {
+      "heading": "What Are Sub-blocks and Ordering Blocks?",
+      "level": 3,
+      "content": "- **Sub-blocks (Input Blocks):**  \n  These are block candidates generated with a lower difficulty threshold than full blocks. They are produced approximately once per second and carry most transaction data. This allows transactions to propagate and confirm much faster.\n  \n- **Ordering Blocks:**  \n  These are the traditional full blocks of Ergo\u2019s proof-of-work system, now renamed as ordering blocks. They are generated roughly every 2 minutes and maintain the overall consensus and security of the blockchain.\n\n> **Note:** The naming \u201cinput blocks\u201d (or sub-blocks) and \u201cordering blocks\u201d was proposed in detail in [this document](https://raw.githubusercontent.com/ergoplatform/ergo/e15dcd0b4ca0a72d32d97228f010d813540de39d/papers/subblocks/subblocks.md)."
+    },
+    {
+      "heading": "Enhanced User Experience",
+      "level": 3,
+      "content": "- **Rapid Onchain Confirmations:**  \n  Everyday transactions\u2014like receiving tokens from decentralized exchange (DEX) swaps or wallet-to-wallet transfers\u2014are now confirmed in approximately 2 seconds.\n  \n- **Faster Failure Detection:**  \n  Instead of waiting up to 6 minutes to detect a transaction failure, the new system detects failures in about 2 seconds\u2014a 17\u00d7 improvement in responsiveness.\n  \n- **A More Cooperative Mempool:**  \n  The design shift transforms the mempool from a competitive (PvP) environment into a cooperative, multiplayer-like system, enhancing overall network responsiveness."
+    },
+    {
+      "heading": "In a Nutshell",
+      "level": 3,
+      "content": "Ergo\u2019s renaming and introduction of sub-blocks (input blocks) paired with ordering blocks significantly improves transaction processing speed and reliability. These changes provide users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network.\n\nFor a deep dive into the technical details behind these changes, see the [technical details](input-blocks.md)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/sidechains/subblocks.md",
+  "processed_at": "2025-05-11T20:04:13.304567",
+  "ai_processed": true
+}

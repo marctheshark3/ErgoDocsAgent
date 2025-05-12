@@ -1,0 +1,6 @@
+The document provides an overview of the ERGOHACK events, which are hackathons organized by the Ergo community to build solutions, tools, and decentralized applications (dApps) that contribute to the Ergo ecosystem. The document covers the following key points:
+
+- Introduction to ERGOHACK events as pillars of innovation within the Ergo community, bringing together developers, designers, students, and enthusiasts to collaborate on Ergo-related projects.
+- Statistics on the ERGOHACK events, including the total number of events, projects submitted, themes covered, and notable outcomes such as the development of essential ecosystem tools and dApps.
+- Detailed descriptions of the past ERGOHACK events, including their themes, summaries, and the projects developed during each event.
+- Highlights of the most recent ERGOHACK IX event, which focused on "Building for Everyone: Mining & UI/UX Innovation", and the projects that were developed, such as Bene, Last Byte Bar, OnErgo, and Satergo Offline Vault.

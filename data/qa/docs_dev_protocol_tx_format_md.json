@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a 'box' in Ergo's protocol?",
+    "answer": "A 'box' is a fundamental entity that encapsulates various types of information, including value, tokens, custom data, and more."
+  },
+  {
+    "question": "How many registers can a box have, and what are the mandatory registers?",
+    "answer": "A box can have up to 10 registers, with 4 mandatory registers: R0 (monetary value), R1 (guard script), R2 (tokens), and R3 (metadata)."
+  },
+  {
+    "question": "What are the types of values that can be stored in a box's registers?",
+    "answer": "The values in a box's registers must be concrete constant values, not functions, and they are defined in the Sigma language."
+  },
+  {
+    "question": "How is a box serialized for various functions like obtaining the box identifier?",
+    "answer": "A box's serialization format includes the monetary value, script bytes, creation height, number of tokens, additional registers, transaction identifier, and index of the transaction output."
+  },
+  {
+    "question": "What is the purpose of the optional registers R4 to R9 in a box?",
+    "answer": "The optional registers R4 to R9 can be used to store additional data relevant to the transaction or smart contract."
+  }
+]

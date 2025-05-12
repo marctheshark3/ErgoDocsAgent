@@ -1,0 +1,15 @@
+The document "Fleet SDK Recipes" provides useful code snippets, patterns, and troubleshooting tips for common tasks when using the Fleet SDK in TypeScript/JavaScript. It covers the following topics:
+
+Validating Box Ownership (SigmaProp from Register): Extracting the owner's SigmaProp bytes from a register, deserializing them, converting the public key bytes into the owner's P2PK ErgoTree, and comparing it with the ErgoTree of the box being validated.
+
+Working with Numeric Registers: Extracting numeric values (BigInt) from registers, handling different numeric types like SLong and SInt.
+
+Extracting Token IDs from Registers: Extracting token IDs (hex strings) from registers containing SColl(SByte) format.
+
+Decoding Complex Types (Tuples, Options, Collections): Deserializing complex data types from registers.
+
+Compiling ErgoScript to ErgoTree: Compiling ErgoScript to ErgoTree.
+
+Troubleshooting Common Issues: Addressing ErgoTree comparison failures and unexpected register format issues.
+
+The document also includes a relationship diagram and related documentation references.

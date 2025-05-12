@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_lang_kotlin_md",
+  "title": "Kotlin",
+  "summary": "The document provides an introduction to Kotlin, a programming language predominantly used for the Java Virtual Machine (JVM). It highlights the availability of resources such as the AppKit Guide and the Mosaik Kotlin DSL User Interface Tutorial to help developers work with Kotlin. The document also mentions the Ergo Wallet app, a Kotlin-based application that serves as a case study for effective use of AppKit.",
+  "qa_pairs": [
+    {
+      "question": "What is Kotlin predominantly used as?",
+      "answer": "Kotlin is predominantly used as a JVM language."
+    },
+    {
+      "question": "Where can you find additional resources for using Kotlin with AppKit?",
+      "answer": "Additional resources for using Kotlin with AppKit can be found in the AppKit Guide."
+    },
+    {
+      "question": "What does Mosaik provide for Kotlin developers?",
+      "answer": "Mosaik provides a Kotlin DSL User Interface Tutorial to help understand and create user interfaces effectively."
+    },
+    {
+      "question": "What is the Ergo Wallet app an example of?",
+      "answer": "The Ergo Wallet app is an example of a practical demonstration of how to utilize AppKit in Kotlin."
+    },
+    {
+      "question": "Where can you find a case study on the effective use of AppKit?",
+      "answer": "You can find a case study on the effective use of AppKit in the Ergo Wallet app."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Kotlin\n  - JVM\n  - AppKit\n  - Mosaik\n---"
+    },
+    {
+      "heading": "Kotlin",
+      "level": 1,
+      "content": "Given that Kotlin is predominantly used as a [JVM](jvm.md) language, please refer to our [AppKit Guide](appkit.md) for additional resources.\n\nWe also offer [Mosaik](mosaik.md), which provides a Kotlin DSL User Interface Tutorial to help you understand and create [user interfaces](get-started.md) effectively. (See the full [Mosaik Intro](intro.md)).\n\nFor a practical demonstration of how to utilize [AppKit](appkit.md) in Kotlin, consider reviewing the [Ergo Wallet app](https://github.com/ergoplatform/ergo-wallet-app). This application, developed in Kotlin, provides a valuable [case study](use-cases-overview.md) on effective use of AppKit."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/lang/kotlin.md",
+  "processed_at": "2025-05-11T19:21:46.933572",
+  "ai_processed": true
+}

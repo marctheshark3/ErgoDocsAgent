@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_sigma-stamp_md",
+  "title": "Sigma Stamp",
+  "summary": "Sigma Stamp is a timestamping service on the Ergo blockchain. It provides a way for users to timestamp digital content and documents. The document includes links to the Sigma Stamp website and examples of how the service can be used.",
+  "qa_pairs": [
+    {
+      "question": "What is Sigma Stamp?",
+      "answer": "Sigma Stamp is a timestamping service on the Ergo blockchain."
+    },
+    {
+      "question": "What is the purpose of Sigma Stamp?",
+      "answer": "The purpose of Sigma Stamp is to provide a timestamping service on the Ergo blockchain."
+    },
+    {
+      "question": "What is the URL of the Sigma Stamp project?",
+      "answer": "The URL of the Sigma Stamp project is https://sigmastamp.ml."
+    },
+    {
+      "question": "Where can I find examples of Sigma Stamp usage?",
+      "answer": "Examples of Sigma Stamp usage can be found at https://www.sigmastamp.ml/wiki#examples-of-sigmastamp-usage."
+    },
+    {
+      "question": "What type of application is Sigma Stamp?",
+      "answer": "Sigma Stamp is a decentralized application (dApp) on the Ergo blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - SigmaStamp\n  - Timestamping\n  - dApp\n---"
+    },
+    {
+      "heading": "Sigma Stamp",
+      "level": 1,
+      "content": "[sigmastamp.ml](https://sigmastamp.ml) is a timestamping service on Ergo. \n\nSee example usages of SigmaStamp project [here](https://www.sigmastamp.ml/wiki#examples-of-sigmastamp-usage)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/sigma-stamp.md",
+  "processed_at": "2025-05-11T19:47:40.171720",
+  "ai_processed": true
+}

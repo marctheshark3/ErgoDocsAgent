@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the full form of CYTI?",
+    "answer": "CYTI stands for Choose Your Token ID."
+  },
+  {
+    "question": "What is the purpose of the CYTI smart contract?",
+    "answer": "The CYTI smart contract allows an entity to mint tokens with a given character sequence at the beginning of the token ID."
+  },
+  {
+    "question": "How does the CYTI minting process work?",
+    "answer": "A token minter creates a CYTI request, and miners generate the proper token ID using the CYTI miner software. When a miner succeeds, they receive the fee from the CYTI contract, and the token with the right token ID is sent to the token minter."
+  },
+  {
+    "question": "What are the key components of the CYTI system?",
+    "answer": "The key components of the CYTI system are the CYTI smart contract, the CYTI miner software, and the token minter."
+  },
+  {
+    "question": "What are the potential applications of the CYTI system?",
+    "answer": "The CYTI system can be used by entities to mint tokens with a specific character sequence at the beginning of the token ID."
+  }
+]

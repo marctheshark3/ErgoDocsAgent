@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of using Merkle Trees in the Ergo blockchain?",
+    "answer": "Merkle Trees are utilized for efficient and secure verification of transactions within a block, especially useful for lightweight clients to verify that a specific transaction is included in a block without having to download the entire blockchain."
+  },
+  {
+    "question": "What are the key components of a share submitted by a miner to a decentralized pool?",
+    "answer": "The share submitted to the pool consists of: the block header without the PoW solution (msgPreimage), the partial PoW solution, and the Merkle proof that the transaction is included in the block."
+  },
+  {
+    "question": "What are the steps a decentralized pool would use to verify the validity of a share submitted by a miner?",
+    "answer": "The pool verifies the validity of the share by: 1) Checking that the combination of msgPreimage and the partial PoW solution forms a valid block header with sufficient difficulty, and 2) Using the Merkle proof to verify that the transaction is indeed included in the block."
+  },
+  {
+    "question": "How can the decentralized pool use the Merkle proof to verify that a transaction is included in the block?",
+    "answer": "The pool can use the Merkle proof, which consists of the hash of the transaction (txId) and the Merkle root extracted from the msgPreimage, to verify that the transaction is included in the block."
+  },
+  {
+    "question": "What is the practical application of the Merkle proof verification process for a decentralized pool?",
+    "answer": "The Merkle proof verification process can be particularly valuable for decentralized mining pools with collateral, where the pool checks shares from miners to ensure that a corresponding block contains a specific transaction, such as one that pays out to the pool."
+  }
+]

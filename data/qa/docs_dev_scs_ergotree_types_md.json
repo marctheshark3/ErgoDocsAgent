@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the `toByte` method in the Byte type?",
+    "answer": "The `toByte` method converts a numeric value to a Byte, throwing an exception on overflow."
+  },
+  {
+    "question": "What is the signature of the `toByte` method?",
+    "answer": "The signature of the `toByte` method is `def toByte: Byte`."
+  },
+  {
+    "question": "How is the `toByte` method serialized?",
+    "answer": "The `toByte` method is serialized as a Downcast."
+  },
+  {
+    "question": "What are the predefined types mentioned in the document?",
+    "answer": "The predefined types mentioned are Boolean and Byte."
+  },
+  {
+    "question": "What is the purpose of the mathematical notation used in the introduction?",
+    "answer": "The mathematical notation is used to define various commands and symbols used in the document."
+  }
+]

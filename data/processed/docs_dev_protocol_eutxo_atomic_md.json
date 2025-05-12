@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_protocol_eutxo_atomic_md",
+  "title": "Atomic Swaps",
+  "summary": "Atomic Swaps are a revolutionary technology that enables direct interaction between different blockchain systems, facilitating the transfer of digital assets across chains without the need for centralized exchanges. The document explains how atomic swaps work, with a step-by-step overview of the process. It also highlights the advantages of the Ergo blockchain in implementing atomic swaps, particularly its eUTXO model that allows for partial order fulfillment, enabling a fully decentralized exchange (DEX) supporting cross-chain trading. The document includes a Python-based illustration of an atomic swap scenario between two parties, Alice and Bob, using the secp256k1 elliptic curve.",
+  "qa_pairs": [
+    {
+      "question": "What is an atomic swap?",
+      "answer": "Atomic swaps are a technology that enables direct interaction between different blockchain systems, facilitating the transfer of digital assets across chains without the need for centralized exchanges."
+    },
+    {
+      "question": "How do atomic swaps work in a simplified step-by-step process?",
+      "answer": "1. Alice and Bob agree to trade their cryptocurrencies. 2. Alice creates a secret, generates its hash, and locks her cryptocurrency on the Bitcoin blockchain with a script containing the hash. 3. Bob sets up a similar transaction on the Ergo blockchain, locking his cryptocurrency with a script containing the same hash. 4. After confirming Bob's transaction, Alice reveals the secret, allowing both transactions to execute."
+    },
+    {
+      "question": "What is the Ergo advantage in atomic swaps?",
+      "answer": "Ergo enhances the existing atomic swaps concept by leveraging its eUTXO (Extended Unspent Transaction Output) model, which allows for partial order fulfillment and flexibility unheard of in traditional atomic swaps."
+    },
+    {
+      "question": "What is the purpose of the secp256k1 elliptic curve in the Python example?",
+      "answer": "The secp256k1 elliptic curve is used to generate the key pairs for Alice and Bob, as well as to compute additional values required for the atomic swap process."
+    },
+    {
+      "question": "What are the key steps in the Python example for Alice and Bob to perform an atomic swap?",
+      "answer": "1. Alice and Bob generate their own key pairs. 2. They each select secret random values. 3. They generate additional values using their secrets. 4. They perform the atomic swap by locking their respective cryptocurrencies on different blockchains and revealing the shared secret."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - UTXO\n  - Atomic Swaps\n---"
+    },
+    {
+      "heading": "Atomic Swaps",
+      "level": 1,
+      "content": "Atomic Swaps are a revolutionary technology that enables direct interaction between different blockchain systems. They facilitate the transfer of digital assets across chains without the need for centralized exchanges.\n\nBlockchain technology is excellent at facilitating secure and efficient decentralized transfers within its network. For instance, Bitcoin (BTC) can be safely and quickly sent to any Bitcoin address, and the same is true for Litecoin (LTC) or any other cryptocurrency within its network.\n\nHowever, the structure of a blockchain, built around the consensus among miners, isn't inherently designed to communicate with other blockchain systems. Consequently, transferring assets between different blockchain networks has traditionally involved third-party intermediaries like exchanges or Over-The-Counter (OTC) desks, which can introduce additional risks and inefficiencies."
+    },
+    {
+      "heading": "Cross-chain Swaps",
+      "level": 2,
+      "content": "Atomic swaps offer a solution to this challenge, enabling a secure and efficient cross-blockchain trade of cryptocurrencies. This innovative approach facilitates a direct, trustless exchange of assets. Here's a simplified step-by-step overview of how they work:\n\n1. Alice and Bob agree to trade their cryptocurrencies. Alice will send 1 BTC to Bob, and in return, Bob will send Alice 50,000 ERG. As neither party trusts the other completely, both are hesitant to send their assets first.\n2. Alice creates a secret - a unique, random number - and generates its hash. She then creates a transaction on the Bitcoin blockchain, attaching a script to lock her 1 BTC. This script specifies a condition: when the original secret (pre-image) of the generated hash is revealed, the locked BTC will be transferred to Bob's address. The hash can be safely included in the script, as the original secret cannot be deduced from it.\n3. In response, Bob sets up a similar transaction on the Ergo blockchain, locking 50,000 ERG with a script containing the same hash Alice used. However, without the original secret, he can't execute Alice's transaction.\n4. After confirming Bob's transaction on the Ergo blockchain, Alice can reveal the secret and execute Bob's transaction. With the original secret now in the open, Bob can also execute the script to receive his BTC.\n5. Once published on the blockchain, neither Alice nor Bob can delete their transactions or scripts. However, they may set a time limit on the transactions to prevent their coins from being locked indefinitely if the secret isn't revealed within the set time."
+    },
+    {
+      "heading": "The Ergo Advantage in Atomic Swaps",
+      "level": 2,
+      "content": "Traditional atomic swaps operate on a binary execution principle - the transactions are either completed in full or not executed at all. This property makes them analogous to 'fill-or-kill' orders in conventional trading environments. While this ensures trustless exchange of assets, it lacks the flexibility found in a dynamic, conventional exchange environment.\n\nErgo enhances the existing atomic swaps concept by leveraging its unique eUTXO (Extended Unspent Transaction Output) model, a significant evolution over the conventional UTXO model found in Bitcoin-like blockchains.\n\nThe eUTXO model allows each UTXO to carry arbitrary data and to be protected by an arbitrary predicate (or spending condition). The data can be used to represent arbitrary tokens or smart contract states, while ErgoScript can implement complex logic akin to Ethereum smart contracts.\n\nIn the context of atomic swaps, Ergo utilizes the advanced capabilities of the eUTXO model to support not just the trustless swapping of coins or custom tokens across different blockchains, but also the ability to partially fill orders, tailored to the trader's preference.\n\nThis feature is implemented by coding a special type of smart contract into a UTXO's ErgoScript, enabling a UTXO to be split into several smaller ones while keeping the smart contract's state intact. This effectively allows for partial order fulfillment, flexibility unheard of in traditional atomic swaps.\n\nBy enabling this, Ergo provides the infrastructure for a fully decentralized exchange (DEX) supporting cross-chain trading. This Ergo-based DEX operates without intermediaries, eliminating the need for mechanisms like gateways or token wrapping often required in other blockchain platforms. This significantly reduces potential bottlenecks and points of failure, thereby promoting a secure and seamless trading environment."
+    },
+    {
+      "heading": "Python example",
+      "level": 2,
+      "content": "Below is a Python-based illustration adapted from [atomicswapexample](https://github.com/dzyphr/atomicswapexample) showing an atomic swap scenario between two parties - Alice (p1) and Bob (p2), which uses the secp256k1 elliptic curve.\n\nThe secp256k1 curve is imported as below:\n\n```python\nimport collections\nimport hashlib\nimport random\nimport binascii\nimport sys\nimport libnum\nfrom ECC import *\n\nEllipticCurve = collections.namedtuple('EllipticCurve', 'name p a b g n h')\n\ncurve = EllipticCurve(\n    'secp256k1',\n    p=0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f,\n    a=0,\n    b=7,\n    g=(0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798,\n       0x483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8),\n    n=0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141,\n    h=1,\n)\n```\n\nThe starting point is Alice and Bob generating their own key pairs:\n\n```python\np1SecretKey, p1PublicKey = gen_keypair()\np2SecretKey, p2PublicKey = gen_keypair()\n```\n\nThe `gen_keypair` function randomly selects a private key and computes the corresponding public key. This is done using the secp256k1 curve.\n\nNext, both Alice and Bob select secret random values which are not reused:\n\n```python\nrs = random.randrange(0, curve.n) # Alice's secret\nrr = random.randrange(0, curve.n) # Bob's secret\n```\n\nThey then generate additional values using these secrets:\n\n```python\nrsG = scalar_mult(rs, curve.g)\nrrG = scalar_mult(rr, curve.g)\n```\n\nThese new values, `rsG` and `rrG`, are the result of the secrets `rs` and `rr` respectively being multiplied by the curve generator. This operation uses elliptic curve scalar multiplication, which essentially means that the curve's generator point is added to itself `rs` or `rr` times.\n\nThe process goes on with both parties exchanging generated values and computing additional shared secrets, performing operations on their secrets, and using hashes to secure the integrity of the transaction. The code simulates both parties acting in turns to finalize the atomic swap.\n\nAdditionally, they also verify that the computed keys and secrets are valid and fulfill the conditions of the swap. This includes checking that certain values are equal as well as confirming that the correct funds are locked in the smart contract:\n\n```python\nassert(check == sr_G)\n```\n\n```python\nif (vr1[0]==vr2[0]):\n    print(vr1[0], \"==\", vr2[0])\n    print (\"Success!\")\nelse:\n    print (\"Failure!\")\n```\n\n\n\nOnce all the conditions are met, Alice can spend her value locked in the contract, thus finalizing the atomic swap:\n\n```python\nprint(\"Alice can now spend value locked to hash/public pair xG with x and their signature\")\n```\n\nIt's important to note that this is a simplified illustration. In a real-world scenario, multiple additional layers of complexity and security would be required, including secure communication channels for the participants, comprehensive error handling, and transaction fees considerations.\n\nFor a more comprehensive understanding of Ergo\u2019s atomic swaps and the possibilities they offer for intra-chain and cross-chain token swaps, refer to the [ErgoScript white paper](https://ergoplatform.org/docs/ErgoScript.pdf)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/eutxo/atomic.md",
+  "processed_at": "2025-05-11T19:24:06.195383",
+  "ai_processed": true
+}

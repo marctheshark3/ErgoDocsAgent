@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the `sigma-rust-mini` fork?",
+    "answer": "The `sigma-rust-mini` fork is specifically designed for `no_std` environments and reduced footprint."
+  },
+  {
+    "question": "What are the key challenges when using `sigma-rust` in resource-constrained environments?",
+    "answer": "The key challenges include code size, memory usage, lack of standard library (`std`) support, and unsuitable cryptographic dependencies."
+  },
+  {
+    "question": "What are the benefits of using the `sigma-rust-mini` fork?",
+    "answer": "The `sigma-rust-mini` fork is pre-configured for `no_std`, likely includes necessary feature flag adjustments, and may already incorporate backend swaps."
+  },
+  {
+    "question": "What considerations should be kept in mind when using the `sigma-rust-mini` fork?",
+    "answer": "The `sigma-rust-mini` fork might lag behind the main `sigma-rust` repository in terms of features or updates, so it's important to verify its maintenance status and compatibility with the required `sigma-rust` version."
+  },
+  {
+    "question": "When is the `sigma-rust-mini` fork recommended to be used?",
+    "answer": "The `sigma-rust-mini` fork is often the easiest starting point for hardware wallet integration or `no_std` projects."
+  }
+]

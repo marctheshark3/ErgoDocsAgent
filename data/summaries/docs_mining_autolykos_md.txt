@@ -1,0 +1,9 @@
+Autolykos is the Proof of Work algorithm used for mining Ergo. Autolykos v1 was designed to be ASIC-resistant and pool-resistant, but large players could bypass the pool resistance. Autolykos v2 was introduced with the following changes:
+
+- Removal of non-outsourceable puzzles
+- Optimization to bind an efficient solving procedure with a single table of ~2 GB
+- Table size increases over time, solely dependent on block height
+
+Autolykos v2 is based on the k-sum problem, where miners must find k (32) out of N (initially 2^26) elements such that the hash of their sum is less than the target value. The indexes are pseudorandom values derived from the block candidate and nonce, while the elements are derived from the block height and constants.
+
+The algorithm is designed to be efficient for miners who store the table, which grows over time, reaching a fixed size of 2,143,944,600 elements at block 4,198,400.

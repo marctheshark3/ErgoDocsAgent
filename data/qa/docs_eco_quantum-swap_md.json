@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a quantum swap operation?",
+    "answer": "The purpose of a quantum swap operation is to exchange the quantum states of two qubits."
+  },
+  {
+    "question": "How does a quantum swap differ from a classical swap?",
+    "answer": "In a classical swap, the actual values are exchanged, whereas in a quantum swap, the quantum states of the qubits are exchanged."
+  },
+  {
+    "question": "What are the key steps involved in performing a quantum swap?",
+    "answer": "The key steps are: 1) Apply a CNOT gate, 2) Apply a Hadamard gate, and 3) Apply another CNOT gate."
+  },
+  {
+    "question": "What are some practical applications of the quantum swap operation?",
+    "answer": "Quantum swap operations are used in quantum error correction, quantum teleportation, and as a building block for more complex quantum algorithms."
+  },
+  {
+    "question": "How does the quantum swap relate to the concept of quantum entanglement?",
+    "answer": "The quantum swap operation creates entanglement between the two qubits being swapped, allowing their quantum states to become correlated."
+  }
+]

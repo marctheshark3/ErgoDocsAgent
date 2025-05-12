@@ -1,0 +1,8 @@
+The document discusses the mining incentives offered by SigmaUSD, a decentralized finance (DeFi) system built on the Ergo blockchain. Key points include:
+
+- SigmaRSV can offer project-oriented miners a way to maximize their positions by accumulating fees.
+- SigmaUSD can offer freelance miners liquidity to cover their expenses in a decentralized manner, free of exchanges.
+- SigmaUSD offers an incentive for miners to create greater price stability in the asset they are assisting in creating and maintaining.
+- Price stability assists miners in predicting future costs and revenues, and SigmaUSD can serve as a price stabilization mechanism.
+- Interacting with the SigmaUSD protocol is beneficial to all parties, compared to interacting with the open market.
+- Ergo's premise has always been a proof-of-work (PoW) system that can operate as a digital reserve of programmable gold.

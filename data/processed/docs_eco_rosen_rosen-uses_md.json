@@ -1,0 +1,88 @@
+{
+  "id": "docs_eco_rosen_rosen-uses_md",
+  "title": "Rosen Bridge: Connecting Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain",
+  "summary": "The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains. It allows users to convert various native tokens into their wrapped versions on different blockchains, such as ADA to rsADA, ERG to rsERG, BTC to rsBTC, ETH to rsETH, and BNB to rsBNB. This functionality opens up new possibilities for token holders across these ecosystems.\n\nThe document outlines various opportunities within the Ergo and Cardano ecosystems, including token swaps, decentralized marketplaces, DeFi applications, and privacy-enhancing tools that can utilize the bridged tokens. It also mentions upcoming support for the Binance Smart Chain network.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Rosen Bridge?",
+      "answer": "The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains."
+    },
+    {
+      "question": "How does the Rosen Bridge facilitate cross-chain token conversions?",
+      "answer": "The Rosen Bridge allows users to convert ADA into rsADA on the Ergo blockchain, ERG into rsERG on the Cardano blockchain, BTC into rsBTC on both Ergo and Cardano blockchains, ETH into rsETH on both Ergo and Cardano blockchains, and BNB into rsBNB on both Ergo and Cardano blockchains (Soon!)."
+    },
+    {
+      "question": "What are the supported tokens on the Ergo Network?",
+      "answer": "The supported tokens on the Ergo Network include ERG (native Ergo token), SigUSD/SigRSV (Ergo stablecoin and reserve), RSN (Rosen Bridge token), COMET, SPF, AHT, Bober, COS, EPOS, ErgOne, GIF, GluonW GAU, GluonW GAUC, MEW, Paideia, QUACKS, Troll, WALRUS, and CYPX."
+    },
+    {
+      "question": "What are the supported tokens on the Cardano Network?",
+      "answer": "The supported tokens on the Cardano Network include ADA (native Cardano token), Hosky, NIKEPIG, SUGAR, BANA, O, DIS, sOADA, OADA, and MNT."
+    },
+    {
+      "question": "What is the native token on the Bitcoin Network?",
+      "answer": "The native token on the Bitcoin Network is BTC."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Rosen Bridge: Connecting Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain",
+      "level": 1,
+      "content": "The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains. This bridge doesn't facilitate direct swaps between native tokens. Instead, it allows users to convert:\n\n- ADA into rsADA on the Ergo blockchain\n- ERG into rsERG on the Cardano blockchain\n- BTC into rsBTC on both Ergo and Cardano blockchains\n- ETH into rsETH on both Ergo and Cardano blockchains\n- BNB into rsBNB on both Ergo and Cardano blockchains (Soon!)\n\nThis functionality opens up new possibilities for token holders across these ecosystems."
+    },
+    {
+      "heading": "Supported Tokens",
+      "level": 2,
+      "content": "You can see a full list of locked assets [here](https://app.rosen.tech/assets)."
+    },
+    {
+      "heading": "Ergo Network",
+      "level": 3,
+      "content": "| Token | Description |\n|-------|-------------|\n| ERG   | Native Ergo token |\n| [SigUSD / SigRSV](sigmausd.md) | Ergo stablecoin and reserve |\n| RSN   | Rosen Bridge token |\n| [COMET](https://thecomettoken.com/) | Ergo ecosystem token |\n| SPF   | Spectrum Finance token |\n| AHT   | ergouactions.org |\n| Bober | [Meme Coin](https://t.co/DXEIXJC8AW) |\n| COS   | [Cup of Sugar](cup-of-sugar.md) |\n| EPOS  | [tabbypos](tabbypos.md) Point of sale |\n| ErgOne| [ErgOne](ergone.md) |\n| GIF   | GreasyCex |\n| GluonW GAU | [Gluon](gluon.md) |\n| GluonW GAUC | [Gluon](gluon.md) |\n| MEW   | [MewFinance](mew-finance.md) |\n| Paideia | [DAO Toolkit](paideia.md) |\n| QUACKS | [Duckpools](duckpools.md) (Lending) |\n| Troll | New supported token |\n| WALRUS| New supported token |\n| CYPX  | [Cyberverse](cyberverse.md) |"
+    },
+    {
+      "heading": "Cardano Network",
+      "level": 3,
+      "content": "| Token | Description |\n|-------|-------------|\n| ADA   | Native Cardano token |\n| Hosky | Cardano meme token |\n| NIKEPIG | Cardano meme token |\n| SUGAR | New supported token |\n| BANA  | New supported token |\n| O     | New supported token |\n| DIS   | New supported token |\n| sOADA | New supported token |\n| OADA  | New supported token |\n| MNT   | New supported token |"
+    },
+    {
+      "heading": "Bitcoin Network",
+      "level": 3,
+      "content": "| Token | Description |\n|-------|-------------|\n| BTC   | Native Bitcoin token |"
+    },
+    {
+      "heading": "Ethereum Network",
+      "level": 3,
+      "content": "| Token | Description |\n|-------|-------------|\n| ETH   | Native Ethereum token |"
+    },
+    {
+      "heading": "Binance Smart Chain Network",
+      "level": 3,
+      "content": "| Token | Description |\n|-------|-------------|\n| BNB   | Native Binance Smart Chain token |"
+    },
+    {
+      "heading": "Ergo Ecosystem Opportunities",
+      "level": 2,
+      "content": "1. **Token Swaps**: \n   Use [Ergodex](spectrum.md) to acquire native tokens like rsADA, rsBTC, rsETH, rsBNB, or rsHOSKY.\n\n2. **[Auction House](ergo-auctions.md)**: \n   A decentralized marketplace for NFTs and tokens that now accepts rsADA, rsBTC, rsETH, and rsBNB. List tokens in bulk or make offers.\n\n3. **[SigmaFi](https://sigmafi.app/#/)**:\n   A decentralized peer-to-peer bonds market where you can use wrapped tokens as collateral.\n\n4. **[DuckPools](https://www.duckpools.io/)**:\n   Lend rsADA, rsBTC, rsETH, rsBNB, and other supported tokens.\n\n5. **[ErgoMixer](ergomixer.md)**:\n   Enhance privacy by mixing your wrapped tokens.\n\n6. **[SigmaO](sigmao.md)**:\n   Create American-style call and put options on any wrapped token.\n\n> **Tip**: Low on ERG for transaction fees? Use [babel-fees](babel-fees.md) on Ergo to pay transaction fees with native tokens when you don't have enough ERG."
+    },
+    {
+      "heading": "Cardano Ecosystem Opportunities",
+      "level": 2,
+      "content": "1. **Cardano DEXs**: Gain exposure to Ergo, Bitcoin, Ethereum, and Binance Smart Chain bridged tokens on popular Cardano decentralized exchanges:\n        - Spectrum\n        - Minswap\n        - Sundaeswap\n2. **[Liqwid Finance](https://v2.liqwid.finance/market/ERG)**:\n   Participate in DeFi activities using bridged tokens, including rsERG, rsBTC, rsETH, and rsBNB.\n3. **[Lenfi](https://app.lenfi.io/)**:\n   Explore lending and borrowing options with bridged assets."
+    },
+    {
+      "heading": "Ethereum Ecosystem Opportunities",
+      "level": 2,
+      "content": "TBC"
+    },
+    {
+      "heading": "Future Developments",
+      "level": 2,
+      "content": "As the bridge continues to evolve, we anticipate more integrations and offerings involving rsADA, rsERG, rsBTC, rsETH, rsBNB, and other bridged tokens. Stay tuned for exciting developments across all five ecosystems."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/rosen/rosen-uses.md",
+  "processed_at": "2025-05-11T19:47:32.728524",
+  "ai_processed": true
+}

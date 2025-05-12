@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a zero-knowledge proof?",
+    "answer": "A zero-knowledge proof is a way to prove ownership or knowledge of something without revealing any sensitive information."
+  },
+  {
+    "question": "What are Sigma Protocols and how are they used in cryptography?",
+    "answer": "Sigma Protocols are a subclass of zero-knowledge proofs that are efficient and composable. They are used in digital signatures to prove knowledge of a private key without revealing it."
+  },
+  {
+    "question": "What are the two main Sigma Protocols used in Ergo?",
+    "answer": "The two Sigma Protocols used in Ergo are proof of discrete log and proof of Diffie-Hellman tuple."
+  },
+  {
+    "question": "How does Ergo enable powerful use cases with Sigma Protocols and the blockchain?",
+    "answer": "Ergo allows Sigma Protocols to include conditions based on the blockchain state, enabling use cases like trustless coin/token swaps, partial swaps, and decentralized exchanges."
+  },
+  {
+    "question": "Why does Ergo prioritize optional privacy instead of forced privacy?",
+    "answer": "Ergo prioritizes optional privacy because it allows for more flexibility, adoption, and regulation, and enables powerful smart contracts that would be challenging with forced privacy."
+  }
+]

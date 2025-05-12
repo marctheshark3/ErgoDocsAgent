@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Transaction Tree\n\n# Transaction Tree\n\nA *transaction tree* represents a sequence of related transactions hierarchically. Each transaction in the tree can have one or more child transactions dependen..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Transaction Tree"
+  },
+  {
+    "question": "What is the 'Transaction Tree' section about?",
+    "answer": "A *transaction tree* represents a sequence of related transactions hierarchically. Each transaction ..."
+  },
+  {
+    "question": "What is the 'Process' section about?",
+    "answer": "A transaction tree extends the concept of transaction chains, allowing for conditional logic (`if` s..."
+  }
+]

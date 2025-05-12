@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Tor and how does it help anonymize internet traffic?",
+    "answer": "Tor is a network that routes internet traffic through a series of volunteer-operated servers to help anonymize the traffic."
+  },
+  {
+    "question": "What configuration changes are needed in the ergo.conf file to run an Ergo node over Tor?",
+    "answer": "The node's P2P and API interfaces need to be bound to localhost, and the scorex.network.bindAddress and scorex.restApi.bindAddress settings should be set to 127.0.0.1."
+  },
+  {
+    "question": "What Java system properties are used to launch the Ergo node and direct its outbound network traffic through the Tor SOCKS proxy?",
+    "answer": "-DsocksProxyHost=localhost -DsocksProxyPort=9050"
+  },
+  {
+    "question": "What is the purpose of the utxoBootstrap, storingUtxoSnapshots, nipopowBootstrap, and p2pNipopows settings in the example ergo.conf file?",
+    "answer": "These settings configure the UTXO management and NiPoPoW functionality of the Ergo node."
+  },
+  {
+    "question": "What is the purpose of the apiKeyHash setting in the example ergo.conf file?",
+    "answer": "The apiKeyHash setting specifies the API key hash for accessing the Ergo node's REST API."
+  }
+]

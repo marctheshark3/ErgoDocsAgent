@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the fundamental difference between the UTXO model and the account-based model used by platforms like Ethereum?",
+    "answer": "In the UTXO model, nodes primarily verify transactions, whereas in the account-based model, nodes need to check all accounts to validate the system."
+  },
+  {
+    "question": "How does the eUTXO model in Ergo allow for more efficient and secure smart contract execution?",
+    "answer": "In the eUTXO model, Ergo allows smart contracts to utilize UTXOs as data inputs without modifying them, enabling parallel computation and facilitating non-custodial atomic swaps."
+  },
+  {
+    "question": "What are the key components of a transaction in the UTXO model?",
+    "answer": "A transaction consists of one or more input boxes, which are the source of funds and will be destroyed, and one or more output boxes, which are the destination of funds and will be created."
+  },
+  {
+    "question": "What is the UTXO state, and how is it represented?",
+    "answer": "The UTXO state is a database of all unspent transaction outputs, or boxes. Each box is an immutable unit that houses data, code, and registers, with all of its contents exclusively stored in the registers."
+  },
+  {
+    "question": "How is the unique ID of a box in the UTXO state determined?",
+    "answer": "Each box has a unique ID, derived from the unique contents of the box, including the data of the transaction that created it."
+  }
+]

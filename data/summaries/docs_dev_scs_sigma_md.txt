@@ -1,0 +1,7 @@
+Sigma Protocols are a class of cryptographic proof systems that play a central role in the Ergo blockchain. They allow a prover to convince a verifier that they know a value, such as a secret key, without revealing the value itself. Sigma protocols are the foundation for many privacy-preserving and multi-signature functionalities in Ergo.
+
+ErgoScript offers two elementary Sigma protocols: Proof of Knowledge of Discrete Logarithm (Schnorr Signature) and Proof of Equality of Discrete Logarithms (Diffie-Hellman Tuple). These basic protocols can be composed to create more advanced proofs using logical connectives like AND, OR, and THRESHOLD.
+
+The composability of Sigma protocols enables the creation of sophisticated smart contracts and multi-signature schemes, such as Ring Signatures and Threshold Signatures. These constructions allow for flexible and privacy-preserving proofs, particularly useful for multi-party agreements and anonymous transactions.
+
+Key use cases of Sigma protocols in Ergo include Multi-Signature Wallets, Ring Signatures for Privacy, and Threshold Signatures for decentralized control.

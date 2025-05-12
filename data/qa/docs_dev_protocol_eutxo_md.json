@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the eUTXO model and how does it differ from the original UTXO model?",
+    "answer": "The eUTXO (Extended UTXO) model is based on Bitcoin's UTXO model but with enhanced capabilities that enable more expressive smart contracts. It allows smart contracts to utilize UTXOs as read-only inputs without modifying them, enabling parallel computation and non-custodial atomic swaps."
+  },
+  {
+    "question": "What are the key benefits of the UTXO model that Ergo leverages?",
+    "answer": "The UTXO model provides benefits such as enhanced privacy, improved scalability, better interoperability, and predictable transaction costs for Ergo."
+  },
+  {
+    "question": "How does Ergo's eUTXO model enable Turing-complete smart contracts?",
+    "answer": "Ergo's Multi-Stage UTXO model, as detailed in a peer-reviewed paper, allows for the implementation of Turing-complete smart contracts, even though ErgoScript itself is not Turing-complete by design for security reasons."
+  },
+  {
+    "question": "What is the difference between Ergo's eUTXO model and the Account-Based model used by other platforms?",
+    "answer": "In the eUTXO model, nodes primarily verify transactions rather than balances, enabling parallel computation and non-custodial atomic swaps. This differs from the Account-Based model, where nodes need to check all accounts to validate the system."
+  },
+  {
+    "question": "How does Ergo's eUTXO model support scalability and interoperability?",
+    "answer": "The UTXO model's inherent design supports parallel transaction processing, making it simpler to scale the network. Additionally, UTXOs are more compatible with stateless client solutions like NIPoPoWs and enable seamless integration with off-chain and sidechain protocols."
+  }
+]

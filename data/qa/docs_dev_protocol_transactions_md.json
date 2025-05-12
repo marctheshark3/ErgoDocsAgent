@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of a transaction in Ergo?",
+    "answer": "Each Ergo transaction is an atomic state transition operation, which means that it destroys a box from the state and creates new ones."
+  },
+  {
+    "question": "What are the three main components of an Ergo transaction?",
+    "answer": "Each transaction executed on Ergo consists of one or more input boxes, one or more output boxes, and zero or more data-input boxes."
+  },
+  {
+    "question": "What is the purpose of input boxes in an Ergo transaction?",
+    "answer": "Input boxes are the source of funds for the transaction, and the guard script in each box must return true for the transaction to be considered valid."
+  },
+  {
+    "question": "What is the purpose of output boxes in an Ergo transaction?",
+    "answer": "Output boxes are the destination of funds, and they will be created by the transaction."
+  },
+  {
+    "question": "What is the purpose of data-input boxes in an Ergo transaction?",
+    "answer": "Data-input boxes are additional boxes whose data can be referenced and used by smart contracts of the inputs, but their guard script will not be evaluated."
+  }
+]

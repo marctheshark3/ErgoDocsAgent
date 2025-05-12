@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main reasons someone might want to burn a token?",
+    "answer": "The main reasons are: 1) Your address was airdropped a token you no longer want, 2) You created an NFT but something about it is not right, 3) A project sent you voting or other tokens that you no longer need."
+  },
+  {
+    "question": "What are the different methods for burning a token?",
+    "answer": "The different methods are: 1) Using a mobile wallet like TokenJay, 2) Using the Ergo Token Minter/Burner in Nautilus, 3) Using SAFEW which supports token burning natively, 4) Sending the tokens to a P2S (Pay-to-Script) address that is unspendable."
+  },
+  {
+    "question": "How can you burn tokens programmatically?",
+    "answer": "To burn tokens programmatically, you can spend an Unspent Transaction Output (UTXO) containing the tokens you wish to eliminate, ensuring not to include these tokens in the output of the transaction. If using AppKit, the transaction builder offers a 'burntoken' method tailored for this purpose."
+  },
+  {
+    "question": "What are the key steps involved in burning tokens using the Ergo Token Minter integration?",
+    "answer": "The key steps are: 1) Identify and select the input boxes holding the tokens to be burnt, along with a small ERG amount, 2) Construct the output boxes, excluding consideration of the tokens, 3) Retrieve the transaction JSON representation, 4) Edit the output change box details to eliminate the tokens intended for burning, 5) Dispatch the modified transaction (JSON) to the network."
+  },
+  {
+    "question": "What is the purpose of the P2S (Pay-to-Script) address mentioned in the document?",
+    "answer": "The P2S (Pay-to-Script) address '4MQyMKvMbnCJG3aJ' represents a 'false' condition, meaning the box is unspendable. Sending tokens to this address effectively burns them."
+  }
+]

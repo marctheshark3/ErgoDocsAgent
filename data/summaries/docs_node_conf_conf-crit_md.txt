@@ -1,0 +1,6 @@
+The document describes the configuration settings for the "critical-dispatcher", a dedicated actor dispatcher used exclusively by the block candidate generator and NodeViewHolder actors in the system. The key points are:
+
+- The dispatcher is of type "Dispatcher" and uses a "thread-pool-executor" mechanism to run tasks.
+- The thread pool has a fixed size of 2 threads.
+- The throughput is set to 1, meaning only 1 message is processed per actor before the thread is made available to other actors.
+- This configuration ensures critical tasks are allocated dedicated threads for efficient execution, isolated from non-critical activities.

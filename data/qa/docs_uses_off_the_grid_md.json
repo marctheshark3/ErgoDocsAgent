@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Off the Grid?",
+    "answer": "Off the Grid is a decentralized application (dApp) that builds on the grid trading contract proposed by kushti. It includes an execution bot/batcher for automating order matching without user interaction."
+  },
+  {
+    "question": "What are the key features of Off the Grid?",
+    "answer": "Off the Grid provides the following features: 1) Utilizes a contract that permits spending only if orders are correctly filled or with the order owner's signature, 2) Employs off-chain bots/batchers to monitor grid orders and match them against other liquidity sources, 3) Currently matches orders against Spectrum Automated Market Makers (AMMs), 4) Supports trading of ERG against any token, with profits accumulated in ERGs, and 5) Enables grid orders to profit from repeated execution of the same orders, while bot operators benefit from arbitraging the price difference between the liquidity source and grid orders."
+  },
+  {
+    "question": "What is the origin of the grid trading concept used in Off the Grid?",
+    "answer": "The grid trading concept was introduced by @kushti on the Ergoforum."
+  },
+  {
+    "question": "What is the purpose of the grid trading contract used in Off the Grid?",
+    "answer": "The grid trading contract used in Off the Grid permits spending only if orders are correctly filled or with the order owner's signature, and can manage multiple orders simultaneously."
+  },
+  {
+    "question": "Where can users find more information about Off the Grid?",
+    "answer": "Users can explore the Off the Grid project on GitHub and check out the Getting Started Guide."
+  }
+]

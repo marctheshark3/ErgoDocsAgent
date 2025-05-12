@@ -1,0 +1,44 @@
+{
+  "id": "docs_dev_scs_tx_tx-tree_md",
+  "title": "Transaction Tree",
+  "summary": "A transaction tree represents a sequence of related transactions hierarchically, where each transaction can have one or more child transactions dependent on its successful execution. This creates a branching structure resembling a tree, with the initial transaction at the root and subsequent transactions forming the branches. Transaction trees are useful for representing complex transaction sequences and dependencies, especially within smart contracts and advanced blockchain applications. They allow for conditional logic and simple loops to be implemented within the transaction scripts, determining which branch of the tree is followed. The Ergo blockchain's eUTXO model supports the creation of such transaction tree structures.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# Transaction Tree\n\n# Transaction Tree\n\nA *transaction tree* represents a sequence of related transactions hierarchically. Each transaction in the tree can have one or more child transactions dependen..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Transaction Tree"
+    },
+    {
+      "question": "What is the 'Transaction Tree' section about?",
+      "answer": "A *transaction tree* represents a sequence of related transactions hierarchically. Each transaction ..."
+    },
+    {
+      "question": "What is the 'Process' section about?",
+      "answer": "A transaction tree extends the concept of transaction chains, allowing for conditional logic (`if` s..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Transaction Tree",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Transaction Tree",
+      "level": 1,
+      "content": "A *transaction tree* represents a sequence of related transactions hierarchically. Each transaction in the tree can have one or more child transactions dependent on its successful execution.\n\nA transaction tree can be seen as a more complex version of a [transaction chain](tx-chains.md). In a chain, each transaction typically leads to a single next transaction. In a tree, however, a transaction might create multiple outputs, each potentially initiating a separate branch or sequence of subsequent transactions. This creates a branching structure resembling a tree, with the initial transaction at the root and subsequent transactions forming the branches.\n\nTransaction trees are useful for representing complex transaction sequences and dependencies, especially within smart contracts and advanced blockchain applications. They help ensure transactions execute in the correct order with appropriate dependencies while offering a detailed and flexible view of the overall transaction flow, including conditional branching."
+    },
+    {
+      "heading": "Process",
+      "level": 2,
+      "content": "A transaction tree extends the concept of transaction chains, allowing for conditional logic (`if` statements) within the scripts that determine which branch of the tree is followed. Simple loops can also be implemented where a transaction recreates a box protected by the same script (effectively transitioning back to the same state node). The following figure illustrates a transaction tree structure with branching:\n\n![](../../../assets/img/scs/tx-tree.png)\n\nConditional branching using an `if` statement within a script is handled conceptually as follows:\n\n```scala\nif (condition) {\n    out.propositionBytes == state_3_code // if true, set proposition to state_3_code\n} else {\n    out.propositionBytes == state_4_code // if false, set proposition to state_4_code\n}\n```\n\nA simple loop (returning to the same state) is conceptually a special case of the `if` statement:\n\n```scala\nif (condition) {\n    out.propositionBytes == state_2_code // if true, set proposition to state_2_code\n} else {\n    out.propositionBytes == SELF.propositionBytes // if false, set proposition to SELF.propositionBytes\n}\n```\n\nMany useful contracts can be represented using these branching structures (trees) and simple loops without requiring arbitrary cycles in the state transitions (as demonstrated in the linked paper). Ergo's eUTXO model allows the creation of such contracts.\n\nNext, we will examine [Transaction Graphs](tx-graphs.md), which allow for even more complex structures, including cycles."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/tx/tx-tree.md",
+  "processed_at": "2025-05-11T19:32:25.004189",
+  "ai_processed": true
+}

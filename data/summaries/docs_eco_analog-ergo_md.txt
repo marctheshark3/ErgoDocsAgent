@@ -1,0 +1,5 @@
+Analog Ergo is a project that aims to create a cross-chain peer-to-peer marketplace using cryptographic primitives. It enables users to set and agree on listing prices and other parameters in a private and fungible manner, without the involvement of intermediaries.
+
+The project has successfully tested a Scalar Lock contract, which allows locking funds to a scalar value that can be verified using an elliptic curve multiplication operation. This is a key component for enabling Atomic Swaps.
+
+The document also provides a working example of a 2-party Atomic Swap protocol, which demonstrates how secrets are shared and blockchain interactions occur during the swap process.

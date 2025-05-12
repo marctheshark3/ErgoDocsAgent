@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Merkle Tree data structure in the Ergo blockchain?",
+    "answer": "Merkle Trees are used in the Ergo blockchain to ensure the integrity and authenticity of data."
+  },
+  {
+    "question": "What are the two main components of a leaf node in the Ergo Merkle Tree?",
+    "answer": "A leaf node consists of a 32-byte transaction identifier and a 32-byte digest of the transaction's spending proofs."
+  },
+  {
+    "question": "How are internal nodes in the Ergo Merkle Tree constructed?",
+    "answer": "Internal nodes are constructed by hashing the concatenation of their two child nodes using the Blake2b256 cryptographic hash function."
+  },
+  {
+    "question": "What is the purpose of the 1-byte prefix used in the Ergo Merkle Tree?",
+    "answer": "The 1-byte prefix is used for domain separation, with 0x00 for leaf nodes and 0x01 for internal nodes."
+  },
+  {
+    "question": "Where can the implementation details of the Ergo Merkle Tree be found?",
+    "answer": "The implementation of the Ergo Merkle Tree can be found in the MerkleTree.scala file in the scrypto repository."
+  }
+]

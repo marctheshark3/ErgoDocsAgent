@@ -1,0 +1,78 @@
+{
+  "id": "docs_dev_protocol_avl_md",
+  "title": "AVL Trees in Ergo: An Overview",
+  "summary": "The document provides an overview of AVL trees, a type of authenticated data structure, and their integration with the Ergo blockchain. AVL trees offer advantages such as the ability to authenticate data properties without accessing the entire dataset. Ergo utilizes AVL trees to enhance the security and efficiency of its applications. Developers can integrate AVL trees into their Ergo projects using the GetBlok Plasma library, which provides an abstraction layer for incorporating AVL trees as a Layer-2 scaling solution. The document highlights the efficiency and proof size of AVL trees, as well as their superior performance in validation and verification processes, which contribute to the overall performance and scalability of Ergo applications.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary advantage of using AVL trees in Ergo?",
+      "answer": "AVL trees in Ergo offer the ability to authenticate data properties without the need to access the entire dataset."
+    },
+    {
+      "question": "How do developers integrate AVL trees into their Ergo applications?",
+      "answer": "Developers can integrate AVL trees into their Ergo applications using the GetBlok Plasma library, which provides an abstraction layer to incorporate AVL trees as a Layer-2 scaling solution."
+    },
+    {
+      "question": "What is the key benefit of the compact proof sizes provided by AVL trees in Ergo?",
+      "answer": "The compact proof sizes of AVL trees in Ergo contribute to their efficiency by ensuring streamlined storage and verification processes within the Ergo blockchain."
+    },
+    {
+      "question": "How do AVL trees help bolster the security and efficiency of applications in the Ergo ecosystem?",
+      "answer": "AVL trees facilitate verification and updates without the need for trust in the prover, curtailing the length of modification proofs and reducing storage requirements for verification."
+    },
+    {
+      "question": "What is the relationship between AVL trees and the Ergo Appkit in the context of Ergo applications?",
+      "answer": "The GetBlok Plasma library, which is built on the Ergo Appkit, provides developers with a convenient method to utilize AVL trees as a Layer-2 scaling solution in smart contracts, off-chain code, and distributed systems that manage the Plasma infrastructure."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - AVL Trees\n  - Data Structures\n  - Ergo\n---"
+    },
+    {
+      "heading": "AVL Trees in Ergo: An Overview",
+      "level": 1,
+      "content": "AVL trees, a type of highly efficient authenticated [data structure](data-structures.md), are natively supported in Ergo. They offer numerous advantages, such as the ability to authenticate data properties without the need to access the entire dataset. This document provides a comprehensive overview of AVL trees, their integration with Ergo, and their performance metrics."
+    },
+    {
+      "heading": "The Role of AVL Trees in Ergo",
+      "level": 2,
+      "content": "Ergo utilizes AVL trees to bolster the security and efficiency of a variety of applications. These authenticated dictionary data structures facilitate verification and updates without the need for trust in the prover. By curtailing the length of modification proofs and reducing storage requirements for verification, AVL trees provide a sturdy foundation for data integrity within the Ergo ecosystem."
+    },
+    {
+      "heading": "Integrating AVL Trees with Ergo Using GetBlok Plasma",
+      "level": 2,
+      "content": "Developers can effortlessly integrate AVL trees into their Ergo applications with the help of the [GetBlok Plasma](plasma.md) library, which is built on the [Ergo Appkit](appkit.md). This library streamlines the integration process by offering an abstraction layer that aids in incorporating AVL trees (also referred to as Plasma) into [off-chain code](off-chain.md). It provides developers with a convenient method to utilize AVL trees as a [Layer-2 scaling solution](layer2.md) in [smart contracts](ergoscript.md), off-chain code, and distributed systems that manage the Plasma infrastructure."
+    },
+    {
+      "heading": "Efficiency and Proof Size of AVL Trees",
+      "level": 2,
+      "content": "The compact proof sizes of AVL trees significantly contribute to their efficiency. AVL trees in Ergo provide succinct and effective authentication proofs, ensuring streamlined storage and verification processes within the [Ergo blockchain](protocol-overview.md)."
+    },
+    {
+      "heading": "Proof Size for a Single Operation",
+      "level": 3,
+      "content": "![Single Operation Proof Size](../../assets/img/avl/single_op_proof.png)\n\nThe figure above depicts the proof size for a single operation."
+    },
+    {
+      "heading": "Proof Size for Multiple Operations",
+      "level": 3,
+      "content": "![Multiple Operations Proof Size](../../assets/img/avl/multiple_op_proof.png)\n\nThe figure above demonstrates the proof size for multiple operations."
+    },
+    {
+      "heading": "Validation and Verification Time",
+      "level": 2,
+      "content": "AVL trees in Ergo showcase superior performance in validation and verification processes. The verification time is optimized to enable quick and efficient data authentication. This efficient validation process enhances the overall performance and scalability of Ergo applications."
+    },
+    {
+      "heading": "Time Required for Validation",
+      "level": 3,
+      "content": "![Validation Time](../../assets/img/avl/validation_time.png)\n\nThe figure above represents the time taken for validation of AVL trees.\n\nBy leveraging AVL trees, developers can significantly improve the security, efficiency, and scalability of their Ergo projects.\n\nFor more in-depth information, please refer to the [Improving authenticated dynamic dictionaries, with applications to cryptocurrencies](https://eprint.iacr.org/2016/994.pdf) paper."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/avl.md",
+  "processed_at": "2025-05-11T19:23:44.435386",
+  "ai_processed": true
+}

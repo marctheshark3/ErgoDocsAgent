@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_libraries_md",
+  "title": "Libraries",
+  "summary": "This document provides an introduction to a collection of libraries, including GetBlok Plasma, Scrypto, EIP12-Types, and SigmaJS. It presents these libraries in a structured format, with each library having a title and a URL link to its corresponding documentation.",
+  "qa_pairs": [
+    {
+      "question": "What is GetBlok Plasma?",
+      "answer": "GetBlok Plasma is a library."
+    },
+    {
+      "question": "What is Scrypto?",
+      "answer": "Scrypto is a library."
+    },
+    {
+      "question": "What is EIP12-Types?",
+      "answer": "EIP12-Types is a library."
+    },
+    {
+      "question": "What is SigmaJS?",
+      "answer": "SigmaJS is a library."
+    },
+    {
+      "question": "What are the key libraries mentioned in the document?",
+      "answer": "The key libraries mentioned are GetBlok Plasma, Scrypto, EIP12-Types, and SigmaJS."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Libraries\n  - Development\n---"
+    },
+    {
+      "heading": "Libraries",
+      "level": 1,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"GetBlok Plasma\",\n    \"url\": \"lib/plasma.md\"\n  },\n  {\n    \"title\": \"Scrypto\",\n    \"url\": \"lib/scrypto.md\"\n  },\n  {\n    \"title\": \"EIP12-Types\",\n    \"url\": \"lib/eip12-types.md\"\n  },\n  {\n    \"title\": \"SigmaJS\",\n    \"url\": \"lib/sigmajs.md\"\n  }\n\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/libraries.md",
+  "processed_at": "2025-05-11T19:22:19.736947",
+  "ai_processed": true
+}

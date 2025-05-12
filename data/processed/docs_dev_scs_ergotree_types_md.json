@@ -1,0 +1,423 @@
+{
+  "id": "docs_dev_scs_ergotree_types_md",
+  "title": "Predefined types",
+  "summary": "The document introduces predefined types in the ErgoTree language, including Boolean and Byte. It provides detailed descriptions and signatures for the various conversion methods available for the Byte type, such as toByte, toShort, toInt, toLong, and toBigInt. The document suggests that similar information is likely available for other predefined types, such as Short, but the content is focused on the Byte type.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the `toByte` method in the Byte type?",
+      "answer": "The `toByte` method converts a numeric value to a Byte, throwing an exception on overflow."
+    },
+    {
+      "question": "What is the signature of the `toByte` method?",
+      "answer": "The signature of the `toByte` method is `def toByte: Byte`."
+    },
+    {
+      "question": "How is the `toByte` method serialized?",
+      "answer": "The `toByte` method is serialized as a Downcast."
+    },
+    {
+      "question": "What are the predefined types mentioned in the document?",
+      "answer": "The predefined types mentioned are Boolean and Byte."
+    },
+    {
+      "question": "What is the purpose of the mathematical notation used in the introduction?",
+      "answer": "The mathematical notation is used to define various commands and symbols used in the document."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "$$\n\\newcommand{\\TEnv}{\\Gamma}\n\\newcommand{\\Der}[2]{#1~\\vdash~#2}\n\\newcommand{\\DerV}[2]{#1~\\vdash^{\\text{\\lst{v}}}~#2}\n\\newcommand{\\DerC}[2]{#1~\\vdash^{\\text{\\lst{c}}}~#2}\n\\newcommand{\\DerEnv}[1]{\\Der{\\TEnv}{#1}}\n\\newcommand{\\DerEnvV}[1]{\\DerV{\\TEnv}{#1}}\n\\newcommand{\\DerEnvC}[1]{\\DerC{\\TEnv}{#1}}\n\\newcommand{\\lst}[1]{#1}\n\\newcommand{\\Tup}[1]{(#1)}\n\\newcommand{\\Apply}[2]{#1\\langle#2\\rangle}\n\\newcommand{\\MSig}[3]{\\text{def}~#1(#2): #3}\n\\newcommand{\\Ov}[1]{\\overline{#1}}\n\\newcommand{\\TyLam}[3]{\\lambda(\\Ov{#1:#2}).#3}\n\\newcommand{\\Trait}[2]{\\text{trait}~#1~\\{ #2 \\}}\n\\newcommand{\\To}{\\mapsto}\n\\newcommand{\\Low}[1]{\\mathcal{L}{[\\![#1]\\!]}}\n\\newcommand{\\Lam}[2]{\\lambda#1.#2}\n\\newcommand{\\IfThenElse}[3]{\\text{if}~(#1)~#2~\\text{else}~#3}\n\\newcommand{\\False}{\\text{false}}\n\\newcommand{\\True}{\\text{true}}\n\\newcommand{\\langname}{ErgoTree}\n\\newcommand{\\corelang}{Core-\\lambda}\n\\newcommand{\\Denot}[1]{[\\![#1]\\!]}\n\\newcommand{\\Set}[1]{\\{ #1 \\}}\n$$"
+    },
+    {
+      "heading": "Predefined types",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Boolean",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Byte",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Byte.toByte (106.1)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.\n- *Signature*: **`def toByte: Byte`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Byte.toShort (106.2)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.\n- *Signature*: **`def toShort: Short`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Byte.toInt (106.3)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.\n- *Signature*: **`def toInt: Int`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Byte.toLong (106.4)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.\n- *Signature*: **`def toLong: Long`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Byte.toBigInt (106.5)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **BigInt**.\n- *Signature*: **`def toBigInt: BigInt`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Short",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Short.toByte (106.1)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.\n- *Signature*: **`def toByte: Byte`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Short.toShort (106.2)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.\n- *Signature*: **`def toShort: Short`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Short.toInt (106.3)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.\n- *Signature*: **`def toInt: Int`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Short.toLong (106.4)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.\n- *Signature*: **`def toLong: Long`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Short.toBigInt (106.5)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **BigInt**.\n- *Signature*: **`def toBigInt: BigInt`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Int",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Int.toByte (106.1)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.\n- *Signature*: **`def toByte: Byte`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Int.toShort (106.2)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.\n- *Signature*: **`def toShort: Short`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Int.toInt (106.3)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.\n- *Signature*: **`def toInt: Int`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Int.toLong (106.4)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.\n- *Signature*: **`def toLong: Long`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Int.toBigInt (106.5)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **BigInt**.\n- *Signature*: **`def toBigInt: BigInt`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "Long",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Long.toByte (106.1)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Byte**, throwing an exception on overflow.\n- *Signature*: **`def toByte: Byte`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Long.toShort (106.2)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Short**, throwing an exception on overflow.\n- *Signature*: **`def toShort: Short`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Long.toInt (106.3)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Int**, throwing an exception on overflow.\n- *Signature*: **`def toInt: Int`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Long.toLong (106.4)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **Long**, throwing an exception on overflow.\n- *Signature*: **`def toLong: Long`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "Long.toBigInt (106.5)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **BigInt**.\n- *Signature*: **`def toBigInt: BigInt`**\n- *Serialized as:* Upcast"
+    },
+    {
+      "heading": "BigInt",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "BigInt.toBigInt (106.5)",
+      "level": 4,
+      "content": "- *Description*: Converts this numeric value to **BigInt**.\n- *Signature*: **`def toBigInt: BigInt`**\n- *Serialized as:* Downcast"
+    },
+    {
+      "heading": "GroupElement",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "GroupElement.getEncoded (7.2)",
+      "level": 4,
+      "content": "- *Description*: Returns an encoding of the point value.\n- *Signature*: **`def getEncoded: Coll[Byte]`**\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "GroupElement.exp (7.3)",
+      "level": 4,
+      "content": "- *Description*: Exponentiates this GroupElement to the given number. Returns this group element raised to the power of k.\n- *Signature*: **`def exp(k: BigInt): GroupElement`**\n- *Parameters*: `k` The power\n- *Serialized as:* Exponentiate"
+    },
+    {
+      "heading": "GroupElement.multiply (7.4)",
+      "level": 4,
+      "content": "- *Description*: Performs the group operation (multiplication) with another element.\n- *Signature*: **`def multiply(other: GroupElement): GroupElement`**\n- *Parameters*: `other` The other element of the group.\n- *Serialized as:* MultiplyGroup"
+    },
+    {
+      "heading": "GroupElement.negate (7.5)",
+      "level": 4,
+      "content": "- *Description*: Returns the inverse element in the group.\n- *Signature*: **`def negate: GroupElement`**\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "SigmaProp",
+      "level": 3,
+      "content": "Values of **SigmaProp** type hold sigma propositions, which can be proved and verified using Sigma protocols. Each sigma proposition is represented as an expression where sigma protocol primitives such as **ProveDlog** and **ProveDHTuple** are used as constants, and special sigma protocol connectives like **AND**, **OR**, and **THRESHOLD** are used as operations.\n\nThe abstract syntax of sigma propositions is shown below.\n\n\n| Set | | Syntax | Mnemonic | Description |\n|--||--|--|----|\n| $Tree \\ni t$\t| := \t| $\\lst{Trivial(b)}$ \t| $\\lst{TrivialProp}$\t| boolean value $\\lst{b}$ as sigma proposition  \n|   | $\\mid$\t| $\\lst{Dlog(ge)}$ \t| $\\lst{ProveDLog}$\t| knowledge of discrete logarithm of $\\lst{ge}$\n|   | $\\mid$    | $\\lst{DHTuple(g,h,u,v)}$ \t| $\\lst{ProveDHTuple}$\t| knowledge of Diffie-Hellman tuple \n|   | $\\mid$    | $\\lst{THRESHOLD}(k,t_1,\\dots,t_n)$ \t| $\\lst{THRESHOLD}$\t| knowledge of $k$ out of $n$ secrets\n|   | $\\mid$    | $\\lst{OR}(t_1,\\dots,t_n)$\t| $\\lst{OR}$\t| knowledge of any one of $n$ secrets\n|   | $\\mid$    | $\\lst{AND}(t_1,\\dots,t_n)$\t| $\\lst{AND}$\t| knowledge of all $n$ secrets\n\n\nEvery well-formed tree of sigma proposition is a value of type $\\lst{SigmaProp}$, thus following the notation of the [evaluation section](evaluation.md) we can define denotation of $\\lst{SigmaProp}$\n\n$$\\Denot{\\lst{SigmaProp}} = \\Set{t \\in Tree}$$\n\n\nThe following methods can be called on all instances of $\\lst{SigmaProp}$ type."
+    },
+    {
+      "heading": "SigmaProp.propBytes (8.1)",
+      "level": 4,
+      "content": "- *Description*: Returns the serialized bytes of this sigma proposition represented as ErgoTree.\n- *Parameters*: \n- *Result*: `Coll[Byte]`\n- *Serialized as:* SigmaPropBytes"
+    },
+    {
+      "heading": "SigmaProp.isProven (8.2)",
+      "level": 4,
+      "content": "- *Description*: Verifies that the sigma proposition is proven. (FRONTEND ONLY)\n- *Parameters*: \n- *Result*: `Boolean`\n\nFor a full list of primitive operations on  $\\lst{SigmaProp}$ type, see [Appendix B](https://raw.githubusercontent.com/ScorexFoundation/sigmastate-interpreter/fada073b82a16a928c457693b888da4c0310aca6/docs/spec/spec.pdf#appendix.B)"
+    },
+    {
+      "heading": "Box",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Box.value (99.1)",
+      "level": 4,
+      "content": "- *Description*: Monetary value in nanoErgs.\n- *Parameters*: \n- *Result*: $\\lst{Long}$\n- *Serialized as:* ExtractAmount"
+    },
+    {
+      "heading": "Box.propositionBytes (99.2)",
+      "level": 4,
+      "content": "- *Description*: Serialized bytes of the guarding script. This script must evaluate to true to spend the box.\n- *Parameters*: \n- *Result*: $\\lst{Coll[Byte]}$\n- *Serialized as:* ExtractScriptBytes"
+    },
+    {
+      "heading": "Box.bytes (99.3)",
+      "level": 4,
+      "content": "- *Description*: Returns the serialized bytes of this box's content, including proposition bytes.\n- *Parameters*: \n- *Result*: $\\lst{Coll[Byte]}$\n- *Serialized as:* ExtractBytes"
+    },
+    {
+      "heading": "Box.bytesWithoutRef (99.4)",
+      "level": 4,
+      "content": "- *Description*: Returns the serialized bytes of this box's content, excluding the transactionId and output index.\n- *Parameters*: \n- *Result*: $\\lst{Coll[Byte]}$\n- *Serialized as:* ExtractBytesWithNoRef"
+    },
+    {
+      "heading": "Box.id (99.5)",
+      "level": 4,
+      "content": "- *Description*: Returns the Blake2b256 hash of this box's content (`blake2b256(bytes)`).\n- *Parameters*: \n- *Result*: $\\lst{Coll[Byte]}$\n- *Serialized as:* ExtractId"
+    },
+    {
+      "heading": "Box.creationInfo (99.6)",
+      "level": 4,
+      "content": "- *Description*: Returns the height and transaction/output index where the box was created. `creationInfo._1` is the block height, and `creationInfo._2` is the transaction identifier concatenated with the box index.\n- *Parameters*: \n- *Result*: $\\lst{(Int,Coll[Byte])}$\n- *Serialized as:* ExtractCreationInfo"
+    },
+    {
+      "heading": "Box.getReg (99.7)",
+      "level": 4,
+      "content": "- *Description*: Extracts register `regId` by ID and expected type `T`. Returns `Some(value)` if the register exists and has the specified type, `None` otherwise.\n- *Parameters*: $\\lst{regId : Int}$ // zero-based identifier of the register.\n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.tokens (99.8)",
+      "level": 4,
+      "content": "- *Description*: Returns the collection of secondary tokens held in the box.\n- *Parameters*: \n- *Result*: $\\lst{Coll[(Coll[Byte],Long)]}$\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "Box.R0 (99.9)",
+      "level": 4,
+      "content": "- *Description*: Register R0: Monetary value in nanoErgs. Use `ExtractAmount` (value property).\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R1 (99.10)",
+      "level": 4,
+      "content": "- *Description*: Register R1: Guarding script bytes. Use `ExtractScriptBytes` (propositionBytes property).\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R2 (99.11)",
+      "level": 4,
+      "content": "- *Description*: Register R2: Secondary tokens [(TokenId, Amount)]. Use `ExtractTokens` (tokens property).\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R3 (99.12)",
+      "level": 4,
+      "content": "- *Description*: Register R3: Box creation information (height, txId, index). Use `ExtractCreationInfo` (creationInfo property).\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R4 (99.13)",
+      "level": 4,
+      "content": "- *Description*: Optional register R4 for arbitrary data storage. Use `ExtractRegisterAs`.\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R5 (99.14)",
+      "level": 4,
+      "content": "- *Description*: Optional register R5 for arbitrary data storage. Use `ExtractRegisterAs`.\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R6 (99.15)",
+      "level": 4,
+      "content": "- *Description*: Optional register R6 for arbitrary data storage. Use `ExtractRegisterAs`.\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R7 (99.16)",
+      "level": 4,
+      "content": "- *Description*: Optional register R7 for arbitrary data storage. Use `ExtractRegisterAs`.\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R8 (99.17)",
+      "level": 4,
+      "content": "- *Description*: Optional register R8 for arbitrary data storage. Use `ExtractRegisterAs`.\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "Box.R9 (99.18)",
+      "level": 4,
+      "content": "- *Description*: Optional register R9 for arbitrary data storage. Use `ExtractRegisterAs`.\n- *Parameters*: \n- *Result*: $\\lst{Option[T]}$\n- *Serialized as:* ExtractRegisterAs"
+    },
+    {
+      "heading": "AvlTree",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "AvlTree.digest (100.1)",
+      "level": 4,
+      "content": "- *Description*: Returns the digest of the state represented by this tree (root hash bytes ++ tree height).\n- *Parameters*: \n- *Result*: $\\lst{Coll[Byte]}$\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "AvlTree.enabledOperations (100.2)",
+      "level": 4,
+      "content": "- *Description*: Returns the flags of enabled operations packed into a single byte.\n- *Parameters*: \n- *Result*: $\\lst{Byte}$\n- *Serialized as:* PropertyCall\n\n```scala\nisInsertAllowed == (enabledOperations & 0x01) != 0\nisUpdateAllowed == (enabledOperations & 0x02) != 0\nisRemoveAllowed == (enabledOperations & 0x04) != 0\n```"
+    },
+    {
+      "heading": "AvlTree.keyLength (100.3)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Int}$\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "AvlTree.valueLengthOpt (100.4)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Coll[Byte]}$\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "AvlTree.isInsertAllowed (100.5)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Coll[Byte]}$\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "AvlTree.isUpdateAllowed (100.6)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Boolean}$\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "AvlTree.isRemovedAllowed (100.7)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Boolean}$\n- *Serialized as:* PropertyCall"
+    },
+    {
+      "heading": "AvlTree.updateOperations (100.8)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{AvlTree}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "AvlTree.contains (100.9)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Boolean}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "AvlTree.get (100.10)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Option[Coll[Byte]]}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "AvlTree.getMeny (100.11)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Coll[Option[Coll[Byte]]]}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "AvlTree.insert (100.12)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Option[AvlTree]}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "AvlTree.update (100.13)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{Option[AvlTree]}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "AvlTree.remove (100.14)",
+      "level": 4,
+      "content": "- *Description*:\n- *Parameters*: \n- *Result*: $\\lst{Option[AvlTree]}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "AvlTree.updateDigest (100.15)",
+      "level": 4,
+      "content": "- *Description*: \n- *Parameters*: \n- *Result*: $\\lst{AvlTree}$\n- *Serialized as:* MethodCall"
+    },
+    {
+      "heading": "Header",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "PreHeader",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Context",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Global",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Coll",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Option",
+      "level": 3,
+      "content": ""
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergotree/types.md",
+  "processed_at": "2025-05-11T19:30:00.360754",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary language used in Ergo?",
+    "answer": "Ergo's primary language is Scala."
+  },
+  {
+    "question": "What is the scripting language used by Ergo?",
+    "answer": "The scripting language used by Ergo is ErgoScript, which is also based on Scala."
+  },
+  {
+    "question": "What are some key features of Scala that make it a good choice for Ergo development?",
+    "answer": "Scala is truly cross-platform, concise, multi-paradigm, and can be more efficient than Java code."
+  },
+  {
+    "question": "What version of Scala is used in Ergo's core components?",
+    "answer": "Ergo's core components, including the reference node and sigmastate-interpreter, have undergone migration to Scala 3."
+  },
+  {
+    "question": "What are the potential impacts of the Scala 3 migration for Ergo developers?",
+    "answer": "Developers contributing to or building upon Ergo's core libraries need to ensure their development environment and build tools are compatible with Scala 3, and be aware of potential syntax changes or library compatibility adjustments."
+  }
+]

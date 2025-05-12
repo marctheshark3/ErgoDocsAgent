@@ -1,0 +1,48 @@
+{
+  "id": "docs_node_testnet_cpu-mining_md",
+  "title": "CPU Mining",
+  "summary": "CPU Mining: Do not GPU mine the testnet as it prevents CPU miners from winning blocks and leaves a high difficulty when you stop.\n\nTo CPU mine on the testnet, configure your testnet.conf file and run the Ergo node with the appropriate command. Make sure your wallet is initialized and unlocked. You should see mining activity in the node's output.\n\nYour rewards will be sent to your rewardPublicKey, which is different from your wallet address. You can use testnet.sigmaexplorer.org to monitor miner distribution, hashrate, and difficulty.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "# CPU Mining\n\n/// admonition | Warning!\n    type: warning\nPlease do not GPU mine the testnet! It prevents CPU miners from winning any blocks and then leaves a high difficulty when you stop.\n///\n\n## Ge..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "CPU Mining"
+    },
+    {
+      "question": "What is the 'CPU Mining' section about?",
+      "answer": "/// admonition | Warning!\n    type: warning\nPlease do not GPU mine the testnet! It prevents CPU mine..."
+    },
+    {
+      "question": "What is the 'Getting Set-up' section about?",
+      "answer": "> Please refer to [node](install.md) for basic node set-up up to this point.\n\nTo CPU mine on the tes..."
+    },
+    {
+      "question": "What is the 'Resources' section about?",
+      "answer": "[testnet.sigmaexplorer.org](https://testnet.sigmaexplorer.org/) is a handy alternative version of th..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "CPU Mining",
+      "level": 1,
+      "content": "/// admonition | Warning!\n    type: warning\nPlease do not GPU mine the testnet! It prevents CPU miners from winning any blocks and then leaves a high difficulty when you stop.\n///"
+    },
+    {
+      "heading": "Getting Set-up",
+      "level": 2,
+      "content": "> Please refer to [node](install.md) for basic node set-up up to this point.\n\nTo CPU mine on the testnet, your `testnet.conf` should look like this. \n\n```conf\n  ergo {\n    networkType = \"testnet\"\n\n    node {\n      mining = true\n      useExternalMiner = false\n    }\n  }\n\n  scorex {\n\n  network {\n      bindAddress = \"0.0.0.0:9022\"\n      nodeName = \"ergo-testnet\"\n      #knownPeers = []\n    }\n\n  restApi {\n      # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.\n      # Below is hash corresponding to API_KEY = \"hello\" (with no quotes)\n      apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n    }\n  }\n```\n\nThen run \n\n```\njava -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf\n```\n\nMake sure your wallet is initialised and unlocked, providing you're fully syncronised you should see an output like this indicating that you are mining.\n\n```\nINFO  [ef-critical-dispatcher-15] o.e.m.CandidateGenerator$ - Assembling a block candidate for block #120866 from 1 transactions available\nINFO  [ef-critical-dispatcher-15] o.e.m.CandidateGenerator$ - No fee proposition found in txs List(1c79bade7ba9a6eb22333f8457fb3816cef119d0ad0fd7e72737ff25676918c6)\nINFO  [ef-critical-dispatcher-15] o.e.m.CandidateGenerator$ - Got candidate block at height 120866 with 1 transactions, msg 3551b7fd6f3eeee2476529213162c8824b6b54e4909696b7359afa71300d119d\nINFO  [ef-critical-dispatcher-15] o.e.m.CandidateGenerator - Generated new candidate in 5 ms\nINFO  [tor.default-dispatcher-13] o.e.m.ErgoMiningThread - Trying nonce 1000\nINFO  [tor.default-dispatcher-13] o.e.m.ErgoMiningThread - Trying nonce 2000\nINFO  [tor.default-dispatcher-13] o.e.m.ErgoMiningThread - Trying nonce 3000\nINFO  [tor.default-dispatcher-13] o.e.m.ErgoMiningThread - Trying nonce 4000\nINFO  [tor.default-dispatcher-13] o.e.m.ErgoMiningThread - Trying nonce 5000\n```\n\nYour rewards will be sent to your `rewardPublicKey`, which is different from your wallet address. \n\n```\ncurl -X GET \"http://127.0.0.1:9052/mining/rewardPublicKey\" -H  \"accept: application/json\"\n```\n\n/// admonition | Keep in mind\nPlease note that blocks take 720 confirmations on Ergo.\n///"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "[testnet.sigmaexplorer.org](https://testnet.sigmaexplorer.org/) is a handy alternative version of the ergo explorer that shows miner distribution, hashrate and difficulty."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/testnet/cpu-mining.md",
+  "processed_at": "2025-05-11T19:57:49.578992",
+  "ai_processed": true
+}

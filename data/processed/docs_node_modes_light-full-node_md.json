@@ -1,0 +1,68 @@
+{
+  "id": "docs_node_modes_light-full-node_md",
+  "title": "Light Full-Node Mode",
+  "summary": "The light full-node mode in Ergo allows for a more resource-efficient way of running a node while still maintaining full-node security. It only holds the root digest of the dictionary and checks full blocks or a suffix of the blockchain. The light full-node mode supports wallet functionalities and custom scans but can only accept and broadcast transactions initiated within its own network. To run the node in light mode, specific settings need to be adjusted in the ergo.conf file, including the state type, blocks to keep, and bootstrapping options. The light full-node mode requires less memory, disk space, and CPU compared to an archive node, but users should verify compatibility with their desired wallet implementation.",
+  "qa_pairs": [
+    {
+      "question": "What is the key setting that enables light-fullnode mode in Ergo?",
+      "answer": "The key setting is `ergo.node.stateType = \"digest\"`."
+    },
+    {
+      "question": "What is the purpose of the `ergo.node.blocksToKeep` setting?",
+      "answer": "The `ergo.node.blocksToKeep` setting controls how many of the most recent blocks are stored with full transaction data. Older blocks will only have their headers stored."
+    },
+    {
+      "question": "What are the two bootstrapping options for light nodes in Ergo?",
+      "answer": "The two bootstrapping options are `ergo.node.nipopow.nipopowBootstrap = true` and `ergo.node.utxoBootstrap = true`."
+    },
+    {
+      "question": "What are the resource considerations for running a light full-node in Ergo?",
+      "answer": "The key resource considerations are: memory (RAM), disk space, and CPU."
+    },
+    {
+      "question": "What is a limitation of the light full-node mode in Ergo?",
+      "answer": "The light full-node mode can only accept and broadcast transactions initiated within its own network, not those coming from external peers."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Light Full-Node Mode",
+      "level": 1,
+      "content": "The light full-node mode in Ergo allows for a more resource-efficient way of running a node while still maintaining full-node security. In this mode, the node only holds the root digest of the dictionary and checks full blocks or a suffix of the blockchain, depending on the setting. It uses AD-transformations to get a new digest from an old one and checks all transactions, but only stores a single digest."
+    },
+    {
+      "heading": "Features and Limitations",
+      "level": 2,
+      "content": "The light full-node mode supports wallet functionalities and custom scans, making it suitable for various use cases. However, it has a limitation: it can only accept and broadcast transactions initiated within its own network, not those coming from external peers."
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "To run the node in light mode, you need to adjust specific settings in your `ergo.conf` file.\n\n**Core Settings:**\n\n*   **`ergo.node.stateType = \"digest\"`**: This is the key setting that enables light-fullnode mode. Instead of storing the full UTXO set, the node only maintains the authenticated root hash of the state and validates state transitions using ADProofs contained in the blocks. See [`stateType`](conf-node.md#state-type) for details.\n*   **`ergo.node.blocksToKeep = 1440`** (Example): This setting controls how many of the most recent blocks are stored with full transaction data. Older blocks will only have their headers stored. Setting it to `-1` keeps all blocks (similar to an archive node but still in digest state). A common value is `1440` (roughly one day). See [`blocksToKeep`](conf-node.md#blocks-to-keep) for details.\n\n**Bootstrapping Options:**\n\nBootstrapping is the initial synchronization process. Light nodes have options to speed this up and reduce initial storage requirements:\n\n*   **`ergo.node.nipopow.nipopowBootstrap = true`**: Instructs the node to download a NiPoPoW proof during startup. This significantly reduces the data needed for initial sync compared to downloading all headers from genesis.\n*   **`ergo.node.utxoBootstrap = true`**: (Alternative to NiPoPoW bootstrap) Instructs the node to download a UTXO set snapshot to initialize its state. This can be faster but might require more initial bandwidth. *Note: These two bootstrap options might be mutually exclusive depending on the node version; check current node documentation or configuration comments.*\n\n**Example Configuration:**\n\n\n\n```conf\nergo {\n  node {\n    stateType = \"digest\"\n    blocksToKeep = 1440 // Keep ~1 day of full blocks\n    mining = false      // Usually false for light nodes\n\n    # Choose one bootstrapping method (check compatibility):\n    nipopow.nipopowBootstrap = true \n    # utxoBootstrap = true \n\n    # Optional: Adjust NiPoPoW parameters if using nipopowBootstrap\n    nipopow.p2pNipopows = 2 \n  }\n}\n\nscorex {\n  restApi {\n    # Set your API key hash for security\n    apiKeyHash = \"YOUR_API_KEY_HASH_HERE\" \n  }\n  # Optional: Adjust network settings if needed\n  # network { ... } \n}\n```\n\nIn this example configuration:\n*   `stateType = \"digest\"` enables the core light-fullnode mode.\n*   `blocksToKeep = 1440` keeps roughly the last day's worth of full blocks.\n*   `nipopowBootstrap = true` is enabled for faster initial sync using NiPoPoW proofs."
+    },
+    {
+      "heading": "Resource Considerations",
+      "level": 2,
+      "content": "*   **Memory (RAM):** While lighter than archive mode, digest nodes still require sufficient RAM, especially during bootstrapping. Users have reported needing to increase the JVM heap space using the `-Xmx` flag (e.g., `java -Xmx1G -jar ...` or higher) particularly when bootstrapping on resource-constrained devices like mobile phones. Monitor your node's memory usage.\n*   **Disk Space:** Significantly lower than archive mode. With `nipopowBootstrap` and a reasonable `blocksToKeep` value (like 1440), the storage footprint after sync can be relatively small (potentially under 1GB, but this can vary). Using `utxoBootstrap` might require more temporary space during the snapshot download.\n*   **CPU:** Validation still requires CPU power, but generally less than an archive node maintaining the full UTXO set database."
+    },
+    {
+      "heading": "Wallet Compatibility",
+      "level": 2,
+      "content": "*   **General Support:** Light-fullnodes running in digest mode *can* support wallet functionalities, including managing keys and creating transactions.\n*   **Potential Issues:** Some wallet implementations or specific wallet features might have compatibility issues with digest mode. This is because the node doesn't have the full UTXO set readily available locally, and certain queries might rely on that. Developers have reported issues in community channels, particularly concerning wallets needing to scan the full UTXO set or perform complex balance calculations.\n*   **Recommendation:** If you intend to use a specific wallet with a digest-mode node, verify its compatibility with the wallet developers or community resources. Standard transaction sending/receiving is generally expected to work."
+    },
+    {
+      "heading": "Technical Details",
+      "level": 2,
+      "content": "The light full-node mode uses a 2-party authenticated dynamic dictionary built on top of the UTXO set. For more information on the technical workflow and implementation details, you can refer to the [light-techworkflow.md](light-techworkflow.md) document."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes/light-full-node.md",
+  "processed_at": "2025-05-11T19:56:28.427980",
+  "ai_processed": true
+}

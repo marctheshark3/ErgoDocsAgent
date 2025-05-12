@@ -1,0 +1,3 @@
+ErgoData is a potential sidechain that could be launched on the Ergo blockchain. The main purpose of ErgoData is to serve the needs of data-intensive applications, such as land registries and certificate directories. ErgoData would be similar to the existing Ergo Protocol, but with some modified parameters.
+
+The plans for launching ErgoData are currently unclear. The network will only be launched if users show demand for it after Ergo has established a solid infrastructure base. If the ErgoData chain is launched, EFYT holders at the time of the Ergo launch will receive ErgoData tokens, as a snapshot of EFYT holders has already been taken.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Obolflip?",
+    "answer": "Obolflip is a client that can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location."
+  },
+  {
+    "question": "What are the key features of Obolflip?",
+    "answer": "Obolflip can be used to take bets on a flip, manage flips, and earn revenue from withdrawals. It can also be deployed on a server to allow other users to do bets."
+  },
+  {
+    "question": "What are the main use cases of Obolflip?",
+    "answer": "Obolflip can be used for betting on flips and earning revenue from managing flips and withdrawals, depending on local regulations."
+  },
+  {
+    "question": "How can Obolflip be deployed?",
+    "answer": "Obolflip can be deployed on a server to allow other users to do bets and earn extra revenue from withdrawals."
+  },
+  {
+    "question": "What is the technical architecture of Obolflip?",
+    "answer": "The technical details of Obolflip's architecture are not provided in the given content."
+  }
+]

@@ -1,0 +1,1 @@
+The document describes the configuration settings for an Ergo wallet. It covers the secret storage directory, encryption settings (including the pseudo-random function, number of PBKDF2 iterations, desired bit-length of the derived key, and seed strength bits), the mnemonic phrase language, and the option to keep or delete spent transaction outputs.

@@ -1,0 +1,233 @@
+{
+  "id": "docs_uses_sigmausd_comparison_md",
+  "title": "comparison.md",
+  "summary": "The document provides a comparison of different stablecoins, including SigmaUSD, MakerDAO's DAI, and Terra's UST. It highlights the advantages of SigmaUSD, such as no liquidations, over-collateralization, and explicit peg breaking point. The document also provides an overview of fiat-collateralized stablecoins like Tether, USDC, TrueUSD, and Paxos Standard, discussing their key features and characteristics.",
+  "qa_pairs": [
+    {
+      "question": "What is the key advantage of SigmaUSD over Ethereum-based crypto-backed stablecoins like DAI?",
+      "answer": "No liquidations!"
+    },
+    {
+      "question": "How is the stability of SigmaUSD different from that of UST?",
+      "answer": "SigmaUSD is over-collateralized, with every SigUSD backed by $3, while the breaking point of the UST peg is unclear."
+    },
+    {
+      "question": "What is the key difference between the collateral ratios of SigmaUSD and Terra's stablecoin system?",
+      "answer": "The collateral ratio for SigmaUSD is higher, meaning better capital efficiency, but Terra's system needs an additional mechanism to ensure stability when the collateral (Luna) value drops."
+    },
+    {
+      "question": "How does the Luna supply dependency affect the stability of Terra's stablecoin system compared to SigmaUSD?",
+      "answer": "The Luna supply depends on Terra usage, which can lead to Luna price pumping when the trend is up but dumping harder when the trend is down, creating a risk of a bank run."
+    },
+    {
+      "question": "What is the key benefit of SigmaUSD's explicit peg breaking point compared to the uncertainty in Terra's stablecoin system?",
+      "answer": "With SigmaUSD, the breaking point of the peg is explicit and open for anyone to see, which stops a bank run at its inception, while with Terra's system, no one knows at which price point the trust in the protocol disappears."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Other Stablecoins",
+      "level": 2,
+      "content": "- [SigmaUSD vs the competition](https://curiaregiscrypto.medium.com/sigmausd-vs-the-competition-e70b23fe37a3)"
+    },
+    {
+      "heading": "Direct Comparison",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Advantages over MakerDAO",
+      "level": 3,
+      "content": "> **No liquidations!**\n\n\nUnlike Ethereum-based crypto-backed stablecoins, such as DAI, Emurgo introduces a Staticoin protocol-inspired design that does not rely on CDPs (Collateralized Debt Positions). The reason for this is the vulnerability of CDP-based protocols in terms of high volatility and blockchain congestion. As Emurgo states, \"Black Thursday,\" when MakerDAO CDPs were triggered for liquidation due to volatility and then sold for $0 due to blockchain congestion that prevented others from bidding, demonstrated that a new design is needed. For SigmaUSD, this scenario is not possible."
+    },
+    {
+      "heading": "Advantages over UST",
+      "level": 3,
+      "content": "SigUSD is over-collateralised; every sigusd is backed by 3$ currently. Everyone can see that there is money in the bank, which stops a bank's run at its inception. The breaking point of the peg is explicit and open for anyone to see. With UST, you have no idea, which gives you an incentive to get out first.\n\n\n- Luna supply depends on terra usage; Ergo does not. Burning luna when the trend is up pumps its price. However, the luna price will dump harder when the trend is down because more luna is printed. \n\n- collateral ratio for sigusd is higher. This means that the capital efficiency (less collateral tied for each stablecoin) is better for terra, which is why luna/terra can offer a better yield. \n\nHowever, this means luna/terra needs an additional mechanism to ensure stability. When collateral (luna) value drops, someone needs to stabilise it. Those people are incentivised with promises of larger profits in the future. This assumes that people will always believe that the protocol survives the crash. No one knows at which price point luna the trust disappears. This creates a seed for a bank run. Everyone wants to take their stablecoin out faster than others if there is any doubt.\n\nIn contrast, sigusd shows explicitly when the peg will be lost. No one needs to guess how long the protocol can last."
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "**Fiat-Collateralized**",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Tether",
+      "level": 4,
+      "content": "Best for liquidity, accepted on almost all crypto exchanges.\n\n> A fiat-pegged stablecoin built on top of Bitcoin via the Omni Layer Protocol. Each Tether issued into circulation is said to be backed by a one-to-one ratio with the equivalent amount of fiat currency held in a custodial account by Hong Kong-based Tether Limited."
+    },
+    {
+      "heading": "US Dollar Coin ($USDC)",
+      "level": 4,
+      "content": "(Coinbase) Issued and managed by a trusted party, has a considerable market cap\n\n>  Fully collateralized US dollar ERC20 tokens founded by CENTRE,  a joint venture founded by Circle and Coinbase. USDC is an open-source project which operates within US money transmission laws. The project uses established banks and auditors while leveraging Ethereum-based smart contracts."
+    },
+    {
+      "heading": "True USD",
+      "level": 4,
+      "content": ">  A USD-backed ERC20 stablecoin that is fully collateralized, legally protected, and transparently verified by third-party attestations. TrueUSD uses multiple escrow accounts to reduce counterparty risk and to provide token-holders with legal protections against misappropriation. TrueUSD is the first asset token built on the TrustToken platform."
+    },
+    {
+      "heading": "Paxos Standard",
+      "level": 4,
+      "content": "> Backed one-to-one by USD deposits and available through Paxos. PAX is available one-to-one in exchange for USD and redeemable one-to-one for USD. Upon redemption, PAX tokens are immediately removed from the supply; PAX are only in existence when the corresponding dollars are in custody."
+    },
+    {
+      "heading": "Gemini Dollar ($GUSD)",
+      "level": 4,
+      "content": "> Created at the time of withdrawal from the Gemini platform. Gemini customers may exchange US dollars for Gemini dollars at a 1:1 exchange rate by initiating a withdrawal of Gemini dollars from their Gemini account to any Ethereum address they specify."
+    },
+    {
+      "heading": "Binance USD",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "HUSD",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "StableUSD (USDS)",
+      "level": 4,
+      "content": "> Stably is the startup behind the StableUSD token. The StableUSD stablecoin is pegged against the US dollar at a 1:1 ratio. The collateral itself is held by Prime Trust, an American trust company. StableUSD is slightly different from other fiat-collateralized stablecoins as they allow you to deposit cryptocurrencies such as Bitcoin, Ethereum, or the USDT stablecoin to buy USDS tokens."
+    },
+    {
+      "heading": "BitUSD",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "**Crypto-Fiat Hybrids**",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "**Reserve tokens ($RSV)**",
+      "level": 4,
+      "content": "> Hybrid-collateralized token backed by both fiat and digital assets. Initially built on Ethereum, Reserve tokens aim to be interoperable across any blockchain in the future. Similar to Maker Dai, Reserve tokens utilize a governance token, $RSR, to monitor price stability in a decentralized fashion. #burning\n\n- [Warning on Reddit](https://www.reddit.com/r/CryptoMoonShots/comments/knzgct/warning_about_reserve_protocol_stay_away_from_rsr/)"
+    },
+    {
+      "heading": "**FRAX** (USDC)",
+      "level": 4,
+      "content": "[Backed by USDC](https://support.usdc.circle.com/hc/en-us/articles/360016060352-Can-a-customer-send-USDC-tokens-to-any-address-Can-addresses-be-blacklisted-)"
+    },
+    {
+      "heading": "**Crypto-Collateralized**",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "[A Public Good Stablecoin](https://www.ergoforum.org/t/a-proposal-for-a-public-good-stablecoin/3432)",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "AgeUSD/SigmaUSD/Djed",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "**Maker DAO/DAI \u2013 valued $940M**",
+      "level": 4,
+      "content": "> Dai is a crypto-collateralized ERC20 token backed by an excess amount of digital asset collateral (most commonly $ETH) through Maker Vaults. Dai utilizes smart contracts and a governance token, $MKR, to monitor price stability.  \n\nGenerally regarded as the '*best*' algorithmic stablecoin\n\nAdvantage SigmaUSD has over **MakerDAO** : \n\n- No liquidation on price-spike\n- Unlike Ethereum-based crypto-backed stablecoins, such as DAI, Emurgo introduces a Staticoin protocol-inspired design that does not rely on CDPs (Collateralized Debt Positions). The reason for this is the vulnerability of CDP-based protocols in terms of high volatility and blockchain congestion.As Emurgo states, \u201cBlack Thursday,\u201d when MakerDAO CDPs were triggered for liquidation due to volatility and then sold for $0 due to blockchain congestion that prevented others from bidding, demonstrated that a new design is needed. For AgeUSD, this scenario is not possible.\n- For those unfamiliar with the MakerDAO system, the entire project is centred around the governance, growth and expansion of the Dai ecosystem. While Ether  and Basic Attention Token are currently the only forms of collateral supported to mint Dai, it\u2019s common knowledge that Maker will gradually introduce new collateral types over the course of the next few years.\n- Maker provides an innovate mechanism for users to further leverage their belief in cryptocurrencies. Unlike fiat-collateralized stablecoins which use centralized reserves to retain custody of the fiat used to create new tokens, Maker\u2019s system leverages smart contracts to hold the underlying system in escrow."
+    },
+    {
+      "heading": "[RAI](https://reflexer.finance/)",
+      "level": 4,
+      "content": "> RAI provides a stablecoin protocol with the capabilities for eschewing the fiat-pegging aspect in stablecoins. It features considerable similarities with the deprecated, single-collateral DAI by MakerDAO. Users could deposit Ether in a \u2018safe,\u2019 just like DAI vaults. The minimum collateralization rate in the case of this example in algorithmic stablecoins list is just below 150%. Users would receive RAI tokens in return. The algorithm of RAI features a dedicated PID controller, which receives an input of the existing price of RAI. Then, it makes adjustments in the supply according to the price by following a continuous feedback loop.\n\n> Most importantly, all the parameters are hard-coded in the algorithm alongside ensuring responsive, automatic reactions to market data without direct manual intervention. Apart from the value benefit of \u2018self-peg,\u2019 RAI presents considerable differences from DAI in terms of governance. It aims to take various parameters of governance out of the process in 2022, thereby reducing the need for depending on governance."
+    },
+    {
+      "heading": "FEI",
+      "level": 4,
+      "content": "> FEI is also another notable protocol you could find in an algorithmic stablecoins list. It focuses on addressing the capital inefficiencies identified in the case of stablecoins such as DAI. FEI presents stark differences in comparison to other algorithm-based stablecoins. One of the foremost differences refers to the fact that it does not feature the mechanism for swapping collateral for stablecoin. On the contrary, digital wealth comes into the system by leveraging a bonding curve, which sells FEI in exchange for ETH. Then, the digital wealth remains locked in the Protocol Controlled Value or PCV, which is basically the pool of collateral for the stablecoin.\n\n> PCV helps in maintaining the peg by managing liquidity on exchanges like Uniswap. With the limitations on sell-side liquidity, FEI is one of the best algorithmic stablecoins for avoiding the \u2018death spiral\u2019 scenario. The FEI protocol leverages its TRIBE token for enabling holders to determine the following aspects of governance,"
+    },
+    {
+      "heading": "**Equilibrium ($EOSDT)**",
+      "level": 4,
+      "content": "Decentralized stablecoin on the EOS blockchain (PoS)."
+    },
+    {
+      "heading": "**Synthetix ($sUSD)**",
+      "level": 4,
+      "content": "> Previously known as Havven, Synethetix is a crypto-collateralized network enabling the creation of on-chain synthetic assets on the Ethereum blockchain. These assets are over-collateralized to provide sufficient liquidity for users to redeem collateral at face value. Beyond $sUSD, Synthetix plans to offer stablecoins for other legal tenders such as the euro, yen, and the Korean won."
+    },
+    {
+      "heading": "MIM",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "**Seigniorage**",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "**TerraUSD (UST) ($LUNA)**",
+      "level": 4,
+      "content": "TerraUSD (UST) is a stablecoin built on the Terra blockchain. Following a successful launch and increased adoption of Terra, the printing of UST commenced in September 2020. UST is not technically collateralized. Rather, the creation of UST is enabled by the burning of the LUNA coin.\n\n- Terra is a stablecoin that achieves price-stability via an elastic money supply, enabled by stable mining incentives.\n- The protocol ensures price-stability by algorithmically expanding and contracting supply. It also uses seigniorage created by its minting operations as transaction stimulus, thereby facilitating adoption.\n- Pegged to the world\u2019s major currencies, Terra aims to be able to support a global payment network.\n- The team believes that a currency that cannot be used at checkout is useless. Terra is partnered with an alliance of eCommerce platforms, collectively pushing $50 billion in annual transaction volume with 50 million users. Terra aims to become a medium of exchange at a massive scale."
+    },
+    {
+      "heading": "xUSD (Haven/XHR)",
+      "level": 4,
+      "content": "- https://havenprotocol.org/2021/01/25/spotlight-on-xusd/\n- https://havenprotocol.medium.com/why-haven-protocols-xhv-offshore-storage-is-the-best-crypto-stable-coin-storage-solution-61f118129784"
+    },
+    {
+      "heading": "DexyUSD",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "Gold-Backed",
+      "level": 3,
+      "content": "https://www.stablecoinswar.com/gold-stable-coins.php"
+    },
+    {
+      "heading": "Digital Gold (GOLD)",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "Tether Gold (XAUT)",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "PAX Gold (PAXG)",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "Digix Gold Token (DGX)",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "Notes",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "asset-backed",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "asset-backed (volatile)",
+      "level": 4,
+      "content": ""
+    },
+    {
+      "heading": "algorithmic",
+      "level": 4,
+      "content": "- non-custodial\n   - Implicit Collateral\n   - Endogenous Collateral\n   - Exogenous Collaterol\n- custodial\n   - Reserve Fund\n   - Fractional Reserve Fund\n      - Money Market Fund\n      - Bank Fund\n   - Central Bank"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/sigmausd/comparison.md",
+  "processed_at": "2025-05-11T20:04:27.507984",
+  "ai_processed": true
+}

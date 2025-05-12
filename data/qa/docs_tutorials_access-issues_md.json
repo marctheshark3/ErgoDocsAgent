@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What should you do if you have your seed phrase but the restored wallet doesn't contain any ERG and is a different address?",
+    "answer": "Try deriving additional addresses."
+  },
+  {
+    "question": "What should you do if you were using the Ergo mobile wallet or the Ergo Reference Client and the wallet was created before October 18th, 2022?",
+    "answer": "Verify if your wallet was affected by the BIP32 key derivation bug using satergo.com."
+  },
+  {
+    "question": "What should you do if you recorded your seed phrase by taking a screenshot?",
+    "answer": "Ensure that the mnemonic represents the wallet you are trying to recover."
+  },
+  {
+    "question": "What should you do if you are using Yoroi and do not have your seed phrase?",
+    "answer": "Decrypt the wallet using yoroi-ergo-wallet-recover."
+  },
+  {
+    "question": "What does the Ergo node use for the change address?",
+    "answer": "The Ergo node uses a secret root key (derived from seed) for the change address."
+  }
+]

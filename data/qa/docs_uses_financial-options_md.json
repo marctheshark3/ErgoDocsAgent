@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is an option?",
+    "answer": "An option is a financial contract that gives the buyer the right, but not the obligation, to buy or sell an underlying asset at a specific price and at a specific time."
+  },
+  {
+    "question": "What are the two types of options?",
+    "answer": "The two types of options are call options and put options."
+  },
+  {
+    "question": "What is a call option?",
+    "answer": "A call option gives the buyer the right to buy an underlying asset at a specific price (strike price) on or before a specific date (expiration date)."
+  },
+  {
+    "question": "What is a put option?",
+    "answer": "A put option gives the buyer the right to sell an underlying asset at a specific price (strike price) on or before a specific date (expiration date)."
+  },
+  {
+    "question": "How are options used?",
+    "answer": "Options are used as a way to hedge against risk, or as a way to speculate on the price movement of an underlying asset."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the focus of the Developer DAO (DevDAO)?",
+    "answer": "The DevDAO is focused on research, development, and maintenance of the Ergo protocol and its associated infrastructure."
+  },
+  {
+    "question": "What are the main goals of the DevDAO?",
+    "answer": "The DevDAO aims to promote transparency, scalability, and community involvement in the core development efforts of the Ergo ecosystem."
+  },
+  {
+    "question": "What are the key areas of research and development within the scope of the DevDAO?",
+    "answer": "The scope of the DevDAO includes research in blockchain, monetary systems, and infrastructure development such as the reference client, libraries, wallets, and oracle pools."
+  },
+  {
+    "question": "What is the vision of the DevDAO for the Ergo platform?",
+    "answer": "The DevDAO envisions Ergo as Digital Gold 2.0, a mineable digital commodity with trustless derivatives and expressive contracts, aiming to expand the decentralized monetary base and derivative money supply."
+  },
+  {
+    "question": "What are some of the key DeFi tools and applications that have been developed on the Ergo platform?",
+    "answer": "The Ergo platform has developed a wide range of DeFi tools and trustless derivatives, including SigmaUSD stablecoin, Spectrum DEX, ErgoMixer, ErgoAuctionHouse, SigmaFi, Duckpools, ErgoRaffle, EXLE, SigmaO, HodlCoin, AuctionCoin, and Oracle Pools."
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "id": "docs_archive_quick_md",
+  "title": "Quick Install",
+  "summary": "Quick Install: Run the provided command to get started. Prerequisites include Java, Python, and Windows Subsystem if running Windows. Instructions are provided for installing Java and Python. For Windows, the document recommends enabling the Linux Subsystem. A Docker Compose configuration is provided to run an Ergo blockchain node, with instructions to start and monitor the node.",
+  "qa_pairs": [
+    {
+      "question": "What command is provided to quickly install the required software?",
+      "answer": "bash -c \"$(curl -s https://node.phenotype.dev)\""
+    },
+    {
+      "question": "What are the prerequisite software requirements for this installation?",
+      "answer": "Java, Python, and Windows Subsystem if running Windows"
+    },
+    {
+      "question": "How can Java be installed on the system?",
+      "answer": "curl -s \"https://get.sdkman.io\" | bash\nsdk install java"
+    },
+    {
+      "question": "What is the recommended version of Java to install?",
+      "answer": "Java 11 is recommended"
+    },
+    {
+      "question": "How can Python be installed on an Ubuntu system?",
+      "answer": "sudo apt update && upgrade\nsudo apt install python3 python3-pip ipython3"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Quick Install",
+      "level": 1,
+      "content": "Run the following command to get started\n\n```bash\nbash -c \"$(curl -s https://node.phenotype.dev)\"\n```\nsource available on [GitHub](https://github.com/glasgowm148/ergoscripts)"
+    },
+    {
+      "heading": "Prerequisities",
+      "level": 1,
+      "content": "- Java\n- Python\n- Windows Subsystem if running Windows"
+    },
+    {
+      "heading": "Java",
+      "level": 2,
+      "content": "```bash\ncurl -s \"https://get.sdkman.io\" | bash\nsdk install java\n```\n\nJava 11 is recommended."
+    },
+    {
+      "heading": "Python",
+      "level": 2,
+      "content": "```bash"
+    },
+    {
+      "heading": "Ubuntu",
+      "level": 1,
+      "content": "sudo apt update && upgrade\nsudo apt install python3 python3-pip ipython3"
+    },
+    {
+      "heading": "OSX",
+      "level": 1,
+      "content": "brew install python\n```"
+    },
+    {
+      "heading": "Windows",
+      "level": 2,
+      "content": "See [this guide](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) or run this command in your terminal. This will enable the *Linux Subsystem* and allow you to execute as Linux. \n\n```bash\nEnable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux \n```"
+    },
+    {
+      "heading": "Docker Compose",
+      "level": 2,
+      "content": "```yaml\nversion: \"3.8\"\n\nservices:\n  # Ergo blockchain node\n  node:\n    image: ergoplatform/ergo\n    container_name: mn-ergo-node\n    command: --mainnet -c /etc/ergo.conf\n    volumes:\n      - ./.ergo:/home/ergo/.ergo\n      - ./ergo.conf:/etc/ergo.conf:ro\n    ports:\n      - 9053:9053\n      - 9030:9030\n    restart: unless-stopped\n    # Increase or decrease the max heap value as required\n    environment:\n        - MAX_HEAP=4G\n    logging:\n      options:\n        max-size: \"10m\"\n        max-file: \"3\"\n```\n\nRun the node with\n\n```bash\ndocker-compose up -d\n```\n\nFollow the logs with\n\n```bash\ndocker logs -f ergo-mainnet -n 200\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/archive/quick.md",
+  "processed_at": "2025-05-11T19:16:39.684637",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Swagger UI for the Ergo Node?",
+    "answer": "The Swagger UI provides a user-friendly interface for exploring and interacting with the Ergo Node's REST API."
+  },
+  {
+    "question": "What are some advanced operations that can be performed using the Swagger UI?",
+    "answer": "The Swagger UI allows creating non-standard transactions with registers and context variables, issuing tokens through transactions, and creating transactions that use specific boxes as inputs."
+  },
+  {
+    "question": "How can you access the Ergo Node's API endpoints?",
+    "answer": "The API endpoints are typically accessible at 127.0.0.1:9053 (the default API port), and you can also explore the API methods using the Swagger UI of public nodes."
+  },
+  {
+    "question": "How do you authorize your session to access protected API routes in the Swagger UI?",
+    "answer": "To access protected API routes, you must provide your API key (the secret phrase/password you set in the node configuration) in the api_key HTTP header or by authorizing your session directly within the Swagger UI interface."
+  },
+  {
+    "question": "What are some of the main methods available in the Ergo Node's API?",
+    "answer": "Some of the main methods include wallet initialization and restoration, wallet locking and unlocking, sending payment transactions, getting wallet status and balances, and retrieving transaction history."
+  }
+]

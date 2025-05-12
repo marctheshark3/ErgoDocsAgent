@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Satergo Offline Vault Android application?",
+    "answer": "The Satergo Offline Vault Android application starts a Bluetooth Low Energy (BLE) service which accepts connections from other devices, and securely stores the user's encrypted seed phrase."
+  },
+  {
+    "question": "How does the Satergo Offline Vault improve security compared to storing the wallet file on a computer?",
+    "answer": "The Satergo Offline Vault keeps the seed phrase securely contained in the private directory of the application, which cannot be accessed by the user or other applications on the Android device, even if the connected computer is infected with malware."
+  },
+  {
+    "question": "How does the Satergo Offline Vault use Bluetooth to interact with the Satergo desktop application?",
+    "answer": "The Satergo desktop application requests the public key from the Satergo Offline Vault, and sends unsigned transactions to the phone, which the user must then accept and sign using their password to decrypt the seed phrase."
+  },
+  {
+    "question": "What are the key tasks completed in this ErgoHack project?",
+    "answer": "The key tasks completed were programming an entire Android application that securely stores wallet details, starts a Bluetooth LE service, and performs actions (signing transactions) with the confirmation of the user, as well as programming a Linux implementation for the BLE service."
+  },
+  {
+    "question": "Why will the Satergo Offline Vault application not be available on the Google Play Store?",
+    "answer": "The Satergo Offline Vault application will not be on the Google Play Store as that would need an internet connection to be downloaded, which would go against the application's design of being completely offline."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the benefits of running an Ergo node?",
+    "answer": "There is no direct financial incentive to run a node. However, doing so contributes to increasing the security of the network."
+  },
+  {
+    "question": "Can Ergo nodes be viewed publicly?",
+    "answer": "Yes, public nodes can be viewed at ergonodes.net. However, unless your node is hosted on a publicly accessible web-server, your node should be protected by your router."
+  },
+  {
+    "question": "How can you run a public Ergo node?",
+    "answer": "To run a public node, refer to the nginx.conf example provided in the document."
+  },
+  {
+    "question": "What are the risks of using a remote Ergo node?",
+    "answer": "Be cautious when using a remote node as it can be insecure."
+  },
+  {
+    "question": "Where can the minimum requirements for running an Ergo node be found?",
+    "answer": "The minimum requirements for running an Ergo node are not provided in the given content."
+  }
+]

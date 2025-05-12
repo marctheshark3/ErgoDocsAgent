@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the smart contract language used by the Ergo blockchain?",
+    "answer": "ErgoScript"
+  },
+  {
+    "question": "How does the Ergo contract model differ from the account-based model of Ethereum?",
+    "answer": "Ergo's UTXO-based programming model is declarative, specifying conditions for a transaction to be accepted, rather than changing the balances in storage as a series of operations."
+  },
+  {
+    "question": "How does the Ergo contract model improve scalability compared to Ethereum?",
+    "answer": "In Ergo, transactions are created off-chain, and only validation checks are performed on-chain, reducing the number of operations performed by every node on the network. Additionally, the immutability of the transaction graph allows for optimization strategies to improve transaction throughput."
+  },
+  {
+    "question": "What are the advantages of Ergo's UTXO-based model over the shared mutable state in the account-based model?",
+    "answer": "Ergo's UTXO-based model, inherited from Bitcoin, plays well with the concurrent and distributed nature of blockchains and facilitates light trustless clients, avoiding the complex semantics and potential subtle bugs associated with shared mutable state."
+  },
+  {
+    "question": "Where can I find more resources on developing smart contracts using ErgoScript?",
+    "answer": "The ErgoScript page provides an overview of all resources related to smart contract development, and the ErgoScript Primer offers a more detailed introduction to the language."
+  }
+]

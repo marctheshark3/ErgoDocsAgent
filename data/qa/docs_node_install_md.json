@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Reference Client (Node)?",
+    "answer": "The Ergo Node is the core software that connects to the Ergo P2P network, validates transactions and blocks, and maintains a copy of the entire blockchain."
+  },
+  {
+    "question": "What are the minimum hardware requirements for running an Ergo node?",
+    "answer": "The minimum hardware requirements are approximately ~20GB of storage for the blockchain and ~8GB of RAM for handling the initial sync. We recommend having at least 4-6GB of RAM available for the node process and using a fast SSD."
+  },
+  {
+    "question": "What version of Java is required to run an Ergo node?",
+    "answer": "An Ergo node requires a JDK/JRE version >= 9 installed on your system. We recommend using Oracle Java SE or SDKMAN for Unix-based systems."
+  },
+  {
+    "question": "What are the alternatives to running a full Ergo node?",
+    "answer": "If you're simply looking for a secure place to store your ERG, see the wallets page. Some wallets like Satergo offer an integrated option to install and run a full node."
+  },
+  {
+    "question": "What command can be used to install Java 11 using SDKMAN on Unix-based systems?",
+    "answer": "curl -s \"https://get.sdkman.io\" | bash\nsdk install java 11.0.13.8.1-amzn"
+  }
+]

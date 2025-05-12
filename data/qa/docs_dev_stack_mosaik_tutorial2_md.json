@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Ergo Mosaik?",
+    "answer": "Ergo Mosaik is a UI system for Ergo dApps that provides a way to implement both off-chain code and UI code on the same tech stack."
+  },
+  {
+    "question": "What tech stack is used for Ergo Mosaik?",
+    "answer": "Ergo Mosaik uses Kotlin/JVM, which can utilize the full functionality of ergo-appkit, Ergo's first-hand SDK, and all libraries in the Java ecosystem."
+  },
+  {
+    "question": "How is the Mosaik UI described?",
+    "answer": "The Mosaik UI is described using a Mosaik DSL, a JSON-based markup language, which allows the UI to be described naturally."
+  },
+  {
+    "question": "What framework is used to serve the Mosaik app?",
+    "answer": "Spring Boot, a Java framework for building web services, is used to serve the Mosaik app to its executors."
+  },
+  {
+    "question": "How is the first screen of the Mosaik app defined?",
+    "answer": "The first screen of the Mosaik app is defined using the mosaikApp() method from the Mosaik Kotlin DSL, which takes parameters describing the app and the initial view screen."
+  }
+]

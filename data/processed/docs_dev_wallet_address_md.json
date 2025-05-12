@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_wallet_address_md",
+  "title": "Addresses",
+  "summary": "Addresses in Ergo are short strings that correspond to specific scripts and serve as a means to protect a box. Unlike Bitcoin, where addresses store a single amount, in Ergo's eUTxO model, a box contains registers that can store various values, including its native tokens. Ergo tokens are native and not smart contracts. The document provides information on different types of addresses used in Ergo and how to validate them. It also mentions a wallet visualization tool called Ergo Vision that can be used for investigating transactions and addresses.",
+  "qa_pairs": [
+    {
+      "question": "What are Ergo addresses?",
+      "answer": "Ergo addresses are short strings that correspond to specific scripts and serve as a means to protect a box."
+    },
+    {
+      "question": "How do Ergo addresses differ from Bitcoin addresses?",
+      "answer": "Unlike Bitcoin, where addresses store a single amount, in Ergo's eUTxO model, a box contains registers that can store various values, including its native tokens."
+    },
+    {
+      "question": "What is the difference between Ergo's native tokens and smart contracts?",
+      "answer": "In Ergo, tokens are native and are not smart contracts, unlike the account-based model in Ethereum."
+    },
+    {
+      "question": "Where can I learn about the different types of Ergo addresses?",
+      "answer": "Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the Address Types page."
+    },
+    {
+      "question": "How can I validate Ergo addresses?",
+      "answer": "Learn how to validate Ergo addresses by visiting the Address Validation page, which provides essential insights and methods for verifying P2S, P2SH, and P2PK addresses."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Addresses",
+      "level": 1,
+      "content": "- Addresses in Ergo are short strings that correspond to specific scripts and serve as a means to protect a [box](box.md).\n- Unlike Bitcoin (BTC), where addresses store a single amount, in Ergo's [eUTxO](eutxo.md) model, a box contains [registers](registers.md) that can store various values, including its native tokens.\n- So, each [box](box.md) has an ERG amount and may or may not have a bunch of `{tokenid, token amount}` pairs, all in the UTXO model.\n- Unlike account-based models like eth, ergo tokens are *native* and are not smart contracts."
+    },
+    {
+      "heading": "Address Types",
+      "level": 2,
+      "content": "Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the [Address Types](address_types.md) page."
+    },
+    {
+      "heading": "Address Validation",
+      "level": 2,
+      "content": "Learn how to validate Ergo addresses by visiting the [Address Validation](address_validation.md) page, which provides essential insights and methods for verifying P2S, P2SH, and P2PK addresses."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Ergo Vision](https://github.com/CryptoCream/ErgoVision) | A wallet visualization tool to be used for investigating transactions and addresses"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/address.md",
+  "processed_at": "2025-05-11T19:39:27.785638",
+  "ai_processed": true
+}

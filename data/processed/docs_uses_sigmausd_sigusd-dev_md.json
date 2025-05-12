@@ -1,0 +1,73 @@
+{
+  "id": "docs_uses_sigmausd_sigusd-dev_md",
+  "title": "sigusd-dev.md",
+  "summary": "This document provides a detailed guide on how developers can interact with SigmaUSD, a decentralized stablecoin protocol on the Ergo blockchain, using various frameworks and approaches. It covers three main methods:\n\n1. Accessing SigmaUSD through Mosaik, a lightweight framework for building decentralized applications on Ergo, which includes examples of fetching bank details and calculating SigmaUSD exchange rates.\n\n2. Accessing SigmaUSD through AppKit, a comprehensive framework for interacting with Ergo smart contracts and UTXO management, including setting up an Ergo node and creating transactions.\n\n3. Building new dApps with the ErgoMix approach, which demonstrates a robust mechanism for integrating SigmaUSD into backend services using a service-oriented approach to handle transactions, ensuring privacy and seamless interaction with the SigmaUSD protocol.\n\nThe document concludes by highlighting the key features and benefits of each approach, allowing developers to choose the best method for their needs and seamlessly integrate SigmaUSD into their decentralized applications on the Ergo blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What is Mosaik and how can it be used to interact with SigmaUSD?",
+      "answer": "Mosaik is a lightweight framework for building decentralized applications on Ergo. It provides an intuitive way to access and interact with SigmaUSD through the AgeUsdService.kt class, which manages key operations such as fetching the current state of the AgeUSD bank and calculating exchange rates for SigmaUSD and SigmaRSV."
+    },
+    {
+      "question": "How can AppKit be used to interact with the SigmaUSD contract?",
+      "answer": "AppKit is a comprehensive framework for interacting with Ergo smart contracts and UTXO management. It can be used to create transactions, manage UTXOs, and sign transactions before submitting them to the Ergo network to interact with the SigmaUSD contract."
+    },
+    {
+      "question": "What are the key steps involved in using AppKit to interact with SigmaUSD?",
+      "answer": "The key steps are: 1) Set up an Ergo node and install the necessary dependencies. 2) Use the AppKit API to create transactions, manage UTXOs, and sign transactions before submitting them to the Ergo network."
+    },
+    {
+      "question": "What are the source files mentioned in the document for accessing SigmaUSD through Mosaik and AppKit?",
+      "answer": "For Mosaik, the source files are AgeUsdService.kt and AgeUsdController.kt. For AppKit, the source files are the examples and documentation available in the ergo-appkit repository."
+    },
+    {
+      "question": "What are the key operations that the AgeUsdService.kt class in Mosaik can perform?",
+      "answer": "The AgeUsdService.kt class can fetch the current state of the AgeUSD bank and calculate exchange rates for SigmaUSD and SigmaRSV."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Accessing SigmaUSD as a Developer",
+      "level": 3,
+      "content": "SigmaUSD is a decentralized stablecoin protocol on the Ergo blockchain. Developers can interact with SigmaUSD through various frameworks and approaches, such as Mosaik, AppKit, and Sigma-Rust. This tutorial provides a detailed guide on how to build new dApps that interact with SigmaUSD using these tools, with special focus on the mechanisms demonstrated in ErgoMix for robust integration.\n\n---"
+    },
+    {
+      "heading": "1. **Accessing SigmaUSD through Mosaik**",
+      "level": 3,
+      "content": "Mosaik is a lightweight framework designed for building decentralized applications on Ergo. It provides an intuitive way to access and interact with SigmaUSD."
+    },
+    {
+      "heading": "**Setup**",
+      "level": 4,
+      "content": "1. **Mosaik Integration**:\n   - Mosaik uses the `AgeUsdService.kt` to interact with SigmaUSD. This service manages key operations such as fetching the current state of the AgeUSD bank and calculating exchange rates for SigmaUSD and SigmaRSV.\n\n   ```kotlin\n   // Fetching current bank details\n   fun getAgeUsdBank(): AgeUsdBank {\n       Thread.sleep(1000)\n       return AgeUsdBank(340, 4184100, 623497)\n   }\n\n   // Calculating SigmaUSD exchange\n   fun calcSigmaUsdExchange(sigmaUsdAmount: Long): AgeUsdExchangeInfo {\n       val ageUsdBank = getAgeUsdBank()\n       val ergAmount = ageUsdBank.sigUsdPrice * sigmaUsdAmount\n       val feeAmount = kotlin.math.abs((ergAmount * 2) / 100)\n       return AgeUsdExchangeInfo(\n           ageUsdBank.sigUsdPrice,\n           ergAmount,\n           \"${formatSigmaUsdAmount(sigmaUsdAmount)} x ${formatErgAmount(ageUsdBank.sigUsdPrice)} ERG\",\n           feeAmount,\n           \"2% AgeUSD bank fee\",\n           ergAmount + feeAmount\n       )\n   }\n   ```\n\n   - **Source Files**:\n     - [AgeUsdService.kt](https://github.com/MrStahlfelge/mosaik-ageusddemo/blob/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdService.kt)\n     - [AgeUsdController.kt](https://github.com/MrStahlfelge/mosaik-ageusddemo/blob/master/src/main/kotlin/org/ergoplatform/mosaik/example/ageusd/AgeUsdController.kt)\n\n2. **User Interface**:\n   - The Mosaik DSL is used to create user interfaces that interact with SigmaUSD. The example UI from the Mosaik demo application demonstrates how users can interact with the protocol.\n\n   ```kotlin\n   column(Padding.DEFAULT) {\n       layout(HAlignment.JUSTIFY) {\n           card(Padding.HALF_DEFAULT) {\n               layout(HAlignment.JUSTIFY, VAlignment.CENTER) {\n                   column(Padding.HALF_DEFAULT) {\n                       label(\"Reserve ratio\", LabelStyle.HEADLINE2)\n                       label(\"${ageUsdBank.reserveRatio}%\", LabelStyle.HEADLINE1)\n                   }\n               }\n           }\n       }\n   }\n   ```\n\n---"
+    },
+    {
+      "heading": "2. **Accessing SigmaUSD through AppKit**",
+      "level": 3,
+      "content": "AppKit is a comprehensive framework for interacting with Ergo smart contracts and UTXO management, making it ideal for integrating SigmaUSD into your dApp."
+    },
+    {
+      "heading": "**Setup**",
+      "level": 4,
+      "content": "1. **Setting Up Ergo Node**:\n   - Set up an Ergo node and install the necessary dependencies. AppKit integrates seamlessly with Java or Kotlin-based projects, providing a powerful API to interact with the Ergo blockchain.\n\n2. **Creating Transactions**:\n   - Use AppKit to interact with the SigmaUSD contract. This involves creating transactions, managing UTXOs, and signing transactions before submitting them to the Ergo network.\n\n   ```java\n   ErgoClient client = RestApiErgoClient.create(\"http://node:9053/\", NetworkType.MAINNET, \"\", \"\");\n   UnsignedTransactionBuilder txB = client.getUnsignedTransactionBuilder();\n\n   OutBoxBuilder outBoxB = txB.outBoxBuilder()\n       .value(1000000L)  // set value in nanoERGs\n       .contract(SigmaUSDContract);\n\n   List<InputBox> inputs = txB.boxesToSpend(inputsList).build();\n   UnsignedTransaction tx = txB.build();\n\n   // Signing the transaction\n   SignedTransaction signedTx = client.getWallet().sign(tx);\n\n   // Sending the transaction\n   String txId = client.getNode().sendTransaction(signedTx);\n   ```\n\n   - **Source Files**:\n     - [AppKit Examples and Documentation](https://github.com/ergoplatform/ergo-appkit)\n\n---"
+    },
+    {
+      "heading": "3. **Building New dApps with ErgoMix Approach**",
+      "level": 3,
+      "content": "ErgoMix demonstrates a robust mechanism for integrating SigmaUSD into backend services. It uses a service-oriented approach to handle transactions, ensuring privacy and seamless interaction with the SigmaUSD protocol."
+    },
+    {
+      "heading": "**Setup**",
+      "level": 4,
+      "content": "1. **Understanding ErgoMix's Approach**:\n   - ErgoMix utilizes services like `ErgoMixService.scala` to manage SigmaUSD interactions. This service constructs and sends transactions that involve SigmaUSD, embedding these operations within privacy-enhancing mix transactions.\n\n   ```scala\n   def createSigmaUsdTransaction(amount: Long): SignedTransaction = {\n       val boxesToSpend = findBoxesToSpend(amount)\n       val unsignedTx = createUnsignedTransaction(boxesToSpend, amount)\n       signTransaction(unsignedTx)\n   }\n   ```\n\n   - **Source Files**:\n     - [ErgoMixService.scala](https://github.com/ergoMixer/ergoMixBack/blob/master/app/services/ErgoMixService.scala)\n\n2. **Transaction Handling**:\n   - The transaction handling involves fetching relevant UTXOs, creating unsigned transactions, and signing them before sending them to the Ergo network. ErgoMixService provides methods that can be adapted to new dApps, ensuring that SigmaUSD can be seamlessly integrated.\n\n   - **Example Usage**:\n     - Creating a transaction that involves SigmaUSD can follow the pattern used in ErgoMixService, where UTXOs are selected, transactions are built, and signed securely before submission.\n\n---"
+    },
+    {
+      "heading": "Conclusion",
+      "level": 3,
+      "content": "Developers have several robust tools at their disposal for integrating SigmaUSD into new or existing dApps. Mosaik provides a lightweight and user-friendly approach, while AppKit offers comprehensive access to the Ergo blockchain's capabilities. ErgoMix demonstrates how SigmaUSD can be embedded within a service-oriented architecture, making it an excellent guide for new developments.\n\nBy understanding these frameworks and their implementations, developers can choose the best method for their needs, ensuring seamless and efficient interaction with SigmaUSD on the Ergo blockchain.\n\nFor further reading and source code, please refer to the links provided in each section above."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/sigmausd/sigusd-dev.md",
+  "processed_at": "2025-05-11T20:04:44.891939",
+  "ai_processed": true
+}

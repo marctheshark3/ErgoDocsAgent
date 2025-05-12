@@ -1,0 +1,9 @@
+Ergo Mosaik is a UI system for Ergo dApps. This tutorial series covers the implementation of a "Send Funds" screen as an example application for executing transactions on the Ergo network based on user input.
+
+The tutorial covers:
+- Implementing the UI for the "Send Funds" screen using Mosaik components like AddressChooseButton, ErgAddressInputField, and FiatOrErgAmountInputField.
+- Building a reduced transaction based on user input using the Ergo SDK (ergo-appkit).
+- Wrapping the reduced transaction in the ErgoPay protocol to allow the user to sign the transaction.
+- Integrating the ErgoPay signing request into the Mosaik UI.
+
+The tutorial demonstrates how a single Spring Boot process can serve multiple separated Mosaik apps and how to leverage the ErgoPay protocol to enable secure transaction signing in Ergo dApps.

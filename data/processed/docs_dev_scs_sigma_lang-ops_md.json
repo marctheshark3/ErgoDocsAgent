@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_scs_sigma_lang-ops_md",
+  "title": "Language Operations",
+  "summary": "This document provides an overview of the language operations used in the Sigma state code, which is part of the ErgoScript language. It lists the available opcodes, their corresponding operations, and brief comments. The opcodes cover a range of functionality, including comparison operations, logical operations, arithmetic operations, cryptographic operations, and operations related to blockchain data structures such as AVL trees.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the $LT(left: Value[SInt], right: Value[SInt])$ opcode?",
+      "answer": "$LT(left: Value[SInt], right: Value[SInt])$"
+    },
+    {
+      "question": "What is the difference between $AND(input: Value[SCollection[SBoolean]])$ and $CAND(sigmaTrees: Seq[SigmaTree])$?",
+      "answer": "$AND(input: Value[SCollection[SBoolean]])$ and $CAND(sigmaTrees: Seq[SigmaTree])$"
+    },
+    {
+      "question": "What is the purpose of the $ByteArrayToBigInt(input: Value[SByteArray])$ opcode?",
+      "answer": "$ByteArrayToBigInt(input: Value[SByteArray])$"
+    },
+    {
+      "question": "What is the difference between $SGroupElement$ and $GroupElement$?",
+      "answer": "$SGroupElement$ and $GroupElement$"
+    },
+    {
+      "question": "What is the purpose of the $ProveDiffieHellmanTuple(gv: Value[SGroupElement], hv: Value[SGroupElement], uv: Value[SGroupElement], vv: Value[SGroupElement])$ opcode?",
+      "answer": "$ProveDiffieHellmanTuple(gv: Value[SGroupElement], hv: Value[SGroupElement], uv: Value[SGroupElement], vv: Value[SGroupElement])$"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Language Operations",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Opcodes",
+      "level": 2,
+      "content": "|   Code\t|   Operation\t|   Comment\t|\n|---\t|---\t|---\t|\n|   1\t| $LT(left: Value[SInt], right: Value[SInt])$$\t|   \t|\n|   2\t| $LE(left: Value[SInt], right: Value[SInt])$  \t|   \t|\n|   3\t| $GT(left: Value[SInt], right: Value[SInt])$  \t|   \t|\n|   4\t| $GE(left: Value[SInt], right: Value[SInt])$  \t|   \t|\n|   5\t| $EQ$[$T1 <: SType, T2 <: SType$]$(left: Value[T1], right: Value[T2])$  \t|   \t|\n|   6\t| $NEQ$[$T1 <: SType, T2 <: SType$]$(left: Value[T1], right: Value[T2])$  \t|   \t|\n|   7\t| $OR(input: Value[SCollection[SBoolean]])$  \t|   \t|\n|   8\t| $AND(input: Value[SCollection[SBoolean]])$  \t|   \t|\n|   9\t| $CAND(sigmaTrees: Seq[SigmaTree])$  \t|   \t|\n|   10\t| $COR(sigmaTrees: Seq[SigmaTree])$  \t|   \t|\n|   11\t| $Plus(left: Value[SInt], right: Value[SInt])$  \t|   \t|\n|   12\t| $Minus(left: Value[SInt], right: Value[SInt])$  \t|   \t|\n|   13\t| $Xor(left: Value[SByteArray], right: Value[SByteArray])$  \t|   \t|\n|   14\t| $AppendBytes(left: Value[SByteArray], right: Value[SByteArray])$  \t|   \t|\n|   15\t| $Exponentiate(left: Value[SGroupElement], right: Value[SBigInt])$  \t|   \t|\n|   16\t| $MultiplyGroup(left: Value[SGroupElement], right: Value[SGroupElement])$  \t|   \t|\n|   17\t| $IntToByteArray(input: Value[SInt])$  \t|   \t|\n|   18\t| $ByteArrayToBigInt(input: Value[SByteArray])$  \t|   \t|\n|   19\t| $CalcBlake2b256(input: Value[SByteArray])$  \t|   \t|\n|   20\t| $ProveDiffieHellmanTuple(gv: Value[SGroupElement], hv: Value[SGroupElement], uv: Value[SGroupElement], vv: Value[SGroupElement])$  \t|   \t|\n|   21\t| $IsMember(tree: Value[SAvlTree], key: Value[SByteArray], proof: Value[SByteArray])$  \t|   \t|\n|   22\t| $IntConstant(value: Long)$ \t|   \t|\n|   23\t| $TaggedInt(id: Byte)$  \t|   \t|\n|   24\t| $BigIntConstant(value: BigInteger)$  \t|   \t|\n|   25\t| $TaggedBigInt(id: Byte)$  \t|   \t|\n|   26\t| $ByteArrayConstant(value: Array[Byte])$  \t|   \t|\n|   27\t| $TaggedByteArray(id: Byte)$  \t|   \t|\n|   28\t| $PropConstant(value: Array[Byte])$  \t|   \t|\n|   29\t| $TaggedProp(id: Byte)$  \t|   \t|\n|   30\t| $AvlTreeConstant(value: AvlTreeData)$  \t|   \t|\n|   31\t| $TaggedAvlTree(id: Byte)$  \t|   \t|\n|   32\t| $GroupElementConstant(value: GroupElement)$  \t|   \t|\n|   33\t| $GroupGenerator$  \t|   \t|\n|   34\t| $TaggedGroupElement(id: Byte)$  \t|   \t|\n|   35\t| $BooleanConstant(val value: Boolean)$  \t|   \t|\n|   36\t| $TaggedBoolean(id: Byte)$  \t|   \t|\n|   37\t| $TaggedBox(id: Byte)$  \t|   \t|\n|   38\t| $ConcreteCollection$[$V <: SType$]$(value: IndexedSeq[Value[V]])$  \t|   \t|\n|   39\t| $MapCollection$[$IV <: SType, OV <: SType](input: Value[SCollection[IV]], id: Byte, mapper: Transformer[IV, OV])$  \t|   \t|\n|   40\t| $Exists$[$IV <: SType](input: Value$[SCollection[IV]], id: Byte, relations: Relation[_, _]*)$\t|   \t|\n|   41\t| $ForAll$[$IV <: SType](input: Value[SCollection[IV]], id: Byte, relations: Relation[_, _])$ \t|   \t|\n|   42\t| $Fold$[$IV <: SType](input: Value[SCollection[IV]], id: Byte, zero: Value[IV], accId: Byte, foldOp: TwoArgumentsOperation[IV, IV, IV])$  \t|   \t|\n|   43\t| $ByIndex$[$V <: SType](input: Value[SCollection[V]], index: Int)$  \t|   \t|\n|   44\t| $SizeOf$[$V <: SType](input: Value[SCollection[V]])$  \t|   \t|\n|   45\t| $ExtractHeight(input: Value[SBox])$  \t|   \t|\n|   46\t| $Height$  \t| ???\t|\n|   47\t| $ExtractAmount(input: Value[SBox])$  \t|   \t|\n|   48\t| $ExtractScript(input: Value[SBox])$  \t|   \t|\n|   49\t| $ExtractBytes(input: Value[SBox])$  \t|   \t|\n|   50\t| $ExtractId(input: Value[SBox])$  \t|   \t|\n|   51\t| $ExtractRegisterAs$[$V <: SType](input: Value[SBox], registerId: RegisterIdentifier, default: Option[Value[V]] = None)$  \t|   \t|\n|   52\t| $TxOutput(outIndex: Int)$  \t|   \t|\n|   53\t| $ProveDlog(value: Value[SGroupElement])$  \t|   \t|"
+    },
+    {
+      "heading": "UnknownByteArray",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "TaggedVariable",
+      "level": 2,
+      "content": "- [Remove unused TaggedVariable node #657](https://github.com/ScorexFoundation/sigmastate-interpreter/pull/657)"
+    },
+    {
+      "heading": "SGroupElement",
+      "level": 2,
+      "content": "The 'S' in front of `SGroupElement` refers to the sigma state code under the ErgoScript. When working on the ErgoScript directly, you will use `GroupElement`."
+    },
+    {
+      "heading": "Blockchain related objects",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "SAvlTree (AvlTreeData)",
+      "level": 3,
+      "content": "- [\"AvlTree\" -> SAvlTree](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/fe7319f6ddd131d4bc02f46313f3590721f39f3b/parsers/shared/src/main/scala/sigmastate/lang/Types.scala#L40)\n\n- [case class AvlTreeData(digest: ADDigest](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/fe7319f6ddd131d4bc02f46313f3590721f39f3b/interpreter/shared/src/main/scala/sigmastate/AvlTreeData.scala#L54)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/sigma/lang-ops.md",
+  "processed_at": "2025-05-11T19:31:11.752317",
+  "ai_processed": true
+}

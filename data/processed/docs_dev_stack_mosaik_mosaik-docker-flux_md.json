@@ -1,0 +1,128 @@
+{
+  "id": "docs_dev_stack_mosaik_mosaik-docker-flux_md",
+  "title": "Ergo Mosaik: Build, dockerize and deploy",
+  "summary": "The document describes how to build, dockerize, and deploy a Mosaik application built using Spring Boot. It covers the steps to build a JAR file, create a Docker image, and deploy the application on the Flux platform. The key steps include building the JAR file using Gradle, creating a Dockerfile to containerize the application, and following the Flux deployment guide to register and launch the app on their decentralized platform.",
+  "qa_pairs": [
+    {
+      "question": "How can the Mosaik app be built and packaged as a JAR file?",
+      "answer": "The Mosaik app can be built and packaged as a JAR file using the `gradlew bootJar` command. The compiled JAR file will be located in the `build/libs` subdirectory."
+    },
+    {
+      "question": "What is the purpose of dockerizing the Mosaik app?",
+      "answer": "Dockerizing the Mosaik app allows it to be packaged with a predefined Java runtime environment and run in a containerized environment, which is useful for deployment on servers and hosting platforms like Flux."
+    },
+    {
+      "question": "What is the content of the Dockerfile used to dockerize the Mosaik app?",
+      "answer": "The Dockerfile uses the `eclipse-temurin:17-jdk-jammy` base image, copies the compiled JAR file into the container, exposes port 8080, and sets the entry point to run the JAR file."
+    },
+    {
+      "question": "What is the process for deploying the Mosaik app on the Flux platform?",
+      "answer": "To deploy the Mosaik app on Flux, you need a Zel ID and some Flux cryptocurrency (around $1 USD). The Flux platform provides a step-by-step guide to register and deploy the app, which can be done using the Docker image created earlier."
+    },
+    {
+      "question": "What are the key benefits of using Docker to package and deploy the Mosaik app?",
+      "answer": "Dockerizing the Mosaik app simplifies deployment by providing a pre-configured runtime environment, making it easier to run the app on servers and hosting platforms like Flux, which is a good fit for dApps built on the Ergo blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Ergo Mosaik: Build, dockerize and deploy",
+      "level": 1,
+      "content": "In our Mosaik tutorial series, we've built a Mosaik app using Spring Boot. It runs perfectly on our\nlocal machine, but what we really want is other people enjoying our application. These people might \nnot want to deal with Gradle and Git, so let's see how we can bring our app to them!\n\nAll examples here are done to our Mosaik example app we've built in the tutorial series. You can \nfind the [repository on GitHub](https://github.com/MrStahlfelge/mosaik-tutorial-series)."
+    },
+    {
+      "heading": "Building the jar",
+      "level": 2,
+      "content": "Although we used Kotlin to write parts of our application, it compiles to a plain JAR file - a \nJava ARchive. That is a good thing: Java is a widely used language for applications and runs on all\ndesktop and server systems. The only prerequisite to run a JAR file is installing a JRE - a Java \nRuntime Environment - first.\n\nBuilding the jar file for your Mosaik app based on Spring Boot is quite simple: You do it with the\n`gradlew bootJar` command. When this finished, you will find your compiled jar in the `build/libs` \nsubdirectory. It is named with the project name and version, so in our case it is \n`mosaikapp-0.0.1-SNAPSHOT.jar`. Try running it with `java -jar mosaikapp-0.0.1-SNAPSHOT.jar`: Your \napplication starts up and the Mosaik app is served on your local network.\n\nYou can now give this JAR file to other people to run it, or run it on a server. For running it on \na server, it often is needed to pack the application into a Docker container. We'll do that next!"
+    },
+    {
+      "heading": "Dockerizing the jar",
+      "level": 2,
+      "content": "[Docker](https://docs.docker.com/) is an application to package and run your application within its\nown predefined container. You already know that you need a JRE to run the application. With Docker, \nyou can build an image with an installed Java and your application, and with predefined commands to \nrun your application. This is not aiming to end users: for end users it is better to download JRE\nand run your application manually. But on servers, it is very good to have an image defining what to\nspin up and how, and Docker is usually available. It is also prerequisite to host your application \non [Flux](https://runonflux.io/), which is a natural fit for dAps and Ergo is partnering with.\n\nTo dockerize your application, place a plain text file named `dockerfile` on the root level of your \nMosaik app repo (next to `gradlew` and `build.gradle` files) with the following content:\n\n        # syntax=docker/dockerfile:1\n        FROM eclipse-temurin:17-jdk-jammy\n        COPY build/libs/mosaikapp-0.0.1-SNAPSHOT.jar app.jar\n        EXPOSE 8080\n        ENTRYPOINT [\"java\",\"-jar\",\"/app.jar\"]\n\nThe first line is defining the docker file syntax and not interesting for us. The second line is\nthe most powerful one: It defines that our Docker image will built up on the definitions of a \nDocker image called `eclipse-temurin:17-jdk-jammy` - it is an image shipping a Java 17 JDK. \nFind more information on the [project page](https://hub.docker.com/_/eclipse-temurin).\n\nThe third line copies our jar we've built before into the Docker image, and the last line defines\nrunning it is the \"entry point\" to the container image.\n\nOur Spring Boot server runs on port 8080, so line 4 defines that this port is exposed when the image\nruns in a Docker container.\n\nWith this file, we can build a Docker image. You'll need to install Docker on your system for this.\nYou'll find information how to do so on [Docker Docs](https://docs.docker.com/). When Docker is \ninstalled, you can build the Docker image with a command like the following\n\n    docker build -t mosaikappexample:latest .\n\nDon't miss the last character (point), it defines that `docker build` runs in the current directory. \nThe `-t ...` \nparameter define a name and version tag for our image. When the build completes, you can run your \nimage from Docker Desktop or command line and verify that your application works the same as run \ndirectly on your system. You can now push this image to remote Docker repositories to run it on \nother machines. There is also an [official dockerhub repository](https://hub.docker.com/) that \nyou'll need to sign up for and push to to deploy on Flux."
+    },
+    {
+      "heading": "Deploy on Flux",
+      "level": 2,
+      "content": "You can deploy your jar or docker image on any hosting provider. We emphasize Flux here because it\nis decentralized, can be paid with the Flux cryptocurrency and is very inexpensive for a Mosaik app.\n\nFlux provides a [step by step guide](https://jetpack2.app.runonflux.io/#/launch/details) how to deploy an example \napp on their service. Besides the Docker image from the step before, you'll need a Zel ID and \naround 1 USD in Flux.\n\nFollow the Flux guide to register your app, but take care on the following steps:"
+    },
+    {
+      "heading": "Step 1",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "App name",
+      "level": 4,
+      "content": "The app name defines on which URL your Mosaik app will be available later. Replace `127.0.0.1:8080`\nwith this URL in your app source before building the Docker image."
+    },
+    {
+      "heading": "Owner / Zel ID",
+      "level": 4,
+      "content": "Don't confuse Zel ID with your ZelCore log in name. You find your Zel ID on the Zel ID app."
+    },
+    {
+      "heading": "Step 2",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Run command",
+      "level": 4,
+      "content": "You can leave it blank, our Docker image already defines its run command."
+    },
+    {
+      "heading": "Step 3",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Public port",
+      "level": 4,
+      "content": "You must enter a port here. Just enter 31000."
+    },
+    {
+      "heading": "Domains",
+      "level": 4,
+      "content": "Leave it blank"
+    },
+    {
+      "heading": "Private ports",
+      "level": 4,
+      "content": "Enter 8080 here, as this was the port our Spring Boot process is listening on."
+    },
+    {
+      "heading": "Step 4",
+      "level": 3,
+      "content": ""
+    },
+    {
+      "heading": "Instances",
+      "level": 4,
+      "content": "You can leave it at 3"
+    },
+    {
+      "heading": "Processors",
+      "level": 4,
+      "content": "Your Mosaik app will perform okay on 0.1 processors, but of course it will be three times faster \nwith 0.3 processors. Go for 0.1 if you want it as cheap as possible, or more if you want a better\nperformance."
+    },
+    {
+      "heading": "RAM",
+      "level": 4,
+      "content": "The Java process will take around 300 MB of RAM, so give it 1000 here to be safe to not run into \nproblems."
+    },
+    {
+      "heading": "SSD space",
+      "level": 4,
+      "content": "Our image is around 750 MB in size, so give it 2 GB here to be safe."
+    },
+    {
+      "heading": "Deploy on other hosters",
+      "level": 2,
+      "content": "If you deployed to other hosters, feel free to enhance this guide."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/mosaik/mosaik-docker-flux.md",
+  "processed_at": "2025-05-11T19:35:58.163964",
+  "ai_processed": true
+}

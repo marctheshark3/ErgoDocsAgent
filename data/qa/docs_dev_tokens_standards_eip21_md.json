@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of EIP-0021?",
+    "answer": "EIP-0021 lists the common tokens of value with their unique identifier, so users as well as wallet and explorer applications can verify if a token is genuine."
+  },
+  {
+    "question": "Why is it important to verify the authenticity of Ergo tokens?",
+    "answer": "Ergo tokens can be minted by every user, with a name and description free to choose, so it's important to verify if a token is genuine to avoid issues."
+  },
+  {
+    "question": "How are Ergo tokens identified?",
+    "answer": "The unique identifier of an Ergo token is the identifier of the first input box of the transaction that created the token."
+  },
+  {
+    "question": "What property of the hash function used for Ergo tokens ensures uniqueness?",
+    "answer": "The hash function used is collision-resistant, so there's no chance to have a second token with the same identifier."
+  },
+  {
+    "question": "What is the background information provided about Ergo tokens?",
+    "answer": "Ergo supports custom tokens as first-class citizens, and a transaction can create out-of-thin-air tokens in its outputs if the token identifier is equal to the identifier of the first input box."
+  }
+]

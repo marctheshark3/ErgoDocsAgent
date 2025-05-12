@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a Finite State Machine (FSM) in the context of Ergo?",
+    "answer": "In the context of Ergo's eUTXO model, an FSM contract is implemented as a sequence of transactions, where each transaction consumes a box representing the current state and creates a new box representing the next state."
+  },
+  {
+    "question": "How is the current state of an FSM contract represented in Ergo?",
+    "answer": "The current state of the FSM is encoded within an Ergo box, typically using its registers (e.g., R4 might hold a state identifier like an Int or Byte). Other registers hold data associated with that state."
+  },
+  {
+    "question": "What are the key components of an FSM transition in Ergo?",
+    "answer": "The ErgoScript guarding the state box defines the valid transitions. It checks the conditions required to move from the current state (e.g., specific inputs provided, signatures, blockchain height) and that the output box correctly represents the next valid state (e.g., the state identifier in R4 is updated correctly, other registers are preserved or updated according to protocol rules)."
+  },
+  {
+    "question": "What are the benefits of using FSMs in Ergo?",
+    "answer": "Benefits include clear state management, composability (FSM contracts can interact with other contracts and protocols), security (validation rules are enforced on-chain for each state transition), and predictability (contract behavior is determined by the defined states and transitions)."
+  },
+  {
+    "question": "Can you provide an example of an FSM implementation in Ergo?",
+    "answer": "The document provides an example of a simple vending machine FSM with two states (Locked and Paid) and two transitions (Locked to Paid, and Paid to Locked)."
+  }
+]

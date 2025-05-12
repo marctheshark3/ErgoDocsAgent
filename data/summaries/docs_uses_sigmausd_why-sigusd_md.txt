@@ -1,0 +1,7 @@
+The document discusses the concept of stablecoins and the role of SigmaUSD, a stablecoin on the Ergo blockchain. It explains that stablecoins aim to provide price stability, which is crucial for financial modeling and long-term investment. The document highlights that the crypto space is highly volatile, and SigmaUSD is a mechanism to create stable value, which is the foundation for a prosperous economy.
+
+The document outlines the cost of SigmaUSD, which is the current USD value of ERG plus a 2.5% fee, and compares it to the high costs and limited access to stability in the global economy. It suggests that SigmaUSD allows anyone who owns ERG to collateralize their ERG and create liquid value.
+
+The document emphasizes that the long-term goal is to create use cases for SigmaUSD that offer a return beyond the 2.5% fee, transforming it from a short position on ERG to a way to generate yield and create value from stability. It presents various scenarios where users can benefit from using SigmaUSD, such as maintaining a larger position in USD or growing their position in both USD and ERG.
+
+The document concludes by stating that the result of SigmaUSD becoming a pathway of generative value beyond a short will be a healthy reserve system that incentivizes users to interact with the AgeUSD protocol on Ergo.

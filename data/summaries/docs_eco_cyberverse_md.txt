@@ -1,0 +1,1 @@
+Cyberverse is an open-world, pixel-based game that integrates blockchain technology, specifically the Ergo Blockchain, to provide unique player experiences. The game aims to offer opportunities for players to socialize and earn while playing. Key features include NFT integrations, custom tokens, and an in-game marketplace integrated with the Ergo blockchain.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoMixer?",
+    "answer": "ErgoMixer is the first non-custodial, programmable, non-interactive mixer in the space and the only token mixer."
+  },
+  {
+    "question": "What features does ErgoMixer provide?",
+    "answer": "ErgoMixer provides token mixing, covert addresses, stealth addresses, SigmaUSD minting, and Tor support."
+  },
+  {
+    "question": "How does ErgoMixer utilize Sigma protocols?",
+    "answer": "ErgoMixer utilizes Ergo's Sigma protocols to enable efficient, trustless mixing of funds, enabling a high degree of privacy and security."
+  },
+  {
+    "question": "What is the purpose of covert addresses in ErgoMixer?",
+    "answer": "Covert Addresses allow users to showcase a public-facing address that doesn't directly tie back to their actual wallet address, aiding in preventing the tracking of transactions linked to their personal wallet."
+  },
+  {
+    "question": "What is the purpose of stealth addresses in ErgoMixer?",
+    "answer": "Stealth Addresses are a privacy-centric feature designed to obscure the linkage between transactions and a user's public address, adding a layer of anonymity not common in standard blockchain transactions."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the novel feature of ErgoScript's data inputs?",
+    "answer": "ErgoScript's data inputs allow transactions to reference and read from existing UTXOs without the need to consume them."
+  },
+  {
+    "question": "What are the key features of data inputs in ErgoScript?",
+    "answer": "The key features of data inputs are non-destructive access and concurrent data access."
+  },
+  {
+    "question": "How do data inputs contribute to reduced transaction fees?",
+    "answer": "Data inputs do not necessitate script execution or the generation of new outputs, contributing to lower transaction fees."
+  },
+  {
+    "question": "How do data inputs benefit decentralized finance (DeFi) applications?",
+    "answer": "Data inputs enable contracts to reference external data, like oracle data or order book states, without the need to consume the data boxes, facilitating concurrent interactions with the same state by multiple parties."
+  },
+  {
+    "question": "How do data inputs contribute to improved scalability and efficiency?",
+    "answer": "Data inputs allow several transactions to concurrently read from the same data input, reducing the necessity for extra outputs and lessening the likelihood of transaction conflicts, thereby improving scalability and efficiency."
+  }
+]

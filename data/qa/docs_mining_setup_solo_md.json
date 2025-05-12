@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is solo mining?",
+    "answer": "Solo mining is a method where you mine Ergo independently, without joining a mining pool."
+  },
+  {
+    "question": "What are the two options for solo mining?",
+    "answer": "The two options are: 1) Use a mining pool's solo port, or 2) Host your own pool."
+  },
+  {
+    "question": "What is the purpose of the EIP-27 rules in the ergo.conf file?",
+    "answer": "The EIP27 rules in the ergo.conf file are required to be able to spend any ERG mined via the reference client."
+  },
+  {
+    "question": "What is the benefit of solo mining?",
+    "answer": "Solo mining can be more rewarding if you have significant mining power, but it also comes with higher variance in rewards."
+  },
+  {
+    "question": "What tool can be used to evaluate if solo mining is the right choice?",
+    "answer": "A calculator can be used to evaluate if solo mining is the right choice for you."
+  }
+]

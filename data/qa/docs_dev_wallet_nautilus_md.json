@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Nautilus Wallet?",
+    "answer": "Nautilus Wallet is a privacy-focused, web-based wallet designed for the secure management of digital assets within the Ergo ecosystem."
+  },
+  {
+    "question": "What security features does Nautilus Wallet offer?",
+    "answer": "Nautilus Wallet prioritizes user privacy and employs advanced security measures to protect digital assets."
+  },
+  {
+    "question": "How can users install Nautilus Wallet?",
+    "answer": "Nautilus Wallet can be easily installed as a browser extension, with versions available for Google Chrome and Mozilla Firefox."
+  },
+  {
+    "question": "What hardware wallet integration does Nautilus Wallet support?",
+    "answer": "Nautilus Wallet supports Ledger hardware wallets, currently available in developer mode for advanced users and developers."
+  },
+  {
+    "question": "How can users learn to set up and use Nautilus Wallet?",
+    "answer": "Users can watch a comprehensive video tutorial to get a step-by-step guide on setting up and using Nautilus Wallet."
+  }
+]

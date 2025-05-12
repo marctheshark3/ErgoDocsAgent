@@ -1,0 +1,38 @@
+{
+  "id": "docs_uses_pouw_md",
+  "title": "Proof of Useful Work",
+  "summary": "The document discusses the concept of Proof of Useful Work (PoUW) and its potential implementation on the Ergo platform. While PoUW is an interesting idea, it is still in the research phase, and implementing it would likely be beyond the scope and resources of Ergo's small core development team and limited budget. Ergo is considering conducting preliminary research and establishing specifications for PoUW, but its actual usefulness is still uncertain. The document highlights the practical challenges associated with PoUW implementation, such as finding a concrete approach that avoids potential private optimizations and the potential for collusion between payers and miners. The document suggests that during the bootstrapping phase, rewards should be determined by the protocol. The most realistic option seems to be launching a PoUW sidechain, but the document also asks what other possibilities could be explored to benefit the Ergo main chain and its ecosystem.",
+  "qa_pairs": [
+    {
+      "question": "What is Proof of Useful Work (PoUW)?",
+      "answer": "Proof of Useful Work (PoUW) is an interesting concept that is still in the research phase."
+    },
+    {
+      "question": "What is the current status of PoUW implementation in Ergo?",
+      "answer": "Ergo is considering conducting preliminary research and establishing specifications for PoUW, but its actual usefulness is still uncertain."
+    },
+    {
+      "question": "What are the practical challenges associated with the implementation of PoUW?",
+      "answer": "There are potential private optimizations and economic challenges, such as the payer colluding with miners, that need to be addressed."
+    },
+    {
+      "question": "What is the most realistic option for implementing PoUW in Ergo?",
+      "answer": "The most realistic option seems to be launching a PoUW sidechain."
+    },
+    {
+      "question": "What other possibilities could be explored for PoUW in Ergo?",
+      "answer": "The document suggests exploring options that could benefit the Ergo main chain and its ecosystem."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Proof of Useful Work",
+      "level": 1,
+      "content": "While Proof of Useful Work (PoUW) is an interesting concept, it is still in the research phase. Ergo, being open to implementing new ideas, is willing to explore PoUW. However, a radical change to Ergo's consensus mechanism that requires a hard fork would likely be beyond the scope and resources of Ergo's small core development team and limited budget.\n\nCurrently, Ergo is considering conducting preliminary research and establishing specifications for PoUW, but its actual usefulness is still uncertain. It is difficult to make a definitive judgment at this time.\n\nPoUW is an intriguing concept, but there are practical challenges associated with its implementation. The [Ofelimos paper](https://iohk.io/en/blog/posts/2022/08/16/introducing-ofelimos-a-proof-of-useful-work-consensus-protocol/) has made a breakthrough in terms of security definitions, but it is important to find a concrete approach that avoids potential private optimizations.\n\nFrom an economic standpoint, PoUW introduces various interesting and possibly unconventional dynamics, as someone would need to pay for useful work. In the worst-case scenario, the payer could collude with miners.\n\nTherefore, during the bootstrapping phase, it seems necessary to have rewards determined by the protocol.\n\nThe most realistic option, it seems, would be to launch a PoUW sidechain. However, what other possibilities could be explored? Furthermore, what options could benefit the Ergo main chain and its ecosystem?\n\n- [See previous community discussion - Aug 2022](https://t.me/ergoplatform/292754)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/pouw.md",
+  "processed_at": "2025-05-11T20:03:42.331598",
+  "ai_processed": true
+}

@@ -1,0 +1,73 @@
+{
+  "id": "docs_eco_rosen_rosen-faq_md",
+  "title": "FAQs: Rosen Bridge Operations and Features",
+  "summary": "The document provides FAQs about the Rosen Bridge, which is a cross-chain bridge. Key points include:\n\n- The bridge fee structure is the greater of $10 or 0.5% of the transaction value, plus network fees, adjustable by the guard set.\n- There is no fixed maximum for a single transaction, but large transfers may take longer due to manual guard intervention.\n- ADA is managed by sending network fees in the transaction token on Ergo to a dedicated address to cover fees on Cardano.\n- Projects can add new token options by paying a listing fee to the Rosen Fund, which involves minting wrapped tokens and updating the token map.\n- The roadmap includes adding support for BTC, BSC, and Dogecoin in the midterm.\n- The team consists of 8 developers, with some frontend and UI tasks outsourced, and 2-3 additional part-time developers over the past year, supported by several advisors.",
+  "qa_pairs": [
+    {
+      "question": "What is the bridge fee structure on Rosen Bridge?",
+      "answer": "Initially, it's the greater of $10 or 0.5% of the transaction value, plus network fees, adjustable by the guard set. The fee is collected in the transferred token on Ergo. Network fees vary: static for Ergo and Cardano, dynamic for EVM-based networks."
+    },
+    {
+      "question": "Is there a maximum amount for a single transaction on Rosen Bridge?",
+      "answer": "No fixed maximum, but large transfers may take longer, from hours to 1-2 days, due to manual guard intervention for fund transfers from cold to hot wallets."
+    },
+    {
+      "question": "How is ADA managed within the Rosen Bridge system for transactions to Cardano?",
+      "answer": "Network fees in the transaction token on Ergo are sent to a dedicated address for covering network fees on different chains. Currently, the Rosen team manually manages this, with plans for future automation."
+    },
+    {
+      "question": "What is the Rosen Bridge?",
+      "answer": "The Rosen Bridge is a platform that enables cross-chain transactions between different blockchain networks."
+    },
+    {
+      "question": "What are the key features of the Rosen Bridge?",
+      "answer": "The Rosen Bridge has a fee structure, supports large transactions, and manages network fees for transactions to Cardano."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "FAQs: Rosen Bridge Operations and Features",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "What is the bridge fee structure?",
+      "level": 3,
+      "content": "Initially, it's the greater of $10 or 0.5% of the transaction value, plus network fees, adjustable by the guard set. The fee is collected in the transferred token on Ergo. Network fees vary: static for Ergo and Cardano, dynamic for EVM-based networks."
+    },
+    {
+      "heading": "Is there a maximum amount for a single transaction on Rosen Bridge?",
+      "level": 3,
+      "content": "No fixed maximum, but large transfers may take longer, from hours to 1-2 days, due to manual guard intervention for fund transfers from cold to hot wallets."
+    },
+    {
+      "heading": "How is ADA managed within the system for transactions to Cardano?",
+      "level": 3,
+      "content": "Network fees in the transaction token on Ergo are sent to a dedicated address for covering network fees on different chains. Currently, the Rosen team manually manages this, with plans for future automation."
+    },
+    {
+      "heading": "How can a project add new token options to the bridge?",
+      "level": 3,
+      "content": "Projects pay a listing fee to the Rosen Fund, with potential discounts for open-source projects. This involves minting wrapped tokens and updating the token map. Fees are distributed to watchers and guards."
+    },
+    {
+      "heading": "What are the next chains to be added following ADA?",
+      "level": 3,
+      "content": "The roadmap includes BTC, BSC (EVM-chains), and Dogecoin in the midterm. Code refactoring aims to facilitate adding new chains, with initial chains being the most challenging."
+    },
+    {
+      "heading": "What is the size and composition of the team?",
+      "level": 3,
+      "content": "The team includes 8 developers, with some frontend and UI tasks outsourced. Additionally, 2-3 developers have worked part-time over the past year, supported by several advisors.\n\nFor more information, please see the [Team](rosen-team.md) section."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/rosen/rosen-faq.md",
+  "processed_at": "2025-05-11T19:47:09.129570",
+  "ai_processed": true
+}

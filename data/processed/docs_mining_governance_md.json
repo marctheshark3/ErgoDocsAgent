@@ -1,0 +1,43 @@
+{
+  "id": "docs_mining_governance_md",
+  "title": "Governance",
+  "summary": "Ergo's governance model is designed to facilitate network upgrades and parameter adjustments through a decentralized voting mechanism among miners. This approach ensures the long-term economic stability and adaptability of the Ergo network. Ergo implements measures to prevent disruptive hard forks, such as pushing complexity to the application layer and enabling many features to be implemented via soft-forks. Miners can vote to change specific protocol parameters, with soft-forking changes requiring 90% miner support. The detailed information on the voting process, including voting mechanics, system constants, and how to propose and vote for changes, is available on the dedicated Voting page.",
+  "qa_pairs": [
+    {
+      "question": "What is Ergo's governance model designed to facilitate?",
+      "answer": "Ergo's governance model is designed to facilitate network upgrades and parameter adjustments through a decentralized voting mechanism among miners."
+    },
+    {
+      "question": "What measures does Ergo implement to prevent disruptive hard forks?",
+      "answer": "Ergo implements various measures to prevent disruptive hard forks, such as pushing complexity to the application layer and enabling many features to be implemented via soft-forks."
+    },
+    {
+      "question": "What can miners vote to change in the Ergo protocol?",
+      "answer": "Miners can vote to change specific protocol parameters, as outlined in the table on the Forking page."
+    },
+    {
+      "question": "What type of soft-forking changes require 90% miner support?",
+      "answer": "Soft-forking changes that require 90% miner support can alter many aspects of Ergo, excluding critical elements like the maximum supply."
+    },
+    {
+      "question": "Where can one find detailed information on the Ergo voting process?",
+      "answer": "For detailed information on the voting process, including voting mechanics, system constants, and how to propose and vote for changes, refer to the dedicated Voting page."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Governance\n  - Mining\n  - Voting\n  - Soft Fork\n  - Forking\n---"
+    },
+    {
+      "heading": "Governance",
+      "level": 1,
+      "content": "Ergo's governance model is designed to facilitate network upgrades and parameter adjustments through a decentralized voting mechanism among miners. This approach ensures the long-term economic stability and adaptability of the Ergo network.\n\nErgo implements various measures to prevent disruptive hard forks, such as pushing complexity to the application layer and enabling many features to be implemented via soft-forks. For more information on Ergo's forking mechanism, see the [Forking](forking.md) page.\n\nMiners can vote to change specific protocol parameters, as [outlined in the table on the Forking page](forking.md). Soft-forking changes that require 90% miner support can alter many aspects of Ergo, excluding critical elements like the maximum supply.\n\nFor detailed information on the voting process, including voting mechanics, system constants, and how to propose and vote for changes, refer to the dedicated [Voting](voting.md) page."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/governance.md",
+  "processed_at": "2025-05-11T19:51:10.842272",
+  "ai_processed": true
+}

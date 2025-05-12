@@ -1,0 +1,73 @@
+{
+  "id": "docs_uses_oracles_md",
+  "title": "Oracles on Ergo",
+  "summary": "Oracles form critical infrastructure in decentralized finance, connecting off-chain data with on-chain transactions. Ergo has pioneered Oracle Pools to sustain a resilient DeFi ecosystem, utilizing the eUTXO model and ErgoScript. Oracle Pools serve as an abstraction layer over Oracle data, managing trade-offs between cost and speed. Ergo has introduced Oracle Pools V2 to address drawbacks of the initial version, offering features like a single pool address, epoch counter, compact pool box, and token-based rewards. The document provides a comprehensive comparison between Oracle Pools v1.0 and v2.0, highlighting the significant advancements in the latter. The document also includes resources like forum posts, GitHub repositories, and articles related to Ergo oracles.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of oracles in a decentralized financial system?",
+      "answer": "Oracles form the critical infrastructure in a decentralized financial system, connecting off-chain data with on-chain transactions. They provide essential data feeds for various operations, from atomic swaps to more complex interactions like lending/borrowing and dynamic market-making."
+    },
+    {
+      "question": "How do Oracle Pools on Ergo help sustain a resilient DeFi ecosystem?",
+      "answer": "Ergo has pioneered Oracle Pools to sustain a resilient DeFi ecosystem. Utilizing the Extended UTXO (eUTXO) model and the powerful ErgoScript programming language, Ergo facilitates highly decentralized oracle networks. Oracle Pools serve as an abstraction layer over the Oracle data, allowing scalable benefits while managing trade-offs between cost and speed."
+    },
+    {
+      "question": "What are the key features and improvements introduced in Oracle Pools V2?",
+      "answer": "Oracle Pools V2 offers a range of new features and improvements including a single pool address, an epoch counter, a compact pool box, a refresh box, token-based rewards, no separate funding process, reward accumulation, and transferability of oracle and ballot tokens."
+    },
+    {
+      "question": "Where can I find detailed steps to bootstrap an ERG/XAU pool on Ergo testnet using Oracle Pools V2?",
+      "answer": "For detailed steps on how to bootstrap an ERG/XAU pool on testnet with this new version, follow the guide at https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md."
+    },
+    {
+      "question": "Where can I find comprehensive information about the changes and advancements in Oracle Pools V2 compared to V1.0?",
+      "answer": "For a comprehensive comparison between versions v1.0 and v2.0, highlighting the significant advancements in the latter, refer to the EIP-0023 Oracle pool 2.0 document at https://github.com/ergoplatform/eips/pull/41."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Oracles on Ergo",
+      "level": 1,
+      "content": "Oracles form the critical infrastructure in a decentralized financial system, connecting off-chain data with on-chain transactions. They provide essential data feeds for various operations, from atomic swaps to more complex interactions like lending/borrowing and dynamic market-making. Yet, DeFi ecosystems are vulnerable to Flash Loan attacks due to centralized price oracle misinformation."
+    },
+    {
+      "heading": "Oracle Pools on Ergo",
+      "level": 2,
+      "content": "Ergo has pioneered [Oracle Pools](https://ergoplatform.org/en/blog/2020-08-31-ergos-oracle-pools-and-what-they-mean-for-the-ecosystem/) to sustain a resilient DeFi ecosystem. Utilizing the Extended UTXO (eUTXO) model and the powerful ErgoScript programming language, Ergo facilitates highly decentralized oracle networks. Oracle Pools serve as an abstraction layer over the Oracle data, allowing scalable benefits while managing trade-offs between cost and speed. An example of this is the operational [ERG/USD oracle pool](https://explorer.ergoplatform.com/en/oracle-pools-list) on the Ergo Blockchain.\n\nExternal oracle data, when posted on-chain, must be precisely encoded within a transaction. Oracle pools, which consist of various interconnected components, require specific transactions to transition through the pool protocol's different stages. [Oracle Core](https://github.com/ergoplatform/oracle-core) handles these complex transactions, which include data posting and executing the on-chain oracle pool protocol (like data point averaging). It is packaged with the [Oracle Pool Bootstrap](https://github.com/ergoplatform/oracle-core/tree/master/oracle-pool-bootstrap) and a [Connector Library](https://github.com/ergoplatform/oracle-core/tree/master/connectors/connector-lib). You can refer to the [ada-usd-oracle](https://github.com/ergoplatform/oracle-core/blob/master/scripts/ada-usd-oracle/oracle-config.yaml) source for an illustration. For a comprehensive perspective, see this [overview](https://github.com/Emurgo/Emurgo-Research/blob/master/oracles/Oracle-Pools.md) by Robert Kornacki."
+    },
+    {
+      "heading": "Introduction to Oracle Pools V2",
+      "level": 3,
+      "content": "The following section delves into the Oracle Pools V2, an innovative upgrade to the existing Oracle Pool v1.0, as documented in [EIP16](https://github.com/ergoplatform/eips/blob/eip16/eip-0016.md). This proposed update is designed to resolve various drawbacks associated with the first version such as the generation of extensive dust, low rewards, complexity due to two types of pool boxes, and issues related to the non-transferability of oracle and ballot tokens.\n\nOracle Pools V2 offers a range of new features and improvements including a single pool address, an epoch counter, a compact pool box, a refresh box, token-based rewards, no separate funding process, reward accumulation, and transferability of oracle and ballot tokens.\n\nFor detailed steps on how to bootstrap an ERG/XAU pool on testnet with this new version, follow the guide [here](https://github.com/ergoplatform/oracle-core/blob/develop/docs/how_to_bootstrap.md).\n\nTo gain a deeper understanding of these changes and how they enhance the overall performance of Oracle Pools, refer to the comprehensive [EIP-0023 Oracle pool 2.0](https://github.com/ergoplatform/eips/pull/41). The document provides an exhaustive comparison between versions v1.0 and v2.0, highlighting the significant advancements in the latter.\n\nFor further details, refer to [Oracles-V2](oracles-v2.md).\n\nFor an easy docker setup see [easy-ergo-oracle](https://github.com/reqlez/ergo-easy-oracle)"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Forum Posts",
+      "level": 3,
+      "content": "- [Trustless Oracle Contracts](https://www.ergoforum.org/t/trustless-oracle-contracts/3793)\n- [Shrimpcoin - The first shrimp-pinned stablecoin on Ergo](https://www.ergoforum.org/t/shrimpcoin-the-first-shrimp-pinned-stablecoin-on-ergo/1381) (Inactive)"
+    },
+    {
+      "heading": "GitHub",
+      "level": 3,
+      "content": "- [eth/usd connector](https://github.com/Luivatra/oracle-core/tree/eth-connector)\n- [Ergo oracles](https://github.com/sininen-taivas/ergo-oracle) | A command-line tool to launch oracles, with implementations for USD/ERG, EUR/ERG, BTC/ERG, AUG/ERG prices. [Forum topic with example](https://www.ergoforum.org/t/erg-usd-oracle-on-top-of-ergo/119)."
+    },
+    {
+      "heading": "Articles",
+      "level": 3,
+      "content": "- [Chainlink Oracles vs. Ergo Oracle Pools](https://ergoplatform.org/en/blog/2021-04-27-chainlink-oracles-vs-ergo-oracle-pools/)\n- [Oracle Pools - A New Oracle Model](https://www.ergoforum.org/t/oracle-pools-a-new-oracle-model/263)\n- [Interoperability with Cardano Oracles](https://ergoplatform.org/en/blog/2020-11-09-first-steps-towards-interoperability-with-cardano-oracles/)\n- [Ergo Blockchain: Oracle Pool Governance Update](https://curiaregiscrypto.medium.com/ergo-blockchain-oracle-pool-governance-update-d078d58571b0)\n- [The Role of Ergo Oracles](https://veriumfellow.medium.com/oracle-special-4e36cfa6a852)"
+    },
+    {
+      "heading": "The Delphi Project (Inactive)",
+      "level": 3,
+      "content": "The Delphi Project aimed to facilitate exploration, operation, and launching of decentralized oracles on the Ergo blockchain. \n\n- [Website](https://delphiproject.org/#)\n- [Final Report](https://hackmd.io/@abchris/S1dHZcwyc)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/oracles.md",
+  "processed_at": "2025-05-11T20:03:38.354116",
+  "ai_processed": true
+}

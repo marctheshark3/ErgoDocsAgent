@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main libraries available on Ergo?",
+    "answer": "The main libraries available on Ergo are Appkit (Java) and Sigma-Rust."
+  },
+  {
+    "question": "What are the main frameworks available on Ergo?",
+    "answer": "The main frameworks available on Ergo are Headless dApp Framework (Rust), Mosaik (Kotlin), and JDE (JSON)."
+  },
+  {
+    "question": "What are the main wrappers available for Ergo?",
+    "answer": "The main wrappers available for Ergo are ErgPy (python-jvm) and ergo-python-appkit."
+  },
+  {
+    "question": "Where can developers find additional dev-tools for Ergo?",
+    "answer": "Developers can find additional dev-tools for Ergo on the dev-tools section of the Sigmaverse website."
+  },
+  {
+    "question": "What is the purpose of the resources page on Ergo?",
+    "answer": "The purpose of the resources page on Ergo is to outline the resources available on the platform."
+  }
+]

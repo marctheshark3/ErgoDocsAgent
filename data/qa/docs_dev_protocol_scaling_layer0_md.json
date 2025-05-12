@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the role of Layer 0 (the Network or Peer-to-Peer layer) in a blockchain network?",
+    "answer": "Layer 0 forms the bedrock of decentralized communication within a blockchain network, facilitating the exchange of data and information across the network and allowing nodes to distribute and validate transactions, blocks, and other data types without the need for a centralized authority."
+  },
+  {
+    "question": "What are the different client types available in the Ergo blockchain network and how do they impact scalability?",
+    "answer": "The available client types in Ergo are: Full 'Archive' Node Mode, Pruned-Fullnode Mode, and Light-Fullnode Mode. Each mode offers different levels of security and resource requirements, contributing to the overall scalability of the Ergo network."
+  },
+  {
+    "question": "What is the role of 'subblocks' in Ergo's Layer 0 scalability improvements?",
+    "answer": "Subblocks are block candidates with lower proof-of-work difficulty, serving as temporary placeholders that facilitate faster transaction confirmations and optimize network bandwidth, leading to quicker, weakly confirmed transactions for end-users."
+  },
+  {
+    "question": "How does Ergo address the challenge of state bloat management to ensure network scalability?",
+    "answer": "Ergo addresses state bloat through persistent updatable storage and a Storage Rent Fee, which allow updates to be verified by a blockchain contract and deter spam/recycle unused data, respectively, reducing network pollution and encouraging user activity."
+  },
+  {
+    "question": "What are the miner-adjustable parameters in Ergo that can impact the network's scalability?",
+    "answer": "The miner-adjustable parameters in Ergo that can impact scalability are block size and transaction size. Miners can adjust these parameters to balance the network's capacity to process transactions and the computational load on nodes."
+  }
+]

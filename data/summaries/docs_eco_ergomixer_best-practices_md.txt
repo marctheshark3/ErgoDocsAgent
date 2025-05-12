@@ -1,0 +1,7 @@
+The document outlines best practices for using the ErgoMixer, a decentralized mixing protocol that enhances privacy by obfuscating transaction trails. Key points include:
+
+- Withdraw mixed funds to multiple addresses over time to maintain privacy.
+- The mixer operates through "mini-mixes" where your funds are mixed with another user's available box from the pool.
+- Larger pool size and more honest participants increase the anonymity set and security.
+- Longer mixing intervals increase the likelihood of mixing with honest parties, reducing an attacker's ability to track funds.
+- As long as at least one honest party is mixing, the resulting mapping will be indistinguishable to some degree from an attacker's perspective.

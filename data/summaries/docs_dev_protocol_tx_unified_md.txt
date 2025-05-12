@@ -1,0 +1,3 @@
+Unified Transactions in Ergo: Transactions in Ergo are pivotal in enabling various operations within the network. The fee structure is unique, where transaction fees are represented as boxes, the fundamental units that hold and transfer value. Users attach a fee box to their transactions to compensate miners for processing them, incentivizing them to validate and include the transactions in the blockchain.
+
+Ergo stands out by prohibiting out-of-thin-air emission in the "coinbase" transaction, the first transaction in each block that rewards the miner. This ensures that every coin or token in circulation has a legitimate source and is traceable in the transaction history, bolstering the security and economic stability of the blockchain.

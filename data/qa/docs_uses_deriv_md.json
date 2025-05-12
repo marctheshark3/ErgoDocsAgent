@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Hodlcoin?",
+    "answer": "Hodlcoin is a high-risk, high-reward game that encourages players to \"HODL\" their ERGs. Players can deposit their ERGs into a common reserve (HODLing) or withdraw ERGs from the reserve by burning their HOLD ERGs (un-HODLing)."
+  },
+  {
+    "question": "What is OptionCoin?",
+    "answer": "OptionCoin is a novel concept that combines decentralized options trading with token emission on the Ergo blockchain. It is a smart contract that periodically issues new tokens and sells them via call options, with the exercise price determined by the current market price on a decentralized exchange (DEX) like Spectrum."
+  },
+  {
+    "question": "What is OptionPools?",
+    "answer": "OptionPools is a groundbreaking pool-to-peer Automated Market Maker (AMM) trading protocol designed for decentralized options trading. It introduces innovative features like dual-asset liquidity pools, on-chain Black-Scholes pricing, and options price adjustments based on real-time pool utility."
+  },
+  {
+    "question": "What are the key capabilities of the Ergo blockchain that enable the creation of innovative DeFi primitives?",
+    "answer": "Ergo's powerful capabilities enable the creation of innovative decentralized finance (DeFi) primitives, including derivatives and options trading protocols."
+  },
+  {
+    "question": "What are the benefits of decentralized options trading on Ergo?",
+    "answer": "Decentralized options trading protocols on Ergo offer traders alternative platforms for speculating on asset prices, managing risk, and generating yield in a trustless and decentralized manner."
+  }
+]

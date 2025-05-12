@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of validating Merkle proofs in Ergo?",
+    "answer": "Validating Merkle proofs in Ergo allows you to confirm that a specific piece of data, such as a transaction, is included in a block without having to download the entire blockchain."
+  },
+  {
+    "question": "What is the first step in the Merkle proof validation process in Ergo?",
+    "answer": "The first step is to compute the Leaf Node Hash by prepending a 1-byte zero prefix to the leaf data and then hashing the result using the Blake2b256 hash function."
+  },
+  {
+    "question": "Where is the Leaf Node Hash computation implemented in the Ergo codebase?",
+    "answer": "The Leaf Node Hash computation is implemented within the Ergo codebase, primarily found in the scorex.crypto.authds.merkle package of the Scrypto library, which is used by Ergo."
+  },
+  {
+    "question": "What is the purpose of prepending a 1-byte zero prefix to the leaf data before hashing?",
+    "answer": "Prepending a 1-byte zero prefix to the leaf data before hashing is a part of the Merkle proof validation process in Ergo."
+  },
+  {
+    "question": "What hash function is used to compute the Leaf Node Hash in Ergo?",
+    "answer": "The Blake2b256 hash function is used to compute the Leaf Node Hash in Ergo."
+  }
+]

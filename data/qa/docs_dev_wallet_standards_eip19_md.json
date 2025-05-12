@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of EIP-0019 Cold Wallet?",
+    "answer": "EIP-0019 Cold Wallet defines a standard for cross-device interaction between \"Hot\" (online) and \"Cold\" (offline) wallets for signing Ergo transactions."
+  },
+  {
+    "question": "What is the motivation behind the Cold Wallet protocol?",
+    "answer": "The motivation is to provide a more secure way to store private keys by using a specialized \"Cold\" wallet device that is not connected to the internet, in order to prevent hacking and data theft."
+  },
+  {
+    "question": "How can a Cold Wallet device interact with a Hot Wallet?",
+    "answer": "The interaction between the Cold Wallet and Hot Wallet can be done via QR codes (in case of mobile devices) or by transferring files (in case of Raspberry Pi)."
+  },
+  {
+    "question": "What is the \"Cold Signing Problem\" that the protocol addresses?",
+    "answer": "The Cold Signing Problem refers to the challenge of securely signing transactions on a Cold Wallet device that is not connected to the internet."
+  },
+  {
+    "question": "What are the key benefits of the EIP-0019 Cold Wallet protocol?",
+    "answer": "The key benefits include improved security by storing private keys on a dedicated Cold Wallet device, and a standardized protocol for interaction between Hot and Cold wallets."
+  }
+]

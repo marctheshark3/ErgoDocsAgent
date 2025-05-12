@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "\n# Light Full Node Technical Workflow\n\nThe light full node operates by checking all the full blocks or a specified suffix of the full blockchain, depending on the settings. It starts from a trusted pr..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Light Full Node Technical Workflow"
+  },
+  {
+    "question": "What is the 'Light Full Node Technical Workflow' section about?",
+    "answer": "The light full node operates by checking all the full blocks or a specified suffix of the full block..."
+  },
+  {
+    "question": "What is the 'Workflow Steps' section about?",
+    "answer": "1.  Send **ErgoSyncInfo** message to connected peers.\n2.  Get a response with an **INV** message con..."
+  }
+]

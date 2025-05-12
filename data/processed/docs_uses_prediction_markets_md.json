@@ -1,0 +1,38 @@
+{
+  "id": "docs_uses_prediction_markets_md",
+  "title": "Trustless Prediction Markets",
+  "summary": "Trustless Prediction Markets: Ergo's UTXO-model and data inputs enable 100% trustless prediction markets about the state of any dApp on the blockchain. Permissionless and trustless prediction markets can be created for any on-chain data, with trustless verification and payout through transaction data inputs. This technology is also likely expandable into trustless on-chain insurance.",
+  "qa_pairs": [
+    {
+      "question": "What is the key feature of Ergo's architecture that enables trustless prediction markets?",
+      "answer": "Ergo's use of the UTXO-model + data inputs allows for 100% trustless prediction markets about the state of any dApp on the entire blockchain."
+    },
+    {
+      "question": "How can prediction market participants prove who wins a prediction?",
+      "answer": "To prove who wins in the prediction, all one has to do is make a transaction with a specific UTXO as a data-input, providing trustless verification and payout."
+    },
+    {
+      "question": "What other potential application of Ergo's trustless architecture is mentioned?",
+      "answer": "Ergo's trustless architecture is also likely expandable into trustless on-chain insurance."
+    },
+    {
+      "question": "What is the key benefit of Ergo's trustless prediction markets?",
+      "answer": "Ergo's prediction markets are permissionless and trustless, allowing users to create prediction markets about literally any data on the blockchain."
+    },
+    {
+      "question": "What is the main focus of the document?",
+      "answer": "The document focuses on the concept of trustless prediction markets enabled by Ergo's UTXO-model and data input features."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Trustless Prediction Markets",
+      "level": 1,
+      "content": "Due to Ergo's use of the UTXO-model + data inputs we can have 100% trustless prediction markets about the state of any dApp on the entire blockchain.\n\nYou can make permissionless and trustless prediction markets about literally any data on the blockchain, and to prove who wins in the prediction all one has to do is make a tx with a specific utxo as a data-input, and you have trustless verificaition and payout.\n\nThis is likely also expandable into trustless on-chain insurance as well."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/prediction_markets.md",
+  "processed_at": "2025-05-11T20:03:45.749502",
+  "ai_processed": true
+}

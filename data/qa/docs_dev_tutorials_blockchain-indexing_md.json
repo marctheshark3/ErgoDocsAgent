@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the three primary approaches to accessing indexed Ergo blockchain data?",
+    "answer": "1. Using public explorer APIs, 2. Querying your own node's API directly, 3. Building a custom indexer with SDKs."
+  },
+  {
+    "question": "What are the key benefits of indexing Ergo blockchain data?",
+    "answer": "Performance, data aggregation, custom data structures, and reduced node load."
+  },
+  {
+    "question": "Which indexing strategy is best for simple balance and transaction lookups?",
+    "answer": "Using explorer APIs and building a custom indexer are the best options for simple balance and transaction lookups."
+  },
+  {
+    "question": "Which indexing strategy is best for complex or custom queries?",
+    "answer": "Building a custom indexer is the best option for complex or custom queries."
+  },
+  {
+    "question": "Which indexing strategy is best for real-time data sensitivity?",
+    "answer": "Querying the node's API directly is the best option for real-time data sensitivity."
+  }
+]

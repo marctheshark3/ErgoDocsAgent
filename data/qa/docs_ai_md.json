@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary challenge in realizing the potential of the convergence of AI and blockchain technology?",
+    "answer": "A primary challenge lies in scalability. AI systems often demand vast datasets and considerable computational power, while many blockchain networks struggle with limited throughput and slow transaction times."
+  },
+  {
+    "question": "What are the key capabilities that distinguish Artificial Economic Intelligence (AEI) agents from simpler automated scripts or AI-powered analytical tools?",
+    "answer": "AEI agents are envisioned with capabilities to earn revenue, manage costs, allocate resources, and make autonomous decisions to ensure their economic survival and growth."
+  },
+  {
+    "question": "What are the two dominant ledger accounting models in blockchain design, and how do they differ?",
+    "answer": "The two dominant models are the Unspent Transaction Output (UTXO) model, pioneered by Bitcoin and extended by platforms like Ergo, and the Account-based model, popularized by Ethereum. The UTXO model represents the ledger state as a collection of unspent outputs, while the Account model maintains a list of accounts with associated balances."
+  },
+  {
+    "question": "What is the key advantage of the eUTXO model for supporting large-scale AEI ecosystems?",
+    "answer": "The inherent parallelism of the eUTXO model is its most significant advantage, as it allows multiple transactions that do not attempt to spend the same box to be validated and processed independently, potentially simultaneously by different nodes or even different cores within a single node."
+  },
+  {
+    "question": "How does the parallelism of the eUTXO model enable the viability of an economy populated by potentially thousands or even millions of autonomous AEI agents?",
+    "answer": "The parallelism of the eUTXO model is a prerequisite for the viability of a large-scale AEI ecosystem, as it allows numerous agents to concurrently perform transactions without creating dependencies and conflicts like race conditions, which would be a major issue in an account-based model."
+  }
+]

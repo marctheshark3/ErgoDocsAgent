@@ -1,0 +1,78 @@
+{
+  "id": "docs_dev_protocol_tx_format_md",
+  "title": "Box Format",
+  "summary": "The document provides an overview of the box format in Ergo's protocol. A box is a fundamental entity that can hold value, tokens, custom data, and scripts. It consists of up to 10 registers, with the first 4 being mandatory. The box serialization format is described, including the structure of the box bytes. A box candidate is a preliminary version of a box used during transaction creation, with a placeholder value in the $R_3$ register. An Ergo transaction consists of inputs, data inputs, and outputs, and the serialization format for transactions is explained. The document also covers how transactions are signed.",
+  "qa_pairs": [
+    {
+      "question": "What is a 'box' in Ergo's protocol?",
+      "answer": "A 'box' is a fundamental entity that encapsulates various types of information, including value, tokens, custom data, and more."
+    },
+    {
+      "question": "How many registers can a box have, and what are the mandatory registers?",
+      "answer": "A box can have up to 10 registers, with 4 mandatory registers: R0 (monetary value), R1 (guard script), R2 (tokens), and R3 (metadata)."
+    },
+    {
+      "question": "What are the types of values that can be stored in a box's registers?",
+      "answer": "The values in a box's registers must be concrete constant values, not functions, and they are defined in the Sigma language."
+    },
+    {
+      "question": "How is a box serialized for various functions like obtaining the box identifier?",
+      "answer": "A box's serialization format includes the monetary value, script bytes, creation height, number of tokens, additional registers, transaction identifier, and index of the transaction output."
+    },
+    {
+      "question": "What is the purpose of the optional registers R4 to R9 in a box?",
+      "answer": "The optional registers R4 to R9 can be used to store additional data relevant to the transaction or smart contract."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Box\n---"
+    },
+    {
+      "heading": "Box Format",
+      "level": 1,
+      "content": "In Ergo's protocol, a 'box' is a fundamental entity that encapsulates various types of information. It is not just an unspent transaction output (UTXO) balance, but a versatile container that can hold value, tokens, custom data, and more. This flexibility allows for complex operations, such as running scripts or smart contracts, directly on the blockchain."
+    },
+    {
+      "heading": "Registers in a Box",
+      "level": 2,
+      "content": "A box is composed of **registers**. Each box can have up to 10 registers, denoted as $R_0, R_1, \\dots, R_9$. Out of these, four registers are mandatory and contain specific values:\n\n- **$R_0$**: Contains the monetary value of the box, stored as a VLQ-encoded unsigned long.\n- **$R_1$**: Contains a serialized guard script (ErgoScript), which dictates the conditions under which the box can be spent.\n- **$R_2$**: Contains tokens, represented as pairs of token identifiers (32 bytes) and their respective amounts (VLQ-encoded integers).\n- **$R_3$**: Contains metadata including the declared creation height, the unique identifier of the transaction that created the box, and the index of the box in the transaction outputs.\n\nEach register is an expression in the Sigma language, meaning every register contains a value of a specific type. These types are defined in [this document](types.md). The value in a register should be a concrete constant value, not a function of a known output type."
+    },
+    {
+      "heading": "Additional Registers",
+      "level": 3,
+      "content": "The registers $R_4$ to $R_9$ are optional and can be used to store additional data relevant to the transaction or smart contract. These registers follow the same serialization rules as the mandatory ones, but they are serialized without any delimiters, each as a Sigma expression."
+    },
+    {
+      "heading": "Box Serialization Format",
+      "level": 2,
+      "content": "Box bytes are critical for various functions like obtaining the box identifier, building authenticated trees for the blockchain state, and constructing transactions. The serialization of a box follows a specific structure:\n\n- **Monetary Value**: Serialized as a VLQ-encoded unsigned long value.\n- **Script Bytes**: The serialized script (from $R_1$) is wrapped in a constant array of constant bytes.\n- **Creation Height**: Serialized as a VLQ-encoded unsigned integer.\n- **Number of Tokens**: Represented as a one-byte unsigned integer. Each token in the box is a tuple $(token\\_identifier, amount)$, where the identifier is 32 bytes and the amount is a VLQ-encoded integer.\n- **Additional Registers**: Serialized without any delimiters. The number of non-empty registers is represented as a 1-byte unsigned integer.\n- **Transaction Identifier**: A 32-byte identifier of the transaction that created the box.\n- **Index of Transaction Output**: Serialized as a VLQ-encoded index of the box in the transaction outputs."
+    },
+    {
+      "heading": "Box Candidate",
+      "level": 2,
+      "content": "A **Box Candidate** is a preliminary version of a box used during transaction creation. It holds the same values in all registers as a fully formed box, except for $R_3$. In a Box Candidate, $R_3$ is initialized with a placeholder value $(creation\\_height, 0^{34*8})$ where a 34-byte string of zeros replaces the actual transaction ID and output index. This indicates that the box candidate is not yet associated with a specific transaction or output index.\n\nOnce the transaction is confirmed on the blockchain, the placeholder in $R_3$ is replaced with the actual transaction ID and output index, finalizing the box."
+    },
+    {
+      "heading": "Transaction Format",
+      "level": 2,
+      "content": "An Ergo transaction consists of three parts:\n\n1. **Inputs**: Links to boxes that will be removed from the state during transaction application. Each input consists of:\n    - A box ID.\n    - A proof for the final Sigma proposition of this box-protecting script.\n    - A context extension used during script evaluation.\n\n2. **Data Inputs**: Links to boxes that will not be removed from the state but will be available in the context of regular input scripts. This allows transactions to reference additional data without consuming the box.\n\n3. **Outputs**: New boxes that will be included in the state during transaction application."
+    },
+    {
+      "heading": "Transaction Serialization",
+      "level": 3,
+      "content": "- **Inputs Number**: VLQ-encoded number of inputs.\n- **Inputs**: Each input is serialized as a 32-byte ID of the box to be spent, the VLQ-encoded length of the signature, the signature itself, and the context extension (as key-value pairs).\n- **Number of Data Inputs**: VLQ-encoded number of data inputs.\n- **Data Inputs**: 32-byte length IDs of data boxes.\n- **Distinct Tokens Number**: Number of distinct tokens in the transaction, represented as a 1-byte unsigned integer.\n- **Token IDs**: 32-byte length IDs of tokens in the transaction.\n- **Outputs Number**: VLQ-encoded number of transaction outputs.\n- **Box Candidates**: Each Box Candidate is serialized similarly to box bytes, but without the transaction identifier and output index. Tokens are represented as index -> amount pairs, where the index is a 1-byte index of the token in the token IDs section."
+    },
+    {
+      "heading": "Signing a Transaction",
+      "level": 3,
+      "content": "Input signatures are created by signing the `bytesToSign(tx)` message, which is calculated as the transaction bytes with all signatures set to zero (VLQ-encoded length of zero). The transaction ID is calculated as a Blake2b256 hash of this message."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/tx/format.md",
+  "processed_at": "2025-05-11T19:25:59.268474",
+  "ai_processed": true
+}

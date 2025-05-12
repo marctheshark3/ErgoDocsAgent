@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Sigma Language?",
+    "answer": "The Sigma Language is a family of Sigma-protocol based authentication languages implemented in the sigmastate-interpreter repository."
+  },
+  {
+    "question": "How does the Sigma Language differ from Bitcoin Script?",
+    "answer": "The Sigma Language generalizes the Bitcoin Script, allowing developers to specify coin spending conditions using an authentication language, which can be compiled into ErgoTree bytecode."
+  },
+  {
+    "question": "What is ErgoTree?",
+    "answer": "ErgoTree is a bytecode language and memory representation that can be deterministically interpreted in the given blockchain context, defining guarding propositions for coins using Sigma-protocols and logical connectives."
+  },
+  {
+    "question": "What is the purpose of the ErgoScript Compiler?",
+    "answer": "The ErgoScript Compiler compiles the source code into ErgoTree bytecode, which can be saved in UTXO coins to protect their spending."
+  },
+  {
+    "question": "How does the Sigma Language allow for adding new cryptographic primitives?",
+    "answer": "Unlike Bitcoin Script, the Sigma Language allows for adding new cryptographic primitives, such as ring signatures, without requiring a hard fork."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a transaction graph?",
+    "answer": "A transaction graph represents a set of related transactions more flexibly and dynamically than a transaction tree."
+  },
+  {
+    "question": "How does a transaction graph differ from a transaction tree?",
+    "answer": "While a transaction tree is a hierarchical structure depicting a sequence of transactions with specific linear dependencies, a transaction graph is a more general representation allowing for complex and flexible dependencies between transactions."
+  },
+  {
+    "question": "What are the key features of a transaction graph?",
+    "answer": "In a transaction graph, each transaction can be visualized as a node, with directed edges connecting nodes to represent dependencies. Transaction graphs permit more intricate relationships, such as multiple dependencies and complex branching."
+  },
+  {
+    "question": "What are the practical applications of transaction graphs?",
+    "answer": "Transaction graphs are useful for modeling complex transaction flows and dependencies, particularly in the context of smart contracts and advanced blockchain applications. They provide a more flexible and nuanced view of transaction sequences, enabling the representation of sophisticated relationships and dependencies."
+  },
+  {
+    "question": "How can transaction graphs be used to analyze blockchain-based systems?",
+    "answer": "Transaction graphs can help analyze the efficiency, scalability, and security of blockchain-based systems, especially in the context of advanced smart contracts and decentralized applications."
+  }
+]

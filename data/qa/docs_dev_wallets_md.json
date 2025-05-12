@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary purpose of an Ergo wallet?",
+    "answer": "An Ergo wallet allows you to securely store, send, and receive ERG and other tokens built on Ergo, as well as interact with decentralized applications (dApps)."
+  },
+  {
+    "question": "What factors should you consider when choosing an Ergo wallet?",
+    "answer": "Consider your needs for mobile use, desktop management, dApp interaction, and maximum security/long-term storage."
+  },
+  {
+    "question": "What are the recommended mobile wallets for Ergo?",
+    "answer": "The recommended mobile wallets are the Ergo Mobile Wallet (Terminus on iOS) and Minotaur Wallet."
+  },
+  {
+    "question": "What are the key features of the Ergo Mobile Wallet (Terminus on iOS)?",
+    "answer": "The Ergo Mobile Wallet supports ERG, tokens, NFTs, creating offline wallets, and ErgoPay QR code scanning. It is a user-friendly, feature-rich mobile wallet."
+  },
+  {
+    "question": "What are the key features of the Minotaur Wallet?",
+    "answer": "The Minotaur Wallet offers advanced features like multi-signature capabilities, requiring multiple approvals for transactions. It may be more complex for beginners."
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_wallet_multisig_md",
+  "title": "MultiSig",
+  "summary": "A multisig wallet is a digital wallet that requires multiple private keys to authorize a crypto transaction, providing an added layer of security against hacks. The Ergo ecosystem is actively developing innovative technological solutions, including the Minotaur multisig wallet, which is detailed on a separate page. Despite the bearish market conditions, the Ergo ecosystem continues to work on building blockchain security and utility.",
+  "qa_pairs": [
+    {
+      "question": "What is a multisig wallet?",
+      "answer": "A multisig wallet is a digital wallet that operates with multisignature addresses, requiring more than one private key to sign and authorize a crypto transaction."
+    },
+    {
+      "question": "How does a multisig wallet provide added security?",
+      "answer": "A multisig wallet requires everyone with a private key to confirm the transaction for it to be authorized and executed, providing an added layer of security against hacks because an attacker would need all of the private keys to gain access to the wallet's funds."
+    },
+    {
+      "question": "What is the Minotaur multisig wallet?",
+      "answer": "The Minotaur multisig wallet is an exciting new product in the Ergo ecosystem that provides intricate technological solutions and applications for blockchain security and utility."
+    },
+    {
+      "question": "Where can I find more details about the Minotaur multisig wallet?",
+      "answer": "Full details about the Minotaur multisig wallet and how to install and use it can be found on the page minotaur-multisig.md."
+    },
+    {
+      "question": "What is the current state of the general cryptocurrency market?",
+      "answer": "The general cryptocurrency market continues to demonstrate bearish patterns, but the ethos of Ergo stands strong with numerous developers and projects working to help build the new standard of blockchain security and utility."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "MultiSig",
+      "level": 1,
+      "content": "A multisig wallet is a \u201cdigital wallet that operates with multisignature addresses. This means that it requires more than one private key to sign and authorize a crypto transaction or, in some cases, that several different keys can be used to generate a signature.\u201d This type of wallet is valuable to an ecosystem because it adds a second layer of protection to the end user. A multisig wallet requires everyone with a private key to confirm the transaction for it to be authorized and executed. This provides an added layer of security for protection against hacks because an attacker would need all of the private keys to gain access to the wallet's funds. \n\nAlthough the general cryptocurrency market continues to demonstrate bearish patterns, the ethos of Ergo stands strong with numerous developers and projects working to help build the new standard of blockchain security and utility. Intricate technological solutions and applications are consistently being brought forth in the Ergo ecosystem. \n\nPlease read [this page](minotaur-multisig.md) for full details about the Minotaur multisig wallet and how to install and use this exciting new product."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/multisig.md",
+  "processed_at": "2025-05-11T19:40:13.944198",
+  "ai_processed": true
+}

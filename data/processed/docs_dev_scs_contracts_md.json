@@ -1,0 +1,98 @@
+{
+  "id": "docs_dev_scs_contracts_md",
+  "title": "ErgoScript Contracts",
+  "summary": "The document provides an overview of ErgoScript contracts, including examples, deployed contracts, and contracts in development. It covers various types of contracts such as atomic exchange, crowdfunding, ICO, and more. The document also includes links to the ergo-contracts repository, ErgoScript by Example repository, and other related resources. It highlights the diversity of applications and use cases for ErgoScript contracts in the Ergo ecosystem.",
+  "qa_pairs": [
+    {
+      "question": "What is the ergo-contracts repository?",
+      "answer": "The ergo-contracts repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling."
+    },
+    {
+      "question": "What are some examples of Ergo smart contracts in the repository?",
+      "answer": "Examples include AssetsAtomicExchange.scala, CrowdFundingContractVerification.scala, DummyContractVerification.scala, Edex.scala, and ICOContractVerification.scala."
+    },
+    {
+      "question": "What are some examples of ErgoScript contracts provided in the ergoscript-by-example repository?",
+      "answer": "Examples include Pin Lock Contract, Single-Chain Swap Contracts, Simple Send, Double-Chain Swap Contracts, Timed Fund Contract, Grantor/Beneficiary Pin Lock Contract, Escrow Deposit Contract, Token sales service contract, Self-Replicating Sale Contract, and Heads or Tails game Contract."
+    },
+    {
+      "question": "Where can I find more examples of ErgoScript contracts in the sigmastate-interpreter repository?",
+      "answer": "The sigmastate-interpreter repository includes examples such as IcoExample.scala and many more examples in the src/test/scala/sigmastate/utxo/examples directory."
+    },
+    {
+      "question": "What are the key features and capabilities of the ErgoScript language for writing smart contracts on the Ergo platform?",
+      "answer": "The ErgoScript language allows developers to create a variety of smart contracts for the Ergo platform, including atomic swaps, crowdfunding, ICOs, exchanges, and more."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoScript\n  - Contracts\n---"
+    },
+    {
+      "heading": "ErgoScript Contracts",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Ergo Contracts",
+      "level": 3,
+      "content": "The [ergo-contracts](https://github.com/ergoplatform/ergo-contracts) repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling.\n\n- [AssetsAtomicExchange.scala](https://github.com/ergoplatform/ergo-contracts/blob/42719326656e4764f214f57fa8f45205ee20d58d/verified-contracts/src/main/scala/org/ergoplatform/contracts/AssetsAtomicExchange.scala)\n- [CrowdFundingContractVerification.scala](https://github.com/ergoplatform/ergo-contracts/blob/42719326656e4764f214f57fa8f45205ee20d58d/verified-contracts/src/main/scala/org/ergoplatform/contracts/CrowdFundingContractVerification.scala)\n- [DummyContractVerification.scala](https://github.com/ergoplatform/ergo-contracts/blob/42719326656e4764f214f57fa8f45205ee20d58d/verified-contracts/src/main/scala/org/ergoplatform/contracts/DummyContractVerification.scala)\n- [Edex.scala](https://github.com/ergoplatform/ergo-contracts/blob/42719326656e4764f214f57fa8f45205ee20d58d/verified-contracts/src/main/scala/org/ergoplatform/contracts/Edex.scala)\n- [ICOContractVerification.scala](https://github.com/ergoplatform/ergo-contracts/blob/42719326656e4764f214f57fa8f45205ee20d58d/verified-contracts/src/main/scala/org/ergoplatform/contracts/ICOContractVerification.scala)"
+    },
+    {
+      "heading": "ErgoScript Examples",
+      "level": 3,
+      "content": "| Number | Difficulty | Title |\n| ---  | ---  | ---  |\n| 1 | Beginner | [Pin Lock Contract](https://github.com/ergoplatform/ergoscript-by-example/blob/main/pinLockContract.md) |\n| 2 | Intermediate | [Single-Chain Swap Contracts](https://github.com/ergoplatform/ergoscript-by-example/blob/main/singleChainSwap.md) |\n| 3 | Starter | [Simple Send](https://github.com/ergoplatform/ergoscript-by-example/blob/main/simpleSend.md) |\n| 4 | Intermediate | [Double-Chain Swap Contracts](https://github.com/ergoplatform/ergoscript-by-example/blob/main/doubleChainSwap.md) |\n| 5 | Beginner | [Timed Fund Contract](https://github.com/ergoplatform/ergoscript-by-example/blob/main/timedFund.md) |\n| 6 | Beginner | [Grantor/Beneficiary Pin Lock Contract](https://github.com/ergoplatform/ergoscript-by-example/blob/main/grantorBeneficiaryPinLock.md) |\n| 7 | Beginner | [Escrow Deposit Contract](https://github.com/ergoplatform/ergoscript-by-example/blob/main/escrowDepositContract.md) |\n| 8 | Expert | [Token sales service contract](https://github.com/ergoplatform/ergoscript-by-example/blob/main/tokenSalesService.md) |\n| 9 | Beginner | [Self-Replicating Sale Contract](https://github.com/ergoplatform/ergoscript-by-example/blob/main/selfReplicatingTokenSale.md) |\n| 10 | Intermediate | [Heads or Tails game Contract](https://github.com/ergoplatform/ergoscript-by-example/blob/main/headsOrTails.md) |\n| 11 | Expert| [Stealth Address](https://github.com/ergoplatform/ergoscript-by-example/blob/main/stealthAddress.md) |\n| 12 | Expert | [Heads or Tails game Contract with Parallelization](https://github.com/ergoplatform/ergoscript-by-example/blob/main/headsOrTailsParallel.md) |"
+    },
+    {
+      "heading": "sigmastate-interpreter examples",
+      "level": 3,
+      "content": "- [IcoExample.scala](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/c863a9b1a82589e47b15f76f3affdb30a475e740/sigmastate/src/test/scala/sigmastate/utxo/examples/IcoExample.scala#L254-L303)\n- [Many more](https://github.com/ScorexFoundation/sigmastate-interpreter/tree/c863a9b1a82589e47b15f76f3affdb30a475e740/sigmastate/src/test/scala/sigmastate/utxo/examples)"
+    },
+    {
+      "heading": "dApps and Tooling Contracts",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Deployed Contracts",
+      "level": 3,
+      "content": "- [GuapSwap](https://github.com/GuapSwap/guapswap-ronin/tree/main/src/main/scala/contracts)\n- [Lilium](https://github.com/LiliumErgo/scala-api/blob/main/app/contracts/LiliumContracts.scala)\n- [Paideia](https://github.com/paideiadao/paideia-contracts)\n- [ErgoMixer](https://github.com/ergoMixer/ergoMixBack/tree/master/mixer/app/mixer)\n- [Rosen Bridge](https://github.com/rosen-bridge/contract)\n- [Thz.FM](https://github.com/TremendouslyHighFrequency/SmartContracts)\n- [EXLE](https://github.com/Ergo-Lend/edge/blob/main/src/main/scala/edge/contracts/Contract.scala)\n- [Spectrum Finance](https://github.com/spectrum-finance/ergo-dex/tree/master/contracts)\n- [Pheonix Finance (Hodlcoin V2)](https://github.com/PhoenixErgo/phoenix-hodlcoin-contracts)\n- [SkyHarbor](https://github.com/skyharbor-market/contracts)\n- [Hodlbox](https://github.com/SavonarolaLabs/hodlbox-xyz/tree/main/src/lib/contract)\n- [SigmaO](https://github.com/ThierryM1212/SigmaO/tree/main/contract)\n- [SigmaUSD](https://github.com/anon-real/sigma-usd/tree/master/ageusd) \n- [Ergo Raffle](https://github.com/ErgoRaffle/raffle-backend/blob/master/app/raffle/RaffleContract.scala)\n- [Auction Coin](https://github.com/Auction-Coin/contracts)\n- [Sigma Finance](https://github.com/K-Singh/Sigma-Finance/tree/master/contracts)\n- [Comet Lottery](https://github.com/mgpai22/comet-lottery/blob/main/comet-lottery-bot/src/main/scala/contracts/LotteryContracts.scala)\n- [Duckpools](https://github.com/duckpools/lend-protocol-contracts/tree/main/contracts)\n- [ergopad](https://github.com/ergopad/ergopad-api/tree/dev/app/contracts)"
+    },
+    {
+      "heading": "EIPs",
+      "level": 3,
+      "content": "- [Babel Fees](https://github.com/ergoplatform/eips/blob/master/eip-0031.md)\n- [Oracle Pools v2](https://github.com/ergoplatform/eips/tree/cae50b722d6929c794847d21668500acb01f3c8c/eip-0023/contracts)\n- [Stealth Addresses](https://github.com/ergoplatform/eips/pull/87/files)\n- [Auction contract V2](https://github.com/ergoplatform/eips/blob/master/eip-0022.md)\n- [SigmaUSD Bank](https://github.com/ergoplatform/eips/blob/master/eip-0015.md)\n- [ErgoFund](https://github.com/ergoplatform/eips/pull/33)"
+    },
+    {
+      "heading": "In Development",
+      "level": 3,
+      "content": "- [Dexy](https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/dexy/DexySpec.scala)\n- [Bitdomains](https://github.com/bitdomains/contracts)\n- [ErgoNames](https://github.com/ergonames/ergonames/blob/master/src/main/scala/)\n- [Analog Ergo](https://github.com/dzyphr/ScalaSigmaParticle)\n- [Chaincash](https://github.com/ChainCashLabs/chaincash/tree/master/contracts)\n- [AnetaBTC](https://github.com/anetabtc/aneta_contracts)\n- [Lithos](https://github.com/Lithos-Protocol/Lithos/tree/master/src/main/scala)\n- [SigmaJoin](https://github.com/ergoplatform/ergo-jde/tree/main/kiosk/src/test/scala/kiosk/mixer)\n- [Trade-In Contracts (BlitzTCG)](https://github.com/lucagdangelo/trade-in/tree/main/src/main/scala/contracts)"
+    },
+    {
+      "heading": "Misc",
+      "level": 3,
+      "content": "- [smartpooling-contracts](https://github.com/GetBlok-io/ergo-smartpooling-contracts/tree/master/src/main/scala/contracts)\n- [ergo-index](https://github.com/ergo-index/ergo-index-contracts)\n- [Subpooling](https://github.com/GetBlok-io/Subpooling/tree/mainnet_plasma/conf/scripts)\n- [chain-name-service](https://github.com/ross-weir/chain-name-service/tree/main/contracts)\n- [AgeUSD](https://github.com/ergoplatform/eips/pull/33)\n- [ErgoGravity](https://github.com/mhssamadani/gravity-core/blob/dev/contracts/ergo/gravity.scala) & [ErgoNebula](https://github.com/mhssamadani/gravity-core/blob/dev/contracts/ergo/nebula.scala)\n- [Oracle Pools v0.4a](https://github.com/scalahub/Kiosk/tree/master/src/test/scala/kiosk/oraclepool/v4a)\n- [NightOwl](https://github.com/nightowlcasino/ergoscript-contracts)\n- [Hodlcoin (V1?)](https://github.com/lucagdangelo/hodlcoin-contracts)"
+    },
+    {
+      "heading": "ToDo",
+      "level": 3,
+      "content": "- [single-tx-swap](https://github.com/danieloravec/ergo-token-swap)\n- [Gluon](gluon.md)\n- [Palmyra](palmyra.md)\n- [on-chain swaps contracts](https://github.com/ergoplatform/sigma-rust/pull/209)"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [contract-testing](https://github.com/anon-real/contract-testing) provides a quick tutorial that may be useful for testing your contracts off-chain."
+    },
+    {
+      "heading": "Ergoforum",
+      "level": 3,
+      "content": "- [Offchain Bank operating at Layer 2](https://www.ergoforum.org/t/offchain-bank-operating-at-layer-2/3367)\n- [Decentralised Grid Contract](https://www.ergoforum.org/t/decentralized-grid-trading-on-ergo/3750/5)\n- [Market-driven emission contracts](https://www.ergoforum.org/t/market-driven-emission-contracts/3749)\n- [Interest-Free Loan Contract ](https://www.ergoforum.org/t/interest-free-loan-contract/67)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/contracts.md",
+  "processed_at": "2025-05-11T19:27:16.289067",
+  "ai_processed": true
+}

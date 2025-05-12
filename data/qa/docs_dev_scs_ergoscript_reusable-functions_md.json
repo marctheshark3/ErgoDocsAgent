@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the recommended approach for mocking boxes in unit tests?",
+    "answer": "For mocking boxes in unit tests, use the `mockUTxO` function from `@fleet-sdk/mock-chain` instead of manually editing box contents."
+  },
+  {
+    "question": "How can you convert a Coll[Byte] of proposition bytes to the SigmaProp type?",
+    "answer": "The `decodePoint` method is likely what you need to convert proposition bytes (`Coll[Byte]`) into a `SigmaProp`."
+  },
+  {
+    "question": "Can you insert two tokens with the same ID but different amounts into a box?",
+    "answer": "Yes, you can, but be aware that some off-chain code might become confused. The amounts will be merged into a single entry in the box's tokens array."
+  },
+  {
+    "question": "What is the recommended approach for debugging issues with on-chain boxes?",
+    "answer": "When encountering issues with on-chain boxes, you can try the following: 1. Make temporary contract edits, 2. Compile the modified contract and obtain the new ErgoTree hex, 3. Replace the ErgoTree of the problematic box with the new hex (off-chain), 4. Attempt to sign the transaction (this should work locally even if the modified tree wouldn't validate on-chain, helping isolate signing issues)."
+  },
+  {
+    "question": "How is the EIP-3 Secret similar to an account index for derived public keys?",
+    "answer": "Yes, the EIP-3 secret functions similarly to an account index for deriving public keys. As confirmed by user 'Aberg (Satergo dev)', the Satergo wallet refers to this as the \"address index,\" and custom indices can be utilized."
+  }
+]

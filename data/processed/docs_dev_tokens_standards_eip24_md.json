@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_tokens_standards_eip24_md",
+  "title": "EIP-0024: Artwork Contract",
+  "summary": "EIP-0024 proposes a standard for artwork contracts on the Ergo blockchain. The key points are:\n\n1. The issuance box follows the Asset standard and the issuer box has the same ID as the artwork's token ID, which can be used to verify artwork features.\n2. The issuer box has an R4 register that specifies the royalty percentage (up to 100%) for the artwork.\n3. Version 2 of the standard introduces an R5 register to specify a list of royalty recipients and their respective percentages.\n4. The R6 register contains properties, levels, and stats about the artwork.\n5. The artist's identity is determined by the first P2PK input in the chain of transactions leading to the artwork issuance.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the issuer box in the Artwork Contract?",
+      "answer": "The issuer box is important because it has the same ID as the artwork's token ID and can be included in transactions to prove/verify certain features that the artwork may have."
+    },
+    {
+      "question": "What information is stored in the registers of the issuer box?",
+      "answer": "R4 stores the royalty percentage of the artwork, R5 stores information about royalty recipients and their respective percentages, and R6 stores properties, levels, and rarity traits of the artwork."
+    },
+    {
+      "question": "How is the royalty amount distributed according to the Artwork Contract?",
+      "answer": "The royalty amount must be sent to the royalty recipients based on the share of percentages stored in R5 of the issuer box."
+    },
+    {
+      "question": "What is the difference between Design V1 and Design V2 of the Artwork Contract?",
+      "answer": "Design V2 extends the proposal to include collections and fixes some design choices caused by the AOT costing issues in Design V1."
+    },
+    {
+      "question": "What is the purpose of the Artwork Contract in the Ergo platform?",
+      "answer": "The Artwork Contract is an extension of the Asset standard and aims to standardize the issuance of artworks on the Ergo platform."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - EIP\n---"
+    },
+    {
+      "heading": "EIP-0024: Artwork Contract",
+      "level": 1,
+      "content": "> \ud83d\udd17 From [EIP-0024:](https://github.com/ergoplatform/eips/blob/master/eip-0024.md)"
+    },
+    {
+      "heading": "Motivation",
+      "level": 2,
+      "content": "With the discovery that we can easily use spent boxes in contracts ([see here](https://www.ergoforum.org/t/ergoscript-design-patterns/222/23?u=anon_real)), some new features are introduced for artworks and can be extended further in the future. This EIP is an extension of [Asset standard](eip4.md) and tends to standardize artwork issuance in particular."
+    },
+    {
+      "heading": "Design V1",
+      "level": 2,
+      "content": "There are two important boxes in the issuance process of an artwork.\n\n- The issuance box, which follows [Asset standard](eip4.md) depending on the type of artwork.\n- The issuer box, which is the first input of the transaction that is issuing the artwork. In particular, the box with the same ID as the artwork's token ID.\n\nNow we will discuss why the issuer box is important and define a standard for it.\n\nThe issuer box is important because it has the same ID as the artwork's token ID and we can include it (although it is spent) in our transactions either in [registers](registers.md) or as context data. This means that we can prove/verify certain features that an artwork may have using this box. The following is the v1 standard for this box - which may be extended in the future (refer to Design V2 part).\n\n- `R4` of this box is an `Int`, showing 1000 * royalty percentage of the artwork. e.g, 20 for 2% royalty. If `R4` of the issuer box of an artowrk is empty or non-positive, then royalty is considered to be 0%.\n- In the current design of the [Auction contranct](eip22.md), proposition bytes of this box is the contract that the royalty percentage will be sent to. This is a suboptimal design because of AOT costing mechanism which is supposed to be replaced with JIT costing with a soft-fork that will happen with v5.0 of [ergo node](https://github.com/ergoplatform/ergo).\n  \nAs mentioned, royalty amount will go to the propositiona bytes of the issuer box. In the case of a simple proxy contract (proposition bytes of the issuer box), this means that the artist will receive the royalty share. However, the proxy contract may enforce the royalty to go to any other complex contract - e.g., 20% to the artist, and 80% to some charity."
+    },
+    {
+      "heading": "Design V2",
+      "level": 2,
+      "content": "Version 2 of this proposal is created to both extend this proposal to include collections and fix some poor design choices that were caused by the AOT costing issues. The following is the v2 standard for the issuer box.\n\n- `R4` is an integer showing the artwork standard version. If This register is empty, the type is something other than `Int`, or the number is greater or equal to 100 then it should be considered as part of V1 design. Otherwise, this register shows the version number for the standard, i.e., 2 for Design V2.\n- `R5` is of type `Coll[(Coll[Byte], Int)]` that encodes information about royalty recipients and percentages. In particular, a list of royalty recipients and their respective percentage. The `Coll[Byte]` part is the ergo tree of one of the royalty recipients and the `Int` part shows 1000 * royalty percentage of this recipient (e.g. 50 if the receipient receives 5% of the sale). The total royalty percentage of the artwork is the sum of percentages of this list. If the list is empty, the artwork's royalty is 0%.\nRoyalty amount must go to royalty recipients based on the explained share of recipients. An important note here is that it is the responsibility of the auction contract to follow the appropriate version of this standard and consequently send the royalty amount to appropriate recipient(s). \n\n- `R6` contains three types of traits:\n  - Properties: These are textual traits such as specifying `sex` as `male`.\n  - Levels: These are numerical traits that encode some sort of level-like information such as specifying `speed` as `60 out of 100`.\n  - Stats: These are numerical traits that encode any numerical information about the NFT such as specifying `age` as `25 out of 50`.\n\nAlthough the structure of levels and stats are similar, they can be considered different in marketplaces both for UI/UX purposes and also for filtering purposes.\n\nThe following specifies the structure for traits.\n```scala\n( // properties\n  Coll[(  \n    Coll[Byte],  // key\n    Coll[Byte]   // value\n  )],\n  ( // levels\n    Coll[(\n      Coll[Byte],  // key\n      (Int, Int)   // value, max\n    )],\n    // stats\n    Coll[(\n      Coll[Byte],  // key\n      (Int, Int)   // value, max\n    )]\n  )\n)\n```\nIf a list is empty(e.g., there is no `levels`) then the corresponding `Coll` should be empty. Keys are case-insensitive which means for example, marketplaces should treat \"KeY\" the same as \"key\". Moreover, keys should be consistent across different artworks of a specific collection. For example, if \"key1\" is a property trait, it should always be used as a property trait in all artworks of a specific collection.\nAll `Coll[Byte]` types in the above structure are UTF-8 text encoded as `Coll[Byte]`.\n\n- `R7` of this box contains token ID of the collection as `Coll[Byte]` otherwise it is an empty `Coll[Byte]`. This is needed for two cases:\n  - if the issuer box contains more than one collection token, this will specify which one is the collection that the artist intended to put the artwork in.\n  - if the issue box contains some collection tokens but the artist does not intend to put the artwork in any collections. In this case, this register must be an empty `Coll[Byte]`.\n- `R8` of this box is `Coll[(Coll[Byte], Coll[Byte])]` specifying other additional information about the artwork. the following pieces of information currently is intended to be in this register.\n  - Whether the artwork is explicit content or not. The key is \"explicit\" and the value is 0x00 if it is not explicit and 0x01 if it is. If this key is not present the artwork is assumed to not be explicit content.\n\nThe order of these information should not be important as it is intended to represent a json with the following format:\n\n```json\n{\n  \"key1\": \"value1\",\n  \"key2\": \"value2\",\n  \"...\": \"...\"\n}\n```\nThis field can be extended in the future based on the needs of Auction Houses around."
+    },
+    {
+      "heading": "Artist Identity",
+      "level": 2,
+      "content": "Artist identity is very important for any auction house to eliminate NFT copies and scams for the end-users.\n\nThe identity of the artist can not necessarily be determined with the issuance box (unless it is a P2PK box) since its correctness can not be verified, e.g., one can impersonate an artist.\n\nHence, the artist's identity and address are determined with the first P2PK input in the chain of transactions leading to the artwork issuance. This means that in the case of using proxy contracts, the first input of the transaction that is sending the funds to the proxy contract is going to determine the artist's identity."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tokens/standards/eip24.md",
+  "processed_at": "2025-05-11T19:38:32.982532",
+  "ai_processed": true
+}

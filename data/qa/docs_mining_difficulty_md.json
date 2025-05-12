@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of difficulty adjustment in Ergo's Autolykos protocol?",
+    "answer": "Difficulty adjustment ensures that blocks are added to the Ergo blockchain at a stable rate, aiming for a 120-second block interval, which is critical for maintaining network security and fairness."
+  },
+  {
+    "question": "What were the challenges and vulnerabilities with the original Autolykos difficulty adjustment mechanism?",
+    "answer": "The original Autolykos algorithm was vulnerable to rapid changes in hash rate, leading to severe difficulty spikes during periods of super-linear growth and considerable drops in difficulty during periods of low activity."
+  },
+  {
+    "question": "How did EIP37 refine the Autolykos difficulty adjustment mechanism?",
+    "answer": "EIP37 made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks, making it more resilient against sudden hash rate changes and adversarial disruptions."
+  },
+  {
+    "question": "What tool can be used to predict upcoming difficulty adjustments in Ergo?",
+    "answer": "The Difficulty & Epoch Monitor (https://cds.oette.info/ergo_diff.htm) can be used to predict upcoming difficulty adjustments in Ergo."
+  },
+  {
+    "question": "What was the key difference in error rate between Ergo's original Autolykos difficulty adjustment and Bitcoin's mechanism?",
+    "answer": "Ergo's original Autolykos difficulty adjustment achieved a significantly lower error rate of 1.9% compared to Bitcoin's 9.1%."
+  }
+]

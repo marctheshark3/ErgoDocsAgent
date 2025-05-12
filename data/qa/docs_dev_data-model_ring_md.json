@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are ring signatures?",
+    "answer": "Ring signatures are an advanced privacy-preserving cryptographic technique that allows a user to sign a transaction on behalf of a group without revealing which specific group member signed it."
+  },
+  {
+    "question": "What are the key features of ring signatures?",
+    "answer": "Key features of ring signatures include anonymity, privacy, and flexible composition through Ergo's Sigma protocols."
+  },
+  {
+    "question": "What are some use cases of ring signatures in Ergo?",
+    "answer": "Use cases of ring signatures in Ergo include anonymous transactions, decentralized mixers, and confidential voting."
+  },
+  {
+    "question": "What is the ErgoMixer privacy protocol?",
+    "answer": "The ErgoMixer privacy protocol is a decentralized mixer that utilizes ring signatures to provide privacy in blockchain transactions."
+  },
+  {
+    "question": "What is the ZeroJoin privacy mechanism?",
+    "answer": "The ZeroJoin privacy mechanism is another decentralized mixer that uses ring signatures to enable privacy in blockchain transactions."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the four essential pieces of information contained in an Ergo box?",
+    "answer": "1. The value in NanoErgs, 2. The protection script or smart contract, 3. Any additional assets or tokens, 4. Details about the box's creation."
+  },
+  {
+    "question": "How can the value of an Ergo box be accessed?",
+    "answer": "Use `Box.value` to access the value of the box in nanoERGs."
+  },
+  {
+    "question": "Where is the compiled ErgoScript contract associated with an Ergo box stored?",
+    "answer": "The compiled ErgoScript contract is stored in Register R1, which can be accessed using `Box.propositionBytes`."
+  },
+  {
+    "question": "How are tokens stored in an Ergo box?",
+    "answer": "Tokens are stored in Register R2 as a collection of token IDs and their quantities, which can be accessed using `Box.tokens`."
+  },
+  {
+    "question": "What is the purpose of the `maxCreation` height parameter set by the box creator?",
+    "answer": "The `maxCreation` height parameter aids in the creation of payment channels."
+  }
+]

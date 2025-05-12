@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary goal of many cryptocurrency projects regarding mining?",
+    "answer": "The primary goal is to achieve a high degree of decentralization by enabling mining on widely available hardware."
+  },
+  {
+    "question": "How does the RandomX algorithm aim to make CPUs the most efficient 'ASICs' for its algorithm?",
+    "answer": "RandomX generates PoW programs that contain a high number of random branches, which must be correctly predicted for efficient execution, playing to the strengths of CPUs and their sophisticated branch prediction units."
+  },
+  {
+    "question": "What is the decentralization dilemma that the choice of mining algorithm can create?",
+    "answer": "The low barriers to entry for CPU mining with algorithms like RandomX have made them a prime target for botnets, which can amass significant amounts of illicitly gained hashing power, undermining the decentralization the algorithm aims to achieve."
+  },
+  {
+    "question": "What is the controversy around the concept of ASIC resistance?",
+    "answer": "Some argue that ASICs are an inevitable consequence of a successful cryptocurrency, and the goal should be to delay their onset rather than prevent them entirely, while others point out that the concept of ASIC resistance is a moving target."
+  },
+  {
+    "question": "What is the Ergo lead developer's view on achieving perfect ASIC resistance?",
+    "answer": "The Ergo lead developer, kushti, has acknowledged the difficulty of achieving perfect ASIC resistance, stating that any algorithm can be optimized with specialized hardware, but the goal is to find a balance that maximizes decentralization while still providing sufficient network security."
+  }
+]

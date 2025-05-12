@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_stack_fleet_md",
+  "title": "Fleet",
+  "summary": "Fleet is a JavaScript library that makes it easy to create Ergo transactions. It is lightweight, powerful, and has 100% code coverage. The library provides a fluent API for creating complex transactions. The document also mentions that there is an alternative and potentially more detailed documentation source available on DeepWiki.",
+  "qa_pairs": [
+    {
+      "question": "What is Fleet?",
+      "answer": "Fleet is a JavaScript library that lets you easily create Ergo transactions."
+    },
+    {
+      "question": "What are the key features of Fleet?",
+      "answer": "Fleet is easy to use, lightweight (~12kB minified + gziped), powerful with a fluent API, has 100% code coverage, and is tree-shakeable."
+    },
+    {
+      "question": "Where can I find more detailed documentation for Fleet?",
+      "answer": "For more detailed documentation generated from the repository, explore the Fleet SDK on DeepWiki."
+    },
+    {
+      "question": "What is the purpose of the Fleet SDK Recipes?",
+      "answer": "The Fleet SDK Recipes provide common usage patterns and examples for the Fleet library."
+    },
+    {
+      "question": "What are the benefits of using the Fleet library?",
+      "answer": "Fleet is easy to use, lightweight, powerful, has 100% code coverage, and is tree-shakeable."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - JavaScript\n---"
+    },
+    {
+      "heading": "Fleet",
+      "level": 1,
+      "content": "[Fleet](https://fleet-sdk.github.io/docs/) lets you easily create Ergo transactions with a pure JS library. \n\n- \ud83e\ude84 Easy to use\n- \ud83e\udeb6 Lightweight: [~12kB minified + gziped](https://bundlephobia.com/package/@fleet-sdk/core)\n- \ud83e\uddbe Powerful: easily create complex transactions with a fluent API\n- \ud83e\uddea 100% code coverage\n- \ud83c\udf32 Tree-shakeable\n\nFor common usage patterns and examples, see the [Fleet SDK Recipes](fleet-sdk-recipes.md).\n\n\n\n/// details | DeepWiki Documentation\n    {type: info, open: true}\nFor an alternative and potentially more detailed documentation source generated from the repository, explore the [Fleet SDK on DeepWiki](https://deepwiki.com/fleet-sdk/fleet/1-overview)\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/fleet.md",
+  "processed_at": "2025-05-11T19:34:47.558388",
+  "ai_processed": true
+}

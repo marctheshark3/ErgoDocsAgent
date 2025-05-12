@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the stages of a box in the Ergo blockchain?",
+    "answer": "The stages of a box are: 1. Creation, 2. Existence, 3. Spending, and 4. Destruction."
+  },
+  {
+    "question": "What are the key characteristics of a box in the Ergo blockchain?",
+    "answer": "The key characteristics of a box are: immutability, unique identification, and programmable conditions."
+  },
+  {
+    "question": "How is a box generated in the Ergo blockchain?",
+    "answer": "A box is generated as an output of a transaction."
+  },
+  {
+    "question": "What happens when a box is spent in the Ergo blockchain?",
+    "answer": "When a box is spent, it is used as an input in a new transaction."
+  },
+  {
+    "question": "What happens to a box after it is spent in the Ergo blockchain?",
+    "answer": "After a box is spent, it is removed from the UTXO set."
+  }
+]

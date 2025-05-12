@@ -1,0 +1,9 @@
+The document outlines the development roadmap and history of the Ergo blockchain platform. Key points include:
+
+Ergo is designed to provide a secure, efficient, and user-friendly environment for decentralized applications and financial tools. It utilizes an eUTXO model, the Autolykos PoW algorithm, and NiPoPoWs to enable advanced smart contracts, fair mining, and efficient light clients.
+
+The document covers Ergo's timeline from its launch in 2019 through 2021, highlighting key milestones such as the establishment of the Ergo Foundation, the launch of Ergo Mixer, Oracle Pools, SigmaUSD, and the Autolykos v2 hard fork.
+
+It also outlines recent and ongoing developments, including improvements to the Ergo node, Sigma protocol updates, infrastructure enhancements, and achievements by the Sigmanauts mining pool and various applications built on Ergo.
+
+The future development focus areas include implementing sub-blocks, optimizing the P2P layer, enhancing bootstrapping, and advancing the Sigma protocol and ErgoScript.

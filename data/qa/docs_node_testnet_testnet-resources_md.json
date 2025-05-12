@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Ergo Testnet?",
+    "answer": "The Ergo Testnet provides resources for interacting with the Ergo Testnet."
+  },
+  {
+    "question": "How can users find and connect to active Ergo Testnet peers?",
+    "answer": "Users can find reliable Ergo Testnet peers by using public peer lists, such as the one provided at `https://api.tokenjay.app/peers/list?unreachable=false&closedApi=false&limit=50` with the port number changed to 9052."
+  },
+  {
+    "question": "What are the important configuration options for an Ergo Testnet node?",
+    "answer": "Important configuration options include `knownPeers` to manually specify testnet peers, `maxConnections` to increase network connectivity, `bindAddress` to use port 9052 for the REST API, and `networkType` to be set to \"testnet\"."
+  },
+  {
+    "question": "What is the purpose of the `genesisStateDigestHex` configuration option?",
+    "answer": "The `genesisStateDigestHex` configuration option specifies the genesis state digest for the Ergo Testnet."
+  },
+  {
+    "question": "How can users enable mining on an Ergo Testnet node?",
+    "answer": "Users can enable mining on an Ergo Testnet node by setting the `useExternalMiner`, `offlineGeneration`, and `mining` options to `true` in the node configuration."
+  }
+]

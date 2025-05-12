@@ -1,0 +1,43 @@
+{
+  "id": "docs_archive_ef_transparency-report_md",
+  "title": "Ergo Foundation Transparency Report",
+  "summary": "The Ergo Foundation has published a transparency report for 2022, providing details on the foundation's governance, operations, and activities. The report covers the previous year and is a continuation of the foundation's commitment to transparency. Key information about the Ergo Foundation and its work is presented in the report.",
+  "qa_pairs": [
+    {
+      "question": "What is the title of the document?",
+      "answer": "Ergo Foundation Transparency Report"
+    },
+    {
+      "question": "What are the key tags associated with this document?",
+      "answer": "Ergo Foundation, Transparency Report, Governance"
+    },
+    {
+      "question": "Where can the previous year's Ergo Foundation Transparency Report be found?",
+      "answer": "ergo-foundation-2022.md"
+    },
+    {
+      "question": "What is the type and open status of the document section?",
+      "answer": "type: info, open: false"
+    },
+    {
+      "question": "What is the year covered by this Ergo Foundation Transparency Report?",
+      "answer": "2022"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Ergo Foundation\n  - Transparency Report\n  - Governance\n---"
+    },
+    {
+      "heading": "Ergo Foundation Transparency Report",
+      "level": 1,
+      "content": "/// details | 2022\n     {type: info, open: false}\nFor the previous year see [2022](ergo-foundation-2022.md)\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/archive/ef/transparency-report.md",
+  "processed_at": "2025-05-11T19:15:49.023498",
+  "ai_processed": true
+}

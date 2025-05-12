@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_tensile_md",
+  "title": "Tensile",
+  "summary": "Tensile is a decentralized derivatives project on the Ergo blockchain that is currently in a dormant state as the developers have shifted their focus to other priorities. The project includes a DeCo Layment Final Presentation video and code for a Tensile Futures Contract in ErgoScript.",
+  "qa_pairs": [
+    {
+      "question": "What is the current status of the Tensile project?",
+      "answer": "The Tensile project is currently in a dormant state as the developers have shifted their focus to other priorities."
+    },
+    {
+      "question": "What is the DeCo Layment Final Presentation about?",
+      "answer": "The DeCo Layment Final Presentation is about Tensile, a decentralized derivatives platform on the Ergo blockchain."
+    },
+    {
+      "question": "What are the two versions of the Tensile Futures Contract presented in the content?",
+      "answer": "The two versions of the Tensile Futures Contract presented are v1 and v2."
+    },
+    {
+      "question": "What are the key concepts and technical details covered in the Tensile Futures Contract code?",
+      "answer": "The Tensile Futures Contract code covers the implementation of a decentralized futures contract on the Ergo blockchain."
+    },
+    {
+      "question": "What are the practical applications of the Tensile project?",
+      "answer": "The Tensile project aims to provide decentralized derivatives trading on the Ergo blockchain, which can be used for various DeFi applications."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Tensile\n  - Derivatives\n  - DeFi\n  - dApp\n  - dApp-Inactive\n---"
+    },
+    {
+      "heading": "Tensile",
+      "level": 1,
+      "content": "/// admonition | Status\n    type: warning\n\nThis project is currently in a dormant state as the developers have shifted their focus to other priorities.\n///\n\n\n- [DeCo Layment Final Presentation - Tensile Decentralized Derivatives on Ergo](https://youtu.be/Qf4CelswFGk?t=44)\n- [Tensile Futures Contract](https://github.com/DeCo-Education/DeCo-Homeworks/blob/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/hw3-future-contract-code-v1.md) & [v2](https://github.com/DeCo-Education/DeCo-Homeworks/blob/main/ErgoScript-Developer-Course/batch-0/team-tensile/future%20contract/future-contract-v2.ergo)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/tensile.md",
+  "processed_at": "2025-05-11T19:48:35.090254",
+  "ai_processed": true
+}

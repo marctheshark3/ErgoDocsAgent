@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is velvet forking?",
+    "answer": "Velvet forking is a novel approach that allows for introducing protocol changes in a backward-compatible and inclusive manner."
+  },
+  {
+    "question": "What is the key idea behind velvet forks?",
+    "answer": "The key idea is to render modifications to the protocol backward-compatible, enabling a gradual deployment without harming miners who have not upgraded to the new rules."
+  },
+  {
+    "question": "How do velvet forks work?",
+    "answer": "Velvet forks are a special form of protocol update where the new set of reducing protocol rules P' is conditionally applied only when the considered elements, such as blocks or transactions, are valid under the new rules."
+  },
+  {
+    "question": "What are the key advantages of velvet forks?",
+    "answer": "The key advantages of velvet forks are inclusive deployment, as they do not require support from a majority of participants, and backward compatibility, as valid blocks adhering to the new rules are also valid blocks under the old rules."
+  },
+  {
+    "question": "What is the relationship between velvet forks and protocol forks?",
+    "answer": "Since the new rules in P' are reducing, velvet protocol changes never incur a permanent protocol fork, as any element considered valid under P' is also considered valid under P."
+  }
+]

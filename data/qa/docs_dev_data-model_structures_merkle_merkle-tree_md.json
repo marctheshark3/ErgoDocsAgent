@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main purpose of Merkle Trees in the Ergo blockchain?",
+    "answer": "Merkle Trees in Ergo ensure the integrity and authenticity of data, playing a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block."
+  },
+  {
+    "question": "What is the structure of Merkle Trees in Ergo?",
+    "answer": "Ergo employs a binary structure for its Merkle Trees, where each node has two children. Leaf nodes contain hashes of transaction data or proofs, while internal nodes contain hashes of their child nodes."
+  },
+  {
+    "question": "How does the cryptographic security of Merkle Trees work in Ergo?",
+    "answer": "The cryptographic hashes ensure that any alteration in the underlying data is reflected in the Merkle Root, making the tree tamper-evident."
+  },
+  {
+    "question": "What is the significance of the deterministic byte representation of transactions in Ergo's Merkle Trees?",
+    "answer": "The deterministic byte representation of transactions in Ergo allows consistent restoration and verification of Merkle Tree roots, even if transactions are serialized in different formats, such as JSON."
+  },
+  {
+    "question": "How do Ergo's Merkle Trees support the pregenesis state of the blockchain?",
+    "answer": "Ergo's deterministic pregenesis state, configured at the blockchain's inception, facilitates seamless restoration and verification of state transitions by comparing them with the hashes stored in the block header."
+  }
+]

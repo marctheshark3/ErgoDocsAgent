@@ -1,0 +1,11 @@
+The document describes a trustless Local Exchange Trading System (LETS) that does not require a trusted management committee. It presents four variants of the LETS system, each with different features:
+
+LETS-1: Zero sum, with collateral - Requires a time-locked joining fee and allows negative LETS balances covered by ergs collateral.
+
+LETS-2: Zero sum, no collateral - Requires a non-refundable joining fee, with zero sum LETS balances.
+
+LETS-3: Positive sum, with collateral - Requires a time-locked joining fee, has positive sum LETS balances, and uses ergs collateral.
+
+LETS-4: Positive sum, no collateral - Requires a non-refundable joining fee and has positive sum LETS balances.
+
+The document also mentions the possibility of a more advanced variant allowing multiple senders and receivers in a single transaction.

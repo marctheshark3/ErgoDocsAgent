@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key setting that enables light-fullnode mode in Ergo?",
+    "answer": "The key setting is `ergo.node.stateType = \"digest\"`."
+  },
+  {
+    "question": "What is the purpose of the `ergo.node.blocksToKeep` setting?",
+    "answer": "The `ergo.node.blocksToKeep` setting controls how many of the most recent blocks are stored with full transaction data. Older blocks will only have their headers stored."
+  },
+  {
+    "question": "What are the two bootstrapping options for light nodes in Ergo?",
+    "answer": "The two bootstrapping options are `ergo.node.nipopow.nipopowBootstrap = true` and `ergo.node.utxoBootstrap = true`."
+  },
+  {
+    "question": "What are the resource considerations for running a light full-node in Ergo?",
+    "answer": "The key resource considerations are: memory (RAM), disk space, and CPU."
+  },
+  {
+    "question": "What is a limitation of the light full-node mode in Ergo?",
+    "answer": "The light full-node mode can only accept and broadcast transactions initiated within its own network, not those coming from external peers."
+  }
+]

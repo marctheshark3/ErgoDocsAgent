@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two primary methods for data storage in ErgoScript?",
+    "answer": "The two primary methods for data storage in ErgoScript are: 1) the use of registers during the creation of a box, and 2) the use of context variables when a box is being spent."
+  },
+  {
+    "question": "How many registers are available in an Ergo box?",
+    "answer": "An Ergo box is equipped with ten registers, labeled from R0 to R9. The protocol reserves the first four registers (R0 through R3), and the remaining six registers (R4 through R9) are available for data storage."
+  },
+  {
+    "question": "Can you have an empty register between two filled registers in an Ergo box?",
+    "answer": "No, you cannot have an empty register between two filled registers in an Ergo box."
+  },
+  {
+    "question": "How can you access the data stored in a register in ErgoScript?",
+    "answer": "You can access the data stored in a register using the syntax `SELF.R4[GroupElement]`, which returns an `Option[GroupElement]` type."
+  },
+  {
+    "question": "What happens if the register you're trying to access is undefined?",
+    "answer": "If the register you're trying to access is undefined, the `Option` type will be undefined, and the second branch of the if statement will be executed."
+  }
+]

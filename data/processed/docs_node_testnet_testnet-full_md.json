@@ -1,0 +1,38 @@
+{
+  "id": "docs_node_testnet_testnet-full_md",
+  "title": "Synchronising a full node",
+  "summary": "To join the Ergo testnet, download the latest Ergo protocol reference client and launch it with the command `java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf`. A minimal `testnet.conf` file is provided. The node will be available at `localhost:9052/panel`, and the Swagger user interface is available at `localhost:9052/swagger`. If you want to help mine the testnet, you can follow the steps outlined in the CPU Mining document.",
+  "qa_pairs": [
+    {
+      "question": "What is the command to launch the Ergo protocol reference client on the testnet?",
+      "answer": "java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf"
+    },
+    {
+      "question": "What is the minimum configuration required for the testnet.conf file?",
+      "answer": "ergo { networkType = \"testnet\" } scorex { restApi { apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\" } }"
+    },
+    {
+      "question": "Where can the user interface for Swagger be accessed once the node is synchronized?",
+      "answer": "localhost:9052/swagger"
+    },
+    {
+      "question": "How can users help mine the testnet?",
+      "answer": "By following the steps outlined on CPU Mining"
+    },
+    {
+      "question": "Where can the synchronized node be accessed?",
+      "answer": "localhost:9052/panel"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Synchronising a full node",
+      "level": 1,
+      "content": "To join the testnet, download [latest Ergo protocol reference client](https://github.com/ergoplatform/ergo/releases) and launch using\n\n```bash\njava -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf\n```\n\n\nA minimal `testnet.conf` would be:\n\n```conf\nergo {\n  networkType = \"testnet\"\n}\nscorex {\n restApi {\n    # Hex-encoded Blake2b256 hash of an API key. Should be 64-chars long Base16 string.\n    # Below is hash corresponding to API_KEY = \"hello\" (with no quotes)\n    apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n  }\n}\n```\n\nThe node will be available at `localhost:9052/panel`\n\nOnce the node is synchronised, a user interface for [Swagger](swagger.md) is available at `localhost:9052/swagger`. \n\n/// details | Mining\n    {type: info, open: true}\nIf you want to help mine the testnet, you can do so by following the steps outlined on [CPU Mining](cpu-mining.md).\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/testnet/testnet-full.md",
+  "processed_at": "2025-05-11T19:58:00.482639",
+  "ai_processed": true
+}

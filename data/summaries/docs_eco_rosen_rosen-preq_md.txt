@@ -1,0 +1,11 @@
+Rosen Watcher Prerequisites:
+
+Recommended hardware requirements: 2 cores CPU, 2 GB RAM, 20 GB storage.
+
+Ergo Node configuration:
+- Set `extraIndex = true` and `extraCacheSize = 500` to store all transactions, boxes, and addresses in an index.
+- Configure the Scorex REST API with a unique password.
+
+Docker Compose:
+- Docker Compose is a tool for defining and running multi-container Docker applications.
+- The recommended method is to install Docker Desktop, which includes Docker Compose, Docker Engine, and Docker CLI.

@@ -1,0 +1,1 @@
+CYTI is a smart contract that allows entities to mint tokens with a specific character sequence at the beginning of the token ID. A token minter creates a CYTI request, and miners use the CYTI miner software to generate the proper token ID. When a miner succeeds, they receive the fee from the CYTI contract, and the token with the right ID is sent to the token minter.

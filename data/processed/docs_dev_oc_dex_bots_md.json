@@ -1,0 +1,73 @@
+{
+  "id": "docs_dev_oc_dex_bots_md",
+  "title": "Spectrum.DEX off-chain services",
+  "summary": "The document describes the off-chain services that facilitate the functioning of the Spectrum.DEX, an Ergo-based decentralized exchange (DEX). It covers the AMM (Automated Market Maker) DEX services, including the UTXO Tracker, AMM Executor, and Pool Resolver, as well as the OrderBook DEX services, including the UTXO Tracker, Matcher, Orders Executor, and Markets API. The document also provides instructions for building and running the off-chain services, which require an Ergo node, Kafka, Redis, and various other tools. The services are designed to be easily managed using Docker and Docker-compose.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - DEX\n  - Bots\n  - Off-chain\n  - Spectrum\n---\n\n# Spectrum.DEX off-chain services\n\n> Taken from [ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend)\n\n\n## Introduction\n\nA..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Spectrum.DEX off-chain services"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - DEX\n  - Bots\n  - Off-chain\n  - Spectrum\n---"
+    },
+    {
+      "question": "What is the 'Spectrum.DEX off-chain services' section about?",
+      "answer": "> Taken from [ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend)"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "A set of off-chain services facilitating Spectrum.DEX functioning.\n\nAMM DEX services:\n\n - UTXO Track..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - DEX\n  - Bots\n  - Off-chain\n  - Spectrum\n---"
+    },
+    {
+      "heading": "Spectrum.DEX off-chain services",
+      "level": 1,
+      "content": "> Taken from [ergo-dex-backend](https://github.com/spectrum-finance/ergo-dex-backend)"
+    },
+    {
+      "heading": "Introduction",
+      "level": 2,
+      "content": "A set of off-chain services facilitating Spectrum.DEX functioning.\n\nAMM DEX services:\n\n - UTXO Tracker - extracts AMM orders and pool state updates from the UTXO feed\n - AMM Executor - executes AMM orders into a transaction chain\n - Pool Resolver - tracks pool updates\n\n![AMM Services](../../assets/img/AMM_Backend.png)\n\nOrderBook DEX services:\n\n - UTXO Tracker - extracts orders from the UTXO feed\n - Matcher - order-book matching engine\n - Orders Executor - executes orders\n - Markets API - aggregates market data and provides a convenient API to access it"
+    },
+    {
+      "heading": "Building & Running the off-chain services",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 3,
+      "content": "The services require access to an Ergo node, so if you do not have one yet install as instructed here: [Ergo github](https://github.com/ergoplatform/ergo)\nBesides the node the services depend on tools such as Kafka and Redis to run, to make it easier to manage a docker based solution has been made to allow for easy building and running of the services.\nThe only requirements besides the node are that you have the following installed:\n - GIT to download the code and help fetch updates. [GIT](https://git-scm.com/)\n - SBT (which requires Java) for building the bots. [SBT](https://www.scala-sbt.org/index.html)\n - Docker and Docker-compose (included in Docker for Windows). [Docker](https://www.docker.com/get-started)"
+    },
+    {
+      "heading": "Building",
+      "level": 3,
+      "content": "First, you need to download the code from this repo. The easiest way to keep it updated in the future is by using git:\n\n```bash\ncd <the folder you want to keep the off-chain services code in>\ngit clone https://github.com/ergolabs/ergo-dex-backend.git\n```\nInstructions for building the services are all combined in the build script and the docker-compose.yml file. The only configuration needed for running the services need to be stored in a file called config.env. An example can be found in config-example.env\nMake a copy of the example file, name it config.env and edit the file to match your values:\n```bash\ncd ergo-dex-backend\ncp ./config-example.env ./config.env\n```\nThe 2 values that need to be changed in the config.env file are the address you want to recieve fees on and the URI to your node (localhost/127.0.0.1 might not be accessible from within a docker container, it is best to use the local lan ip if the node is running on the same host).\nFinally the Docker images need to be build before running them:\n```bash\n./build\n```"
+    },
+    {
+      "heading": "Running the services",
+      "level": 3,
+      "content": "Once the Docker images are built the only thing left to do is to run them:\n```bash\n./run\n```"
+    },
+    {
+      "heading": "Verifying the services are running correctly",
+      "level": 4,
+      "content": "You can look into the logs of the services to ensure they are running correctly. To look at a combined log for all services use the following command:\nWindows:\n```bash\ncd ergo-dex-backend\ndocker compose logs -f\n```\nLinux:\n```bash\ncd ergo-dex-backend\nsudo docker-compose logs -f\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/oc/dex_bots.md",
+  "processed_at": "2025-05-11T19:22:36.770885",
+  "ai_processed": true
+}

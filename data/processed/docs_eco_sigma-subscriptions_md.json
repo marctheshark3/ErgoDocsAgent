@@ -1,0 +1,43 @@
+{
+  "id": "docs_eco_sigma-subscriptions_md",
+  "title": "Sigma Subscriptions",
+  "summary": "Sigma Subscriptions is a framework for easily running a subscription service on the Ergo blockchain. It provides a set of tools and templates for developers to create decentralized subscription-based applications (dApps) on the Ergo platform.",
+  "qa_pairs": [
+    {
+      "question": "What is Sigma Subscriptions?",
+      "answer": "Sigma Subscriptions is a framework for running a subscription service on Ergo."
+    },
+    {
+      "question": "What are the key features of Sigma Subscriptions?",
+      "answer": "Sigma Subscriptions is a framework for anyone to easily run a subscription service on Ergo."
+    },
+    {
+      "question": "What are the main components of the Sigma Subscriptions framework?",
+      "answer": "Sigma Subscriptions is a framework for running a subscription service on Ergo."
+    },
+    {
+      "question": "How can Sigma Subscriptions be used in practical applications?",
+      "answer": "Sigma Subscriptions is a framework for anyone to easily run a subscription service on Ergo."
+    },
+    {
+      "question": "What are the technical details of the Sigma Subscriptions framework?",
+      "answer": "Sigma Subscriptions is a framework for running a subscription service on Ergo."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Sigma Subscriptions\n  - Subscriptions\n  - Framework\n  - dApp\n---"
+    },
+    {
+      "heading": "Sigma Subscriptions",
+      "level": 1,
+      "content": "[Sigma Subscriptions](https://github.com/cornbelt-dev/sigma-subscriptions) is a framework for anyone to easily run a subscription service on Ergo."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/sigma-subscriptions.md",
+  "processed_at": "2025-05-11T19:47:43.556022",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the limit for the length of a P2S address?",
+    "answer": "P2S has no limit since it is the serialized script."
+  },
+  {
+    "question": "What is the length of a P2SH address?",
+    "answer": "P2SH is 192 bits since it is the \"first 192 bits of the Blake2b256 hash of serialized script bytes.\""
+  },
+  {
+    "question": "How can you validate a P2PK address?",
+    "answer": "You can use the linked class to validate a P2PK address, which gives a runtime exception when created from an invalid string."
+  },
+  {
+    "question": "What is the difference between P2S and P2SH addresses?",
+    "answer": "In P2S, everyone can see the script, while in P2SH, the script will be known when it will be spent."
+  },
+  {
+    "question": "What are the starting prefixes for P2SH and P2S addresses on testnet and mainnet?",
+    "answer": "P2SH has '0x12' at the beginning, and P2S has '0x13' on testnet and '0x02' and '0x03' on mainnet."
+  }
+]

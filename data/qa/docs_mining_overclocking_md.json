@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of overclocking for Ergo mining?",
+    "answer": "Overclocking your GPU can help maximize your mining performance for Ergo."
+  },
+  {
+    "question": "What are some potential risks of overclocking for Ergo mining?",
+    "answer": "Overclocking can increase power consumption and potentially shorten the lifespan of your hardware."
+  },
+  {
+    "question": "Where can you find community-shared overclocking settings for Ergo mining?",
+    "answer": "You can find community overclocking settings on the Google Form, Hashrate.no, and Kryptex Overclocking Database."
+  },
+  {
+    "question": "Why is it important to monitor your hardware's temperature and stability after applying new overclocking settings?",
+    "answer": "Every GPU is unique, and what works for others might not work for you, so it's important to monitor your hardware's performance after applying new overclocking settings."
+  },
+  {
+    "question": "What is the Autolykos2 algorithm used by Ergo?",
+    "answer": "Autolykos2 is the algorithm used by Ergo."
+  }
+]

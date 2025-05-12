@@ -1,0 +1,58 @@
+{
+  "id": "docs_eco_ergonames_md",
+  "title": "ErgoNames: Decentralized Naming System for Ergo",
+  "summary": "ErgoNames is a decentralized naming system for the Ergo blockchain, allowing users to register human-readable names that can be associated with their Ergo addresses. Key features include registering unique names, associating names with addresses, resolving names to addresses, supporting subnames, and being decentralized and censorship-resistant. The project is actively being developed by the Ergo community, with core components including Ergo contracts, off-chain tools and libraries, and wallet/application integration. ErgoNames aims to improve the usability and adoption of the Ergo ecosystem by providing a user-friendly naming system.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoNames?",
+      "answer": "ErgoNames is a decentralized naming system for the Ergo blockchain, allowing users to register human-readable names that can be associated with their Ergo addresses."
+    },
+    {
+      "question": "What are the key features of ErgoNames?",
+      "answer": "Key features of ErgoNames include: register unique names on the Ergo blockchain, associate registered names with Ergo addresses, resolve registered names to their corresponding addresses, support for subnames, decentralized and censorship-resistant, and open-source and community-driven."
+    },
+    {
+      "question": "What are the core components of the ErgoNames project?",
+      "answer": "The core components of ErgoNames include Ergo Contracts (smart contracts for registering and managing names), off-chain tools and libraries (for interacting with the naming system off-chain), and wallet and application integration (for seamless user experience)."
+    },
+    {
+      "question": "How does ErgoNames improve the user experience of the Ergo ecosystem?",
+      "answer": "ErgoNames improves the user experience by making it easier to send and receive transactions using memorable names instead of long, complex Ergo addresses, reducing the friction of using Ergo addresses."
+    },
+    {
+      "question": "Where can I find more information about the ErgoNames project?",
+      "answer": "You can find more information about the ErgoNames project on the GitHub repository at https://github.com/ergonames."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoNames\n  - Naming System\n  - ENS\n  - dApp\n---"
+    },
+    {
+      "heading": "ErgoNames: Decentralized Naming System for Ergo",
+      "level": 1,
+      "content": "ErgoNames is a decentralized naming system for the Ergo blockchain, allowing users to register human-readable names that can be associated with their Ergo addresses. This improves the user experience by making it easier to send and receive transactions using memorable names instead of long, complex addresses."
+    },
+    {
+      "heading": "Key Features",
+      "level": 2,
+      "content": "- Register unique names on the Ergo blockchain\n- Associate registered names with Ergo addresses\n- Resolve registered names to their corresponding addresses\n- Support for subnames (e.g., alice.example)\n- Decentralized and censorship-resistant\n- Open-source and community-driven\n\nErgoNames is an important project for improving the usability and adoption of the Ergo ecosystem. By providing a user-friendly naming system, it reduces the friction of using Ergo addresses and enables a better overall experience for users."
+    },
+    {
+      "heading": "Project Overview",
+      "level": 2,
+      "content": "The project is actively being developed by the Ergo community, with contributions from various developers. The core components include:\n\n- **Ergo Contracts**: Smart contracts for registering and managing names on the Ergo blockchain.\n- **Off-chain Tools and Libraries**: Tools and libraries for interacting with the naming system off-chain.\n- **Wallet and Application Integration**: Integration with Ergo wallets and applications for seamless user experience."
+    },
+    {
+      "heading": "Get Involved",
+      "level": 2,
+      "content": "Stay tuned for updates as ErgoNames progresses towards its mainnet launch, bringing a more accessible and user-friendly experience to the Ergo ecosystem.\n\n- [GitHub Repository](https://github.com/ergonames)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/ergonames.md",
+  "processed_at": "2025-05-11T19:44:08.831641",
+  "ai_processed": true
+}

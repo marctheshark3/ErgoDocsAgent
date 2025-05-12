@@ -1,0 +1,43 @@
+{
+  "id": "docs_uses_financial-options_md",
+  "title": "Options",
+  "summary": "Options are financial contracts that give the buyer the right, but not the obligation, to buy or sell an underlying asset at a specific price and time. There are two types of options: call options, which give the buyer the right to buy an asset, and put options, which give the buyer the right to sell an asset. Options can be used to hedge against risk or speculate on price movements. The basic idea is that the buyer pays a premium for the right to buy or sell the asset, and if the price moves in their favor, they can exercise the option for a profit. If the price doesn't move in their favor, they can let the option expire and only lose the premium paid.",
+  "qa_pairs": [
+    {
+      "question": "What is an option?",
+      "answer": "An option is a financial contract that gives the buyer the right, but not the obligation, to buy or sell an underlying asset at a specific price and at a specific time."
+    },
+    {
+      "question": "What are the two types of options?",
+      "answer": "The two types of options are call options and put options."
+    },
+    {
+      "question": "What is a call option?",
+      "answer": "A call option gives the buyer the right to buy an underlying asset at a specific price (strike price) on or before a specific date (expiration date)."
+    },
+    {
+      "question": "What is a put option?",
+      "answer": "A put option gives the buyer the right to sell an underlying asset at a specific price (strike price) on or before a specific date (expiration date)."
+    },
+    {
+      "question": "How are options used?",
+      "answer": "Options are used as a way to hedge against risk, or as a way to speculate on the price movement of an underlying asset."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Options",
+      "level": 1,
+      "content": "An option is a financial contract that gives the buyer the right, but not the obligation, to buy or sell an underlying asset at a specific price and at a specific time. There are two types of options: call options and put options.\n\n- A **call option** gives the buyer the right to buy an underlying asset at a specific price (strike price) on or before a specific date (expiration date).\n\n- A **put option** gives the buyer the right to sell an underlying asset at a specific price (strike price) on or before a specific date (expiration date).\n\nOptions are used as a way to hedge against risk, or as a way to speculate on the price movement of an underlying asset.\n\nOptions can be used in a variety of ways, but the basic idea is that you pay a premium for the right to buy or sell an asset at a specific price. If the price moves in your favor, you can exercise your option and buy or sell the asset at a profit. If the price doesn't move in your favor, you can let the option expire and you will only lose the premium you paid for the option."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- (Aug 22) [Decentralized P2P options contracts on Ergo](https://www.ergoforum.org/t/decentralized-p2p-options-contracts-on-ergo/3763)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/financial-options.md",
+  "processed_at": "2025-05-11T20:02:19.665156",
+  "ai_processed": true
+}

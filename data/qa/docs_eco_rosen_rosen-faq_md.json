@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the bridge fee structure on Rosen Bridge?",
+    "answer": "Initially, it's the greater of $10 or 0.5% of the transaction value, plus network fees, adjustable by the guard set. The fee is collected in the transferred token on Ergo. Network fees vary: static for Ergo and Cardano, dynamic for EVM-based networks."
+  },
+  {
+    "question": "Is there a maximum amount for a single transaction on Rosen Bridge?",
+    "answer": "No fixed maximum, but large transfers may take longer, from hours to 1-2 days, due to manual guard intervention for fund transfers from cold to hot wallets."
+  },
+  {
+    "question": "How is ADA managed within the Rosen Bridge system for transactions to Cardano?",
+    "answer": "Network fees in the transaction token on Ergo are sent to a dedicated address for covering network fees on different chains. Currently, the Rosen team manually manages this, with plans for future automation."
+  },
+  {
+    "question": "What is the Rosen Bridge?",
+    "answer": "The Rosen Bridge is a platform that enables cross-chain transactions between different blockchain networks."
+  },
+  {
+    "question": "What are the key features of the Rosen Bridge?",
+    "answer": "The Rosen Bridge has a fee structure, supports large transactions, and manages network fees for transactions to Cardano."
+  }
+]

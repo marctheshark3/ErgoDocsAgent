@@ -1,0 +1,8 @@
+MiningCore Setup Tutorial for Linux:
+- Introduction to MiningCore, a mining pool software for Linux
+- Requirements: PostgreSQL database, meet dependencies from README
+- Install and configure PostgreSQL for production use
+- Create database and user in PostgreSQL
+- Load schema SQL files into the database
+- Create a partition table for each pool
+- Configure the pool by creating a <coin>.json file in the build/ directory

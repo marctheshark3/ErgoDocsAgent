@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Schnorr signature scheme?",
+    "answer": "The Schnorr signature scheme is a key cryptographic primitive in Ergo, allowing for efficient, simple, and secure signatures."
+  },
+  {
+    "question": "What elliptic curve does Ergo use for its Schnorr signature scheme?",
+    "answer": "Ergo uses the Secp256k1 elliptic curve (the same curve used in Bitcoin), denoted as G, for its Schnorr signature scheme."
+  },
+  {
+    "question": "How is the public key generated from the secret key in the Schnorr signature scheme?",
+    "answer": "The public key is Y = g^x, where x is the secret key and g is the generator of the elliptic curve group G."
+  },
+  {
+    "question": "What are the steps in the Schnorr signing process?",
+    "answer": "1. Generate a random integer r and compute U = g^r. 2. Compute the challenge c = Hash(U || M). 3. Compute the response s = r - cx."
+  },
+  {
+    "question": "What is the format of the Schnorr signature?",
+    "answer": "The signature is the pair (c, s), which is sent to the verifier."
+  }
+]

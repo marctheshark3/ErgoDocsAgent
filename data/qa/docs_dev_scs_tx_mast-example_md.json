@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a Merkleized Abstract Syntax Tree (MAST) in the context of blockchain protocols?",
+    "answer": "A Merkleized Abstract Syntax Tree (MAST) is a technique used in blockchain protocols to improve privacy and efficiency for complex smart contracts with multiple spending conditions. It allows revealing only the specific condition (script branch) that was actually met and proving its inclusion in the original set of conditions."
+  },
+  {
+    "question": "How does MAST work in Ergo?",
+    "answer": "In Ergo, each spending condition is treated as a separate script fragment, serialized to its ErgoTree byte representation, hashed, and arranged as leaves in a Merkle Tree. The Merkle root of this tree is stored in the main locking script of the box, and when spending, the specific script fragment and a Merkle proof demonstrating its inclusion in the tree are provided."
+  },
+  {
+    "question": "What are the key benefits of using MAST in Ergo?",
+    "answer": "The key benefits of using MAST in Ergo are: 1) Privacy, as only the executed spending condition is revealed on-chain, 2) Efficiency, as the main locking script has a smaller on-chain footprint, and 3) Scalability, as it allows for contracts with a very large number of potential conditions without making the base script excessively large or complex."
+  },
+  {
+    "question": "How does the Merkle proof work in the MAST implementation in Ergo?",
+    "answer": "When spending using a specific condition, the user provides the script bytes for that condition and a Merkle proof demonstrating that the hash of those script bytes is a valid leaf within the Merkle tree whose root is stored in the main locking script. This allows verifying the inclusion of the executed condition without revealing the entire contract script."
+  },
+  {
+    "question": "What is the visual representation of a Merkleized Abstract Syntax Tree (MAST) in Ergo?",
+    "answer": "The visual representation of a MAST in Ergo shows a Merkle Tree structure, where the root hash commits to all possible spending conditions (leaves), and when spending using a specific condition, only the necessary path in the tree needs to be revealed, along with the script bytes for that condition."
+  }
+]

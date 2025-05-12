@@ -1,0 +1,88 @@
+{
+  "id": "docs_eco_paideia_md",
+  "title": "Paideia",
+  "summary": "Paideia is a project from the ergopad team that aims to create a functional, secure, and well-documented DAO software suite to support DAOs as they form and develop. It provides features like token distribution, proposal creation, voting, and secure fund management for DAOs. To use Paideia, users need an Ergo wallet, Paideia tokens to create a DAO and proposals, and can stake Paideia tokens to participate in the DAO. Paideia is developing moderation and spam prevention tools for DAOs, and the team continues to update and improve the platform.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Paideia\n  - DAO\n  - Staking\n  - Governance\n  - dApp\n  - dApp-Live\n---\n\n/// details | DeepWiki Documentation\n    {type: info, open: true}\nFor an alternative and potentially more detailed ..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Paideia"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Paideia\n  - DAO\n  - Staking\n  - Governance\n  - dApp\n  - dApp-Live\n---\n\n/// details | D..."
+    },
+    {
+      "question": "What is the 'Paideia' section about?",
+      "answer": "[Paideia](https://www.paideia.im) is a project from the [ergopad](ergopad.md) team whose purpose is ..."
+    },
+    {
+      "question": "What is the 'Using Paideia' section about?",
+      "answer": "This section will cover how to use Paideia. Alternatively, you can watch [Paideia, Joining Your DAO ..."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Paideia\n  - DAO\n  - Staking\n  - Governance\n  - dApp\n  - dApp-Live\n---\n\n/// details | DeepWiki Documentation\n    {type: info, open: true}\nFor an alternative and potentially more detailed documentation source generated from the repository, explore the [paideiadao/paideia-app on DeepWiki](https://deepwiki.com/paideiadao/paideia-app)\n///"
+    },
+    {
+      "heading": "Paideia",
+      "level": 1,
+      "content": "[Paideia](https://www.paideia.im) is a project from the [ergopad](ergopad.md) team whose purpose is to create a functional, secure, and well-documented DAO software suite that supports DAOs as they form and develop. It will make it easy for anyone to initiate a DAO, distribute tokens using various methods, create proposals, and collect votes. It will help various organizations share funds in a secure and fair way."
+    },
+    {
+      "heading": "Using Paideia",
+      "level": 2,
+      "content": "This section will cover how to use Paideia. Alternatively, you can watch [Paideia, Joining Your DAO | One Take Series](https://youtu.be/YUGNLQ6n8BA)."
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 2,
+      "content": "1. You'll need an Ergo wallet such as Nautilus to interact with Paideia.\n2. Creating a DAO costs 50000 Paideia tokens. Currently to create a DAO, simply reach out to the Paideia team.\n3. To create proposals, you'll need to hold at least 500 Paideia tokens in your wallet."
+    },
+    {
+      "heading": "Getting Started",
+      "level": 2,
+      "content": "1. Connect and authenticate your wallet on the Paideia platform using the Connect Wallet button on the top right of the DAO homepage.\n2. Once connected, you can create a profile, including a username, short bio, and profile picture.\n3. To participate in the DAO, you must then stake the appropriate token for the DAO. This can be done under Staking, then Manage Stake."
+    },
+    {
+      "heading": "Creating Proposals",
+      "level": 2,
+      "content": "1. Ensure you have at least 500 Paideia tokens in your wallet.\n2. Navigate to your DAO's page on the Paideia platform and click \"Create Proposal\".\n3. Enter the necessary details about your proposal, including any outputs, as well as the duration, then submit. The dApp connector will ask you to sign the transaction to complete the proposal creation."
+    },
+    {
+      "heading": "Voting on Proposals",
+      "level": 2,
+      "content": "DAO members can vote on active proposals. Check the DAO config for the ammount of Paideia required to vote on a proposal. The Sigmanauts DAO does not require any Paideia to vote. Be aware that there may be a delay before votes are reflected in the UI, and a page refresh may be necessary."
+    },
+    {
+      "heading": "Staking and Unstaking",
+      "level": 2,
+      "content": "You can stake your Paideia tokens! Staking is done through [Paideia](https://app.paideia.im/Paideia/staking). In case of any issues with these functions, try the following:\n\n1. Ensure your wallet is properly synced and connected.\n2. Consolidate UTXOs in your wallet using the \"Wallet Optimization Tool\".\n3. Clear browser cache and reconnect your wallet.\n4. Reach out to the Paideia team for further assistance."
+    },
+    {
+      "heading": "Moderation and Spam Prevention",
+      "level": 2,
+      "content": "Paideia is developing tools for DAOs to self-moderate their proposals and discussions:\n\n- Creating a proposal will cost a small amount of Paideia tokens to discourage spam.\n- DAO members may be assigned different roles based on their token holdings, granting them varying levels of moderation privileges.\n- A community thumb up/down system is being considered to hide irrelevant posts.\n- Minimum token holding requirements may be implemented for posting comments in the future."
+    },
+    {
+      "heading": "Development Updates",
+      "level": 2,
+      "content": "The Paideia team continues to work hard on improving the platform. Recent updates include:\n\n- Refactoring smart contracts for better code reuse\n- Adjusting the staking reward system to allow DAOs to change emission rates\n- Implementing generic refund and configuration logic in contracts\n- Planning a move to EIP-5 standard for contracts"
+    },
+    {
+      "heading": "Support and Issue Reporting",
+      "level": 2,
+      "content": "Please submit any issues directly to the Paideia Discord by opening a support ticket. The link to open a ticket can be found [here](https://discord.gg/jP25DeTC8U) \n\nIf you encounter an error message or unexpected behavior, please capture the console logs (accessible by pressing F12 in most browsers) and share them with the Paideia team to aid in debugging."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/paideia.md",
+  "processed_at": "2025-05-11T19:46:29.721685",
+  "ai_processed": true
+}

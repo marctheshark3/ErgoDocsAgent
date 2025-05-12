@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the 'protocolVersion' parameter?",
+    "answer": "The 'protocolVersion' parameter represents the version of the blockchain protocol that the client supports."
+  },
+  {
+    "question": "What is the current value of the 'addressPrefix' parameter?",
+    "answer": "The 'addressPrefix' parameter is currently set to 16, which denotes the Ergo testnet network."
+  },
+  {
+    "question": "How long is the 'fixedRatePeriod' set to?",
+    "answer": "The 'fixedRatePeriod' is set to 525,600 blocks, which is approximately two years."
+  },
+  {
+    "question": "What is the 'fixedRate' value set to?",
+    "answer": "The 'fixedRate' is set to 75,000,000,000, which means 75 Ergo coins are issued every block during the 'fixedRatePeriod'."
+  },
+  {
+    "question": "When should the chain-specific settings be modified?",
+    "answer": "The chain-specific settings should typically be left untouched unless you are planning to launch a new blockchain."
+  }
+]

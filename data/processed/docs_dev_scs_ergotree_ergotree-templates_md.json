@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_scs_ergotree_ergotree-templates_md",
+  "title": "Templatized ErgoTree",
+  "summary": "The document introduces the concept of Templatized ErgoTree, which aims to address the issue of embedding constants directly in contracts by preventing effective optimization through caching. The key points are:\n\n1. Each constant in the body of an ErgoTree can be replaced with an indexed placeholder node (ConstantPlaceholder, OpCode 63) during the compilation process.\n2. The serialized ErgoTree format contains a collection of segregated constants and the script expression with placeholders instead of constants.\n3. This separation allows using the script expression bytes (the template without constants) as a key in a cache, enabling optimization through caching.\n4. The evaluation process involves applying reduction and cost estimation to the constant-less templates, and then binding the placeholders with the actual values from the constants collection before applying the final steps of signature verification and ErgoTree evaluation.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of using ConstantPlaceholder nodes in ErgoTree?",
+      "answer": "To enable effective optimization through caching by separating constants from the script expression."
+    },
+    {
+      "question": "What are the main components of the serialized ErgoTree format?",
+      "answer": "A collection of segregated constants and the script expression with placeholders instead of constants."
+    },
+    {
+      "question": "How does the templatized ErgoTree approach improve the evaluation process?",
+      "answer": "It allows applying reduction and cost estimation to the constant-less template, before binding the placeholders with the actual values from the constants collection."
+    },
+    {
+      "question": "What are the key steps in the evaluation process of a templatized ErgoTree?",
+      "answer": "1. Apply reduction and cost estimation to the constant-less template, 2. Bind the placeholders with the actual values from the constants collection, 3. Evaluate the cost graph and the ErgoTree."
+    },
+    {
+      "question": "What are the main benefits of the templatized ErgoTree approach?",
+      "answer": "Enables effective optimization through caching, and improves the efficiency of the evaluation process."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Templatized ErgoTree",
+      "level": 1,
+      "content": "One issue with embedding constants directly in contracts is that it prevents effective optimization through caching. To address this, each constant in the body of an ErgoTree can be replaced with an indexed placeholder node (`ConstantPlaceholder`, OpCode 63). Each placeholder has an index referring to the constant in a separate constants collection associated with the ErgoTree. This transformation is part of the compilation process and is performed ahead of time, meaning each ErgoTree will have an array containing all the constants extracted from its body. Each placeholder refers to a constant by its index in this array.\n\nTherefore, the format of the serialized ErgoTree contains:\n\n- The bytes representing a collection of segregated constants.\n- The bytes representing the script expression with placeholders instead of constants.\n\n\nThis separation means that we can use the script expression bytes (the template without constants) as a key in a cache. After the constants are segregated, what remains is the template. Hence, instead of applying evaluation steps 1-2 (reduction and cost estimation) from section D.2.1 to constant-full scripts, we can apply them to these constant-less templates. Before applying the final steps 3-5 (signature verification), we need to bind the placeholders with the actual values taken from the constants collection and then evaluate both the cost graph and the ErgoTree."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergotree/ergotree-templates.md",
+  "processed_at": "2025-05-11T19:29:35.134889",
+  "ai_processed": true
+}

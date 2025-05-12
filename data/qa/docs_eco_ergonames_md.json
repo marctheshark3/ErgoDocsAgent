@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoNames?",
+    "answer": "ErgoNames is a decentralized naming system for the Ergo blockchain, allowing users to register human-readable names that can be associated with their Ergo addresses."
+  },
+  {
+    "question": "What are the key features of ErgoNames?",
+    "answer": "Key features of ErgoNames include: register unique names on the Ergo blockchain, associate registered names with Ergo addresses, resolve registered names to their corresponding addresses, support for subnames, decentralized and censorship-resistant, and open-source and community-driven."
+  },
+  {
+    "question": "What are the core components of the ErgoNames project?",
+    "answer": "The core components of ErgoNames include Ergo Contracts (smart contracts for registering and managing names), off-chain tools and libraries (for interacting with the naming system off-chain), and wallet and application integration (for seamless user experience)."
+  },
+  {
+    "question": "How does ErgoNames improve the user experience of the Ergo ecosystem?",
+    "answer": "ErgoNames improves the user experience by making it easier to send and receive transactions using memorable names instead of long, complex Ergo addresses, reducing the friction of using Ergo addresses."
+  },
+  {
+    "question": "Where can I find more information about the ErgoNames project?",
+    "answer": "You can find more information about the ErgoNames project on the GitHub repository at https://github.com/ergonames."
+  }
+]

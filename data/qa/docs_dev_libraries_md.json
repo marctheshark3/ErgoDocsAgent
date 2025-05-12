@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is GetBlok Plasma?",
+    "answer": "GetBlok Plasma is a library."
+  },
+  {
+    "question": "What is Scrypto?",
+    "answer": "Scrypto is a library."
+  },
+  {
+    "question": "What is EIP12-Types?",
+    "answer": "EIP12-Types is a library."
+  },
+  {
+    "question": "What is SigmaJS?",
+    "answer": "SigmaJS is a library."
+  },
+  {
+    "question": "What are the key libraries mentioned in the document?",
+    "answer": "The key libraries mentioned are GetBlok Plasma, Scrypto, EIP12-Types, and SigmaJS."
+  }
+]

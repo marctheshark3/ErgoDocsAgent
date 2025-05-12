@@ -1,0 +1,53 @@
+{
+  "id": "docs_mining_setup_solo-node_md",
+  "title": "Solo Node Configuration",
+  "summary": "The document provides instructions for setting up a solo Ergo node configuration. It includes the necessary configuration settings for the ergo.conf file, such as enabling mining, checking reemission rules, and enabling EIP27 wallet checks. It also mentions using the Ergo Stratum mining server or Mining Core for mining. The document includes links to related resources, such as tutorials and a Q&A forum on mining.",
+  "qa_pairs": [
+    {
+      "question": "What is the command to run the Ergo node with the specified configuration?",
+      "answer": "java -Xmx4g -jar ergo-5.0.4.jar --mainnet -c ergo.conf"
+    },
+    {
+      "question": "Where should the EIP27 rules be included to be able to spend mined ERG?",
+      "answer": "The EIP27 rules should be included in the ergo.conf file."
+    },
+    {
+      "question": "What setting in the ergo.conf file enables mining?",
+      "answer": "The mining = true setting in the ergo.conf file enables mining."
+    },
+    {
+      "question": "What setting in the ergo.conf file enables checking the EIP27 rules?",
+      "answer": "The checkEIP27 = true setting in the ergo.conf file enables checking the EIP27 rules."
+    },
+    {
+      "question": "What is the purpose of the apiKeyHash setting in the scorex.restApi section of the ergo.conf file?",
+      "answer": "The apiKeyHash setting is the hex-encoded Blake2b256 hash of an API key that should be 64-chars long Base16 string."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Solo Node Configuration",
+      "level": 1,
+      "content": "To be able to spend any ERG mined this way, you will need to include the [EIP27 rules](eip27.md) in your `ergo.conf` file which you run with the `.jar` as such"
+    },
+    {
+      "heading": "Run",
+      "level": 2,
+      "content": "```bash\njava -Xmx4g -jar ergo-5.0.4.jar --mainnet -c ergo.conf\n```"
+    },
+    {
+      "heading": "ergo.conf",
+      "level": 2,
+      "content": "```bash\n\tergo {\n\t  node {\n\t    mining = true\n\t  }\n    chain {\n      reemission {\n        checkReemissionRules = true\n      }\n    }\n    wallet {\n      checkEIP27 = true\n    }\n\t}\n\t\n\tscorex {\n\t restApi {\n\t    ## Hex-encoded Blake2b256 hash of an API key. \n\t    ## Should be 64-chars long Base16 string.\n\t    ## below is the hash of the string 'hello'\n\t    ## replace with your actual hash generated from within swagger. \n\t    apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n\t  }\n\t}\n```\n\nYou'll then either want to use the [Ergo Stratum](stratum.md) mining server or [Mining Core](miningcore.md)."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Ergo Node + Stratum Server mining tutorial](https://www.youtube.com/watch?v=_1M8dGpfKjU)\n- [Youtube: Mine Ergo from your own Node](https://www.youtube.com/watch?v=ubov4oweA20)\n- [ErgoForum: Q&A on mining (for pool operators and solo miner)](https://www.ergoforum.org/t/q-a-on-mining-for-pool-operators-and-solo-miners/587)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/mining/setup/solo-node.md",
+  "processed_at": "2025-05-11T19:52:29.805882",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the minimum system requirements to run ErgoMixer on Android?",
+    "answer": "Android OS of version 7.0 or higher, a minimum of 10GB of available storage, and a minimum of 1GB ram available for apps."
+  },
+  {
+    "question": "What terminal emulator app is required to run an Ergo node on an Android device?",
+    "answer": "Termux, which can be downloaded from the F-Droid catalog of FOSS applications for Android."
+  },
+  {
+    "question": "What package is necessary to run OpenJDK-8 in Ubuntu on Android?",
+    "answer": "proot-distro."
+  },
+  {
+    "question": "How do you install Ubuntu with proot-distro?",
+    "answer": "proot-distro install ubuntu."
+  },
+  {
+    "question": "What packages need to be installed after updating Ubuntu?",
+    "answer": "wget and openjdk-8-jdk."
+  }
+]

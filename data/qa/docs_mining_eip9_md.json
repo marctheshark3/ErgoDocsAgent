@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of EIP-0009 Hard-fork Activation Protocol?",
+    "answer": "EIP-0009 specifies a hard-fork activation protocol and the necessary implementation details for switching from Ergo Protocol v1 (v3.x releases) to Ergo Protocol v2 (v4.x releases)."
+  },
+  {
+    "question": "Why is it important to have a clear, transparent, predictable, safe, and well-understood hard-fork activation process?",
+    "answer": "Hard-fork is a significant event in the network lifecycle, so it is especially important to have a clear, transparent, predictable, safe, and well-understood hard-fork activation process."
+  },
+  {
+    "question": "What is the background and motivation for EIP-0009?",
+    "answer": "Ergo is designed to support consensus protocol evolution via soft-fork, but some protocol changes require a hard-fork, which is a significant event in the network lifecycle."
+  },
+  {
+    "question": "What is the current status and license of EIP-0009?",
+    "answer": "EIP-0009 is currently in the Proposed status, and it is licensed under CC0."
+  },
+  {
+    "question": "What is the forking requirement for EIP-0009?",
+    "answer": "EIP-0009 requires a hard-fork for implementation."
+  }
+]

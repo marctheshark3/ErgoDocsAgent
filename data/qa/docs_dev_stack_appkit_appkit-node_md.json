@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What library allows us to communicate with Ergo nodes via the REST API?",
+    "answer": "The Appkit library allows us to communicate with Ergo nodes via the REST API."
+  },
+  {
+    "question": "What is the purpose of the ErgoTool application?",
+    "answer": "ErgoTool is a simple Java console application that allows creating and sending a new transaction to any existing Ergo node on the network."
+  },
+  {
+    "question": "How can a new Ergo node be started locally?",
+    "answer": "A new Ergo node can be started locally and made available at `http://localhost:9052/`."
+  },
+  {
+    "question": "What configuration parameters are needed for ErgoTool?",
+    "answer": "ErgoTool needs configuration parameters such as the node API URL, API key, wallet mnemonic, and network type, which can be loaded from an `ergotool.json` file."
+  },
+  {
+    "question": "What is the purpose of the API key in the configuration?",
+    "answer": "The API key is a secret key required for API authentication, which can be obtained as described in the `swagger.md` document."
+  }
+]

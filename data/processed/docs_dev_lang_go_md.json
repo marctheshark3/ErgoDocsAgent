@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_lang_go_md",
+  "title": "Ergo Platform and Go",
+  "summary": "The document discusses the integration of the Ergo blockchain with the Go programming language. It highlights two key projects:\n\n1. Ergo-Golang: A promising tool for interacting with the Ergo blockchain, currently in its initial stages of development. It offers basic functionalities and provides an opportunity for Go developers to contribute to its enhancement.\n\n2. Ergo-lib-go: A Go wrapper around C bindings for ErgoLib from sigma-rust, allowing Go developers to interact with the Ergo blockchain using the robust functionalities of ErgoLib.\n\nThe document also encourages developers to connect with the Ergo community, particularly the #development Discord channel, for support and guidance.",
+  "qa_pairs": [
+    {
+      "question": "What are the primary ways Go developers can interact with the Ergo blockchain?",
+      "answer": "Go developers can interact with the Ergo blockchain primarily through bindings to the core `sigma-rust` library."
+    },
+    {
+      "question": "What is the ergo-golang project?",
+      "answer": "The ergo-golang project is a tool for integrating with Ergo, which is currently in its initial stages and may not have extensive features or be fully tested."
+    },
+    {
+      "question": "What is the ergo-lib-go project?",
+      "answer": "ergo-lib-go is a Go wrapper around C bindings for ErgoLib from sigma-rust, providing Go developers the ability to interact with the Ergo blockchain using the functionalities of ErgoLib."
+    },
+    {
+      "question": "Where can Go developers find support for integrating with Ergo?",
+      "answer": "Go developers can connect with the Ergo community, especially the `#development` Discord channel, to receive support from seasoned Ergo developers and community members."
+    },
+    {
+      "question": "What is the current state of Go-based resources for integrating with Ergo?",
+      "answer": "The resources for integrating Ergo using the Go programming language are currently limited compared to some other languages."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Go\n  - Ergo\n---"
+    },
+    {
+      "heading": "Ergo Platform and Go",
+      "level": 1,
+      "content": "Go developers can interact with the Ergo blockchain primarily through bindings to the core `sigma-rust` library. See the main [sigma-rust bindings list](sigma-rust.md#bindings) for details.\n\nThe resources for integrating Ergo using the Go programming language are currently limited compared to some other languages. However, there are key projects available:"
+    },
+    {
+      "heading": "Ergo-Golang",
+      "level": 2,
+      "content": "The [*ergo-golang*](https://github.com/azhiganov/ergo-golang) project is a promising tool for integrating with Ergo. At present, the project is in its initial stages and may be considered as under development. This implies that while it offers basic functionalities to interact with the Ergo Blockchain, it may not have extensive features and may not be fully tested or optimized.\n\nAs an open-source project, *ergo-golang* offers a fantastic opportunity for Go developers to contribute to its development by providing enhancements, fixes, and new features.\n\nPlease note that if you come across any issues or require more detailed instructions, you can always connect with the Ergo community. The [`#development` Discord channel](https://discord.gg/kj7s7nb) is an excellent platform to receive support from seasoned Ergo developers and community members."
+    },
+    {
+      "heading": "Ergo-lib-go",
+      "level": 3,
+      "content": "[*ergo-lib-go*](https://github.com/sigmaspace-io/ergo-lib-go/tree/main) is a Go wrapper around C bindings for ErgoLib from sigma-rust. This library provides Go developers with the ability to interact with the Ergo blockchain using the robust functionalities of ErgoLib, which is originally written in Rust."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/lang/go.md",
+  "processed_at": "2025-05-11T19:21:25.514028",
+  "ai_processed": true
+}

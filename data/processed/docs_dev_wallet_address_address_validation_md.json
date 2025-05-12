@@ -1,0 +1,38 @@
+{
+  "id": "docs_dev_wallet_address_address_validation_md",
+  "title": "Address validation",
+  "summary": "The document discusses address validation in the Ergo blockchain. It provides information on the different types of Ergo addresses (P2S, P2SH, P2PK) and their characteristics, such as length and format. It also mentions some utility libraries and methods for validating Ergo addresses, including ergo-simple-addresses, the Integration Guide for Exchanges, and a method in the Fleet library. The document highlights the differences between P2S and P2SH addresses in terms of script visibility.",
+  "qa_pairs": [
+    {
+      "question": "What is the limit for the length of a P2S address?",
+      "answer": "P2S has no limit since it is the serialized script."
+    },
+    {
+      "question": "What is the length of a P2SH address?",
+      "answer": "P2SH is 192 bits since it is the \"first 192 bits of the Blake2b256 hash of serialized script bytes.\""
+    },
+    {
+      "question": "How can you validate a P2PK address?",
+      "answer": "You can use the linked class to validate a P2PK address, which gives a runtime exception when created from an invalid string."
+    },
+    {
+      "question": "What is the difference between P2S and P2SH addresses?",
+      "answer": "In P2S, everyone can see the script, while in P2SH, the script will be known when it will be spent."
+    },
+    {
+      "question": "What are the starting prefixes for P2SH and P2S addresses on testnet and mainnet?",
+      "answer": "P2SH has '0x12' at the beginning, and P2S has '0x13' on testnet and '0x02' and '0x03' on mainnet."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Address validation",
+      "level": 1,
+      "content": "[ergo-simple-addresses](https://github.com/kushti/ergo-simple-addresses) contains few zero-dependencies Java-friendly utils for working with addresses. The [Integration Guide for Exchanges](guide.md) may also be relevant. There is also a simple method in [Fleet](https://github.com/fleet-sdk/fleet/blob/master/packages/core/src/models/ergoAddress.ts#L164). \n\n- **P2S** has no limit since it is the serialized script.\n- **P2SH** is 192 bits since it is the \"first 192 bits of the Blake2b256 hash of serialized script bytes.\"\n- **P2PK** length is fixed. You can use the [linked class](https://github.com/ergoplatform/ergo-appkit/blob/9e19c13d82966eaee59433d16c4fb987bea363a7/lib-impl/src/main/java/org/ergoplatform/appkit/impl/OutBoxBuilderImpl.scala#L66) to validate an address (it gives a runtime exception when created from an invalid string). \n\nIn P2S, everyone can see the script; in P2SH, the script will be known when it will be spent.\n\nP2SH has `0x12` at the beginning, and P2S has `0x13` on testnet and `0x02` and `0x03` on mainnet accordingly (note that in hex, you can see that, but in base58, it can change to anything).\n\nAs you can see \n\n> 88dhgzEuTXaRxf1rbqBRZ6Zbw9iigdB4PCdjyFKLrk22gnmjKcxZBe53vqJVetRa4tTNF9oowQWPp2c6 \n\nequals\n\n> **03** 10 02 04 a0 0b 08 cd 02 a1 f5 67 16 cb 8d f4 fe b9 37 14 37 90 4b 91 25 b8 2d b9 39 23 8c d7 d9 48 78 6d b3 3d e3 13 9f ea 02 d1 92 a3 9a 8c c7 a7 01 73 00 73 01 8c 23 55 af"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/address/address_validation.md",
+  "processed_at": "2025-05-11T19:39:36.389474",
+  "ai_processed": true
+}

@@ -1,0 +1,73 @@
+{
+  "id": "docs_dev_p2p_p2p-protocol-overview_md",
+  "title": "Overview of Ergo's P2P Protocol",
+  "summary": "Ergo's network protocol relies on full nodes (peers) to establish a cooperative peer-to-peer network for block and transaction exchange, ensuring a decentralized, robust system with high security and integrity. Full nodes download and verify every block and transaction to maintain a complete copy of the blockchain, contributing to the network's resilience. The handshake process establishes connections between peers, sharing details like handshake time, agent name, and network protocol version. The Ergo P2P protocol includes various network messages for node discovery, synchronization, object inventory transmission, and modifier requests. The modifier exchange process encompasses the protocols and systems to exchange blocks and transactions efficiently and securely across the network. The synchronization process involves transitioning the state of modifiers from 'Unknown' to 'Held,' utilizing protocols like Inv, Headers synchronization, and Block Section synchronization, facilitated by the DeliveryTracker and NodeViewHolder.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary function of full nodes in the Ergo network?",
+      "answer": "Full nodes download and verify every block and transaction to maintain a complete copy of the blockchain, contributing to the network's resilience and ensuring transaction and block information is readily available to other nodes."
+    },
+    {
+      "question": "How do peers establish a connection in the Ergo network?",
+      "answer": "Peers establish a connection through an exchange of handshake messages that share various features describing peer properties, such as handshake time, agent name, network protocol version, and public address."
+    },
+    {
+      "question": "What are the key network messages defined in the Ergo P2P protocol?",
+      "answer": "The Ergo P2P protocol includes network messages such as Get Peers, Peers, Sync Info, Inv, Request Modifier, and Modifier, which facilitate operations like node discovery, synchronization, object inventory transmission, and modifier requests."
+    },
+    {
+      "question": "What is the purpose of the handshakeTimeout in the Ergo P2P protocol?",
+      "answer": "If a handshake message is not received within the predefined handshakeTimeout, the connection is dropped."
+    },
+    {
+      "question": "What types of records are defined in the Ergo P2P protocol?",
+      "answer": "The Ergo P2P protocol defines various record types, including Peer, Feature, Modifier, and Header, which provide structure for the message content."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n- P2P\n---"
+    },
+    {
+      "heading": "Overview of Ergo's P2P Protocol",
+      "level": 1,
+      "content": "Ergo's network protocol relies on full nodes (peers) to establish a cooperative peer-to-peer network for block and transaction exchange. This collaborative approach ensures a decentralized, robust system with high security and integrity."
+    },
+    {
+      "heading": "Full Nodes in the Ergo Network",
+      "level": 2,
+      "content": "The [**Full Node**](install.md) is a critical component of the Ergo network. It downloads and verifies every block (and transaction) to maintain a complete copy of the blockchain. By doing so, full nodes contribute to the network's resilience, ensuring transaction and block information is readily available to other nodes. These nodes also relay the verified blocks and transactions to other nodes, helping keep the network up-to-date."
+    },
+    {
+      "heading": "Handshake Process",
+      "level": 2,
+      "content": "In the Ergo network, a connection between peers is established through an exchange of [handshake messages](p2p-handshake.md). These messages share various features that describe peer properties and remain unchanged during the connection. Each message may include details such as handshake time, agent name, network protocol version, and public address. Additional information is provided by specific features such as client capabilities or a session peer feature introduced in version 3.3.7. If there's no handshake received within a predefined handshakeTimeout, the connection is dropped."
+    },
+    {
+      "heading": "Network Messages",
+      "level": 2,
+      "content": "The Ergo P2P protocol includes a suite of [network messages](network.md) such as Get Peers, Peers, Sync Info, Inv, Request Modifier, and Modifier. These messages, each identified by a specific code, facilitate operations like node discovery, synchronization, object inventory transmission, and modifier requests. The protocol also defines various record types including Peer, Feature, Modifier, and Header, providing structure for the message content. Various resources and demo applications are available for implementing this protocol."
+    },
+    {
+      "heading": "Modifier Exchange",
+      "level": 2,
+      "content": "In Ergo's P2P protocol, blocks and transactions are referred to as \"modifiers\". Modifiers are transmitted between nodes as part of the network synchronization process. The [Modifier Exchange](modifiers-exchange.md) process encompasses the protocols and systems in place to exchange this information efficiently and securely across the network."
+    },
+    {
+      "heading": "Synchronization Process",
+      "level": 2,
+      "content": "Ergo blockchain [synchronization](synchronisation.md) involves transitioning the state of modifiers from 'Unknown' to 'Held.' The intermediate states include 'Requested,' 'Received,' and 'Held.' During synchronization, different protocols come into play, such as the Inv protocol, which deals with the transmission and request of modifiers, and Headers synchronization, responsible for synchronizing the node's headers chain with the network. Further, Block Section synchronization ensures the alignment of block sections with the network. The 'DeliveryTracker' ensures the transition from the 'Requested' state to 'Received,' while the NodeViewHolder (NVH) handles the move from 'Received' to 'Held.' This process facilitates the seamless synchronization and updating of the Ergo blockchain."
+    },
+    {
+      "heading": "Additional Information",
+      "level": 2,
+      "content": "- On the mainnet, P2P uses port 9030 and port 9053 for the API.\n- For network crawling, consider using [libp2p.io](https://libp2p.io/), a modular network stack that allows you to build your own peer-to-peer applications."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/p2p/p2p-protocol-overview.md",
+  "processed_at": "2025-05-11T19:23:31.954745",
+  "ai_processed": true
+}

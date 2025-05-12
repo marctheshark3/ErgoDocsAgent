@@ -1,0 +1,38 @@
+{
+  "id": "docs_uses_profit_md",
+  "title": "profit.md",
+  "summary": "The document describes the ErgoProfitSharingDapp, a service that allows dapps to distribute gains among their token holders. The first user of this service will be the ErgoMixer, where the creator 'anon2020s' currently receives the mixer's income. The creator plans to create and sell a token called MIX, which can be staked in the Profit Sharing contract to obtain a share of the mixer's income. The document also mentions that the service can be used in the future to provide ERG-staking capabilities.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the ErgoProfitSharingDapp?",
+      "answer": "The ErgoProfitSharingDapp will provide a way for dapps to distribute gains among dapps' token holders."
+    },
+    {
+      "question": "Who is the first user of the ErgoProfitSharingDapp?",
+      "answer": "The first user of this service will be the ErgoMixer."
+    },
+    {
+      "question": "How does the ErgoMixer currently receive its income?",
+      "answer": "The ErgoMixer's income (in ERG and other tokens) is currently received by its creator, aka 'anon2020s', since it has only one stakeholder at the moment."
+    },
+    {
+      "question": "What does the creator of the ErgoMixer plan to do to obtain more stakeholders?",
+      "answer": "The creator of the ErgoMixer has announced that he is willing to create and sell some tokens in the near future to obtain more stakeholders, which will be called MIX."
+    },
+    {
+      "question": "How can anyone having the MIX tokens benefit from the ErgoMixer's income?",
+      "answer": "Anyone having the MIX tokens can stake these tokens in the Profit Sharing contract and obtain the mixer's incomes proportional to their staked tokens."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "ErgoProfitSharingDapp",
+      "level": 2,
+      "content": "This service will provide a way for dapps to distribute gains among dapps' token holders.\n\nThe first user of this service will be the ErgoMixer. \n\nErgomixer's income (in ERG and other tokens) is currently received by its creator, aka 'anon2020s', since it has only one stakeholder at the moment. He has announced that he is willing to create and sell some tokens in the near future to obtain more stakeholders; let's call this token MIX. Later, anyone having the MIX tokens can stake these tokens in the Profit Sharing contract and obtain the mixer's incomes proportional to their staked tokens.\n\nSo, it is NOT a way to stake ERG at first. But, it CAN BE USED in the future in some creative services to provide ERG-staking.\n\n- [A solution for staking](https://www.ergoforum.org/t/a-solution-for-staking/1057)\n- [Ergo Profit Sharing dApp](https://github.com/mhssamadani/ErgoProfitSharingDapp)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/profit.md",
+  "processed_at": "2025-05-11T20:03:49.553420",
+  "ai_processed": true
+}

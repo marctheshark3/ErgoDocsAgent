@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of ErgoFund?",
+    "answer": "ErgoFund will eventually provide a more sophisticated crowdfunding experience, with contracts for campaigns with thousands of pledges and enable Self-Soverign DeFi."
+  },
+  {
+    "question": "What is proposed in the WIP ErgoFund structures and contracts?",
+    "answer": "The WIP proposes the contracts and standardized box formats for announcing crowdfunding campaigns and collecting funds."
+  },
+  {
+    "question": "How is the design of the crowdfunding contracts and box templates centered?",
+    "answer": "The design is centered around blockchain scanning efficiency of an off-chain application."
+  },
+  {
+    "question": "What will the ErgoFund backend be built on?",
+    "answer": "The ErgoFund backend will be built on top of the Scanner."
+  },
+  {
+    "question": "What is available for the ErgoFund project?",
+    "answer": "A simple ErgoFund contract with an interactive scastie playground, and the pledge contract is available."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two pool software options supported on Ergo?",
+    "answer": "Ergo supports two pool software options: Miningcore and Ergo Stratum Server."
+  },
+  {
+    "question": "What is the first step in hosting a pool on Ergo?",
+    "answer": "The first step in hosting a pool on Ergo is to set up a local instance of the Ergo node."
+  },
+  {
+    "question": "What is the purpose of including the EIP27 rules when setting up the Ergo node?",
+    "answer": "The EIP27 rules need to be included in order to be able to spend your ERG."
+  },
+  {
+    "question": "What are the two miner options recommended for configuring your miner to point to the pool software?",
+    "answer": "The two miner options recommended are the NV miner and the AMD miner."
+  },
+  {
+    "question": "Where can users find community support for hosting a pool on Ergo?",
+    "answer": "Community support is available on the Ergo Discord server."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is FleetSharp?",
+    "answer": "FleetSharp is a C# library for building transactions on the Ergo blockchain, inspired by the TypeScript fleet-sdk."
+  },
+  {
+    "question": "How do you send a simple ERG-only transaction from the node's wallet using FleetSharp?",
+    "answer": "To send a simple ERG-only transaction, you can use the TransactionBuilder class to get unspent wallet boxes, set the transaction details, and submit the signed transaction."
+  },
+  {
+    "question": "How do you send a transaction with tokens from the node's wallet using FleetSharp?",
+    "answer": "To send a transaction with tokens, you can use the TransactionBuilder class to get unspent wallet boxes, add the token details to the output, and submit the signed transaction."
+  },
+  {
+    "question": "What are the key steps involved in sending a transaction using FleetSharp?",
+    "answer": "The key steps are: 1) Get unspent wallet boxes, 2) Set the transaction details, 3) Sign the transaction, and 4) Submit the signed transaction."
+  },
+  {
+    "question": "What are the main features and capabilities of the FleetSharp library?",
+    "answer": "FleetSharp provides a C# library for building transactions on the Ergo blockchain, with features like sending ERG-only transactions, sending transactions with tokens, and signing and submitting transactions."
+  }
+]

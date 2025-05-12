@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Where are the HTTP server settings located in the Akka configuration?",
+    "answer": "The HTTP server settings are located under the `http.server` category."
+  },
+  {
+    "question": "What is the purpose of the `request-timeout` setting in the Akka configuration?",
+    "answer": "The `request-timeout` setting specifies the maximum duration the server will wait for a request to be completed before it times out."
+  },
+  {
+    "question": "What is the default value for the `request-timeout` setting in the Akka configuration?",
+    "answer": "The `request-timeout` is set to 1 minute in the provided configuration."
+  },
+  {
+    "question": "What is the purpose of the `max-connections` setting in the Akka configuration?",
+    "answer": "The `max-connections` setting indicates the maximum number of connections the server can maintain concurrently."
+  },
+  {
+    "question": "Where are the HTTP request parsing settings located in the Akka configuration?",
+    "answer": "The HTTP request parsing settings are located under the `http.parsing` category."
+  }
+]

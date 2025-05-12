@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How are royalties integrated into the Ergo blockchain?",
+    "answer": "Royalties are integrated into the minting metadata and can be accessed via smart contracts."
+  },
+  {
+    "question": "What feature do marketplaces utilize to include royalties in their sale contracts?",
+    "answer": "Marketplaces like Sky Harbor and Auction House utilize the integration of royalties in the minting metadata to include royalties in their sale contracts."
+  },
+  {
+    "question": "Can royalties be bypassed in listings on marketplaces that respect royalties?",
+    "answer": "No, royalties cannot be bypassed in listings on marketplaces that respect royalties, as they are embedded in the smart contract."
+  },
+  {
+    "question": "What is the limitation in honoring royalties when NFTs are transferred directly between parties?",
+    "answer": "When NFTs are transferred directly between parties or in private sales, the decision to honor the royalties lies with the involved parties."
+  },
+  {
+    "question": "What new feature will the upcoming AuctionHouse V3 introduce?",
+    "answer": "AuctionHouse V3 will introduce the ability to support multiple recipients for royalties, facilitating collaborations among artists."
+  }
+]

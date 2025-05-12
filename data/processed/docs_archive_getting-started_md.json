@@ -1,0 +1,78 @@
+{
+  "id": "docs_archive_getting-started_md",
+  "title": "Welcome to Ergo",
+  "summary": "Welcome to Ergo, a cutting-edge platform for decentralized finance and smart contracts. This guide covers various aspects of the Ergo ecosystem, including mining, trading, development, and community involvement.\n\nFor miners, the guide provides information on setting up mining operations to contribute to the network and earn rewards. For traders, it covers decentralized trading, yield farming, staking, arbitrage, financial instruments, options trading, and high-risk rewards.\n\nFor developers, the guide offers an introduction to getting started, smart contract development, and building on Ergo's flexible architecture. For enthusiasts, it covers running a node, using off-chain bots, and joining the Sigmanauts community.\n\nFor everyone, the guide provides information on securing investments, exploring the ecosystem, participating in airdrops and token sales, gaming, peer-to-peer trading, and community marketing. The document also encourages engagement with the vibrant Ergo community to stay updated on the latest developments.",
+  "qa_pairs": [
+    {
+      "question": "What is the primary focus of the Ergo platform?",
+      "answer": "Ergo merges privacy, decentralization, and security into a robust platform, empowering users with tools that ensure economic freedom without relying on intermediaries."
+    },
+    {
+      "question": "What are the key areas covered for Ergo traders?",
+      "answer": "Ergo provides information on decentralized trading, yield farming & staking, arbitrage opportunities, using financial instruments like SigmaUSD, options trading, and navigating high-risk rewards with DegFi."
+    },
+    {
+      "question": "What are the key benefits of mining on the Ergo network?",
+      "answer": "Mining on Ergo not only supports the network but also offers potential earnings."
+    },
+    {
+      "question": "Where can users learn about setting up mining operations on Ergo?",
+      "answer": "Users can learn about setting up mining operations on Ergo in the section titled 'For Miners: Setting Up Mining Operations'."
+    },
+    {
+      "question": "What is the purpose of the 'Navigating Ergo: Tailored Paths' section?",
+      "answer": "The 'Navigating Ergo: Tailored Paths' section is structured to help users swiftly navigate to the sections most relevant to their interests, whether they are mining, investing, developing, or exploring the basics of cryptocurrencies."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Welcome to Ergo",
+      "level": 1,
+      "content": "Dive into the world of Ergo, a cutting-edge platform at the forefront of decentralized finance and smart contracts. This guide is structured to help you swiftly navigate to the sections most relevant to your interests\u2014whether you're mining, investing, developing, or exploring the basics of cryptocurrencies."
+    },
+    {
+      "heading": "Why Choose Ergo?",
+      "level": 2,
+      "content": "[**Discover Ergo's Vision**](why.md)\n\nErgo merges privacy, decentralization, and security into a robust platform, empowering users with tools that ensure economic freedom without relying on intermediaries."
+    },
+    {
+      "heading": "Navigating Ergo: Tailored Paths",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "For Miners",
+      "level": 3,
+      "content": "Mining on Ergo not only supports the network but also offers potential earnings. Learn about:\n\n- **[Setting Up Mining Operations](autolykos.md)**: Start mining ERG to contribute to network security and earn mining rewards."
+    },
+    {
+      "heading": "For Traders",
+      "level": 3,
+      "content": "Maximize your financial engagement with in-depth information on:\n\n- **[Decentralized Trading](dex.md)**: Trade any of Ergo's [native tokens](https://cruxfinance.io/tokens)\n- **[Yield Farming & Staking](yield.md)**: Earn passive income through staking and liquidity pools.\n- **[Arbitrage Opportunities](arb.md)**: Leverage price differentials across platforms.\n- **[Using Financial Instruments](sigmausd.md)**: Stabilize your investments with instruments like SigmaUSD.\n- **[Options Trading](tutorials/trading-options.md)**: Dive deep into options trading on Ergo.\n- **[High-Risk Rewards](degfi.md)**: Navigate the rewards and risks with DegFi on Ergo."
+    },
+    {
+      "heading": "For Developers",
+      "level": 3,
+      "content": "Developers can explore robust tools and resources to build on Ergo's flexible architecture:\n\n- **[Developer Introduction](get-started.md)**: Start your development journey with this comprehensive guide.\n- **[Smart Contract Development](ergoscript.md)**: Dive into developing secure and efficient smart contracts."
+    },
+    {
+      "heading": "For Enthusiasts",
+      "level": 3,
+      "content": "- **[Running a Node](install.md)**: Enhance your contributions by operating your own Ergo node.\n- **[Using Off-Chain Bots](off-chain.md)**: Become a Rosen Watcher, run grid bots, oracles and more.\n- **[Join the Sigmanauts](sigmanauts.md)**: Become a part of the Sigmanauts community and actively contribute to the development and expansion of the Ergo ecosystem."
+    },
+    {
+      "heading": "For Everyone",
+      "level": 3,
+      "content": "If you're new to cryptocurrencies or looking to understand Ergo's basics:\n\n- **[Securing Your Investments](https://ergonaut.space/en/Guides/yield/getting-started)**: Learn how to purchase and securely store ERG.\n- **[Exploring the Ecosystem](uses/use-cases-overview.md)**: Discover how you can engage with various activities like NFTs, gaming, and charitable contributions.\n- **[Airdrops, Token Sales, and IDOs](airdrops.md)**: Capitalize on airdrops, token sales, and initial DEX offerings.\n- **[Gaming on Ergo](gaming-tutorial.md)**: Master gaming within the Ergo ecosystem.\n- **[Peer to Peer Trading](p2p-trading.md)**: Engage in direct trading activities with other users on the Ergo platform without the need for intermediaries, providing a decentralized and secure way to exchange assets.\n- **[Get Involved in Community Marketing](marketing.md)**: Participate in spreading the word about Ergo and engage with the community to promote the platform."
+    },
+    {
+      "heading": "Engage with the Ergo Community",
+      "level": 2,
+      "content": "Ergo's community is vibrant and continuously evolving. Keep updated with the latest developments, participate in community discussions, and find support through forums and social platforms."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/archive/getting-started.md",
+  "processed_at": "2025-05-11T19:15:59.180263",
+  "ai_processed": true
+}

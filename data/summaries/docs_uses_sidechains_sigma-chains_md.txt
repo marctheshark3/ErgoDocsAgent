@@ -1,0 +1,9 @@
+Sigma Chains represent a groundbreaking innovation designed to revitalize Proof of Work (PoW) and solidify Ergo's position as a hub. They are a series of blockchains that share the same contractual base layer, allowing for different chain-specific features and customization. Sigma Chains offer programmability, cross-chain compatibility, and economic sustainability, unlocking a multitude of possibilities for Ergo and its ecosystem.
+
+Ergo is at the center of Sigma Chains, leveraging its advanced features and technologies to create a thriving network of interconnected blockchains. Sigma Chains prioritize cross-chain security, ensuring the interconnected network remains resilient and resistant to attacks. The growth of Sigma Chains will accelerate development and increase Ergo's mindshare in the blockchain space.
+
+Key features of Sigma Chains include programmability, cross-chain compatibility, sustainability, security, and decentralization. Sigma Chains introduce an innovative approach to revitalizing PoW through merged mining, empowering portable projects and DApps to seamlessly interact across multiple blockchains.
+
+Sigma Chains utilize a layered architecture, enabling the development of complex applications while maintaining the security and integrity of the blockchain. They introduce a novel approach to token distribution through smart contract-based emissions, rewarding investors, developers, and the community without the need for premining.
+
+Sigma Chains offer various efficient sidechain constructions, including merged-mined sidechains, double merged-mined sidechains, and dedicated mining algorithms, catering to different use cases and mining preferences.

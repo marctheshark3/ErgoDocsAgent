@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key change required in the configuration to ensure the custom Ergo chain doesn't clash with the Ergo mainnet or public testnet?",
+    "answer": "The key changes involve setting a unique `addressPrefix` and custom `magicBytes`."
+  },
+  {
+    "question": "What is the value for `addressPrefix` and `magicBytes` in the provided configuration?",
+    "answer": "The `addressPrefix` is set to 32, and the `magicBytes` are set to `[2, 0, 4, 8]`."
+  },
+  {
+    "question": "What are the steps to run the Ergo node for the custom chain?",
+    "answer": "1. Set up the configuration, 2. Compile the node, 3. Run the node, 4. Initialize and unlock the wallet."
+  },
+  {
+    "question": "What is the command to compile the Ergo node?",
+    "answer": "sbt assembly"
+  },
+  {
+    "question": "What is the command to start the Ergo node for the custom testnet?",
+    "answer": "java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ErgoTree compiler?",
+    "answer": "The ErgoTree compiler compiles ErgoScript contracts from source code into ErgoTree and then serializes them into byte arrays for storage on the blockchain."
+  },
+  {
+    "question": "How does the ErgoTree compiler perform optimizations?",
+    "answer": "The ErgoTree compiler can perform optimizations to reduce the size of the ErgoTree by normalizing and unifying different scripts that compile into identical ErgoTrees and serialized bytes."
+  },
+  {
+    "question": "What is the obstacle to the ErgoTree optimization process?",
+    "answer": "The obstacle to the optimization process is the constants embedded in contracts."
+  },
+  {
+    "question": "How can the problem of embedded constants be solved?",
+    "answer": "The problem of embedded constants can be solved by replacing each constant in the body of ErgoTree with an indexed placeholder node, and storing the constants in a separate collection."
+  },
+  {
+    "question": "What is the format of the serialized ErgoTree?",
+    "answer": "The format of the serialized ErgoTree contains the bytes of a collection with segregated constants and the bytes of the script expression with placeholders."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main configuration file for an Ergo node?",
+    "answer": "The main configuration file for an Ergo node is application.conf."
+  },
+  {
+    "question": "What is the purpose of the scorex.network section in the configuration?",
+    "answer": "The scorex.network section allows you to configure settings related to the P2P network."
+  },
+  {
+    "question": "How can you set the external IP address and port number that your node advertises to peers?",
+    "answer": "You can use the declaredAddress parameter to establish the external IP address and port number that your node advertises to peers."
+  },
+  {
+    "question": "What is the purpose of the scorex.rest-api section in the configuration?",
+    "answer": "The scorex.rest-api section allows you to configure the node's REST API parameters."
+  },
+  {
+    "question": "How can you protect access to sensitive API endpoints, such as wallet operations?",
+    "answer": "You can use the apiKeyHash parameter to set the Blake2b hash of your chosen API key (password) to protect access to sensitive API endpoints."
+  }
+]

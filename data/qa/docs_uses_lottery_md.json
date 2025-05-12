@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary objective of 'proof of activity'?",
+    "answer": "To incentivize members for their 'activity', which refers to running a full node."
+  },
+  {
+    "question": "What is the fundamental method behind both proof of stake and proof of activity?",
+    "answer": "Follow-the-satoshi, which selects a random satoshi from all the generated ones, and the holder of that satoshi becomes eligible for the reward."
+  },
+  {
+    "question": "What are the key steps in the physical lottery system that the post aims to replicate?",
+    "answer": "1. Generate lottery tickets with sequential serial numbers, 2. Sell tickets in sequential serial number order, 3. Record the first unsold serial number n, 4. Generate a random number r between 0 and n-1, 5. Declare the holder of the ticket with serial number r as the winner."
+  },
+  {
+    "question": "How does the Ergo-based lottery system work?",
+    "answer": "The lottery owner creates a 'lottery box' that contains tokens and the current available serial number in R4, protected by a script that sells tokens and stores the remaining tokens in an identical box with the serial number incremented. The purchased tokens are stored in a 'purchase box' that contains the start and end serial numbers in R4 and R5, locked to prevent the buyer from altering them."
+  },
+  {
+    "question": "What is the relationship between the Ergo-based lottery system and the COMET project?",
+    "answer": "The lottery system described in the post is similar to the lottery system currently live in the COMET project."
+  }
+]

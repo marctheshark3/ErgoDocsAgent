@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Autolykos algorithm?",
+    "answer": "Autolykos is a Proof of Work algorithm designed for the Ergo blockchain."
+  },
+  {
+    "question": "What are the key changes introduced in Autolykos V2?",
+    "answer": "Autolykos V2 removed the non-outsourceable puzzles, optimized the algorithm to bind an efficient solving procedure with a single table, and increased the table size over time."
+  },
+  {
+    "question": "What is the purpose of EIP-0009: Hard-fork Activation protocol?",
+    "answer": "EIP-0009 facilitated the formation of mining pools for the Autolykos algorithm."
+  },
+  {
+    "question": "What is the purpose of EIP27: Emission Retargeting Soft-Fork?",
+    "answer": "EIP27 extended the emission by 4,566,336 blocks (~17.38 years)."
+  },
+  {
+    "question": "What is the purpose of EIP37: Tweaking Difficulty Adjustment Algorithm?",
+    "answer": "EIP37 made the difficulty adjustment mechanism more responsive by considering a shorter and more recent history of blocks."
+  }
+]

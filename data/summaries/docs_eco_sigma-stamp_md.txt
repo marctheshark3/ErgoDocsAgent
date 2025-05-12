@@ -1,0 +1,1 @@
+Sigma Stamp is a timestamping service on the Ergo blockchain. It provides a way for users to timestamp digital content and documents. The document includes links to the Sigma Stamp website and examples of how the service can be used.

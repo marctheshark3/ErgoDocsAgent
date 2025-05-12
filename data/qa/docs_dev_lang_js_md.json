@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the key JavaScript and TypeScript libraries and frameworks for interacting with the Ergo blockchain?",
+    "answer": "The key libraries and frameworks include sigma-rust (via WebAssembly), AppKit, Sigma.JS, and Fleet."
+  },
+  {
+    "question": "What is the purpose of the AppKit framework?",
+    "answer": "AppKit was designed as an abstraction layer on top of Sigma, providing stable dApp-facing APIs while allowing freedom on the core Sigma level."
+  },
+  {
+    "question": "What is the role of Sigma.JS in the Ergo ecosystem?",
+    "answer": "Sigma.JS is a JavaScript port of the sigmastate-interpreter, playing a similar role for JavaScript/TypeScript as Fleet."
+  },
+  {
+    "question": "What are some practical examples and tutorials available for JavaScript and TypeScript Ergo development?",
+    "answer": "Examples include the dAppStep documentation, a dApp Development Course, a video tutorial on the NightOwl dApp Connector, and demos for address generation and transaction creation using sigma-rust and TypeScript."
+  },
+  {
+    "question": "What are some additional resources for JavaScript and TypeScript Ergo development?",
+    "answer": "Resources include the Ergo-Raffle-Bot GitHub project, the ErgoScript.js video, the Ergo Raffle documentation, and the hypo10use/quid-games Angular project."
+  }
+]

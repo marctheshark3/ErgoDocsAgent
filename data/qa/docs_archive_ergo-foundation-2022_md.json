@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Ergo Foundation?",
+    "answer": "The Ergo Foundation is a non-profit foundation dedicated to advancing the adoption of Ergo."
+  },
+  {
+    "question": "How is the Ergo Foundation's Treasury sourced?",
+    "answer": "The Ergo Foundation's Treasury is sourced from a small portion of mined blocks during the first 2.5 years from Ergo's mainnet launch, amounting to 4,330,791.5 ERGs or 4.43% of the total supply."
+  },
+  {
+    "question": "What are the key focus areas of the Ergo Foundation?",
+    "answer": "The Ergo Foundation is focused on promoting non-breaking development of the Ergo Platform protocol, widespread adoption and use of Ergo, developing the ecosystem, promoting the use of Ergo for social good, supporting decentralized infrastructure, and supporting privacy as a basic human right."
+  },
+  {
+    "question": "Who are the key members of the Ergo Foundation?",
+    "answer": "The key members of the Ergo Foundation are Alexander Chepurnoy (kushti), Alexander Slesarenko (morphic), Justin Simpson, and Joseph Armeanio."
+  },
+  {
+    "question": "What were the key achievements of the Ergo Foundation in 2020?",
+    "answer": "In 2020, the Ergo Foundation released a roadmap, started a Discord community, partnered with Emurgo for research leading to Oracle Pools, SigmaUSD, and the headless dApp framework, and achieved listings on CoinEx and Gate.io."
+  }
+]

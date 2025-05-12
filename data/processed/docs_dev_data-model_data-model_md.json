@@ -1,0 +1,183 @@
+{
+  "id": "docs_dev_data-model_data-model_md",
+  "title": "The Ergo Data Model",
+  "summary": "The Ergo Data Model document provides an in-depth exploration of Ergo's unique data model, which is based on the UTXO (Unspent Transaction Output) model and enhanced with smart contract capabilities (eUTXO). The document covers the theoretical foundations and core concepts, including the evolution of computational models, the advantages of Ergo's eUTXO model over the account-based model, and the fundamental design principles of computational completeness, cryptographic composability, and scalable state management.\n\nThe document then delves into the blockchain structure, describing the components and functions of Ergo blocks, including the block header, transactions, AD Proofs, and the extension section. It then focuses on the foundational state units called \"Boxes,\" which are Ergo's implementation of the UTXO concept, enhanced with features like immutable state, typed registers, and programmable spending conditions.\n\nFinally, the document explores transactions, which are the engines of state change in Ergo, defining how boxes are created, transformed, and consumed.",
+  "qa_pairs": [
+    {
+      "question": "What is the key difference between Ergo's data model and the account model used in other blockchains?",
+      "answer": "Ergo's data model introduces programmable state transitions within transaction outputs, in contrast to the globally mutable state in the account-based model."
+    },
+    {
+      "question": "What are the three fundamental design principles of the Ergo data model?",
+      "answer": "1. Computational Completeness, 2. Cryptographic Composability, 3. Scalable State Management."
+    },
+    {
+      "question": "How does Ergo's data model enable efficient validation without maintaining complete blockchain state?",
+      "answer": "Ergo's data model allows for stateless verification facilitated by technologies like NIPoPoWs."
+    },
+    {
+      "question": "What is the key difference between Ergo's eUTXO model and the traditional UTXO model?",
+      "answer": "Ergo's eUTXO model introduces enhanced smart contract capabilities within transaction outputs, unlike the traditional UTXO model."
+    },
+    {
+      "question": "How does Ergo's data model ensure predictable and verifiable transaction outcomes?",
+      "answer": "Ergo's data model ensures deterministic execution of transactions."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Data Model\n  - Overview\n  - Ergo\n---"
+    },
+    {
+      "heading": "The Ergo Data Model",
+      "level": 1,
+      "content": "This document provides a comprehensive and in-depth exploration of Ergo's unique data model, based on the [UTXO (Unspent Transaction Output)](eutxo.md) model, enhanced with powerful [smart contract](ergoscript.md) capabilities ([eUTXO](eutxo.md)).\n\n---"
+    },
+    {
+      "heading": "1. Theoretical Foundations & Core Concepts",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "1.1 Computational Model Evolution & UTXO vs. Account Model",
+      "level": 3,
+      "content": "Ergo represents a significant advancement in blockchain computational models, extending the traditional Unspent Transaction Output (UTXO) paradigm through its enhanced [eUTXO (Extended UTXO)](eutxo.md) model. Unlike conventional blockchain architectures, Ergo's model introduces:\n\n* **Programmable State Transitions**: Enabling complex computational logic within [transaction outputs](box.md). This contrasts with the account-based model used in other blockchains (like Ethereum), where state is globally mutable. See [UTXO vs Account Model Comparison](accountveutxo.md) for a comparison of Ergo's model in terms of parallelism, [privacy](zkp.md), and [scalability](scaling.md).\n* **Stateless Verification**: Allowing efficient validation without maintaining complete blockchain state, facilitated by technologies like [NIPoPoWs](nipopows.md).\n* **Deterministic Execution**: Ensuring predictable and verifiable transaction outcomes."
+    },
+    {
+      "heading": "1.2 Fundamental Design Principles",
+      "level": 3,
+      "content": "1. **Computational Completeness**: Supporting Turing-complete smart contract execution within strict cryptographic constraints via [multi-stage contracts](multi.md).\n2. **Cryptographic Composability**: Enabling complex cryptographic protocols through [Sigma Protocols](sigma.md).\n3. **Scalable State Management**: Designing a model that supports parallel transaction processing and efficient state verification.\n\n---"
+    },
+    {
+      "heading": "2. Blockchain Structure: Components and Function",
+      "level": 2,
+      "content": "A solid understanding of the blockchain structure lays the groundwork for exploring Ergo\u2019s data model. Ergo [blocks](block.md) contain critical metadata, [transactions](transactions.md), and proofs."
+    },
+    {
+      "heading": "2.1 Block Components",
+      "level": 3,
+      "content": "* [Block Overview](block.md): Comprehensive introduction to block structure in Ergo, detailing how blocks aggregate transactions, references, and proofs.\n* [Block Header](block-header.md): Detailed examination of block header components, which include references to previous blocks, [difficulty](difficulty.md), and other crucial metadata.\n* [Block Transactions](block-transactions.md): Understanding how transactions are organized within a block to form the ledger state.\n* [AD Proofs](block-adproofs.md): Authenticated Data Proofs enable efficient [stateless client](nipopows.md) verification by providing cryptographic proofs of state transitions.\n* [Extension Section](extension-section.md): An exploration of Ergo\u2019s flexible data storage section that can hold additional metadata and information beyond basic transactions.\n\n---"
+    },
+    {
+      "heading": "3. Boxes: Foundational State Units",
+      "level": 2,
+      "content": "At the core of Ergo's data model is the **\"[Box](box.md),\"** which is Ergo's implementation and extension of the [UTXO (Unspent Transaction Output)](eutxo.md) concept. While traditional UTXOs simply track unspent coins, Ergo's Boxes enhance this model with additional programmable capabilities."
+    },
+    {
+      "heading": "3.1 The Box Concept",
+      "level": 3,
+      "content": "A [Box](box.md) is essentially a \"smart UTXO\" - it serves the same role as a UTXO in tracking unspent value, but extends this with sophisticated computational features. Like a UTXO, a Box is created when value is sent in a [transaction](transactions.md) and is consumed (spent) when that value is transferred elsewhere. However, Boxes add the following capabilities that go beyond basic UTXOs:\n\n* **Immutable State**: Each box represents an atomic, immutable state unit that cannot be modified after creation. *(Lifecycle details might be added later or linked if a dedicated page exists)*.\n\n* **Typed Registers**: Boxes contain 10 [registers](registers.md) (R0-R9) with specific purposes and rich computational potential:\n    * R0: Monetary Value (in nanoERGs)\n    * R1: Protection Script ([Smart Contract](ergoscript.md))\n    * R2: Assets/[Tokens](eip4.md)\n    * R3: Creation Details\n    * R4-R9: Flexible, Typed Custom Data Storage\n        - Supports multiple data types: `Int`, `Long`, `BigInt`, `GroupElement`, `Coll[Byte]`\n        - Can store complex structures and collections\n        - Densely packed with type-safe access\n\n* **Programmable Spending Conditions**: Each box specifies precise conditions under which it can be spent, enabling complex logic through [ErgoScript](ergoscript.md). See [Box Modeling](box_modeling.md) and [Box Overview](box.md) for detailed exploration.\n\nBy transforming UTXOs from simple value trackers to programmable state containers, Ergo enables more expressive and flexible blockchain interactions while maintaining cryptographic integrity and computational efficiency.\n\n\n\n---"
+    },
+    {
+      "heading": "4. Transactions: Engines of State Change",
+      "level": 2,
+      "content": "[Transactions](transactions.md) define how [boxes](box.md) are created, transformed, and consumed, and are central to Ergo\u2019s dynamic state evolution."
+    },
+    {
+      "heading": "4.1 Transaction Foundations",
+      "level": 3,
+      "content": "* [Transaction Overview](transactions.md): Fundamental principles of how transactions work in Ergo.\n* [Transaction Composition](composing.md): Detailed guide to constructing complex transactions off-chain before submitting them on-chain.\n* [Transaction Format](format.md): Technical specification of transaction structure, ensuring interoperability and standardization."
+    },
+    {
+      "heading": "4.2 Advanced Transaction Mechanisms",
+      "level": 3,
+      "content": "* [Chained Transactions](chained.md): Explore how sequentially dependent transactions can be composed.\n* [Merkle Tree in Transactions](tx-merkle.md): Understanding how [Merkle trees](structures/merkle/merkle-tree.md) provide data integrity and facilitate efficient proofs.\n* [Transaction Signing](signing.md) and [Backend Signing](sign-tx.md): Cryptographic principles and implementations for authenticating transactions.\n* [Transaction Validation](validation.md): Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules."
+    },
+    {
+      "heading": "4.3 Specialized Transaction Features",
+      "level": 3,
+      "content": "* [Data Inputs (Read-Only Inputs)](read-only-inputs.md): Access additional data in transactions without spending boxes.\n* [Transaction Fees](min-fee.md): Understanding fee structures, ensuring that [miners](mining-overview.md) are incentivized.\n* [Babel Fees](babel-fees.md) and [Babel Fees Plugin](babel-fleet.md): Innovative mechanisms allowing fees to be paid in alternative [tokens](eip4.md).\n\n---"
+    },
+    {
+      "heading": "5. Assets and Tokens: Powering a Diverse Economy",
+      "level": 2,
+      "content": "Ergo supports a rich ecosystem of assets, from fungible [tokens](eip4.md) to [NFTs](nfts-overview.md), enabling complex economic models."
+    },
+    {
+      "heading": "5.1 Fungible Tokens",
+      "level": 3,
+      "content": "* [Token Basics](tokens.md): Introduction to tokens within the Ergo ecosystem and their fundamental characteristics.\n* [Asset Standard (EIP-4)](eip4.md): Standard for creating and managing tokens in Ergo.\n* [Token Verification (EIP-21)](eip21.md): Ensuring token authenticity and integrity."
+    },
+    {
+      "heading": "5.2 Non-Fungible Tokens (NFTs)",
+      "level": 3,
+      "content": "* [NFT Overview](nfts-overview.md): Comprehensive introduction to NFTs on Ergo.\n* [NFT Creation](create.md): Guide to minting NFTs.\n* [NFT Versions (V1 vs V2)](v1v2.md): Comparison of different NFT implementation standards.\n* [On-Chain NFTs](on-chain.md): Storing NFT data directly on the blockchain.\n* [NFT Royalties](royalties.md): Mechanisms for continuous compensation to creators."
+    },
+    {
+      "heading": "5.3 Special Token Concepts",
+      "level": 3,
+      "content": "* [Perpetual Tokens](perpetual.md): Tokens designed to exist indefinitely.\n* [Token Burning](burn.md): Permanently removing tokens from circulation.\n* [Singletons](singletons.md): Unique tokens with special properties.\n* [Auction Contract (EIP-22)](eip22.md): Standard auction contract implementation details.\n* [Artwork Contract (EIP-24)](eip24.md): Specialized standard for managing digital artwork tokens.\n\n---"
+    },
+    {
+      "heading": "6. Addressing and Identity",
+      "level": 2,
+      "content": "Ergo uses an [address](address.md) system that ensures security, privacy, and flexibility.\n\n* [Address Basics](address.md): Fundamental concepts of Ergo addresses, including encoding, format, and usage.\n* [Address Types](address_types.md): Detailed overview of Pay-to-Public-Key (P2PK), Pay-to-Script-Hash (P2SH), and Pay-to-Script (P2S) address types.\n* [Address Validation](address_validation.md): Methods and best practices for validating Ergo addresses, including checksum verification and format validation.\n\n---"
+    },
+    {
+      "heading": "7. Payment Standards and Protocols",
+      "level": 2,
+      "content": "Ergo defines protocols to streamline user interactions with [wallets](../wallets.md) and applications.\n\n* [ErgoPay Protocol (EIP-20)](eip20.md): Interaction protocol for mobile wallets and dApps.\n* [Payment Request URI (EIP-25)](eip25.md): Standard format for payment requests.\n* [Proxy Contracts (EIP-17)](eip17.md): Mechanisms to manage funds and logic via intermediary contracts.\n\n---"
+    },
+    {
+      "heading": "8. Cryptographic Foundations",
+      "level": 2,
+      "content": "Ergo\u2019s [cryptographic](crypto.md) design ensures robust security, privacy, and flexibility."
+    },
+    {
+      "heading": "8.1 Sigma Protocols",
+      "level": 3,
+      "content": "* [Non-interactive Zero-Knowledge Proofs](zkp.md): Private transaction verification without revealing sensitive data.\n* [Flexible Signature Schemes](sigma.md): Supporting multiple signature types via Sigma Protocols.\n* [Privacy-Preserving Mechanisms](zkp.md): Advanced features to protect user privacy."
+    },
+    {
+      "heading": "8.2 Cryptographic Primitives",
+      "level": 3,
+      "content": "* [Discrete Logarithm Proofs](schnorr.md): Foundational to signature verification (Schnorr).\n* [Ring Signatures](ring.md): Enhanced privacy through signer ambiguity.\n* [Threshold Signatures](threshold.md): Enabling multi-party computational scenarios.\n\n---"
+    },
+    {
+      "heading": "9. Verification, Consensus, and Sustainability",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "9.1 Transaction Validation and Script Execution",
+      "level": 3,
+      "content": "Ergo employs a robust, stateless transaction validation approach:\n\n- **Transaction Construction & Signing**: See [Transaction Composition](composing.md), [Transaction Format](format.md), and [Signing](signing.md).\n- **On-Chain Verification**: [Transaction Validation](validation.md) and [Merkle Proofs](tx-merkle.md).\n- **Script Validation**: Detailed in [ErgoTree Script Validation](script-validation.md) and the [ErgoScript Language Specification](lang-spec.md).\n- **Execution Environment**: Access blockchain state via [Context Variables](blockchain-context.md), ensure deterministic [evaluation](evaluation.md), and apply [cost constraints]](jitc.md)."
+    },
+    {
+      "heading": "9.2 Consensus Algorithm & Storage Rent",
+      "level": 3,
+      "content": "* **[Difficulty Adjustment](difficulty.md)**: A dynamic mechanism that adjusts mining difficulty every epoch to maintain a target block time of approximately 2 minutes, ensuring network stability and predictable block creation despite fluctuations in mining power.\n* **[Storage Rent Mechanism](storage-rent.md)**: A novel approach that prevents blockchain bloat and ensures long-term sustainability by requiring users to pay rent for storing data on-chain. See the linked page and the [detailed guide](rent.md) for implementation, fees, and economic incentives.\n\n---"
+    },
+    {
+      "heading": "10. Data Structures and Performance",
+      "level": 2,
+      "content": "* [General Data Structures](data-structures.md)\n* [Proof of Proof-of-Work (PoPow)](structures/popow.md): Consensus mechanism enhancement for light clients, related to [NIPoPoWs](nipopows.md)."
+    },
+    {
+      "heading": "10.1 Authenticated Data Structures",
+      "level": 3,
+      "content": "* [Merkle Trees](structures/merkle/merkle-tree.md) for efficient state commitment.\n    * [Merkle Batch Proof](structures/merkle/merkle-batch-proof.md)\n    * [Merkle Extension](structures/merkle/merkle-extension.md)\n    * [Merkle Light Proof](structures/merkle/merkle-light-proof.md)\n* [AVL+ Trees](avl.md) for authenticated key-value storage.\n* [Interlink Vectors](structures/interlink-vectors.md): Lightweight blockchain verification.\n* [AD Proofs](block-adproofs.md): Supporting stateless clients."
+    },
+    {
+      "heading": "10.2 Scalability and Efficiency",
+      "level": 3,
+      "content": "* Parallel transaction validation inherent in the [eUTXO model](eutxo.md).\n* Stateless validation reduces computational and storage overhead.\n* [Just-in-time costing]](jitc.md) ensures resource use is always checked.\n\nFor more information see the [scaling](scaling.md) section.\n\n---"
+    },
+    {
+      "heading": "11. Advanced Concepts: Mastering Ergo's Capabilities",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "11.1 Multi-Stage Transactions",
+      "level": 3,
+      "content": "* [Multi-Stage Transactions](multi.md): Understanding how to design and implement complex, multi-step transaction flows using the eUTXO model."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/data-model.md",
+  "processed_at": "2025-05-11T19:19:38.733677",
+  "ai_processed": true
+}

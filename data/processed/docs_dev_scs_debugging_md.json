@@ -1,0 +1,63 @@
+{
+  "id": "docs_dev_scs_debugging_md",
+  "title": "Debugging ErgoScript",
+  "summary": "This document provides an overview of debugging strategies for ErgoScript, the smart contract language used in the Ergo blockchain. It emphasizes the importance of thorough off-chain testing and careful contract design, as on-chain debugging is limited. The guide covers specific debugging techniques, including using Scala-based tools, on-chain mechanisms, and external simulators. It also discusses the need for more advanced debugging tools as the ecosystem evolves, while stressing that rigorous off-chain testing remains the cornerstone of developing reliable ErgoScript contracts.",
+  "qa_pairs": [
+    {
+      "question": "What is the most crucial aspect of debugging ErgoScript smart contracts?",
+      "answer": "Thorough unit and integration testing is the most crucial aspect of debugging ErgoScript smart contracts."
+    },
+    {
+      "question": "What are the core principles and best practices for debugging ErgoScript contracts?",
+      "answer": "The core principles and best practices are: 1) Thorough unit and integration testing, 2) Careful logic design, 3) Code reviews, and 4) Formal verification (for highly critical contracts)."
+    },
+    {
+      "question": "What are the key debugging techniques for ErgoScript contracts?",
+      "answer": "The key debugging techniques are: 1) Scala-based debugging, 2) On-chain mechanisms (limited), and 3) External tools and simulators."
+    },
+    {
+      "question": "Why is rigorous off-chain testing the cornerstone of developing reliable ErgoScript contracts?",
+      "answer": "Rigorous off-chain testing is the cornerstone because the code executes within the constrained and deterministic environment of the blockchain, where standard interactive debuggers or extensive logging are often not available during on-chain execution."
+    },
+    {
+      "question": "What is the community's desire for future debugging tools for ErgoScript?",
+      "answer": "The community desires more advanced debugging tools, potentially including execution traces and enhanced simulators, as the ecosystem evolves."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Debugging\n  - ErgoScript\n  - Smart Contracts\n  - Testing\n  - Tools\n  - Guide\n  - Scala\n---"
+    },
+    {
+      "heading": "Debugging ErgoScript",
+      "level": 1,
+      "content": "Debugging smart contracts written in ErgoScript presents unique challenges compared to traditional software development. Since the code executes within the constrained and deterministic environment of the blockchain, standard interactive debuggers or extensive logging are often not available during on-chain execution.\n\nThis guide provides an overview of debugging strategies, linking to more detailed explanations of specific techniques."
+    },
+    {
+      "heading": "Core Principles & Best Practices",
+      "level": 2,
+      "content": "Given the limitations of on-chain debugging, a strong emphasis must be placed on **off-chain testing and careful design**:\n\n1.  **Thorough Unit & Integration Testing:** This is the most crucial aspect. Use testing frameworks provided by SDKs like [Appkit (Scala)](../lang/scala.md), [Fleet SDK (JS/TS)](fleet-sdk-recipes.md), or [Sigma-Rust](../lang/rust.md) to simulate transaction scenarios off-chain.\n    *   Cover expected behavior (happy paths).\n    *   Test edge cases and potential failure conditions.\n    *   Verify expected outputs, register values, and created boxes.\n    *   Test logic under various simulated context states.\n    *   Use property-based testing where applicable.\n\n2.  **Careful Logic Design:**\n    *   Prioritize simplicity.\n    *   Break down complex logic.\n    *   Reason carefully about execution paths and state transitions.\n    *   Consider economic exploits.\n\n3.  **Code Reviews:** Have peers review your contract logic.\n\n4.  **Formal Verification (Advanced):** Consider for highly critical contracts (tooling is evolving)."
+    },
+    {
+      "heading": "Debugging Techniques Overview",
+      "level": 2,
+      "content": "Explore the following pages for details on specific techniques:\n\n*   **[Scala-Based Debugging](scala-debugging.md):** Leverage Scala's debugging tools by testing your contract logic within the JVM environment (e.g., using Appkit or `sigmastate-interpreter` tests). This is often the most effective way to step through logic off-chain.\n*   **[On-Chain Mechanisms (Limited)](on-chain-mechanisms.md):** Understand the limited tools available for insights during on-chain execution, such as the experimental `debug()` function and analyzing transaction failure logs.\n*   **[External Tools & Simulators](external-tools.md):** Utilize off-chain simulators (like the Spectrum Finance simulator) and other tools (SDK playgrounds, online editors) to test and analyze script behavior in controlled environments."
+    },
+    {
+      "heading": "Future Directions",
+      "level": 2,
+      "content": "The community desires more advanced debugging tools, potentially including execution traces and enhanced simulators. As the ecosystem evolves, improved tools may emerge.\n\nRigorous off-chain testing remains the cornerstone of developing reliable ErgoScript contracts."
+    },
+    {
+      "heading": "Recommended Resources",
+      "level": 2,
+      "content": "- [SigmaState Interpreter Repository](https://github.com/ScorexFoundation/sigmastate-interpreter)\n- [ErgoScript Language Overview](ergoscript.md)\n- [Ergo Developer Forum](https://www.ergoforum.org/)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/debugging.md",
+  "processed_at": "2025-05-11T19:27:19.954550",
+  "ai_processed": true
+}

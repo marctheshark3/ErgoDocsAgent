@@ -1,0 +1,9 @@
+Token Jay is a decentralized application (dApp) that provides various tools and services for managing tokens on the Ergo blockchain. The key features include:
+
+P2P Escrow: A trustless and decentralized platform for buying and selling tokens, including non-fungible tokens (NFTs), SigmaUSD, and other Ergo tokens.
+
+SigmaUSD and SigmaRSV: Allows users to directly convert ERG into SigmaUSD and SigmaRSV in a single transaction.
+
+Token Burner: Provides a utility to burn unwanted NFTs and tokens.
+
+The document outlines the step-by-step process for using the P2P Escrow service, including verifying the authenticity of the tokens being traded.

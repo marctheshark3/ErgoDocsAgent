@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Extension section in Ergo blocks?",
+    "answer": "The Extension section provides a flexible key-value storage system to include critical data beyond standard transactions, enabling features like efficient light client support and future-proofing the blockchain for upgrades."
+  },
+  {
+    "question": "What are the characteristics of the key-value pairs in the Extension section?",
+    "answer": "The keys are 2 bytes in length, the values are up to 64 bytes in length, and the entire Extension section cannot exceed 16,384 bytes."
+  },
+  {
+    "question": "What are the current uses of the Extension section?",
+    "answer": "1. Storing system parameters like maximum block size, block reward, and voting thresholds to aid light clients. 2. Storing NiPoPoWs interlinks for efficient proof-of-work verification by light clients. 3. Recording changes to consensus rules to ensure all nodes operate with the same set of rules."
+  },
+  {
+    "question": "What is the purpose of NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) stored in the Extension section?",
+    "answer": "NiPoPoWs enable efficient verification of the blockchain's proof-of-work by light clients, making it faster and easier for them to verify the chain's integrity."
+  },
+  {
+    "question": "How does the Extension section support future protocol upgrades and application-specific needs?",
+    "answer": "The flexible key-value storage system in the Extension section allows incorporating data that doesn't fit into the core block structure, supporting future protocol upgrades and application-specific needs."
+  }
+]

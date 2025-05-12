@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two main options for frontend development in browsers?",
+    "answer": "JavaScript/TypeScript and Rust."
+  },
+  {
+    "question": "What is the purpose of the dApp Connector?",
+    "answer": "It is for web-based wallets like Nautilus and SAFEW."
+  },
+  {
+    "question": "What is the purpose of ErgoPay?",
+    "answer": "It is Ergo's dApp connector for non-web wallet applications."
+  },
+  {
+    "question": "What are the two payment integration options mentioned?",
+    "answer": "ErgoPay and dApp Connector."
+  },
+  {
+    "question": "What are the two main languages/frameworks discussed for browser development?",
+    "answer": "JavaScript/TypeScript and Rust."
+  }
+]

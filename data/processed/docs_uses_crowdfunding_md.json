@@ -1,0 +1,43 @@
+{
+  "id": "docs_uses_crowdfunding_md",
+  "title": "Crowdfunding",
+  "summary": "Crowdfunding is a way for users, developers, and miners on the Ergo network to work together to fund and advance the network. The Ergo Raffle allows projects to host raffles with a prize percentage allocated to donors. ErgoWell is a project for investing in ventures trying to raise money through crowdfunding. ErgoFund will eventually provide a more sophisticated crowdfunding experience, with contracts for campaigns with thousands of pledges and enable 'Self-Soverign DeFi'.",
+  "qa_pairs": [
+    {
+      "question": "What is crowdfunding on the Ergo network?",
+      "answer": "Crowdfunding for common infrastructure and tooling on the Ergo network is a way for users, developers, and miners to work together to fund and advance the network far into the future."
+    },
+    {
+      "question": "What is Ergo Raffle?",
+      "answer": "Ergo Raffle allows projects to host 'Raffles' with a prize percentage allocated to the lucky donor."
+    },
+    {
+      "question": "What is ErgoWell?",
+      "answer": "ErgoWell is a project meant to be used for investing in ventures trying to raise money through crowdfunding."
+    },
+    {
+      "question": "What is ErgoFund?",
+      "answer": "ErgoFund will eventually provide a more sophisticated crowdfunding experience, with contracts for campaigns with thousands of pledges and enable 'Self-Soverign DeFi'."
+    },
+    {
+      "question": "What are the key benefits of crowdfunding on the Ergo network?",
+      "answer": "Crowdfunding on the Ergo network allows users, developers, and miners to work together to fund and advance the network far into the future."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": ""
+    },
+    {
+      "heading": "Crowdfunding",
+      "level": 1,
+      "content": "Crowdfunding for common infrastructure and tooling on the Ergo network is a way for users, developers, and miners to work together to fund and advance the network far into the future.\n\n1. We already have crowdfunding on the Ergo blockchain via [Ergo Raffle](ergoraffle.md); this allows projects to host *'Raffles'* with a prize percentage allocated to the lucky donor. \n2. [ErgoWell](ergowell.md) is a project meant to be used for investing in ventures trying to raise money through crowdfunding.\n3. [ErgoFund](ergofund.md) will eventually provide a more sophisticated crowdfunding experience, with contracts for campaigns with thousands of pledges and enable 'Self-Soverign DeFi'"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/crowdfunding.md",
+  "processed_at": "2025-05-11T20:01:44.039799",
+  "ai_processed": true
+}

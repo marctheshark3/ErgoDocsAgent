@@ -1,0 +1,78 @@
+{
+  "id": "docs_archive_mining_merged_md",
+  "title": "Merged Mining on Ergo",
+  "summary": "The document discusses the concept of merged mining on the Ergo blockchain, particularly in the context of the Sigma Chains framework. Merged mining allows miners to simultaneously mine multiple blockchains using the same hashing power, which is proposed as a key consensus mechanism for Ergo's pegged sidechains. The mechanism involves representing the sidechain's state and progress as a data tuple, which is submitted to the Ergo mainchain via a dedicated UTXO protected by a smart contract. This approach provides flexibility, leverages Ergo's expressive smart contracts, and enables efficient and trustless cross-chain interoperability. The document also highlights the advantages of this merged mining approach on Ergo, such as its ability to revitalize Proof-of-Work, support various mining algorithms, and provide sustainable economic incentives for miners.",
+  "qa_pairs": [
+    {
+      "question": "What is the key advantage of Ergo's approach to merged mining compared to Bitcoin's?",
+      "answer": "Ergo's approach to merged mining is more flexible compared to Bitcoin's, as it is not strictly tied to the coinbase transaction due to Ergo's expressive smart contracts (ErgoScript) and extended UTXO model."
+    },
+    {
+      "question": "How does the mechanism for merged-mined Sigma Chains work?",
+      "answer": "The state and progress of the sidechain are represented as a data tuple, which is submitted via a dedicated UTXO on the Ergo mainchain that acts as the official record carrier for the sidechain's merged mining data."
+    },
+    {
+      "question": "What are the key aspects of merged mining in the Sigma Chains ecosystem?",
+      "answer": "Sigma Chains are algorithm agnostic, allowing for merged mining across different hardware classes; they provide an economic sustainability model where miners are paid in sidechain tokens while still requiring ERG for transaction fees; and they enable efficient and trustless cross-chain interoperability between Ergo and its sidechains."
+    },
+    {
+      "question": "What is the role of merged mining in the Sigma Chains framework?",
+      "answer": "Merged mining is proposed as a key consensus mechanism, particularly for pegged sidechains within the Sigma Chains framework, enabling these sidechains to leverage the security of the main Ergo blockchain without requiring dedicated mining hardware."
+    },
+    {
+      "question": "How does merged mining on Sigma Chains help revitalize Proof-of-Work (PoW)?",
+      "answer": "Merged mining on Sigma Chains allows Ergo miners to contribute to the security of the ecosystem by mining various sidechain tokens, making mining profitable for a wider range of hardware classes and reinforcing the utility of the ERG token."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Merged Mining\n  - Mining\n  - Sigma Chains\n---"
+    },
+    {
+      "heading": "Merged Mining on Ergo",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "Merged mining allows miners to mine on multiple blockchains simultaneously using the same hashing power. In the context of Ergo, merged mining is proposed as a key consensus mechanism, particularly for **pegged sidechains** within the planned **[Sigma Chains](sigma-chains.md)** framework. It is designed to enable these sidechains to leverage the security of the main Ergo blockchain without requiring dedicated mining hardware, playing a potential role in revitalizing Proof-of-Work (PoW) and enhancing cross-chain interoperability once implemented.\n\nA key advantage of Ergo's approach is its flexibility compared to implementations like Bitcoin's. Due to Ergo's expressive smart contracts (ErgoScript) and the extended UTXO model, merged mining doesn't need to be strictly tied to the coinbase transaction, allowing for sophisticated contract-based implementations."
+    },
+    {
+      "heading": "Mechanism for Merged-Mined Sigma Chains",
+      "level": 2,
+      "content": "This mechanism describes the typical approach for **merged-mined sidechains** within the Sigma Chains ecosystem. Instead of modifying the mainchain's coinbase transaction structure, these sidechains use a dedicated UTXO (Unspent Transaction Output) on the Ergo mainnet to track the sidechain's progress and validate its Proof-of-Work (PoW).\n\nHere's how it typically works:\n\n1.  **Sidechain Data Representation:** The state and progress of the sidechain are represented as a data tuple, potentially including:\n    *   `h`: Sidechain height.\n    *   `Th`: State changes (transactions) at height `h`.\n    *   `Uh`: Digest of the sidechain's UTXO set AVL+ tree after processing `Th`.\n    *   `Ch`: Digest of the sidechain's state history AVL+ tree (committing to previous states).\n    *   **PoW Fields:** For merged mining, crucial fields like `nonce` and `solution` demonstrating the PoW performed for the sidechain block at height `h` are added to this tuple.\n    (Reference: ErgoHack Sidechain Report, Section 2)\n\n2.  **Submission via Dedicated UTXO:**\n    *   A specific UTXO exists on the Ergo mainchain, uniquely identified by a **special NFT** (Non-Fungible Token). This UTXO acts as the official record carrier for the sidechain's merged mining data.\n    *   An Ergo miner who also mines the sidechain finds a valid PoW solution satisfying both the Ergo mainchain difficulty *and* the sidechain difficulty.\n    *   The miner then creates an Ergo transaction that spends the *current* sidechain data UTXO.\n    *   This transaction creates a *new* UTXO, protected by the same NFT, containing the updated sidechain data tuple (including the new height, state digests, and the valid PoW fields) for the latest sidechain block.\n\n3.  **Contract Logic:** The sidechain data UTXO is protected by an ErgoScript contract. This contract enforces the rules for updating the sidechain state:\n    *   **Miner Validation:** The contract typically ensures that only a valid Ergo miner (potentially identified via context variables like `minerPubKey`, similar to the emission contract) can spend the box.\n    *   **PoW Verification:** The contract enforces rules ensuring the submitted PoW is valid for the sidechain. Full verification logic might reside within the sidechain protocol, but the mainchain contract validates the miner's attestation and potentially basic PoW properties. Smart contracts on the Ergo mainchain can read sidechain data submitted via this UTXO, enabling seamless and secure pegging.\n    *   **State Transition:** The contract enforces rules about how the sidechain state progresses (e.g., height must increment correctly, state digests match)."
+    },
+    {
+      "heading": "Merged Mining in the Sigma Chains Ecosystem",
+      "level": 2,
+      "content": "Sigma Chains introduce an innovative approach to revitalizing PoW through merged mining. Key aspects include:\n\n*   **Algorithm Agnostic:** Sigma Chains can support various PoW algorithms, making merged mining an attractive option for miners across different hardware classes (ASIC, GPU, CPU) who might find mining other chains unprofitable. This allows them to contribute to Ergo's ecosystem security.\n*   **Economic Sustainability:** Merged mining on Sigma Chains allows Ergo miners to be paid in various sidechain tokens for securing those chains. However, ERG is still required for transaction fees when interacting with the Ergo mainnet (e.g., submitting the sidechain state UTXO update), creating a sustainable economic model that benefits miners and reinforces ERG's utility.\n*   **Interoperability:** This mechanism forms the basis for efficient and trustless cross-chain interoperability between Ergo and its sidechains. The pegging security is directly tied to the security of the sidechain itself, benefiting from the combined hash power directed towards it.\n\n*(See [Sigma Chains](sigma-chains.md) for more details on the broader vision).*"
+    },
+    {
+      "heading": "Relation to Emission Contract & Rewards",
+      "level": 2,
+      "content": "The contract governing the sidechain data UTXO can be viewed as a simplified version of Ergo's main emission contract, or potentially even be combined with it.\n\n*   **Miner Control:** Like the emission contract ensures only miners create emission boxes, the sidechain contract ensures miners (or authorized parties) update the sidechain state UTXO.\n*   **Incentives:** This mechanism allows for direct rewarding of merged-mining participants on the Ergo mainchain. The transaction spending the old sidechain UTXO and creating the new one could also be structured to:\n    *   Mint and distribute sidechain-specific tokens stored within the sidechain data UTXO itself.\n    *   Unlock mainchain ERG or other tokens held in associated contract boxes as a reward for submitting the valid sidechain PoW.\n\n(Reference: ErgoScript Paper, Page 10 example of time-controlled emission, and the concept of miner-spendable contracts)."
+    },
+    {
+      "heading": "Security",
+      "level": 2,
+      "content": "The security of a merged-mined sidechain relies on the \"honest majority assumption\" applied to the *subset* of Ergo miners participating in mining that specific sidechain. If a majority of the hash power directed towards the sidechain (from the pool of participating Ergo miners) is honest, the sidechain's history is considered secure against PoW-based attacks from those miners. The pegging security is equivalent to the security of the sidechain itself.\n\n(Reference: ErgoHack Sidechain Report, Section 2.1)"
+    },
+    {
+      "heading": "Advantages on Ergo",
+      "level": 2,
+      "content": "*   **Flexibility:** Not restricted to coinbase transactions, allowing various contract-based implementations.\n*   **Leverages ErgoScript:** Enables sophisticated rules, validation, and incentive mechanisms within the sidechain data UTXO contract.\n*   **UTXO-Based:** Fits naturally within Ergo's extended UTXO model.\n*   **Integrated Incentives:** Allows for seamless rewarding of miners (potentially in sidechain tokens or ERG) on the mainchain for securing the sidechain.\n*   **Revitalizes PoW:** Provides profitable avenues for miners using various hardware, strengthening the overall PoW ecosystem.\n*   **Enhanced Interoperability:** Forms a core component of the Sigma Chains framework for trustless cross-chain interactions."
+    },
+    {
+      "heading": "References",
+      "level": 2,
+      "content": "*   **[Sigma Chains](sigma-chains.md):** Provides the broader context for merged mining and sidechain constructions on Ergo.\n*   **[ErgoHack Sidechain Report:](https://github.com/ross-weir/ergohack-sidechain/blob/main/docs/whitepaper/sidechain.pdf)**  (See Sections 2 and 2.1 for early technical details).\n*   **[ErgoScript Paper:](https://storage.googleapis.com/ergo-cms-media/docs/ErgoScript.pdf)** (See Page 10 for Emission Contract Example)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/archive/mining/merged.md",
+  "processed_at": "2025-05-11T19:16:17.306060",
+  "ai_processed": true
+}

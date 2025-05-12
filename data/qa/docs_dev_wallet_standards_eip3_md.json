@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of EIP-0003?",
+    "answer": "EIP-0003 attempts to define a specific coin_type for the Ergo ecosystem and a policy for how wallets use the change level."
+  },
+  {
+    "question": "What is the coin_type for Ergo wallets according to EIP-0003?",
+    "answer": "The coin_type for Ergo wallets is 429, based on the numerical values of the ASCII characters for the word 'ergo'."
+  },
+  {
+    "question": "What is the full path for the first default key pair for an Ergo wallet?",
+    "answer": "The full path is m / 44' / 429' / 0' / 0 / 0."
+  },
+  {
+    "question": "What is the purpose of the change level in the BIP-44 path?",
+    "answer": "In BIP-44, the constant 0 is used for the external addresses and constant 1 for internal addresses (aka change addresses)."
+  },
+  {
+    "question": "What is the motivation behind defining a standard for deterministic wallets?",
+    "answer": "The motivation is to allow end users to move between different wallet software trivially, thus setting a framework for a more cohesive ecosystem to grow."
+  }
+]

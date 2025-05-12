@@ -1,0 +1,39 @@
+{
+  "id": "docs_node_install_node-android_termux-digest_md",
+  "title": "Android Node: Direct Termux Setup (Digest Mode)",
+  "summary": "This guide details the recommended method for running an Ergo node on Android using Termux directly, which is best suited for the resource-efficient \"digest\" mode. It covers the prerequisites, steps to update Termux packages, install dependencies, download the Ergo node JAR, and create a configuration file for the digest mode.",
+  "qa_pairs": [
+    {
+      "question": "What is this document about?",
+      "answer": "---\ntags:\n  - Android\n  - Node\n  - Mobile\n  - Termux\n  - Installation\n  - Guide\n  - Digest Mode\n---\n\n# Android Node: Direct Termux Setup (Digest Mode)\n\nThis guide details the recommended method for ru..."
+    },
+    {
+      "question": "What is the title of this document?",
+      "answer": "Android Node: Direct Termux Setup (Digest Mode)"
+    },
+    {
+      "question": "What is the 'Introduction' section about?",
+      "answer": "---\ntags:\n  - Android\n  - Node\n  - Mobile\n  - Termux\n  - Installation\n  - Guide\n  - Digest Mode\n---"
+    },
+    {
+      "question": "What is the 'Android Node: Direct Termux Setup (Digest Mode)' section about?",
+      "answer": "This guide details the recommended method for running an Ergo node on Android using Termux directly...."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Android\n  - Node\n  - Mobile\n  - Termux\n  - Installation\n  - Guide\n  - Digest Mode\n---"
+    },
+    {
+      "heading": "Android Node: Direct Termux Setup (Digest Mode)",
+      "level": 1,
+      "content": "This guide details the recommended method for running an Ergo node on Android using Termux directly. This approach is best suited for the resource-efficient `stateType=\"digest\"` mode.\n\n**Prerequisites:**\n\n*   Android device meeting the [requirements](node-android.md#device-requirements).\n*   Termux installed from F-Droid (see [main Android guide](node-android.md#direct-termux-setup-digest-mode)).\n\n**Steps:**\n\n1.  **Update Termux Packages:**\n    *   Open Termux and run:\n        ```bash\n        pkg update && pkg upgrade -y\n        ```\n    *   Answer default prompts if asked.\n2.  **Install Dependencies:**\n    *   Install Java (OpenJDK 17 recommended) and `wget`:\n        ```bash\n        pkg install openjdk-17 wget -y\n        ```\n3.  **Download Ergo Node JAR:**\n    *   For `stateType=\"digest\"`, the standard Ergo node JAR (without `-rocksdb` suffix) is usually sufficient.\n    *   Use `wget` to download the latest release:\n        ```bash\n        # Get the URL for the latest standard JAR\n        LATEST_JAR_URL=$(wget -qO- \"https://api.github.com/repos/ergoplatform/ergo/releases/latest\" | grep -o 'https://github.com/ergoplatform/ergo/releases/download/.*ergo-[0-9.]*\\.jar' | head -n 1)\n\n        # Download it\n        echo \"Downloading latest Ergo node JAR from: $LATEST_JAR_URL\"\n        wget -q --show-progress \"$LATEST_JAR_URL\" -O ergo.jar\n        ```\n    *   *(Verify the downloaded URL or manually find the correct URL on the [Ergo Releases](https://github.com/ergoplatform/ergo/releases) page if the script fails).*\n4.  **Create Configuration File (`ergo.conf`):**\n    *   Create the file using `nano`:\n        ```bash\n        nano ergo.conf\n        ```\n    *   Paste the following configuration, suitable for mobile digest mode:\n        ```conf\n        ergo {\n          node {\n            stateType = \"digest\"\n            blocksToKeep = 1440 // Keep ~1 day of full blocks (~500MB-1GB), adjust if needed\n            mining = false\n\n            # Enable faster bootstrapping (both recommended for flexibility)\n            nipopow.nipopowBootstrap = true\n            utxoBootstrap = true\n\n            # Optional: Adjust NiPoPoW parameters if using nipopowBootstrap\n            # nipopow.p2pNipopows = 2\n          }\n        }\n\n        scorex {\n          restApi {\n            # Set your desired API key hash (generate one if needed)\n            # Example hash for password \"hello\":\n            apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n          }\n          network {\n            # Optional: Add known reliable peers if discovery is slow\n            # knownPeers = [\"ip:port\", \"ip:port\"]\n          }\n        }\n        ```\n    *   **Explanation:**\n        *   `stateType = \"digest\"`: Enables the lightweight digest mode.\n        *   `blocksToKeep = 1440`: Keeps roughly the last day's worth of full blocks. Adjust based on storage/needs. Lower values save space but limit historical data access via API.\n        *   `nipopow.nipopowBootstrap = true` & `utxoBootstrap = true`: Enable fast synchronization methods. The node will use the best available option from peers.\n    *   Save the file: Press `CTRL + O`, then `Enter`.\n    *   Exit nano: Press `CTRL + X`.\n5.  **Launch the Node:**\n    *   Run the node, allocating memory with `-Xmx`. Start with 1GB or 1.5GB:\n        ```bash\n        java -Xmx1536M -jar ergo.jar --mainnet -c ergo.conf\n        ```\n    *   *(Adjust `-Xmx1536M` (1.5GB) based on your device. If it crashes, try `-Xmx1G` or increase if you have more RAM available, e.g., `-Xmx2G`).*\n6.  **Monitor Synchronization:**\n    *   Open a web browser on your Android device and go to `http://127.0.0.1:9053/panel`.\n    *   Initial sync (especially the UTXO snapshot download if `utxoBootstrap` is used) can take time and may not show detailed progress in logs. Monitor network activity or storage usage. Once synced, the panel will update.\n\nRefer back to the [main Android guide](node-android.md#direct-termux-setup-digest-mode) for general tips, disk space clarification, and troubleshooting."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/install/node-android/termux-digest.md",
+  "processed_at": "2025-05-11T19:55:32.802393",
+  "ai_processed": true
+}

@@ -1,0 +1,7 @@
+The Rosen team is comprised of 8 full-time and 2-3 part-time developers, with some frontend and UI tasks outsourced. The team is further supported by several advisors. Rosen Bridge operates on self-funding with no involvement of private sales, venture capital, or SAFT agreements. The initial liquidity for Ergo was deposited on the Spectrum LP without the involvement of bots or front-running.
+
+The Rosen Bridge team was initially assembled during ERGOHACK I, with members developing projects like ErgoRaffle, minotaur-wallet, and ergo-faucet. The concept of a bridge has been a consistent focus since 2021, initially with ErgoGravity, but shifted to developing a bridge centered around Ergo after the Wormhole bridge was compromised.
+
+The founders, Mohammad Hasan Samadani and Joseph Armeanio, have extensive experience in computer science, security, software development, and the crypto industry. The core development team includes Mohammad Kermani, Fateme Rahmani, Moein Zargarzadeh, SepehrGanji, RaaCT0R, and Esmaeil Mohammed.
+
+While Rosen Bridge was initiated by members of the Ergo Foundation, it operates independently. The Foundation has provided support in the form of grants, and is set to receive 3% of the total supply of RSN.

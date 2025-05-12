@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the trade-offs of using public explorer APIs for indexing blockchain data?",
+    "answer": "Using public explorer APIs avoids the need to run your own node or indexer, but comes with trade-offs regarding control, performance, and flexibility."
+  },
+  {
+    "question": "What are the key steps to using public explorer APIs for indexing blockchain data?",
+    "answer": "1. Identify Explorer & API Docs, 2. Make API Requests, 3. Process Response."
+  },
+  {
+    "question": "What are some common API endpoints available from the Ergo Explorer API?",
+    "answer": "Common API endpoints include those for retrieving blockchain data, such as blocks, transactions, and addresses."
+  },
+  {
+    "question": "What are the key considerations when using public explorer APIs, such as rate limiting?",
+    "answer": "Developers should review the API documentation carefully to understand available queries, request/response formats, authentication (if any), and usage limitations (especially rate limits)."
+  },
+  {
+    "question": "What are some of the programming languages and libraries that can be used to interact with public explorer APIs?",
+    "answer": "Developers can use libraries like `axios` (JS/TS), `requests` (Python), or built-in fetch functions to make API requests and process the responses."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are coin mixers or tumblers?",
+    "answer": "Coin mixers or tumblers are basic tools that restore the fungibility of digital notes."
+  },
+  {
+    "question": "What is the basic mixing scheme on Ergo called?",
+    "answer": "The basic mixing scheme on Ergo is called ZeroJoin, and it is based on ring signatures and proof of knowledge for a Diffie-Hellman tuple."
+  },
+  {
+    "question": "How is ZeroJoin implemented on Ergo?",
+    "answer": "ZeroJoin is implemented as ErgoMixer on Ergo."
+  },
+  {
+    "question": "What is the purpose of coin mixers or tumblers?",
+    "answer": "The purpose of coin mixers or tumblers is to restore the fungibility of digital notes."
+  },
+  {
+    "question": "What are the key technical details of the ZeroJoin mixing scheme?",
+    "answer": "ZeroJoin is based on ring signatures and proof of knowledge for a Diffie-Hellman tuple."
+  }
+]

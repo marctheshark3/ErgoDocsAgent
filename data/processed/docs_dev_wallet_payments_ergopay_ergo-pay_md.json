@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_wallet_payments_ergopay_ergo-pay_md",
+  "title": "ErgoPay",
+  "summary": "ErgoPay is Ergo's dedicated dApp connector for non-web wallet applications, allowing any wallet to connect with any dApp. It has been integrated into Ergo Wallet App 1.6 and a demonstration dApp for minting and burning tokens is available. To use ErgoPay, users need to install Ergo Wallet App 1.6 and visit the demonstration dApp. ErgoPay differs from web dApp connectors in its versatility, as it can connect any wallet with any dApp, but this means that some of the dApp logic must run on a server that can be accessed by the user's wallet applications. The document provides resources for implementing a dApp using ErgoPay.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoPay?",
+      "answer": "ErgoPay is Ergo's dedicated dApp connector for non-web wallet applications."
+    },
+    {
+      "question": "How does ErgoPay differ from a web dApp connector?",
+      "answer": "ErgoPay can connect any wallet with any dApp, while a web dApp connector is limited to web extension wallets and website dApps."
+    },
+    {
+      "question": "What are the steps to try out the ErgoPay demonstration app?",
+      "answer": "1. Install Ergo Wallet App 1.6, 2. Visit the demonstration app at https://golfgl.de/ergopayshowcase/, 3. Use the menu on the left side to mint or burn a token."
+    },
+    {
+      "question": "How does implementing a dApp using ErgoPay differ from a web dApp connector?",
+      "answer": "With ErgoPay, some of your dApp logic must run on a server that can be accessed by user's wallet applications, while a web dApp connector is limited to website dApps."
+    },
+    {
+      "question": "What resources are provided for implementing a dApp using ErgoPay?",
+      "answer": "The GitHub repository 'ergopay-payment-portal' is provided as a resource."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - dApp Development\n---"
+    },
+    {
+      "heading": "ErgoPay",
+      "level": 1,
+      "content": "ErgoPay is Ergo's dedicated dApp connector for non-web wallet applications. It has been fully operational for some time now and has been thoroughly tested by end-users.\n\nWhile many may associate a dApp connector with a bridge between a website-based dApp and a browser extension wallet, like Yoroi and Metamask, not all users prefer to use a web extension wallet, and not all dApps are websites. To cater to this diversity, ErgoPay was developed, a versatile connector that can link any wallet with any dApp. For a non-technical overview of ErgoPay, [click here](https://www.reddit.com/r/ergonauts/comments/sc9lbk/comment/hu9v6dk/?utm_source=share&utm_medium=web2x&context=3).\n\nErgoPay was integrated into **Ergo Wallet App 1.6**, and a demonstration dApp for minting and burning tokens has been live for a while. \n\nIf you're interested in trying it out, follow these steps:\n\n1. Ensure you have installed Ergo Wallet App 1.6. It's available on Google Play ([join](https://play.google.com/apps/testing/org.ergoplatform.android)) and on TestFlight (DM me your Apple ID to join). Alternatively, [download the APK on GitHub](https://github.com/ergoplatform/ergo-wallet-app/releases) and sideload.\n2. Visit the demonstration app: [https://golfgl.de/ergopayshowcase/](https://golfgl.de/ergopayshowcase/). ErgoPay supports both mobile and desktop devices, and even Cold wallets.\n3. The demonstration dApp has a menu on the left side where you can choose to mint a new token or burn a token. The dApp supports both testnet and mainnet, and will automatically detect this through the information provided by ErgoPay.\n4. To mint a token, enter the required information and scan the presented QR code with your wallet app if you are on a desktop. If you are on mobile, tap the button to open the wallet app. The wallet app will ask which wallet should process the request, and a confirmation screen will show you the transaction details.\n5. Confirm the transaction and wait for your new token to be minted once the transaction is confirmed. (*Note: Emojis in the token name are supported.*)\n6. To burn a token, select the \"Burn a token\" option from the demonstration dApp. For this, the dApp needs to connect to your wallet to display a list of available tokens to burn. Do this by scanning the QR code or tapping the button.\n7. Once your wallet is connected, you can select the token to burn. Be careful: You can burn any token, so avoid choosing valuable tokens unless you intend to.\n8. Follow the same procedure as before to confirm the transaction and burn the token.\n\nWe hope you enjoy exploring ErgoPay! We look forward to seeing more dApps implementing the ErgoPay protocol."
+    },
+    {
+      "heading": "Implementing a dApp using ErgoPay",
+      "level": 2,
+      "content": "Ergo Wallet App 1.6 and above support ErgoPay, a protocol that facilitates transaction data exchange with dApps. With ErgoPay, your dApp can prepare a transaction for the user to sign within their wallet app. The user can then choose to accept or decline the transaction. This ensures that the user's secrets never leave their device and they can verify the transaction before confirming it."
+    },
+    {
+      "heading": "ErgoPay vs web dApp connector",
+      "level": 3,
+      "content": "ErgoPay differs from a web dApp connector like those provided by SAFEW and Nautilus wallet in its versatility. While a web dApp connector is limited to web extension wallets and website dApps, ErgoPay can connect any wallet with any dApp. However, this means that some of your dApp logic must run on a server that can be accessed by user\u2019s wallet applications. For a website dApp, this means that some of your code needs to live on your backend. This doesn't necessarily complicate things. In fact, on the backend, you aren't restricted to using JavaScript or its derivatives. You are free to choose the language and framework that best suits your needs."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [ergopay-payment-portal](https://github.com/MrStahlfelge/ergopay-payment-portal)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/payments/ergopay/ergo-pay.md",
+  "processed_at": "2025-05-11T19:40:52.415201",
+  "ai_processed": true
+}

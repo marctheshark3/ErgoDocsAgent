@@ -1,0 +1,43 @@
+{
+  "id": "docs_dev_scs_ergoscript_box-structure_md",
+  "title": "Deep Dive into ErgoScript's Box Structure",
+  "summary": "The document provides a deep dive into the structure of boxes in the Ergo blockchain ecosystem. Boxes are versatile containers that hold various types of information, including value, tokens, and custom data. They enable complex operations, such as executing scripts or smart contracts, directly on the blockchain. The key fields of a box include value, proposition bytes (the script), tokens, and registers (R4-R9) for storing data. The tokens field is an array of token ID and amount pairs, and the document includes an example script that checks the token ID and amount in the first output box.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of a 'box' in Ergo's ecosystem?",
+      "answer": "A box is a versatile container that holds various types of information (value, tokens, custom data, etc.), making Ergo's boxes highly flexible and functional."
+    },
+    {
+      "question": "What are the key fields that a 'Box' object encapsulates in ErgoScript?",
+      "answer": "A Box encapsulates the following key fields: 1) value, 2) propositionBytes, 3) tokens, and 4) R4..R9 registers."
+    },
+    {
+      "question": "How is a token represented in the 'tokens' array of a Box?",
+      "answer": "Each element in the 'tokens' array is a pair, structured as '(tokenId, amount)'. The 'tokenId' is a 32-byte array, and 'amount' is a 'Long' value."
+    },
+    {
+      "question": "What is the purpose of the script shown in the example?",
+      "answer": "The script checks if the 'tokenId' of the first token in the first output box matches the given base64-encoded string and if the amount of the token is 1."
+    },
+    {
+      "question": "How can the R4..R9 registers of a Box be used?",
+      "answer": "The R4..R9 registers of a Box are capable of storing any type of data, allowing for complex operations to be executed directly on the blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Box\n---"
+    },
+    {
+      "heading": "Deep Dive into ErgoScript's Box Structure",
+      "level": 1,
+      "content": "In Ergo's ecosystem, the term ['box'](box.md) is more than just an unspent transaction output balance. It's a versatile container that holds various types of information (value, tokens, custom data, etc.), making Ergo's boxes highly flexible and functional. This functionality allows for complex operations, such as executing scripts or smart contracts, directly on the blockchain.\n\nThe `INPUTS` and `OUTPUTS` in ErgoScript are arrays, each consisting of `Box` type objects. A `Box` encapsulates the following key fields:\n\n1. `value`: The amount held in the box, denoted in nanoErgs.\n2. `propositionBytes`: The script, serialized into a byte array.\n3. `tokens`: An optional field that holds an array of tokens or assets.\n4. `R4..R9`: These are the [registers](registers.md) of a box, capable of storing any type of data.\n\nEach element in the `tokens` array is a pair, structured as `(tokenId, amount)`. Here, `tokenId` is a 32-byte array, and `amount` is a `Long` value. \n\n```scala\n{\n   val out = OUTPUTS(0)\n   val token = out.tokens(0)\n   token._1 == fromBase64(\"nZdrGUBMAfIO6lmSRJq2zEUKGCOeYOYzAeIqbfYs8sg=\")  &&\n   token._2 == 1 \n}\n```\n\nIn this script, `out` is the first output box, and `token` is the first token in this box. The script checks if the `tokenId` of this token matches the given base64-encoded string and if the amount of the token is 1."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/ergoscript/box-structure.md",
+  "processed_at": "2025-05-11T19:28:07.128625",
+  "ai_processed": true
+}

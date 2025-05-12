@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Rosen Bridge?",
+    "answer": "The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains."
+  },
+  {
+    "question": "How does the Rosen Bridge facilitate cross-chain token conversions?",
+    "answer": "The Rosen Bridge allows users to convert ADA into rsADA on the Ergo blockchain, ERG into rsERG on the Cardano blockchain, BTC into rsBTC on both Ergo and Cardano blockchains, ETH into rsETH on both Ergo and Cardano blockchains, and BNB into rsBNB on both Ergo and Cardano blockchains (Soon!)."
+  },
+  {
+    "question": "What are the supported tokens on the Ergo Network?",
+    "answer": "The supported tokens on the Ergo Network include ERG (native Ergo token), SigUSD/SigRSV (Ergo stablecoin and reserve), RSN (Rosen Bridge token), COMET, SPF, AHT, Bober, COS, EPOS, ErgOne, GIF, GluonW GAU, GluonW GAUC, MEW, Paideia, QUACKS, Troll, WALRUS, and CYPX."
+  },
+  {
+    "question": "What are the supported tokens on the Cardano Network?",
+    "answer": "The supported tokens on the Cardano Network include ADA (native Cardano token), Hosky, NIKEPIG, SUGAR, BANA, O, DIS, sOADA, OADA, and MNT."
+  },
+  {
+    "question": "What is the native token on the Bitcoin Network?",
+    "answer": "The native token on the Bitcoin Network is BTC."
+  }
+]

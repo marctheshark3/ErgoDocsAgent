@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the eUTXO model used in Ergo?",
+    "answer": "The eUTXO model allows UTXOs to carry arbitrary data and complex scripts, enabling advanced smart contracts."
+  },
+  {
+    "question": "What is the Autolykos PoW algorithm used by Ergo?",
+    "answer": "The Autolykos PoW algorithm is ASIC-resistant and designed for fair mining, promoting decentralization."
+  },
+  {
+    "question": "What are NiPoPoWs and how do they benefit Ergo?",
+    "answer": "NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) enable efficient light clients, log-space mining, and trustless SPV."
+  },
+  {
+    "question": "What was the Ergo Foundation's role in the ecosystem's development?",
+    "answer": "The Ergo Foundation was established in 2019 as a community-driven entity to support the development of the Ergo ecosystem."
+  },
+  {
+    "question": "What were some key milestones and developments in Ergo's roadmap?",
+    "answer": "Key milestones include the launch of Ergo Mixer, Oracle Pools, Zero-knowledge Treasury, Auction House, and SigmaUSD."
+  }
+]

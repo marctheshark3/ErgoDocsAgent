@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_scs_sigma-lang_md",
+  "title": "The ***'Sigma Language'***",
+  "summary": "The 'Sigma Language' is a family of Sigma-protocol based authentication languages that generalize the Bitcoin Script language. The Sigma Language, implemented through the ErgoScript compiler and ErgoTree interpreter, allows developers to specify coin spending conditions. ErgoTree is a bytecode language that defines guarding propositions for coins as logic formulas combining predicates over a context and cryptographic statements provable via \u03a3-protocols.",
+  "qa_pairs": [
+    {
+      "question": "What is the Sigma Language?",
+      "answer": "The Sigma Language is a family of Sigma-protocol based authentication languages implemented in the sigmastate-interpreter repository."
+    },
+    {
+      "question": "How does the Sigma Language differ from Bitcoin Script?",
+      "answer": "The Sigma Language generalizes the Bitcoin Script, allowing developers to specify coin spending conditions using an authentication language, which can be compiled into ErgoTree bytecode."
+    },
+    {
+      "question": "What is ErgoTree?",
+      "answer": "ErgoTree is a bytecode language and memory representation that can be deterministically interpreted in the given blockchain context, defining guarding propositions for coins using Sigma-protocols and logical connectives."
+    },
+    {
+      "question": "What is the purpose of the ErgoScript Compiler?",
+      "answer": "The ErgoScript Compiler compiles the source code into ErgoTree bytecode, which can be saved in UTXO coins to protect their spending."
+    },
+    {
+      "question": "How does the Sigma Language allow for adding new cryptographic primitives?",
+      "answer": "Unlike Bitcoin Script, the Sigma Language allows for adding new cryptographic primitives, such as ring signatures, without requiring a hard fork."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Sigma Language\n---"
+    },
+    {
+      "heading": "The ***'Sigma Language'***",
+      "level": 1,
+      "content": "The [sigmastate-interpreter](https://github.com/ScorexFoundation/sigmastate-interpreter#sigma-language-background.md) repository contains implementations of ErgoScript compiler and ErgoTree Interpreter for a family of Sigma-protocol based authentication languages (or simply ***Sigma language***)."
+    },
+    {
+      "heading": "Sigma Language Background",
+      "level": 2,
+      "content": "Every coin in Bitcoin is protected by a program in the stack-based Script language. An interpreter for the language evaluates the program against a context (a few variables containing information about a spending transaction and the blockchain), producing a single boolean value. While Bitcoin Script allows some contracts to be programmed, its abilities are limited. Also, a hard fork would be required to add new cryptographic primitives, such as ring signatures.\n\nGeneralizing the Bitcoin Script, ErgoScript compiler and ErgoTree interpreter implement an **authentication language** which allows developers to specify coin spending conditions. The [ErgoScript Compiler](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/sc/src/main/scala/sigmastate/lang/SigmaCompiler.scala#L48) compiles the source code into [ErgoTree](https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/sigmastate/Values.scala#L990) byte code, which can be saved in UTXO coins to protect their spending (same as in Bitcoin).\n\nErgoTree, in turn, is a bytecode language and memory representation that can be deterministically interpreted in the given _blockchain context_.\n\n/// admonition | Please note\nErgoTree defines guarding proposition for a coin as a logic formula which combines predicates over a context and cryptographic statements provable via [\u03a3-protocols](sigma.md) with AND, OR, k-out-of-n connectives.\n///"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/sigma-lang.md",
+  "processed_at": "2025-05-11T19:30:40.003060",
+  "ai_processed": true
+}

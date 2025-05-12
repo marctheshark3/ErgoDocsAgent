@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "#  Node Troubleshooting Guide\n\nThis document aims to help you troubleshoot common issues with the Ergo reference client. If you encounter a problem not covered here, please create a [new issue on GitH..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Node Troubleshooting Guide"
+  },
+  {
+    "question": "What is the 'Node Troubleshooting Guide' section about?",
+    "answer": "This document aims to help you troubleshoot common issues with the Ergo reference client. If you enc..."
+  },
+  {
+    "question": "What is the 'Searching the Logs' section about?",
+    "answer": "The following commands can help you search your logs for specific entries:\n\n```bash\ntail -Fn+0 ergo...."
+  },
+  {
+    "question": "What is the 'Synchronization Issues' section about?",
+    "answer": "There are common problems that may occur during synchronization."
+  }
+]

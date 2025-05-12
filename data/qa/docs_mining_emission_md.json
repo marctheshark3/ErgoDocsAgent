@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the total supply of Ergo?",
+    "answer": "The total supply of Ergo is capped at 97,739,925 ERGs."
+  },
+  {
+    "question": "What percentage of the total Ergo supply is allocated to the Ergo Foundation Treasury?",
+    "answer": "The Ergo Foundation Treasury received 4.43% of the total Ergo emission."
+  },
+  {
+    "question": "What is the Ergo block reward schedule?",
+    "answer": "Ergo's block reward decreases by 3 ERG per block every quarter until 2026 and stabilizes at 3 ERG per block thereafter."
+  },
+  {
+    "question": "When is Ergo's mining process projected to conclude?",
+    "answer": "Ergo's mining process is projected to continue until around 2045, extended from the original 2027 timeline with the passage of the EIP27 soft-fork."
+  },
+  {
+    "question": "What are some of the revenue streams designed to promote Ergo's long-term sustainability beyond the emission schedule?",
+    "answer": "Ergo's architecture includes support for a variety of revenue streams designed to promote both network growth and long-term sustainability."
+  }
+]

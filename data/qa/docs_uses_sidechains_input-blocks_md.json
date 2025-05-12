@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the current process for transactions entering the Ergo blockchain?",
+    "answer": "Transactions from wallets enter a common mempool, and miners include these transactions in blocks produced roughly every 2 minutes."
+  },
+  {
+    "question": "What is Replace-By-Fee (RBF) and how can it lead to issues?",
+    "answer": "RBF allows users to increase transaction fees for faster inclusion or even cancel a transaction by refunding the sender's wallet, which can sometimes lead to issues, such as with SigmaUSD mint transactions during fee competitions."
+  },
+  {
+    "question": "What are the limitations of the current Ergo block production system?",
+    "answer": "The current system has variable confirmation times, with some transactions taking as long as 10 minutes to confirm, and involves repeated manual steps that slow down the overall process."
+  },
+  {
+    "question": "What are the two new types of blocks being introduced in Ergo?",
+    "answer": "Ergo is introducing two kinds of blocks via a non-breaking consensus protocol update, following ideas in PRISM, Parallel Proof-of-Work, and Tailstorm."
+  },
+  {
+    "question": "How is the current Ergo block validity defined?",
+    "answer": "A valid block in the current Ergo protocol is formed by semantically valid header fields and corresponding block sections (including transactions), with miners searching for a nonce such that the Autolykos Proof-of-Work function applied to the block header bytes (including nonce) is less than the Proof-of-Work target."
+  }
+]

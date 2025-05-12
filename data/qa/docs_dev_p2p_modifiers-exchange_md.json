@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are modifiers in the Ergo P2P protocol?",
+    "answer": "In Ergo's P2P protocol, blocks and transactions are referred to as 'modifiers'. Modifiers are transmitted between nodes as part of the network synchronization process."
+  },
+  {
+    "question": "What are the key steps in the Modifier Exchange process?",
+    "answer": "The Modifier Exchange process involves: 1) Inventory Transmission (Inv), 2) Modifier Request (RequestModifier), and 3) Modifier Delivery (Modifier)."
+  },
+  {
+    "question": "Where can I find the source code for the Ergo Modifiers implementation?",
+    "answer": "The Ergo Modifiers implementation can be found in the [src/main/scala/org/ergoplatform/modifiers] directory of the Ergo repository on GitHub."
+  },
+  {
+    "question": "What is the purpose of the InvSpec class in the Ergo network?",
+    "answer": "The InvSpec class in the [network/message] directory handles the construction and parsing of Inv messages, which are used to inform peers about new modifiers."
+  },
+  {
+    "question": "How do nodes request specific modifiers from their peers?",
+    "answer": "Nodes send a RequestModifier message, defined by the RequestModifierSpec class in the [network/message] directory, to request the new modifiers they do not yet possess."
+  }
+]

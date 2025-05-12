@@ -1,0 +1,8 @@
+This document provides a tutorial on sending chained transactions on the Ergo blockchain using the ergpy library in Python. It covers the following key points:
+
+1. Establishing a connection to the Ergo blockchain by setting the node URL.
+2. Defining the wallet mnemonic and receiver addresses for the transactions.
+3. Creating an output box for the initial "genesis" transaction.
+4. Submitting a sequence of chained transactions, where each transaction spends the output of the previous one.
+5. Handling the input boxes and output boxes for the chained transactions.
+6. Incorporating a delay between submitting the transactions to the blockchain.

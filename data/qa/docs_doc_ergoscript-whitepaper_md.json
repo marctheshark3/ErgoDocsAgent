@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoScript?",
+    "answer": "ErgoScript is a powerful and protocol-friendly scripting language for cryptocurrencies that supports non-interactive zero-knowledge proofs called Sigma-protocols."
+  },
+  {
+    "question": "How does ErgoScript differ from Bitcoin Script?",
+    "answer": "ErgoScript is more powerful than Bitcoin Script, as it contains no unbounded looping or recursive constructs and allows for self-replicating scripts, enabling Turing-complete processes in a blockchain."
+  },
+  {
+    "question": "What are the key features of ErgoScript?",
+    "answer": "ErgoScript supports ring-signatures, multisignatures, multiple currencies, atomic swaps, self-replicating scripts, and long-term computation."
+  },
+  {
+    "question": "How is transaction validity verified in ErgoScript?",
+    "answer": "In ErgoScript, transaction validity is verified by evaluating programs, and bounded validation time is ensured by the absence of loops and a maximum program size."
+  },
+  {
+    "question": "What is the purpose of the non-interactive zero-knowledge proofs in ErgoScript?",
+    "answer": "The non-interactive zero-knowledge proofs (Sigma-protocols) in ErgoScript allow the creator of a spending transaction to prove knowledge of certain conditions (e.g., secret keys) without revealing the details."
+  }
+]

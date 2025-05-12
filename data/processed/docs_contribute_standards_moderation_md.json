@@ -1,0 +1,88 @@
+{
+  "id": "docs_contribute_standards_moderation_md",
+  "title": "Moderation Guide",
+  "summary": "This document outlines the moderation practices and tools employed across various platforms to ensure a positive environment for all participants. It covers the use of moderation bots like OrgRobot and GrepRobot on Telegram, as well as Automod on Discord. The document details the capabilities of these tools, such as filtering content, managing user behavior, and customizing moderation actions. It also discusses the importance of excluding certain roles from strict spam rules to avoid false positives. Additionally, the document provides examples of specific moderation rules, including blocking certain words, phrases, and URLs, limiting mention spam, and detecting suspicious content.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the OrgRobot moderation bot used in Ergo Telegram groups?",
+      "answer": "OrgRobot helps enforce community rules and prevent spam by restricting new users from posting until they have verified their identity."
+    },
+    {
+      "question": "How does the verification process work with OrgRobot?",
+      "answer": "The verification process typically involves answering a set of custom entry questions, which serves as a deterrent against most bots and spammers."
+    },
+    {
+      "question": "What are some of the key features of the GrepRobot moderation tool used in Telegram groups?",
+      "answer": "GrepRobot allows moderators to filter and block specific words, phrases, or links, automatically delete messages containing prohibited content, warn or kick/ban users for violating group rules, set up whitelists and blacklists, and customize responses and actions for different rule violations."
+    },
+    {
+      "question": "What is the purpose of the moderation practices and tools employed across various platforms?",
+      "answer": "The moderation practices and tools are employed to ensure a positive environment for all participants by maintaining a healthy and welcoming community and fostering productive discussions and collaboration."
+    },
+    {
+      "question": "What is the overall focus of the Moderation Guide document?",
+      "answer": "The Moderation Guide outlines the moderation practices and tools employed across various platforms to ensure a positive environment for all participants."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Moderation Guide",
+      "level": 1,
+      "content": "Maintaining a healthy and welcoming community is crucial for fostering productive discussions and collaboration. This guide outlines the moderation practices and tools employed across various platforms to ensure a positive environment for all participants."
+    },
+    {
+      "heading": "Telegram",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "OrgRobot",
+      "level": 3,
+      "content": "OrgRobot is a powerful moderation bot utilized in the Ergo Telegram groups. It helps enforce community rules and prevent spam by restricting new users from posting until they have verified their identity. This verification process typically involves answering a set of custom entry questions, which serves as a deterrent against most bots and spammers."
+    },
+    {
+      "heading": "GrepRobot",
+      "level": 3,
+      "content": "GrepRobot is another moderation tool used in Telegram groups. It allows moderators to set up automated rules and filters to moderate content, user behavior, and group activity. With GrepRobot, moderators can:\n\n- Filter and block specific words, phrases, or links\n- Automatically delete messages containing prohibited content\n- Warn or kick/ban users for violating group rules\n- Set up whitelists and blacklists for channels, roles, or users\n- Customize responses and actions for different rule violations"
+    },
+    {
+      "heading": "Discord",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Automod",
+      "level": 3,
+      "content": "Automod is a powerful moderation tool for Discord servers. It enables server administrators to set up automated rules and filters to moderate content, user behavior, and server activity. With Automod, you can:\n\n- Filter and block specific words, phrases, or links\n- Automatically delete messages containing prohibited content\n- Warn or kick/ban users for violating server rules\n- Set up whitelists and blacklists for channels, roles, or users\n- Customize responses and actions for different rule violations\n\nTo configure Automod, navigate to the server settings and select the \"Safety Setup\" tab, then select 'Edit' on \"AutoMod\". From there, you can create new rules, define triggers (words, phrases, links, etc.), and specify the desired actions (delete message, warn user, kick/ban, etc.). Automod rules can be as simple or complex as needed, allowing for granular control over server moderation.\n\n\n/// admonition | Exclude members based on activity\n    type: warning\n\nThe spam rules are designed to be strict to catch potential abuse. However, this can sometimes lead to false positives for legitimate messages. To mitigate this issue, certain roles are excluded from the spam filters on the Ergo Discord server. \n\nOne approach is to use a service like [engau.ge](https://engau.ge/) to assign new users a specific role once they reach a threshold number of messages. This role can then be excluded from the spam rules, allowing more active and engaged members to participate freely without triggering false positives.\n///"
+    },
+    {
+      "heading": "Block Words in Member Profile Names",
+      "level": 4,
+      "content": "Automod can be configured to block certain words or phrases from appearing in member profile names. This helps prevent users from using inappropriate or misleading names. The following words and regular expressions are currently blocked:\n\nWords:\n> airdrop, claim, check bio, alert message, instantinfo, instantmessage, autobot, alertmessage, claiminfo, instantbot, safteymessage, instant, info, support, announcement, announcements, help\n\nRegular Expressions:\n\n> (?i)\\bf(a|@|\u00e4)q\\b|\\bh(e|3|\u00eb)lp\\b|\\bsupport\\b|\\baird(rop)?\\b|\\bcl(a|@)im\\b|\\bmsg\\b|\\binsta(nt|info)\\b|\\bs(a|@)fet(y|y)?\\b|\\binfo\\b|\\bann(ounce)?\\b|\\bautobot\\b\n\n> (?i)\\$?\\b(meme|dai|gsw|delivery|aird(ropp)?|bio|support|read|info)\\b"
+    },
+    {
+      "heading": "Block Mention Spam",
+      "level": 4,
+      "content": "Automod can also be configured to limit the number of unique mentions (roles and users) per message. This helps prevent users from spamming mentions, which can be disruptive and annoying. The current limit is set to 2 unique mentions per message."
+    },
+    {
+      "heading": "Block Spam Content",
+      "level": 4,
+      "content": "In addition to blocking specific words and phrases, Automod can be configured to detect and block common spam content. This includes:\n\n- Commonly flagged words and phrases associated with spam or scams\n- Suspicious links or URLs\n- Excessive use of emojis or special characters"
+    },
+    {
+      "heading": "Custom Rules",
+      "level": 4,
+      "content": "Moderators can also create custom rules to target specific types of content or behavior. These rules can be based on keywords, regular expressions, or other criteria. Some examples of custom rules currently in place include:\n\nRegular Expressions:\n\n\n\nSupport Scams\n> (?i)(send\\s+(a\\s+)?dm|direct\\s+message|dm\\s+regarding\\s+your\\s+query|ask\\s+for\\s+help|open\\s+a\\s+ticket|service\\s+request|chat\\s+live)\n\n> (?i)(contact\\s+support|admin\\s+support|online\\s+support\\s+team|reach\\s+out|for\\s+assistance|resolve\\s+your\\s+concern)\n\n> (?i)(open[-\\s]?ticket|create\\s+a\\s+ticket|raise\\s+a\\s+ticket|support[-\\s]?ticket|support-ticket)\n\n> (?i)(fixer|issue[-\\s]?fixer|guide\\s+you|help[-\\s]request)\n\nSuspiscious URLS\n> (?i)(tinyurl|shrtm\\.nu|dsc\\.gg|bch\\.gg|t\\.me|discord\\.gg|t\\.co)\n\nMisc Spam\n\n> (?i)(earn\\s+\\$\\d+k|WhatsApp)\n\n> \\b(working\\s+as|full\\s*stack\\s*web3\\s*developer|smart\\s*contract|token\\s*creation|presale|nft\\s*staking|web3\\s*game|bot\\s*development|inform\\s+myself\\s+to\\s+you)\\b\n\n\n\nEmojis:\n> \ud83d\udfe0,\ud83d\udfe1,\ud83d\udfe2,\ud83d\udd35,\ud83d\udfe3,\ud83d\udfe4,\u26ab,\u26aa,\u2b1b\ufe0f,\ud83e\udea9,\ud83d\udc94,\ud83d\udc96,\ud83d\udc97,\ud83d\udc93,\ud83d\udc9e,\ud83d\udc9d,\ud83d\udc98,\ud83d\udc9f,\ud83e\udd5c,\ud83d\udc35,\ufe0f\u20e3,\ud83d\udd3a,\ud83d\udcb5,\ud83d\udcb6,\ud83d\udcb7,\ud83d\udcb4,\ud83d\udc15\u200d\ud83e\uddba,\u26a0\ufe0f,\ud83c\ude36,\ud83e\udef0,\ud83d\udce1,\ud83c\udfaf,\ud83d\udc48,\u27a1\ufe0f,\ud83e\ude9f,\ud83c\udfa6,\ud83c\udfdb,\ud83c\udf30,\ud83d\udc02,\ud83d\udd30,\ud83d\udc4b\ud83d\udc4b,\ud83e\udd47,\ud83e\udd48,\ud83e\udd49,\u2b50,\ud83c\udf1f,\ud83d\udc8e,\u23f0,\u23f1,\u23f2,\u23f3,\ud83d\udca3,\ud83d\udc89,\ud83d\udc8a,\ud83c\udf81,\ud83d\udd11,\ud83d\udddd,\u2705,\u2611\ufe0f,\ud83e\udd1f,\ud83d\udd17,\ud83d\udd04,\ud83d\udcc8,\ud83d\udd0d,\ud83c\udf49,\u26fd\ufe0f,\u2b1b\ufe0f"
+    },
+    {
+      "heading": "Other Moderation Bots",
+      "level": 3,
+      "content": "In addition to Automod, the Ergo Discord server also utilizes other moderation bots like Dyno, Carl-bot, and Wick. These bots provide additional moderation capabilities, such as logging, role management, and custom commands."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/contribute/standards/moderation.md",
+  "processed_at": "2025-05-11T19:17:58.474800",
+  "ai_processed": true
+}

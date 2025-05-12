@@ -1,0 +1,1 @@
+Ergpy is a Python-JVM wrapper for interacting with the Ergo blockchain. SigmaParticle is a framework for interacting with the Ergo blockchain based on ergpy, to be used in cross-chain pipeline extensions.

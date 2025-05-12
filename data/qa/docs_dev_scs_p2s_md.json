@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the pay-to-script (P2S) address compiler available at wallet.plutomonkey.com/p2s?",
+    "answer": "The P2S address compiler allows you to create basic applications using ErgoScript."
+  },
+  {
+    "question": "What are some example applications that can be created using the P2S address compiler?",
+    "answer": "Example applications include Wrapped ERG, Crowdfunding, and 3-out-of-5 Threshold Signature."
+  },
+  {
+    "question": "How does the Wrapped ERG script work?",
+    "answer": "The Wrapped ERG script lets you exchange Wrapped ERG tokens for native ERG on a trustless 1:1 basis."
+  },
+  {
+    "question": "What are the key features of the Crowdfunding script?",
+    "answer": "The Crowdfunding script provides a method to raise funds within a specified timeframe, and the funds can only be accessed if the fundraising goal is met by the deadline."
+  },
+  {
+    "question": "What is the purpose of the 3-out-of-5 Threshold Signature script?",
+    "answer": "The 3-out-of-5 Threshold Signature script allows the creation of a multi-signature wallet where 3 out of 5 keys are required to authorize a transaction."
+  }
+]

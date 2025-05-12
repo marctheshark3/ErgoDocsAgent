@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the main options for obtaining the Ergo client JAR?",
+    "answer": "The two main options are: 1) Download the latest stable ergo-<version>.jar file from the Ergo GitHub releases page, or 2) Build the JAR from source by following the detailed guide for Building the Ergo Node from Source."
+  },
+  {
+    "question": "What should be included in the ergo.conf configuration file?",
+    "answer": "The ergo.conf file should include settings to override the default node configuration, such as disabling mining and setting a secure API key hash for API access."
+  },
+  {
+    "question": "How do you launch the Ergo node?",
+    "answer": "To launch the Ergo node, run the command 'java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf', adjusting the memory allocation (-Xmx4G) based on your system's available RAM."
+  },
+  {
+    "question": "What is the purpose of the 'ergo' folder mentioned in the guide?",
+    "answer": "The 'ergo' folder is a dedicated folder for storing the Ergo node files, including the downloaded or built JAR file and the ergo.conf configuration file."
+  },
+  {
+    "question": "What are the alternative methods for running an Ergo full node mentioned in the guide?",
+    "answer": "The guide mentions two alternative methods for running an Ergo full node: Docker Setup and Running on Android."
+  }
+]

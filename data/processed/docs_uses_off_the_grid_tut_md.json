@@ -1,0 +1,93 @@
+{
+  "id": "docs_uses_off_the_grid_tut_md",
+  "title": "Getting Started with Off-the-Grid Ergo Trading Bot",
+  "summary": "This guide provides a detailed walkthrough for setting up and operating the Off-the-Grid Ergo Trading Bot, a decentralized grid trading bot on the Ergo blockchain. It covers prerequisites, an overview of the bot's features and limitations, step-by-step instructions for cloning and building the repository, node setup, fetching token information, creating grid orders, managing and monitoring grids, and running the matching bot. The guide also includes a video walkthrough as an alternative to the written instructions.",
+  "qa_pairs": [
+    {
+      "question": "What is the Off-the-Grid Ergo Trading Bot?",
+      "answer": "The Off-the-Grid Ergo Trading Bot is a decentralized grid trading bot for the Ergo blockchain."
+    },
+    {
+      "question": "What are the key features of the Off-the-Grid Ergo Trading Bot?",
+      "answer": "The key features include secure contract-based trading, off-chain bots for order tracking and execution, and compatibility with Spectrum AMM for liquidity matching."
+    },
+    {
+      "question": "What are the prerequisites for setting up the Off-the-Grid Ergo Trading Bot?",
+      "answer": "The prerequisites include knowledge of the Ergo blockchain and grid trading strategies, familiarity with Rust programming and CLI tools, and a configured Ergo node and wallet."
+    },
+    {
+      "question": "How do you clone and build the Off-the-Grid Ergo Trading Bot repository?",
+      "answer": "To clone and build the repository, you can either use Nix (recommended for simplicity) or Cargo."
+    },
+    {
+      "question": "What are the limitations of the Off-the-Grid Ergo Trading Bot?",
+      "answer": "The limitations include the contracts not being audited, and profits not being guaranteed due to market risks."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting Started with Off-the-Grid Ergo Trading Bot",
+      "level": 1,
+      "content": "This guide provides a thorough walkthrough for setting up and operating the **[Off-the-Grid Ergo Trading Bot](https://github.com/Telefragged/off-the-grid)** decentralized grid trading bot on the Ergo blockchain.\n\n/// details | Video Guide\n    {type: info, open: true}\nAlternatively, a video walkthrough from MarcTheShark can be found here: [Ergo Grid Trading Bot Setup](https://www.youtube.com/watch?v=LsRb8_G9rzE)\n///\n\n---"
+    },
+    {
+      "heading": "Prerequisites",
+      "level": 2,
+      "content": "Before proceeding, ensure the following:\n\n1. **Knowledge and Tools:**\n\n    - Basic understanding of the Ergo blockchain and grid trading strategies.\n    - Familiarity with Rust programming language and CLI tools.\n\n2. **Environment Setup:**\n\n    - Installed [Rust](https://rustup.rs/) and Cargo (Rust's package manager).\n    - Configured Ergo node and wallet. Follow [Ergo Node Setup](https://docs.ergoplatform.com/node/install/) and [Wallet Guide](https://docs.ergoplatform.com/node/wallet/).\n\n3. **Nix Installation (Optional):**\n\n    - For easier building and execution, install [Nix](https://nixos.org/).\n\n---"
+    },
+    {
+      "heading": "Overview of Off-the-Grid",
+      "level": 2,
+      "content": "**Off-the-Grid** enables decentralized, automated grid trading on the Ergo blockchain, providing features such as:\n\n- Secure contract-based trading ensuring order safety.\n- Off-chain bots for order tracking and execution.\n- Compatibility with Spectrum AMM for liquidity matching.\n\n**Limitations:**\n\n- Contracts are not audited\u2014exercise caution with significant assets.\n- Profits are not guaranteed, and risks depend on market conditions.\n\n---"
+    },
+    {
+      "heading": "Step-by-Step Guide",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "1. Clone and Build the Repository",
+      "level": 3,
+      "content": "1. **Clone the Repository:**\n\n    ```bash\n    git clone https://github.com/Telefragged/off-the-grid.git\n    cd off-the-grid\n    ```\n\n2. **Build with Cargo or Nix:**\n\n    - **With Nix:** (Recommended for simplicity)\n\n        ```bash\n        nix build\n        ```\n\n        The executable is placed in `./result/bin/off-the-grid`.\n\n    - **With Cargo:**\n\n        ```bash\n        cargo build --release\n        ```\n\n        The executable is in `./target/release/off-the-grid`.\n\n---"
+    },
+    {
+      "heading": "2. Node Setup",
+      "level": 3,
+      "content": "1. **Node Configuration:**\n\n    Update the `node_config.json` file with:\n\n    - `api_url`: Your Ergo node's API URL (e.g., `http://127.0.0.1:9053`).\n    - `api_key`: API key from your Ergo node.\n\n    Example:\n\n    ```json\n    {\n        \"api_url\": \"http://127.0.0.1:9053\",\n        \"api_key\": \"your-wallet-api-key\"\n    }\n    ```\n\n2. **Set Up Wallet:**\n\n    Follow the Ergo wallet setup guide. Ensure the wallet is initialized and synchronized.\n\n3. **Generate Scans Configuration:**\n\n    Run the following command to generate `scan_config.json`:\n\n    ```bash\n    off-the-grid scans create-config\n    ```\n\n    To include all existing boxes, add `--rescan` to the command.\n\n---"
+    },
+    {
+      "heading": "3. Fetch Token Information (Optional)",
+      "level": 3,
+      "content": "For better usability, update the token list:\n\n```bash\noff-the-grid tokens update\n```\n\nThis fetches token details from Spectrum's API and saves them locally.\n\n---"
+    },
+    {
+      "heading": "4. Create Grid Orders",
+      "level": 3,
+      "content": "1. **Define a Grid Order:**\n\n    Use the `grid create` command to specify trading parameters:\n\n    ```bash\n    off-the-grid grid create -t <token_name> -v <total_value> -o <num_orders> -r <high>-<low> -i <grid_id>\n    ```\n\n    - `<token_name>`: Name of the token to trade.\n    - `<total_value>`: Total Ergo value for the grid.\n    - `<num_orders>`: Number of grid orders.\n    - `<high>` and `<low>`: Price range for the grid.\n    - `<grid_id>`: Unique identifier for the grid.\n\n    **Example:**\n\n    ```bash\n    off-the-grid grid create -t COMET -v 10 -o 50 -r 50000-100000 -i comet\n    ```\n\n2. **Confirm Transaction:**\n\n    After generating the grid order, review and confirm using on-screen prompts.\n\n---"
+    },
+    {
+      "heading": "5. Manage and Monitor Grids",
+      "level": 3,
+      "content": "1. **List Active Grids:**\n\n    ```bash\n    off-the-grid grid list\n    ```\n\n    This command displays all active grids with details like bid/ask prices and profit.\n\n2. **View Grid Details:**\n\n    ```bash\n    off-the-grid grid details -i <grid_id>\n    ```\n\n    Replace `<grid_id>` with the grid's unique identifier.\n\n3. **Redeem Grid Orders:**\n\n    Close or redeem grid orders with:\n\n    ```bash\n    off-the-grid grid redeem -i <grid_id>\n    ```\n\n---"
+    },
+    {
+      "heading": "6. Run the Matching Bot",
+      "level": 3,
+      "content": "1. **Configure Matcher:**\n\n    Set up the reward address in `matcher_config.json`:\n\n    ```json\n    {\n        \"reward_address\": \"your_reward_address\"\n    }\n    ```\n\n    Alternatively, use an environment variable:\n\n    ```bash\n    export MATCHER_REWARD_ADDRESS=\"your_reward_address\"\n    ```\n\n2. **Start the Matcher:**\n\n    ```bash\n    off-the-grid matcher\n    ```\n\n    The bot logs successful transactions and errors. Multiple matchers may compete for transactions, so occasional failures are expected.\n\n---"
+    },
+    {
+      "heading": "7. Optimize and Analyze",
+      "level": 3,
+      "content": "1. **Performance Monitoring:**\n\n    Check logs to identify issues or opportunities for improvement:\n\n    ```bash\n    off-the-grid logs tail\n    ```\n\n2. **Experiment with Parameters:**\n\n    Test various configurations to find optimal settings for market conditions.\n\n3. **Integrate Analytics:**\n\n    Use tools like Spectrum to track market trends and evaluate the bot's performance.\n\n---"
+    },
+    {
+      "heading": "Best Practices",
+      "level": 2,
+      "content": "- **Security:** Safeguard your API keys and wallet credentials.\n\n- **Caution:** Avoid over-investing in untested strategies or assets.\n\n- **Stay Updated:** Keep the bot, tokens, and configs up-to-date with regular updates.\n\nFor additional assistance, consult the repository's documentation or contact the community."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/off_the_grid_tut.md",
+  "processed_at": "2025-05-11T20:03:31.980325",
+  "ai_processed": true
+}

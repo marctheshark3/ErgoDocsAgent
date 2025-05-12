@@ -1,0 +1,1 @@
+This guide details the recommended method for running an Ergo node on Android using Termux directly, which is best suited for the resource-efficient "digest" mode. It covers the prerequisites, steps to update Termux packages, install dependencies, download the Ergo node JAR, and create a configuration file for the digest mode.

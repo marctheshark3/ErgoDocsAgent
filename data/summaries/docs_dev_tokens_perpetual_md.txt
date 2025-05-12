@@ -1,0 +1,7 @@
+The document discusses two key concepts in ErgoScript:
+
+1. Perpetual Tokens: ErgoScript allows the creation of perpetual tokens, which are designed to exist indefinitely unless removed by garbage collection. The provided code snippet ensures the persistence of a collection of perpetual tokens.
+
+2. Multi-Stage Protocols: Multi-stage protocols enable scripts to reference the scripts of subsequent stages. This is beneficial when multiple scripts need to interact, but it can lead to cyclic reference problems. The document explains how to overcome this issue by storing script hashes in box registers.
+
+The document also mentions that the "max-once-per-block-use" perpetual token offers more flexibility and power compared to the "vanilla" perpetual token, and should be considered as a distinct design pattern.

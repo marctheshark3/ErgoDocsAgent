@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is decentralized grid trading?",
+    "answer": "Decentralized grid trading is a concept implemented on the Ergo blockchain that allows for automated trading orders while ensuring users maintain control over their funds."
+  },
+  {
+    "question": "What are two notable implementations of decentralized grid trading?",
+    "answer": "Two notable implementations are the Off the Grid and Machina Finance projects."
+  },
+  {
+    "question": "What is the purpose of the Off the Grid dApp?",
+    "answer": "Off the Grid is a decentralized application (dApp) that builds on the grid trading contract proposed by kushti and includes an execution bot/batcher for automating order matching without user interaction."
+  },
+  {
+    "question": "What is Machina Finance developing?",
+    "answer": "Machina Finance is developing a decentralized exchange (DEX) that utilizes grid order contracts."
+  },
+  {
+    "question": "Where can I learn more about grid trading?",
+    "answer": "You can learn more about grid trading on Investopedia."
+  }
+]

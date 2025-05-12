@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the current best practices for debugging ErgoScript smart contracts?",
+    "answer": "1. Thorough Unit Testing, 2. Careful Logic Design, 3. Code Reviews, 4. Formal Verification (Advanced)"
+  },
+  {
+    "question": "What is the purpose of the `debug()` function in ErgoScript?",
+    "answer": "The `debug()` function is intended to output information during script evaluation, likely visible in node logs when a transaction using the script is validated."
+  },
+  {
+    "question": "What are some external tools and simulators available for testing and debugging ErgoScript?",
+    "answer": "1. Spectrum Finance ErgoScript Simulator, 2. Fleet SDK Playground / REPL, 3. escript.online"
+  },
+  {
+    "question": "Why is a strong emphasis placed on off-chain testing and careful design when debugging ErgoScript contracts?",
+    "answer": "Due to the limitations of on-chain debugging, as the code executes within the constrained and deterministic environment of the blockchain, standard interactive debuggers or extensive logging are often not available during on-chain execution."
+  },
+  {
+    "question": "How can transaction failure analysis be used to debug ErgoScript contracts?",
+    "answer": "If a transaction attempting to spend a contract box fails, the node logs might provide some information about the reason, which can offer clues, though they might not pinpoint the exact line of code."
+  }
+]

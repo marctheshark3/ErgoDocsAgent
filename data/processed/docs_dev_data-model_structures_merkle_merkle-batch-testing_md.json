@@ -1,0 +1,68 @@
+{
+  "id": "docs_dev_data-model_structures_merkle_merkle-batch-testing_md",
+  "title": "Testing Merkle Batch Proofs",
+  "summary": "This document provides examples of how to write tests for Merkle Batch Proofs using both Rust (sigma-rust) and Scala (scrypto) libraries. The tests cover the creation, verification, serialization, and deserialization of batch Merkle proofs. The Rust tests use the sigma-rust library, while the Scala tests use the scrypto library. The tests ensure the correctness of Merkle Batch Proof implementation in the Ergo blockchain.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of testing Merkle Batch Proofs in the Ergo blockchain?",
+      "answer": "Testing Merkle Batch Proofs is crucial to ensure the correctness of their implementation in the Ergo blockchain."
+    },
+    {
+      "question": "How are Merkle Batch Proofs tested in Rust using the sigma-rust library?",
+      "answer": "In Rust, the sigma-rust library provides the necessary tools to create and test Merkle Batch Proofs, including tests for creation, verification, serialization, and deserialization."
+    },
+    {
+      "question": "How are Merkle Batch Proofs tested in Scala using the scrypto library?",
+      "answer": "In Scala, the scrypto library is used to test Merkle Batch Proofs, including tests for tree creation, proof generation, verification, and serialization."
+    },
+    {
+      "question": "What are the key components involved in testing Merkle Batch Proofs in Rust?",
+      "answer": "The key components involved in testing Merkle Batch Proofs in Rust include the MerkleTree, BatchMerkleProof, and ScorexSerializable classes."
+    },
+    {
+      "question": "What are the key components involved in testing Merkle Batch Proofs in Scala?",
+      "answer": "The key components involved in testing Merkle Batch Proofs in Scala include the MerkleTree, BatchMerkleProof, BatchMerkleProofSerializer, and Blake2b256 hash function."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Merkle\n---"
+    },
+    {
+      "heading": "Testing Merkle Batch Proofs",
+      "level": 1,
+      "content": "Testing Merkle Batch Proofs is crucial to ensure the correctness of their implementation in the Ergo blockchain. This section provides examples of how to write tests for Merkle Batch Proofs using both Rust (`sigma-rust`) and Scala (`scrypto`). These tests cover the creation, verification, serialization, and deserialization of batch Merkle proofs."
+    },
+    {
+      "heading": "Rust (`sigma-rust`) Testing",
+      "level": 3,
+      "content": "In Rust, the `sigma-rust` library provides the necessary tools to create and test Merkle Batch Proofs. Below is a series of tests written using the Rust testing framework.\n\n```rust\n#[cfg(test)]\nmod tests {\n    use sigma_merkle_tree::merkletree::MerkleTree;\n    use sigma_merkle_tree::MerkleNode;\n    use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;\n    use sigma_ser::ScorexSerializable;\n    use blake2::Blake2b256;\n\n    #[test]\n    fn test_merkle_tree_creation() {\n        let data_1 = [1u8; 32];\n        let data_2 = [2u8; 32];\n        let data_3 = [3u8; 32];\n\n        let node_1 = MerkleNode::from_bytes(data_1);\n        let node_2 = MerkleNode::from_bytes(data_2);\n        let node_3 = MerkleNode::from_bytes(data_3);\n\n        let tree = MerkleTree::new(vec![node_1, node_2, node_3]);\n        assert!(tree.root_hash().is_some(), \"Merkle tree root hash should be generated\");\n    }\n\n    #[test]\n    fn test_batch_merkle_proof_generation() {\n        let data_1 = [1u8; 32];\n        let data_2 = [2u8; 32];\n        let data_3 = [3u8; 32];\n\n        let node_1 = MerkleNode::from_bytes(data_1);\n        let node_2 = MerkleNode::from_bytes(data_2);\n        let node_3 = MerkleNode::from_bytes(data_3);\n\n        let tree = MerkleTree::new(vec![node_1, node_2, node_3]);\n        let proof = tree.proof_by_indices(&[0, 2]).unwrap();\n\n        assert_eq!(proof.indices.len(), 2, \"Batch proof should include two indices\");\n    }\n\n    #[test]\n    fn test_batch_merkle_proof_verification() {\n        let data_1 = [1u8; 32];\n        let data_2 = [2u8; 32];\n        let data_3 = [3u8; 32];\n\n        let node_1 = MerkleNode::from_bytes(data_1);\n        let node_2 = MerkleNode::from_bytes(data_2);\n        let node_3 = MerkleNode::from_bytes(data_3);\n\n        let tree = MerkleTree::new(vec![node_1, node_2, node_3]);\n        let proof = tree.proof_by_indices(&[0, 2]).unwrap();\n\n        assert!(proof.valid(tree.root_hash().as_ref()), \"Merkle proof should be valid\");\n    }\n\n    #[test]\n    fn test_batch_merkle_proof_serialization_deserialization() {\n        let data_1 = [1u8; 32];\n        let data_2 = [2u8; 32];\n        let data_3 = [3u8; 32];\n\n        let node_1 = MerkleNode::from_bytes(data_1);\n        let node_2 = MerkleNode::from_bytes(data_2);\n        let node_3 = MerkleNode::from_bytes(data_3);\n\n        let tree = MerkleTree::new(vec![node_1, node_2, node_3]);\n        let proof = tree.proof_by_indices(&[0, 2]).unwrap();\n\n        let serialized_proof = proof.scorex_serialize_bytes().unwrap();\n        let deserialized_proof = BatchMerkleProof::scorex_parse_bytes(&serialized_proof).unwrap();\n\n        assert_eq!(proof, deserialized_proof, \"Deserialized proof should match the original\");\n    }\n}\n```"
+    },
+    {
+      "heading": "Code References",
+      "level": 4,
+      "content": "- **MerkleTree**: [`merkletree.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/merkletree.rs)\n- **BatchMerkleProof**: [`batchmerkleproof.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs)\n- **Serialization Methods**: [`scorex_serializable.rs`](https://github.com/ergoplatform/sigma-rust/blob/develop/sigma-ser/src/scorex_serializable.rs)"
+    },
+    {
+      "heading": "Scala (`scrypto`) Testing",
+      "level": 3,
+      "content": "For Scala, the `scrypto` library is used to test Merkle Batch Proofs. Below are the test cases using ScalaTest, covering tree creation, proof generation, verification, and serialization.\n\n```scala\nimport org.scalatest.flatspec.AnyFlatSpec\nimport org.scalatest.matchers.should.Matchers\nimport scorex.crypto.authds.merkle.{MerkleTree, BatchMerkleProof}\nimport scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer\nimport scorex.crypto.hash.{Blake2b256, Digest32}\nimport scorex.utils.Random\n\nclass MerkleBatchProofSpec extends AnyFlatSpec with Matchers {\n  implicit val hf = Blake2b256\n\n  \"Merkle Tree\" should \"be created correctly\" in {\n    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data\n    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree\n\n    tree.rootHash should not be null\n  }\n\n  \"Batch Merkle Proof\" should \"be generated correctly\" in {\n    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data\n    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree\n\n    val proof = tree.proofByIndices(Seq(0, 2)).get // Generate batch proof for elements at index 0 and 2\n    proof.indices.length shouldEqual 2\n  }\n\n  it should \"verify correctly\" in {\n    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data\n    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree\n\n    val proof = tree.proofByIndices(Seq(0, 2)).get // Generate batch proof for elements at index 0 and 2\n    proof.valid(tree.rootHash) shouldBe true // Verify the proof against the tree's root hash\n  }\n\n  it should \"serialize and deserialize correctly\" in {\n    val leafData = Seq.fill(3)(Random.randomBytes(32)) // Generate random leaf data\n    val tree = MerkleTree(leafData.map(Digest32 @@ _)) // Create a Merkle Tree\n\n    val proof = tree.proofByIndices(Seq(0, 2)).get // Generate batch proof for elements at index 0 and 2\n    val serializer = new BatchMerkleProofSerializer[Digest32, Blake2b256.type] // Serializer for BatchMerkleProof\n\n    val serializedProof = serializer.serialize(proof) // Serialize the proof\n    val deserializedProof = serializer.deserialize(serializedProof).get // Deserialize the proof\n\n    proof shouldEqual deserializedProof // Check that the original and deserialized proofs are equal\n  }\n}\n```"
+    },
+    {
+      "heading": "Code References",
+      "level": 4,
+      "content": "- **MerkleTree**: [`MerkleTree.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala)\n- **BatchMerkleProof**: [`BatchMerkleProof.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala)\n- **BatchMerkleProofSerializer**: [`BatchMerkleProofSerializer.scala`](https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala)"
+    },
+    {
+      "heading": "Explanation:",
+      "level": 3,
+      "content": "- **Merkle Tree Creation**: The test generates random leaf data and creates a `MerkleTree`. This ensures that the tree is correctly constructed and the root hash is generated.\n- **Batch Merkle Proof Generation**: The test creates a batch proof for selected elements (indices 0 and 2) of the Merkle Tree.\n- **Proof Verification**: The test verifies the validity of the generated batch proof against the Merkle root, ensuring the proof correctly represents the inclusion of those elements in the tree.\n- **Serialization and Deserialization**: The test checks the ability to serialize a batch proof, then deserialize it back to its original form, confirming the integrity of the proof after these operations.\n\nThese tests collectively ensure that the core functionality of Merkle Batch Proofs in `scrypto` operates correctly, providing developers with confidence in using this library for cryptographic proofs in their applications."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/data-model/structures/merkle/merkle-batch-testing.md",
+  "processed_at": "2025-05-11T19:20:21.395856",
+  "ai_processed": true
+}

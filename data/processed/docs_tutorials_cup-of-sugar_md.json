@@ -1,0 +1,58 @@
+{
+  "id": "docs_tutorials_cup-of-sugar_md",
+  "title": "cup-of-sugar.md",
+  "summary": "Cup of Sugar is a community-focused, sustainable micro grocer and cafe that emphasizes local sourcing and agriculture. It aims to offer farm-fresh, traceable products while promoting and supporting local farmers and producers. Cup of Sugar serves as an innovation hub, exploring the use of blockchain technology to enhance local economies, including systems like Local Exchange Trading Systems (LETS) and decentralized incentives. The team has been conducting market research to assess price variations and gauge interest from both producers and consumers. The goal is to develop a scalable model for community-driven markets that can support alternative economies, using platforms like Ergo to facilitate trusted, peer-to-peer transactions and community participation.",
+  "qa_pairs": [
+    {
+      "question": "What is the main focus of Cup of Sugar?",
+      "answer": "Cup of Sugar is a community-focused, sustainable micro grocer and cafe that emphasizes local sourcing and agriculture."
+    },
+    {
+      "question": "How does Cup of Sugar aim to enhance local economies?",
+      "answer": "Cup of Sugar is exploring the use of blockchain technology to enhance local economies, including systems like Local Exchange Trading Systems (LETS) and decentralized incentives."
+    },
+    {
+      "question": "What kind of market research has the Cup of Sugar team been conducting?",
+      "answer": "The team has been conducting market research at farmers markets, assessing price variations, and gauging interest from both producers and consumers."
+    },
+    {
+      "question": "What is the goal of the Cup of Sugar project?",
+      "answer": "The goal is to develop a scalable model for community-driven markets that can support alternative economies, using platforms like Ergo to facilitate trusted, peer-to-peer transactions and community participation."
+    },
+    {
+      "question": "What are some of the key features or technologies that Cup of Sugar is exploring?",
+      "answer": "Cup of Sugar is exploring the use of blockchain technology, Local Exchange Trading Systems (LETS), and decentralized incentives to enhance local economies and community-driven markets."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Cup of Sugar\n  - Community\n  - Local Economy\n  - LETS\n  - dApp\n  - ErgoHack\n---"
+    },
+    {
+      "heading": "Welcome to Cup of Sugar",
+      "level": 2,
+      "content": "[Visit the website](https://cupofsugar.io)\n\nCup of Sugar is a community-focused, sustainable micro grocer and cafe that emphasizes local sourcing and agriculture. The business aims to offer farm-fresh, traceable products while promoting and supporting local farmers and producers."
+    },
+    {
+      "heading": "Innovation Hub",
+      "level": 2,
+      "content": "Cup of Sugar serves as an innovation hub, exploring the use of blockchain technology to enhance local economies. This includes systems like Local Exchange Trading Systems (LETS) and decentralized incentives."
+    },
+    {
+      "heading": "Market Research",
+      "level": 2,
+      "content": "The team has been conducting market research at farmers markets, assessing price variations, and gauging interest from both producers and consumers."
+    },
+    {
+      "heading": "Project Goals",
+      "level": 2,
+      "content": "The goal is to develop a scalable model for community-driven markets that can support alternative economies. Using platforms like Ergo, Cup of Sugar aims to facilitate trusted, peer-to-peer transactions and community participation."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/tutorials/cup-of-sugar.md",
+  "processed_at": "2025-05-11T19:59:36.480032",
+  "ai_processed": true
+}

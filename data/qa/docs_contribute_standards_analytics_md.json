@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What on-chain metrics can be found on ergo.watch?",
+    "answer": "P2PK count."
+  },
+  {
+    "question": "What is required to be included on defillama.com/chain/Ergo?",
+    "answer": "Create an adaptor."
+  },
+  {
+    "question": "How can developers have their contributions recognized in the yearly report by developerreport.com and the weekly-updated Artemis dashboard?",
+    "answer": "Add your GitHub organization or repositories to this repository: https://github.com/electric-capital/crypto-ecosystems/blob/master/data/ecosystems/e/ergo.toml."
+  },
+  {
+    "question": "What is the purpose of the Artemis dashboard?",
+    "answer": "It provides weekly-updated developer activity for the Ergo ecosystem."
+  },
+  {
+    "question": "What is the purpose of the developerreport.com yearly report?",
+    "answer": "It recognizes developer contributions to the Ergo ecosystem."
+  }
+]

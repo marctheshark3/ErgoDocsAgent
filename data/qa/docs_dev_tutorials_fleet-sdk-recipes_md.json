@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "---\ntags:\n  - fleet-sdk\n  - typescript\n  - javascript\n  - sigmaprop\n  - ergotree\n  - registers\n  - p2pk\n  - validation\n  - tutorial\n  - serialization\n  - deserialization\n  - token-id\n  - numeric-regis..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Fleet SDK Recipes"
+  },
+  {
+    "question": "What is the 'Introduction' section about?",
+    "answer": "---\ntags:\n  - fleet-sdk\n  - typescript\n  - javascript\n  - sigmaprop\n  - ergotree\n  - registers\n  - p..."
+  },
+  {
+    "question": "What is the 'Fleet SDK Recipes' section about?",
+    "answer": "This page contains useful code snippets, patterns, and troubleshooting tips for common tasks when us..."
+  },
+  {
+    "question": "What is the 'Table of Contents' section about?",
+    "answer": "- [Fleet SDK Recipes](#fleet-sdk-recipes)\n  - [Table of Contents](#table-of-contents)\n  - [Validatin..."
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_protocol_tx_composing_md",
+  "title": "Composing Transactions",
+  "summary": "Ergo transactions represent atomic state transition operations that destroy existing boxes and generate new ones. Each transaction comprises input boxes, output boxes, and optional data-input boxes. Data inputs allow multiple transactions to reference the same UTXO without consuming it, reducing transaction fees and addressing limitations of traditional UTXO-based blockchains. Transactions must provide proof of spending correctness, and they are publicly viewable. Ergo provides tools like a transaction builder to compose and sign transactions, and also supports chained transactions that spend outputs of off-chain transactions.",
+  "qa_pairs": [
+    {
+      "question": "What are the three main components of an Ergo transaction?",
+      "answer": "Every Ergo transaction comprises: 1) One or more Input boxes, 2) One or more Output boxes, and 3) Zero or more Data-Input boxes."
+    },
+    {
+      "question": "What is the purpose of Data Inputs in Ergo transactions?",
+      "answer": "Data inputs allow multiple transactions within a block or slot to read the data from the same UTXO concurrently, without spending or destroying the data. This reduces transaction fees and addresses limitations of traditional UTXO-based blockchains."
+    },
+    {
+      "question": "What is the 'atomic state transition operation' performed by an Ergo transaction?",
+      "answer": "Each Ergo transaction represents an atomic state transition operation that destroys an existing box from the state and generates new ones."
+    },
+    {
+      "question": "What is the purpose of the 'proof of spending correctness' in Ergo transactions?",
+      "answer": "If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain proof of spending correctness, including context extension and data inputs, to satisfy the remaining cryptographic protection of the script."
+    },
+    {
+      "question": "What are some tools available for composing Ergo transactions?",
+      "answer": "Tools for composing Ergo transactions include the Transaction Builder application and the basic tutorial for sending payments."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Composing Transactions",
+      "level": 1,
+      "content": "Each Ergo transaction represents an **atomic state transition operation**. This operation *destroys* an existing [box](box.md) from the state and generates new ones."
+    },
+    {
+      "heading": "Anatomy of a Transaction",
+      "level": 2,
+      "content": "Every transaction executed on Ergo comprises **three main components**:\n\n- `One or more` **Input boxes**: These are the sources of your funds for the transaction. These boxes, which must already exist, will be destroyed by the transaction. The guard script in each box is evaluated and must return `true` for the transaction to be deemed valid.\n- `One or more` **Output boxes**: These are the destinations of your funds. These boxes will be created by the transaction.\n- `Zero or more` **Data-Input boxes**: These are supplementary boxes whose data can be referenced and utilized by the smart contracts of the inputs. The guard script in these boxes is not evaluated."
+    },
+    {
+      "heading": "Data Inputs",
+      "level": 3,
+      "content": "[Data inputs](read-only-inputs.md) are a unique feature introduced by Ergo and later adopted by Cardano with the *Vasil* Hardfork. This concept allows multiple transactions to share a data-input box, storing only a single reference to the box in the block.\n\nIn traditional UTXO-based blockchains, transactions typically require spending and destroying all inputs. However, Ergo introduces the concept of **data inputs** to allow transactions to reference existing UTXOs and read their data without consuming them. This innovation solves the limitations normally associated with eUTXO.\n\nData inputs enable multiple transactions within a block or slot to read the data from the same UTXO concurrently, as none of them actually spend or destroy the data. This parallel processing of data inputs reduces transaction fees, as smart contract execution is not required, and there is no need to create extra outputs. Additionally, data inputs address various other challenges, making them a valuable design choice for all UTXO-based blockchains."
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "- If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain *proof of spending correctness* - context extension (user-defined key-value map) and data inputs (links to existing boxes in the state) that can be used during script reduction to crypto, signatures that satisfy the remaining cryptographic protection of the script.\n- Transactions are not encrypted, which means that transactions included in blocks can be viewed publicly."
+    },
+    {
+      "heading": "Tools for Composing Transactions",
+      "level": 2,
+      "content": "- [Transaction builder](https://thierrym1212.github.io/txbuilder/): This application enables you to manipulate Ergo JSON transactions with a UI and to sign them with a wallet or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction for editing. [GitHub](https://github.com/ThierryM1212/transaction-builder/) | [Video](https://youtu.be/0VhfY7osT2k)\n- Refer to this [basic tutorial for sending a transaction](basics.md#sending-payments) for an introduction. \n\nErgo also supports ['*Chained transactions*'](chained.md) (spending outputs of off-chain transactions)."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/tx/composing.md",
+  "processed_at": "2025-05-11T19:25:54.774178",
+  "ai_processed": true
+}

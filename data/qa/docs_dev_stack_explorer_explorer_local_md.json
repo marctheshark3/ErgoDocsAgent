@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Explorer\n\n## Intro \n\nThe Ergo Blockchain Explorer is your interface with the blockchain and provides four services. \n\n1. `modules/chain-grabber`: Dumps aggregated data blockchain -> database\n2. `mod..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Explorer"
+  },
+  {
+    "question": "What is the 'Intro' section about?",
+    "answer": "The Ergo Blockchain Explorer is your interface with the blockchain and provides four services. \n\n1. ..."
+  },
+  {
+    "question": "What is the 'Sources' section about?",
+    "answer": "- [explorer-backend](https://github.com/ergoplatform/explorer-backend)\n- [explorer-frontend](https:/..."
+  }
+]

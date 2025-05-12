@@ -1,0 +1,38 @@
+{
+  "id": "docs_archive_todo_md",
+  "title": "todo.md",
+  "summary": "The document discusses the potential of edge computing in the development ecosystem and the ergo-play-boilerplate project, which provides a starting point for newcomers to the Ergo blockchain development. It includes links to the Edge and ergo-play-boilerplate GitHub repositories, as well as a link to a video on the \"Completeness of Ergo\" presented at the Ergoversary Summit 2023.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the ergo-play-boilerplate repository?",
+      "answer": "The ergo-play-boilerplate repository provides a barebone code for newcomers to jump into the world of Ergo development and get their feet wet quickly."
+    },
+    {
+      "question": "What is the role of edge in the Ergo development ecosystem?",
+      "answer": "Edge can play a big part in the Ergo development ecosystem if it's being utilized, maintained, and improved over time."
+    },
+    {
+      "question": "What is the topic of the Completeness of Ergo video by Kushti?",
+      "answer": "The video discusses the completeness of the Ergo blockchain platform."
+    },
+    {
+      "question": "Where can the Ergo-play-boilerplate repository be found?",
+      "answer": "The Ergo-play-boilerplate repository can be found at https://github.com/kii-dot/ergo-play-boilerplate."
+    },
+    {
+      "question": "Where can the Edge repository be found?",
+      "answer": "The Edge repository can be found at https://github.com/Ergo-Lend/edge."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "I think that edge can play a big part in the development ecosystem if it\u2019s being utilized, maintained and improved over time. And ergo-play-boilerplate can give newcomers barebone code to jump into the world of ergo development and get their feet wet super quickly. \n\n Edge - https://github.com/Ergo-Lend/edge\nErgo-play-boilerplate - https://github.com/kii-dot/ergo-play-boilerplate \n\n\n- [Completeness of Ergo | Kushti | Ergoversary Summit 2023](https://www.youtube.com/watch?v=49UmOkx6pj0&list=PL8-KVrs6vXLRxmOmprVdXkHDcO4IaQZOY&index=2)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/archive/todo.md",
+  "processed_at": "2025-05-11T19:16:43.143151",
+  "ai_processed": true
+}

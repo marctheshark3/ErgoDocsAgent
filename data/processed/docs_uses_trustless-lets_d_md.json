@@ -1,0 +1,73 @@
+{
+  "id": "docs_uses_trustless-lets_d_md",
+  "title": "trustless-lets_d.md",
+  "summary": "The document describes a trustless Local Exchange Trading System (LETS) that does not require a trusted management committee. It presents four variants of the LETS system, each with different features:\n\nLETS-1: Zero sum, with collateral - Requires a time-locked joining fee and allows negative LETS balances covered by ergs collateral.\n\nLETS-2: Zero sum, no collateral - Requires a non-refundable joining fee, with zero sum LETS balances.\n\nLETS-3: Positive sum, with collateral - Requires a time-locked joining fee, has positive sum LETS balances, and uses ergs collateral.\n\nLETS-4: Positive sum, no collateral - Requires a non-refundable joining fee and has positive sum LETS balances.\n\nThe document also mentions the possibility of a more advanced variant allowing multiple senders and receivers in a single transaction.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of a Local Exchange Trading System (LETS)?",
+      "answer": "A LETS is aimed at developing the local economy and is usually used by people of a locality in the vicinity of each other."
+    },
+    {
+      "question": "What is the key difference between a managed/permissioned LETS and a trustless LETS?",
+      "answer": "A managed/permissioned LETS depends on a committee of trusted members to enroll new members, while a trustless LETS has no management committee and uses a trusted pricing oracle instead."
+    },
+    {
+      "question": "How is the LETS defined in the trustless model described?",
+      "answer": "The LETS is uniquely defined by a global token box that contains LETS membership tokens, which defines the LETS parameters such as the location, currency unit, and pricing oracle."
+    },
+    {
+      "question": "What is the purpose of the minimum ergs requirement for joining a LETS in the basic variant (LETS-1)?",
+      "answer": "The minimum ergs requirement is to prevent spam and DDoS attacks, and the ergs are locked until a minimum withdrawal time has passed."
+    },
+    {
+      "question": "What is the key feature of the zero-sum property in the LETS-1 model?",
+      "answer": "The sum of the LETS balances of all member boxes is zero, and member boxes are allowed to have a negative balance as long as it is within a certain limit, which is covered by the collateral in ergs."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "A Local Exchange Trading System (LETS) is aimed at developing the local economy and is usually used by people of a locality in the vicinity of each other. For a brief overview of LETS see this article, which also describes an ErgoScript implementation of a committee managed LETS. We call such a system managed or permissioned, since it depends on a committee of trusted members to enroll new members into the LETS. Here we describe a trustless LETS system, i.e., one where there is no management committee needed for enrolment."
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "A LETS involves several parties that agree to use some form of \"local currency\", usually pegged to the country's main currency at a 1:1 rate. Assume that our LETS is based in a European country where the currency is euros, and the exchange is done in \"local euros\", which are considered to be equivalent to national euros.\n\nEach user in LETS has an account, which contains the LETS balance of that user (in Local euros). On joining, each user has a balance of zero. The balance is stored in a (possibly decentralized) ledger. An interesting feature of LETS is that a user with zero balance can also \"withdraw\" money, but only for paying another LETS user. At any time the sum of LETS balances of all the users is zero.\n\nAs an example, Alice with zero balance wishes to purchase one litre of milk for 2 euros from Bob who is also a member of LETS with zero balance. She transfers 2 euros from her account to Bob's, making her balance -2 and Bob's +2. Bob can then transfer some or all of his balance to another LETS user in exchange for goods or services."
+    },
+    {
+      "heading": "Trustless LETS",
+      "level": 2,
+      "content": "Since we desire a trustless LETS, we cannot depend on any trusted group of people to admit users. Note that we will still have a committee to perform some tasks such as setting up the LETS parameters (local currency, the maximum number of members, etc) and consuming any joining fee.\n\nWe will only assume a trusted pricing oracle that gives the current rate of euros to ergs identified by some global id (rateTokenID) and a singleton box containing exactly one token with this id. This box also contains the rate of ergs to euros at any given period. The rate is updated by spending this box and creating another singleton box with the new rate.\n\nAt any instance, our LETS is uniquely defined by a global token box that contains some LETS membership tokens with id letsTokenID. This box defines the LETS parameters such as the location, the currency unit, rateTokenID, etc. The token box is initially started with, say, 10000 LETS membership tokens. One or more users can spend this box and create their individual LETS boxes as outputs of the transaction.\n\nA LETS box represents a LETS member and must be used for a LETS transaction. A LETS transaction is between two LETS members, one being the sender and the other the receiver, such that the sender transfers some positive amount of the LETS currency (local euros) to the receiver. Such a transaction consumes the member's boxes and recreates them as output with the updated balance."
+    },
+    {
+      "heading": "The Basic Variant",
+      "level": 2,
+      "content": "To prevent spam and DDoS attacks, we require at least some minimum number of ergs (minErgsToJoin) to be locked in the newly created member's box. The ergs will be locked until at least minWithdrawTime number of blocks have been mined. A box is allowed to have a negative LETS balance upto the amount that can be covered by the locked ergs (using the rate at the time of trade).\n\n```scala\n// a tokenBox stores the membership tokens and has this script\nval tokenBox = OUTPUTS(0) // the first output must also be a tokenBox\n// first output contains remaining LETS tokens\ndef isLets(b:Box) = {\n   // A LETS box must have exactly 1 membership token in tokens(0)\n   b.tokens(0)._1 == letsTokenID && b.tokens(0)._2 == 1 &&\n   blake2b256(b.propositionBytes) == memberBoxScriptHash &&\n   SELF.R4[Long].get == 0 && // start the box with zero LETS balance\n   b.value >= minErgsToJoin && // the box must contain some minimum ergs\n   b.R6[Long].get <= HEIGHT // store the creation height in R6\n}\n\n// how many lets boxes creared in the tx?\nval numLetsBoxes = OUTPUTS.filter({(b:Box) => isLets(b)}).size\n\n// In a transaction, the following are preserved for the token box ...\ntokenBox.tokens(0)._1 == SELF.tokens(0)._1 &&                //  token id\ntokenBox.tokens(0)._2 == SELF.tokens(0)._2 - numLetsBoxes && //  quantity\ntokenBox.propositionBytes == SELF.propositionBytes           //  script\n```\n\n\nA LETS member's box is protected by the script below, whose hash memberBoxScriptHash is used above. For simplicity, the script only allows a single (sender, receiver) pair per transaction.\n\n```scala\nval validRateOracle = CONTEXT.dataInputs(0).tokens(0)._1 == rateTokenID\nval rate = CONTEXT.dataInputs(0).R4[Int].get\nval inBalance = SELF.R4[Long].get    // LETS balance of current input\nval pubKey = SELF.R5[SigmaProp].get  // owner of the current input\nval createdAt = SELF.R6[Long].get    // height at which current input was mined\n\nval index = getVar[Int](0).get       // index of the corresponding output\nval out = OUTPUTS(index)\nval outBalance = out.R4[Long].get    // LETS balance of the output\n\n// A LETS box is one that has the same script as the current box\nval isMemberBox = {(b:Box) => b.propositionBytes == SELF.propositionBytes}\nval letsInputs = INPUTS.filter(isMemberBox)    // all LETS input boxes\nval letsOutputs = OUTPUTS.filter(isMemberBox)  // all LETS output boxes\n\n// The current input belongs to the receiver if its LETS balance increases\n// There may be some ergs in receiver's input box. We need to ensure that\n// the receiver's output box also contains the same amount of ergs as input\nval receiver = outBalance > inBalance && out.value == SELF.value\n\nval getBalance = {(b:Box) => b.R4[Long].get} // returns LETS balance of a box\n\nval letsBalIn = letsInputs.map(getBalance).fold(0L, {(l:Long, r:Long) => l + r})\nval letsBalOut = letsOutputs.map(getBalance).fold(0L, {(l:Long, r:Long) => l + r})\n\n// sender box can contain less amount of ergs (sender may withdraw ergs provided \n// that any negative LETS balance of sender in out is backed by sufficient ergs)\nval correctErgs = out.value >= -outBalance * rate && (\n  out.value >= SELF.value || SELF.R6[Long].get + minWithdrawTime > HEIGHT\n)\n\n// for the receiver, we don't touch the erg balance, \n// since a receiver is not actively involved in the transaction\n\ninBalance != outBalance && // some transaction should occur; balance must change\nSELF.tokens(0)._1 == letsTokenID && // the current input has the right token\nout.tokens(0)._1 == letsTokenID && // corresponding output has the right token\nvalidRateOracle &&          // oracle providing rate has the correct \"rate token\"\nletsBalIn == letsBalOut &&  // total LETS balance is preserved in the transaction\nletsInputs.size == 2 && letsOutputs.size == 2 &&  // only two LETS inputs, outputs\nout.propositionBytes == SELF.propositionBytes &&  // out is a LETS box ...\nout.R5[SigmaProp].get == pubKey &&                // ... with the right pub key\nout.R6[Long].get == SELF.R6[Long].get &&          // ... and creation height\n(receiver ||              // either current input belongs to receiver ...\n  (pubKey && correctErgs) // ... or out has correct ergs and tx has signature\n)\n```\n\nThe transaction spending a box with the above script requires:\n\n- The sum of the LETS balance of inputs and outputs is preserved\n- There are two LETS inputs and two LETS outputs\n- The public keys (stored in R5) is preserved in the corresponding output\n- The creation height (stored in R6) be preserved in the corresponding output\n- We say that some public key is the receiver if the LETS balance of its output is higher than that of its input.\n\nThe last condition requires that either the input and output boxes belong to the receiver (so that the ergs are preserved), or, in case they belong to the sender, a signature is provided and the output is backed by the required number of ergs if its LETS balance is negative. Furthermore, it requires that the sender's ergs balance cannot be reduced until at least minWithdrawTime number of blocks have been mined after the ergs were locked.\n\nCompared to the managed LETS, the above system has the following differences:\n\n- **No membership record**: Unlike the managed LETS, We don't store any membership information here.\n- **Multiple-boxes**: A person can create multiple membership boxes, which is permitted. We only require that any negative balance be backed by the corresponding number of ergs locked in it."
+    },
+    {
+      "heading": "LETS-1: Zero Sum, Collateral",
+      "level": 2,
+      "content": "The above is the basic variant, which we call LETS-1. It has the following features:\n\n- **Time-locked Joining-Fee**: To prevent spam attacks, a member has to pay a certain minimum fee in ergs at the time of joining. This fee is refundable but only after a predefined number of blocks.\n- **Zero Sum**: The sum of the LETS balances of all member boxes is zero. Member boxes are allowed to have a negative balance as long as it is within a certain limit.\nCollateral: For the sender's output, ergs are used as collateral to cover negative LETS balance at the current exchange rate.\nThe following are some variations of LETS-1."
+    },
+    {
+      "heading": "LETS-2: Zero Sum, No collateral",
+      "level": 2,
+      "content": "This is a slight variation of LETS-1 as follows:\n\n- **Non-refundable joining fee**: Similar to LETS-1, a joining fee is needed to prevent spam attacks. However, unlike LETS-1, this fee is non-refundable and must be sent to some predefined management committee.\n- **Zero Sum**: As in LETS-1."
+    },
+    {
+      "heading": "LETS-3: Positive-Sum, Collateral",
+      "level": 2,
+      "content": "The above two variants require the total LETS balance to be always zero. Here we consider a positive value for this sum. In particular, this variant has the following properties:\n\n- **Time-locked Joining Fee**: As in LETS-1.\n- **Positive Sum**: The LETS balance of every member must always be non-negative. This ensures that the sum of the LETS balances of all member boxes is positive. The initial LETS balance is set to a positive value based on the joining fee at the current rate, capped to some maximum value.\n- **Collateral**: Any reduction in ergs balance of the sender must be accompanied by a reduction of the corresponding LETS balance at the current exchange rate.\nWe can also allow topping up the LETS balance during a transaction by adding the equivalent amount of ergs."
+    },
+    {
+      "heading": "LETS-4: Positive-Sum, No collateral",
+      "level": 2,
+      "content": "This is similar to LETS-3 but with some small variations:\n\n- **Non-refundable Joining Fee**: As in LETS-2\n- **Positive-Sum**: As in LETS-3\n\nThe following table summarizes the variants:\n\nZero Sum\tPositive Sum\nCollateral\tLETS-1\tLETS-3\nNo collateral\tLETS-2\tLETS-4\n\n\nA more advanced variant can allow multiple senders and receivers that do not have to be in pairs."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/trustless-lets_d.md",
+  "processed_at": "2025-05-11T20:05:04.556284",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the URL for the Ergo Platform documentation?",
+    "answer": "https://docs.ergoplatform.com/"
+  },
+  {
+    "question": "How can one contribute to the Ergo Platform documentation?",
+    "answer": "By submitting a pull request."
+  },
+  {
+    "question": "What command is used to install the required packages for running the documentation locally?",
+    "answer": "python -m pip install -r requirements.txt"
+  },
+  {
+    "question": "What command is used to serve the documentation locally?",
+    "answer": "mkdocs serve"
+  },
+  {
+    "question": "What is the purpose of the Ergo Platform documentation?",
+    "answer": "To provide documentation for the Ergo Platform."
+  }
+]

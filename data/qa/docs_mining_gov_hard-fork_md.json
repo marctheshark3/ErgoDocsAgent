@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a hard fork in the context of the Ergo blockchain?",
+    "answer": "A hard fork in the Ergo blockchain typically involves significant changes to the underlying consensus mechanism or core protocol rules, which require all nodes or participants in the network to upgrade to the new version of the software."
+  },
+  {
+    "question": "Why are hard forks necessary in the Ergo blockchain?",
+    "answer": "Hard forks are necessary for introducing major upgrades, addressing critical vulnerabilities, and implementing governance decisions that require a clean break from previous rules."
+  },
+  {
+    "question": "How are hard forks implemented in the Ergo blockchain?",
+    "answer": "The implementation of a hard fork in Ergo follows these general steps: 1) Development and testing, 2) Coordination with the network."
+  },
+  {
+    "question": "What is the purpose of the `ForkResolutionSpec` file in the Ergo GitHub repository?",
+    "answer": "The `ForkResolutionSpec` file contains integration tests designed to validate the behavior of the network during and after a fork, ensuring that the nodes correctly resolve different chain forks and eventually converge on a single valid chain."
+  },
+  {
+    "question": "What role do the node configuration files, such as `nodes.conf`, play in setting up the environment for a hard fork in Ergo?",
+    "answer": "The node configuration files, such as `nodes.conf`, play a significant role in setting up the environment for the fork, as they specify the settings for different nodes in the network."
+  }
+]

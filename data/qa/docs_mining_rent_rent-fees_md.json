@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the average size of a standard box on the Ergo platform?",
+    "answer": "105 bytes"
+  },
+  {
+    "question": "What is the current storage rent fee for a standard box on Ergo?",
+    "answer": "0.13125 ergs"
+  },
+  {
+    "question": "How often is the storage rent fee collected on the Ergo platform?",
+    "answer": "Every four years"
+  },
+  {
+    "question": "What is the current minimum transaction fee per byte on the Ergo platform?",
+    "answer": "360 nanoergs per byte"
+  },
+  {
+    "question": "What is the estimated block reward on Ergo, given the current UTXO set size?",
+    "answer": "7.49 Ergs plus transaction fees"
+  }
+]

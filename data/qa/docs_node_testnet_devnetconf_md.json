@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the network type defined in the Ergo node configuration?",
+    "answer": "ergo.networkType = \"devnet\""
+  },
+  {
+    "question": "Where is the initial difficulty for the Ergo devnet network set?",
+    "answer": "ergo.chain.initialDifficultyHex"
+  },
+  {
+    "question": "What is the desired time interval between blocks in the Ergo devnet network?",
+    "answer": "ergo.chain.blockInterval"
+  },
+  {
+    "question": "Where is the directory for the Ergo wallet's secret storage set?",
+    "answer": "ergo.wallet.secretStorage.secretDir"
+  },
+  {
+    "question": "What is the Base16 representation of the genesis state roothash for the Ergo devnet network?",
+    "answer": "ergo.chain.genesisStateDigestHex"
+  }
+]

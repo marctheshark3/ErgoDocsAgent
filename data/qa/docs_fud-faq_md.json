@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Can Ergo developers manipulate the emission process?",
+    "answer": "No, the emission process of Ergo is controlled by a transparent smart contract, which is accessible for public viewing in Ergo's source code. This contract restricts developers from arbitrarily extracting coins."
+  },
+  {
+    "question": "Was all Erg pre-mined?",
+    "answer": "No, a common misconception is that Ergo coins were pre-mined and stored in a smart contract. Coins were produced at the blockchain's genesis and are systematically awarded to miners for their role in securing the network and processing transactions."
+  },
+  {
+    "question": "Can changes be made to the emission process?",
+    "answer": "Yes, changes to the emission process, such as the EIP-27 soft-fork, necessitate a consensus from the miners and are publicly visible on the blockchain."
+  },
+  {
+    "question": "Does Ergo allow out-of-thin-air emission in the coinbase transaction?",
+    "answer": "No, Ergo prohibits out-of-thin-air emission in the coinbase transaction, ensuring that every Ergo coin or token originates from a legitimate source and is traceable in the transaction history."
+  },
+  {
+    "question": "What are the advantages of Ergo's emission process?",
+    "answer": "Ergo's emission process offers advantages, such as mitigating potential inflation bugs that have troubled other blockchains when coins are generated with each block."
+  }
+]

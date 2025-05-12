@@ -1,0 +1,5 @@
+Accessing SigmaUSD As A Developer: SigmaUSD is the first eUTxO-based stablecoin, implementing the AgeUSD protocol. It was co-designed by IOHK, Ergo, and Emurgo, focusing on conservative collateral reserve settings, thus eliminating the need for liquidations. SigmaUSD supports a fully decentralized stablecoin emission setup, offering a stable, simple, and decentralized stablecoin.
+
+SigmaUSD works by having reserve providers submit ERGs to the dApp's reserves to mint reserve coins (SigmaRSV), and users submit ERGs to mint SigmaUSD, which can be redeemed for ERGs at the current exchange rate. Reserve providers can redeem their reserve coins for more ERGs if the price of ERGs increases or protocol fees are collected.
+
+SigmaUSD provides price stability, which is critical for finance and business modeling. It allows anyone who owns ERG to collateralize their ERG and create liquid value, with a low 2.5% fee. The long-term goal is to create use cases for SigmaUSD that offer a return beyond this fee.

@@ -1,0 +1,113 @@
+{
+  "id": "docs_contribute_standards_kya_md",
+  "title": "Know Your Assumptions (KYA) in Ergo",
+  "summary": "The document discusses the \"Know Your Assumptions\" (KYA) model embraced by the Ergo ecosystem, which promotes transparency and user awareness of the assumptions made when interacting with decentralized finance (DeFi) protocols. It covers the KYA research paper being developed by developer Kushti, the use of KYA prompts in the Ergo ecosystem to inform users of key assumptions, and the specific assumptions underlying the Ergo blockchain, including its security, economic, and scalability features. The document also outlines the key assumptions underpinning Bitcoin's security model.",
+  "qa_pairs": [
+    {
+      "question": "What is the KYA (Know Your Assumptions) model in the Ergo ecosystem?",
+      "answer": "The Ergo ecosystem embraces the KYA (Know Your Assumptions) model, promoting transparency and user awareness regarding the assumptions made when interacting with decentralized finance (DeFi) protocols."
+    },
+    {
+      "question": "What is the research paper 'KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi' about?",
+      "answer": "The research paper 'KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi' explores key assumptions underlying blockchain and DeFi protocols, highlighting their impact on security, decentralization, and risk management."
+    },
+    {
+      "question": "What are the key areas covered by KYA prompts in the Ergo ecosystem?",
+      "answer": "KYA prompts cover security assumptions, economic assumptions, user responsibilities, external dependencies, and transparency."
+    },
+    {
+      "question": "Which Ergo project has adopted KYA prompts to help users assess critical assumptions?",
+      "answer": "Projects like SigmaFi have adopted KYA prompts, helping users assess critical assumptions and understand the underlying technology."
+    },
+    {
+      "question": "What are the unique set of assumptions that Ergo builds on to ensure a scalable and secure system?",
+      "answer": "Ergo builds on Bitcoin's security with its own unique set of assumptions to ensure a scalable and secure system."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - KYA\n---"
+    },
+    {
+      "heading": "Know Your Assumptions (KYA) in Ergo",
+      "level": 1,
+      "content": "The Ergo ecosystem embraces the **KYA (Know Your Assumptions)** model, promoting transparency and user awareness regarding the assumptions made when interacting with decentralized finance (DeFi) protocols. This approach encourages users to understand risks and security concerns when using wallets like Nautilus and dApps such as Spectrum and Duckpools."
+    },
+    {
+      "heading": "Research Paper: *KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi*",
+      "level": 2,
+      "content": "Developer Kushti is working on a research paper titled [KYA - A Treatise on Assumptions in Cryptocurrencies and DeFi](https://github.com/kushti/kya). It explores key assumptions underlying blockchain and DeFi protocols, highlighting their impact on security, decentralization, and risk management.\n\n> \"In decentralized finance, users can verify protocol assumptions, reversing the invasive privacy checks of traditional finance.\" - Kushti\n\nThe KYA framework encourages users to verify the protocols they interact with, fostering informed and secure participation in DeFi."
+    },
+    {
+      "heading": "KYA Prompts in the Ergo Ecosystem",
+      "level": 2,
+      "content": "Ergo introduces **KYA prompts** to inform users of key assumptions before interacting with different protocols. These prompts are designed to provide clear, concise information about the risks, requirements, and assumptions associated with each protocol, enabling users to make informed decisions.\n\nKYA prompts typically cover the following areas:\n\n1. **Security Assumptions**: Highlighting the underlying security mechanisms, such as cryptographic algorithms, consensus models, and trusted parties.\n2. **Economic Assumptions**: Providing details on tokenomics, incentives, and economic factors that affect the protocol's stability and sustainability.\n3. **User Responsibilities**: Outlining what actions users need to take to ensure their safety, such as managing private keys or understanding potential risks in smart contracts.\n4. **External Dependencies**: Identifying any reliance on third-party services or external data, such as oracles, that could impact the protocol's functionality.\n5. **Transparency**: Ensuring that users are aware of any opaque components or centralized elements within a supposedly decentralized protocol.\n\nProjects like **SigmaFi** have adopted KYA prompts, helping users assess critical assumptions and understand the underlying technology. These prompts serve as a valuable tool in empowering users, promoting transparency, and mitigating risks in the DeFi landscape.\n\nFor more, see [Building a standard KYA Prompt](https://www.reddit.com/r/ergonauts/comments/159h9rs/building_a_standard_kya_prompt/)."
+    },
+    {
+      "heading": "Ergo\u2019s Assumptions",
+      "level": 2,
+      "content": "Ergo builds on Bitcoin's security with its own unique set of assumptions to ensure a scalable and secure system."
+    },
+    {
+      "heading": "1. Bootstrapping Techniques",
+      "level": 3,
+      "content": "Ergo uses techniques like hash-based authenticated data structures, NiPoPoW proofs, and UTXO set snapshots for security, optimized storage, and scalability."
+    },
+    {
+      "heading": "2. Signature Scheme",
+      "level": 3,
+      "content": "Ergo employs **Schnorr signatures** based on the secp256k1 curve and sigma protocols, enhancing cryptographic security through the **decisional Diffie-Hellman assumption**."
+    },
+    {
+      "heading": "3. Miner Behavior",
+      "level": 3,
+      "content": "Ergo assumes honest miner behavior akin to Bitcoin, using a **storage rent** mechanism to sustain block rewards and incentivize efficient data retention."
+    },
+    {
+      "heading": "4. Scalability and Security",
+      "level": 3,
+      "content": "Ergo's architecture supports Layer 1 scalability while maintaining security, offering smart contracts and cryptographic protocols that ensure safe DeFi interactions."
+    },
+    {
+      "heading": "Bitcoin as Digital Gold",
+      "level": 2,
+      "content": "Bitcoin\u2019s security model rests on several key assumptions:\n\n1. **Hash Function Security**: Bitcoin relies on SHA-256's resistance to collision and preimage attacks.\n2. **Digital Signature Scheme**: Assumes no quantum computer will break 128-bit elliptic curve security.\n3. **Honest Mining Hashrate**: Assumes the majority of miners will follow protocol rules, underpinning Bitcoin's consensus.\n\nDespite these assumptions, Bitcoin has functioned effectively for over 13 years."
+    },
+    {
+      "heading": "DeFi Applications on Ergo",
+      "level": 2,
+      "content": "Ergo's platform underpins various DeFi applications, ensuring security, scalability, and flexibility."
+    },
+    {
+      "heading": "1. Oracles",
+      "level": 3,
+      "content": "Ergo supports secure oracle integration, providing reliable data for dApps in the ecosystem."
+    },
+    {
+      "heading": "2. ErgoDEX",
+      "level": 3,
+      "content": "Formerly Spectrum, **ErgoDEX** facilitates trustless peer-to-peer trading on Ergo, leveraging the platform\u2019s security features."
+    },
+    {
+      "heading": "3. Stablecoins: Djed and SigUSD",
+      "level": 3,
+      "content": "**Djed** and **SigUSD** are decentralized stablecoins built on Ergo, enhancing the DeFi ecosystem with transparent value stability."
+    },
+    {
+      "heading": "4. Dexy",
+      "level": 3,
+      "content": "**Dexy** is a user-friendly decentralized exchange, utilizing Ergo's security and scalability to provide an accessible trading experience."
+    },
+    {
+      "heading": "References",
+      "level": 2,
+      "content": "1. [Original KYA Post](https://www.ergoforum.org/t/know-your-assumptions/4198)\n2. [The Importance of KYA](https://ergoplatform.org/en/blog/The-Importance-of-Know-Your-Assumptions/)\n3. [KYA Research Paper](https://docs.ergoplatform.com/contribute/standards/kya/#research-paper)\n4. [Kushti\u2019s KYA Paper](https://github.com/kushti/kya/blob/master/kya.pdf)\n5. [SigmaFi dApp](https://sigmafi.app/#/)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/contribute/standards/kya.md",
+  "processed_at": "2025-05-11T19:17:54.270392",
+  "ai_processed": true
+}

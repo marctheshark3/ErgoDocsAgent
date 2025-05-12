@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of message signing and user authentication with Nautilus wallet and sigma-rust?",
+    "answer": "To verify that the user/client is the owner of the address they are claiming to be."
+  },
+  {
+    "question": "How can you sign a message using the Nautilus wallet?",
+    "answer": "const message = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]); const signature = ergo.sign_data('<your_addr>', message);"
+  },
+  {
+    "question": "How can you verify the signature using sigma-rust?",
+    "answer": "import * as ergoWasm from 'ergo-lib-wasm-nodejs' const isValid = ergoWasm.verify_signature(addr, message, signature);"
+  },
+  {
+    "question": "What are some security tips mentioned in the document?",
+    "answer": "1. Implement a user expiration mechanism, 2. Check the token balance on every request."
+  },
+  {
+    "question": "What are some practical applications of message signing and user authentication with Nautilus wallet and sigma-rust?",
+    "answer": "Allow NFT owners to edit their plot information and upload custom models, build an NFT-based ticketing system."
+  }
+]

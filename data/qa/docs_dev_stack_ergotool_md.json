@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ErgoTool?",
+    "answer": "{\"ErgoTool\":\"a command-line interface (CLI) for Ergo blockchain\"}"
+  },
+  {
+    "question": "How can you use ErgoTool without running your own Ergo node?",
+    "answer": "{\"You can use ErgoTool without running your own Ergo node\":\"However, running a node is the most secure way to communicate with the blockchain\"}"
+  },
+  {
+    "question": "How do you generate a new mnemonic phrase using ErgoTool?",
+    "answer": "{\"To generate a new mnemonic phrase\":\"Run the ergo-tool.sh mnemonic command\"}"
+  },
+  {
+    "question": "What is the purpose of creating an encrypted storage file with ErgoTool?",
+    "answer": "{\"To create an encrypted storage file\":\"Use the ergo-tool.sh createStorage command to generate a master secret key from the mnemonic phrase and store it encrypted in the storage/secret.json file\"}"
+  },
+  {
+    "question": "What happens if you forget the storage password for the encrypted storage file?",
+    "answer": "{\"If you forget the storage password\":\"You will not be able to restore your master key again\"}"
+  }
+]

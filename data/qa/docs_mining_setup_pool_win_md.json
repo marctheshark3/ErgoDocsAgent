@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the first step in setting up MiningCore on Windows 10?",
+    "answer": "Install PostgreSQL 10 or the latest version."
+  },
+  {
+    "question": "What command is used to launch the pSQL Shell?",
+    "answer": "Open the Windows search bar and type `psql`."
+  },
+  {
+    "question": "What are the default credentials to login to the pSQL Shell?",
+    "answer": "Username: `postgres`, Password: (the one set during install)."
+  },
+  {
+    "question": "What commands are used to create the database role and schema?",
+    "answer": "CREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'myPassword'; CREATE DATABASE miningcore OWNER miningcore;"
+  },
+  {
+    "question": "What scripts need to be run to complete the database setup?",
+    "answer": "createdb.sql and createdb_postgresql_11_appendix.sql"
+  }
+]

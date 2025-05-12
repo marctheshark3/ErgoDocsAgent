@@ -1,0 +1,53 @@
+{
+  "id": "docs_eco_blitz_md",
+  "title": "Blitz TCG",
+  "summary": "Blitz TCG is an innovative gaming project launched on Ergo that has revolutionized traditional TCG gameplay. It features unique mechanics such as access to the entire deck, a chess-like time bank system, and NPC alternatives on the game board. Blitz TCG is a self-funded project that prioritizes gameplay over profits, providing a play and earn model. The game is available on both the Ergo and Cardano platforms and has successfully launched and is now live. Blitz TCG is designed with competitive players in mind, minimizing the role of luck and emphasizing skill and strategy. Additional resources, including general information, roadmap, whitepaper, and Twitter, are available for more details about the project.",
+  "qa_pairs": [
+    {
+      "question": "What is Blitz TCG?",
+      "answer": "Blitz TCG is an innovative gaming project launched on Ergo that has revolutionized traditional TCG gameplay."
+    },
+    {
+      "question": "What are the unique features of Blitz TCG?",
+      "answer": "Blitz TCG features access to the entire deck for players, a chess-like time bank system, and the inclusion of NPC alternatives on the game board."
+    },
+    {
+      "question": "What is the focus of Blitz TCG's development?",
+      "answer": "Blitz TCG is a self-funded project that prioritizes gameplay over profits and provides a play and earn model, as opposed to a play to earn model."
+    },
+    {
+      "question": "On which platforms is Blitz TCG available?",
+      "answer": "Blitz TCG is available on both the Ergo and Cardano platforms."
+    },
+    {
+      "question": "What design principles are used in Blitz TCG?",
+      "answer": "Blitz TCG is designed with competitive players in mind, providing a consistent gaming experience with an emphasis on skill and strategy by minimizing the role of luck and RNG."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Blitz TCG\n  - Gaming\n  - TCG\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "Blitz TCG",
+      "level": 1,
+      "content": "Blitz TCG is an innovative gaming project launched on Ergo. It has revolutionized traditional TCG gameplay by introducing unique features such as access to the entire deck for players, a chess-like time bank system, and the inclusion of NPC alternatives on the game board. The team is committed to transparency and regularly shares updates on Twitter.\n\nBlitz TCG is a self-funded project that prioritizes gameplay over profits. It provides a play and earn model, as opposed to a play to earn model. The game is available on both the Ergo and Cardano platforms.\n\n/// note | Recent Developments\nBlitz TCG has successfully launched and is now [live!](https://blitztcg.com/home) Stay updated with the latest news on their [Twitter](https://twitter.com/Blitz_TCG).\n///"
+    },
+    {
+      "heading": "Game Mechanics",
+      "level": 2,
+      "content": "Blitz TCG is designed with competitive players in mind. It provides a consistent gaming experience where players can predict the outcome of their strategies based on the probability of drawing specific cards within a given number of turns. The game minimizes the role of luck and emphasizes skill and strategy by limiting the use of RNG (Random Number Generation)."
+    },
+    {
+      "heading": "Additional Resources",
+      "level": 2,
+      "content": "For more information about Blitz TCG, please refer to the following resources:\n\n- [General Information](http://linktr.ee/blitztcg) \n- [Roadmap](https://www.blitz-tcg.com/roadmap)\n- [Whitepaper](https://www.blitz-tcg.com/_files/ugd/1938de_84e5fc9f92a54e0a99f19649dd946871.pdf)\n- [Twitter](https://twitter.com/Blitz_TCG)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/blitz.md",
+  "processed_at": "2025-05-11T19:42:54.983875",
+  "ai_processed": true
+}

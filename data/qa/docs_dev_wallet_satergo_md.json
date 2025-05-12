@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key feature of the Satergo wallet?",
+    "answer": "Satergo offers full node support, enabling users to actively participate in the Ergo network or use a remote node connection."
+  },
+  {
+    "question": "What are the benefits of Satergo's lightweight design?",
+    "answer": "Satergo is engineered to be lightweight without compromising on features, ensuring a seamless experience even on less powerful devices."
+  },
+  {
+    "question": "What platforms is Satergo compatible with?",
+    "answer": "Satergo offers cross-platform support, providing a consistent and reliable experience across all major desktop operating systems."
+  },
+  {
+    "question": "Where can users find more information about Satergo?",
+    "answer": "Users can discover more on the Satergo Website, follow updates on Twitter, join the community on Telegram, and explore the code on GitHub."
+  },
+  {
+    "question": "What is the Satergo Offline Vault?",
+    "answer": "The Satergo Offline Vault is an Android application that securely stores the user's encrypted seed phrase and connects with desktops via Bluetooth for transaction safety."
+  }
+]

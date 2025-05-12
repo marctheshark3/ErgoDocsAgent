@@ -1,0 +1,1 @@
+Ergo Puppet is an advanced tool that builds upon the Ergo Playground to facilitate experimentation and unit testing of Ergo contracts in an offchain setting. It heavily utilizes AppKit, allowing for compatibility with existing code without modifications, thus simplifying the development process.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Gluon?",
+    "answer": "Gluon is a new stablecoin protocol developed by Bruno Woltzenlogel Paleo, Alexander Chapournoy, Kii, and Sangeet, with the support of the Djed Alliance."
+  },
+  {
+    "question": "What are the key issues that Gluon aims to address?",
+    "answer": "Gluon aims to address the limitations and issues found in existing stablecoin protocols like Djed and SigmaUSD, such as sensitivity to the oracle, reserve drainage by whales, inconvenience for reserve coin holders, and the zero equity problem."
+  },
+  {
+    "question": "How does the Gluon protocol function?",
+    "answer": "Gluon does not operate as a liquidity pool for the ERG and SigmaUSD pair, but rather focuses on the pair of Stablecoin ReserveCoin (SigRSV and SigUSD)."
+  },
+  {
+    "question": "What was the breakthrough moment that led to the creation of Gluon?",
+    "answer": "Bruno had a breakthrough moment while contemplating liquidity pools and their relationship with Djed, which led to the idea of creating a new stablecoin protocol that functions as the dual of a liquidity pool."
+  },
+  {
+    "question": "Where can users access the Gluon protocol?",
+    "answer": "Gluon W\u00b1 is now live at gluon.gold."
+  }
+]

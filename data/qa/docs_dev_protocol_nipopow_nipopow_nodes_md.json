@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the role of light clients in blockchain networks?",
+    "answer": "Light clients address the challenges associated with running a full node, which requires substantial computational resources, electricity, and storage space to maintain the entire blockchain."
+  },
+  {
+    "question": "How does Ergo leverage Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) to facilitate the creation of efficient light clients?",
+    "answer": "Ergo leverages NIPoPoWs to enable light clients to verify blockchain events without the need for the entire blockchain data."
+  },
+  {
+    "question": "What is the Pruned Full-Node strategy in Ergo, and how does it utilize NIPoPoWs?",
+    "answer": "Utilizing NIPoPoWs, Ergo can implement a Pruned Full-Node strategy that involves maintaining a UTXO Set Snapshot while discarding older blockchain data that is not necessary for future operations, significantly reducing the storage requirements."
+  },
+  {
+    "question": "How does Ergo's implementation of Simplified Payment Verification (SPV) Clients leverage the NIPoPoW protocol?",
+    "answer": "Ergo's SPV Clients leverage the NIPoPoW protocol to achieve significant reductions in data requirements for transaction verification, allowing them to download only about 100KB of block headers."
+  },
+  {
+    "question": "What are the key advantages of NIPoPoW-based SPV Clients in Ergo?",
+    "answer": "Key advantages include efficient data use, lower bandwidth consumption, and enhanced security by leveraging the security properties of proof-of-work without the need for a full copy of the blockchain."
+  }
+]

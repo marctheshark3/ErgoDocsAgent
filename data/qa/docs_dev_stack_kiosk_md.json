@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of KioskWeb?",
+    "answer": "KioskWeb offers a user-friendly web interface to interact with ErgoScript, allowing users to define boxes with custom ErgoScript code, register values, and create transactions that output specific predefined boxes."
+  },
+  {
+    "question": "What are the main features of KioskWeb?",
+    "answer": "KioskWeb allows users to: 1) Define boxes with custom ErgoScript code and register values, and 2) Create transactions that output specific predefined boxes."
+  },
+  {
+    "question": "What are the requirements for running KioskWeb?",
+    "answer": "KioskWeb requires a fully configured Ergo node to be running, with the node's REST API accessible at http://localhost:9052 by default. This can be modified by invoking the method `org.sh. Kiosk.ergo.ErgoAPI.setUrl` from the web-UI."
+  },
+  {
+    "question": "How can KioskWeb be deployed and accessed?",
+    "answer": "KioskWeb can be deployed in two ways: 1) Run `sbt jetty:start` to initiate the built-in Jetty web server on port 8080, accessible at http://localhost:8080, or 2) Compile the war file using `sbt package` and run it as a J2EE application."
+  },
+  {
+    "question": "How does KioskWeb handle the signing process and transaction posting?",
+    "answer": "KioskWeb relies on ergo-appkit to handle the signing process, replicating a large part of the Ergo node wallet's functionality locally. It also utilizes the public explorer for posting transactions, eliminating the need for a local running Ergo node."
+  }
+]

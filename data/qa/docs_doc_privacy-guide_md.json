@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the common misconception about Bitcoin and its use by criminals?",
+    "answer": "The myth that Bitcoin is an anonymous currency used by criminals and hackers has been dispelled many times, but it still lingers on. The truth is that Bitcoin is a pseudonymous cryptocurrency, where wallet addresses and transactions can be seen through the public blockchain."
+  },
+  {
+    "question": "How can Bitcoin wallet addresses be connected to real-world identities?",
+    "answer": "While the alphanumeric wallet addresses do not give away any private information, they can be connected to real-world identities through wallet transaction broadcasters who can link the address to an IP, and especially through fiat on and off-ramps."
+  },
+  {
+    "question": "How does the transparency of the Bitcoin blockchain compare to traditional banking and finance?",
+    "answer": "Bitcoin and other public blockchains are actually a better alternative when it comes to anti-money laundering enforcement compared to private banking or cash, as illicit activities with fiat money account for a much higher percentage of the GDP."
+  },
+  {
+    "question": "What are the potential risks of the pseudo-anonymity of Bitcoin?",
+    "answer": "The pseudo-anonymity of Bitcoin makes users vulnerable to malicious actors, as their public wallet addresses and transactions are exposed to the entire world, making high-network individuals a target for hackers and criminals."
+  },
+  {
+    "question": "How do the privacy and security trade-offs of centralized and decentralized financial systems differ?",
+    "answer": "Traditionally, banks and governments keep their centralized ledgers private, which means one must trust these entities to remain honest and ensure the safety and liquidity of funds. In contrast, the public and pseudonymous nature of the blockchain comes as a double-edged sword, making users vulnerable to attacks, leaks, and other issues."
+  }
+]

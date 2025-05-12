@@ -1,0 +1,113 @@
+{
+  "id": "docs_archive_off-chain_md",
+  "title": "Off-Chain Components in DeFi",
+  "summary": "This document explores the role of off-chain components in the Ergo blockchain's decentralized finance (DeFi) ecosystem. It discusses the distinction between on-chain and off-chain elements, highlighting the importance of off-chain systems like watchers, oracles, and bots in enhancing the capabilities of on-chain processes. The document provides a case study of a transaction bot, details the off-chain services supporting ErgoDex, and explains the role of watchers in the Rosen Bridge. It also covers the requirements and rewards for becoming a watcher or an oracle provider on the Ergo network.",
+  "qa_pairs": [
+    {
+      "question": "What are the key components of off-chain systems in DeFi?",
+      "answer": "Off-chain systems often encompass REST endpoints and bots that execute tasks such as retrieving data from the blockchain, composing transactions for user signatures, and processing transactions poised for the next phase in the dApp's workflow."
+    },
+    {
+      "question": "What is the role of transaction bots in DeFi?",
+      "answer": "Transaction bots are off-chain systems designed to streamline the composition and processing of transactions, such as the Exle Tx Bot."
+    },
+    {
+      "question": "What is the difference between on-chain and off-chain components in DeFi?",
+      "answer": "On-chain elements pertain to the aspects of a dApp that are directly integrated into the blockchain, while off-chain elements refer to the components that operate outside the blockchain."
+    },
+    {
+      "question": "Where can I find information about the off-chain services that support the functionality of ErgoDex?",
+      "answer": "For a comprehensive understanding of the off-chain services that support the functionality of ErgoDex, refer to the detailed documentation provided in [ErgoDEX off-chain services](dex_bots.md)."
+    },
+    {
+      "question": "How do off-chain components enhance the capabilities of on-chain processes in DeFi?",
+      "answer": "Off-chain components, such as watchers, oracles, and bots, are essential for augmenting the capabilities of on-chain processes and reinforcing the robustness of the DeFi ecosystem."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Off-Chain Bots\n  - Off-Chain Components\n  - Automation Bots\n---"
+    },
+    {
+      "heading": "Off-Chain Components in DeFi",
+      "level": 1,
+      "content": "Within the dynamic realm of Ergo's decentralized finance (DeFi), off-chain components are essential for augmenting the capabilities of on-chain processes. This guide explores the implementation of off-chain elements like watchers, oracles, and bots, which are pivotal for reinforcing the robustness of the ecosystem and opening up opportunities for passive income generation."
+    },
+    {
+      "heading": "On-chain vs. Off-chain",
+      "level": 2,
+      "content": "On-chain elements pertain to the aspects of a decentralized application (dApp) that are directly integrated into the blockchain. These include smart contracts associated with boxes and the data within the registers of those boxes. The typical development flow of a dApp begins with the creation of transactions, followed by crafting smart contracts to facilitate the dApp's decentralized functionality on the blockchain.\n\nIn contrast, off-chain elements refer to the components of a dApp that operate outside the blockchain. Systems are needed to process Unspent Transaction Outputs (UTxOs) and advance them through the stages of a dApp's lifecycle. Off-chain systems often encompass REST endpoints and bots that execute several vital tasks, such as:\n\n- Retrieving data from the blockchain\n- Composing transactions for user signatures\n- Processing transactions poised for the next phase in the dApp's workflow"
+    },
+    {
+      "heading": "Case Study: Transaction Bot",
+      "level": 3,
+      "content": "A transaction bot exemplifies an off-chain system designed to streamline the composition and processing of transactions. The Exle Tx Bot is an exemplary model of such a system. Detailed information about the Exle Tx Bot and its architecture can be found in their documentation: [Exle Tx Bot](https://exlebot.com/docs).\n\nA thorough grasp of the distinctions between on-chain and off-chain components, along with their respective roles, empowers developers to create more sophisticated and efficient dApps within the Ergo Blockchain ecosystem."
+    },
+    {
+      "heading": "ErgoDex Off-Chain Services",
+      "level": 2,
+      "content": "For a comprehensive understanding of the off-chain services that support the functionality of ErgoDex, refer to the detailed documentation provided in [ErgoDEX off-chain services](dex_bots.md)."
+    },
+    {
+      "heading": "Watchers on Rosen Bridge",
+      "level": 2,
+      "content": "Watchers, functioning as cross-chain oracles, are vital to the Rosen Bridge's operations. They diligently monitor and relay deposit events from their respective networks to Ergo, bolstering the network's security and reach."
+    },
+    {
+      "heading": "How to Become a Watcher:",
+      "level": 3,
+      "content": "1. **Technical Setup**: To operate a watcher node, ensure a stable internet connection and a system that aligns with the technical requirements outlined in [Ergo's documentation](https://docs.ergoplatform.com/eco/rosen/rosen-watcher/).\n2. **Provide Collateral**: A collateral of 800 ERG and 30,000 RSN is mandated for each instance, with the flexibility of redemption and adjustment.\n3. **Monitor Transactions**: Vigilant monitoring of cross-chain transactions is imperative for watchers to validate them in adherence to the protocol's guidelines.\n4. **Earn Rewards**: Watchers are remunerated in ERG for their pivotal role, with the distribution reflecting their contribution to network security and functionality."
+    },
+    {
+      "heading": "Estimated Rewards",
+      "level": 3,
+      "content": "The reward distribution for a watcher on the Rosen network from January 22, 2024, to February 3, 2024, is exemplified below. Note that rewards are contingent on bridge traffic and may fluctuate.\n\n- ERG Watcher Rewards:  100.217 ERG\n- ADA Watcher Rewards:  25.37 ADA\n- Total Rewards (ERG + ADA):  125.59\n\nThese figures are indicative and subject to variation based on actual bridge usage. Increased traffic correlates with higher potential rewards for watchers."
+    },
+    {
+      "heading": "Oracles: Empowering Ergo's dApps",
+      "level": 2,
+      "content": "Oracles are the linchpin in DeFi, supplying smart contracts with indispensable external data, such as price feeds. Ergo's ecosystem leverages oracles for an array of applications, including stablecoins and sophisticated financial instruments.\n\n> To participate in the Gold oracle pool, acquire a *Gold Pool Oracle Token* through [auctions](https://ergoauctions.org/artwork/78263e5613557e129f075f0a241287e09c4204be76ad53d77d6e7feebcccb001), ensuring a transparent entry process for aspirants.\n{.is-warning}"
+    },
+    {
+      "heading": "Becoming an Oracle Provider:",
+      "level": 4,
+      "content": "1. **Data Source Integration**: Oracle providers must integrate dependable data sources with the Ergo blockchain to deliver precise and current information.\n2. **Deploy Oracle Contracts**: Implement smart contracts on Ergo to act as conduits for your data streams.\n3. **Maintain Reliability**: Consistent monitoring and upkeep are essential to sustain the credibility and reliability of your oracle service.\n4. **Compensation**: Oracle providers typically receive compensation from the users or contracts utilizing their data, often via transaction fees or subscription models. Operating a Gold oracle yields an estimated 24 GORT (Gold Oracle Reward Tokens) daily."
+    },
+    {
+      "heading": "Bots for Automated Trading and Order Matching",
+      "level": 2,
+      "content": "The Ergo blockchain embraces the potent concept of decentralized grid trading, enabling automated trading orders while retaining user control over funds. Prominent examples include the Off the Grid and Machina Finance projects.\n\nDiscover more about grid trading on [Investopedia](https://www.investopedia.com/terms/g/grid-trading.asp)."
+    },
+    {
+      "heading": "Off the Grid",
+      "level": 3,
+      "content": "Off the Grid, a dApp, capitalizes on the grid trading contract proposed by kushti. It incorporates an execution bot/batcher to facilitate automated order matching.\n\nExplore the project [here](https://github.com/Telefragged/off-the-grid/)\n\nKey features of Off the Grid:\n\n- A contract that authorizes spending solely for correctly filled orders or with the order owner's consent, capable of managing multiple orders concurrently.\n- Off-chain bots/batchers that scrutinize grid orders and pair them with other liquidity sources, such as Spectrum AMMs, with potential extensions to other sources like the SigUSD bank.\n- Support for ERG trading against any token, accruing profits in ERG.\n- Grid orders benefit from the repeated execution of identical orders, while bot operators gain from arbitraging price discrepancies between liquidity sources and grid orders.\n\nThe concept was introduced by `@kushti` on [ergoforum](https://www.ergoforum.org/t/decentralized-grid-trading-on-ergo/).\n\n> \"Decentralized grid trading on Ergo is inherently compatible with existing DEXes, such as Spectrum LP pools and babel fees. It's an effective strategy to capitalize on market volatility, akin to offerings on many centralized exchanges (CEXes).\"\n\nView the [inaugural decentralized grid order transaction on Ergo](https://twitter.com/chepurnoy/status/1582657292834861057)."
+    },
+    {
+      "heading": "Machina Finance",
+      "level": 3,
+      "content": "Machina Finance is an Ergo-based initiative exploring grid trading and developing a DEX that harnesses grid order contracts.\n\nExplore the project [here](machina-finance.md)"
+    },
+    {
+      "heading": "Other bots",
+      "level": 3,
+      "content": "- [HummingBot: Deploying and Backtesting Strategies via Dashboard](https://hummingbot.org/academy-content/using-dashboard-to-deploy-and-backtest-strategies/)\n- [KuPyBot](https://github.com/FlyingPig69/KuPyBot): A Python-based bot for Kucoin's platform, designed to execute a simple buy low, sell high strategy."
+    },
+    {
+      "heading": "Best Practices for Off-Chain Earnings",
+      "level": 2,
+      "content": "- **Stay Informed**: Remain abreast of the latest Ergo ecosystem developments, including protocol updates and emerging off-chain earning opportunities.\n- **Security**: Prioritize the security of your setup, particularly when managing private keys or substantial ERG quantities.\n- **Community Engagement**: Engage with Ergo's community forums and channels to share insights and collaborate, thereby enhancing your strategies and influence.\n- **Compliance**: Adhere to all relevant legal and regulatory requirements associated with your financial data or asset-related activities."
+    },
+    {
+      "heading": "Conclusion",
+      "level": 2,
+      "content": "Ergo's ecosystem presents a plethora of off-chain earning prospects through roles such as watchers, oracles, and automated bots. These roles not only offer passive income streams but also significantly contribute to the Ergo blockchain's functionality and security. By participating in these opportunities, users can bolster the decentralized ecosystem and reap the benefits of its progression and success."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/archive/off-chain.md",
+  "processed_at": "2025-05-11T19:16:36.618287",
+  "ai_processed": true
+}

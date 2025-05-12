@@ -1,0 +1,38 @@
+{
+  "id": "docs_node_modes_full-node_md",
+  "title": "Full-Node Mode",
+  "summary": "Full-Node Mode refers to two different modes of operation for a node in the Bitcoin network:\n\n1. Full 'Archival' Node Mode: This is the standard mode, similar to a full Bitcoin node.\n\n2. Pruned-Fullnode Mode: Downloads all headers, validates proofs-of-work, and links structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it.",
+  "qa_pairs": [
+    {
+      "question": "What is the standard mode of a full Bitcoin node?",
+      "answer": "The standard mode is the Full *'Archival'* Node Mode, similar to a full Bitcoin node."
+    },
+    {
+      "question": "What is the Pruned-Fullnode Mode?",
+      "answer": "Pruned-Fullnode Mode downloads all headers, validates proofs-of-work, and links structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it."
+    },
+    {
+      "question": "What is downloaded in the Pruned-Fullnode Mode?",
+      "answer": "In Pruned-Fullnode Mode, all headers are downloaded, proofs-of-work are validated, and structures are linked, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it."
+    },
+    {
+      "question": "What is the difference between Full *'Archival'* Node Mode and Pruned-Fullnode Mode?",
+      "answer": "Full *'Archival'* Node Mode is the standard mode, similar to a full Bitcoin node, while Pruned-Fullnode Mode downloads all headers, validates proofs-of-work, and links structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it."
+    },
+    {
+      "question": "What is the purpose of the Pruned-Fullnode Mode?",
+      "answer": "The purpose of the Pruned-Fullnode Mode is to download all headers, validate proofs-of-work, and link structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Full-Node Mode",
+      "level": 1,
+      "content": "- [Full *'Archival'* Node Mode](archival-node.md): This is the standard mode, similar to a full Bitcoin node.\n- [Pruned-Fullnode Mode](pruned-full-node.md): Downloads all headers, validates proofs-of-work, and links structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/modes/full-node.md",
+  "processed_at": "2025-05-11T19:56:23.663523",
+  "ai_processed": true
+}

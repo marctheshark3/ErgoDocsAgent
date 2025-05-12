@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main function of the block header in the Ergo blockchain?",
+    "answer": "The block header serves three main functions: chain synchronization, Proof-of-Work validation, and block integrity."
+  },
+  {
+    "question": "What are the key components of the block header in Ergo?",
+    "answer": "The key components of the block header include version, parentId, ADProofsRoot, stateRoot, transactionsRoot, timestamp, nBits, height, extensionRoot, and powSolution."
+  },
+  {
+    "question": "How does the Merkle tree data structure relate to the block header in Ergo?",
+    "answer": "The Merkle tree is used extensively in the block header to efficiently verify the integrity of the data, including the ADProofs, transactions, and extension section."
+  },
+  {
+    "question": "What is the purpose of the UTXO (Unspent Transaction Output) set in the context of the Ergo blockchain?",
+    "answer": "The UTXO set represents the current distribution of the cryptocurrency on the Ergo blockchain, and the stateRoot in the block header is a digest of this set."
+  },
+  {
+    "question": "How does the Proof-of-Work (PoW) mechanism relate to the block header in Ergo?",
+    "answer": "The block header contains the necessary information to verify the miner's PoW solution, ensuring that the block meets the network's difficulty requirements."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Scorex Configuration\n\n### Network Settings\n\nThe `scorex.network` section allows you to configure settings related to the P2P network.\n\nBy using the `declaredAddress` parameter, you can establish the..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Scorex Configuration"
+  },
+  {
+    "question": "What is the 'Network Settings' section about?",
+    "answer": "The `scorex.network` section allows you to configure settings related to the P2P network.\n\nBy using ..."
+  },
+  {
+    "question": "What is the 'Execution Context' section about?",
+    "answer": "The `executionContext` configuration section is used for tests. It specifies settings for the execut..."
+  }
+]

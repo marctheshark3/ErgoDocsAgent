@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two main mobile operating systems covered in this content?",
+    "answer": "The two main mobile operating systems covered are Android and iOS."
+  },
+  {
+    "question": "What information is provided for each mobile operating system?",
+    "answer": "For each mobile operating system, the content includes the title, an empty content field, an image, and a URL."
+  },
+  {
+    "question": "Where are the images for the mobile operating systems located?",
+    "answer": "The images for the mobile operating systems are located at '../../assets/img/dev-grid/android.png' and '../../assets/img/dev-grid/ios.png'."
+  },
+  {
+    "question": "What is the purpose of the '::cards::' and '::/cards::' tags in the content?",
+    "answer": "The '::cards::' and '::/cards::' tags are used to define a section of content that should be displayed as a set of cards."
+  },
+  {
+    "question": "What is the format of the content inside the '::cards::' section?",
+    "answer": "The content inside the '::cards::' section is formatted as a JSON array, with each element representing a card with a title, content, image, and URL."
+  }
+]

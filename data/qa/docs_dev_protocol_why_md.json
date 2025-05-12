@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the core purpose of Ergo?",
+    "answer": "Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools."
+  },
+  {
+    "question": "How does Ergo combine research and practicality?",
+    "answer": "Ergo encapsulates over a decade of blockchain evolution, merging proven concepts with the latest in peer-reviewed academic research, empowering it to embed advanced cryptographic features directly into its core."
+  },
+  {
+    "question": "What is the key feature of ErgoScript, Ergo's programming language?",
+    "answer": "ErgoScript enables a wide range of functionalities, including ring signatures, atomic swaps, and self-replicating scripts, designed to set sophisticated rules for currency spending."
+  },
+  {
+    "question": "How does Ergo ensure the security and predictability of its smart contracts?",
+    "answer": "Ergo adopts a declarative model for programming whereby it's always known in advance how much code will cost to run, avoiding the dangers of unrestricted functionality seen in some other platforms."
+  },
+  {
+    "question": "What advanced features does Ergo offer to enhance smart contract creation?",
+    "answer": "The introduction of Sigma Protocols and Multi-stage Contracts enhances Ergo further by supporting non-interactive zero-knowledge proofs and complex transaction conditions, facilitating intricate, secure, and efficient smart contract creation."
+  }
+]

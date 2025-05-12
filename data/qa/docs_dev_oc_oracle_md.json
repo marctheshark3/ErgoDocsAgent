@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Oracle Core?",
+    "answer": "Oracle Core is a crucial off-chain component run by oracles, who form an integral part of an oracle pool. It provides a user-friendly HTTP API interface that allows for reading the current protocol state and submitting data points."
+  },
+  {
+    "question": "What are the key features of the current Oracle Core?",
+    "answer": "The current Oracle Core is built to run the protocol specified in the EIP-0023 PR, which outlines the proposed upgrade to Oracle Pool version 1.0. It includes features like a single pool address, epoch counter, and compact data representation."
+  },
+  {
+    "question": "What are the requirements for the Oracle Core to function correctly?",
+    "answer": "The Oracle Core requires access to a full node wallet to create transactions and perform UTXO-set scanning. Each Oracle Core is designed to work exclusively with a single oracle pool."
+  },
+  {
+    "question": "How can an operator run multiple oracles across various oracle pools?",
+    "answer": "If an operator runs multiple oracles across various oracle pools, they can still use a single full node. However, they will need to run several instances of Oracle Cores, each set with different API ports."
+  },
+  {
+    "question": "What are the main benefits of the Oracle Core's automation?",
+    "answer": "The automation provided by the Oracle Core significantly reduces the workload for the oracle operator, allowing them to participate in the oracle pool protocol without any additional effort."
+  }
+]

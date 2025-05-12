@@ -1,0 +1,108 @@
+{
+  "id": "docs_dev_stack_explorer_graphql_md",
+  "title": "GraphQL",
+  "summary": "GraphQL is a powerful data query and manipulation language that allows flexible data fetching, reducing over-fetching and under-fetching. The document discusses public community/partner-maintained explorer instances with GraphQL support for the Ergo Platform, including gql.ergoplatform.com, explore.sigmaspace.io, graphql.erg.zelcore.io, and sigmaexplorer.org. It also mentions a testnet instance at gql-testnet.ergoplatform.com. The document provides examples of various GraphQL queries that can be used to fetch box details, tokens, transactions, addresses, mempool information, and blockchain state. It encourages starting with basic queries and gradually moving to more complex ones.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of GraphQL queries?",
+      "answer": "GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching."
+    },
+    {
+      "question": "What is gql.ergoplatform.com?",
+      "answer": "gql.ergoplatform.com is a GraphQL server on top of Ergo Platform's explorer database schema."
+    },
+    {
+      "question": "What are some examples of public community/partner-maintained explorer instances with GraphQL support?",
+      "answer": "Examples include gql.ergoplatform.com, explore.sigmaspace.io/api/graphql, graphql.erg.zelcore.io/, and sigmaexplorer.org/."
+    },
+    {
+      "question": "What is the testnet instance for the Ergo GraphQL server?",
+      "answer": "The testnet instance is gql-testnet.ergoplatform.com/."
+    },
+    {
+      "question": "What are some example query categories based on the Ergo GraphQL schema?",
+      "answer": "Examples include fetching box details, fetching multiple boxes with specific conditions, fetching specific tokens, fetching tokens associated with a box, fetching inputs by transaction or box ID, fetching transactions with specific conditions, and more."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "GraphQL",
+      "level": 1,
+      "content": "GraphQL queries allow flexible data fetching, reducing over-fetching and under-fetching. [gql.ergoplatform.com](https://gql.ergoplatform.com) is a GraphQL server on top of Ergo Platform's explorer database schema."
+    },
+    {
+      "heading": "Instances",
+      "level": 2,
+      "content": "Public community/partner-maintained explorer instances with GraphQL support:\n\n- [gql.ergoplatform.com](https://gql.ergoplatform.com)\n- [explore.sigmaspace.io/api/graphql](https://explore.sigmaspace.io/api/graphql)\n- [graphql.erg.zelcore.io/](https://graphql.erg.zelcore.io/)\n- [sigmaexplorer.org/](https://sigmaexplorer.org/)"
+    },
+    {
+      "heading": "Testnet Instances",
+      "level": 2,
+      "content": "- [gql-testnet.ergoplatform.com/](https://gql-testnet.ergoplatform.com/)"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Ergo GraphQL Github](https://github.com/capt-nemo429/ergo-graphql)"
+    },
+    {
+      "heading": "Examples",
+      "level": 2,
+      "content": "Play around with Apollo Studio on the GraphQL instance to explore the schema and make queries easily. \n\nHere are some query categories based on the schema:\n\n- Fetching Box Details\n- Fetching Multiple Boxes with Specific Conditions\n- Fetching Specific Tokens\n- Fetching Tokens Associated with a Box\n- Fetching Inputs by Transaction or Box ID\n- Fetching Transactions with Specific Conditions\n- Fetching Data Inputs by Transaction or Box ID\n- Fetching Block Headers by Height or Header ID\n- Fetching Addresses with Balance and Transaction Count\n- Fetching the State of the Mempool\n- Fetching Blocks by Height or Header ID\n- Fetching the Current State of the Blockchain\n- Fetching Information about the Blockchain\n- Fetching the Balance for a List of Addresses\n- Fetching Transactions for Specific Addresses\n- Fetching Box Details with Assets\n- Fetching Unconfirmed Transactions from the Mempool\n- Fetching Unconfirmed Boxes from the Mempool\n- Fetching Unconfirmed Inputs from the Mempool\n- Fetching Unconfirmed Addresses from the Mempool\n\nLet's start with basic queries and gradually move to more complex ones."
+    },
+    {
+      "heading": "Fetching Box Details with Assets",
+      "level": 3,
+      "content": "Query to fetch details about a particular box including its associated assets:\n\n```graphql\nquery {\n  boxes(boxId: \"your_box_id\") {\n    boxId\n    transactionId\n    value\n    address\n    assets {\n      tokenId\n      amount\n    }\n  }\n}\n```"
+    },
+    {
+      "heading": "Fetching Transactions for Specific Addresses",
+      "level": 3,
+      "content": "Query to fetch transactions associated with a list of addresses:\n\n```graphql\nquery {\n  transactions(addresses: [\"address1\", \"address2\"]) {\n    transactionId\n    inclusionHeight\n    timestamp\n  }\n}\n```"
+    },
+    {
+      "heading": "Fetching Balance for a List of Addresses",
+      "level": 3,
+      "content": "Query to fetch the balance for a list of addresses:\n\n```graphql\nquery {\n  addresses(addresses: [\"address1\", \"address2\"]) {\n    address\n    balance {\n      nanoErgs\n      assets(tokenId: \"your_token_id\") {\n        amount\n        tokenId\n      }\n    }\n  }\n}\n```"
+    },
+    {
+      "heading": "Fetching Details of Specific Tokens",
+      "level": 3,
+      "content": "Query to fetch details of specific tokens:\n\n```graphql\nquery {\n  tokens(tokenIds: [\"token_id1\", \"token_id2\"]) {\n    tokenId\n    boxId\n    name\n    description\n  }\n}\n```"
+    },
+    {
+      "heading": "Fetching State of the Blockchain",
+      "level": 3,
+      "content": "Query to fetch the current state of the blockchain:\n\n```graphql\nquery {\n  state {\n    blockId\n    height\n    boxGlobalIndex\n    transactionGlobalIndex\n    network\n    difficulty\n  }\n}\n```"
+    },
+    {
+      "heading": "Fetching Box Details with Assets",
+      "level": 3,
+      "content": "Query to fetch details about a particular box including its associated assets:\n\n```graphql\nquery {\n  boxes(boxId: \"your_box_id\") {\n    boxId\n    transactionId\n    value\n    address\n    assets {\n      tokenId\n      amount\n    }\n  }\n}\n```"
+    },
+    {
+      "heading": "Transactions",
+      "level": 3,
+      "content": "Query to fetch the first 10 transactions in the database:\n\n```graphql\nquery {\n  transactions(take: 10) {\n    transactionId\n    size\n    inclusionHeight\n    timestamp\n    inputs {\n      boxId\n      transactionId\n    }\n    outputs {\n      boxId\n      value\n    }\n  }\n}\n```"
+    },
+    {
+      "heading": "Advanced Query Example 1",
+      "level": 3,
+      "content": "Query to fetch a list of boxes created between specific block heights:\n\n```graphql\nquery {\n  boxes(minHeight\n\n: 1000, maxHeight: 2000) {\n    boxId\n    creationHeight\n    value\n    address\n  }\n}\n```"
+    },
+    {
+      "heading": "Advanced Query Example 2",
+      "level": 3,
+      "content": "Query to fetch the first 5 transactions and the boxes linked to them:\n\n```graphql\nquery {\n  transactions(take: 5) {\n    transactionId\n    timestamp\n    outputs {\n      boxId\n      value\n      assets {\n        tokenId\n        amount\n      }\n    }\n  }\n}\n```\n\nIn this query, we're asking for the first 5 transactions (`take: 5`). For each transaction, we're requesting `transactionId`, `timestamp`, and the `outputs` (which are boxes). For each box in `outputs`, we also want to fetch the `assets` related to that box, including the `tokenId` and `amount`."
+    },
+    {
+      "heading": "Mutation Example",
+      "level": 3,
+      "content": "Mutations are used to modify data. Let's submit a transaction using a mutation:\n\n```graphql\nmutation {\n  submitTransaction(signedTransaction: {\n    id: \"your_transaction_id\",\n    inputs: [\n      {\n        boxId: \"your_box_id\",\n        spendingProof: {\n          proofBytes: \"your_proof_bytes\",\n          extension: {}\n        }\n      }\n    ],\n    dataInputs: [\n      {\n        boxId: \"your_data_input_box_id\"\n      }\n    ],\n    outputs: [\n      {\n        value: \"1000\",\n        ergoTree: \"your_ergo_tree\",\n        creationHeight: 1000,\n        assets: [\n          {\n            tokenId: \"your_token_id\",\n            amount: \"100\"\n          }\n        ],\n        additionalRegisters: {},\n        index: 0\n      }\n    ],\n    size: 100\n  }) \n}\n```\n\nIn this mutation, we're submitting a transaction with a single input, data input, and output. For each of these, we fill in the necessary data according to the `SignedTransaction` input type in the schema."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/explorer/graphql.md",
+  "processed_at": "2025-05-11T19:34:44.781550",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of ErgoScript?",
+    "answer": "ErgoScript is a language used to write contracts for the Ergo blockchain."
+  },
+  {
+    "question": "What is the relationship between ErgoScript and ErgoTrees?",
+    "answer": "ErgoScript contracts can be compiled to ErgoTrees, which are then serialized and stored in UTXOs."
+  },
+  {
+    "question": "What are some key features of the ErgoScript language?",
+    "answer": "ErgoScript has features like standard syntax and semantics, high-order language with first-class lambdas, static typing with local type inference, and various data types like Pair, Coll, Option."
+  },
+  {
+    "question": "How can the ErgoScript compiler be used?",
+    "answer": "The ErgoScript compiler is published as a library that is cross-compiled for Java 7 and Java 8+, and can be used from any JVM language, Android, or JavaFX."
+  },
+  {
+    "question": "What are some of the operations and constructs available in ErgoScript?",
+    "answer": "ErgoScript provides binary operations, predefined primitives, val declarations, if-then-else clauses, collection literals, high-order collection operations, field access, method invocation, and function invocations."
+  }
+]

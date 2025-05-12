@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the ergo-utilities-rust repository?",
+    "answer": "The ergo-utilities-rust repository contains a collection of experimental libraries designed for writing off-chain Ergo code in Rust."
+  },
+  {
+    "question": "What are the key features of the Ergo Utilities in Rust?",
+    "answer": "The utilities offer a wide range of features, including transaction building, signing, and serialization, as well as various cryptographic functions."
+  },
+  {
+    "question": "What is the focus of the Ergo Utilities in Rust?",
+    "answer": "The utilities are built with a focus on performance, security, and ease of use."
+  },
+  {
+    "question": "Where can I find more information on working in Rust for Ergo?",
+    "answer": "For more information on working in Rust, see the Sigma Rust documentation."
+  },
+  {
+    "question": "What are the main use cases for the Ergo Utilities in Rust?",
+    "answer": "The Ergo Utilities in Rust enable developers to build powerful and secure applications that interact with the Ergo blockchain."
+  }
+]

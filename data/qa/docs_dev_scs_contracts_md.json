@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the ergo-contracts repository?",
+    "answer": "The ergo-contracts repository contains source code for Ergo smart contracts, along with compilation, testing, and formal verification tooling."
+  },
+  {
+    "question": "What are some examples of Ergo smart contracts in the repository?",
+    "answer": "Examples include AssetsAtomicExchange.scala, CrowdFundingContractVerification.scala, DummyContractVerification.scala, Edex.scala, and ICOContractVerification.scala."
+  },
+  {
+    "question": "What are some examples of ErgoScript contracts provided in the ergoscript-by-example repository?",
+    "answer": "Examples include Pin Lock Contract, Single-Chain Swap Contracts, Simple Send, Double-Chain Swap Contracts, Timed Fund Contract, Grantor/Beneficiary Pin Lock Contract, Escrow Deposit Contract, Token sales service contract, Self-Replicating Sale Contract, and Heads or Tails game Contract."
+  },
+  {
+    "question": "Where can I find more examples of ErgoScript contracts in the sigmastate-interpreter repository?",
+    "answer": "The sigmastate-interpreter repository includes examples such as IcoExample.scala and many more examples in the src/test/scala/sigmastate/utxo/examples directory."
+  },
+  {
+    "question": "What are the key features and capabilities of the ErgoScript language for writing smart contracts on the Ergo platform?",
+    "answer": "The ErgoScript language allows developers to create a variety of smart contracts for the Ergo platform, including atomic swaps, crowdfunding, ICOs, exchanges, and more."
+  }
+]

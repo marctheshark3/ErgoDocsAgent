@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the `api-dispatcher` configuration?",
+    "answer": "The `api-dispatcher` configuration controls the dispatcher responsible for managing API-related actors in an actor-based system."
+  },
+  {
+    "question": "What type of dispatcher is used in this configuration?",
+    "answer": "The `type` setting specifies the dispatcher type as `Dispatcher`, which represents an event-based dispatcher."
+  },
+  {
+    "question": "What type of execution service is used in this configuration?",
+    "answer": "The `executor` setting determines the type of execution service as `fork-join-executor`, which allows tasks to be split into smaller parts and executed concurrently."
+  },
+  {
+    "question": "What is the minimum number of threads specified in this configuration?",
+    "answer": "The `parallelism-min` setting indicates the minimum number of threads to cap the factor-based parallelism number is 1."
+  },
+  {
+    "question": "How is the parallelism factor calculated in this configuration?",
+    "answer": "The `parallelism-factor` setting is used to calculate the parallelism, which is the ceiling of the number of available processors multiplied by the factor, which is set to 2.0."
+  }
+]

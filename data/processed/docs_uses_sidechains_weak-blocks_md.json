@@ -1,0 +1,26 @@
+{
+  "id": "docs_uses_sidechains_weak-blocks_md",
+  "title": "Weak Blocks",
+  "summary": "Weak Blocks have been renamed to Subblocks and are documented in the subblocks.md file.",
+  "qa_pairs": [
+    {
+      "question": "What is the new name for 'Weak Blocks'?",
+      "answer": "Subblocks"
+    },
+    {
+      "question": "Where can I find more information about subblocks?",
+      "answer": "subblocks.md"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Weak Blocks",
+      "level": 1,
+      "content": "Renamed to [subblocks](subblocks.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/sidechains/weak-blocks.md",
+  "processed_at": "2025-05-11T20:04:15.167485",
+  "ai_processed": true
+}

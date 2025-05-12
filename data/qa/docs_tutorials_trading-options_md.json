@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two main types of options?",
+    "answer": "The two main types of options are call options, which let you buy something at a set price in the future, and put options, which let you sell something at a set price in the future."
+  },
+  {
+    "question": "How can options be used for hedging?",
+    "answer": "Options can be used for hedging by buying a put option, which gives you the right to sell your tokens at a fixed price, protecting you from losses if the price falls."
+  },
+  {
+    "question": "How can options be used for speculation?",
+    "answer": "Options can be used for speculation by buying a call option, allowing you to purchase tokens at a set price in the future. If the price goes up, you can buy the tokens at the lower price and sell them at the higher market price, making a profit."
+  },
+  {
+    "question": "What is SigmaO?",
+    "answer": "SigmaO is an innovative platform that brings options trading to the Ergo blockchain, allowing users to engage in call and put options across a variety of Ergo EIP-4 tokens."
+  },
+  {
+    "question": "What are the benefits of trading options on SigmaO?",
+    "answer": "The benefits of trading options on SigmaO include hedging, speculation, accessibility, and security through Ergo's blockchain technology."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Proof of Useful Work (PoUW)?",
+    "answer": "Proof of Useful Work (PoUW) is an interesting concept that is still in the research phase."
+  },
+  {
+    "question": "What is the current status of PoUW implementation in Ergo?",
+    "answer": "Ergo is considering conducting preliminary research and establishing specifications for PoUW, but its actual usefulness is still uncertain."
+  },
+  {
+    "question": "What are the practical challenges associated with the implementation of PoUW?",
+    "answer": "There are potential private optimizations and economic challenges, such as the payer colluding with miners, that need to be addressed."
+  },
+  {
+    "question": "What is the most realistic option for implementing PoUW in Ergo?",
+    "answer": "The most realistic option seems to be launching a PoUW sidechain."
+  },
+  {
+    "question": "What other possibilities could be explored for PoUW in Ergo?",
+    "answer": "The document suggests exploring options that could benefit the Ergo main chain and its ecosystem."
+  }
+]

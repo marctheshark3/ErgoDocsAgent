@@ -1,0 +1,48 @@
+{
+  "id": "docs_dev_lang_jvm_md",
+  "title": "JVM",
+  "summary": "This document provides an introduction to the Java Virtual Machine (JVM), which is a runtime environment that allows developers to build applications using various programming languages such as Java, Scala, and Kotlin. The document highlights the use of AppKit, a library for polyglot development of Ergo applications. Additionally, it mentions two tools: ergo-playgrounds, which allows running Ergo contracts and off-chain code in the browser, and Ergo Contracts, which provides the source code of Ergo smart contracts along with compilation, testing, and formal verification tooling.",
+  "qa_pairs": [
+    {
+      "question": "What is the JVM?",
+      "answer": "The JVM is the Java Virtual Machine, which is a runtime environment that allows you to run Java, Scala, Kotlin, and other JVM-based languages."
+    },
+    {
+      "question": "What is AppKit?",
+      "answer": "AppKit is a library for polyglot development of Ergo Applications, which allows you to develop using various JVM-based languages."
+    },
+    {
+      "question": "What is ergo-playgrounds?",
+      "answer": "ergo-playgrounds is a tool that allows you to run Ergo contracts and off-chain code in the browser."
+    },
+    {
+      "question": "What is the Ergo Contracts repository?",
+      "answer": "The Ergo Contracts repository contains the source code of the Ergo smart contracts, along with compilation, testing, and formal verification tooling."
+    },
+    {
+      "question": "What programming languages can be used with the JVM and AppKit?",
+      "answer": "Java, Scala, and Kotlin can be used with the JVM and AppKit for developing Ergo Applications."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - JVM\n  - Java\n  - Scala\n  - Kotlin\n  - AppKit\n---"
+    },
+    {
+      "heading": "JVM",
+      "level": 1,
+      "content": "Whether you want to develop using [Java](java.md), [Scala](scala.md), or [Kotlin](kotlin.md), you'll likely want to be using [AppKit](appkit.md).\n\n::cards::\n\n[\n  {\n    \"title\": \"AppKit\",\n    \"content\": \"A library for polyglot development of [Ergo Applications](use-cases-overview.md)\",\n    \"url\": \"../stack/appkit.md\"\n  }\n\n]\n\n::/cards::"
+    },
+    {
+      "heading": "Tools",
+      "level": 2,
+      "content": "::cards::\n\n[\n  {\n    \"title\": \"\ud83d\udd17 ergo-playgrounds\",\n    \"content\": \"Run [contracts](ergoscript.md) + [off-chain code](off-chain-overview.md) in the browser.\",\n    \"url\": \"https://github.com/ergoplatform/ergo-playgrounds\"\n  },\n  {\n    \"title\": \"\ud83d\udd17 Ergo Contracts\",\n    \"content\": \"Source code of the Ergo [smart contracts](ergoscript.md) with [compilation](compiler.md), [testing](testing.md), and formal verification tooling.\",\n    \"url\": \"https://github.com/ergoplatform/ergo-contracts\"\n  },\n\n]\n\n::/cards::"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/lang/jvm.md",
+  "processed_at": "2025-05-11T19:21:43.054563",
+  "ai_processed": true
+}

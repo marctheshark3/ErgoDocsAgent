@@ -1,0 +1,9 @@
+The document describes the implementation of a multi-signature wallet in the Minotaur wallet, a multi-platform wallet developed using TypeScript. The key points are:
+
+The wallet allows multiple private keys to authorize transactions, enabling management by a single user with multiple keys or multiple users with one key each. The wallet supports configuring the number of required signatures (N) out of the total number of signers (M).
+
+The wallet creation process involves each signer configuring a copy of the wallet with the same M and N values, entering their private key and the public keys of other signers, and deriving a unique address for the multi-sig wallet.
+
+The wallet provides standard wallet functionalities like displaying balances and transaction history. The address derivation and transaction signing processes are implemented to handle the multi-sig requirements, involving the generation and sharing of commitments between signers.
+
+The "sign transaction" modal facilitates the multi-sig signing process, allowing signers to generate and share commitments until the required number of signatures is reached, at which point the final signed transaction is created.

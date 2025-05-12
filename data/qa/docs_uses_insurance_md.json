@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the main purpose of the insurance sector?",
+    "answer": "The insurance sector helps manage the risk of losing assets due to unexpected events like theft or expected ones like fraudulent activities."
+  },
+  {
+    "question": "What is Nexus Mutual?",
+    "answer": "Nexus Mutual is a new protocol that has been developed to address the challenge of insurance in decentralised systems."
+  },
+  {
+    "question": "How does insurance work?",
+    "answer": "Insurance works by paying a premium to those who bear risk in case of an unfortunate event, in exchange for financial protection."
+  },
+  {
+    "question": "How can decentralised insurance be implemented on Ergo?",
+    "answer": "In a decentralised insurance platform built on Ergo, the participation of individuals, validation of trades by oracles, and management of risks can all be controlled through smart contracts to create a seamless decentralised finance ecosystem."
+  },
+  {
+    "question": "What are the key components of a decentralised insurance platform?",
+    "answer": "The key components of a decentralised insurance platform are the participation of individuals, validation of trades by oracles, and management of risks through smart contracts."
+  }
+]

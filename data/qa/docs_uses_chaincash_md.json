@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is ChainCash?",
+    "answer": "ChainCash is a decentralized monetary system that enables flexible money creation by combining trust and blockchain-backed assets, operating on the Ergo blockchain."
+  },
+  {
+    "question": "What are the key challenges faced by traditional cryptocurrencies?",
+    "answer": "Traditional cryptocurrencies like Bitcoin face price volatility and inelastic supply, which limits their practical use as a medium of exchange."
+  },
+  {
+    "question": "How does ChainCash address the challenges of traditional cryptocurrencies?",
+    "answer": "ChainCash introduces an elastic money supply system that adjusts to economic conditions through a combination of trust and blockchain reserves, ensuring a stable, decentralized, and efficient financial ecosystem."
+  },
+  {
+    "question": "What is the historical evolution of money that ChainCash aims to continue?",
+    "answer": "ChainCash seeks to continue the evolution of money from primitive forms like barter to more advanced systems like fiat money, by creating a digital form of paper money (IOU notes) backed by blockchain assets."
+  },
+  {
+    "question": "Where can readers find more technical details about ChainCash?",
+    "answer": "Readers can refer to the ChainCash whitepaper and the ChainCash server documentation for more detailed information about the system."
+  }
+]

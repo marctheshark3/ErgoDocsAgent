@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the possible options for the stateType setting in the application.conf file?",
+    "answer": "The possible options for stateType are \"utxo\" and \"digest\"."
+  },
+  {
+    "question": "What is the purpose of the verifyTransactions setting in the application.conf file?",
+    "answer": "The verifyTransactions setting determines whether the node will download block transactions and verify them."
+  },
+  {
+    "question": "What is the relationship between the verifyTransactions setting and the BlocksToKeep setting?",
+    "answer": "If verifyTransactions is disabled, then BlocksToKeep must be 0."
+  },
+  {
+    "question": "What does the stateType setting \"utxo\" mean?",
+    "answer": "The \"utxo\" stateType means the node will keep the full UTXO set, which allows validating arbitrary blocks and generating ADProofs."
+  },
+  {
+    "question": "What does the stateType setting \"digest\" mean?",
+    "answer": "The \"digest\" stateType means the node will keep only the state root hash and validate transactions via ADProofs."
+  }
+]

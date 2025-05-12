@@ -1,0 +1,58 @@
+{
+  "id": "docs_dev_tutorials_blockchain-indexing_md",
+  "title": "Indexing Ergo Blockchain Data",
+  "summary": "This document provides an overview and comparison of different strategies for indexing Ergo blockchain data. It discusses the benefits of indexing, such as improved performance, data aggregation, and reduced node load. The three main approaches covered are using public explorer APIs, querying the node's API directly, and building a custom indexer with SDKs. The choice of strategy depends on the application's specific requirements, such as the need for simple lookups, high query volume, complex queries, aggregated data, and real-time sensitivity. The document also outlines the development effort, infrastructure required, and level of control and trust associated with each approach.",
+  "qa_pairs": [
+    {
+      "question": "What are the three primary approaches to accessing indexed Ergo blockchain data?",
+      "answer": "1. Using public explorer APIs, 2. Querying your own node's API directly, 3. Building a custom indexer with SDKs."
+    },
+    {
+      "question": "What are the key benefits of indexing Ergo blockchain data?",
+      "answer": "Performance, data aggregation, custom data structures, and reduced node load."
+    },
+    {
+      "question": "Which indexing strategy is best for simple balance and transaction lookups?",
+      "answer": "Using explorer APIs and building a custom indexer are the best options for simple balance and transaction lookups."
+    },
+    {
+      "question": "Which indexing strategy is best for complex or custom queries?",
+      "answer": "Building a custom indexer is the best option for complex or custom queries."
+    },
+    {
+      "question": "Which indexing strategy is best for real-time data sensitivity?",
+      "answer": "Querying the node's API directly is the best option for real-time data sensitivity."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Indexing\n  - Blockchain Data\n  - API\n  - Explorer\n  - Node\n  - SDK\n  - Fleet SDK\n  - Sigma-Rust\n  - Appkit\n  - Tutorial\n  - Off-Chain\n  - Ergowatch\n---"
+    },
+    {
+      "heading": "Indexing Ergo Blockchain Data",
+      "level": 1,
+      "content": "Accessing and processing blockchain data efficiently is crucial for building responsive dApps, wallets, analytics tools, and other off-chain services on Ergo. Simply querying a live node for every piece of information can be slow and resource-intensive. Indexing involves processing blockchain data (blocks, transactions, boxes) and storing it in a readily queryable format (like a database) optimized for your application's specific needs.\n\nThis guide provides an overview and comparison of different strategies for indexing Ergo data."
+    },
+    {
+      "heading": "Why Index?",
+      "level": 2,
+      "content": "*   **Performance:** Querying a pre-built index (e.g., a database) is typically much faster than repeatedly querying the node's API, especially for complex lookups.\n*   **Data Aggregation:** Indexers can aggregate data across multiple blocks or transactions (e.g., calculate total volume for a token, track historical balances).\n*   **Custom Data Structures:** You can structure the indexed data precisely how your application needs it, simplifying application logic.\n*   **Reduced Node Load:** Offloads complex queries from the Ergo node."
+    },
+    {
+      "heading": "Indexing Strategies Overview",
+      "level": 2,
+      "content": "There are three primary approaches to accessing indexed blockchain data:\n\n1.  **[Using Public Explorer APIs](explorer-apis.md):** Leverage the APIs provided by public blockchain explorers. Easiest to start, but relies on third parties and has limitations.\n2.  **[Querying Your Own Node's API Directly](node-api-direct.md):** Run your own node and query its REST API. Offers control but node APIs aren't optimized for complex queries.\n3.  **[Building a Custom Indexer with SDKs](custom-indexer.md):** Develop a dedicated service to process blocks from your node and store relevant data in an optimized database. Most flexible and performant, but requires significant development effort."
+    },
+    {
+      "heading": "Choosing the Right Strategy",
+      "level": 2,
+      "content": "The best approach depends on your application's specific requirements:\n\n| Need                        | [Explorer API](explorer-apis.md) | [Node API Direct](node-api-direct.md) | [Custom Indexer](custom-indexer.md) |\n| :-------------------------- | :----------------------------------------------------: | :---------------------------------------------------------: | :-------------------------------------------------------: |\n| Simple Balance/Tx Lookup    |                           \u2705                           |                             \u26a0\ufe0f\u00b9                            |                            \u2705                             |\n| High Query Volume           |                           \u274c                           |                             \u2705                            |                            \u2705                             |\n| Complex/Custom Queries      |                           \u274c                           |                             \u274c                            |                            \u2705                             |\n| Aggregated/Historical Data  |                           \u26a0\ufe0f\u00b2                          |                             \u274c                            |                            \u2705                             |\n| Real-time Data Sensitivity  |                           \u26a0\ufe0f\u00b3                          |                             \u2705                            |                            \u26a0\ufe0f\u2074                           |\n| Development Effort          |                          Low                           |                          Medium                           |                           High                            |\n| Infrastructure Required     |                          Low                           |                           High\u2075                           |                         High\u2075\u207a\u2076                         |\n| Control & Trust             |                          Low                           |                           High                            |                           High                            |\n\n**Notes:**\n\u00b9 Node API can be slow for historical lookups.\n\u00b2 Depends on the specific explorer's capabilities.\n\u00b3 Explorer data might have slight delays.\n\u2074 Indexer needs time to process new blocks.\n\u2075 Requires running an Ergo node.\n\u2076 Requires running the indexer service and database.\n\nFor many non-trivial applications, building a **[Custom Indexer](custom-indexer.md)** provides the best balance of performance, flexibility, and control, despite the higher initial development effort. Explore the linked pages for more details on each strategy."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/tutorials/blockchain-indexing.md",
+  "processed_at": "2025-05-11T19:38:47.251406",
+  "ai_processed": true
+}

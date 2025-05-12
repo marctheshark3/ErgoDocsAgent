@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the cryptographic foundation of discrete logarithm proofs in Ergo?",
+    "answer": "Proofs of knowledge of a discrete logarithm (DLog) verify signature authenticity without revealing the secret key."
+  },
+  {
+    "question": "What is the basis for Ergo's signature verification mechanism?",
+    "answer": "Ergo uses Schnorr signatures built on discrete logarithm proofs."
+  },
+  {
+    "question": "What is the structure of a discrete logarithm proof in Ergo?",
+    "answer": "Demonstrate knowledge of secret exponent 'w' such that 'g^w = x', where 'g' is the generator of an elliptic curve group, 'x' is the public key point, and 'w' is the private key."
+  },
+  {
+    "question": "What is the computational hardness problem that discrete logarithm proofs in Ergo are based on?",
+    "answer": "The discrete logarithm problem in elliptic curve cryptography."
+  },
+  {
+    "question": "What are the key characteristics of discrete logarithm proofs in Ergo?",
+    "answer": "Cryptographic foundation, Schnorr signature basis, and proof structure demonstrating knowledge of a secret exponent."
+  }
+]

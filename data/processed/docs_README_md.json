@@ -1,0 +1,48 @@
+{
+  "id": "docs_README_md",
+  "title": "README.md",
+  "summary": "Introduction to the Ergo Platform documentation. The documentation is hosted at docs.ergoplatform.com. Contributions can be made by submitting a pull request. To run the documentation locally, install the required packages using pip and then run the mkdocs serve command.",
+  "qa_pairs": [
+    {
+      "question": "What is the title of the document?",
+      "answer": "README.md"
+    },
+    {
+      "question": "What is the purpose of the Ergo Platform documentation?",
+      "answer": "Introduction: Ergo Platform documentation"
+    },
+    {
+      "question": "Where can the Ergo Platform documentation be found?",
+      "answer": "[docs.ergoplatform.com](https://docs.ergoplatform.com/)"
+    },
+    {
+      "question": "How can one contribute to the Ergo Platform documentation?",
+      "answer": "Contributing: Please submit a pull request."
+    },
+    {
+      "question": "What command is used to run the Ergo Platform documentation locally?",
+      "answer": "mkdocs serve"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "Ergo Platform documentation\n=======================================\n\n[docs.ergoplatform.com](https://docs.ergoplatform.com/)"
+    },
+    {
+      "heading": "Contributing",
+      "level": 2,
+      "content": "Please submit a pull request."
+    },
+    {
+      "heading": "Running locally",
+      "level": 2,
+      "content": "Install required packages\n\n```\npython -m pip install -r requirements.txt\n```\n\n```\nmkdocs serve\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/README.md",
+  "processed_at": "2025-05-11T19:15:11.587476",
+  "ai_processed": true
+}

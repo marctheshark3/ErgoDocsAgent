@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Windows\n\n## Steps\n1. [Install java runtime environment](https://www.oracle.com/java/technologies/javase-downloads.html)\n2. [Get the latest Ergo node](https://github.com/ergoplatform/ergo/releases/)\n..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Windows"
+  },
+  {
+    "question": "What is the 'Steps' section about?",
+    "answer": "1. [Install java runtime environment](https://www.oracle.com/java/technologies/javase-downloads.html..."
+  },
+  {
+    "question": "What is the 'WSL' section about?",
+    "answer": "See [this guide](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) or run t..."
+  }
+]

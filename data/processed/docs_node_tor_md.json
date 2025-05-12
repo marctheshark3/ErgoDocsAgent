@@ -1,0 +1,48 @@
+{
+  "id": "docs_node_tor_md",
+  "title": "Running your Node over Tor",
+  "summary": "This document provides a guide on how to configure an Ergo node to route its P2P network traffic through the Tor network for improved privacy and anonymity. It explains the necessary configuration changes to the Ergo node's configuration file, as well as the Java system properties required to direct the node's outgoing traffic through the Tor SOCKS proxy. An example configuration file is also provided.",
+  "qa_pairs": [
+    {
+      "question": "What is Tor and how does it help anonymize internet traffic?",
+      "answer": "Tor is a network that routes internet traffic through a series of volunteer-operated servers to help anonymize the traffic."
+    },
+    {
+      "question": "What configuration changes are needed in the ergo.conf file to run an Ergo node over Tor?",
+      "answer": "The node's P2P and API interfaces need to be bound to localhost, and the scorex.network.bindAddress and scorex.restApi.bindAddress settings should be set to 127.0.0.1."
+    },
+    {
+      "question": "What Java system properties are used to launch the Ergo node and direct its outbound network traffic through the Tor SOCKS proxy?",
+      "answer": "-DsocksProxyHost=localhost -DsocksProxyPort=9050"
+    },
+    {
+      "question": "What is the purpose of the utxoBootstrap, storingUtxoSnapshots, nipopowBootstrap, and p2pNipopows settings in the example ergo.conf file?",
+      "answer": "These settings configure the UTXO management and NiPoPoW functionality of the Ergo node."
+    },
+    {
+      "question": "What is the purpose of the apiKeyHash setting in the example ergo.conf file?",
+      "answer": "The apiKeyHash setting specifies the API key hash for accessing the Ergo node's REST API."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Tor\n  - Node\n  - Privacy\n  - Anonymity\n  - Configuration\n---"
+    },
+    {
+      "heading": "Running your Node over Tor",
+      "level": 1,
+      "content": "[Tor](https://www.torproject.org/download/tor/) is a network that helps anonymize your internet traffic by routing it through a series of volunteer-operated servers (relays). This guide explains how to configure your Ergo node to route its P2P network traffic through Tor.\n\n\nIf you have Tor installed and running (typically listening on `127.0.0.1:9050` for SOCKS proxy connections), you first need to ensure your node's P2P and API interfaces are bound to localhost in your `ergo.conf` file:\n\n```conf\nscorex.network.bindAddress = \"127.0.0.1:9030\"\nscorex.restApi.bindAddress = \"127.0.0.1:9053\"\n```\n\nWith Tor installed and running, and the configuration above set, you then launch the Ergo node using specific Java system properties (`-D`) to direct its outgoing network traffic through the Tor SOCKS proxy:\n\n```bash\njava -DsocksProxyHost=localhost -DsocksProxyPort=9050 -Xmx4G -jar ergo-*.jar --mainnet -c ergo.conf \n```"
+    },
+    {
+      "heading": "Example Configuration File",
+      "level": 1,
+      "content": "```conf\nergo {\n    node {\n        mining = false\n\n        utxo {\n           utxoBootstrap = true\n           storingUtxoSnapshots = 0\n        }\n        nipopow {\n           nipopowBootstrap = true\n           p2pNipopows = 2\n        }\n    }\n\n}\n\nscorex {\n    restApi {\n        apiKeyHash = \"324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf\"\n        bindAddress = \"127.0.0.1:9053\"\n    }\n    network {\n        bindAddress = \"127.0.0.1:9030\"\n        # Use this if you want to bind it to a public address\n        #declaredAddress = \"\"\n    }\n}\n```"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/node/tor.md",
+  "processed_at": "2025-05-11T19:58:13.005803",
+  "ai_processed": true
+}

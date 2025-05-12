@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "\n# Voting Cycles and Types of Changes\n\nVotes on foundational changes, such as block version, span **32 epochs** and demand a **90% miner consensus**. Everyday changes, like block size adjustments, req..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Voting Cycles and Types of Changes"
+  },
+  {
+    "question": "What is the 'Voting Cycles and Types of Changes' section about?",
+    "answer": "Votes on foundational changes, such as block version, span **32 epochs** and demand a **90% miner co..."
+  }
+]

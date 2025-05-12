@@ -1,0 +1,7 @@
+The document describes the Peer Management Protocol, which is used to manage the set of known peers in a peer-to-peer (P2P) network. The key points are:
+
+- A peer is identified by an IP address and port number.
+- The peer management structure consists of three sets: good peers, banned peers, and connected peers, which adhere to certain invariants.
+- Peers can be penalized for various types of misbehavior, and penalties are tracked in a penalty book. Excessive penalization is prevented by a cooldown period.
+- Peers with accumulated penalties above a threshold are added to a blacklist, which can be temporary or permanent.
+- Peer discovery aims to find new potential peers from various sources and add them to the set of good peers.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What security standard does the Ergo wallet use to generate private keys?",
+    "answer": "The wallet utilizes the BIP-32 standard for Hierarchical Deterministic (HD) Wallets and the BIP-39 standard to generate a master seed from a mnemonic sentence (seed phrase)."
+  },
+  {
+    "question": "What are the options for the length of the mnemonic seed phrase in the Ergo wallet?",
+    "answer": "The length of the mnemonic sentence can be 12, 15, 18, 21, or 24 words, corresponding to 128, 160, 192, 224, or 256 bits of security, respectively."
+  },
+  {
+    "question": "How can you restore an Ergo wallet from an existing mnemonic phrase?",
+    "answer": "To restore a wallet from an existing mnemonic, use the `/wallet/restore` API endpoint and provide the mnemonic phrase and optional passphrase (if used)."
+  },
+  {
+    "question": "What configuration settings are available for the Ergo wallet?",
+    "answer": "Key wallet configuration settings include `seedStrengthBits`, `secretStorage.secretDir`, and `mnemonicPhraseLanguage`."
+  },
+  {
+    "question": "When is the Ergo wallet required to be unlocked?",
+    "answer": "The wallet must be unlocked before performing operations such as using the internal miner, signing transactions, and tracking boxes."
+  }
+]

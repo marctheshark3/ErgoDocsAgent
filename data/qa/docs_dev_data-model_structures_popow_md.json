@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of Proof of Proof-of-Work (PoPow) data structures in Ergo?",
+    "answer": "The PoPow data structures enable lightweight clients to securely and efficiently verify that a blockchain follows the longest chain rule without downloading the entire blockchain."
+  },
+  {
+    "question": "What are the key data structures used in the PoPow protocol?",
+    "answer": "The key data structures are interlink vectors, NiPoPoW proofs, and Merkle trees."
+  },
+  {
+    "question": "What is the purpose of interlink vectors in the PoPow protocol?",
+    "answer": "Interlink vectors store references to previous block headers at different difficulty levels, allowing lightweight clients to verify the blockchain's integrity by checking only a subset of blocks."
+  },
+  {
+    "question": "How are NiPoPoW proofs constructed using the PoPow data structures?",
+    "answer": "NiPoPoW proofs are constructed using the interlink vectors and the chain of block headers, along with Merkle proofs to verify the inclusion of specific data elements."
+  },
+  {
+    "question": "What is the role of Merkle trees in the PoPow protocol?",
+    "answer": "Merkle trees are used to create cryptographic proofs that verify the inclusion of specific data elements, such as block headers or interlink references, in the NiPoPoW proof."
+  }
+]

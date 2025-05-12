@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are Sigma Protocols?",
+    "answer": "Sigma protocols (\u03a3-protocols) are a class of cryptographic proof systems that allow a prover to convince a verifier that they know a value, such as a secret key, without revealing the value itself."
+  },
+  {
+    "question": "What are the two elementary Sigma Protocols offered in ErgoScript?",
+    "answer": "1. Proof of Knowledge of Discrete Logarithm (Schnorr Signature), and 2. Proof of Equality of Discrete Logarithms (Diffie-Hellman Tuple)."
+  },
+  {
+    "question": "What is the composability feature of Sigma Protocols in Ergo?",
+    "answer": "Sigma protocols in Ergo can be composed using logical connectives like AND, OR, and THRESHOLD to create more advanced proofs, enabling the creation of sophisticated smart contracts and multi-signature schemes."
+  },
+  {
+    "question": "What is an example of a composed Sigma Protocol in Ergo?",
+    "answer": "Ring Signatures, where a proof of knowledge of one of multiple secrets is created, and Threshold Signatures, where a proof of knowledge of at least a certain number of secrets is created."
+  },
+  {
+    "question": "How are Sigma Protocols used in the Ergo blockchain?",
+    "answer": "In ErgoScript, proving and verifying cryptographic statements are first-class primitives, and scripts protecting transaction outputs can contain Sigma-statements that must be proven before the outputs can be spent."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Transaction Signing Process\n\nTo initiate a transaction, a spending transaction $tx$ is required as an input. This can be achieved by using $bytesToSign(tx)$. It's important to note that multiple inp..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Transaction Signing Process"
+  },
+  {
+    "question": "What is the 'Transaction Signing Process' section about?",
+    "answer": "To initiate a transaction, a spending transaction $tx$ is required as an input. This can be achieved..."
+  }
+]

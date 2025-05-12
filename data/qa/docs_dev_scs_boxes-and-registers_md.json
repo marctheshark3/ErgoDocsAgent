@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is a 'box' in the context of ErgoScript?",
+    "answer": "In ErgoScript, a 'box' is a more versatile version of a UTXO (Unspent Transaction Output), representing a ledger entry that contains not only the amount of cryptocurrency owned by a particular address, but also additional data stored in 'registers'."
+  },
+  {
+    "question": "How do 'registers' in Ergo's boxes differ from traditional UTXOs?",
+    "answer": "Ergo's boxes can contain additional data in their 'registers', beyond just the unspent cryptocurrency amount, which can be integrated into transactions and used in the execution of smart contracts."
+  },
+  {
+    "question": "What is the main difference between Ergo's boxes and UTXOs in other cryptocurrencies?",
+    "answer": "In UTXO-based cryptocurrencies, each transaction consumes one or more UTXOs as inputs and creates one or more UTXOs as outputs, with the 'unspent' outputs being the 'coins' that can be spent in future transactions. Ergo's boxes, on the other hand, can hold additional data beyond just the unspent cryptocurrency amount."
+  },
+  {
+    "question": "What is the purpose of the 'box' concept in Ergo?",
+    "answer": "The 'box' concept in Ergo captures the idea that these entities are like containers holding various types of information (value, tokens, custom data, etc.), beyond just the unspent transaction output."
+  },
+  {
+    "question": "Where can one find examples of using the register data in Ergo's boxes?",
+    "answer": "Interpreting the register data in Ergo's boxes off-chain is a common task, and examples of using this data can be found in the Fleet SDK Recipes, which provide examples using JavaScript/TypeScript."
+  }
+]

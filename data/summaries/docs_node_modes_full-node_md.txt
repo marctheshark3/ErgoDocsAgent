@@ -1,0 +1,5 @@
+Full-Node Mode refers to two different modes of operation for a node in the Bitcoin network:
+
+1. Full 'Archival' Node Mode: This is the standard mode, similar to a full Bitcoin node.
+
+2. Pruned-Fullnode Mode: Downloads all headers, validates proofs-of-work, and links structures, followed by downloading a UTXO snapshot from peers and the full blocks succeeding it.

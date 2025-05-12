@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the three main components of an Ergo transaction?",
+    "answer": "Every Ergo transaction comprises: 1) One or more Input boxes, 2) One or more Output boxes, and 3) Zero or more Data-Input boxes."
+  },
+  {
+    "question": "What is the purpose of Data Inputs in Ergo transactions?",
+    "answer": "Data inputs allow multiple transactions within a block or slot to read the data from the same UTXO concurrently, without spending or destroying the data. This reduces transaction fees and addresses limitations of traditional UTXO-based blockchains."
+  },
+  {
+    "question": "What is the 'atomic state transition operation' performed by an Ergo transaction?",
+    "answer": "Each Ergo transaction represents an atomic state transition operation that destroys an existing box from the state and generates new ones."
+  },
+  {
+    "question": "What is the purpose of the 'proof of spending correctness' in Ergo transactions?",
+    "answer": "If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain proof of spending correctness, including context extension and data inputs, to satisfy the remaining cryptographic protection of the script."
+  },
+  {
+    "question": "What are some tools available for composing Ergo transactions?",
+    "answer": "Tools for composing Ergo transactions include the Transaction Builder application and the basic tutorial for sending payments."
+  }
+]

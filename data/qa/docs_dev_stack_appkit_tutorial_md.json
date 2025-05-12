@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the Ergo Appkit library used for?",
+    "answer": "Ergo Appkit is a library for polyglot development of Ergo Applications based on GraalVM."
+  },
+  {
+    "question": "What is the example scenario described in the tutorial?",
+    "answer": "The tutorial describes creating a simple console application called FreezeCoin in Java which uses the Appkit library to send a new transaction to an Ergo node programmatically."
+  },
+  {
+    "question": "What are the key features of the Freezer contract described in the tutorial?",
+    "answer": "The Freezer contract checks that the current block number is greater than the specified deadline and that the spending transaction is signed by the owner's public key."
+  },
+  {
+    "question": "What are the setup requirements for using Appkit in a Java application?",
+    "answer": "The application needs to add the Appkit dependency, connect to a running Ergo node via REST API, and load a configuration file with the necessary settings."
+  },
+  {
+    "question": "How can GraalVM be used to improve the performance of the Java-based FreezeCoin application?",
+    "answer": "GraalVM can be used to compile the Java code ahead of time into a native executable, which can significantly reduce the startup time and memory usage of the application."
+  }
+]

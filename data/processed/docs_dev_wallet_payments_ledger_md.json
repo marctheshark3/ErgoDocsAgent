@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_wallet_payments_ledger_md",
+  "title": "Ledger",
+  "summary": "The document provides information about the Ledger application and resources for wallet developers. It mentions that the Ledger team is currently reviewing the application, and a complete version is expected to be available soon via the Ledger Manager. In the meantime, developers can enable developer mode on their Ledger device to experiment with the pre-release version. The document also lists several resources, including a Binding Library, a Ledger HID Communications Library, and a Ledger app for Ergo, as well as the Ledger Core library, which are available for developers to use.",
+  "qa_pairs": [
+    {
+      "question": "What is the current status of the Ledger application?",
+      "answer": "The Ledger team is currently reviewing the application, and the complete version is expected to be available soon via the Ledger Manager."
+    },
+    {
+      "question": "How can developers experiment with the pre-release version of the Ledger application?",
+      "answer": "Developers can enable developer mode on their Ledger device to experiment with the pre-release version."
+    },
+    {
+      "question": "What resources are available for wallet developers working with Ledger?",
+      "answer": "There is a Binding Library available, as well as documentation for implementing a binding API. Additional resources include ledger4j, tesseract-one/ledger-app-ergo, and lib-ledger-core."
+    },
+    {
+      "question": "Where can developers find the documentation for the Ledger binding API?",
+      "answer": "The documentation for the Ledger binding API can be found at https://docs.google.com/document/d/1z8nIlRmPhwcKzyZ2jZYYkaFDtLt8pgvnRWrT5zJJ_Tw/edit?pli=1#heading=h.hag83gqtujji"
+    },
+    {
+      "question": "What is the purpose of the ledger4j library?",
+      "answer": "ledger4j is a Ledger HID Communications Library."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - JavaScript\n---"
+    },
+    {
+      "heading": "Ledger",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Developer mode",
+      "level": 2,
+      "content": "The Ledger team is currently reviewing the application; the complete version is expected to be available soon via the Ledger Manager. However, in the interim, you can enable developer mode on your Ledger device if you wish to experiment with the pre-release version."
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "For wallet developers\n\n- There is a [Binding Library](https://github.com/anon-br/ledgerjs-hw-app-ergo) available, for anything else, you will need to implement a biding API using [this documentation](https://docs.google.com/document/d/1z8nIlRmPhwcKzyZ2jZYYkaFDtLt8pgvnRWrT5zJJ_Tw/edit?pli=1#heading=h.hag83gqtujji)\n- [ledger4j - Ledger HID Communityions Library](https://github.com/aionnetwork/ledger4j) \n- [tesseract-one/ledger-app-ergo](https://github.com/tesseract-one/ledger-app-ergo)\n- [lib-ledger-core](https://github.com/LedgerHQ/lib-ledger-core)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/wallet/payments/ledger.md",
+  "processed_at": "2025-05-11T19:40:57.999410",
+  "ai_processed": true
+}

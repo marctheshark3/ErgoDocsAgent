@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Ergo Modifiers Validation section?",
+    "answer": "The Ergo Modifiers Validation section contains a list of all consensus-critical validation rules that every node in the network should perform."
+  },
+  {
+    "question": "What is the difference between consensus-critical rules and non-consensus-critical rules?",
+    "answer": "Consensus-critical rules are rules that must be enforced by the network, while non-consensus-critical rules may be disabled later by a miner voting via soft forks."
+  },
+  {
+    "question": "What is the maximum number of transaction inputs allowed?",
+    "answer": "The maximum number of transaction inputs is 32767."
+  },
+  {
+    "question": "What is the maximum number of transaction data inputs allowed?",
+    "answer": "The maximum number of transaction data inputs is 32767."
+  },
+  {
+    "question": "Which modifiers are listed in the transaction validation rules?",
+    "answer": "The transaction validation rules list the ErgoTransaction modifier."
+  }
+]

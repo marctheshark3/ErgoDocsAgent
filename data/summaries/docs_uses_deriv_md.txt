@@ -1,0 +1,5 @@
+Ergo's powerful blockchain capabilities enable the creation of innovative decentralized finance (DeFi) primitives, including derivatives and options trading protocols. These protocols offer traders alternative platforms for speculating on asset prices, managing risk, and generating yield in a trustless and decentralized manner.
+
+The document discusses three key decentralized options trading protocols on Ergo: Hodlcoin, OptionCoin, and OptionPools. Hodlcoin is a high-risk, high-reward game that encourages players to "HODL" their ERGs. OptionCoin combines decentralized options trading with token emission, allowing traders to speculate on the future price of the token. OptionPools is a groundbreaking pool-to-peer Automated Market Maker (AMM) trading protocol designed for decentralized options trading.
+
+In addition to options trading, Ergo's Multi-Stage Contracts enable the development of various other derivative protocols, such as mining power derivatives. Ergo's decentralized finance ecosystem continues to evolve, offering innovative solutions for traders and investors.

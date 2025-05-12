@@ -1,0 +1,17 @@
+This document provides an overview of the key data structures used in the Ergo blockchain and smart contract ecosystem. The main data structures discussed are:
+
+1. AVL Trees (Authenticated Dynamic Dictionaries): Used for efficient and secure storage and access to dynamic data, such as UTXO states and privacy-preserving transactions.
+
+2. Merkle Trees: Fundamental for ensuring data integrity and authenticity, used in transaction validation, extension block data, and lightweight client proofs.
+
+3. Sigma Trees (ErgoTree): Represent the logic and cryptographic conditions of Ergo smart contracts, enabling complex script execution.
+
+4. Context Data Structures: Provide necessary environmental details for smart contract execution.
+
+5. Proof of Proof-of-Work (PoPow) Data Structures: Enable lightweight nodes to verify the longest chain without downloading the entire blockchain.
+
+6. Box Data Structures: Represent UTXOs, defining spending conditions through ErgoScript.
+
+7. Transaction Data Structures: Organize and execute financial transfers, contract calls, and state changes within the Ergo blockchain.
+
+8. Interlink Vectors: Used in conjunction with Merkle Trees for efficient verification of the chain of blocks in the blockchain.

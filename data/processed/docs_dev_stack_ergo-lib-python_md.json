@@ -1,0 +1,163 @@
+{
+  "id": "docs_dev_stack_ergo-lib-python_md",
+  "title": "ergo-lib-python Documentation",
+  "summary": "ergo-lib-python Documentation provides Python bindings for the sigma-rust library, enabling interaction with the Ergo blockchain from Python applications. It allows developers to build and structure Ergo transactions, generate cryptographic keys and wallet addresses, sign transactions securely, and utilize various Ergo-specific data types and chain structures. The library can be installed using pip, and the document includes examples showcasing common operations such as generating a mnemonic and address, and building a simple ERG transfer transaction.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the ergo-lib-python library?",
+      "answer": "ergo-lib-python provides Python bindings for the core sigma-rust library, enabling interaction with the Ergo blockchain directly from Python applications."
+    },
+    {
+      "question": "What are the key capabilities provided by ergo-lib-python?",
+      "answer": "ergo-lib-python equips developers with tools to build and structure Ergo transactions, generate cryptographic keys and wallet addresses, sign transactions securely, and utilize various Ergo-specific data types and chain structures."
+    },
+    {
+      "question": "How do you install the ergo-lib-python library?",
+      "answer": "Install the ergo-lib-python library using pip: pip install ergo-lib-python."
+    },
+    {
+      "question": "How do you generate a mnemonic phrase and derive an Ergo address using ergo-lib-python?",
+      "answer": "Use the MnemonicGenerator, ExtSecretKey, and DerivationPath classes from the ergo_lib_python.wallet module to generate a mnemonic phrase and derive the corresponding keys and Ergo address."
+    },
+    {
+      "question": "Where can you find the underlying Rust implementation of the ergo-lib-python library?",
+      "answer": "The underlying Rust implementation of ergo-lib-python can be found in the sigma-rust repository: https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "ergo-lib-python Documentation",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Overview",
+      "level": 2,
+      "content": "`ergo-lib-python` provides [Python](python.md) bindings for the core [`sigma-rust`](sigma-rust.md) library (implemented in [Rust](rust.md)), enabling interaction with the [Ergo blockchain](why.md) directly from Python applications. The underlying Rust implementation can be found in the `sigma-rust` repository: `https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python`.\n\nThis library equips developers with tools to:\n\n* Build and structure [Ergo transactions](transactions.md).\n* Generate cryptographic keys and [wallet addresses](wallets.md).\n* Sign transactions securely.\n* Utilize various Ergo-specific data types and chain structures."
+    },
+    {
+      "heading": "Installation",
+      "level": 2,
+      "content": "Install the library using pip:\n\n```bash\npip install ergo-lib-python\n```"
+    },
+    {
+      "heading": "Core Concepts & Usage Examples",
+      "level": 2,
+      "content": "Below are examples showcasing common operations using `ergo-lib-python`.\n\n**1. Generate Mnemonic and Address**\n\nCreate a new mnemonic phrase, derive the corresponding keys, and obtain an Ergo address.\n\n```python\nfrom ergo_lib_python.wallet import MnemonicGenerator, ExtSecretKey, DerivationPath\nfrom ergo_lib_python.chain import NetworkPrefix"
+    },
+    {
+      "heading": "Generate a 128-bit entropy mnemonic using the English wordlist",
+      "level": 1,
+      "content": "mnemonic = MnemonicGenerator(\"english\", 128).generate()\nprint(f\"Generated Mnemonic: {mnemonic}\")"
+    },
+    {
+      "heading": "Derive the secret key using the default derivation path (m/44'/429'/0'/0/0)",
+      "level": 1,
+      "content": "ext_secret_key = ExtSecretKey.from_mnemonic(mnemonic, password=\"\").derive(DerivationPath())"
+    },
+    {
+      "heading": "Get the public key and the corresponding address",
+      "level": 1,
+      "content": "address = ext_secret_key.public_key().address()"
+    },
+    {
+      "heading": "Display the address in Mainnet format (starts with '9')",
+      "level": 1,
+      "content": "print(f\"Mainnet Address: {address.to_str(NetworkPrefix.Mainnet)}\")\n```\n\n**2. Build a Simple ERG Transfer Transaction**\n\nConstruct an unsigned transaction to send ERG to a specified address.\n\n```python\nfrom ergo_lib_python.chain import ErgoBoxCandidate, Address\nfrom ergo_lib_python.transaction import TxBuilder\nfrom ergo_lib_python.wallet import select_boxes_simple"
+    },
+    {
+      "heading": "Note: You'll need [ErgoBox](box-structure.md) instances for input_boxes",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "--- Transaction Parameters ---",
+      "level": 1,
+      "content": "recipient_address_str = \"9egnPnrYskFS8k1gYiKZEXZ2bhP9fvX9GZvsG1V3BzH3n8sBXrf\" # Example recipient\namount_to_send_nanoerg = 1_000_000_000 # 1 ERG\nminer_fee_nanoerg = 1_000_000 # 0.001 ERG (example fee)\ncurrent_blockchain_height = 1000000 # Example current height\nchange_address_str = \"YOUR_CHANGE_ADDRESS_HERE\" # Replace with your address"
+    },
+    {
+      "heading": "These objects hold the funds needed for the transaction.",
+      "level": 1,
+      "content": "input_boxes = [] # Populate with actual ErgoBox instances"
+    },
+    {
+      "heading": "--- End Parameters ---",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "1. Define the output box for the recipient",
+      "level": 1,
+      "content": "output_candidate = ErgoBoxCandidate(\n    value=amount_to_send_nanoerg,\n    script=Address(recipient_address_str),\n    creation_height=current_blockchain_height\n)"
+    },
+    {
+      "heading": "For transactions involving tokens, provide target_tokens list.",
+      "level": 1,
+      "content": "selection = select_boxes_simple(\n    boxes=input_boxes,\n    target_balance=output_candidate.value + miner_fee_nanoerg,\n    target_tokens=[]\n)\n\nif not selection:\n    raise ValueError(\"Insufficient funds or suitable boxes not found in input_boxes.\")"
+    },
+    {
+      "heading": "3. Build the unsigned transaction",
+      "level": 1,
+      "content": "tx_builder = TxBuilder(\n    box_selection=selection,\n    output_candidates=[output_candidate],\n    current_height=current_blockchain_height,\n    fee_amount=miner_fee_nanoerg,\n    change_address=Address(change_address_str)\n)\nunsigned_tx = tx_builder.build()\n\nprint(f\"Unsigned Transaction ID: {unsigned_tx.id().to_str()}\")"
+    },
+    {
+      "heading": "Next step: Sign unsigned_tx using your wallet implementation",
+      "level": 1,
+      "content": "```\n\n**3. Mint a Token (e.g., an NFT)**\n\nCreate a transaction that mints a new token. The ID of the newly minted token is derived from the ID of the first input box used in the transaction.\n\n```python\nfrom ergo_lib_python.chain import Token, TokenId, ErgoBoxCandidate, Address\nfrom ergo_lib_python.transaction import TxBuilder\nfrom ergo_lib_python.wallet import select_boxes_simple"
+    },
+    {
+      "heading": "Note: You'll need ErgoBox instances for input_boxes",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "--- Transaction Parameters ---",
+      "level": 1,
+      "content": "mint_amount = 1 # Quantity of the token to mint\ntoken_name = \"MyAwesomeNFT\"\ntoken_description = \"This is a unique digital collectible.\"\ntoken_decimals = 0 # 0 indicates the token is not divisible (common for NFTs)\nbox_value_nanoerg = 100_000_000 # Min box value (e.g., 0.1 ERG) for the token box\nminer_fee_nanoerg = 1_000_000 # 0.001 ERG (example fee)\ncurrent_blockchain_height = 1000000 # Example current height\nrecipient_address_str = \"YOUR_RECIPIENT_ADDRESS_HERE\" # Who receives the minted token\nchange_address_str = \"YOUR_CHANGE_ADDRESS_HERE\" # Your change address"
+    },
+    {
+      "heading": "input_boxes: List of ErgoBox objects you own. The first box's ID will become the token ID.",
+      "level": 1,
+      "content": "input_boxes = [] # Populate with actual ErgoBox instances"
+    },
+    {
+      "heading": "--- End Parameters ---",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "1. Select input boxes to cover the box value and miner fee",
+      "level": 1,
+      "content": "selection = select_boxes_simple(\n    boxes=input_boxes,\n    target_balance=box_value_nanoerg + miner_fee_nanoerg,\n    target_tokens=[]\n)\n\nif not selection or not selection.boxes:\n    raise ValueError(\"Input box selection failed. Ensure input_boxes has sufficient funds and suitable boxes.\")"
+    },
+    {
+      "heading": "2. Define the token properties. TokenId comes from the first input box.",
+      "level": 1,
+      "content": "first_input_box_id = selection.boxes[0].box_id\ntoken_to_mint = Token(token_id=TokenId(first_input_box_id), amount=mint_amount)"
+    },
+    {
+      "heading": "3. Create the output box candidate that will hold the new token",
+      "level": 1,
+      "content": "mint_candidate = ErgoBoxCandidate(\n    value=box_value_nanoerg,\n    script=Address(recipient_address_str),\n    creation_height=current_blockchain_height,\n    mint_token=token_to_mint,\n    mint_token_name=token_name,\n    mint_token_desc=token_description,\n    mint_token_decimals=token_decimals\n)"
+    },
+    {
+      "heading": "4. Build the unsigned transaction",
+      "level": 1,
+      "content": "tx_builder = TxBuilder(\n    box_selection=selection,\n    output_candidates=[mint_candidate], # Output includes the token minting box\n    current_height=current_blockchain_height,\n    fee_amount=miner_fee_nanoerg,\n    change_address=Address(change_address_str)\n)\nunsigned_tx = tx_builder.build()\n\nprint(f\"Unsigned Token Mint Transaction ID: {unsigned_tx.id().to_str()}\")\nprint(f\"Minted Token ID: {token_to_mint.token_id.to_str()}\") # This ID matches the first input box ID"
+    },
+    {
+      "heading": "Next step: Sign unsigned_tx using your wallet implementation",
+      "level": 1,
+      "content": "```"
+    },
+    {
+      "heading": "API Reference",
+      "level": 2,
+      "content": "A detailed API reference, generated directly from the library's source code, provides comprehensive information on all available modules, classes (like `ExtSecretKey`, `Address`, `ErgoBoxCandidate`, `TxBuilder`, `Token`), and functions (like `select_boxes_simple`). Consult this reference for specific method signatures, properties, and usage details.\n\n*(Typically, this reference is available alongside the library's main documentation or can be generated locally using standard Python documentation tools like Sphinx.)*"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/stack/ergo-lib-python.md",
+  "processed_at": "2025-05-11T19:34:03.199996",
+  "ai_processed": true
+}

@@ -1,0 +1,5 @@
+The document defines the Ergo Improvement Proposal (EIP-0003) for a Deterministic Wallet Standard. It is based on the Bitcoin Improvement Proposal (BIP-0044) and aims to establish a common standard for deterministic wallets in the Ergo ecosystem. The key points are:
+
+- The document defines the "coin_type" for Ergo as 429, based on the ASCII values of the word "ergo".
+- The standard wallet path is m / 44' / 429' / account' / change / address_index.
+- The document does not use the "change" level for internal/change addresses, but only for external addresses. This simplifies the user experience and aligns with the availability of a privacy-preserving mixer (ErgoMix) in the Ergo ecosystem.

@@ -1,0 +1,5 @@
+CPU Mining: Do not GPU mine the testnet as it prevents CPU miners from winning blocks and leaves a high difficulty when you stop.
+
+To CPU mine on the testnet, configure your testnet.conf file and run the Ergo node with the appropriate command. Make sure your wallet is initialized and unlocked. You should see mining activity in the node's output.
+
+Your rewards will be sent to your rewardPublicKey, which is different from your wallet address. You can use testnet.sigmaexplorer.org to monitor miner distribution, hashrate, and difficulty.

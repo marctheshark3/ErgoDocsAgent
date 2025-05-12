@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ergo-lib-python library?",
+    "answer": "ergo-lib-python provides Python bindings for the core sigma-rust library, enabling interaction with the Ergo blockchain directly from Python applications."
+  },
+  {
+    "question": "What are the key capabilities provided by ergo-lib-python?",
+    "answer": "ergo-lib-python equips developers with tools to build and structure Ergo transactions, generate cryptographic keys and wallet addresses, sign transactions securely, and utilize various Ergo-specific data types and chain structures."
+  },
+  {
+    "question": "How do you install the ergo-lib-python library?",
+    "answer": "Install the ergo-lib-python library using pip: pip install ergo-lib-python."
+  },
+  {
+    "question": "How do you generate a mnemonic phrase and derive an Ergo address using ergo-lib-python?",
+    "answer": "Use the MnemonicGenerator, ExtSecretKey, and DerivationPath classes from the ergo_lib_python.wallet module to generate a mnemonic phrase and derive the corresponding keys and Ergo address."
+  },
+  {
+    "question": "Where can you find the underlying Rust implementation of the ergo-lib-python library?",
+    "answer": "The underlying Rust implementation of ergo-lib-python can be found in the sigma-rust repository: https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python."
+  }
+]

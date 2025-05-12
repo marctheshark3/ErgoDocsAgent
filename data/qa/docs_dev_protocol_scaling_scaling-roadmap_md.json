@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the current focus of the Ergo Scaling Roadmap?",
+    "answer": "The current focus is on optimizing the implementation of UTXO set snapshots and Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) for ultra-fast bootstrapping in the pruned full node, as well as exploring ways to further increase block limits for miners."
+  },
+  {
+    "question": "What are some of the recent developments mentioned in the roadmap?",
+    "answer": "Recent developments include planning for Node V6 and scalability improvements, development of an SPV Client, the release of the pruned full node, the release of Node V5, the release of the Plasma Library by GetBlok, and the publication of Plasma Tutorials."
+  },
+  {
+    "question": "Where can discussions on scaling for Ergo be found?",
+    "answer": "Discussions on scaling for Ergo can be found on the Telegram channel at https://t.me/ErgoLayer2 or the #layer2 channel on the Ergo Discord server at https://discord.gg/nr4JRnhAyV."
+  },
+  {
+    "question": "What is the purpose of the Ergo Design and Implementation Roadmap mentioned in the document?",
+    "answer": "The Ergo Design and Implementation Roadmap is not provided in the given content, so no further details can be extracted from the document."
+  },
+  {
+    "question": "What is the live status of the pruned full node mentioned in the roadmap?",
+    "answer": "The pruned full node is now live, as stated in the recent developments section of the roadmap."
+  }
+]

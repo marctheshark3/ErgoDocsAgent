@@ -1,0 +1,113 @@
+{
+  "id": "docs_dev_scs_sigma_diffie_md",
+  "title": "Diffie-Hellman (DH) Protocol in Ergo",
+  "summary": "The document provides an overview of the Diffie-Hellman (DH) protocol and its use in the Ergo blockchain. It explains the concept of Diffie-Hellman tuples (DHTs), which are used to prove knowledge of a shared secret without revealing it. The document describes the interactive protocol and the non-interactive Fiat-Shamir transformation used in Ergo. It then discusses the use cases of DHTs in Ergo, including the ZeroJoin mixer and stealth addresses, which leverage DH key exchanges to enhance privacy in financial transactions.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Diffie-Hellman (DH) protocol?",
+      "answer": "The Diffie-Hellman protocol allows two parties to generate a shared secret over a public communication channel, which can then be used to encrypt future communications."
+    },
+    {
+      "question": "How does the Diffie-Hellman protocol work without exchanging the secret itself?",
+      "answer": "The two parties collaboratively generate the shared secret, ensuring that the secret remains secure, even if an observer intercepts their communication."
+    },
+    {
+      "question": "What is a Diffie-Hellman tuple (DHT) in the context of Ergo?",
+      "answer": "In Ergo, Diffie-Hellman tuples (DHTs) are used to prove knowledge of a shared secret without revealing it, consisting of public group elements g, h, u, and v."
+    },
+    {
+      "question": "How does the interactive Diffie-Hellman protocol work in Ergo?",
+      "answer": "The prover selects a random value r, computes temporary values t0 and t1, sends them to the verifier, who then selects a random challenge c and sends it back. The prover computes the response z and sends it to the verifier, who then verifies the proof."
+    },
+    {
+      "question": "How is the Diffie-Hellman protocol implemented in a non-interactive way in Ergo?",
+      "answer": "In Ergo, the Fiat-Shamir transformation is used to make the Diffie-Hellman protocol non-interactive, where the verifier's challenge c is replaced with a cryptographic hash function H of the temporary values t0, t1, and the message m."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Diffie\n---"
+    },
+    {
+      "heading": "Diffie-Hellman (DH) Protocol in Ergo",
+      "level": 1,
+      "content": "The **Diffie-Hellman (DH)** protocol is a cornerstone of cryptography, allowing two parties to generate a shared secret over a public communication channel. This shared secret can then be used to encrypt future communications. Importantly, **Diffie-Hellman does not involve exchanging the secret itself**\u2014instead, the two parties collaboratively generate it, ensuring that the secret remains secure, even if an observer intercepts their communication.\n\nThis principle makes Diffie-Hellman invaluable in settings where **multi-signature** schemes, **ring signatures**, and other privacy-preserving cryptographic protocols are required, such as in Ergo's mixer or stealth address applications."
+    },
+    {
+      "heading": "Diffie-Hellman Tuple",
+      "level": 2,
+      "content": "In the context of Ergo, **Diffie-Hellman tuples** (DHTs) are used to prove knowledge of a shared secret without revealing it. The tuple consists of public group elements **g, h, u, v**, and the goal is to prove knowledge of a secret **x** such that:\n\n$$ u = g^x \\quad \\text{and} \\quad v = h^x $$\n\nThe protocol works as follows:"
+    },
+    {
+      "heading": "Interactive Protocol",
+      "level": 3,
+      "content": "1. The prover selects a random value **r \u2190<sup>R</sup> Z<sub>q</sub>** and computes two temporary values **t<sub>0</sub>** and **t<sub>1</sub>**:\n   \\[\n   t_0 = g^r, \\quad t_1 = h^r\n   \\]\n   The prover sends **(t<sub>0</sub>, t<sub>1</sub>)** to the verifier.\n\n2. The verifier selects a random challenge **c \u2190<sup>R</sup> Z<sub>q</sub>** and sends it to the prover.\n\n3. The prover computes the response **z = r + cx** and sends it to the verifier.\n\n4. The verifier accepts the proof if:\n   \\[\n   g^z = t_0 \\cdot u^c \\quad \\text{and} \\quad h^z = t_1 \\cdot v^c\n   \\]\nThis process allows the prover to demonstrate knowledge of **x** without actually revealing **x**."
+    },
+    {
+      "heading": "Fiat-Shamir Transformation (Non-Interactive Variant)",
+      "level": 3,
+      "content": "In blockchain environments like Ergo, interactive protocols are often impractical. Instead, a non-interactive version of the Diffie-Hellman protocol is used, employing the **Fiat-Shamir transformation**. This transformation replaces the verifier\u2019s challenge **c** with a cryptographic hash function **H**:\n\n$$ c = H(t_0 \\parallel t_1 \\parallel m) $$\n\nHere, **m** is the message to be signed or validated. This makes the protocol non-interactive, as the prover can generate the challenge independently, creating a self-contained proof.\n\nIn ErgoScript, this transformation is implemented as **[proveDHTuple](global-functions.md#provedhtuple)(g, h, u, v)**, allowing users to generate non-interactive proofs of Diffie-Hellman tuples.\n\n---"
+    },
+    {
+      "heading": "Use Cases of Diffie-Hellman Tuples in Ergo",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Mixers",
+      "level": 3,
+      "content": "Diffie-Hellman tuples are essential for maintaining privacy in Ergo\u2019s **ZeroJoin** mixer, a non-custodial, non-interactive token mixer. The security of ZeroJoin is based on the **Decision Diffie-Hellman (DDH) assumption**, a well-established cryptographic assumption that ensures no information about the secret can be gleaned from the public values exchanged.\n\n- **ZeroJoin** utilizes **ring signatures** and Diffie-Hellman tuples to restore fungibility to digital notes, ensuring that coins become indistinguishable from one another after mixing.\n- Ergo's mixers avoid the need for trusted setups or intermediaries, ensuring minimal trust assumptions."
+    },
+    {
+      "heading": "Comparison with Other Platforms:",
+      "level": 4,
+      "content": "| Bitcoin           | Ethereum                           | Ergo                                 |\n|-------------------|------------------------------------|--------------------------------------|\n| No on-chain mixing | Trusted setup-based or inefficient mixers | Efficient, minimal trust assumptions, using ring signatures and DHTs |\n\nFor more information, see [ErgoMixer](ergomixer.md)."
+    },
+    {
+      "heading": "Stealth Addresses",
+      "level": 3,
+      "content": "Stealth addresses leverage **non-interactive Diffie-Hellman key exchanges** to provide privacy in financial transactions. Each payment generates a new one-time-use address, ensuring that the recipient\u2019s identity remains private while still enabling them to securely receive funds.\n\n- Stealth addresses prevent anyone except the recipient from linking transactions to their public address, significantly enhancing privacy.\n- Diffie-Hellman key exchanges are at the core of this functionality, ensuring that only the intended recipient can derive the private key needed to spend the funds.\n\nFor more details, refer to the [Stealth Addresses](stealth-address.md) page.\n\n---"
+    },
+    {
+      "heading": "Technical Details",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Fiat-Shamir Transformation",
+      "level": 3,
+      "content": "The **Fiat-Shamir transformation** is crucial for turning interactive protocols like Diffie-Hellman into non-interactive ones suitable for blockchain environments. In Ergo, the Fiat-Shamir transformation ensures that proof generation remains non-interactive and compact, making it efficient for on-chain use.\n\nThe transformation replaces the interactive challenge **c** with a hash of the prover's commitment and the message being signed:\n\n$$ c = H(t_0 \\parallel t_1 \\parallel m) $$\n\nThis allows the prover to generate the challenge on their own, without needing an external verifier. This transformation is implemented in ErgoScript via functions like **proveDHTuple**, which allows developers to create non-interactive proofs for Diffie-Hellman tuples, among other cryptographic statements."
+    },
+    {
+      "heading": "Integration in Ergo's Sigma Protocols",
+      "level": 3,
+      "content": "In Ergo, Diffie-Hellman tuples are a critical part of the overall **Sigma protocol** framework. By allowing composable cryptographic proofs, Sigma protocols enable developers to create contracts that require privacy-preserving proofs, such as:\n\n- **Ring signatures**: Used in mixers and privacy-focused contracts, where participants can prove they are part of a group without revealing which member they are.\n- **Threshold signatures**: Multi-signature setups that require a subset of participants to agree to spend funds.\n\nThese proofs can be combined using logical operators such as **AND**, **OR**, and **k-out-of-n**, enabling complex and flexible cryptographic conditions for smart contracts.\n\n---"
+    },
+    {
+      "heading": "Diffie-Hellman Tuple Applications in Ergo",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Example: Proving Knowledge of a Diffie-Hellman Tuple in ErgoScript",
+      "level": 3,
+      "content": "Below is an example of how the **proveDHTuple** function can be used in an ErgoScript contract to prove knowledge of a shared secret **x**:\n\n```scala\n{\n  val g = decodePoint(\"028D84...\")\n  val h = decodePoint(\"02F937...\")\n  val u = decodePoint(\"03C89B...\")\n  val v = decodePoint(\"02B1DA...\")\n\n  proveDHTuple(g, h, u, v)\n}\n```\n\nThis script proves knowledge of **x** such that **u = g^x** and **v = h^x**, enabling privacy-preserving contracts that can securely verify knowledge of shared secrets without revealing them.\n\n---"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "content": "- [Diffie-Hellman tuples support in sigma-rust](https://github.com/ergoplatform/sigma-rust/pull/315)\n- [First transaction protected by Diffie-Hellman](https://explorer.ergoplatform.com/en/transactions/24f6996bea6b914d3dab7d645cd5e5b9a57e3ac88b2774d34a2be26bdf708d28)\n- [Decision Diffie-Hellman (DDH) Assumption](https://en.wikipedia.org/wiki/Decisional_Diffie%E2%80%93Hellman_assumption)\n\n---"
+    },
+    {
+      "heading": "Conclusion",
+      "level": 3,
+      "content": "The Diffie-Hellman protocol plays a vital role in enabling privacy-preserving applications on Ergo, from stealth addresses to mixers like ZeroJoin. By leveraging Diffie-Hellman tuples and their non-interactive proofs through the **Fiat-Shamir transformation**, Ergo enables secure and efficient cryptographic operations. These tools, integrated with Sigma protocols, empower developers to create powerful decentralized applications that prioritize both security and privacy.\n\nFor additional details, explore:\n\n- [ErgoMixer](ergomixer.md)\n- [Stealth Addresses](stealth-address.md)"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/scs/sigma/diffie.md",
+  "processed_at": "2025-05-11T19:30:56.408284",
+  "ai_processed": true
+}

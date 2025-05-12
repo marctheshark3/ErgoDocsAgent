@@ -1,0 +1,43 @@
+{
+  "id": "docs_uses_gaming_md",
+  "title": "Gaming on Ergo",
+  "summary": "The document discusses gaming on the Ergo blockchain. It highlights various metaverse projects, NFT-based games, and monetary-based games. The key points include:\n\n- ErgoGames.io is a platform showcasing games developed for the Ergo blockchain.\n- Metaverse projects like Cyberverse and SigmaValley (inactive) aim to integrate blockchain technology for unique player experiences.\n- NFT-based games like BlitzTCG, Digigoats, and Project Tesseract are being developed.\n- Monetary-based games like Grand Gambit are also mentioned.\n- The document also provides developer resources such as ergflip, ObolFlip, and Hypo10use.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoGames.io?",
+      "answer": "ErgoGames.io is a platform dedicated to showcasing games developed for the Ergo Blockchain."
+    },
+    {
+      "question": "What is Cyberverse?",
+      "answer": "Cyberverse is an open-world, pixel-based game filled with various opportunities to socialize with others and earn while doing so, with blockchain integration using the Ergo Blockchain."
+    },
+    {
+      "question": "What is SigmaValley?",
+      "answer": "SigmaValley is the first metaverse on the Ergo blockchain, aiming to be a caricaturesque and up-to-date visualization of the Ergo ecosystem, inspired by the Silicon Valley TV series Intro."
+    },
+    {
+      "question": "What is BlitzTCG?",
+      "answer": "BlitzTCG aims to revolutionize traditional TCG (Trading Card Game) gameplay."
+    },
+    {
+      "question": "What is Digigoats?",
+      "answer": "Digigoats is a game developed by the Screaming ERGoat Wine Club, where players can feed, train, and battle their Ergoat to reach the top of the leaderboards. Screaming ERGoats are one-of-a-kind NFTs exclusive to the Ergo Blockchain."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Gaming on Ergo",
+      "level": 1,
+      "content": "/// details | Tip\n     {type: tip, open: true}\nBe sure to check out [ErgoGames.io](https://ergogames.io), a platform dedicated to showcasing games developed for the Ergo Blockchain.\n///\n\n\n\n\n//// note | Metaverse Projects\n/// details | Cyberverse\n     {type: success, open: true}\n[Cyberverse](cyberverse.md) is an open-world, pixel-based game filled with various opportunities to socialize with others and earn while doing so. Their vision is to have an open world pixel game, fit with blockchain integration to allow for unique player experiences using Ergo Blockchain.\n///\n/// details | SigmaValley (Inactive)\n     {type: warning, open: false}\n[SigmaValley](sigmavalley.md) is the first metaverse on the Ergo blockchain; it aims to be a caricaturesque and up-to-date visualization of the Ergo ecosystem. It was inspired by the Silicon Valley TV series Intro.\n///\n////\n\n\n//// note | NFT-Based Games\n/// details | BlitzTCG\n     {type: success, open: true}\n[BlitzTCG](blitz.md) aims to revolutionize traditional TCG (*Trading Card Game*) gameplay.\n///\n/// details | Digigoats\n     {type: success, open: true}\n[DigiGoats](digigoats.md) is game developed by the Screaming ERGoat Wine Club. Feed, Train and Battle your Ergoat to reach the top of the leaderboards. Screaming ERGoats are one of a kind NFTs exclusive to the Ergo Blockchain.\n///\n/// details | Project Tesseract\n     {type: note, open: false}\n[Project Tesseract](project-tesseract.md) is an ambitious new game under development by ErgoGames.io\n///\n/// details | Monster Pub Brawl (Paused)\n     {type: warning, open: false}\n[Monster Pub Brawl](monsterpub.md), Alcohol is an exceptionally rare resource capable of enhancing the monsters who use them with untold power. The raw materials to produce it are found in extremely hostile territories, and only the most skilled of alchemists are able to distill these materials into a potable concoction.\n///\n////\n\n\n//// note | Monetary-based Games\n/// details | Grand Gambit\n     {type: success, open: true}\n[Grand Gambit](grand-gambit.md), is the pioneering casino on Ergo. It offers a variety of games that can be played using ERG and several other tokens. The platform is compatible with both desktop and mobile devices, although currently only Android is supported.\n\n///\n/// details | BlobsTopia (Inactive)\n     {type: success, open: true}\n[Blob's Topia](blobstopia.md) is now live. The first ever Blobs fighter game powered by Ergo. While the game is not currently being updated or improved, it is still operational and available for enjoyment.\n///\n/// details | NightOwl (Inactive)\n     {type: warning, open: false}\n[Night Owl](nightowl.md), the first decentralized casino built on the Ergo blockchain. Night Owl aims to bring the long overdue qualities of transparency, voice, and true privacy to casino gaming to provide the ideal platform on which users can build and play their favorite games. Night Owl makes use of USD-backed tokens to provide a stable platform on which to play and stake, so as to negate volatility in bets and returns.\n///\n////"
+    },
+    {
+      "heading": "Developer Resources",
+      "level": 2,
+      "content": "- [ergflip](https://www.ergflip.com/), a simple and not decentralized Ergo Coinflip.\n- [ObolFlip](https://github.com/ObolFlip) client can be used for taking bets on a flip or for managing flips and earning revenue, depending on what's legal in your location. You can even deploy it on a server and let other users do bets, earning extra revenue for withdrawals.\n- [Hypo10use](https://github.com/hypo10use/quid-games) an example project built as part of Ergo Hack 2 and Ergo Hack 3"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/gaming.md",
+  "processed_at": "2025-05-11T20:02:28.117756",
+  "ai_processed": true
+}

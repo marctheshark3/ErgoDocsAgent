@@ -1,0 +1,1 @@
+This document outlines the various resources available for the Ergo blockchain. It covers libraries, SDKs, frameworks, wrappers, and toolkits for developing on Ergo. It also provides information on the Ergo mainnet and testnet explorers, as well as the available APIs, including the Node API, Explorer API, Ergo.Watch API, and TokenJay API.

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the two hash functions used in Ergo's cryptographic toolkit?",
+    "answer": "SHA-256 and Blake2b are the two hash functions used in Ergo's cryptographic toolkit."
+  },
+  {
+    "question": "What are the two signature algorithms supported by Ergo?",
+    "answer": "Ergo supports both ECDSA (secp256k1) and Schnorr signatures for secure transaction signing."
+  },
+  {
+    "question": "What are the two primitive secrets used in creating proofs of knowledge in Ergo?",
+    "answer": "Schnorr signatures and Diffie-Hellman tuples are the primitive secrets used in creating proofs of knowledge in Ergo."
+  },
+  {
+    "question": "How are cryptographic proofs made non-interactive in Ergo?",
+    "answer": "Ergo makes cryptographic proofs non-interactive using the Fiat-Shamir transformation."
+  },
+  {
+    "question": "What are some of the advanced cryptographic applications enabled by Sigma protocols in Ergo?",
+    "answer": "Sigma protocols enable zero-knowledge proofs, ring signatures, and threshold signatures in Ergo."
+  }
+]

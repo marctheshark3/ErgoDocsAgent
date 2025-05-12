@@ -1,0 +1,8 @@
+This document outlines the chain configuration settings for the Ergo blockchain. It covers parameters such as the protocol version, address prefix, block reward schedule, and reemission configuration. The key points are:
+
+- The protocol version should not be manually adjusted.
+- The address prefix is 0 for Ergo mainnet and 16 for Ergo testnet.
+- The block reward remains fixed for approximately 2 years, with a portion going to the foundation.
+- The block reward decreases by a fixed amount every 90 days.
+- There is a delay between when a block is mined and when the miner can spend the reward.
+- The document also mentions reemission configuration parameters, but their exact roles are not specified.

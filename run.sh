@@ -8,7 +8,7 @@ if [ -f .env ]; then
   export $(grep -v '^#' .env | xargs)
 else
   echo "Warning: .env file not found."
-  echo "Make sure you have set the OPENAI_API_KEY environment variable."
+  echo "Make sure you have set the required API keys (OPENAI_API_KEY or ANTHROPIC_API_KEY)."
 fi
 
 # Check if Python is installed
@@ -36,11 +36,57 @@ if ! python3 -c "import spacy; spacy.load('en_core_web_sm')" &> /dev/null; then
   python3 -m spacy download en_core_web_sm
 fi
 
-# Check for OpenAI API key
-if [ -z "$OPENAI_API_KEY" ]; then
-  echo "Warning: OPENAI_API_KEY is not set. Transformation will be skipped."
+# Read config.json to determine default AI provider
+DEFAULT_PROVIDER="openai"
+if [ -f config.json ]; then
+  echo "Reading configuration from config.json..."
+  if command -v jq &> /dev/null; then
+    DEFAULT_PROVIDER=$(jq -r '.ai.default_provider // "openai"' config.json)
+  else
+    echo "Note: 'jq' not found. Install it for better config file parsing."
+    # Fallback to grep-based detection
+    if grep -q '"default_provider".*"anthropic"' config.json; then
+      DEFAULT_PROVIDER="anthropic"
+    fi
+  fi
+  echo "Default AI provider: $DEFAULT_PROVIDER"
+fi
+
+# Check for API keys based on configured provider
+if [ "$DEFAULT_PROVIDER" = "anthropic" ]; then
+  if [ -z "$ANTHROPIC_API_KEY" ]; then
+    echo "Warning: ANTHROPIC_API_KEY is not set but required by your configuration."
+    echo "Transformation using Anthropic Claude will be disabled."
+  else
+    echo "Anthropic API key detected."
+  fi
+else
+  if [ -z "$OPENAI_API_KEY" ]; then
+    echo "Warning: OPENAI_API_KEY is not set but required by your configuration."
+    echo "Transformation using OpenAI will be disabled."
+  else
+    echo "OpenAI API key detected."
+  fi
+fi
+
+# Rotate/clean old log files if they're too large
+if [ -f "ergo_docs_agent.log" ] && [ $(stat -f%z "ergo_docs_agent.log") -gt 5000000 ]; then
+  echo "Rotating main log file (ergo_docs_agent.log)..."
+  mv ergo_docs_agent.log ergo_docs_agent.log.old
+fi
+
+if [ -f "api_responses.log" ] && [ $(stat -f%z "api_responses.log") -gt 5000000 ]; then
+  echo "Rotating API responses log file (api_responses.log)..."
+  mv api_responses.log api_responses.log.old
 fi
 
 # Run with provided arguments
 echo "Starting ErgoDocsAgent..."
-python3 src/main.py "$@" 
+echo "Logs will be written to ergo_docs_agent.log and api_responses.log"
+python3 src/main.py "$@"
+
+# Provide information about checking logs after completion
+echo ""
+echo "Process completed. If you encountered errors, check these log files:"
+echo "- Main log: ergo_docs_agent.log"
+echo "- API responses log: api_responses.log" 

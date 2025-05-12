@@ -1,0 +1,38 @@
+{
+  "id": "docs_uses_ErgoData_md",
+  "title": "ErgoData",
+  "summary": "ErgoData is a potential sidechain that could be launched on the Ergo blockchain. The main purpose of ErgoData is to serve the needs of data-intensive applications, such as land registries and certificate directories. ErgoData would be similar to the existing Ergo Protocol, but with some modified parameters.\n\nThe plans for launching ErgoData are currently unclear. The network will only be launched if users show demand for it after Ergo has established a solid infrastructure base. If the ErgoData chain is launched, EFYT holders at the time of the Ergo launch will receive ErgoData tokens, as a snapshot of EFYT holders has already been taken.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoData?",
+      "answer": "ErgoData is a potential sidechain that could be launched on Ergo to serve the needs of data-intensive applications, such as land registries and certificate directories."
+    },
+    {
+      "question": "What is the current status of ErgoData?",
+      "answer": "The plans for ErgoData are currently unclear, and it will only be launched if users show demand for it after Ergo has established a solid infrastructure base."
+    },
+    {
+      "question": "Who will receive ErgoData tokens?",
+      "answer": "If the ErgoData chain is launched, EFYT holders at the moment of Ergo's launch will receive ErgoData tokens."
+    },
+    {
+      "question": "How is the snapshot of EFYT holders taken?",
+      "answer": "A snapshot of EFYT holders at the moment of Ergo's launch has already been done."
+    },
+    {
+      "question": "What is the relationship between Ergo and ErgoData?",
+      "answer": "ErgoData will be the same or very similar to the existing Ergo Protocol, but with some modified parameters."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "ErgoData",
+      "level": 1,
+      "content": "ErgoData is a potential sidechain that could be launched on Ergo. The main idea behind Ergo Data is to serve needs of data-intensive applications, such as land registries, certificate directories etc. This would be the same (or very similar) to the existing Ergo Protocol, but with some modified parameters. \n\nCurrently, Ergo Data plans are unclear. The network will be launched only in case users will show demand for it after Ergo has established a solid infrastructure base. In case of Ergo Data chain being launched, EFYT holders at the moment of Ergo launch will get ErgoData tokens. A snapshot of EFYT holders at the moment of launch has already been done."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/ErgoData.md",
+  "processed_at": "2025-05-11T20:00:52.137446",
+  "ai_processed": true
+}

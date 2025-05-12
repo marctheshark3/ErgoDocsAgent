@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the minimum recommended Raspberry Pi model for running an Ergo full node?",
+    "answer": "A Pi4 with 4GB RAM or above is optimal."
+  },
+  {
+    "question": "What type of storage is preferred for running an Ergo full node on a Raspberry Pi?",
+    "answer": "A SSD with 64GB+ of storage is preferred due to the intensive disk I/O."
+  },
+  {
+    "question": "What command is used to install the Java JDK on a Raspberry Pi?",
+    "answer": "sudo apt install default-jdk"
+  },
+  {
+    "question": "What is the recommended swap size for a Raspberry Pi running an Ergo full node?",
+    "answer": "The swap size should be increased to 4096 MB."
+  },
+  {
+    "question": "What commands are used to enable the increased swap size and reboot the Raspberry Pi?",
+    "answer": "sudo dphys-swapfile setup, sudo dphys-swapfile swapon, sudo reboot now"
+  }
+]

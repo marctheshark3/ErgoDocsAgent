@@ -1,0 +1,53 @@
+{
+  "id": "docs_dev_protocol_zkp_md",
+  "title": "Understanding Zero-Knowledge Proofs and Sigma Protocols",
+  "summary": "The document discusses zero-knowledge proofs and Sigma protocols, which are crucial for maintaining secrets in cryptography. Sigma protocols, such as proof of discrete log and proof of Diffie-Hellman tuple, are efficient and composable proofs that enable powerful use cases when combined with a blockchain. Ergo provides access to these discrete log-based zero-knowledge proofs and allows for trustless coin or custom token swaps across blockchains. The document emphasizes the importance of optional privacy, where privacy remains an option for individuals to protect their personal boundaries. Ergo prioritizes a rich smart-contract language, and non-optional privacy would make powerful contracts infeasible. The document suggests that in the future, the Ergo community could enable privacy by default or integrate mix-nets and other novel ideas on the application layer.",
+  "qa_pairs": [
+    {
+      "question": "What is a zero-knowledge proof?",
+      "answer": "A zero-knowledge proof is a way to prove ownership or knowledge of something without revealing any sensitive information."
+    },
+    {
+      "question": "What are Sigma Protocols and how are they used in cryptography?",
+      "answer": "Sigma Protocols are a subclass of zero-knowledge proofs that are efficient and composable. They are used in digital signatures to prove knowledge of a private key without revealing it."
+    },
+    {
+      "question": "What are the two main Sigma Protocols used in Ergo?",
+      "answer": "The two Sigma Protocols used in Ergo are proof of discrete log and proof of Diffie-Hellman tuple."
+    },
+    {
+      "question": "How does Ergo enable powerful use cases with Sigma Protocols and the blockchain?",
+      "answer": "Ergo allows Sigma Protocols to include conditions based on the blockchain state, enabling use cases like trustless coin/token swaps, partial swaps, and decentralized exchanges."
+    },
+    {
+      "question": "Why does Ergo prioritize optional privacy instead of forced privacy?",
+      "answer": "Ergo prioritizes optional privacy because it allows for more flexibility, adoption, and regulation, and enables powerful smart contracts that would be challenging with forced privacy."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Sigma Protocols\n  - Zero-Knowledge Proofs\n  - Privacy\n---"
+    },
+    {
+      "heading": "Understanding Zero-Knowledge Proofs and Sigma Protocols",
+      "level": 1,
+      "content": "Ergo provides superior access to ***discrete log-based* zero-knowledge proofs**, but what exactly is a zero-knowledge proof?\n\nImagine you find a phone in a bar and someone claims it's theirs. They can prove it by hiding the screen, entering the unlock code, and then showing the unlocked screen. They've proven ownership without revealing any sensitive information, such as the unlock code. This is the essence of a zero-knowledge proof.\n\nIn the realm of [cryptography](crypto.md), zero-knowledge proofs are crucial for maintaining secrets. They're widely used in [digital signatures](crypto.md#sigma-protocols), a tool used by millions daily. In essence, a digital signature says:\n\n> *' This message proves I know the private key associated with this public key \u2013 but I'm not revealing the private key itself'.*"
+    },
+    {
+      "heading": "Sigma Protocols: Efficient and Composable Proofs",
+      "level": 2,
+      "content": "Among the myriad of zero-knowledge protocols, a sub-class known as [**Sigma Protocols**](sigma.md) (\u03a3-Protocols or *Generalized Schnorr Proofs*) stands out for its efficiency and composability.\n\n> [**ErgoScript**](ergoscript.md) is the language used to specify the conditions under which currency can be spent. It is flexible enough to allow for [ring signatures](ring.md), [multi-signatures](threshold.md), multiple currencies, [atomic swaps](atomic.md), self-replicating scripts, and long-term computation.\n\nCurrently, the two Sigma Protocols in use are [proof of discrete log](schnorr.md) and proof of [Diffie-Hellman tuple](diffie.md).\n\n\nThese composable proofs, when combined with a blockchain, enable powerful use cases. The logic for proofs can include conditions based on the blockchain state. For example, 'If the deadline block height has been reached, Alice can provide knowledge of a secret key for a refund. OR a ring signature from Alice and Bob is required to spend coins.' Or 'If this account holds a minimum of 100 ERG, Alice OR Bob can remove funds above that amount.'\n\nErgo not only allows for trustless coin or custom token swaps across any Bitcoin-like blockchain, but it also enables partial swaps. This feature facilitates the creation of a fully-fledged [decentralised exchange (DEX)](dex.md) that enables cross-chain trading: a trustless version of existing crypto exchanges. There's no need for gateways, token wrapping or other potential bottlenecks or points of failure."
+    },
+    {
+      "heading": "The Importance of 'Optional' Privacy",
+      "level": 2,
+      "content": "> Privacy must remain an option to protect the individual. It does not have to be forced; let people make their own choices. Privacy is the ability to create barriers and erect boundaries to create a space for the individual. It is up to each what borders and boundaries they choose to make. - [*The Ergo Manifesto*](https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/)\n\nErgo prioritizes a rich [smart-contract](ergoscript.md) language, and with non-optional privacy, efficient and powerful contracts are not possible. Formalising leakage is challenging for simple payments, and arbitrary contracts are not feasible.\n\nThere are numerous reasons why someone might want optional privacy. Transparent ledgers are a feature for many use cases, such as charities that want everyone to have full access to the flow of funds.\n\nOptional privacy also has strong arguments for adoption and regulation. [ErgoMixer](ergomixer.md) is non-interactive, so it works with the blockchain alone; no [off-chain](off-chain.md) coordination with others (and a trusted coordinator) is needed.\n\nIn the future, the community could enable privacy by default for every [transaction](transactions.md) in Ergo. Or we'll see integration mix-nets and other novel ideas on the application layer."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/dev/protocol/zkp.md",
+  "processed_at": "2025-05-11T19:27:02.746166",
+  "ai_processed": true
+}

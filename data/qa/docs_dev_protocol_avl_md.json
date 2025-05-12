@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the primary advantage of using AVL trees in Ergo?",
+    "answer": "AVL trees in Ergo offer the ability to authenticate data properties without the need to access the entire dataset."
+  },
+  {
+    "question": "How do developers integrate AVL trees into their Ergo applications?",
+    "answer": "Developers can integrate AVL trees into their Ergo applications using the GetBlok Plasma library, which provides an abstraction layer to incorporate AVL trees as a Layer-2 scaling solution."
+  },
+  {
+    "question": "What is the key benefit of the compact proof sizes provided by AVL trees in Ergo?",
+    "answer": "The compact proof sizes of AVL trees in Ergo contribute to their efficiency by ensuring streamlined storage and verification processes within the Ergo blockchain."
+  },
+  {
+    "question": "How do AVL trees help bolster the security and efficiency of applications in the Ergo ecosystem?",
+    "answer": "AVL trees facilitate verification and updates without the need for trust in the prover, curtailing the length of modification proofs and reducing storage requirements for verification."
+  },
+  {
+    "question": "What is the relationship between AVL trees and the Ergo Appkit in the context of Ergo applications?",
+    "answer": "The GetBlok Plasma library, which is built on the Ergo Appkit, provides developers with a convenient method to utilize AVL trees as a Layer-2 scaling solution in smart contracts, off-chain code, and distributed systems that manage the Plasma infrastructure."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key difference between Ergo's data model and the account model used in other blockchains?",
+    "answer": "Ergo's data model introduces programmable state transitions within transaction outputs, in contrast to the globally mutable state in the account-based model."
+  },
+  {
+    "question": "What are the three fundamental design principles of the Ergo data model?",
+    "answer": "1. Computational Completeness, 2. Cryptographic Composability, 3. Scalable State Management."
+  },
+  {
+    "question": "How does Ergo's data model enable efficient validation without maintaining complete blockchain state?",
+    "answer": "Ergo's data model allows for stateless verification facilitated by technologies like NIPoPoWs."
+  },
+  {
+    "question": "What is the key difference between Ergo's eUTXO model and the traditional UTXO model?",
+    "answer": "Ergo's eUTXO model introduces enhanced smart contract capabilities within transaction outputs, unlike the traditional UTXO model."
+  },
+  {
+    "question": "How does Ergo's data model ensure predictable and verifiable transaction outcomes?",
+    "answer": "Ergo's data model ensures deterministic execution of transactions."
+  }
+]

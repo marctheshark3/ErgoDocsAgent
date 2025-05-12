@@ -1,0 +1,83 @@
+{
+  "id": "docs_contribute_sigmanauts_md",
+  "title": "Sigmanauts: Empowering the Ergo Community",
+  "summary": "The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of the Ergo ecosystem and help shape its future. It offers three categories of participation: Growth, Community, and Creative. Interested individuals go through a formal application process to become Sigmanaut Candidates (SigCANs) and have the opportunity to work with a team, showcase their skills, and make an impact. As SigCANs contribute and demonstrate their abilities, they can progress to become full-fledged Sigmanauts with greater responsibility. The program provides comprehensive training, fosters collaboration and networking, and manages the Sigmanauts Mining Pool. Since its launch, the Sigmanauts Program has achieved several milestones, including the launch of the Sigmanauts website, the Sigmanauts Mining Pool, and the management of the Ergo Foundation Twitter account.",
+  "qa_pairs": [
+    {
+      "question": "What is the purpose of the Sigmanauts Program?",
+      "answer": "The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of Ergo and help shape its future."
+    },
+    {
+      "question": "What are the three categories of participation in the Sigmanauts Program?",
+      "answer": "The three categories are: Growth, Community, and Creative."
+    },
+    {
+      "question": "What types of skills and expertise are needed for the Growth category?",
+      "answer": "The Growth category is ideal for those with marketing expertise, connections to other projects, or skills that can help expand the community and attract diverse individuals."
+    },
+    {
+      "question": "What types of roles are available in the Community category?",
+      "answer": "The Community category is perfect for individuals interested in roles such as ambassador, moderator, or translator, fostering a welcoming and engaging environment for all members."
+    },
+    {
+      "question": "How can individuals become a Sigmanaut?",
+      "answer": "To become a Sigmanaut, interested individuals must go through a formal application process, and once accepted as a SigCAN (Sigmanaut Candidate), they will have the opportunity to work with a team of like-minded individuals, showcase their skills, and make a significant impact on the Ergo ecosystem."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Sigmanauts: Empowering the Ergo Community",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Introduction",
+      "level": 2,
+      "content": "Ergo, as outlined in its Manifesto, is a platform designed for the common person, standing against the centralization of banking and the misuse of money. The future of Ergo lies in the hands of its users, and we encourage everyone to take as much control of the Ergo ecosystem as possible. The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of Ergo and help shape its future."
+    },
+    {
+      "heading": "The Power of Community",
+      "level": 2,
+      "content": "Ergo's blockchain has the potential to bring out the best in humanity, and its rapidly growing community is one of its most significant assets. The Sigmanauts Program provides a platform for individuals to make a substantial impact on the future of finance by leveraging their unique skills and strengths."
+    },
+    {
+      "heading": "Categories of Participation",
+      "level": 2,
+      "content": "The Sigmanauts Program offers three categories of participation:\n\n1. **Growth**: Ideal for those with marketing expertise, connections to other projects, or skills that can help expand the community and attract diverse individuals.\n2. **Community**: Perfect for individuals interested in roles such as ambassador, moderator, or translator, fostering a welcoming and engaging environment for all members.\n3. **Creative**: Suited for graphic designers, videographers, writers, or social media experts who want to showcase their talents and contribute to the visual and narrative aspects of the Ergo ecosystem."
+    },
+    {
+      "heading": "Becoming a Sigmanaut",
+      "level": 2,
+      "content": "To become a Sigmanaut, interested individuals must go through a [formal application process](https://sigmanauts.com/application/). Once accepted into the Sigmanauts Program as a SigCAN (Sigmanaut Candidate), participants will have the opportunity to work with a team of like-minded individuals, showcase their skills, and make a significant impact on the Ergo ecosystem."
+    },
+    {
+      "heading": "Progression and Responsibility",
+      "level": 2,
+      "content": "As SigCANs contribute to the Ergo ecosystem and demonstrate their commitment and abilities, they will have the opportunity to become full-fledged Sigmanauts. This progression brings greater responsibility within the community, allowing individuals to take on leadership roles and guide the future direction of the Ergo platform."
+    },
+    {
+      "heading": "Training and Support",
+      "level": 2,
+      "content": "The Sigmanauts Program offers comprehensive training designed to equip participants with the necessary skills and knowledge to contribute effectively to the development of the Ergo ecosystem. This training covers various aspects of decentralized finance, blockchain technology, and community building, ensuring that Sigmanauts are well-prepared to tackle challenges and seize opportunities within the Ergo community."
+    },
+    {
+      "heading": "Collaboration and Networking",
+      "level": 2,
+      "content": "As a Sigmanaut, individuals will have the chance to interact with others who share their passion for financial privacy and decentralization. The program fosters a collaborative environment where Sigmanauts can learn from one another, share ideas, and work together towards common goals. This networking opportunity is invaluable for personal growth and professional development within the blockchain and cryptocurrency space."
+    },
+    {
+      "heading": "Sigmanauts Mining Pool",
+      "level": 2,
+      "content": "The Sigmanauts Mining Pool is a DAO-driven, community-run mining pool dedicated to supporting the Ergo ecosystem. Joining the pool contributes to the Ergo community (fees go to the Sigmanauts treasury) and offers hourly bonus token payments. The pool boasts a minimal 0.9% fee, a payout threshold of 0.5 ERG, and operates on the PPLNS payment method (Pay Per Last N Shares, with N set to 0.5).\n\nTo get started with mining Ergo, you need an Ergo wallet and mining software compatible with your GPU. Detailed instructions on wallet setup, mining software, and example miner configurations for both Windows and Linux can be found on the [Sigmanauts Mining Pool page](https://sigmanauts.com/mining)."
+    },
+    {
+      "heading": "Sigmanauts Achievements",
+      "level": 2,
+      "content": "Since its launch, the Sigmanauts Program has made significant strides in building the required structures to pass the baton to the community. Some notable achievements include:\n\n- **01/22**: The [Sigmanauts Program](sigmanauts.md) is launched.\n- **01/23**: [sigmanauts.com](https://sigmanauts.com/) launches.\n- **03/23**: Sigmanauts [voting rework](https://docs.google.com/document/d/1kuf_l9tZOdg7vMgVSKuV0FIUlpHmxWiWjMi89z-XTdE/edit#heading=h.e1tnpe3qjzte).\n- **03/23**: [Mission Statement](https://docs.google.com/document/d/1J6PdyyxoEEqI0nEr64ZZBGU4Lkr8Cr37GqNSs4qHo7Q/edit) published.\n- **00/23**: The Sigmanauts attend their first event @ RareEVO.\n- **00/23**: The Ergo Foundation donates 160,000 SPF to the Sigmanauts treasury.\n- **00/23**: The Sigmanauts begin managing the Ergo_Foundation Twitter account.\n- **00/24**: Sigmanauts Mining Pool launches.\n- **01/24**: The [first proposal on Paideia](https://app.paideia.im/Sigmanauts/proposal/promote-richi-mana-to-sigmanaut-05b10641-0097-4b8a-9a47-c0aac5c67aeb) passes.\n- **03/24**: The Sigmanauts [officially take over management of the Market-Making services](https://app.paideia.im/Sigmanauts/proposal/05825226-0ea4-4fb0-ae4a-cb0ecc984684).\n- **03/24**: In recognition of the Sigmanauts' dedication and hard work on securing the MEXC listing, the Ergo Foundation [provides a substantial grant](https://twitter.com/Sigmanauts/status/1768369713472553068) matching the amount raised by the Sigmanauts."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/contribute/sigmanauts.md",
+  "processed_at": "2025-05-11T19:17:33.741567",
+  "ai_processed": true
+}

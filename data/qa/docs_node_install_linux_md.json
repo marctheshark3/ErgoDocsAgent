@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the ergo-installer.sh script?",
+    "answer": "The ergo-installer.sh script is used to install and run a full Ergo node on Linux systems."
+  },
+  {
+    "question": "How can you run the ergo-installer.sh script?",
+    "answer": "You can run the ergo-installer.sh script by executing the following command: curl -s https://raw.githubusercontent.com/ergoplatform/ergo/master/ergo-installer.sh | sh -s -- --api-key=<YOUR_API_KEY>"
+  },
+  {
+    "question": "What is the alternative to using the ergo-installer.sh script?",
+    "answer": "The alternative to using the ergo-installer.sh script is to follow a step-by-step manual setup process, which is described in the tutorial.md file."
+  },
+  {
+    "question": "Does the ergo-installer.sh script cover the setup for mining?",
+    "answer": "No, the ergo-installer.sh script does not cover the setup for mining. It only explains how to install and run a full Ergo node."
+  },
+  {
+    "question": "What is the main purpose of setting up a full Ergo node?",
+    "answer": "The main purpose of setting up a full Ergo node is to participate in the Ergo network and have a local copy of the blockchain."
+  }
+]

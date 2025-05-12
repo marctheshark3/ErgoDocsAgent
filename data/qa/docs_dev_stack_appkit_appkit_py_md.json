@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is this document about?",
+    "answer": "# Using AppKit from Python\nTo use Appkit from Python, you need to bridge to a JVM instance running the Appkit code. To do so, we use [JPype](https://github.com/jpype-project/jpype) for this guide. It ..."
+  },
+  {
+    "question": "What is the title of this document?",
+    "answer": "Using AppKit from Python"
+  },
+  {
+    "question": "What is the 'Using AppKit from Python' section about?",
+    "answer": "To use Appkit from Python, you need to bridge to a JVM instance running the Appkit code. To do so, w..."
+  },
+  {
+    "question": "What is the 'General setup' section about?",
+    "answer": "Install jpype in your Python environment by typing\n\n    pip install JPype1\n\n(or pip3 when using Pyth..."
+  },
+  {
+    "question": "What is the 'Enable Java imports' section about?",
+    "answer": "import jpype.imports"
+  }
+]

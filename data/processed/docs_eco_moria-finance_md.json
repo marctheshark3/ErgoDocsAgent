@@ -1,0 +1,73 @@
+{
+  "id": "docs_eco_moria-finance_md",
+  "title": "Moria Finance: Decentralized Fund Management on Ergo",
+  "summary": "Moria Finance is a decentralized fund management platform built on the Ergo blockchain. It aims to incentivize Bitcoin holders to bridge their assets to Ergo in the form of rsBTC (Renominated Smart Bitcoin) by offering advanced features through Ergo's smart contracts. Key features include smart contract wallets with timelock, reversible address, and multisig management capabilities, providing enhanced security and control over funds. Moria Finance leverages the decentralized security of the Ergo blockchain and the federated security of the Rosen Bridge to offer unparalleled protection for user assets. The project is open-source, and the team welcomes community contributions.",
+  "qa_pairs": [
+    {
+      "question": "What is Moria Finance?",
+      "answer": "Moria Finance is a decentralized financial platform built on the Ergo blockchain, designed to revolutionize fund management."
+    },
+    {
+      "question": "What is the primary goal of Moria Finance?",
+      "answer": "The primary goal of Moria Finance is to incentivize Bitcoin holders to bridge their assets to the Ergo blockchain in the form of rsBTC (Renominated Smart Bitcoin)."
+    },
+    {
+      "question": "What are the key features of Moria Finance?",
+      "answer": "Moria Finance leverages the power of Ergo's advanced smart contracts to provide a secure, transparent, and decentralized solution for fund management."
+    },
+    {
+      "question": "How does Moria Finance aim to provide a compelling reason for BTC holders to embrace DeFi on the Ergo network?",
+      "answer": "Moria Finance aims to provide superior features and functionalities through Ergo's expressive smart contracts, offering a compelling reason for BTC holders to embrace the benefits of decentralized finance (DeFi) on the Ergo network."
+    },
+    {
+      "question": "What technology does Moria Finance utilize?",
+      "answer": "Moria Finance is built on the Ergo blockchain and leverages the power of Ergo's advanced smart contracts."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - Moria Finance\n  - Fund Management\n  - DeFi\n  - Multisig\n  - dApp\n---"
+    },
+    {
+      "heading": "Moria Finance: Decentralized Fund Management on Ergo",
+      "level": 1,
+      "content": ""
+    },
+    {
+      "heading": "Introduction",
+      "level": 2,
+      "content": "Moria Finance is a groundbreaking financial platform built on the Ergo blockchain, designed to revolutionize the way individual and corporate funds are managed. By leveraging the power of Ergo's advanced smart contracts, Moria Finance aims to provide a secure, transparent, and decentralized solution for fund management, offering a compelling alternative to traditional centralized custody solutions."
+    },
+    {
+      "heading": "The Vision",
+      "level": 2,
+      "content": "The primary goal of Moria Finance is to incentivize Bitcoin holders to bridge their assets to the Ergo blockchain in the form of rsBTC (Renominated Smart Bitcoin). By offering superior features and functionalities through Ergo's expressive smart contracts, Moria Finance aims to provide a compelling reason for BTC holders to embrace the benefits of decentralized finance (DeFi) on the Ergo network."
+    },
+    {
+      "heading": "Key Features",
+      "level": 2,
+      "content": ""
+    },
+    {
+      "heading": "Smart Contract Wallets",
+      "level": 3,
+      "content": "At the core of Moria Finance's offering are advanced smart contract wallets that provide enhanced security, flexibility, and control over funds. These wallets leverage Ergo's powerful smart contract capabilities to implement various features, including:\n\n1. **Timelock**: Funds can be locked for a predetermined period, preventing unauthorized access and providing an additional layer of security. This feature eliminates the need for self-custody, offering peace of mind to users.\n\n2. **Reversible Address**: Moria Finance implements a reversible address design, where the user's public key is combined with a trusted third party's public key and the Moria Finance platform's public key. This design ensures that funds can only be accessed with the consent of all parties involved, providing an additional layer of security and trust.\n\n3. **Multisig Management**: Moria Finance offers an easy-to-use multisig interface for managing corporate funds. The multisig server is implemented using Supabase Realtime, enabling companies to require signatures from multiple authorized parties before executing transactions, ensuring proper oversight and governance."
+    },
+    {
+      "heading": "Unparalleled Security",
+      "level": 3,
+      "content": "One of the key advantages of Moria Finance is the unparalleled security it offers through the combination of the Ergo blockchain and the Rosen Bridge. By bridging BTC to rsBTC on Ergo, users benefit from a two-layer security model:\n\n1. **Decentralized Layer**: The Ergo blockchain provides a decentralized layer with n-of-1000 security, ensuring that no single entity can compromise the network.\n\n2. **Federated Layer**: The Rosen Bridge adds a federated layer with n-of-100 security, further enhancing the overall security of the system.\n\nAdditionally, Ergo's smart contracts provide an extra layer of security, ensuring that funds are managed according to predefined rules and conditions."
+    },
+    {
+      "heading": "Get Involved",
+      "level": 2,
+      "content": "Moria Finance is an open-source project, and the team welcomes contributions from the community. To get involved, you can:\n\n\n- Explore the project's [GitHub repositories](https://github.com/Moria-Finance)\n\nBy embracing the power of Ergo's smart contracts and the security of the Rosen Bridge, Moria Finance aims to pave the way for a new era of decentralized fund management, empowering individuals and organizations to take control of their assets in a secure and trustless manner."
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/moria-finance.md",
+  "processed_at": "2025-05-11T19:45:46.138121",
+  "ai_processed": true
+}

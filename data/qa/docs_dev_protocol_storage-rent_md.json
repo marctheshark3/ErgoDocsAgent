@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Ergo's Storage Rent System?",
+    "answer": "Ergo's Storage Rent System is a mechanism that levies a minimal fee on unspent output (UTXOs) or 'boxes' after a period of four years of inactivity, which helps mitigate the issue of blockchain bloat and turns it into a profitable venture for miners."
+  },
+  {
+    "question": "How is the storage rent fee determined?",
+    "answer": "The storage rent fee per byte is determined by the storage rent subprotocol, and on average, it amounts to approximately 0.14 ERG every four years for a typical box."
+  },
+  {
+    "question": "What is the purpose of the storage rent system?",
+    "answer": "The storage rent system is a key strategy implemented by Ergo to ensure long-term economic sustainability, as it acts as an 'on-chain garbage collection' mechanism."
+  },
+  {
+    "question": "What is the relationship between the storage rent system and miners?",
+    "answer": "The storage rent system turns the issue of blockchain bloat into a profitable venture for miners, as they are the ones who collect the storage rent fees."
+  },
+  {
+    "question": "Where can I find a more detailed guide on Ergo's storage rent system?",
+    "answer": "For a more in-depth understanding of Ergo's storage rent system, you can refer to the detailed guide at the link provided in the content."
+  }
+]

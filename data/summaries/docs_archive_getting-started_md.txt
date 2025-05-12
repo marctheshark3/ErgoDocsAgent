@@ -1,0 +1,7 @@
+Welcome to Ergo, a cutting-edge platform for decentralized finance and smart contracts. This guide covers various aspects of the Ergo ecosystem, including mining, trading, development, and community involvement.
+
+For miners, the guide provides information on setting up mining operations to contribute to the network and earn rewards. For traders, it covers decentralized trading, yield farming, staking, arbitrage, financial instruments, options trading, and high-risk rewards.
+
+For developers, the guide offers an introduction to getting started, smart contract development, and building on Ergo's flexible architecture. For enthusiasts, it covers running a node, using off-chain bots, and joining the Sigmanauts community.
+
+For everyone, the guide provides information on securing investments, exploring the ecosystem, participating in airdrops and token sales, gaming, peer-to-peer trading, and community marketing. The document also encourages engagement with the vibrant Ergo community to stay updated on the latest developments.

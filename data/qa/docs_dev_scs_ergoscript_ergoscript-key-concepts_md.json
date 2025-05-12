@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the core difference between Ergo's UTXO model and Ethereum's account-based model?",
+    "answer": "Ergo introduces an extended-UTXO model that enables the execution of intricate financial contracts, similar to those supported by Ethereum's account-based model."
+  },
+  {
+    "question": "What are the key constructs in ErgoScript that are aligned with Ergo's UTXO model?",
+    "answer": "Key constructs in ErgoScript include `Box`, `INPUTS`, and `OUTPUTS`."
+  },
+  {
+    "question": "How does ErgoScript's syntax compare to Scala's, and what are the key differences?",
+    "answer": "ErgoScript's syntax is a subset of Scala's, but it does not support the `var` keyword, and all defined elements are immutable."
+  },
+  {
+    "question": "What are the two main steps involved in the spending process for an Ergo coin?",
+    "answer": "The two main steps are: 1) Reduction - the prover uses the ErgoTree interpreter to reduce the ErgoTree proposition to a cryptographic statement, and 2) Signing - the prover turns the cryptographic statement into a signature that can be verified."
+  },
+  {
+    "question": "What are the three inputs required by the verifier to allow valid coin spending?",
+    "answer": "The three inputs are: 1) A guarding proposition given by an ErgoTree, 2) The blockchain context, and 3) The proof produced by the prover."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What are the possible secret moves in the Rock-Paper-Scissors game?",
+    "answer": "The possible secret moves are 0 (rock), 1 (paper), and 2 (scissors)."
+  },
+  {
+    "question": "How is the winner determined in the Rock-Paper-Scissors game?",
+    "answer": "If the difference between the players' moves modulo 3 is 1, the first player wins. If the difference is 2, the second player wins. If the moves are the same, it's a draw."
+  },
+  {
+    "question": "What is the purpose of the commitment phase in the modified Rock-Paper-Scissors game?",
+    "answer": "The commitment phase prevents the first player from adaptively choosing their move after the second player has revealed their move."
+  },
+  {
+    "question": "How does the first player commit to their secret move in the modified game?",
+    "answer": "The first player (Alice) chooses a secret move `a` and a secret random value `s`, then computes a commitment `c = H(a || s)` and publishes `c`."
+  },
+  {
+    "question": "What happens in the reveal phase of the modified Rock-Paper-Scissors game?",
+    "answer": "In the reveal phase, the second player (Bob) chooses and reveals their move `b`. At this point, the first player (Alice) knows the outcome based on their secret move `a` and Bob's move `b`, but Bob does not know the outcome yet."
+  }
+]

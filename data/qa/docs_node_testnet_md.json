@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the purpose of the Ergo testnet?",
+    "answer": "The testnet is an alternative Ergo blockchain used for testing and experimentation without using real ERG or worrying about breaking the main chain."
+  },
+  {
+    "question": "How can you access the Ergo testnet?",
+    "answer": "The testnet runs on different ports than the mainnet and can be accessed by changing your `.conf` and running with the `--testnet` flag."
+  },
+  {
+    "question": "What are some ways to set up an Ergo testnet node?",
+    "answer": "Options include synchronizing from scratch, using a pre-synced testnet node from MGPai, and CPU mining."
+  },
+  {
+    "question": "What can you do with the Ergo testnet?",
+    "answer": "You can use the testnet for CPU mining, starting your own alternative version of Ergo with custom parameters, and other testing and experimentation."
+  },
+  {
+    "question": "Where can I find resources for the Ergo testnet?",
+    "answer": "Resources like port numbers, bookmarks, and other testnet information can be found in the 'Resources' section."
+  }
+]

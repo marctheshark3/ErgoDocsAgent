@@ -1,0 +1,1 @@
+The document provides an overview of various software and miners for the Ergo (ERG) and Ergo+Kaspa (ERG+KAS) cryptocurrencies. It lists the miners, their supported hardware (Nvidia, AMD, Intel), and the associated developer fees. The document also includes links to the source code for AMD and Nvidia miners, as well as other GPU miners for Ergo.

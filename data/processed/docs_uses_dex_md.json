@@ -1,0 +1,38 @@
+{
+  "id": "docs_uses_dex_md",
+  "title": "Decentralised Exchanges (DEXs)",
+  "summary": "Decentralised Exchanges (DEXs) have gained prominence in the DeFi space, offering benefits such as custody of user funds and democratizing the exchange experience. The document highlights several DEX projects on the Ergo blockchain, including Spectrum Finance, GuapSwap, Palmyra ComDEX, and Machina Finance, which are at various stages of development and offer features like liquidity provision, yield farming, and commodity tokenization.",
+  "qa_pairs": [
+    {
+      "question": "What is a decentralized exchange (DEX)?",
+      "answer": "A decentralized exchange (DEX) is a type of cryptocurrency exchange that allows for peer-to-peer trading of digital assets without the need for a centralized intermediary."
+    },
+    {
+      "question": "What are the benefits of using a DEX?",
+      "answer": "The benefits of using a DEX include retaining custody of your funds, democratizing the exchange experience, and enabling blockchain developers and crypto investors to participate in decentralized finance (DeFi)."
+    },
+    {
+      "question": "What are some examples of DEXs on the Ergo blockchain?",
+      "answer": "Examples of DEXs on the Ergo blockchain include Spectrum Finance, GuapSwap, and Palmyra ComDEX."
+    },
+    {
+      "question": "What is the primary objective of Machina Finance?",
+      "answer": "The primary objective of Machina Finance is to enable the tokenization and listing of certified commodities for spot and futures trading on a global scale."
+    },
+    {
+      "question": "When did the 'DeFi Summer' period occur, and how did it impact the adoption of DEXs?",
+      "answer": "The 'DeFi Summer' period occurred in 2020, and it led to an increasing interest and new token issuance every day, which brought Decentralized Exchanges (DEXs) into the spotlight."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Decentralised Exchanges (DEXs)",
+      "level": 1,
+      "content": "Until 2020 DeFi Summer, Value Locked in DeFi ([TVL](https://medium.com/coinmonks/google-sheets-analytics-total-value-locked-in-defi-33b926c18a9f)) was too low to use the platforms effectively. After an increasing interest and new token issuance every day, Decentralized Exchanges (DEX) came into the sunlight. \n\nTheir benefits are for people who don\u2019t want to give up the custody of their funds. DEXes democratized the exchange experience for both blockchain developers and crypto investors.\u00a0\n \n//// note | Decentralised Exchanges on Ergo\n/// details | Spectrum Finance (Live)\n     {type: success, open: true}\n[Spectrum Finance](spectrum.md) is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.\n///\n/// details | GuapSwap (V2 in Development)\n     {type: success, open: true}\n[GuapSwap](guapswap.md) is a fully decentralized smart contract profit swapping service on the Ergo Blockchain.\n\n///\n/// details | Palmyra ComDEX (MVP Live)\n     {type: success, open: true}\n[Palmyra ComDEX](palmyra.md)  the flagship product of [zenGate](zengate.md), is an innovative ecosystem that enables the tokenization and listing of certified commodities for spot and futures trading on a global scale. \n///\n/// details | Machina Finance (In Development)\n     {type: note, open: true}\nThe primary objective of [Machina Finance](machina-finance.md) is to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.\n///\n////"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/uses/dex.md",
+  "processed_at": "2025-05-11T20:02:06.449230",
+  "ai_processed": true
+}

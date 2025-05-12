@@ -1,0 +1,53 @@
+{
+  "id": "docs_eco_ergoraffle_md",
+  "title": "ErgoRaffle",
+  "summary": "ErgoRaffle is a crowdfunding service built on the Ergo blockchain that allows anyone to raise funds for a project through a raffle system. The raffle has a deadline and a fundraising goal, and if the goal is reached, the project, winner, and service will be paid accordingly. The raffle is managed by smart contracts, ensuring no middlemen are involved and the system cannot be altered. Future plans include enabling raising funds in any token, allowing multiple winners, rewarding winners in any token including NFTs, implementing community upvoting/downvoting, enhancing the user interface, integrating dApp connectors and ErgoPay support, and introducing a refundable raffle creation fee to prevent scams and DoS attacks.",
+  "qa_pairs": [
+    {
+      "question": "What is ErgoRaffle?",
+      "answer": "ErgoRaffle is a crowdfunding service built on the Ergo Platform that enables anyone to raise money for a project."
+    },
+    {
+      "question": "How does the ErgoRaffle system work?",
+      "answer": "ErgoRaffle is managed by smart contracts on the Ergo Platform, which means no middlemen are involved and the raffle cannot be altered or disrupted by the service operator. The system is designed so that anyone can create new raffles or donate to existing raffles using the raw scripts."
+    },
+    {
+      "question": "What are the key features of the ErgoRaffle v2 update?",
+      "answer": "The ErgoRaffle v2 update will enable raising funds in any token, allow multiple winners with different shares, reward winners in any token including NFTs, implement community upvoting/downvoting of raffles, enhance the user interface, integrate dApp connectors and ErgoPay support, and introduce a refundable raffle creation fee."
+    },
+    {
+      "question": "What are the benefits of using the ErgoRaffle system for crowdfunding?",
+      "answer": "The key benefits of using ErgoRaffle for crowdfunding are that it is built on the decentralized Ergo blockchain, it allows for transparent and secure fundraising without middlemen, and it includes a lottery-style raffle where one or more participants can win a portion of the funds raised."
+    },
+    {
+      "question": "Where can I find more information and the source code for ErgoRaffle?",
+      "answer": "More information and the source code for ErgoRaffle is available on the project's GitHub repository: https://github.com/ErgoRaffle."
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 0,
+      "content": "---\ntags:\n  - ErgoRaffle\n  - Crowdfunding\n  - Raffle\n  - dApp\n  - dApp-Live\n---"
+    },
+    {
+      "heading": "ErgoRaffle",
+      "level": 1,
+      "content": "We have live crowdfunding on the Ergo blockchain via [ergoraffle.com](https://ergoraffle.com); this allows projects to host *'Raffles'* with a percentage of the total allocated to one lucky donor as a prize. \n\nMore information and the source code is available on [GitHub](https://github.com/ErgoRaffle)."
+    },
+    {
+      "heading": "About Ergo Raffle",
+      "level": 2,
+      "content": "ErgoRaffle is a crowdfunding service built on Ergo Platform that enables anyone to raise money for a project. This project can range from a direct donation to a charity, an academic or business plan, or anything you can convince people to part with their hard-earned ERG for! As an added bonus, after finishing the Raffle, a lottery takes place, and one lucky participant wins a set percent of the Raffle as a 'raffle reward'.\n\nEach Raffle has a deadline and a set fundraising goal; if the Raffle reaches this goal within its deadline, the Raffle is successful, and the project, winner, and service will be paid accordingly. Otherwise, the Raffle is unsuccessful, and all collected funds will be returned to the raffle participants. If the Raffle achieves its goal before the deadline, it will continue operating till the deadline and can be overfunded.\n\nThe Raffle is managed by smart contracts built on Ergo Platform. This means that no middlemen are involved, and no one can alter or disrupt the Raffle, including the raffle service operator. This website simply acts as an interface for the smart contract and was created to provide a better user experience by caching some information. The system is designed in a way that anyone can create new raffles or donate to existing raffles using the raw scripts, and the raffle service functionality is disjoint from the raffle service backend. Although the service backend and frontend are designed in such a way that anyone with any amount of knowledge can use the service."
+    },
+    {
+      "heading": "v2",
+      "level": 2,
+      "content": "- Enable raising funds in any token (v1: only ERG is possible)\n- Allow multiple winners with different shares (v1: only one winner)\n- Reward winners in any token, including NFTs (v1: Erg only)\n- Implement community upvoting/downvoting of raffles to indicate potential scams\n- Enhance the user interface\n- Integrate dApp connectors and ErgoPay support\n- Introduce a refundable raffle creation fee to prevent scams and DoS attacks"
+    }
+  ],
+  "source": "https://github.com/ergoplatform/ergodocs",
+  "file_path": "docs/eco/ergoraffle.md",
+  "processed_at": "2025-05-11T19:44:29.680320",
+  "ai_processed": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Kotlin predominantly used as?",
+    "answer": "Kotlin is predominantly used as a JVM language."
+  },
+  {
+    "question": "Where can you find additional resources for using Kotlin with AppKit?",
+    "answer": "Additional resources for using Kotlin with AppKit can be found in the AppKit Guide."
+  },
+  {
+    "question": "What does Mosaik provide for Kotlin developers?",
+    "answer": "Mosaik provides a Kotlin DSL User Interface Tutorial to help understand and create user interfaces effectively."
+  },
+  {
+    "question": "What is the Ergo Wallet app an example of?",
+    "answer": "The Ergo Wallet app is an example of a practical demonstration of how to utilize AppKit in Kotlin."
+  },
+  {
+    "question": "Where can you find a case study on the effective use of AppKit?",
+    "answer": "You can find a case study on the effective use of AppKit in the Ergo Wallet app."
+  }
+]

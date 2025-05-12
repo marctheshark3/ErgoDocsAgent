@@ -1,0 +1,8 @@
+The document discusses the technical details of Ergo's Input Blocks and Ordering Blocks, which are introduced to address limitations in the current blockchain system. The key points are:
+
+- Transactions currently enter a common mempool and are included in blocks produced every 2 minutes. Replace-By-Fee (RBF) can lead to issues like fee competitions.
+- Ergo introduces Input Blocks and Ordering Blocks to enable faster transaction propagation while preserving overall network security.
+- Input Blocks have a lower difficulty threshold and are produced more frequently, while Ordering Blocks maintain the original PoW requirements.
+- Transactions are classified as First-Class (consistent validation) or Second-Class (dependent on block variables).
+- Merkle trees and digest fields are used to ensure consistency and efficient verification of transaction data across Input and Ordering Blocks.
+- Efficient propagation mechanisms, including announcement, data verification, and cut-through techniques, are employed to rapidly disseminate transaction identifiers and confirmations.

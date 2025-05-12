@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the problem that Babel fees aim to solve on the Ergo blockchain?",
+    "answer": "The problem is that every transaction on the Ergo blockchain requires a payment in $ERG, which can create complexities for users who want to hold assets other than $ERG, such as native tokens or NFTs."
+  },
+  {
+    "question": "How do Babel fees work on the Ergo blockchain?",
+    "answer": "Babel fees allow users to pay for transactions using fungible, native tokens that have liquidity, rather than having to use $ERG. This is achieved by users providing liquidity on the blockchain by agreeing to buy the native asset for $ERG at a specified rate."
+  },
+  {
+    "question": "What are the steps to provide Babel fee liquidity on the Ergo blockchain?",
+    "answer": "The steps to provide Babel fee liquidity include: visiting the Tokenjay site, connecting an ErgoPay wallet, selecting a token, entering a rate and amount of $ERG, and creating a Babel fee box."
+  },
+  {
+    "question": "How do users utilize the Babel fee bank boxes on the Ergo blockchain?",
+    "answer": "Users can utilize the Babel fee bank boxes by selecting a native token to pay the transaction fee in their wallet, such as Nautilus, and the wallet will automatically select the best rate from the available Babel fee bank boxes."
+  },
+  {
+    "question": "What are the key benefits of Babel fees on the Ergo blockchain?",
+    "answer": "The key benefits of Babel fees on the Ergo blockchain are that they eliminate the need for users to hold $ERG in each wallet they own, and they make the blockchain more fluid and flexible by increasing the efficiency of transactions and interactions on the network."
+  }
+]

@@ -1,0 +1,7 @@
+This document provides examples and code snippets for minting NFTs (Non-Fungible Tokens) on the Ergo blockchain. It covers two approaches:
+
+1. Using Scala with the "minting-for-dummies" tool, which provides a basic way to mint NFTs quickly.
+
+2. Using the Ergo Python Appkit, which allows minting NFTs by initializing an ErgoAppKit instance and calling the `mintToken` method with the required parameters.
+
+The document also includes references to related Ergo Python Appkit modules and classes, as well as additional examples for bulk minting NFTs with royalties and on-chain NFTs. It provides links to the relevant GitHub repositories and documentation for further information.

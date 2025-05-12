@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the key structure used to represent the peer management within a node?",
+    "answer": "(G, B, C), where G is the set of known good peers, B is the set of banned peers, and C is the set of currently connected peers."
+  },
+  {
+    "question": "What are the four categories of penalties that can be applied to a peer?",
+    "answer": "NonDeliveryPenalty, MisbehaviorPenalty, SpamPenalty, and PermanentPenalty."
+  },
+  {
+    "question": "How are penalties stored and managed in the peer management protocol?",
+    "answer": "Penalties are stored in a penalty book that maps an IP address to its current accumulated penalty score and the timestamp of the last penalty event."
+  },
+  {
+    "question": "What are the sources for discovering new potential peers in the peer discovery protocol?",
+    "answer": "Other connected peers, predefined bootstrap nodes, trusted central servers, and potentially untrusted channels like DNS seeds, IRC, and Twitter."
+  },
+  {
+    "question": "What are the key invariants that the peer management structure must adhere to?",
+    "answer": "The sets of good peers and banned peers are disjoint, the set of connected peers is a subset of the good peers, and both the good and banned peer sets are subsets of the set of all possible peers."
+  }
+]
