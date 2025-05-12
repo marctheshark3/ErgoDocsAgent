@@ -195,4 +195,7 @@ node_modules/
 .DS_Store
 # Task files
 tasks.json
-tasks/ 
+tasks/
+
+# MCP configuration with API keys
+.cursor/mcp.json 
